@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--
+  DRAFT — Project X probe asset (Age-Signal Readiness Kit).
+  Status: DRAFT. Not published, not linked, not final copy.
+  Built 2026-11-06 from ~/workspace/project-x/research-scan-1.md (Candidate 1).
+  All legal content is compliance information, not legal advice, and traces to
+  the sources listed on the page. Review by Midas required before any publish.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age-Signal Readiness Self-Check™ — J-Dawgs Industries</title>
+<meta name="description" content="A free five-step self-check for indie app developers: which age-signal laws hit your app, in which states and countries, and on what dates. Runs entirely in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --jd-navy:#0B2239; --jd-navy-2:#123C63; --jd-silver:#C7CEDA; --jd-silver-bright:#E9EDF3;
+    --jd-ink:#182430; --jd-muted:#5B6B7C; --jd-paper:#FFFFFF; --jd-mist:#F3F5F8; --jd-line:#D9DFE8;
+    --jd-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    --jd-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --jd-spring:cubic-bezier(.25,1.1,.35,1);
+  }
+  *{box-sizing:border-box}
+  html{font-size:16px}
+  body{margin:0;background:var(--jd-mist);color:var(--jd-ink);font-family:var(--jd-body);font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem 3rem}
+  /* Header band */
+  header.band{background:linear-gradient(180deg,var(--jd-navy),var(--jd-navy-2));border-radius:0 0 14px 14px;padding:2.25rem 2rem 1.75rem;margin:0 -1.25rem 1.25rem;color:var(--jd-silver-bright)}
+  .eyebrow{font-family:var(--jd-display);font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--jd-silver);display:flex;align-items:center;gap:.5rem;margin:0 0 .75rem}
+  .eyebrow svg{flex:none}
+  h1{font-family:var(--jd-display);font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:0 0 .75rem;color:#fff}
+  .lede{font-size:1.125rem;line-height:1.6;max-width:44rem;margin:0;color:var(--jd-silver-bright)}
+  .lede strong{font-weight:600;color:#fff}
+  /* Cards */
+  section.card{background:var(--jd-paper);border:1px solid var(--jd-line);border-radius:16px;padding:1.6rem 2rem;margin-bottom:1.25rem;box-shadow:0 1px 3px rgba(11,34,57,.05)}
+  h2{font-family:var(--jd-display);font-size:clamp(1.5rem,3.4vw,2rem);font-weight:750;letter-spacing:-.01em;line-height:1.2;margin:0 0 .5rem;color:var(--jd-navy)}
+  h3{font-family:var(--jd-display);font-size:1.12rem;font-weight:700;line-height:1.25;margin:0 0 .5rem;color:var(--jd-navy)}
+  p{margin:0 0 1rem}
+  .muted{color:var(--jd-muted)}
+  .small{font-size:.875rem;line-height:1.55}
+  /* Progress */
+  .progress-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+  .progress-label{font-family:var(--jd-display);font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--jd-muted);white-space:nowrap}
+  .progress-track{flex:1;height:8px;background:var(--jd-line);border-radius:8px;overflow:hidden}
+  .progress-fill{height:100%;background:var(--jd-navy);border-radius:8px;width:20%;transition:width .28s var(--jd-spring)}
+  /* Wizard */
+  .step{display:none}
+  .step.active{display:block;animation:rise .28s var(--jd-spring)}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  fieldset{border:0;margin:0;padding:0}
+  legend{font-family:var(--jd-display);font-size:1.35rem;font-weight:700;color:var(--jd-navy);line-height:1.2;margin-bottom:.5rem;padding:0}
+  .step-help{color:var(--jd-muted);margin-bottom:1.25rem;max-width:40rem}
+  .options{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.75rem;margin-bottom:1.5rem}
+  .opt{display:flex;gap:.75rem;align-items:flex-start;border:1px solid var(--jd-line);border-radius:12px;padding:.9rem 1rem;cursor:pointer;background:#fff;transition:border-color .18s var(--jd-spring),background .18s var(--jd-spring)}
+  .opt:hover{border-color:var(--jd-navy-2)}
+  .opt input{margin-top:.3rem;accent-color:var(--jd-navy);width:1.05rem;height:1.05rem;flex:none}
+  .opt .opt-title{font-weight:600;display:block;line-height:1.35}
+  .opt .opt-sub{color:var(--jd-muted);font-size:.875rem;line-height:1.45;display:block}
+  .opt.selected{border-color:var(--jd-navy);background:var(--jd-mist)}
+  .nav-row{display:flex;gap:.75rem;justify-content:space-between;align-items:center}
+  button{font-family:var(--jd-body);font-size:1rem;cursor:pointer;border-radius:12px;padding:.55rem 1.1rem;font-weight:600;transition:transform .15s var(--jd-spring),background .15s var(--jd-spring)}
+  button:active{transform:scale(.97)}
+  .btn-primary{background:var(--jd-navy);color:#fff;border:1px solid var(--jd-navy)}
+  .btn-primary:hover{background:var(--jd-navy-2)}
+  .btn-primary:disabled{background:var(--jd-silver);border-color:var(--jd-silver);cursor:not-allowed}
+  .btn-ghost{background:#fff;color:var(--jd-navy);border:1px solid var(--jd-line)}
+  .btn-ghost:hover{border-color:var(--jd-navy-2)}
+  .hint{font-size:.875rem;color:var(--jd-muted)}
+  /* Results */
+  .verdict{background:var(--jd-navy);color:var(--jd-silver-bright);border-radius:16px;padding:1.6rem 2rem;margin-bottom:1.25rem}
+  .verdict h2{color:#fff;margin-bottom:.25rem}
+  .verdict p{margin:0;color:var(--jd-silver-bright)}
+  .verdict .big{font-family:var(--jd-display);font-size:clamp(1.5rem,3.4vw,2rem);font-weight:750;color:#fff;line-height:1.25}
+  .juris{border:1px solid var(--jd-line);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff}
+  .juris.dim{background:var(--jd-mist)}
+  .juris-head{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;margin-bottom:.5rem}
+  .juris-head h3{margin:0}
+  .chip{font-family:var(--jd-display);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:8px;padding:.2rem .55rem;white-space:nowrap}
+  .chip-live{background:var(--jd-navy);color:#fff}
+  .chip-soon{background:#fff;color:var(--jd-navy);border:1px solid var(--jd-navy)}
+  .chip-na{background:var(--jd-silver-bright);color:var(--jd-muted);border:1px solid var(--jd-line)}
+  .juris .law{font-weight:600}
+  .juris ul{margin:.25rem 0 .5rem;padding-left:1.25rem}
+  .juris li{margin-bottom:.35rem}
+  .juris .date-note{font-variant-numeric:tabular-nums}
+  /* Waitlist */
+  .waitlist{background:var(--jd-mist);border:1px solid var(--jd-line);border-radius:16px;padding:1.5rem}
+  .waitlist form{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+  .waitlist input[type=email]{flex:1 1 16rem;font-family:var(--jd-body);font-size:1rem;padding:.55rem .9rem;border:1px solid var(--jd-line);border-radius:12px;background:#fff;color:var(--jd-ink)}
+  .waitlist input[type=email]:focus{outline:2px solid var(--jd-navy-2);outline-offset:1px}
+  /* Dates strip */
+  .dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.75rem}
+  .date-cell{border:1px solid var(--jd-line);border-radius:12px;padding:.9rem 1rem;background:#fff}
+  .date-cell .d{font-family:var(--jd-display);font-weight:700;color:var(--jd-navy);font-variant-numeric:tabular-nums;display:block}
+  /* Footer */
+  footer{border-top:2px solid var(--jd-silver);padding-top:1.25rem;margin-top:.5rem}
+  footer p{margin-bottom:.5rem}
+  .tagline{font-family:var(--jd-display);font-size:1.02rem;font-weight:700;letter-spacing:.01em;color:var(--jd-navy);margin-top:1rem}
+  a{color:var(--jd-navy-2)}
+  @media (max-width:40rem){
+    .wrap{padding:0 .8rem 2.5rem}
+    header.band{margin:0 -.8rem 1rem;padding:1.75rem 1.15rem 1.5rem}
+    section.card{padding:1.15rem}
+    .verdict,.waitlist{padding:1.15rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .step.active{animation:none}
+    .progress-fill,button,.opt{transition:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="band">
+    <p class="eyebrow">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C7CEDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      J-Dawgs Industries · Free developer self-check
+    </p>
+    <h1>Age-Signal Readiness Self-Check</h1>
+    <p class="lede">New state laws are making <strong>app developers</strong> — not just the app stores — responsible for asking how old a user is, and for what happens next. Texas is already enforcing. California's duty lands <strong>January 1, 2027</strong>. Answer five short steps and get a plain-English snapshot of what applies to <em>your</em> app, where, and by when.</p>
+  </header>
+
+  <section class="card" aria-label="Key dates">
+    <div class="dates">
+      <div class="date-cell"><span class="d">Live now</span><span class="small muted">Texas, Utah, Louisiana, Brazil — age-signal duties already in force during 2026</span></div>
+      <div class="date-cell"><span class="d">January 1, 2027</span><span class="small muted">California AB 1043: every developer must request an age-bracket signal. New York: age assurance for AI companions/platforms</span></div>
+      <div class="date-cell"><span class="d">July 1, 2027</span><span class="small muted">California catch-up deadline for installs you picked up before 2027</span></div>
+    </div>
+  </section>
+
+  <section class="card" id="wizard" aria-label="Self-check wizard">
+    <div class="progress-row">
+      <span class="progress-label" id="progressLabel">Step 1 of 5</span>
+      <div class="progress-track" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step active" data-step="1">
+      <fieldset>
+        <legend>Where do you ship your app?</legend>
+        <p class="step-help">Pick every store you publish on. The two stores hand age information to developers through different systems, so your answers change below.</p>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="store" value="play"><span><span class="opt-title">Google Play</span><span class="opt-sub">Age answers come through Google's Play Age Signals API</span></span></label>
+          <label class="opt"><input type="checkbox" name="store" value="apple"><span><span class="opt-title">Apple App Store</span><span class="opt-sub">Age answers come through Apple's Declared Age Range (iOS 26+)</span></span></label>
+        </div>
+      </fieldset>
+      <div class="nav-row"><span class="hint">Runs 100% in your browser — nothing is sent anywhere.</span><button type="button" class="btn-primary" data-next disabled>Continue</button></div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" data-step="2">
+      <fieldset>
+        <legend>What kind of app is it?</legend>
+        <p class="step-help">Pick the closest one. Category decides whether some laws are aimed at you at all — New York's 2027 rule, for example, targets AI companions and platforms.</p>
+        <div class="options">
+          <label class="opt"><input type="radio" name="category" value="game"><span><span class="opt-title">Game</span><span class="opt-sub">Entertainment, any age rating</span></span></label>
+          <label class="opt"><input type="radio" name="category" value="utility"><span><span class="opt-title">Utility / productivity</span><span class="opt-sub">Tools, creation, photo, audio, everyday jobs</span></span></label>
+          <label class="opt"><input type="radio" name="category" value="social"><span><span class="opt-title">Social / communication</span><span class="opt-sub">People connect, post, or message</span></span></label>
+          <label class="opt"><input type="radio" name="category" value="companion"><span><span class="opt-title">AI companion / chatbot</span><span class="opt-sub">An AI that talks with users like a person</span></span></label>
+          <label class="opt"><input type="radio" name="category" value="kids"><span><span class="opt-title">Kids / family</span><span class="opt-sub">Made for, or partly for, children</span></span></label>
+          <label class="opt"><input type="radio" name="category" value="other"><span><span class="opt-title">Something else</span><span class="opt-sub">Doesn't fit the boxes above</span></span></label>
+        </div>
+      </fieldset>
+      <div class="nav-row"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn-primary" data-next disabled>Continue</button></div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" data-step="3">
+      <fieldset>
+        <legend>What can people do inside the app?</legend>
+        <p class="step-help">Pick everything that applies. Chat and public content are what turn an age answer from paperwork into a real safety duty.</p>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="feature" value="chat"><span><span class="opt-title">Chat or messaging</span><span class="opt-sub">Users can talk to each other (or to an AI) in the app</span></span></label>
+          <label class="opt"><input type="checkbox" name="feature" value="ugc"><span><span class="opt-title">User-generated content</span><span class="opt-sub">Posts, photos, profiles, or files other people can see</span></span></label>
+          <label class="opt"><input type="checkbox" name="feature" value="iap"><span><span class="opt-title">In-app purchases</span><span class="opt-sub">Anything sold inside the app after install</span></span></label>
+          <label class="opt"><input type="checkbox" name="feature" value="accounts"><span><span class="opt-title">Accounts / sign-in</span><span class="opt-sub">Users register or log in</span></span></label>
+          <label class="opt"><input type="checkbox" name="feature" value="none"><span><span class="opt-title">None of these</span><span class="opt-sub">Single-purpose app, no social layer</span></span></label>
+        </div>
+      </fieldset>
+      <div class="nav-row"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn-primary" data-next disabled>Continue</button></div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" data-step="4">
+      <fieldset>
+        <legend>Who is the app for, age-wise?</legend>
+        <p class="step-help">Your declared posture — the target audience and rating on your store listing. This is the single answer that changes the most below.</p>
+        <div class="options">
+          <label class="opt"><input type="radio" name="posture" value="adults"><span><span class="opt-title">Adults only (18+)</span><span class="opt-sub">Listing and rating say adults; minors are not the audience</span></span></label>
+          <label class="opt"><input type="radio" name="posture" value="teens"><span><span class="opt-title">Teens and up (13+)</span><span class="opt-sub">Teenagers are part of the intended audience</span></span></label>
+          <label class="opt"><input type="radio" name="posture" value="everyone"><span><span class="opt-title">Everyone, including kids</span><span class="opt-sub">General audience; children plausibly use it</span></span></label>
+          <label class="opt"><input type="radio" name="posture" value="mixed"><span><span class="opt-title">Mixed, with a kids section</span><span class="opt-sub">A part of the app is designed for children</span></span></label>
+          <label class="opt"><input type="radio" name="posture" value="unset"><span><span class="opt-title">Honestly — never decided</span><span class="opt-sub">No deliberate age posture on the listing</span></span></label>
+        </div>
+      </fieldset>
+      <div class="nav-row"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn-primary" data-next disabled>Continue</button></div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step" data-step="5">
+      <fieldset>
+        <legend>Where are your users?</legend>
+        <p class="step-help">Pick the places you know you have — or could plausibly get — users. These duties follow the user's location, not yours. Not sure? Pick the last box; most small developers sell worldwide whether they planned to or not.</p>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="market" value="TX"><span><span class="opt-title">Texas</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="UT"><span><span class="opt-title">Utah</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="LA"><span><span class="opt-title">Louisiana</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="CA"><span><span class="opt-title">California</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="NY"><span><span class="opt-title">New York</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="BR"><span><span class="opt-title">Brazil</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="USOTHER"><span><span class="opt-title">Elsewhere in the US</span><span class="opt-sub">States without their own age-signal law today</span></span></label>
+          <label class="opt"><input type="checkbox" name="market" value="WORLD"><span><span class="opt-title">Worldwide / I don't track it</span><span class="opt-sub">Listed for sale broadly; user locations unknown</span></span></label>
+        </div>
+      </fieldset>
+      <div class="nav-row"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn-primary" id="seeResults" disabled>See my snapshot</button></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <div id="results" hidden>
+    <div class="verdict" role="status">
+      <p class="eyebrow" style="margin-bottom:.5rem">Your snapshot</p>
+      <p class="big" id="verdictLine"></p>
+      <p id="verdictSub" style="margin-top:.5rem"></p>
+    </div>
+    <div id="jurisList"></div>
+
+    <section class="card">
+      <h2>The full kit is being built</h2>
+      <p>This snapshot is the free layer — the map, not the route. The <strong>J-Dawgs Age-Signal Readiness Kit</strong> adds the working half: a per-app duty matrix for every jurisdiction, copy-ready Play Console and App Store Connect checklists, a decision table for what your app should do with each age band (0–12, 13–15, 16–17, 18+), and a dated evidence file you keep as your good-faith record.</p>
+      <div class="waitlist">
+        <h3>Join the waitlist</h3>
+        <p class="small muted" style="margin:0">One email when the kit ships. No list-selling, no drip campaign — that's a promise we print on everything we make. The button opens your own mail app with your snapshot attached, so you keep a copy too.</p>
+        <form id="waitlistForm">
+          <input type="email" id="waitlistEmail" placeholder="you@yourstudio.com" aria-label="Email address for the waitlist" required>
+          <button type="submit" class="btn-primary">Join the waitlist</button>
+          <button type="button" class="btn-ghost" id="copySnapshot">Copy my snapshot</button>
+        </form>
+        <p class="small muted" id="copyNote" style="margin:.75rem 0 0" hidden>Copied — your snapshot is on your clipboard.</p>
+      </div>
+      <p style="margin-top:1.25rem"><button type="button" class="btn-ghost" id="startOver">Start over</button></p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Straight answers, stated plainly</h2>
+    <p><strong>This is compliance information, not legal advice.</strong> We are a small software shop in Missouri, not a law firm. We built this checker because these duties land on us too — our own game is 18+ on Google Play — and the only explanations we could find were written by law firms for enterprise clients. If your app makes real money or handles kids directly, pay a lawyer for an hour. This page will still have been the cheapest first pass you found.</p>
+    <p class="small muted" style="margin:0">Sources, all public, checked November 6, 2026: Texas SB 2420 (App Store Accountability Act) statute text and state-law trackers; Google Play policy material on the Play Age Signals API (returning data for TX, UT, LA, Brazil) and on Brazil's Digital ECA (in force March 17, 2026); California AB 1043 (Digital Age Assurance Act) explainers from Hunton Andrews Kurth and Legal 500; Fenwick's summary of New York's Safe by Design Act; published comparisons of Apple's Declared Age Range and Google's Play Age Signals. Laws in this area are being challenged and revised in public — if a date above ever stops being true, we will re-date this page rather than quietly edit it.</p>
+  </section>
+
+  <footer>
+    <p class="small muted"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://joshuajdawg0350.github.io/jdawgs-hub/support.html">Report a problem</a></p>
+    <p class="small muted">No ads. J-Dawgs Industries advertises only its own products.</p>
+    <p class="small muted">J-Dawgs Age-Signal Self-Check™ · © 2026 Joshua Dawson · J-Dawgs Industries</p>
+    <p class="tagline"><strong>No fancy logos. Just quality products.</strong></p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var steps = Array.prototype.slice.call(document.querySelectorAll(".step"));
+  var current = 1;
+  var progressLabel = document.getElementById("progressLabel");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+
+  function stepValid(n){
+    if(n===1) return document.querySelectorAll('input[name="store"]:checked').length>0;
+    if(n===2) return !!document.querySelector('input[name="category"]:checked');
+    if(n===3) return document.querySelectorAll('input[name="feature"]:checked').length>0;
+    if(n===4) return !!document.querySelector('input[name="posture"]:checked');
+    if(n===5) return document.querySelectorAll('input[name="market"]:checked').length>0;
+    return false;
+  }
+  function refreshNext(stepEl){
+    var n = parseInt(stepEl.getAttribute("data-step"),10);
+    var btn = stepEl.querySelector("[data-next]") || (n===5 ? document.getElementById("seeResults") : null);
+    if(btn) btn.disabled = !stepValid(n);
+  }
+  function paintSelected(input){
+    var label = input.closest(".opt");
+    if(label) label.classList.toggle("selected", input.checked);
+  }
+  function showStep(n){
+    current = n;
+    steps.forEach(function(s){ s.classList.toggle("active", parseInt(s.getAttribute("data-step"),10)===n); });
+    progressLabel.textContent = "Step " + n + " of 5";
+    progressFill.style.width = (n*20) + "%";
+    progressBar.setAttribute("aria-valuenow", n);
+    var active = steps[n-1];
+    if(active){ var f = active.querySelector("input"); if(f) f.focus({preventScroll:true}); }
+    document.getElementById("wizard").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  // "None of these" exclusivity on the features step
+  var featureInputs = Array.prototype.slice.call(document.querySelectorAll('input[name="feature"]'));
+  document.addEventListener("change", function(e){
+    var t = e.target;
+    if(t.name==="feature"){
+      if(t.value==="none" && t.checked){
+        featureInputs.forEach(function(i){ if(i.value!=="none"){ i.checked=false; paintSelected(i); } });
+      } else if(t.checked){
+        var none = document.querySelector('input[name="feature"][value="none"]');
+        if(none){ none.checked=false; paintSelected(none); }
+      }
+    }
+    if(t.type==="radio"){
+      document.querySelectorAll('input[name="'+t.name+'"]').forEach(paintSelected);
+    }
+    paintSelected(t);
+    var stepEl = t.closest(".step");
+    if(stepEl) refreshNext(stepEl);
+  });
+
+  steps.forEach(function(s){
+    var next = s.querySelector("[data-next]");
+    var back = s.querySelector("[data-back]");
+    if(next) next.addEventListener("click", function(){ var n=parseInt(s.getAttribute("data-step"),10); if(stepValid(n)) showStep(n+1); });
+    if(back) back.addEventListener("click", function(){ showStep(parseInt(s.getAttribute("data-step"),10)-1); });
+    refreshNext(s);
+  });
+  document.getElementById("seeResults").addEventListener("click", function(){ if(stepValid(5)) buildResults(); });
+
+  function answers(){
+    function vals(name){ return Array.prototype.map.call(document.querySelectorAll('input[name="'+name+'"]:checked'), function(i){ return i.value; }); }
+    function one(name){ var el=document.querySelector('input[name="'+name+'"]:checked'); return el?el.value:null; }
+    return { stores: vals("store"), category: one("category"), features: vals("feature"),
+             posture: one("posture"), markets: vals("market") };
+  }
+
+  function buildResults(){
+    var a = answers();
+    var world = a.markets.indexOf("WORLD")>-1;
+    function has(m){ return world || a.markets.indexOf(m)>-1; }
+    var play = a.stores.indexOf("play")>-1, apple = a.stores.indexOf("apple")>-1;
+    var social = a.features.indexOf("chat")>-1 || a.features.indexOf("ugc")>-1;
+    var cards = [];
+
+    /* ---------- TEXAS ---------- */
+    (function(){
+      var rel = has("TX"), b = [];
+      b.push("SB 2420 (the App Store Accountability Act) has been law since January 1, 2026, and enforcement resumed June 4, 2026 after a court stay was lifted. This one is not upcoming — it is running.");
+      b.push("In plain terms: developers must use the store's age/consent signals, and publish an age rating they can justify.");
+      if(a.posture==="adults") b.push("Your adults-only posture covers the rating side. It does not cover the signal side — requesting the signal and acting on it is the developer's job, and the store's gate does not do it for you.");
+      if(a.posture==="unset") b.push("You said your age posture was never decided. In Texas that is the first fix on the list: this law is aimed squarely at ratings and signals, and 'we never picked a posture' is the weakest position to be caught in.");
+      if(a.posture==="everyone"||a.posture==="mixed"||a.posture==="teens") b.push("Because minors are inside your intended audience, the consent half of the signal matters most for you — plan on actually gating what under-18 bands can reach, not just reading the answer.");
+      if(social) b.push("With chat or user content in the app, an age answer is not paperwork: it is the input your safety behavior is supposed to run on.");
+      if(play) b.push("On Google Play, the data comes through the Play Age Signals API, which already returns Texas users' age bands to developers who ask.");
+      if(apple && !play) b.push("On iOS, the equivalent is Apple's Declared Age Range (iOS 26+) — it needs an entitlement, and you supply the gates in your own app.");
+      if(!rel) b.push("You didn't list Texas users, so this is informational for you — but if that ever changes, the duty is already live, with no catch-up window.");
+      cards.push({name:"Texas", law:"SB 2420 — App Store Accountability Act", chip: rel?"LIVE NOW":"NOT IN YOUR MARKETS", chipClass: rel?"chip-live":"chip-na", dim:!rel, bullets:b});
+    })();
+
+    /* ---------- UTAH ---------- */
+    (function(){
+      var rel = has("UT"), b = [];
+      b.push("Utah's equivalent law took effect in May 2026, and Utah is one of the states where the Play Age Signals API returns real data today.");
+      b.push("Published, developer-facing guidance for Utah is thinner than for Texas. The honest summary as of November 2026: the same mechanic — a store signal exists and developers are expected to use it — with less official detail in public.");
+      if(a.posture==="adults") b.push("An 18+ posture simplifies your Utah story the same way it does in Texas: the consequence side is already answered by your listing.");
+      if(a.posture==="unset") b.push("An undecided posture is the same exposure here as in Texas — decide it once and it counts in both states.");
+      if(!rel) b.push("You didn't list Utah users. Same standing as Texas: live law, no action until your market changes.");
+      cards.push({name:"Utah", law:"State age-assurance law (in force May 2026)", chip: rel?"LIVE NOW":"NOT IN YOUR MARKETS", chipClass: rel?"chip-live":"chip-na", dim:!rel, bullets:b});
+    })();
+
+    /* ---------- LOUISIANA ---------- */
+    (function(){
+      var rel = has("LA"), b = [];
+      b.push("Louisiana's age signals went live in July 2026: the store side is switched on, and Play returns Louisiana users' age bands.");
+      b.push("If you have Louisiana users, the open question is no longer whether the signal exists — it is whether your app asks for it and does anything with the answer.");
+      if(!rel) b.push("You didn't list Louisiana users, so treat this as a map note: the infrastructure is live there even if your market isn't, yet.");
+      cards.push({name:"Louisiana", law:"State age-signal framework (signals live July 2026)", chip: rel?"LIVE NOW":"NOT IN YOUR MARKETS", chipClass: rel?"chip-live":"chip-na", dim:!rel, bullets:b});
+    })();
+
+    /* ---------- BRAZIL ---------- */
+    (function(){
+      var rel = has("BR"), b = [];
+      b.push("Brazil's Digital ECA has been in force since March 17, 2026.");
+      if(a.posture==="adults"){
+        b.push("Google Play already blocks and filters 18+ apps away from Brazilian minor accounts — the store's wall and your posture point the same direction.");
+        b.push("What remains is yours to do on purpose: the Brazilian duty targets apps 'likely accessed by minors.' An adults-only app has a real answer to that question — but it should be an answer you decided and can show, not a default.");
+      } else {
+        b.push("The Brazilian duty falls on developers of apps 'likely accessed by minors,' who must take in the store's age-range data. A general-audience app is the profile that phrase was written about — plan on ingesting the signal, not just displaying a rating.");
+        if(a.posture==="unset") b.push("With no decided age posture, you currently can't answer Brazil's 'likely accessed' question either way. It is much cheaper to answer it now than after a store review asks.");
+      }
+      if(!rel) b.push("You didn't list Brazil. If your listing sells there anyway — many do by default — this section applies to you whether you picked it or not. Worth checking your store's country list.");
+      cards.push({name:"Brazil", law:"Digital ECA (in force March 17, 2026)", chip: rel?"LIVE NOW":"NOT IN YOUR MARKETS", chipClass: rel?"chip-live":"chip-na", dim:!rel, bullets:b});
+    })();
+
+    /* ---------- CALIFORNIA ---------- */
+    (function(){
+      var rel = has("CA"), b = [];
+      b.push("From January 1, 2027, the Digital Age Assurance Act (AB 1043) requires every developer whose app reaches California to request an age-bracket signal when the app is downloaded or launched.");
+      b.push("The moment the signal comes back, the law treats you as knowing that user's age bracket. After that date, 'we never looked' is no longer an available position.");
+      b.push("Penalties run to $2,500 per affected child for a negligent violation and $7,500 per affected child for an intentional one.");
+      b.push("Installs you picked up before 2027 are not grandfathered out: there is a catch-up duty covering them, with a July 1, 2027 deadline.");
+      if(play) b.push("On Google Play the request runs through the Play Age Signals API — currently in beta, a two-call pattern, returning bands 0–12, 13–15, 16–17, and 18+.");
+      if(apple) b.push("On iOS the request runs through Apple's Declared Age Range (iOS 26+), which requires an entitlement and developer-supplied gates.");
+      if(a.posture==="adults" && !social) b.push("Even for an adults-only app with no social features, the request itself is the duty. Your consequence side is already simple — a minor's bracket meets an adults-only listing — but the asking still has to be built before January 1.");
+      if(a.posture==="unset") b.push("Step zero for you is not code, it's a decision: California will deem you to know every user's bracket, so your app needs a written answer for what each bracket means inside it — starting with having a posture at all.");
+      if(!rel) b.push("You didn't list California users. If your app truly never reaches California, this is a watch item — but check your store's distribution settings before assuming that; most listings distribute there by default.");
+      cards.push({name:"California", law:"AB 1043 — Digital Age Assurance Act", chip: rel?"JAN 1, 2027":"NOT IN YOUR MARKETS", chipClass: rel?"chip-soon":"chip-na", dim:!rel, bullets:b});
+    })();
+
+    /* ---------- NEW YORK ---------- */
+    (function(){
+      var companion = a.category==="companion", rel = has("NY") && companion, b = [];
+      if(companion){
+        b.push("New York's Safe by Design Act adds age assurance for AI companions and platforms from January 1, 2027 — and your category is the one it names.");
+        b.push("Treat this as a build item on the same clock as California, not a watch item.");
+      } else {
+        b.push("As described in current sources, New York's January 1, 2027 age-assurance provision targets AI companions and platforms. Your category is not in that scope.");
+        b.push("Keep it on the watch list anyway: states are copying each other's age bills quickly, and today's reading is a reading of today's text.");
+      }
+      cards.push({name:"New York", law:"Safe by Design Act (from January 1, 2027)", chip: companion?"JAN 1, 2027":"NOT AIMED AT YOUR CATEGORY", chipClass: companion?"chip-soon":"chip-na", dim:!companion, bullets:b});
+    })();
+
+    /* ---------- EVERYWHERE ELSE ---------- */
+    if(a.markets.indexOf("USOTHER")>-1 || world){
+      cards.push({name:"Everywhere else", law:"Snapshot dated November 6, 2026", chip:"NO STATE DUTY FOUND TODAY", chipClass:"chip-na", dim:true,
+        bullets:["No other US state in our current sources has its own developer age-signal duty in force today. That is a dated snapshot, not a permanent fact — legislatures are actively borrowing each other's bills in this area, and this page's job is to be re-dated when that changes."]});
+    }
+
+    /* ---------- Verdict ---------- */
+    var liveCount = cards.filter(function(c){ return c.chip==="LIVE NOW"; }).length;
+    var verdict = document.getElementById("verdictLine");
+    var sub = document.getElementById("verdictSub");
+    if(liveCount>0) verdict.textContent = "You have age-signal duties live today in " + liveCount + (liveCount===1?" place":" places") + " you sell.";
+    else verdict.textContent = "Nothing is live against your app today — but the clock is already running.";
+    var parts = [];
+    if(has("CA")) parts.push("Your next hard date is January 1, 2027 (California)");
+    if(a.category==="companion" && has("NY")) parts.push("New York's companion age-assurance duty lands the same day");
+    if(a.posture==="unset") parts.push("and step zero for you is deciding your app's age posture — half of these duties key off it");
+    sub.textContent = parts.length ? (parts.join("; ") + ".") : "Keep the January 1, 2027 date on your radar anyway — distribution defaults change faster than intentions do.";
+
+    /* ---------- Render ---------- */
+    var list = document.getElementById("jurisList");
+    list.innerHTML = "";
+    cards.forEach(function(c){
+      var div = document.createElement("div");
+      div.className = "juris" + (c.dim ? " dim" : "");
+      var head = document.createElement("div"); head.className = "juris-head";
+      var h = document.createElement("h3"); h.textContent = c.name;
+      var chip = document.createElement("span"); chip.className = "chip " + c.chipClass; chip.textContent = c.chip;
+      head.appendChild(h); head.appendChild(chip);
+      var law = document.createElement("p"); law.className = "law"; law.style.margin = "0 0 .25rem"; law.textContent = c.law;
+      var ul = document.createElement("ul");
+      c.bullets.forEach(function(t){ var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+      div.appendChild(head); div.appendChild(law); div.appendChild(ul);
+      list.appendChild(div);
+    });
+
+    window.__jdSnapshot = { answers: a, cards: cards.map(function(c){ return {name:c.name, chip:c.chip, law:c.law}; }), liveCount: liveCount };
+    document.getElementById("wizard").hidden = true;
+    var r = document.getElementById("results");
+    r.hidden = false;
+    r.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function snapshotText(){
+    var s = window.__jdSnapshot; if(!s) return "";
+    var a = s.answers;
+    var lines = [
+      "AGE-SIGNAL READINESS — MY SNAPSHOT (J-Dawgs self-check, November 2026)",
+      "Stores: " + (a.stores.join(", ") || "—"),
+      "Category: " + (a.category || "—"),
+      "Features: " + (a.features.join(", ") || "—"),
+      "Age posture: " + (a.posture || "—"),
+      "Markets: " + (a.markets.join(", ") || "—"),
+      "Duties live today in places I sell: " + s.liveCount,
+      ""
+    ];
+    s.cards.forEach(function(c){ lines.push("- " + c.name + " [" + c.chip + "] — " + c.law); });
+    lines.push("");
+    lines.push("Key dates: California AB 1043 request duty — January 1, 2027. California catch-up for pre-2027 installs — July 1, 2027.");
+    lines.push("Compliance information, not legal advice.");
+    return lines.join("\n");
+  }
+
+  document.getElementById("copySnapshot").addEventListener("click", function(){
+    var txt = snapshotText();
+    function done(){ var n=document.getElementById("copyNote"); n.hidden=false; setTimeout(function(){ n.hidden=true; }, 3500); }
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, done); }
+    else {
+      var ta=document.createElement("textarea"); ta.value=txt; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand("copy"); }catch(e){} document.body.removeChild(ta); done();
+    }
+  });
+
+  document.getElementById("waitlistForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = document.getElementById("waitlistEmail").value.trim();
+    var subject = encodeURIComponent("Age-Signal Readiness Kit — waitlist");
+    var body = encodeURIComponent("Please put me on the waitlist for the J-Dawgs Age-Signal Readiness Kit.\n\nMy email: " + email + "\n\n" + snapshotText());
+    window.location.href = "mailto:joshuajdawg0350@gmail.com?subject=" + subject + "&body=" + body;
+  });
+
+  document.getElementById("startOver").addEventListener("click", function(){
+    document.getElementById("results").hidden = true;
+    document.getElementById("wizard").hidden = false;
+    showStep(1);
+  });
+})();
+</script>
+</body>
+</html>
