@@ -1,0 +1,366 @@
+/* ============================================================
+   J-Dawgs Industries — flagship site stylesheet (REDESIGN 2026-11-05)
+   Art direction: cinematic dark, in the brand's own navy & silver.
+   References: Tesla / SpaceX (full-viewport scenes, product as hero,
+   radical subtraction), Linear (hairline precision, restraint),
+   Stripe (editorial type hierarchy, spec-grade pricing rows).
+   Fonts SELF-HOSTED variable WOFF2 (SIL OFL 1.1, licenses in
+   assets/fonts/). Zero third-party requests. No trackers. No ads.
+   ============================================================ */
+
+@font-face{
+  font-family:"Archivo";font-style:normal;font-weight:100 900;font-stretch:62% 125%;
+  font-display:swap;src:url("fonts/archivo-variable.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Inter";font-style:normal;font-weight:400 800;
+  font-display:swap;src:url("fonts/inter-variable.woff2") format("woff2");
+}
+@font-face{
+  font-family:"JetBrains Mono";font-style:normal;font-weight:400 700;
+  font-display:swap;src:url("fonts/jetbrains-mono-variable.woff2") format("woff2");
+}
+
+:root{
+  /* brand tokens (design system v1/v2) */
+  --jd-navy:#0B2239;
+  --jd-navy-2:#123C63;
+  --jd-silver:#C7CEDA;
+  --jd-silver-bright:#E9EDF3;
+
+  /* cinematic dark ramp — charcoal-navy, in family with the apps' scheme */
+  --bg:#05080E;
+  --bg-2:#081120;
+  --panel:#0A1626;
+  --panel-2:#0E1E33;
+  --ink:#E9EDF3;
+  --body:#C3CEDD;
+  --muted:#93A1B5;
+  --line:rgba(199,206,218,.14);
+  --line-strong:rgba(199,206,218,.32);
+  --good:#7BC98F;
+
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --spring:cubic-bezier(.25,1.1,.35,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --wrap:76rem;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+body{
+  margin:0;background:var(--bg);color:var(--body);
+  font-family:var(--font-body);font-size:1rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:var(--jd-navy-2);color:#fff}
+img{max-width:100%;height:auto}
+a{color:#fff;text-decoration-color:rgba(199,206,218,.45);text-underline-offset:3px}
+a:hover{text-decoration-color:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--font-display);color:#fff;margin:0}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;font-stretch:110%;
+   line-height:1.04;letter-spacing:-.015em}
+h3{font-size:1.22rem;font-weight:700;line-height:1.3;letter-spacing:-.005em}
+p{margin:.7rem 0}
+.lead{font-size:clamp(1.06rem,1.6vw,1.25rem);line-height:1.6;font-weight:450;color:var(--body)}
+.small{font-size:.875rem}
+.muted{color:var(--muted)}
+.price,.num{font-variant-numeric:tabular-nums;font-weight:600;color:#fff}
+code,.mono{font-family:var(--font-data);font-size:.92em}
+strong{color:#fff}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+
+/* spec-sheet label — the engineering voice of the site */
+.eyebrow{
+  font-family:var(--font-data);font-size:.72rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--jd-silver);
+  margin:0 0 1.1rem;display:flex;align-items:center;gap:.9rem;
+}
+.eyebrow::before{content:"";width:2.5rem;height:1px;background:var(--jd-silver);flex:none}
+.badge{
+  display:inline-block;font:600 .68rem var(--font-data);letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--line-strong);border-radius:4px;padding:.18rem .5rem;
+  color:#fff;vertical-align:middle;margin-left:.4rem;
+}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 1.5rem}
+main{display:block}
+.band{padding:7.5rem 0;border-top:1px solid var(--line)}
+.band:first-child{border-top:none}
+.band-alt{background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%)}
+.sec-head{max-width:48rem;margin-bottom:3.25rem}
+.sec-head .lead{margin-top:1.1rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem 3.5rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem 2.5rem}
+.grid-2 h3,.grid-3 h3{margin-bottom:.35rem}
+
+/* ---------- header ---------- */
+.site-header{
+  position:fixed;inset:0 0 auto 0;z-index:60;color:var(--jd-silver-bright);
+  transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(5,8,14,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom-color:var(--line);
+}
+.site-header .wrap{display:flex;align-items:center;gap:1rem;height:72px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;flex:none}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;white-space:nowrap;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--jd-silver)}
+.site-nav{margin-left:auto}
+.site-nav ul{display:flex;flex-wrap:nowrap;gap:1.6rem;list-style:none;margin:0;padding:0}
+.site-nav a{
+  color:var(--jd-silver);text-decoration:none;font-weight:600;font-size:.8rem;
+  letter-spacing:.13em;text-transform:uppercase;padding:.4rem 0;white-space:nowrap;
+  border-bottom:1px solid transparent;transition:color .18s ease,border-color .18s ease;
+}
+.site-nav a:hover{color:#fff}
+.site-nav a[aria-current="page"]{color:#fff;border-bottom-color:#fff}
+.nav-toggle{
+  display:none;margin-left:auto;background:rgba(5,8,14,.35);border:1px solid var(--line-strong);
+  color:#fff;border-radius:6px;padding:.5rem .9rem;font:600 .82rem var(--font-body);
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+}
+
+/* ---------- hero — a full-viewport scene ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  background-size:cover;background-position:center;overflow:hidden;
+  background-color:var(--jd-navy);
+}
+.hero-home{background-image:url("hero-home.jpg")}
+.hero-band{background-image:url("hero-band.jpg")}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(5,8,14,.58) 0%,rgba(5,8,14,.05) 34%,rgba(5,8,14,.30) 66%,rgba(5,8,14,.88) 88%,var(--bg) 100%);
+}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:8.5rem;padding-bottom:3.25rem}
+.hero h1{
+  color:#fff;font-weight:800;font-stretch:118%;letter-spacing:-.018em;
+  font-size:clamp(2.9rem,7.6vw,5.9rem);line-height:.99;max-width:13ch;margin:0;
+}
+.hero h1.display{font-size:clamp(3.2rem,8.4vw,7rem);max-width:11ch}
+.hero .lead{color:#D7DEE9;max-width:57ch;margin-top:1.4rem;text-shadow:0 1px 12px rgba(5,8,14,.45)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.1rem}
+.hero .eyebrow{color:#fff}
+.hero .eyebrow::before{background:#fff}
+
+/* spec strip — verified numbers, set like a data plate */
+.hero-facts{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem 2rem;
+  margin-top:3.4rem;padding-top:1.5rem;border-top:1px solid var(--line-strong);
+  font-size:.92rem;color:var(--body);
+}
+.hero-facts b{
+  display:block;font-family:var(--font-display);font-weight:800;font-stretch:108%;
+  font-size:clamp(1.45rem,2.4vw,2rem);line-height:1.1;color:#fff;
+  font-variant-numeric:tabular-nums;margin-bottom:.3rem;letter-spacing:-.01em;
+}
+
+.hero-facts.facts-3{grid-template-columns:repeat(3,1fr)}
+
+/* press variant: the <b> is the label, the value follows in body text */
+.hero-facts.facts-label{font-size:1rem}
+.hero-facts.facts-label b{
+  font-family:var(--font-data);font-weight:500;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--jd-silver);margin-bottom:.45rem;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:52px;
+  text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.01em;
+  padding:.85rem 1.9rem;border-radius:6px;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s var(--spring),background .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:#F2F5F9;color:#0A1522}
+.btn-primary:hover{background:#fff;color:#0A1522;transform:translateY(-1px)}
+.btn-ghost{background:rgba(8,17,32,.28);color:#fff;border-color:rgba(233,237,243,.45);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.07);color:#fff;border-color:#fff}
+.btn-sm{min-height:46px;padding:.6rem 1.25rem;font-size:.9rem}
+.band .btn-primary,.site-footer .btn-primary{background:#F2F5F9;color:#0A1522}
+.band .btn-ghost,.doors .btn-ghost{background:transparent;border-color:var(--line-strong)}
+.band .btn-ghost:hover,.doors .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+
+/* ---------- fleet — the businesses, presented as product panels ---------- */
+.bento{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);margin:0;
+}
+.tile{
+  background:var(--panel);padding:2.1rem;display:flex;flex-direction:column;gap:.6rem;
+  transition:background .25s ease;
+}
+.tile:hover{background:var(--panel-2)}
+.tile h3{font-size:1.45rem;line-height:1.22}
+.tile p{margin:0;font-size:.96rem;color:var(--body)}
+.tile .eyebrow{margin-bottom:.2rem}
+.tile .eyebrow::before{display:none}
+.tile .stat{
+  font-family:var(--font-display);font-size:clamp(2.4rem,3.6vw,3.15rem);font-weight:800;
+  font-stretch:110%;color:#fff;font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em;
+}
+.tile .tile-link{margin-top:auto;padding-top:1rem;font-weight:600;font-size:.95rem}
+.tile-wide{grid-column:span 2}
+.tile-full{grid-column:1/-1}
+
+/* ---------- proof trio ---------- */
+.proof-item h3{font-size:1.3rem;margin-bottom:.45rem}
+.proof-item p{color:var(--body);font-size:.97rem}
+
+/* ---------- pass band ---------- */
+.pass-band{
+  border:1px solid var(--line-strong);background:
+  linear-gradient(150deg,var(--jd-navy) 0%,var(--panel) 78%);
+  padding:3.25rem;
+}
+.pass-band h2{max-width:20ch}
+.pass-band .price-line{
+  font-family:var(--font-display);font-weight:800;font-stretch:110%;
+  font-size:clamp(2.6rem,5vw,4rem);color:#fff;line-height:1;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- product rows — spec-sheet pricing ---------- */
+.rows{border-top:1px solid var(--line)}
+.product{
+  display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:start;
+  padding:2.3rem 0;border-bottom:1px solid var(--line);
+}
+.product .p-body{max-width:44rem}
+.product .p-body h3{font-size:1.5rem;margin-bottom:.4rem}
+.product .p-body p{margin:.3rem 0;font-size:.97rem}
+.product .p-buy{display:flex;flex-direction:column;gap:.6rem;align-items:flex-end;text-align:right}
+.product .p-price{
+  font-family:var(--font-display);font-size:clamp(1.9rem,3vw,2.6rem);font-weight:800;
+  font-stretch:108%;color:#fff;font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.015em;
+}
+.product .p-price small{
+  display:block;font-family:var(--font-data);font-size:.66rem;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.45rem;
+}
+
+/* ---------- tables ---------- */
+.table-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:560px}
+th{
+  font-family:var(--font-data);font-size:.7rem;font-weight:500;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--jd-silver);text-align:left;
+  padding:.9rem 1rem;border-bottom:1px solid var(--line-strong);
+}
+td{padding:1.05rem 1rem;border-bottom:1px solid var(--line);vertical-align:top;color:var(--body)}
+td:first-child{color:#fff;font-weight:600}
+th:first-child,td:first-child{min-width:10.5rem}
+tr:last-child td{border-bottom:none}
+
+/* ---------- callouts & quotes ---------- */
+.callout{
+  border:1px solid var(--line);border-left:3px solid var(--jd-silver);
+  background:rgba(199,206,218,.045);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0;
+}
+.callout p:first-child{margin-top:0}
+.callout p:last-child{margin-bottom:0}
+blockquote.callout{font-size:1.08rem;line-height:1.65;color:#D7DEE9}
+blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600;font-size:1.25rem;line-height:1.45;color:#fff}
+
+/* ---------- doors — every route in, one tap ---------- */
+.doors{background:#04070C}
+.doors-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-top:2.75rem;
+}
+.doors-grid a{
+  display:block;background:var(--panel);padding:1.7rem 1.8rem;color:#fff;text-decoration:none;
+  transition:background .25s ease;
+}
+.doors-grid a:hover{background:var(--panel-2)}
+.doors-grid a b{display:block;font-family:var(--font-display);font-weight:700;font-size:1.12rem;margin-bottom:.3rem}
+.doors-grid a span{font-size:.9rem;color:var(--muted)}
+.doors-grid a::after{content:"→";display:block;margin-top:.9rem;color:var(--jd-silver);font-size:1rem}
+
+/* ---------- footer ---------- */
+.site-footer{background:#030509;border-top:1px solid var(--line);padding:5rem 0 3rem;color:var(--muted);font-size:.93rem}
+.site-footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;margin-bottom:3.5rem}
+.site-footer h3{
+  font-family:var(--font-data);font-size:.7rem;font-weight:500;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--jd-silver);margin:0 0 .9rem;
+}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin:.45rem 0}
+.site-footer a{color:#B9C4D4;text-decoration:none}
+.site-footer a:hover{color:#fff}
+.guarantee{color:var(--body);font-size:.97rem;max-width:66ch;border-top:1px solid var(--line);padding-top:2rem}
+.guarantee strong{color:#fff}
+.tagline{
+  font-family:var(--font-display);font-weight:800;font-stretch:110%;
+  font-size:clamp(1.45rem,3vw,2.1rem);color:#fff;letter-spacing:-.015em;
+  margin:2.75rem 0 .6rem;line-height:1.15;
+}
+.foot-note{font-size:.88rem;color:var(--muted)}
+
+/* ---------- entrance motion (calm, escapable) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  html.js .rise{opacity:0;transform:translateY(14px)}
+  html.js .rise.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s var(--ease-out)}
+}
+@media (prefers-reduced-motion: reduce){
+  .btn,.tile,.doors-grid a,.site-header{transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .site-nav ul{gap:1.1rem}
+}
+@media (max-width:900px){
+  .nav-toggle{display:block}
+  .site-nav{display:none;position:absolute;top:72px;left:0;right:0;
+    background:#05080E;border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.1rem}
+  .site-header:has(.site-nav.open){background:rgba(5,8,14,.94);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column;gap:0}
+  .site-nav a{display:block;padding:.7rem 0;font-size:.9rem}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .doors-grid{grid-template-columns:repeat(2,1fr)}
+  .site-footer .cols{grid-template-columns:repeat(2,1fr)}
+  .hero-facts,.hero-facts.facts-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .product{grid-template-columns:1fr}
+  .product .p-buy{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;align-items:center}
+  .product .p-price{margin-right:auto}
+}
+@media (max-width:640px){
+  .wrap{padding:0 1.25rem}
+  .band{padding:4.5rem 0}
+  .site-header .wrap{height:60px}
+  .site-nav{top:60px}
+  .brand img{width:30px;height:30px}
+  .hero .wrap{padding-top:7rem;padding-bottom:2.5rem}
+  .hero h1{font-size:clamp(2.6rem,13.5vw,3.4rem)}
+  .hero h1.display{font-size:clamp(3rem,16vw,4.2rem)}
+  .hero-facts{gap:1.25rem}
+  .hero-actions .btn{flex:1 1 100%}
+  .bento{grid-template-columns:1fr}
+  .tile-wide{grid-column:span 1}
+  .tile{padding:1.6rem}
+  .doors-grid{grid-template-columns:1fr}
+  .pass-band{padding:2rem 1.5rem}
+  .callout{padding:1.4rem 1.25rem}
+  .site-footer{padding:3.5rem 0 2.5rem}
+  .site-footer .cols{grid-template-columns:1fr;gap:1.75rem;margin-bottom:2.5rem}
+}
