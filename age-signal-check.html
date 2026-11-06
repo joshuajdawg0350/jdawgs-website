@@ -68,6 +68,7 @@
   .btn-primary:disabled{background:var(--jd-silver);border-color:var(--jd-silver);cursor:not-allowed}
   .btn-ghost{background:#fff;color:var(--jd-navy);border:1px solid var(--jd-line)}
   .btn-ghost:hover{border-color:var(--jd-navy-2)}
+  a.btn-primary,a.btn-ghost{display:inline-block;text-decoration:none;font-family:var(--jd-body);font-size:1rem;cursor:pointer;border-radius:12px;padding:.55rem 1.1rem;font-weight:600}
   .hint{font-size:.875rem;color:var(--jd-muted)}
   /* Results */
   .verdict{background:var(--jd-navy);color:var(--jd-silver-bright);border-radius:16px;padding:1.6rem 2rem;margin-bottom:1.25rem}
@@ -230,16 +231,15 @@
     <div id="jurisList"></div>
 
     <section class="card">
-      <h2>The full kit is being built</h2>
-      <p>This snapshot is the free layer — the map, not the route. The <strong>J-Dawgs Age-Signal Readiness Kit</strong> adds the working half: a per-app duty matrix for every jurisdiction, copy-ready Play Console and App Store Connect checklists, a decision table for what your app should do with each age band (0–12, 13–15, 16–17, 18+), and a dated evidence file you keep as your good-faith record.</p>
+      <h2>The full kit is live</h2>
+      <p>This snapshot is the free layer — the map, not the route. The <strong>J-Dawgs Age-Signal Readiness Kit</strong> adds the working half: a per-app duty matrix for every jurisdiction, copy-ready Play Console and App Store Connect checklists, a decision table for what your app should do with each age band (0–12, 13–15, 16–17, 18+), and a dated evidence file you keep as your good-faith record. <strong>It is live now — $29.99 one-time.</strong></p>
       <div class="waitlist">
-        <h3>Join the waitlist</h3>
-        <p class="small muted" style="margin:0">One email when the kit ships. No list-selling, no drip campaign — that's a promise we print on everything we make. The button opens your own mail app with your snapshot attached, so you keep a copy too.</p>
-        <form id="waitlistForm">
-          <input type="email" id="waitlistEmail" placeholder="you@yourstudio.com" aria-label="Email address for the waitlist" required>
-          <button type="submit" class="btn-primary">Join the waitlist</button>
+        <h3>Get the Kit — $29.99 one-time</h3>
+        <p class="small muted" style="margin:0">The Kit is on sale now on its J-Dawgs hub page — pay once by card, no subscription. Copy your snapshot first if you want to keep it; it stays on your clipboard either way.</p>
+        <p style="display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0 0">
+          <a class="btn-primary" href="https://joshuajdawg0350.github.io/jdawgs-hub/age-signal-readiness-kit.html">Get the Age-Signal Readiness Kit — $29.99</a>
           <button type="button" class="btn-ghost" id="copySnapshot">Copy my snapshot</button>
-        </form>
+        </p>
         <p class="small muted" id="copyNote" style="margin:.75rem 0 0" hidden>Copied — your snapshot is on your clipboard.</p>
       </div>
       <p style="margin-top:1.25rem"><button type="button" class="btn-ghost" id="startOver">Start over</button></p>
@@ -490,14 +490,6 @@
       var ta=document.createElement("textarea"); ta.value=txt; document.body.appendChild(ta); ta.select();
       try{ document.execCommand("copy"); }catch(e){} document.body.removeChild(ta); done();
     }
-  });
-
-  document.getElementById("waitlistForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    var email = document.getElementById("waitlistEmail").value.trim();
-    var subject = encodeURIComponent("Age-Signal Readiness Kit — waitlist");
-    var body = encodeURIComponent("Please put me on the waitlist for the J-Dawgs Age-Signal Readiness Kit.\n\nMy email: " + email + "\n\n" + snapshotText());
-    window.location.href = "mailto:joshuajdawg0350@gmail.com?subject=" + subject + "&body=" + body;
   });
 
   document.getElementById("startOver").addEventListener("click", function(){
