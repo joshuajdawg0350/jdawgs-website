@@ -141,6 +141,7 @@ main{display:block}
 }
 .hero-home{background-image:url("hero-home.jpg")}
 .hero-band{background-image:url("hero-band.jpg")}
+.hero-hands{background-image:url("hero-band.jpg")}
 .hero::before{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(5,8,14,.58) 0%,rgba(5,8,14,.05) 34%,rgba(5,8,14,.30) 66%,rgba(5,8,14,.88) 88%,var(--bg) 100%);
@@ -276,6 +277,25 @@ tr:last-child td{border-bottom:none}
 blockquote.callout{font-size:1.08rem;line-height:1.65;color:#D7DEE9}
 blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600;font-size:1.25rem;line-height:1.45;color:#fff}
 
+/* ---------- services strip — every business, one line each ---------- */
+.services{padding:3.5rem 0 .5rem}
+.services-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 3.5rem;
+  border-top:1px solid var(--line);margin-top:.25rem;
+}
+.services-grid a{
+  display:flex;align-items:baseline;gap:1rem;padding:1.02rem 0;
+  border-bottom:1px solid var(--line);text-decoration:none;min-width:0;
+}
+.services-grid a b{
+  font-family:var(--font-display);font-weight:700;font-size:1.04rem;
+  color:#fff;white-space:nowrap;letter-spacing:-.005em;
+}
+.services-grid a span{font-size:.9rem;color:var(--muted)}
+.services-grid a::after{content:"→";margin-left:auto;color:var(--jd-silver);flex:none}
+.services-grid a:hover span{color:var(--body)}
+.services-grid a:hover b{text-decoration:underline;text-underline-offset:3px}
+
 /* ---------- doors — every route in, one tap ---------- */
 .doors{background:#04070C}
 .doors-grid{
@@ -340,6 +360,9 @@ blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600
 }
 @media (max-width:720px){
   .grid-2,.grid-3{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .services-grid a{flex-wrap:wrap;row-gap:.15rem}
+  .services{padding-top:2.75rem}
   .product{grid-template-columns:1fr}
   .product .p-buy{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;align-items:center}
   .product .p-price{margin-right:auto}
@@ -351,6 +374,7 @@ blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600
   .site-nav{top:60px}
   .brand img{width:30px;height:30px}
   .hero .wrap{padding-top:7rem;padding-bottom:2.5rem}
+  .hero-hands .wrap{padding-top:5.25rem}
   .hero h1{font-size:clamp(2.6rem,13.5vw,3.4rem)}
   .hero h1.display{font-size:clamp(3rem,16vw,4.2rem)}
   .hero-facts{gap:1.25rem}
