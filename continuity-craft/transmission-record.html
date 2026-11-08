@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transmission Record — Instrument No. 2 of Continuity Craft</title>
+<style>
+  :root{
+    --ink:#1a1d21; --paper:#f7f5f0; --card:#ffffff; --line:#ddd8cc;
+    --accent:#8a5a12; --muted:#6b6f76;
+    --verified:#2e6b30; --intest:#b3540a; --draft:#5b6470;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--paper); color:var(--ink);
+    display:flex; flex-direction:column; height:100dvh; overflow:hidden;
+  }
+  header{background:var(--ink); color:#f3efe6; padding:12px 16px 10px; border-bottom:3px solid var(--accent); flex:0 0 auto;}
+  header .kicker{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#c9a86a; font-weight:700;}
+  header h1{font-size:24px; font-weight:800; line-height:1.1; margin:2px 0;}
+  header p{font-size:13px; color:#cfc9ba; max-width:660px;}
+  .summary{display:flex; gap:8px; padding:10px 16px; background:#eceade; border-bottom:1px solid var(--line); flex:0 0 auto; flex-wrap:wrap;}
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:6px 12px; min-width:96px;}
+  .stat .n{font-size:20px; font-weight:800; line-height:1;}
+  .stat .l{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:3px;}
+  .stat.ver .n{color:var(--verified);}
+  main{flex:1 1 auto; overflow-y:auto; padding:12px 16px 20px;}
+  .toolbar{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;}
+  button{font:inherit; font-size:14px; font-weight:600; cursor:pointer; border:1px solid var(--ink); background:var(--ink); color:#fff; border-radius:8px; padding:9px 14px;}
+  button.ghost{background:transparent; color:var(--ink); border-color:#b9b2a2;}
+  button.small{padding:6px 10px; font-size:13px;}
+  button:active{transform:translateY(1px);}
+  .row{display:flex; align-items:center; gap:10px; background:var(--card); border:1px solid var(--line); border-left:5px solid var(--draft); border-radius:8px; padding:9px 12px; margin-bottom:7px; cursor:pointer;}
+  .row.verified{border-left-color:var(--verified);} .row.intest{border-left-color:var(--intest);}
+  .row .main{flex:1 1 auto; min-width:0;}
+  .row .t{font-weight:700; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .row .s{font-size:12.5px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .chip{font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:99px; color:#fff; flex:0 0 auto;}
+  .c-verified{background:var(--verified);} .c-intest{background:var(--intest);} .c-draft{background:var(--draft);}
+  .empty{color:var(--muted); font-size:14.5px; padding:22px 6px; text-align:center;}
+  section.panel{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; margin-bottom:12px;}
+  section.panel h2{font-size:17px; font-weight:800; margin-bottom:4px;}
+  section.panel h3{font-size:13px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:var(--accent-ink,#6d450c); margin:14px 0 5px;}
+  section.panel .hint{font-size:13px; color:var(--muted); margin-bottom:8px;}
+  label{display:block; font-size:12.5px; font-weight:700; letter-spacing:.03em; margin:10px 0 4px;}
+  input[type=text], textarea, select{width:100%; font:inherit; font-size:15px; padding:9px 10px; border:1px solid #b9b2a2; border-radius:8px; background:#fff; color:var(--ink);}
+  textarea{resize:vertical; min-height:52px;}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:0 12px;}
+  @media (max-width:560px){ .grid{grid-template-columns:1fr;} header h1{font-size:21px;} }
+  .dyn{display:flex; gap:6px; margin-bottom:6px;}
+  .dyn input{flex:1 1 auto;}
+  .dyn button{flex:0 0 auto;}
+  ol.steps{margin:4px 0 4px 20px; font-size:14.5px;}
+  ol.steps li{margin-bottom:4px;}
+  .kv{font-size:14.5px; margin:5px 0; white-space:pre-wrap;}
+  .kv span{color:var(--muted);}
+  .cuebox{background:#faf6ec; border:1px solid var(--line); border-radius:8px; padding:8px 11px; margin-bottom:6px; font-size:14px;}
+  .failbox{background:#fbf1ef; border:1px solid #e4cfc9; border-radius:8px; padding:8px 11px; margin-bottom:6px; font-size:14px;}
+  .verdict{border-radius:8px; padding:10px 12px; font-size:14.5px; font-weight:700; margin:10px 0;}
+  .verdict.ok{background:#e9f4e9; border:1px solid var(--verified); color:var(--verified);}
+  .verdict.no{background:#fdf3e3; border:1px solid var(--intest); color:var(--intest);}
+  .check{display:flex; gap:8px; align-items:flex-start; font-size:14px; margin:8px 0;}
+  .check input{margin-top:3px; width:17px; height:17px; flex:0 0 auto;}
+  footer{flex:0 0 auto; padding:9px 16px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); background:#eceade; text-align:center;}
+  footer b{color:var(--ink);}
+  .hidden{display:none !important;}
+  @media print{ body{height:auto; overflow:visible;} main{overflow:visible;} .toolbar, footer, .noprint{display:none !important;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Continuity Craft · Instrument No. 2</div>
+  <h1>The Transmission Record</h1>
+  <p>Capture one piece of know-how from its holder — the steps, and the judgment behind them — then prove the capture the field's way: a learner who has never done the task performs it from this record alone. Pass, and it is a Verified Transmission. Anything less is a draft.</p>
+</header>
+
+<div class="summary">
+  <div class="stat"><div class="n" id="stTotal">0</div><div class="l">Records</div></div>
+  <div class="stat ver"><div class="n" id="stVer">0</div><div class="l">Verified Transmissions</div></div>
+  <div class="stat"><div class="n" id="stTest">0</div><div class="l">In test / draft</div></div>
+</div>
+
+<main>
+  <div class="toolbar">
+    <button id="btnNew">+ New Transmission Record</button>
+    <button class="ghost" id="btnSample">Load sample record</button>
+    <button class="ghost" id="btnExportAll">Export all (JSON)</button>
+    <button class="ghost" id="btnClear">Clear all</button>
+  </div>
+
+  <section class="panel hidden" id="formPanel"></section>
+  <section class="panel hidden" id="detailPanel"></section>
+  <div id="list"></div>
+</main>
+
+<footer>
+  <b>Continuity Craft</b> — founded 2026-11-08 by J-Dawgs Industries · Instrument No. 2: The Transmission Record · A capture is not a Transmission until reproduction proves it · © 2026 Joshua Dawson / J-Dawgs Industries
+</footer>
+
+<script>
+"use strict";
+var LS_KEY = "transmission-record-v1";
+var store = {
+  get: function(){ try { var v = localStorage.getItem(LS_KEY); return v ? JSON.parse(v) : []; } catch(e){ return []; } },
+  set: function(r){ try { localStorage.setItem(LS_KEY, JSON.stringify(r)); } catch(e){} }
+};
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]; }); }
+function status(r){
+  if (r.test && r.test.result === "pass" && r.test.attest && !(r.test.gaps && r.test.gaps.trim())) return "verified";
+  if (r.test && (r.test.tester || r.test.date)) return "intest";
+  return "draft";
+}
+function statusName(s){ return { verified: "Verified Transmission", intest: "In Test", draft: "Draft" }[s]; }
+
+var records = store.get();
+var editingId = null;
+
+function render(){
+  document.getElementById("stTotal").textContent = records.length;
+  var ver = records.filter(function(r){ return status(r) === "verified"; }).length;
+  document.getElementById("stVer").textContent = ver;
+  document.getElementById("stTest").textContent = records.length - ver;
+  var list = document.getElementById("list");
+  if (!records.length){
+    list.innerHTML = '<div class="empty">No records yet.<br>Start with the highest-risk item from your Perishability Audit — and sit with the holder while there is still time.</div>';
+    return;
+  }
+  list.innerHTML = records.map(function(r){
+    var s = status(r);
+    return '<div class="row ' + s + '" data-id="' + r.id + '"><div class="main">' +
+      '<div class="t">' + esc(r.title) + '</div>' +
+      '<div class="s">Knowledge of ' + esc(r.holder) + ' · captured by ' + esc(r.practitioner || "—") + '</div></div>' +
+      '<div class="chip c-' + s + '">' + statusName(s) + '</div></div>';
+  }).join("");
+  Array.prototype.forEach.call(list.querySelectorAll(".row"), function(row){
+    row.addEventListener("click", function(){ showDetail(row.getAttribute("data-id")); });
+  });
+}
+
+function dynListHTML(kind, values){
+  return values.map(function(v){
+    return '<div class="dyn"><input type="text" data-dyn="' + kind + '" value="' + esc(v) + '"><button type="button" class="ghost small" data-del="' + kind + '">✕</button></div>';
+  }).join("");
+}
+function collectDyn(kind){
+  var out = [];
+  Array.prototype.forEach.call(document.querySelectorAll('[data-dyn="' + kind + '"]'), function(i){
+    var v = i.value.trim(); if (v) out.push(v);
+  });
+  return out;
+}
+
+function openForm(r){
+  editingId = r ? r.id : null;
+  var p = document.getElementById("formPanel");
+  r = r || { title:"", holder:"", practitioner:"", setting:"", date:"", purpose:"", conditions:"", tools:"", safety:"", steps:[""], cues:[""], failures:[""], test:{ tester:"", date:"", result:"", gaps:"", attest:false } };
+  r.steps = r.steps && r.steps.length ? r.steps : [""];
+  r.cues = r.cues && r.cues.length ? r.cues : [""];
+  r.failures = r.failures && r.failures.length ? r.failures : [""];
+  var t = r.test || { tester:"", date:"", result:"", gaps:"", attest:false };
+  p.innerHTML =
+    '<h2>' + (editingId ? "Edit Transmission Record" : "New Transmission Record") + '</h2>' +
+    '<p class="hint">Write for the successor who will stand in the holder\'s place, holder absent. Plain words. The judgment calls matter more than the steps.</p>' +
+    '<label>What is the know-how?</label><input type="text" id="fTitle" value="' + esc(r.title) + '" placeholder="e.g. Bringing the old boiler back online after a cold shutdown">' +
+    '<div class="grid"><div><label>Holder — whose knowledge is this? (credited as source)</label><input type="text" id="fHolder" value="' + esc(r.holder) + '" placeholder="Name and years at it"></div>' +
+    '<div><label>Captured by (practitioner)</label><input type="text" id="fPractitioner" value="' + esc(r.practitioner) + '"></div>' +
+    '<div><label>Setting / domain</label><input type="text" id="fSetting" value="' + esc(r.setting) + '" placeholder="e.g. Rivera farm, north pump house"></div>' +
+    '<div><label>Date begun</label><input type="text" id="fDate" value="' + esc(r.date) + '" placeholder="YYYY-MM-DD"></div></div>' +
+    '<label>Purpose — what this know-how accomplishes, and what depends on it</label><textarea id="fPurpose">' + esc(r.purpose) + '</textarea>' +
+    '<label>Conditions &amp; setup — when this applies, what must be true first</label><textarea id="fConditions">' + esc(r.conditions) + '</textarea>' +
+    '<label>Tools &amp; materials</label><textarea id="fTools">' + esc(r.tools) + '</textarea>' +
+    '<h3>Steps, in order</h3><div id="dynSteps">' + dynListHTML("step", r.steps) + '</div><button type="button" class="ghost small" data-add="step">+ Add step</button>' +
+    '<h3>Judgment calls — what the expert watches, feels, listens for</h3><p class="hint">One per line, as: the cue → what it means / what to do. This is the part that dies first if you skip it.</p><div id="dynCues">' + dynListHTML("cue", r.cues) + '</div><button type="button" class="ghost small" data-add="cue">+ Add judgment call</button>' +
+    '<h3>Failure modes — how it goes wrong, and how the expert recovers</h3><div id="dynFailures">' + dynListHTML("failure", r.failures) + '</div><button type="button" class="ghost small" data-add="failure">+ Add failure mode</button>' +
+    '<label>Safety notes</label><textarea id="fSafety">' + esc(r.safety) + '</textarea>' +
+    '<h3>Verification — the reproduction test</h3>' +
+    '<p class="hint">A learner who has never done this task performs it using this record alone, holder absent. Log the result honestly. Gaps found = the record gets fixed and tested again.</p>' +
+    '<div class="grid"><div><label>Tester (the learner)</label><input type="text" id="tTester" value="' + esc(t.tester) + '"></div>' +
+    '<div><label>Test date</label><input type="text" id="tDate" value="' + esc(t.date) + '" placeholder="YYYY-MM-DD"></div></div>' +
+    '<label>Result</label><select id="tResult">' +
+      '<option value=""' + (t.result === "" ? " selected" : "") + '>Not tested yet</option>' +
+      '<option value="pass"' + (t.result === "pass" ? " selected" : "") + '>Passed — learner did the work to standard, no open gaps</option>' +
+      '<option value="gaps"' + (t.result === "gaps" ? " selected" : "") + '>Gaps found — record corrected, retest needed</option></select>' +
+    '<label>Gaps found (what the record was missing or got wrong)</label><textarea id="tGaps">' + esc(t.gaps) + '</textarea>' +
+    '<div class="check"><input type="checkbox" id="tAttest"' + (t.attest ? " checked" : "") + '><span>The tester had never performed this task before, and worked from this record alone, with the holder absent.</span></div>' +
+    '<div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;"><button id="btnSaveRec">Save record</button><button class="ghost" id="btnCancelRec">Cancel</button></div>';
+  p.classList.remove("hidden");
+  Array.prototype.forEach.call(p.querySelectorAll("[data-add]"), function(b){
+    b.addEventListener("click", function(){
+      var kind = b.getAttribute("data-add");
+      var holder = document.getElementById(kind === "step" ? "dynSteps" : kind === "cue" ? "dynCues" : "dynFailures");
+      var d = document.createElement("div"); d.className = "dyn";
+      d.innerHTML = '<input type="text" data-dyn="' + kind + '"><button type="button" class="ghost small" data-del="' + kind + '">✕</button>';
+      holder.appendChild(d); wireDel(d.querySelector("[data-del]"));
+    });
+  });
+  Array.prototype.forEach.call(p.querySelectorAll("[data-del]"), function(b){ wireDel(b); });
+  document.getElementById("btnCancelRec").addEventListener("click", function(){ p.classList.add("hidden"); });
+  document.getElementById("btnSaveRec").addEventListener("click", saveForm);
+  p.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function wireDel(b){
+  b.addEventListener("click", function(){ var d = b.parentNode; if (d && d.parentNode) d.parentNode.removeChild(d); });
+}
+
+function saveForm(){
+  var title = document.getElementById("fTitle").value.trim();
+  var holder = document.getElementById("fHolder").value.trim();
+  if (!title || !holder){ alert("A record needs the know-how's name and its holder's name — the holder is always credited."); return; }
+  var rec = {
+    id: editingId || ("t" + Date.now().toString(36) + Math.floor(Math.random()*9999)),
+    title: title, holder: holder,
+    practitioner: document.getElementById("fPractitioner").value.trim(),
+    setting: document.getElementById("fSetting").value.trim(),
+    date: document.getElementById("fDate").value.trim(),
+    purpose: document.getElementById("fPurpose").value.trim(),
+    conditions: document.getElementById("fConditions").value.trim(),
+    tools: document.getElementById("fTools").value.trim(),
+    safety: document.getElementById("fSafety").value.trim(),
+    steps: collectDyn("step"), cues: collectDyn("cue"), failures: collectDyn("failure"),
+    test: {
+      tester: document.getElementById("tTester").value.trim(),
+      date: document.getElementById("tDate").value.trim(),
+      result: document.getElementById("tResult").value,
+      gaps: document.getElementById("tGaps").value.trim(),
+      attest: document.getElementById("tAttest").checked
+    }
+  };
+  if (editingId){ records = records.map(function(x){ return x.id === editingId ? rec : x; }); }
+  else { records.push(rec); }
+  store.set(records);
+  document.getElementById("formPanel").classList.add("hidden");
+  document.getElementById("detailPanel").classList.add("hidden");
+  render();
+}
+
+function toMarkdown(r){
+  var s = status(r);
+  var out = "# Transmission Record — " + r.title + "\n\n" +
+    "**Holder (source, credited):** " + r.holder + "\n**Captured by:** " + (r.practitioner || "—") + "\n**Setting:** " + (r.setting || "—") + "\n**Date begun:** " + (r.date || "—") + "\n**Status:** " + statusName(s) + "\n\n" +
+    "## Purpose\n" + (r.purpose || "—") + "\n\n## Conditions & setup\n" + (r.conditions || "—") + "\n\n## Tools & materials\n" + (r.tools || "—") + "\n\n## Steps\n" +
+    (r.steps || []).map(function(x, i){ return (i + 1) + ". " + x; }).join("\n") + "\n\n## Judgment calls\n" +
+    (r.cues || []).map(function(x){ return "- " + x; }).join("\n") + "\n\n## Failure modes & recovery\n" +
+    (r.failures || []).map(function(x){ return "- " + x; }).join("\n") + "\n\n## Safety notes\n" + (r.safety || "—") + "\n\n## Verification — reproduction test\n" +
+    (r.test && r.test.tester ? ("Tester: " + r.test.tester + " · Date: " + (r.test.date || "—") + " · Result: " + (r.test.result === "pass" ? "PASSED" : "Gaps found") + "\nAttestation (never done the task; record alone; holder absent): " + (r.test.attest ? "yes" : "no") + "\nGaps: " + (r.test.gaps || "none open")) : "Not yet tested. A capture is not a Transmission until reproduction proves it.") +
+    "\n\n---\nContinuity Craft · Instrument No. 2 · © 2026 Joshua Dawson / J-Dawgs Industries\n";
+  return out;
+}
+
+function showDetail(id){
+  var r = null;
+  records.forEach(function(x){ if (x.id === id) r = x; });
+  if (!r) return;
+  var s = status(r);
+  var p = document.getElementById("detailPanel");
+  p.classList.remove("hidden");
+  p.innerHTML =
+    '<h2>' + esc(r.title) + '</h2>' +
+    '<div class="kv"><span>Holder (source, credited):</span> ' + esc(r.holder) + '</div>' +
+    '<div class="kv"><span>Captured by:</span> ' + esc(r.practitioner || "—") + ' · <span>Setting:</span> ' + esc(r.setting || "—") + ' · <span>Begun:</span> ' + esc(r.date || "—") + '</div>' +
+    '<div class="verdict ' + (s === "verified" ? "ok" : "no") + '">' + (s === "verified" ? "✓ VERIFIED TRANSMISSION — reproduction test passed; this knowledge is proven to survive its holder." : s === "intest" ? "IN TEST — not yet a verified Transmission. Fix the gaps and retest." : "DRAFT — not yet tested. A capture is not a Transmission until reproduction proves it.") + '</div>' +
+    '<h3>Purpose</h3><div class="kv">' + esc(r.purpose || "—") + '</div>' +
+    '<h3>Conditions &amp; setup</h3><div class="kv">' + esc(r.conditions || "—") + '</div>' +
+    '<h3>Tools &amp; materials</h3><div class="kv">' + esc(r.tools || "—") + '</div>' +
+    '<h3>Steps</h3><ol class="steps">' + (r.steps || []).map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ol>' +
+    '<h3>Judgment calls</h3>' + (r.cues || []).map(function(x){ return '<div class="cuebox">' + esc(x) + '</div>'; }).join("") +
+    '<h3>Failure modes &amp; recovery</h3>' + (r.failures || []).map(function(x){ return '<div class="failbox">' + esc(x) + '</div>'; }).join("") +
+    (r.safety ? '<h3>Safety notes</h3><div class="kv">' + esc(r.safety) + '</div>' : '') +
+    '<h3>Verification</h3><div class="kv">' + (r.test && r.test.tester ? ('Tester: ' + esc(r.test.tester) + ' · ' + esc(r.test.date || "") + ' · ' + (r.test.result === "pass" ? "PASSED" : "Gaps found") + ' · Attestation: ' + (r.test.attest ? "tester had never done the task and worked from the record alone" : "NOT attested") + (r.test.gaps ? '<br><span>Gaps:</span> ' + esc(r.test.gaps) : '')) : 'Not yet tested.') + '</div>' +
+    '<div class="noprint" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;"><button class="small" data-act="edit">Edit / log a test</button><button class="small ghost" data-act="md">Download as document</button><button class="small ghost" data-act="print">Print</button><button class="small ghost" data-act="del">Delete</button><button class="small ghost" data-act="close">Close</button></div>';
+  p.querySelector('[data-act="close"]').addEventListener("click", function(){ p.classList.add("hidden"); });
+  p.querySelector('[data-act="edit"]').addEventListener("click", function(){ openForm(r); });
+  p.querySelector('[data-act="print"]').addEventListener("click", function(){ window.print(); });
+  p.querySelector('[data-act="del"]').addEventListener("click", function(){
+    records = records.filter(function(x){ return x.id !== id; });
+    store.set(records); p.classList.add("hidden"); render();
+  });
+  p.querySelector('[data-act="md"]').addEventListener("click", function(){
+    var blob = new Blob([toMarkdown(r)], { type: "text/markdown" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "transmission-record.md"; a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+  });
+  p.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.getElementById("btnNew").addEventListener("click", function(){ openForm(null); });
+document.getElementById("btnSample").addEventListener("click", function(){
+  records = [{
+    id: "sample1",
+    title: "SAMPLE — Squaring a foundation layout with the 3-4-5 method",
+    holder: "SAMPLE HOLDER — a framing foreman, 34 years in the trade",
+    practitioner: "Sample practitioner",
+    setting: "Residential job site, batter boards set",
+    date: "2026-11-08",
+    purpose: "Lay out a foundation corner that is truly square, so every wall, plate, and roof line that follows starts true. A corner out of square by an inch here becomes a fight on every floor above it.",
+    conditions: "Batter boards set level and firm, set back from the dig. String lines up. Ground roughly graded. Two people.",
+    tools: "100-ft tape (or two tapes), string lines, plumb bob, stakes, hammer, pencil, speed square for checks.",
+    safety: "Watch tape edges — a kinked steel tape cuts. Keep strings at shin height where people walk the lines.",
+    steps: [
+      "Snap or string the first wall line between batter boards and fix it — this line does not move again.",
+      "Mark the corner point on that line. From the corner, measure exactly 3 ft along the line and mark it.",
+      "From the same corner, run the second line out roughly square and mark 4 ft along it.",
+      "Measure the diagonal between the two marks. It must read exactly 5 ft.",
+      "If it does not, swing the second line in or out — moving the far end, never the corner — and re-mark the 4-ft point until the diagonal reads 5 ft on the nose.",
+      "Fix the second line to its batter board. Recheck all three numbers once more before any digging or forming.",
+      "For big layouts, scale up (6-8-10 or 9-12-15): the bigger the triangle, the truer the corner."
+    ],
+    cues: [
+      "Tape sag on a windy day → the diagonal reads long and you will chase a square that is already there. Support the tape mid-span or pull the spec'd tension, same every time.",
+      "String humming/tight as a guitar string → good. A lazy, drooping string → every mark under it is off; re-tension before trusting any measurement.",
+      "The corner feels 'close enough' at 5 ft ¼ in off → it is not. A quarter inch at layout is an inch of grief at the roof. Move the line, not your standards."
+    ],
+    failures: [
+      "Diagonal reads 4 ft 11 in → the corner is pinched (less than 90°). Swing the second line outward, away from the first, and re-mark.",
+      "Diagonal reads 5 ft 1 in → the corner is open (more than 90°). Swing the second line inward.",
+      "Numbers change between checks → a batter board moved. Kick-test every board; a board you can wiggle owns every measurement taken from it. Re-set it and start the corner over."
+    ],
+    test: { tester: "Sample learner (second-year apprentice, had never laid out a corner)", date: "2026-11-08", result: "pass", gaps: "", attest: true }
+  }];
+  store.set(records); render();
+  document.getElementById("detailPanel").classList.add("hidden");
+  document.getElementById("formPanel").classList.add("hidden");
+});
+document.getElementById("btnClear").addEventListener("click", function(){
+  if (!records.length) return;
+  if (confirm("Remove all Transmission Records on this device? Export first if you need them.")){
+    records = []; store.set(records); render();
+    document.getElementById("detailPanel").classList.add("hidden");
+  }
+});
+document.getElementById("btnExportAll").addEventListener("click", function(){
+  var blob = new Blob([JSON.stringify({ instrument: "Transmission Record — Continuity Craft Instrument No. 2", exported: new Date().toISOString(), records: records.map(function(r){ var c = JSON.parse(JSON.stringify(r)); c.status = statusName(status(r)); return c; }) }, null, 2)], { type: "application/json" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "transmission-records.json"; a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+});
+
+render();
+</script>
+</body>
+</html>
