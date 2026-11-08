@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perishability Audit — Instrument No. 1 of Continuity Craft</title>
+<style>
+  :root{
+    --ink:#1a1d21; --paper:#f7f5f0; --card:#ffffff; --line:#ddd8cc;
+    --accent:#8a5a12; --accent-ink:#6d450c;
+    --crit:#a31621; --high:#b3540a; --watch:#8a6d1a; --low:#3e6b34;
+    --muted:#6b6f76;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--paper); color:var(--ink);
+    display:flex; flex-direction:column; height:100dvh; overflow:hidden;
+  }
+  header{
+    background:var(--ink); color:#f3efe6; padding:12px 16px 10px;
+    border-bottom:3px solid var(--accent); flex:0 0 auto;
+  }
+  header .kicker{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#c9a86a; font-weight:700;}
+  header h1{font-size:24px; font-weight:800; letter-spacing:-.01em; line-height:1.1; margin:2px 0;}
+  header p{font-size:13px; color:#cfc9ba; max-width:640px;}
+  .summary{
+    display:flex; gap:8px; padding:10px 16px; background:#eceade;
+    border-bottom:1px solid var(--line); flex:0 0 auto; flex-wrap:wrap;
+  }
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:6px 12px; min-width:96px;}
+  .stat .n{font-size:20px; font-weight:800; line-height:1;}
+  .stat .l{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:3px;}
+  .stat.crit .n{color:var(--crit);}
+  main{flex:1 1 auto; overflow-y:auto; padding:12px 16px 20px;}
+  .toolbar{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;}
+  button{
+    font:inherit; font-size:14px; font-weight:600; cursor:pointer;
+    border:1px solid var(--ink); background:var(--ink); color:#fff;
+    border-radius:8px; padding:9px 14px;
+  }
+  button.ghost{background:transparent; color:var(--ink); border-color:#b9b2a2;}
+  button.small{padding:6px 10px; font-size:13px;}
+  button:active{transform:translateY(1px);}
+  .row{
+    display:flex; align-items:center; gap:10px; background:var(--card);
+    border:1px solid var(--line); border-left:5px solid var(--low);
+    border-radius:8px; padding:9px 12px; margin-bottom:7px; cursor:pointer;
+  }
+  .row .score{font-size:20px; font-weight:800; min-width:40px; text-align:center;}
+  .row .main{flex:1 1 auto; min-width:0;}
+  .row .t{font-weight:700; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .row .s{font-size:12.5px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .band{font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:99px; color:#fff; flex:0 0 auto;}
+  .b-crit{background:var(--crit);} .b-high{background:var(--high);} .b-watch{background:var(--watch);} .b-low{background:var(--low);}
+  .row.crit{border-left-color:var(--crit);} .row.high{border-left-color:var(--high);}
+  .row.watch{border-left-color:var(--watch);} .row.low{border-left-color:var(--low);}
+  .empty{color:var(--muted); font-size:14.5px; padding:22px 6px; text-align:center;}
+  section.panel{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:14px; margin-bottom:12px;
+  }
+  section.panel h2{font-size:16px; font-weight:800; margin-bottom:4px;}
+  section.panel .hint{font-size:13px; color:var(--muted); margin-bottom:10px;}
+  label{display:block; font-size:12.5px; font-weight:700; letter-spacing:.03em; margin:10px 0 4px;}
+  input[type=text], select, textarea{
+    width:100%; font:inherit; font-size:15px; padding:9px 10px;
+    border:1px solid #b9b2a2; border-radius:8px; background:#fff; color:var(--ink);
+  }
+  textarea{resize:vertical; min-height:56px;}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:0 12px;}
+  @media (max-width:560px){ .grid{grid-template-columns:1fr;} header h1{font-size:21px;} }
+  .detail-band{font-size:13px; margin:6px 0;}
+  .detail-band b{font-weight:800;}
+  .kv{font-size:14px; margin:5px 0;} .kv span{color:var(--muted);}
+  footer{
+    flex:0 0 auto; padding:9px 16px; font-size:12px; color:var(--muted);
+    border-top:1px solid var(--line); background:#eceade; text-align:center;
+  }
+  footer b{color:var(--ink);}
+  .hidden{display:none !important;}
+  @media print{
+    body{height:auto; overflow:visible;} main{overflow:visible;}
+    .toolbar, footer, #formPanel{display:none !important;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Continuity Craft · Instrument No. 1</div>
+  <h1>The Perishability Audit</h1>
+  <p>Survey a workplace, farm, shop, crew, or household. Find the practical knowledge that lives in only one or two people, score how close it is to being lost, and get a capture queue in the order the field's method demands: most perishable first.</p>
+</header>
+
+<div class="summary">
+  <div class="stat"><div class="n" id="stTotal">0</div><div class="l">Knowledge items</div></div>
+  <div class="stat crit"><div class="n" id="stCrit">0</div><div class="l">Critical — capture now</div></div>
+  <div class="stat"><div class="n" id="stSole">0</div><div class="l">Held by one person</div></div>
+  <div class="stat"><div class="n" id="stUndoc">0</div><div class="l">Nothing written down</div></div>
+</div>
+
+<main>
+  <div class="toolbar">
+    <button id="btnAdd">+ Add knowledge item</button>
+    <button class="ghost" id="btnSample">Load sample audit</button>
+    <button class="ghost" id="btnPrint">Print capture queue</button>
+    <button class="ghost" id="btnExport">Export JSON</button>
+    <button class="ghost" id="btnClear">Clear all</button>
+  </div>
+
+  <section class="panel hidden" id="formPanel">
+    <h2 id="formTitle">Add a knowledge item</h2>
+    <p class="hint">One item = one piece of know-how (a task, a judgment, a system someone keeps alive). Answer as things stand today, not as you hope they'll be.</p>
+    <label>What is the know-how?</label>
+    <input type="text" id="fTitle" placeholder="e.g. Keeping the 1978 lathe line running">
+    <label>Who holds it? (their name — credit matters)</label>
+    <input type="text" id="fHolder" placeholder="e.g. Marcus Webb">
+    <div class="grid">
+      <div>
+        <label>How many people can do this today?</label>
+        <select id="fHolders">
+          <option value="only">Only this person</option>
+          <option value="two">Two people</option>
+          <option value="few">3–5 people</option>
+          <option value="many">More than 5</option>
+        </select>
+      </div>
+      <div>
+        <label>How soon might the holder be gone? (retire, move, health)</label>
+        <select id="fUrgency">
+          <option value="under1">Within a year</option>
+          <option value="y1to3">1–3 years</option>
+          <option value="y3to5">3–5 years</option>
+          <option value="over5">More than 5 years</option>
+        </select>
+      </div>
+      <div>
+        <label>How much of it is written down anywhere?</label>
+        <select id="fDocs">
+          <option value="none">Nothing</option>
+          <option value="partial">Some notes / partial</option>
+          <option value="full">Fully documented</option>
+        </select>
+      </div>
+      <div>
+        <label>If this knowledge vanished tomorrow…</label>
+        <select id="fCrit">
+          <option value="impossible">The work could not be done</option>
+          <option value="costly">Very costly to relearn / replace</option>
+          <option value="inconvenient">An inconvenience</option>
+        </select>
+      </div>
+    </div>
+    <label>Notes (where it is used, who depends on it)</label>
+    <textarea id="fNotes" placeholder="Optional"></textarea>
+    <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+      <button id="btnSave">Save item</button>
+      <button class="ghost" id="btnCancel">Cancel</button>
+    </div>
+  </section>
+
+  <section class="panel hidden" id="detailPanel"></section>
+
+  <div id="list"></div>
+</main>
+
+<footer>
+  <b>Continuity Craft</b> — founded 2026-11-08 by J-Dawgs Industries · Instrument No. 1: The Perishability Audit · Method: survey → prioritize → capture → verify by reproduction → transmit · © 2026 Joshua Dawson / J-Dawgs Industries
+</footer>
+
+<script>
+"use strict";
+var LS_KEY = "perishability-audit-v1";
+var store = {
+  get: function(){ try { var v = localStorage.getItem(LS_KEY); return v ? JSON.parse(v) : []; } catch(e){ return []; } },
+  set: function(items){ try { localStorage.setItem(LS_KEY, JSON.stringify(items)); } catch(e){} }
+};
+var PTS = {
+  holders: { only: 40, two: 30, few: 18, many: 6 },
+  urgency: { under1: 30, y1to3: 22, y3to5: 12, over5: 5 },
+  docs:    { none: 20, partial: 10, full: 0 },
+  crit:    { impossible: 10, costly: 6, inconvenient: 2 }
+};
+var LABEL = {
+  holders: { only: "Only this person", two: "Two people", few: "3–5 people", many: "More than 5" },
+  urgency: { under1: "Within a year", y1to3: "1–3 years", y3to5: "3–5 years", over5: "More than 5 years" },
+  docs:    { none: "Nothing written down", partial: "Partial notes", full: "Fully documented" },
+  crit:    { impossible: "Work could not be done", costly: "Very costly to relearn", inconvenient: "An inconvenience" }
+};
+function score(it){
+  return (PTS.holders[it.holders]||0) + (PTS.urgency[it.urgency]||0) + (PTS.docs[it.docs]||0) + (PTS.crit[it.crit]||0);
+}
+function band(s){ return s >= 70 ? "crit" : s >= 45 ? "high" : s >= 25 ? "watch" : "low"; }
+function bandName(b){ return { crit:"Critical", high:"High", watch:"Watch", low:"Low" }[b]; }
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]; }); }
+
+var items = store.get();
+var editingId = null;
+
+function render(){
+  var sorted = items.slice().sort(function(a,b){ return score(b) - score(a); });
+  document.getElementById("stTotal").textContent = items.length;
+  document.getElementById("stCrit").textContent = items.filter(function(i){ return band(score(i)) === "crit"; }).length;
+  document.getElementById("stSole").textContent = items.filter(function(i){ return i.holders === "only"; }).length;
+  document.getElementById("stUndoc").textContent = items.filter(function(i){ return i.docs === "none"; }).length;
+  var list = document.getElementById("list");
+  if (!sorted.length){
+    list.innerHTML = '<div class="empty">No knowledge items yet.<br>Add the first one — start with the oldest hands in the place, and ask what only they can do.</div>';
+    return;
+  }
+  list.innerHTML = sorted.map(function(it){
+    var s = score(it), b = band(s);
+    return '<div class="row ' + b + '" data-id="' + it.id + '">' +
+      '<div class="score">' + s + '</div>' +
+      '<div class="main"><div class="t">' + esc(it.title) + '</div>' +
+      '<div class="s">Held by ' + esc(it.holder) + ' · ' + LABEL.holders[it.holders] + ' · gone ' + LABEL.urgency[it.urgency].toLowerCase() + '</div></div>' +
+      '<div class="band b-' + b + '">' + bandName(b) + '</div></div>';
+  }).join("");
+  Array.prototype.forEach.call(list.querySelectorAll(".row"), function(r){
+    r.addEventListener("click", function(){ showDetail(r.getAttribute("data-id")); });
+  });
+}
+
+function showDetail(id){
+  var it = null;
+  items.forEach(function(x){ if (x.id === id) it = x; });
+  if (!it) return;
+  var s = score(it), b = band(s);
+  var p = document.getElementById("detailPanel");
+  p.classList.remove("hidden");
+  p.innerHTML =
+    '<h2>' + esc(it.title) + '</h2>' +
+    '<div class="detail-band">Risk score <b>' + s + ' / 100</b> · <b>' + bandName(b) + '</b>' +
+    (b === "crit" ? ' — capture this first.' : b === "high" ? ' — schedule the capture soon.' : b === "watch" ? ' — capture when the critical queue is clear.' : ' — documented or widely held; keep an eye on it.') + '</div>' +
+    '<div class="kv"><span>Holder:</span> ' + esc(it.holder) + ' (credited as the source of this knowledge)</div>' +
+    '<div class="kv"><span>Who can do it:</span> ' + LABEL.holders[it.holders] + '</div>' +
+    '<div class="kv"><span>Holder may be gone:</span> ' + LABEL.urgency[it.urgency] + '</div>' +
+    '<div class="kv"><span>Written down:</span> ' + LABEL.docs[it.docs] + '</div>' +
+    '<div class="kv"><span>If lost:</span> ' + LABEL.crit[it.crit] + '</div>' +
+    (it.notes ? '<div class="kv"><span>Notes:</span> ' + esc(it.notes) + '</div>' : '') +
+    '<div class="kv"><span>Score breakdown:</span> scarcity ' + PTS.holders[it.holders] + ' + urgency ' + PTS.urgency[it.urgency] + ' + documentation gap ' + PTS.docs[it.docs] + ' + criticality ' + PTS.crit[it.crit] + ' = ' + s + '</div>' +
+    '<div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">' +
+    '<button class="small" data-act="edit">Edit</button>' +
+    '<button class="small ghost" data-act="del">Delete</button>' +
+    '<button class="small ghost" data-act="close">Close</button></div>';
+  p.querySelector('[data-act="close"]').addEventListener("click", function(){ p.classList.add("hidden"); });
+  p.querySelector('[data-act="del"]').addEventListener("click", function(){
+    items = items.filter(function(x){ return x.id !== id; });
+    store.set(items); p.classList.add("hidden"); render();
+  });
+  p.querySelector('[data-act="edit"]').addEventListener("click", function(){ openForm(it); });
+  p.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function openForm(it){
+  editingId = it ? it.id : null;
+  document.getElementById("formTitle").textContent = it ? "Edit knowledge item" : "Add a knowledge item";
+  document.getElementById("fTitle").value = it ? it.title : "";
+  document.getElementById("fHolder").value = it ? it.holder : "";
+  document.getElementById("fHolders").value = it ? it.holders : "only";
+  document.getElementById("fUrgency").value = it ? it.urgency : "under1";
+  document.getElementById("fDocs").value = it ? it.docs : "none";
+  document.getElementById("fCrit").value = it ? it.crit : "impossible";
+  document.getElementById("fNotes").value = it ? (it.notes || "") : "";
+  document.getElementById("formPanel").classList.remove("hidden");
+  document.getElementById("formPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.getElementById("btnAdd").addEventListener("click", function(){ openForm(null); });
+document.getElementById("btnCancel").addEventListener("click", function(){ document.getElementById("formPanel").classList.add("hidden"); });
+document.getElementById("btnSave").addEventListener("click", function(){
+  var title = document.getElementById("fTitle").value.trim();
+  var holder = document.getElementById("fHolder").value.trim();
+  if (!title || !holder){ alert("Give the know-how a name and credit its holder — both are required."); return; }
+  var rec = {
+    id: editingId || ("k" + Date.now().toString(36) + Math.floor(Math.random()*9999)),
+    title: title, holder: holder,
+    holders: document.getElementById("fHolders").value,
+    urgency: document.getElementById("fUrgency").value,
+    docs: document.getElementById("fDocs").value,
+    crit: document.getElementById("fCrit").value,
+    notes: document.getElementById("fNotes").value.trim()
+  };
+  if (editingId){ items = items.map(function(x){ return x.id === editingId ? rec : x; }); }
+  else { items.push(rec); }
+  store.set(items);
+  document.getElementById("formPanel").classList.add("hidden");
+  document.getElementById("detailPanel").classList.add("hidden");
+  render();
+});
+document.getElementById("btnSample").addEventListener("click", function(){
+  items = [
+    { id:"s1", title:"Keeping the 1978 lathe line running (feel, sound, workarounds)", holder:"Marcus Webb, 63", holders:"only", urgency:"under1", docs:"none", crit:"impossible", notes:"SAMPLE — Line 2 stops without him. Retires this spring." },
+    { id:"s2", title:"Reading the north fields — drainage and when to plant", holder:"Elena Ruiz, 71", holders:"only", urgency:"y1to3", docs:"none", crit:"costly", notes:"SAMPLE — Forty seasons on the same ground. Farm passes to her son in 2027." },
+    { id:"s3", title:"Why Building C's panels are wired the way they are", holder:"D. Okafor", holders:"two", urgency:"y3to5", docs:"partial", crit:"costly", notes:"SAMPLE — Undocumented changes from the 1994 refit live in two heads." },
+    { id:"s4", title:"Sourdough starter care and bake timing by feel", holder:"Ana Petrova, 58", holders:"few", urgency:"over5", docs:"partial", crit:"inconvenient", notes:"SAMPLE — Bakery's signature loaf; three bakers can cover." }
+  ];
+  store.set(items); render();
+  document.getElementById("detailPanel").classList.add("hidden");
+});
+document.getElementById("btnClear").addEventListener("click", function(){
+  if (!items.length) return;
+  if (confirm("Remove all items from this audit? Export first if you need the record.")){
+    items = []; store.set(items); render();
+    document.getElementById("detailPanel").classList.add("hidden");
+  }
+});
+document.getElementById("btnPrint").addEventListener("click", function(){ window.print(); });
+document.getElementById("btnExport").addEventListener("click", function(){
+  var payload = items.slice().sort(function(a,b){ return score(b) - score(a); }).map(function(it){
+    return { title: it.title, holder: it.holder, holders: LABEL.holders[it.holders], holder_may_be_gone: LABEL.urgency[it.urgency], written_down: LABEL.docs[it.docs], if_lost: LABEL.crit[it.crit], risk_score: score(it), band: bandName(band(score(it))), notes: it.notes || "" };
+  });
+  var blob = new Blob([JSON.stringify({ instrument: "Perishability Audit — Continuity Craft Instrument No. 1", exported: new Date().toISOString(), capture_queue: payload }, null, 2)], { type: "application/json" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "perishability-audit.json"; a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+});
+
+render();
+</script>
+</body>
+</html>
