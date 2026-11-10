@@ -14,8 +14,18 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/paw-icon-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
+<style>
+.hh-first{min-height:0}
+.hh-first .wrap{padding-top:7.5rem;padding-bottom:2.8rem}
+.hh-first h1{font-size:clamp(2.4rem,7vw,4.4rem);max-width:15ch}
+.hh-payline{margin-top:1.3rem;font-size:1rem;color:#D7DEE9;max-width:58ch}
+.hh-payline strong{color:#fff}
+.hh-roster{margin-top:1rem;font-family:var(--font-data);font-size:.8rem;letter-spacing:.1em;color:#fff}
+.hh-roster a{color:#fff}
+@media (max-width:640px){.hh-first .wrap{padding-top:5.6rem}}
+</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"J-Dawgs Industries","alternateName":["J-DAWGS INDUSTRIES","JDawgs Industries","J-Dawgs"],"founder":{"@type":"Person","name":"Joshua Dawson"},"address":{"@type":"PostalAddress","addressLocality":"Springfield","addressRegion":"MO","addressCountry":"US"},"email":"joshuajdawg0350@gmail.com","sameAs":["https://linktr.ee/jdawgs","https://jdawgs.gumroad.com","https://github.com/joshuajdawg0350","https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8","https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk","https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY","https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"]}
+{"@context":"https://schema.org","@type":"Organization","name":"J-Dawgs Industries","alternateName":["J-DAWGS INDUSTRIES","JDawgs Industries","J-Dawgs"],"founder":{"@type":"Person","name":"Joshua Dawson"},"address":{"@type":"PostalAddress","addressLocality":"Springfield","addressRegion":"MO","addressCountry":"US"},"email":"joshuajdawg0350@gmail.com","sameAs":["https://linktr.ee/jdawgs","https://jdawgs.gumroad.com","https://github.com/joshuajdawg0350","https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8","https://jdawgsindustries.com/human-hands/","https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY","https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"]}
 </script>
 </head>
 <body>
@@ -30,7 +40,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="ai-tool-store.html">AI Tool Store</a></li>
-        <li><a href="human-hands.html">Human Hands</a></li>
+        <li><a href="human-hands/">Human Hands</a></li>
         <li><a href="agent-services.html">Agent Services</a></li>
         <li><a href="apps.html">Apps</a></li>
         <li><a href="trading-post.html">Trading Post</a></li>
@@ -41,14 +51,28 @@
   </div>
 </header>
 
-<section class="hero hero-home">
+<section class="hero hero-hands hh-first">
+  <div class="wrap">
+    <p class="eyebrow">Human Hands · Live now · Springfield, Missouri</p>
+    <h1>Need a hand with regular work?</h1>
+    <p class="lead">People have needed an extra pair of hands since the dawn of time. Post the job, an AI makes the perfect match, and a local person does the work — and sends photo proof. Human Hands has its own home now; the two doors below take you straight there.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="human-hands/board.html">Post a job</a>
+      <a class="btn btn-ghost" href="human-hands/work.html">Work as a Hand — sign up free</a>
+    </div>
+    <p class="hh-payline"><strong>You set the price.</strong> The worker keeps 100% of it, plus 100% of tips. A flat 15% on top is the whole cost — no subscription, no contract, no minimums.</p>
+    <p class="hh-roster">FOUNDING ROSTER: 10 OF 100 WORKERS IN — 90 SEATS OPEN · <a href="human-hands/">HOW HUMAN HANDS WORKS →</a></p>
+  </div>
+</section>
+
+<section class="band" id="company" style="padding-top:3.5rem">
   <div class="wrap">
     <p class="eyebrow">J-Dawgs Industries · Springfield, Missouri</p>
-    <h1 class="display">Tools for AIs. Hands for hire. Goods for sale.</h1>
+    <h1 class="display" style="color:#fff;font-weight:800;font-stretch:118%;letter-spacing:-.018em;font-size:clamp(2.6rem,7vw,5rem);line-height:1.0;max-width:12ch;margin:0">Tools for AIs. Hands for hire. Goods for sale.</h1>
     <p class="lead">One company, run by Joshua Dawson — a construction worker who builds software businesses the plain way: working products, honest prices, and a public ledger that shows exactly what the businesses have earned. Nothing here is vapor. Every door below is open today.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8">Visit the AI Tool Store</a>
-      <a class="btn btn-ghost" href="human-hands.html">Human Hands — live now</a>
+      <a class="btn btn-ghost" href="human-hands/" style="background:transparent;border-color:var(--line-strong)">Human Hands — live now</a>
     </div>
     <div class="hero-facts">
       <span><b>411</b> verified tools in the Agent Exchange</span>
@@ -63,8 +87,8 @@
   <div class="wrap">
     <p class="eyebrow">What we do — every service, one tap</p>
     <div class="services-grid">
+      <a href="human-hands/"><b>Human Hands</b><span>Humans hire the AI. The AI does the hiring.</span></a>
       <a href="ai-tool-store.html"><b>AI Tool Store</b><span>The tool store where the AI is the customer</span></a>
-      <a href="human-hands.html"><b>Human Hands</b><span>Humans hire the AI. The AI does the hiring.</span></a>
       <a href="https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY"><b>J-Dawgs Agent Exchange</b><span>The machine-readable tool catalog</span></a>
       <a href="agent-services.html"><b>Agent Services</b><span>Fixed-price research, watch &amp; listing work</span></a>
       <a href="https://apify.com/jdawgs/j-dawgs-verified-local-business-data"><b>Verified Local Business Data</b><span>Verified Google Maps business data, on Apify</span></a>
@@ -94,7 +118,7 @@
           <p class="eyebrow">Human Hands <span class="badge">Live now</span></p>
           <h3>Humans hire the AI. The AI does the hiring.</h3>
           <p>A job marketplace with a new link in the chain of work: you hand a real-world task to your AI, the AI hires a local worker, and the work gets done through human hands. Workers keep 100% of the posted price; the payer adds a 15% fee on top. Only requirement to work: 18+ and a smartphone.</p>
-          <p class="tile-link"><a href="human-hands.html">How it works</a> · <a href="https://forms.gle/kbYe1Uu8SShwE9kz8">Sign up as a Hand</a></p>
+          <p class="tile-link"><a href="human-hands/">How it works</a> · <a href="https://forms.gle/kbYe1Uu8SShwE9kz8">Sign up as a Hand</a></p>
         </article>
 
         <article class="tile rise" role="listitem">
@@ -188,8 +212,8 @@
       <div class="doors-grid">
         <a href="https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8"><b>AI Tool Store</b><span>Browse and run the tools</span></a>
         <a href="https://buy.stripe.com/eVq8wP4u58Qkd8p4KV3ks1s"><b>Unlimited Pass — $99.99</b><span>Every tool and app, one payment</span></a>
-        <a href="https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk"><b>Human Hands board</b><span>See the job board</span></a>
-        <a href="https://forms.gle/kbYe1Uu8SShwE9kz8"><b>Work as a Hand</b><span>Free signup, 18+, smartphone only</span></a>
+        <a href="human-hands/board.html"><b>Human Hands board</b><span>See the job board</span></a>
+        <a href="human-hands/work.html"><b>Work as a Hand</b><span>Free signup, 18+, smartphone only</span></a>
         <a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"><b>Trading Post</b><span>Cards, coins, collectibles, consignment</span></a>
         <a href="agent-services.html"><b>Agent Services</b><span>Fixed-price research &amp; listing work</span></a>
         <a href="q-day-ledger.html"><b>Q-Day Ledger™</b><span>Cryptographic inventory &amp; post-quantum migration planning for the 2030 deadlines</span></a>
@@ -208,7 +232,7 @@
         <h3>Businesses</h3>
         <ul>
           <li><a href="ai-tool-store.html">AI Tool Store</a></li>
-          <li><a href="human-hands.html">Human Hands</a></li>
+          <li><a href="human-hands/">Human Hands</a></li>
           <li><a href="agent-services.html">Agent Services</a></li>
           <li><a href="apps.html">Apps</a></li>
           <li><a href="trading-post.html">Trading Post</a></li>
@@ -219,7 +243,7 @@
         <ul>
           <li><a href="https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8">The Tool Store</a></li>
           <li><a href="https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY">Agent Exchange</a></li>
-          <li><a href="https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk">Human Hands board</a></li>
+          <li><a href="human-hands/board.html">Human Hands board</a></li>
           <li><a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI">Trading Post shop</a></li>
           <li><a href="https://linktr.ee/jdawgs">linktr.ee/jdawgs</a></li>
         </ul>
