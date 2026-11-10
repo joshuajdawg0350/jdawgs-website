@@ -11,8 +11,8 @@
 <meta name="apple-mobile-web-app-title" content="Hustle City" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
-<title>Hustle City — Free One-Minute Demo | J-Dawgs Industries</title>
-<meta name="description" content="Play the free one-minute Hustle City demo in your browser: buy low in Downtown, ride to Uptown Heights, sell high. Two cities, two days — the full game is coming to Google Play soon." />
+<title>Hustle City — Free One-Week Demo | J-Dawgs Industries</title>
+<meta name="description" content="Play the free one-week Hustle City demo in your browser: buy low in Downtown, ride to Uptown Heights, sell high. Two cities, seven days — the full game is coming to Google Play soon." />
 <link rel="canonical" href="https://jdawgsindustries.com/hustle-city-demo/" />
 <style>
   :root{
@@ -3969,10 +3969,10 @@ refresh();
 </script>
 <!-- ============================================================
      HUSTLE CITY — WEBSITE DEMO LAYER (jdawgsindustries.com)
-     A one-minute playable slice of the frozen v1.3 build.
+     A one-week playable slice of the frozen v1.3 build.
      The game above this line is byte-identical to the shipping
      build; everything in this block is the demo wrapper:
-     intro card, coach, the 2-city / 2-day-move limits, and the
+     intro card, coach, the 2-city / 7-day-move limits, and the
      "coming to Google Play soon" end card.
      ============================================================ -->
 <style>
@@ -4035,9 +4035,9 @@ refresh();
   <div class="demo-card">
     <div class="demo-kicker">J-Dawgs Industries · Free playable demo</div>
     <div class="demo-title">HUSTLE CITY</div>
-    <p class="demo-sub">The one-minute taste. You start with <b>$2,000</b> in your pocket — and <b>$2,000 owed to the Shark</b>.
+    <p class="demo-sub">The one-week taste. You start with <b>$2,000</b> in your pocket — and <b>$2,000 owed to the Shark</b>.
       Buy low in <b>Downtown</b>, ride to <b>Uptown Heights</b>, sell high, and watch your robot level up.</p>
-    <div class="demo-limits">DEMO LIMITS · 2 CITIES · 2 DAY MOVES · FREE TO PLAY</div>
+    <div class="demo-limits">DEMO LIMITS · 2 CITIES · 7 DAY MOVES · FREE TO PLAY</div>
     <button class="demo-btn blue" id="demoStart" type="button">▶ START THE DEMO</button>
     <p class="demo-sub" style="font-size:12.5px;">This is a short playable demo. The full game is <b>coming to Google Play soon</b>.</p>
     <div class="demo-brand"><b>No fancy logos. Just quality products.</b> · No ads.</div>
@@ -4045,7 +4045,7 @@ refresh();
 </div>
 
 <div id="demoHud" hidden>
-  <span class="demo-chip" id="demoChip">DEMO · DAY 1 · 2 DAY MOVES LEFT</span>
+  <span class="demo-chip" id="demoChip">DEMO · DAY 1 · 7 DAY MOVES LEFT</span>
   <button id="demoFinish" type="button">FINISH ✓</button>
 </div>
 <div id="demoCoach" hidden></div>
@@ -4055,7 +4055,7 @@ refresh();
   <div class="demo-card">
     <div class="demo-kicker">That's the demo</div>
     <div class="demo-title" style="font-size:27px;">TIME'S UP — GOOD RUN</div>
-    <p class="demo-sub" id="demoEndLine">You ran two cities and two days of Hustle City.</p>
+    <p class="demo-sub" id="demoEndLine">You ran two cities and a full week of Hustle City.</p>
     <div class="demo-stats">
       <div class="demo-stat"><div class="v" id="demoEndNW">$0</div><div class="k">Net worth</div></div>
       <div class="demo-stat"><div class="v" id="demoEndTrades">0</div><div class="k">Trades</div></div>
@@ -4089,7 +4089,7 @@ refresh();
   }
   function HC(){ return window.HustleCity; }
   function state(){ try { return HC().getState(); } catch(e){ return null; } }
-  function movesLeft(s){ return Math.max(0, 2 - (s.day - 1)); }
+  function movesLeft(s){ return Math.max(0, 7 - (s.day - 1)); }
 
   function startDemo(){
     if(!HC()) return;
@@ -4180,7 +4180,7 @@ refresh();
       return;
     }
     if(ml <= 0){
-      say("<b>LAST DAY</b> — both day moves are used. Trade all you want, then tap <b>FINISH ✓</b>.");
+      say("<b>LAST DAY</b> — all seven day moves are used. Trade all you want, then tap <b>FINISH ✓</b>.");
     } else if(!bought){
       say("<b>STEP 1 · BUY LOW</b> — " + GOOD_NAME + " is going cheap in Downtown. Keep tapping <b>BUY 10</b> on its market row to load up while it's cheap.");
       glow('[data-buy10="' + GOOD + '"]');
