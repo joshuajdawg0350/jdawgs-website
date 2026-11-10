@@ -66,9 +66,8 @@ img,video{display:block;max-width:100%}
 .throne img.face{width:min(460px,100%);height:clamp(280px,62vw,380px);object-fit:cover;object-position:center 18%;border-radius:14px;border:3px solid #8a6d1f;flex:0 0 auto;box-shadow:0 14px 44px rgba(0,0,0,.65),0 0 34px rgba(255,190,40,.14)}
 .throne h3{margin:0 0 4px;font-family:"Barlow Condensed";font-size:clamp(24px,5.4vw,30px);letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
 .throne p{margin:0 auto;color:#e8dcbb;font-size:15px;line-height:1.45;max-width:720px}
-.players{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:640px){.players{grid-template-columns:1fr}}
-.pcard{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:16px;text-align:left;color:var(--ink)}
+.players{display:grid;grid-template-columns:1fr;gap:14px}
+.pcard{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:16px;text-align:center;color:var(--ink);min-height:92px;width:100%}
 .pcard:hover{border-color:var(--cyan)}
 .pcard .who{font-family:Anton;font-size:26px;letter-spacing:.03em;text-transform:uppercase}
 .pcard .sub{color:var(--mut);font-size:14px;margin:4px 0 12px;line-height:1.4}
@@ -92,7 +91,7 @@ img,video{display:block;max-width:100%}
 .paw{width:22px;height:22px;vertical-align:-5px;opacity:.85}
 
 /* ---------- game shell: pinned, no page scroll on desktop ---------- */
-#screen-game{position:fixed;inset:0;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+#screen-game{position:fixed;inset:0;height:100vh;height:100dvh;height:var(--app-h,100vh);display:flex;flex-direction:column;overflow:hidden}
 body.gaming{overflow:hidden}
 .hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:7px 12px 7px;z-index:5}
 .hud-row{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
@@ -251,6 +250,7 @@ tr.notstocked td{opacity:.48}
 .lmShelf::-webkit-scrollbar{display:none}
 .lm{font-family:"Barlow Condensed";font-weight:700;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--line2);color:var(--dim);border-radius:99px;padding:3px 9px}
 .lm.hit{border-style:solid;border-color:#6b5518;color:var(--gold);background:#171204}
+.lm.big{border-style:solid;border-color:var(--gold);color:#171204;background:var(--gold)}
 
 /* ---------- overlays / modals ---------- */
 .overlay{position:fixed;inset:0;background:rgba(3,5,8,.82);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50;overflow-y:auto}
@@ -298,6 +298,27 @@ tr.notstocked td{opacity:.48}
 .craps-status .pt b{color:#57ccff}
 .craps-status .pot b{color:var(--gold);font-variant-numeric:tabular-nums}
 .craps-status .meta{color:var(--dim);letter-spacing:.14em;font-size:12px}
+/* ---------- LED dot-matrix highway sign (owner, 2026-11-09): the craps
+   info box rebuilt as a near-black road-sign panel. ALL of its text is
+   drawn live by a canvas dot-matrix renderer (ledRender) in the house
+   electric blue — never amber, never a static image of text. ---------- */
+.led-sign{position:relative;background:linear-gradient(180deg,#0a0d11,#020304 55%,#05070a);border:2px solid #232c38;border-radius:10px;padding:9px 10px 7px;box-shadow:inset 0 0 0 1px #000,inset 0 1px 0 rgba(160,190,220,.14),inset 0 -14px 26px rgba(0,0,0,.85),0 8px 22px rgba(0,0,0,.5)}
+.led-sign::before,.led-sign::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8fa5bd,#2a3546 70%);box-shadow:inset 0 0 2px #000;top:5px}
+.led-sign::before{left:6px}.led-sign::after{right:6px}
+.led-sign canvas{display:block;width:100%;height:auto;background:#010204;border-radius:4px;box-shadow:inset 0 0 18px rgba(0,0,0,.9)}
+.led-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+/* ---------- street craps betting: real run cash, $100 min to all in ---------- */
+.betbar{margin-top:10px;background:rgba(10,13,19,.88);border:1px solid var(--line2);border-radius:12px;padding:9px 10px 10px}
+.betlab{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-family:"Barlow Condensed";font-weight:700;letter-spacing:.1em;font-size:14px;text-transform:uppercase;color:var(--mut)}
+.betlab .betstake{font-family:Anton;font-size:24px;line-height:1;color:#57ccff;letter-spacing:.02em}
+.betlab .betmin{color:var(--dim);font-size:12px;letter-spacing:.14em}
+.betbtns{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+.betbtn{min-height:48px;padding:8px 2px;font-size:14.5px;border-radius:10px}
+.betbtn.active{background:linear-gradient(180deg,#eef5fd,#a9c2dc 55%,#7e9cbd);color:#0a0f16;border-color:#39c2ff;box-shadow:0 0 0 1px rgba(57,194,255,.4)}
+.betbtn.allin{border-color:#39c2ff;color:#57ccff;font-weight:800;letter-spacing:.04em}
+.betbtn.allin.active{color:#0a0f16}
+.betnote{margin-top:8px;color:var(--mut);font-size:13px;line-height:1.4;text-align:center}
+.broke-msg{margin-top:8px;border:1px solid #6e2a2a;background:#2a0f0f;color:#ffb9b9;border-radius:9px;padding:9px 11px;font-weight:700;font-size:15px;text-align:center;line-height:1.4}
 /* the roll controls sit DIRECTLY under the screen — thumb reach while the
    eyes stay on the dice, never a scroll away at the bottom of the card */
 .concrete>.craps-btns{margin-top:12px}
@@ -502,6 +523,16 @@ tr.notstocked td{opacity:.48}
 #screen-switch-bar{flex:0 0 auto;display:flex;gap:8px;padding:8px 12px;background:#0a0e14;border-bottom:1px solid var(--line2);z-index:5}
 #screen-switch-bar .swbtn{flex:1 1 0;min-height:52px;border-radius:12px;border:1px solid var(--line2);background:var(--panel2);color:var(--mut);font-weight:800;font-size:15px;letter-spacing:.03em;padding:8px 10px}
 #screen-switch-bar .swbtn.active{background:linear-gradient(180deg,#eef5fd,#a9c2dc 55%,#7e9cbd);color:#0a0f16;border-color:#39c2ff;box-shadow:0 0 0 1px rgba(57,194,255,.35),0 4px 16px rgba(0,0,0,.45)}
+/* Screen 2 only: the active DRUGS · PLACES tab is replaced by WAIT A DAY
+   (you already know where you are). Keyed off the .active state
+   showScreen() toggles on the stash tab; #btn-wait-s2 follows it in the
+   markup, so the sibling selector can reach it. On Screen 1 the tab
+   shows as before and WAIT A DAY is absent. The wait button carries the
+   active chrome look so it reads as the bar's primary action, matching
+   Screen 1's .btn.primary wait. */
+#btn-wait-s2{display:none}
+#screen-switch-bar [data-screen-tab="stash"].active{display:none}
+#screen-switch-bar [data-screen-tab="stash"].active ~ #btn-wait-s2{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eef5fd,#a9c2dc 55%,#7e9cbd);color:#0a0f16;border-color:#39c2ff;box-shadow:0 0 0 1px rgba(57,194,255,.35),0 4px 16px rgba(0,0,0,.45)}
 .screen-go{display:flex;width:100%;align-items:center;justify-content:center;min-height:56px;border-radius:13px;border:2px solid #39c2ff;background:linear-gradient(180deg,#eef5fd,#a9c2dc 55%,#7e9cbd);color:#0a0f16;font-weight:800;font-size:17px;letter-spacing:.03em;padding:10px 12px;margin:0 0 12px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
 .screen-go:active{transform:translateY(1px)}
 .col.left{border-right:none}
@@ -523,7 +554,44 @@ tr.notstocked td{opacity:.48}
   #screen-switch-bar .swbtn{min-height:46px}
   .screen-go{min-height:50px;margin-bottom:9px}
 }
+/* ---------- Screen 2 hostile-webview hardening (2026-11-09) ----------
+   Cheryl's phone (Messenger in-app webview class) could not see Screen
+   2's two columns at all, although every modern engine lays them out.
+   Screen 2 is the only surface sized through a nested flex chain — a
+   row flex (#col-right) whose two columns size purely by flex:1 1 0 +
+   stretch, under a fixed shell sized by viewport units — and in-app
+   webviews fumble exactly those links (viewport units that lie about
+   the visible area, nested-flex sizing quirks). Defenses: the shell
+   height is JS-synced to the real visible viewport (--app-h, see the
+   hardening script below), and a runtime guard degrades Screen 2 —
+   stacked columns, then one single flowing scroll — whenever it
+   measures the columns collapsed. Content is never left invisible. */
+#col-right.s2-stack{flex-direction:column}
+#col-right.s2-stack .s2col{flex:1 1 0;width:auto}
+#col-right.s2-stack #col-drugs{border-right:none;border-bottom:1px solid var(--line2)}
+#col-right.s2-flow{display:block;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+#col-right.s2-flow .s2col{flex:none;width:auto;height:auto;overflow:visible;padding-bottom:16px}
+@media (max-width:340px){
+  #col-right{flex-direction:column}
+  #col-right .s2col{flex:1 1 0}
+  #col-right #col-drugs{border-right:none;border-bottom:1px solid var(--line2)}
+}
 @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important} }
+#screen-over{min-height:100dvh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 20px 40px;background:radial-gradient(120% 90% at 50% 0%,#0d1524 0%,var(--bg) 60%)}
+#screen-over .over-in{width:100%;max-width:560px;display:flex;flex-direction:column;align-items:center}
+#screen-over .over-title{font-size:clamp(38px,10vw,58px);margin:2px 0 14px;line-height:1.02}
+#screen-over .over-art{width:100%;border:1px solid var(--line2);border-radius:14px;box-shadow:0 10px 34px rgba(0,0,0,.55),0 0 22px rgba(57,194,255,.10)}
+#screen-over .over-grade{font-size:clamp(30px,8vw,46px);font-weight:900;line-height:1.08;margin:16px 0 2px}
+#screen-over .over-nw{font-size:21px;font-weight:800;color:var(--ink)}
+#screen-over .over-break{color:var(--mut);font-size:14px;margin:4px 0 0}
+#screen-over .over-note{color:var(--mut);font-size:15.5px;line-height:1.55;max-width:460px;margin:12px 0 0}
+#screen-over .over-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin:20px 0 4px}
+#screen-over .over-stats .cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 6px;display:flex;flex-direction:column;gap:2px}
+#screen-over .over-stats .cell b{font-size:19px;color:var(--ink)}
+#screen-over .over-stats .cell span{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+#screen-over .over-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 6px}
+#screen-over .over-btns .btn{min-height:52px;padding:12px 26px;font-size:16.5px;font-weight:800;letter-spacing:.04em}
+@media (max-width:380px){ #screen-over .over-stats{grid-template-columns:repeat(2,1fr)} }
 </style>
 </head>
 <body>
@@ -554,26 +622,16 @@ tr.notstocked td{opacity:.48}
       </div>
     </div>
 
-    <div class="players" role="group" aria-label="Choose who is playing">
-      <button class="pcard" id="play-joshua">
-        <div class="who">▶ Play as Joshua</div>
-        <p class="sub">Home turf: Springfield, Missouri. Your run, your Charger, your crown to take.</p>
-        <div class="best" id="best-joshua">No finished run yet</div>
-      </button>
-      <button class="pcard" id="play-cheryl">
-        <div class="who">▶ Play as Cheryl</div>
-        <p class="sub">Same city, same Balsey, same $2,000 start. Beat Joshua's best and the bragging rights are yours.</p>
-        <div class="best" id="best-cheryl">No finished run yet</div>
+    <div class="players" role="group" aria-label="Start the game">
+      <button class="pcard" id="play-btn">
+        <div class="who">▶ Play</div>
+        <p class="sub">$2,000 in your pocket, $2,000 owed to the Shark, 45 days — one crown to take.</p>
+        <div class="best" id="best-single">No finished run yet</div>
       </button>
     </div>
-    <div>
-      <button class="btn finale" id="play-endscene" style="width:100%">👑 FINALE — Craps vs King Balsey for the Crown</button>
-      <p class="footline" style="margin-top:8px">Straight to the end: <b>Balsey's Compound</b>, the King across the concrete, <b>a million against a million</b> — winner takes the $2,000,000 pot and the crown. The full hustle-off, street rules, and the crown scene on a win. It's a <b>no-stakes preview</b>: no run started, no money moves, nothing saved or changed — you land right back here when it's over.</p>
-    </div>
-    <p class="footline">One game, two players: Joshua and Cheryl each get their own run on this same link — switch players any time from the game screen and the scoreboard keeps both. Nothing is locked to one phone or one account.</p>
-
+    <p class="footline">The finale is earned in a run: reach <b>$750,000 net worth</b> to challenge King Balsey, and at <b>$1,000,000</b> walk into <b>Balsey's Compound</b> for the hustle-off — <b>a million against a million</b>, real run money on the concrete, winner takes the $2,000,000 pot and the crown.</p>
     <div class="startgrid">
-      <div class="scard"><h4>🌎 A Bigger Map</h4><p>Start local in <b>Springfield, MO</b> — King Balsey's home turf — and every city on the map is open from day one: <b>Wichita, KS</b>, <b>Fifth Ward</b> in Houston, <b>O Block</b> in Chicago, <b>Compton</b> in Los Angeles, Detroit, Baltimore. No net-worth gates on travel — just the trip fee and a day. The tougher the neighborhood, the better the money — and the heavier the heat. One door stays locked: <b>Balsey's Compound</b> in Springfield, the final stage — its gate opens when you can challenge the King at $1,000,000, and the million-dollar hustle-off for his crown happens on his concrete.</p></div>
+      <div class="scard"><h4>🌎 A Bigger Map</h4><p>Start local in <b>Springfield, MO</b> — King Balsey's home turf — and every city on the map is open from day one: <b>Wichita, KS</b>, <b>Fifth Ward</b> in Houston, <b>O Block</b> in Chicago, <b>Compton</b> in Los Angeles, Detroit, Baltimore. No net-worth gates on travel — just the trip fee and a day. The tougher the neighborhood, the better the money — and the heavier the heat. One door stays locked: <b>Balsey's Compound</b> in Springfield, the final stage — you can challenge the King from $750,000 — and its gate opens at $1,000,000, and the million-dollar hustle-off for his crown happens on his concrete.</p></div>
       <div class="scard"><h4>🗣️ Interactive Streets</h4><p>This isn't just buy low, sell high. Balsey's tax man, rival dealers, informants, and shakedowns hit you with real choices. Every pick moves your cash, your heat, your health — or your <b>Street Cred</b>, and cred decides how the finale goes down.</p></div>
       <div class="scard"><h4>🏆 The Landmark Ladder</h4><p>First Rack → Five Figures → Clean → Six Figures → Quarter Million → The Block Is Yours → <b>King of Hustle City</b>. Every rung flashes a video of your robot boosting up — more chrome every time. The last one ends with Balsey dethroned and a trunk full of gold.</p></div>
     </div>
@@ -581,7 +639,7 @@ tr.notstocked td{opacity:.48}
     <div class="scard">
       <h4>How a run works</h4>
       <p style="color:var(--mut);font-size:14.5px;line-height:1.6;margin:0">
-        You get <b style="color:var(--ink)">45 days</b>, <b style="color:var(--ink)">$2,000 cash</b>, and a <b style="color:var(--ink)">$2,000 debt to the Shark</b> at 7% a day. Buy cheap in one neighborhood, travel, sell high in another. Traveling or waiting ends the day: interest hits, prices re-roll, the city moves. Banked cash earns 5% a day and can't be mugged. Your coat holds 100 slots (Lean takes 4). Heat brings busts; busts and brawls cost health; zero health is the ambulance. Flat broke with nothing to sell, the Shark offers one $1,000 rescue loan — refuse it and your Charger ends up on blocks. Final score is <b style="color:var(--ink)">net worth</b>: cash + bank + stash − debt. Every city is open from day one — travel costs the trip fee and ends the day. Springfield is home: King Balsey's throne is the one unlock that matters, opening at $750,000 to challenge and $1,000,000 to take — and at a million, <b style="color:var(--ink)">Balsey's Compound</b> on the Springfield map unlocks too: walk through its gate and you go straight to the hustle-off, street craps for the crown. Want a free look first? The <b style="color:var(--ink)">FINALE</b> button on the title screen drops you into the whole end scene — the compound, the match, and the crown — with nothing on the line. The market list on the street panel shows every product on the block with live prices and BUY / SELL buttons — trade right there. Or deal face to face: find a dealer standing on the street, open their deal sheet — big simple buttons, dollars printed on every one. Past <b style="color:var(--ink)">$10,000 net worth</b> the wholesale lots unlock — pounds of 20 and kilos of 50 at bulk prices — and so does the <b style="color:var(--ink)">bank job</b>: once a day, your call. Bail early for a clean $25,000, or see it through on a true 50/50 flip for $250,000. Lose the flip and the run is over.
+        You get <b style="color:var(--ink)">45 days</b>, <b style="color:var(--ink)">$2,000 cash</b>, and a <b style="color:var(--ink)">$2,000 debt to the Shark</b> at 7% a day. Buy cheap in one neighborhood, travel, sell high in another. Traveling or waiting ends the day: interest hits, prices re-roll, the city moves. Banked cash earns 5% a day and can't be mugged. Your coat holds 100 slots (Lean takes 4). Heat brings busts; busts and brawls cost health; zero health is the ambulance. Flat broke with nothing to sell, the Shark offers one $1,000 rescue loan — refuse it and your Charger ends up on blocks. Final score is <b style="color:var(--ink)">net worth</b>: cash + bank + stash − debt. Every city is open from day one — travel costs the trip fee and ends the day. Springfield is home: King Balsey's throne is the one unlock that matters, opening at $750,000 to challenge and $1,000,000 to take — and at a million, <b style="color:var(--ink)">Balsey's Compound</b> on the Springfield map unlocks too: walk through its gate and you go straight to the hustle-off, street craps for the crown. The market list on the street panel shows every product on the block with live prices and BUY / SELL buttons — trade right there. Or deal face to face: find a dealer standing on the street, open their deal sheet — big simple buttons, dollars printed on every one. Past <b style="color:var(--ink)">$10,000 net worth</b> the wholesale lots unlock — pounds of 20 and kilos of 50 at bulk prices — and so does the <b style="color:var(--ink)">bank job</b>: once a day, your call. Bail early for a clean $25,000, or see it through on a true 50/50 flip for $250,000. Lose the flip and the run is over. Past $20,000 net worth the BIG MONEY TIER opens for the rest of the run — a 400-slot coat, 100- and 250-unit wholesale lots, a +25% dealer premium on every sell, and a wilder market with richer spikes. That's the ramp: $750,000 challenges the King, $1,000,000 takes the crown.
       </p>
     </div>
     <p class="footline"><b>No fancy logos. Just quality products.</b> · No ads. · ™ + © 2026 Joshua Dawson · J-Dawgs Industries <img class="paw" src="assets/paw.png" alt="" /></p>
@@ -596,7 +654,7 @@ tr.notstocked td{opacity:.48}
       <div class="brand">
         <div>
           <div class="t1 chrome">Hustle City 2</div>
-          <div class="t2" id="hud-player">Player</div>
+          <div class="t2" id="hud-player">Northside, Springfield</div>
         </div>
       </div>
       <div class="stats" id="hud-stats"></div>
@@ -611,7 +669,6 @@ tr.notstocked td{opacity:.48}
   <div class="actions">
     <button class="btn primary" id="btn-wait">⏳ Wait a Day</button>
     <button class="btn gold" id="btn-playcraps">🎲 Play Craps</button>
-    <button class="btn ghost" id="btn-switch">⇄ Switch Player</button>
     <button class="btn ghost" id="btn-restart">↺ New Run</button>
     <button class="btn ghost" id="btn-sound">🔊 Sound</button>
   </div>
@@ -619,6 +676,7 @@ tr.notstocked td{opacity:.48}
   <div id="screen-switch-bar" role="group" aria-label="Switch screen">
     <button class="swbtn active" data-screen-tab="controls" aria-pressed="true">← CONTROLS</button>
     <button class="swbtn" data-screen-tab="stash" aria-pressed="false">DRUGS · PLACES →</button>
+    <button class="swbtn" id="btn-wait-s2" type="button">WAIT A DAY</button>
   </div>
 
   <div class="main">
@@ -627,7 +685,7 @@ tr.notstocked td{opacity:.48}
       <button class="screen-go" data-goto="stash">DRUGS · PLACES →</button>
       <div class="moneybox" style="margin-top:0">
         <h4>🎲 Craps — Street &amp; The Crown</h4>
-        <p style="margin:0 0 9px;color:var(--mut);font-size:14px;line-height:1.5">Quick street craps any time — no money down, your run waits for you. The million-dollar hustle-off against King Balsey lives in The Crown panel below.</p>
+        <p style="margin:0 0 9px;color:var(--mut);font-size:14px;line-height:1.5">Quick street craps any time — for real money: $100 minimum, up to all in on your run cash. No day passes while you play. The million-dollar hustle-off against King Balsey lives in The Crown panel below.</p>
         <div class="row">
           <button class="btn gold" id="btn-playcraps2">🎲 Play Craps</button>
         </div>
@@ -656,7 +714,6 @@ tr.notstocked td{opacity:.48}
         </div>
         <div class="row" style="margin-top:8px">
           <button class="btn gold" id="btn-challenge" disabled>👑 Challenge Balsey</button>
-          <button class="btn ghost" id="btn-sample">🎲 Sample the craps — free</button>
           <span class="fee">Opens at $750,000 net worth. The crown itself takes $1,000,000.</span>
         </div>
       </div>
@@ -689,6 +746,32 @@ tr.notstocked td{opacity:.48}
     </div>
     <button class="scrollbtn off" id="scrollbtn-left" aria-label="Scroll this panel down">▼</button>
     <button class="scrollbtn off" id="scrollbtn-right" aria-label="Scroll this panel down">▼</button>
+  </div>
+</section>
+
+<!-- ================= GAME OVER ================= -->
+<section id="screen-over" class="hidden">
+  <div class="over-in">
+    <p class="kicker">Hustle City 2 · J-Dawgs Industries</p>
+    <h2 class="chrome over-title">Final Score</h2>
+    <img id="overArt" class="over-art" src="assets/hero.webp" alt="Your fate at the end of the run" />
+    <div id="overGrade" class="over-grade goldtext">Hustler</div>
+    <div id="overNW" class="over-nw">Final net worth: $0</div>
+    <p id="overBreak" class="over-break"></p>
+    <p id="overNote" class="over-note"></p>
+    <div class="over-stats">
+      <div class="cell"><b id="ovDay">0</b><span>Day</span></div>
+      <div class="cell"><b id="ovDeals">0</b><span>Deals made</span></div>
+      <div class="cell"><b id="ovEarned">$0</b><span>Total earned</span></div>
+      <div class="cell"><b id="ovBusts">0</b><span>Busts survived</span></div>
+      <div class="cell"><b id="ovCred">0</b><span>Street Cred</span></div>
+      <div class="cell"><b id="ovBest">$0</b><span>Best ever</span></div>
+    </div>
+    <div class="over-btns">
+      <button class="btn primary" id="btn-over-again">RUN IT BACK</button>
+      <button class="btn" id="btn-over-title">TITLE SCREEN</button>
+    </div>
+    <p class="footline"><b>No fancy logos. Just quality products.</b> · No ads. · ™ + © 2026 Joshua Dawson · J-Dawgs Industries</p>
   </div>
 </section>
 
@@ -855,15 +938,30 @@ const TOTAL_DAYS=45, START_CASH=2000, START_DEBT=2000, DEBT_RATE=0.07, BANK_RATE
    bail early for a clean $25,000, or see it through on a true 50/50 flip for
    $250,000; lose the flip and the run is over. */
 const BULK_UNLOCK=10000, POUND_N=20, KILO_N=50, POUND_OFF=0.15, KILO_OFF=0.25;
+const BIGMONEY_NW=20000, BIG_POUND_N=100, BIG_KILO_N=250, BIG_SELL_MULT=1.25, BIG_CAP=400;
 const HEIST_BAIL=25000, HEIST_FULL=250000;
 const DEALER_NAMES=["Rico","Marlo","Deja","Slim","Peaches","Ocho","Ladybug","Tank","Mookie","Fresh","Velvet","Preacher","Casino","Doodle"];
 
-/* ---------- state (in-memory only; both players live in this session) ---------- */
-const players={
- joshua:{label:"Joshua",best:null,run:null},
- cheryl:{label:"Cheryl",best:null,run:null}
-};
-let cur="joshua", S=null;
+/* ---------- state ---------- */
+let best=null, S=null;
+/* ---------- best-score store: one shared slot, guarded storage ---------- */
+function saveBest(){ try{ localStorage.setItem("hc2-best", JSON.stringify({best:best})); }catch(e){} }
+function loadBest(){
+ try{
+  var raw=null;
+  try{ raw=localStorage.getItem("hc2-best"); }catch(e){}
+  if(raw){ try{ var p=JSON.parse(raw); if(p&&typeof p.best==="number") best=p.best; }catch(e){} }
+  else {
+   var old=null;
+   try{ old=localStorage.getItem("hc2-bests"); }catch(e){}
+   if(old){
+     try{ var o=JSON.parse(old); var vals=[]; ["joshua","cheryl"].forEach(function(k){ var v=o?o[k]:null; if(typeof v==="number") vals.push(v); else if(v&&typeof v.best==="number") vals.push(v.best); }); if(vals.length) best=Math.max.apply(null,vals); }catch(e){}
+     if(best!==null) saveBest();
+   }
+  }
+ }catch(e){}
+ try{ localStorage.removeItem("hc2-bests"); }catch(e){}
+}
 
 function newRun(){
  return {
@@ -871,13 +969,14 @@ function newRun(){
   cap:100, hood:"sp-north", stash:{}, prices:{}, stocked:{}, lastSeen:{},
   headline:"", headlineKind:"info", landmarks:{}, log:[], over:false, won:false,
   rescueUsed:false, coatOffered:false, balseyStage:0, finaleReady:false, finaleWon:false,
-  bankToday:false, peak:START_CASH, lastTrade:"",
+  bankToday:false, peak:START_CASH, lastTrade:"", bigMoney:false,
   stats:{earned:0,deals:0,busts:0}
  };
 }
 function usedSlots(){ let n=0; for(const id in S.stash) n+=S.stash[id]*GOOD[id].slots; return n; }
 function stashValue(){ let n=0; for(const id in S.stash){ const p=S.prices[id]||S.lastSeen[id]||0; n+=S.stash[id]*p; } return n; }
 function netWorth(){ return Math.round(S.cash + S.bank + stashValue() - S.debt); }
+function tierSellMult(){ return (S && S.bigMoney) ? BIG_SELL_MULT : 1; }
 function balseyHeat(){ return clamp(Math.round(netWorth()/10000),0,100); } // his attention, 0-100
 
 /* ---------- pinned status strip data: where you are, what you hold ----------
@@ -913,7 +1012,7 @@ function rollMarket(){
  S.prices={};
  let headline="", kind="info";
  GOODS.forEach(g=>{
-   let p=rnd(g.min,g.max)*1.1;
+   let p=(S.bigMoney?rnd(g.min*0.9,g.max*1.35):rnd(g.min,g.max))*1.1;
    const lean=h.leans[g.id]; if(lean) p*=lean;
    p*= (0.85 + h.danger*0.04);
    S.prices[g.id]=Math.max(1,Math.round(p));
@@ -923,9 +1022,9 @@ function rollMarket(){
  const spikes=GOODS.filter(g=>S.stocked[g.id]&&(g.event==="expensive"));
  const boths=GOODS.filter(g=>S.stocked[g.id]&&g.event==="both");
  if(floods.length&&Math.random()<0.10){ const g=pick(floods); S.prices[g.id]=Math.max(1,Math.round(S.prices[g.id]/2)); headline="The market is flooded — "+g.name+" prices bottomed out in "+h.name+"!"; kind="gold"; }
- if(spikes.length&&Math.random()<0.40){ const g=pick(spikes); S.prices[g.id]*=4; headline="Shortage! "+g.name+" is bone dry in "+h.name+" — buyers are paying crazy money!"; kind="gold"; S.prices[g.id]=Math.round(S.prices[g.id]); }
- if(boths.length&&Math.random()<0.30){ const g=pick(boths); if(Math.random()<0.75){ S.prices[g.id]*=4; headline="Fentanyl panic — prices just went through the roof in "+h.name+"!"; } else { S.prices[g.id]=Math.max(1,Math.round(S.prices[g.id]/3)); headline="Bad batch scare — Fentanyl prices crashed in "+h.name+"."; } kind="gold"; S.prices[g.id]=Math.round(S.prices[g.id]); }
- if(!headline&&Math.random()<0.45){ const g=pick(GOODS.filter(x=>S.stocked[x.id])); if(g){ S.prices[g.id]=Math.round(S.prices[g.id]*1.9); const dlr=hoodDealers().filter(d=>d.goods.indexOf(g.id)>=0)[0]; headline="Word is, "+(dlr?dlr.name:"the street")+" in "+h.name+" is paying top dollar for "+g.name+"."; kind="gold"; } }
+ if(spikes.length&&Math.random()<(S.bigMoney?0.50:0.40)){ const g=pick(spikes); S.prices[g.id]*=(S.bigMoney?6:4); headline="Shortage! "+g.name+" is bone dry in "+h.name+" — buyers are paying crazy money!"; kind="gold"; S.prices[g.id]=Math.round(S.prices[g.id]); }
+ if(boths.length&&Math.random()<0.30){ const g=pick(boths); if(Math.random()<0.75){ S.prices[g.id]*=(S.bigMoney?6:4); headline="Fentanyl panic — prices just went through the roof in "+h.name+"!"; } else { S.prices[g.id]=Math.max(1,Math.round(S.prices[g.id]/3)); headline="Bad batch scare — Fentanyl prices crashed in "+h.name+"."; } kind="gold"; S.prices[g.id]=Math.round(S.prices[g.id]); }
+ if(!headline&&Math.random()<0.45){ const g=pick(GOODS.filter(x=>S.stocked[x.id])); if(g){ S.prices[g.id]=Math.round(S.prices[g.id]*(S.bigMoney?2.6:1.9)); const dlr=hoodDealers().filter(d=>d.goods.indexOf(g.id)>=0)[0]; headline="Word is, "+(dlr?dlr.name:"the street")+" in "+h.name+" is paying top dollar for "+g.name+"."; kind="gold"; } }
  GOODS.forEach(g=>{ if(S.stocked[g.id]) S.lastSeen[g.id]=S.prices[g.id]; });
  S.headline=headline; S.headlineKind=kind;
 }
@@ -933,14 +1032,14 @@ function rollMarket(){
 /* ---------- rendering ---------- */
 function render(){
  if(!S) return;
- $("#hud-player").textContent = players[cur].label + " · " + HOOD[S.hood].name + ", " + CITY[HOOD[S.hood].cityId].city;
+ $("#hud-player").textContent = HOOD[S.hood].name + ", " + CITY[HOOD[S.hood].cityId].city;
  const nw=netWorth();
  if(nw>(S.peak||0)) S.peak=nw;
  $("#hud-stats").innerHTML =
   stat("Cash",fmt(S.cash),"green")+stat("Bank",fmt(S.bank),"")+stat("Debt",fmt(S.debt),S.debt>0?"red":"green")
   +stat("Net Worth",fmt(nw),nw>=0?"gold":"red")+stat("Day",S.day+" / "+TOTAL_DAYS,"")
   +stat("Coat",usedSlots()+" / "+S.cap,"");
- $("#hud-landmarks").innerHTML = LANDMARKS.map(l=>'<span class="lm'+(S.landmarks[l.id]?" hit":"")+'">'+(S.landmarks[l.id]?"✓ ":"")+l.name+'</span>').join("");
+ $("#hud-landmarks").innerHTML = LANDMARKS.map(l=>'<span class="lm'+(S.landmarks[l.id]?" hit":"")+'">'+(S.landmarks[l.id]?"✓ ":"")+l.name+'</span>').join("")+(S.bigMoney?'<span class="lm big">💰 BIG MONEY</span>':"");
  const stashIds=Object.keys(S.stash).filter(id=>S.stash[id]>0);
  $("#hud-stash").innerHTML = stashIds.length? stashIds.map(id=>'<span class="chip">'+GOOD[id].name+' <b>×'+S.stash[id]+'</b> · '+fmt(S.prices[id]||S.lastSeen[id]||0)+'</span>').join("")
    : '<span class="chip empty">Coat is empty — buy low somewhere, sell high somewhere else.</span>';
@@ -981,7 +1080,7 @@ function renderMap(){
          return '<button class="hood" disabled style="border-left-color:'+h.neon+'"><span><span class="hn">👑 '+h.name+'</span><span class="hd" style="display:block">The crown is yours — the compound flies your colors now.</span><span class="tagrow"><span class="mtag bal">👑 Crown taken</span></span></span><span class="meta"><span class="here-badge">Yours</span></span></button>';
        }
        if(nw<1000000){
-         return '<button class="hood lockedh" disabled style="border-left-color:'+h.neon+'"><span><span class="hn">🔒 '+h.name.toUpperCase()+' — locked until you can challenge the King</span><span class="hd" style="display:block">'+h.desc+'</span><span class="tagrow"><span class="mtag bal">🔒 The final stage</span><span class="mtag dng">Unlocks at $1,000,000 net worth</span></span></span><span class="meta"><span class="fee">🔒 Locked</span></span></button>';
+         return '<button class="hood lockedh" disabled style="border-left-color:'+h.neon+'"><span><span class="hn">🔒 '+h.name.toUpperCase()+' — locked until $1,000,000 net worth</span><span class="hd" style="display:block">'+h.desc+'</span><span class="tagrow"><span class="mtag bal">🔒 The final stage</span><span class="mtag dng">Unlocks at $1,000,000 net worth</span></span></span><span class="meta"><span class="fee">🔒 Locked</span></span></button>';
        }
        return '<button class="hood" data-compound="'+h.id+'" style="border-left-color:'+h.neon+'"><span><span class="hn">👑 '+h.name+'</span><span class="hd" style="display:block">'+h.desc+'</span><span class="tagrow"><span class="mtag bal">👑 The final stage</span><span class="mtag dng">Danger 5 / 5</span><span class="mtag pay">The hustle-off</span></span></span><span class="meta"><span class="here-badge">Enter ▸</span></span></button>';
      }
@@ -1057,7 +1156,7 @@ function renderMarketTable(){
  const rowFor=(id,sellOnly)=>{
    const g=GOOD[id], price=S.prices[id]||0, seen=S.lastSeen[id]||price;
    const own=S.stash[id]||0;
-   const sellUnit=Math.round((sellOnly?seen:price)*h.pay);
+   const sellUnit=Math.round((sellOnly?seen:price)*h.pay*tierSellMult());
    return '<tr'+(sellOnly?' class="notstocked"':"")+'><td><span class="gname">'+g.name+'</span><br><span class="gunit">per '+g.unit+(g.slots>1?" · "+g.slots+" coat slots":"")+'</span></td>'
    +'<td>'+(sellOnly
       ? '<span class="price">'+fmt(sellUnit)+'</span><br><span class="gunit">sell only here</span>'
@@ -1101,18 +1200,19 @@ function renderSheet(){
  const h=HOOD[S.hood];
  const d=hoodDealers()[sheetDealerIdx]; if(!d){ closeSheet(); return; }
  const unlocked = netWorth()>=BULK_UNLOCK;
+ const bulkP = S.bigMoney?BIG_POUND_N:POUND_N, bulkK = S.bigMoney?BIG_KILO_N:KILO_N;
  const row=(id,buybackOnly)=>{
    const g=GOOD[id], price=S.prices[id]||0, seen=S.lastSeen[id]||price;
    const own=S.stash[id]||0;
-   const sellUnit=Math.round((buybackOnly?seen:price)*h.pay);
+   const sellUnit=Math.round((buybackOnly?seen:price)*h.pay*tierSellMult());
    const poundUnit=Math.round(price*(1-POUND_OFF)), kiloUnit=Math.round(price*(1-KILO_OFF));
    let btns='<div class="sheetbtns">';
    if(!buybackOnly){
      btns+='<button class="sbtn buy" data-t="b1">BUY 1<small>'+fmt(price)+'</small></button>'
           +'<button class="sbtn buy" data-t="b10">BUY 10<small>'+fmt(price*10)+'</small></button>';
      if(unlocked){
-       btns+='<button class="sbtn bulk" data-t="bp">BUY POUND · '+POUND_N+'<small>'+fmt(poundUnit*POUND_N)+' — 15% off</small></button>'
-           +'<button class="sbtn bulk" data-t="bk">BUY KILO · '+KILO_N+'<small>'+fmt(kiloUnit*KILO_N)+' — 25% off</small></button>';
+       btns+='<button class="sbtn bulk" data-t="bp">'+(S.bigMoney?"BUY BIG POUND":"BUY POUND")+' · '+bulkP+'<small>'+fmt(poundUnit*bulkP)+' — 15% off</small></button>'
+           +'<button class="sbtn bulk" data-t="bk">'+(S.bigMoney?"BUY BIG KILO":"BUY KILO")+' · '+bulkK+'<small>'+fmt(kiloUnit*bulkK)+' — 25% off</small></button>';
      } else {
        btns+='<div class="sheet-lock">🔒 Kilos unlock at $10,000 — bulk lots (pound = '+POUND_N+', kilo = '+KILO_N+') open at five figures.</div>';
      }
@@ -1137,8 +1237,8 @@ function renderSheet(){
      const t=b.getAttribute("data-t"), price=S.prices[id]||0;
      if(t==="b1") sheetTrade("buy",id,1);
      else if(t==="b10") sheetTrade("buy",id,10);
-     else if(t==="bp") sheetTrade("buy",id,POUND_N,Math.round(price*(1-POUND_OFF)),true);
-     else if(t==="bk") sheetTrade("buy",id,KILO_N,Math.round(price*(1-KILO_OFF)),true);
+     else if(t==="bp") sheetTrade("buy",id,bulkP,Math.round(price*(1-POUND_OFF)),true);
+     else if(t==="bk") sheetTrade("buy",id,bulkK,Math.round(price*(1-KILO_OFF)),true);
      else if(t==="s1") sheetTrade("sell",id,1);
      else if(t==="sa") sheetTrade("sell",id,1e9);
    }; });
@@ -1168,7 +1268,7 @@ function sell(id,n){
  const g=GOOD[id], h=HOOD[S.hood];
  const own=S.stash[id]||0; if(!own) return 0;
  const can=Math.min(n,own);
- const unit=Math.round((S.prices[id]||S.lastSeen[id]||0)*h.pay);
+ const unit=Math.round((S.prices[id]||S.lastSeen[id]||0)*h.pay*tierSellMult());
  const total=can*unit;
  S.stash[id]-=can; if(!S.stash[id]) delete S.stash[id];
  S.cash+=total; S.stats.earned+=total; S.stats.deals++;
@@ -1350,7 +1450,7 @@ function bankGameOver(){
   html:"<p>The flip came up wrong. The cuffs went on in front of the whole street, and the quarter million stayed in the vault. The bank job is the biggest payday in Hustle City — and the only one that can end everything.</p>"
    +"<p><b>How it ended: The bank job</b><br>Days survived: "+S.day+" · Peak net worth: "+fmt(S.peak)+"<br>Deals made: "+S.stats.deals+" · Total earned: "+fmt(S.stats.earned)+" · Final net worth: "+fmt(nw)+"</p>",
   choices:[
-   {t:"Run it back", fn:()=>{ closeModal(); startRun(cur); }},
+   {t:"Run it back", fn:()=>{ closeModal(); startRun(); }},
    {t:"Title screen", fn:()=>{ closeModal(); endToStart(); }}
   ]});
 }
@@ -1421,9 +1521,24 @@ function balseyPressure(){
 }
 
 /* ---------- landmarks ---------- */
-let lmBusy=false;
+let lmBusy=false, bigMoneyPending=false;
 function checkLandmarks(){
- if(!S||S.over||lmBusy||storyBusy) return;
+ if(!S||S.over) return;
+ // BIG MONEY TIER: crossing $20,000 net worth opens the money game for the
+ // rest of the run. The flag, the bigger coat, and the log line land even
+ // while a landmark or story is mid-flight — only the announcement waits.
+ if(!S.bigMoney && netWorth()>=BIGMONEY_NW){
+   S.bigMoney=true; S.cap=Math.max(S.cap,BIG_CAP); bigMoneyPending=true;
+   log("<b>💰 BIG MONEY TIER.</b> $20,000 net worth — the money game just opened up.","gold");
+ }
+ if(bigMoneyPending && !lmBusy && !storyBusy && sheetDealerIdx===null){
+   bigMoneyPending=false;
+   openModal({ kick:"💰 Net Worth $20,000", title:"BIG MONEY TIER",
+    html:"<p>You crossed <b>$20,000 net worth</b> — and the city noticed. From here to the end of this run, the money game is bigger:</p><p>🧥 Your coat now holds <b>400 slots</b>.<br>📦 Wholesale lots jump: <b>BIG POUND — 100 units at 15% off</b> and <b>BIG KILO — 250 units at 25% off</b> on every dealer sheet.<br>💵 Every dealer pays a <b>+25% big-mover premium</b> on everything you sell.<br>📈 The market swings wider — and shortage spikes pay richer.</p><p>That's the ramp: <b>$750,000</b> challenges the King. <b>$1,000,000</b> takes the crown.</p>",
+    choices:[{t:"Let's eat.", fn:()=>{ closeModal(); }}]});
+   render();
+ }
+ if(lmBusy||storyBusy) return;
  const nw=netWorth();
  for(const lm of LANDMARKS){
    if(S.landmarks[lm.id]) continue;
@@ -1469,20 +1584,14 @@ function openSharkModal(){
 }
 function blocksEnding(){
  S.over=true;
- openModal({ kick:"Game over", title:"Up On Blocks", img:"assets/charger-blocks.webp",
-  html:"<p>You turned down the Shark, and the city collected its own way. Your Charger sits on blocks behind a chain-link fence, wheels gone, paint fading — the most famous 'before' picture in Hustle City.</p><p><b>Final net worth: "+fmt(netWorth())+"</b> · Day "+S.day+" · "+titleFor(netWorth())+"</p>",
-  choices:[{t:"Back to the title screen", fn:()=>{ closeModal(); endToStart(); }}]});
- recordBest();
+ const txt="You turned down the Shark, and the city collected its own way. Your Charger sits on blocks behind a chain-link fence, wheels gone, paint fading — the most famous 'before' picture in Hustle City.";
+ showOverScreen("blocks", txt);
 }
 function ambulanceEnding(){
  if(S.over) return; S.over=true;
- playScene("ambulance", showAmbulanceCard); // the drive-off plays at last
-}
-function showAmbulanceCard(){
- openModal({ kick:"Game over", title:"The Ambulance Ride", img:"assets/ambulance.webp",
-  html:"<p>The street finally caught you in "+HOOD[S.hood].name+". The ambulance pulls away with the lights off — no hurry anymore. Balsey sends flowers. Of course he does.</p><p><b>Final net worth: "+fmt(netWorth())+"</b> · Day "+S.day+" · "+titleFor(netWorth())+"</p>",
-  choices:[{t:"Back to the title screen", fn:()=>{ closeModal(); endToStart(); }}]});
- recordBest();
+ const txt="The street finally caught you in "+HOOD[S.hood].name+". The ambulance pulls away with the lights off — no hurry anymore. Balsey sends flowers. Of course he does.";
+ showOverScreen("death", txt);
+ playScene("ambulance"); // the drive-off plays over the screen, at last — NO shark beat on a death
 }
 
 /* ---------- the finale: overthrow Balsey ---------- */
@@ -1533,7 +1642,7 @@ function finaleWin(story){
    that doesn't decide the round. Same 2 catches, same dice.
    The dice are fair: plain 1-6 rolls for both men, no rigging.
    ============================================================ */
-const CR={active:false,over:false,sample:false,preview:false,you:0,bal:0,youCatch:2,balCatch:2,point:null,shooter:"you",rolling:false,timers:[],faceInt:null,cur:null,log:[]};
+const CR={active:false,over:false,you:0,bal:0,youCatch:2,balCatch:2,point:null,shooter:"you",rolling:false,timers:[],faceInt:null,cur:null,log:[]};
 const CR_TUMBLE = reduced?1250:2150;
 const CR_LOCK = 600; // final faces show this many ms before the dice stop — the read window
 const CR_BAL_CATCH_P = 0.95; // Balsey's catch skill: while he holds a catch, a round-losing roll settles against him ~1 time in 20
@@ -1695,6 +1804,145 @@ function sgStageCatch(){
 }
 const PIPS={1:[4],2:[0,8],3:[0,4,8],4:[0,2,6,8],5:[0,2,4,6,8],6:[0,2,3,5,6,8]};
 function setDie(el,v){ if(!el) return; const on=PIPS[v]||[]; const pips=el.querySelectorAll(".pip"); pips.forEach((p,i)=>p.classList.toggle("on",on.indexOf(i)>=0)); el.setAttribute("data-face",v); }
+/* ---------- LED dot-matrix sign renderer ----------
+   A real renderer, not a picture of text: every letter is painted from
+   a built-in 5x7 dot-matrix font — round dots on a strict grid, lit
+   dots glowing electric blue, faint unlit dots everywhere else,
+   exactly like a highway message sign, in the house electric blue.
+   No font file is involved, so the lettering is identical in every
+   webview. Re-runs on every
+   state sync, so rounds / point / catches / stake / cash / coat on the
+   sign are always the live values. The plain strings ride along in the
+   canvas's data-lines + aria-label for accessibility and testing. */
+function ledSignHTML(prefix){
+ return '<div class="led-sign"><canvas id="'+prefix+'-led" width="320" height="120" role="img" aria-label="LED sign"></canvas><span class="led-sr" id="'+prefix+'-led-sr"></span></div>';
+}
+/* 5x7 dot-matrix font: each glyph is 7 rows of 5 bits (MSB = leftmost
+   dot). This table IS the sign's lettering — no webfont, no sampling. */
+const LED_FONT={
+ "A":[0b01110,0b10001,0b10001,0b11111,0b10001,0b10001,0b10001],
+ "B":[0b11110,0b10001,0b10001,0b11110,0b10001,0b10001,0b11110],
+ "C":[0b01110,0b10001,0b10000,0b10000,0b10000,0b10001,0b01110],
+ "D":[0b11100,0b10010,0b10001,0b10001,0b10001,0b10010,0b11100],
+ "E":[0b11111,0b10000,0b10000,0b11110,0b10000,0b10000,0b11111],
+ "F":[0b11111,0b10000,0b10000,0b11110,0b10000,0b10000,0b10000],
+ "G":[0b01110,0b10001,0b10000,0b10111,0b10001,0b10001,0b01111],
+ "H":[0b10001,0b10001,0b10001,0b11111,0b10001,0b10001,0b10001],
+ "I":[0b01110,0b00100,0b00100,0b00100,0b00100,0b00100,0b01110],
+ "J":[0b00011,0b00010,0b00010,0b00010,0b00010,0b10010,0b01100],
+ "K":[0b10001,0b10010,0b10100,0b11000,0b10100,0b10010,0b10001],
+ "L":[0b10000,0b10000,0b10000,0b10000,0b10000,0b10000,0b11111],
+ "M":[0b10001,0b11011,0b10101,0b10101,0b10001,0b10001,0b10001],
+ "N":[0b10001,0b10001,0b11001,0b10101,0b10011,0b10001,0b10001],
+ "O":[0b01110,0b10001,0b10001,0b10001,0b10001,0b10001,0b01110],
+ "P":[0b11110,0b10001,0b10001,0b11110,0b10000,0b10000,0b10000],
+ "Q":[0b01110,0b10001,0b10001,0b10001,0b10101,0b10010,0b01101],
+ "R":[0b11110,0b10001,0b10001,0b11110,0b10100,0b10010,0b10001],
+ "S":[0b01111,0b10000,0b10000,0b01110,0b00001,0b00001,0b11110],
+ "T":[0b11111,0b00100,0b00100,0b00100,0b00100,0b00100,0b00100],
+ "U":[0b10001,0b10001,0b10001,0b10001,0b10001,0b10001,0b01110],
+ "V":[0b10001,0b10001,0b10001,0b10001,0b10001,0b01010,0b00100],
+ "W":[0b10001,0b10001,0b10001,0b10101,0b10101,0b10101,0b01010],
+ "X":[0b10001,0b01010,0b00100,0b00100,0b00100,0b01010,0b10001],
+ "Y":[0b10001,0b01010,0b00100,0b00100,0b00100,0b00100,0b00100],
+ "Z":[0b11111,0b00001,0b00010,0b00100,0b01000,0b10000,0b11111],
+ "0":[0b01110,0b10001,0b10011,0b10101,0b11001,0b10001,0b01110],
+ "1":[0b00100,0b01100,0b00100,0b00100,0b00100,0b00100,0b01110],
+ "2":[0b01110,0b10001,0b00001,0b00110,0b00100,0b01000,0b11111],
+ "3":[0b01110,0b10001,0b00001,0b00110,0b00001,0b10001,0b01110],
+ "4":[0b00010,0b00110,0b01010,0b10001,0b11111,0b00010,0b00010],
+ "5":[0b11111,0b10000,0b11110,0b00001,0b00001,0b10001,0b01110],
+ "6":[0b00110,0b01000,0b10000,0b11110,0b10001,0b10001,0b01110],
+ "7":[0b11111,0b00001,0b00010,0b00100,0b01000,0b01000,0b01000],
+ "8":[0b01110,0b10001,0b10001,0b01110,0b10001,0b10001,0b01110],
+ "9":[0b01110,0b10001,0b10001,0b01111,0b00001,0b00010,0b01100],
+ " ":[0,0,0,0,0,0,0],
+ "-":[0,0,0,0b01110,0,0,0],
+ ".":[0,0,0,0,0,0b01100,0b01100],
+ ",":[0,0,0,0,0b01100,0b00100,0b01000],
+ "$":[0b00100,0b01111,0b10100,0b01110,0b00101,0b11110,0b00100],
+ "+":[0,0b00100,0b00100,0b01110,0b00100,0b00100,0],
+ "'":[0b00100,0b00100,0b01000,0,0,0,0],
+ ":":[0,0b01100,0b01100,0,0b01100,0b01100,0],
+ ";":[0,0b01100,0b01100,0,0b01100,0b00100,0b01000],
+ "!":[0b00100,0b00100,0b00100,0b00100,0b00100,0,0b00100],
+ "?":[0b01110,0b10001,0b00001,0b00010,0b00100,0,0b00100],
+ "/":[0b00001,0b00010,0b00010,0b00100,0b01000,0b01000,0b10000],
+ "%":[0b11001,0b11010,0b00010,0b00100,0b01000,0b01011,0b10011],
+ "(":[0b00010,0b00100,0b01000,0b01000,0b01000,0b00100,0b00010],
+ ")":[0b01000,0b00100,0b00010,0b00010,0b00010,0b00100,0b01000],
+ "#":[0b01010,0b01010,0b11111,0b01010,0b11111,0b01010,0b01010],
+ "&":[0b01100,0b10010,0b10100,0b01000,0b10101,0b10010,0b01101],
+ "=":[0,0,0b11111,0,0b11111,0,0],
+ "*":[0,0b00100,0b10101,0b01110,0b10101,0b00100,0],
+ "_":[0,0,0,0,0,0,0b11111],
+ "·":[0,0,0b01100,0b01100,0,0,0],
+ "●":[0b01110,0b11111,0b11111,0b11111,0b11111,0b11111,0b01110],
+ "○":[0b00100,0b01110,0b10001,0b10001,0b10001,0b01110,0b00100]
+};
+LED_FONT["×"]=LED_FONT["X"];
+function ledRender(canvas,lines){
+ if(!canvas||!lines||!lines.length) return;
+ canvas.setAttribute("data-lines",lines.join(" | "));
+ canvas.setAttribute("aria-label",lines.join(". "));
+ const sr=canvas.parentElement?canvas.parentElement.querySelector(".led-sr"):null;
+ if(sr) sr.textContent=lines.join(" · ");
+ // strict dot grid: 5-dot glyph + 1-dot gap per character, 7-dot glyph
+ // rows + 2-dot gap per line, 2-dot margin — like a real message sign.
+ const CW=6, LH=9, PAD=2, pitch=3;
+ let maxLen=0; lines.forEach(l=>{ maxLen=Math.max(maxLen,l.length); });
+ if(maxLen<1) maxLen=1;
+ const cols=maxLen*CW-1+PAD*2, rows=lines.length*LH-2+PAD*2;
+ canvas.width=cols*pitch; canvas.height=rows*pitch;
+ const ctx=canvas.getContext("2d");
+ ctx.fillStyle="#010204"; ctx.fillRect(0,0,canvas.width,canvas.height);
+ // faint unlit dots across the whole grid
+ ctx.fillStyle="rgba(79,195,255,0.10)";
+ for(let y=0;y<rows;y++){ for(let x=0;x<cols;x++){ ctx.beginPath(); ctx.arc(x*pitch+pitch/2,y*pitch+pitch/2,0.5,0,6.2832); ctx.fill(); } }
+ // lit dots painted straight from the 5x7 font table, electric blue
+ ctx.fillStyle="#4fc3ff"; ctx.shadowColor="rgba(57,194,255,0.95)"; ctx.shadowBlur=3;
+ lines.forEach((line,li)=>{
+   const up=line.toUpperCase().replace(/[–—]/g,"-");
+   const x0=PAD+Math.floor((maxLen-up.length)*CW/2), y0=PAD+li*LH;
+   for(let ci=0;ci<up.length;ci++){
+     const g=LED_FONT[up[ci]]||LED_FONT[" "];
+     for(let r=0;r<7;r++){ const bits=g[r]; if(!bits) continue;
+       for(let c=0;c<5;c++){ if(bits&(16>>c)){ const gx=x0+ci*CW+c, gy=y0+r; ctx.beginPath(); ctx.arc(gx*pitch+pitch/2,gy*pitch+pitch/2,1.05,0,6.2832); ctx.fill(); } }
+     }
+   }
+ });
+ ctx.shadowBlur=0;
+}
+function ledDots(n,total){ return "●".repeat(n)+"○".repeat(Math.max(0,total-n)); }
+function ledStashLine(){
+ const p=pinData(); if(!p) return "BALSEY'S COMPOUND, SPRINGFIELD";
+ return p.stash.toUpperCase().replace(/×/g,"X");
+}
+function ledLocLine(){
+ const p=pinData(); if(!p) return "BALSEY'S COMPOUND, SPRINGFIELD";
+ return p.loc.toUpperCase();
+}
+function ledLinesSG(){
+ const lines=[
+  "ROUNDS WON "+SG.won+" - "+SG.lost+" LOST",
+  SG.point===null ? "COME-OUT ROLL - YOUR DICE, YOUR CURB" : "POINT IS "+SG.point+" - MAKE IT BEFORE THE 7",
+  "CATCHES "+ledDots(SG.catches,2)+"   ON THE GROUND "+fmt(SG.stake==null?100:SG.stake),
+  ledLocLine(),
+  "CASH "+(S?fmt(S.cash):"$0")+"   "+ledStashLine()
+ ];
+ return lines.map(l=>l.length>44?l.slice(0,44):l);
+}
+function ledLinesCR(){
+ const lines=[
+  "YOU "+CR.you+" - "+CR.bal+" BALSEY",
+  "FIRST TO 3   POT $2,000,000 + CROWN",
+  CR.point===null ? ("COME-OUT ROLL - "+(CR.shooter==="you"?"YOUR DICE":"BALSEY'S DICE")) : ("POINT IS "+CR.point+" - "+(CR.shooter==="you"?"YOUR ROLL":"BALSEY'S ROLL")),
+  "CATCHES YOU "+ledDots(CR.youCatch,2)+"   BALSEY "+ledDots(CR.balCatch,2),
+  ledLocLine(),
+  S ? ("CASH "+fmt(S.cash)+"   "+ledStashLine()) : "A MILLION A SIDE - WINNER TAKES ALL"
+ ];
+ return lines.map(l=>l.length>44?l.slice(0,44):l);
+}
 function crSync(){
  const y=$("#cr-you"), b=$("#cr-bal"); if(y) y.textContent=CR.you; if(b) b.textContent=CR.bal;
  const yc=$("#cr-yc"), bc=$("#cr-bc");
@@ -1706,6 +1954,7 @@ function crSync(){
  if(cb){ cb.innerHTML="✋ CATCH IT — "+CR.youCatch+" LEFT"; const live=CR.rolling&&CR.youCatch>0; cb.disabled=!live; cb.classList.toggle("live",live); }
  const rb=$("#cr-roll");
  if(rb){ const mine=CR.shooter==="you"&&!CR.rolling&&!CR.over; rb.disabled=!mine; rb.textContent = CR.shooter==="you" ? "🎲 ROLL THE DICE" : "🎲 BALSEY'S ROLL…"; }
+ ledRender($("#cr-led"),ledLinesCR());
 }
 function crapsStake(){
  let need=1000000;
@@ -1716,47 +1965,41 @@ function crapsStake(){
    for(const id of ids){ while(need>0 && S.stash[id]>0){ S.stash[id]--; need-=(S.prices[id]||S.lastSeen[id]||0); if(!S.stash[id]) delete S.stash[id]; } if(need<=0) break; }
  }
 }
-function openCrapsIntro(preview){
+function openCrapsIntro(){
  Snd.ensure();
- CR.introCtx = preview ? "preview" : "game"; navPush("craps");
+ CR.introCtx = "game"; navPush("craps");
  $("#craps-root").innerHTML='<div class="craps-overlay"><div class="craps">'
-  +'<p class="kick">'+(preview?"👑 The Finale · Balsey\'s Compound · Springfield":"👑 Balsey\'s Compound · Springfield")+'</p><h3 class="chrome">The Hustle-Off</h3>'
+  +'<p class="kick">👑 Balsey\'s Compound · Springfield</p><h3 class="chrome">The Hustle-Off</h3>'
   +'<div class="concrete"><div class="stage"><video id="cr-intro-vid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/scene-throne-poster.webp" src="assets/scene-throne.mp4" style="object-position:19% center"></video><div class="shade"></div><div class="stage-live"><span class="dot"></span>Live · Balsey\'s Compound</div><div class="stage-cap"><div class="an">King Balsey — across the concrete</div><div class="as">No table. No dealer. Just the King, the curb, and the dice. He\'s been waiting for somebody dumb enough — or good enough — to put a million down.</div></div></div>'
   +'<div class="potline"><img src="assets/bills.webp" alt="Cash on the ground" /><div><div class="pl">Winner takes</div><div class="pv">$2,000,000 + the crown 👑</div></div></div></div>'
   +'<div class="stakes">'
-  +(preview
-    ? '<div class="srow"><span>💵 You put up</span><b>$1,000,000</b></div>'
-     +'<div class="srow"><span>💵 Balsey matches it</span><b>$1,000,000</b></div>'
-     +'<div class="srow pot"><span>🏆 On the concrete</span><b>$2,000,000 + 👑</b></div></div>'
-     +'<p class="rules"><b>This is the finale, played as a free preview.</b> The stakes on the concrete are the real ones — a million a side, winner takes the pot and the crown. Win or lose here, no money actually moves and no run is started or touched — you walk back to the title screen.</p>'
-    : '<div class="srow"><span>💵 You put up</span><b>$1,000,000</b></div>'
-     +'<div class="srow"><span>💵 Balsey matches it</span><b>$1,000,000</b></div>'
-     +'<div class="srow pot"><span>🏆 On the concrete</span><b>$2,000,000 + 👑</b></div></div>')
+  +'<div class="srow"><span>💵 You put up</span><b>$1,000,000</b></div>'
+  +'<div class="srow"><span>💵 Balsey matches it</span><b>$1,000,000</b></div>'
+  +'<div class="srow pot"><span>🏆 On the concrete</span><b>$2,000,000 + 👑</b></div></div>'
   +'<p class="rules"><b>Street craps, pass line.</b> You shoot a round, he shoots a round. Come-out roll: <b>7 or 11</b> takes the round, <b>2, 3 or 12</b> craps out, anything else sets the <b>point</b> — then make the point before a 7 lands. Lose a round and it goes to the other man. <b>First to 3 rounds</b> takes the pot and the crown.</p>'
   +'<p class="rules"><b>Street rule — the catch.</b> Everybody gets <b>2 catches</b>. While the dice are still tumbling you can snatch \'em out the air — <b>no roll</b>, point unchanged, same shooter rolls again. A catch kills <b>any roll that\'s about to cost you the round</b> — your own bad roll, or his winning one. But you gotta catch \'em <b>before they stop</b>. Once they settle, it counts.</p>'
   +'<p class="rules">And know this before you put the money down: <b>Balsey\'s hands are the fastest in the city.</b> He reads the tumble before the faces even settle, and while he\'s holding a catch, a roll that would cost him the round almost never gets to land. He never wastes one on a roll that doesn\'t decide anything, either. The dice are honest — he\'s just the best pair of hands alive. Beat him with your own hands, or don\'t beat him at all.</p>'
   +'<p class="rules">Win and the crown — and the trunk — are yours. Lose and your million stays on his side of the concrete… but the run goes on. Stack another million and come back for a rematch.</p>'
-  +'<div class="craps-btns"><button class="btn gold big" id="cr-start">'+(preview?"▶ Play the hustle-off — no stakes":"💵 Put my million on the concrete")+'</button>'
-  +'<button class="btn ghost" id="cr-back">'+(preview?"Not yet — back to the title screen":"Not yet — back to the streets")+'</button></div>'
+  +'<div class="craps-btns"><button class="btn gold big" id="cr-start">💵 Put my million on the concrete</button>'
+  +'<button class="btn ghost" id="cr-back">Not yet — back to the streets</button></div>'
   +'</div></div>';
  stagePlay($("#cr-intro-vid"));
  stageGestureKick("#craps-root",null,"#cr-intro-vid");
- $("#cr-back").onclick=()=>{ Snd.ensure(); if(preview) exitEndScenePreview(); else closeCraps(); };
- $("#cr-start").onclick=()=>{ Snd.ensure(); if(preview) startEndSceneMatch(); else startCrapsMatch(); };
+ $("#cr-back").onclick=()=>{ Snd.ensure(); closeCraps(); };
+ $("#cr-start").onclick=()=>{ Snd.ensure(); startCrapsMatch(); };
 }
 function showCrapsMatch(){
  CR.introCtx=null; navSync();
  $("#craps-root").innerHTML='<div class="craps-overlay"><div class="craps">'
-  +'<p class="kick">'+(CR.preview?"👑 The Finale · The Hustle-Off — a million a side":CR.sample?"🎲 Sample · The Hustle-Off — no money down":"👑 The Hustle-Off · Balsey's Compound")+'</p><h3 class="chrome">You vs King Balsey</h3>'
-  +'<div class="craps-status"><span>You</span><span class="num gold" id="cr-you">0</span><span class="dash">—</span><span class="num" id="cr-bal">0</span><span>Balsey</span><span class="meta">'+(CR.preview?"Finale preview · first to 3 · no money moves":CR.sample?"Sample · first to 3 · no stake":"First to 3 rounds")+'</span><span class="who" id="cr-who">You — on the dice</span><span class="pt" id="cr-point"></span><span>Catches — You <span class="dots" id="cr-yc">●●</span> · Balsey <span class="dots" id="cr-bc">●●</span></span><span class="pot">Pot <b>'+(CR.preview?"$2,000,000 + 👑":CR.sample?"Bragging rights":"$2,000,000 + 👑")+'</b></span>'+pinSegHTML()+'</div>'
+  +'<p class="kick">👑 The Hustle-Off · Balsey\'s Compound</p><h3 class="chrome">You vs King Balsey</h3>'
+  +ledSignHTML("cr")+'<div class="hidden" aria-hidden="true"><span id="cr-you">0</span><span id="cr-bal">0</span><span id="cr-point"></span><span id="cr-yc">●●</span><span id="cr-bc">●●</span><span id="cr-who">You — on the dice</span></div>'
   +'<div class="concrete"><div class="stage"><video class="stage-bg" id="cr-bg" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/craps-bg-city-subway-ledsign-bright-poster.webp" src="assets/craps-bg-city-subway-ledsign-bright.mp4"></video><video id="cr-vid" class="resting" muted loop playsinline webkit-playsinline preload="auto" poster="assets/roll-player-poster.webp" src="assets/roll-player.mp4"></video><div class="shade"></div><div class="stage-total hidden" id="cr-total"><div class="tt" id="cr-total-t"></div><div class="ts" id="cr-total-s"></div></div><div class="stage-flash hidden" id="cr-flash">✋ Snatched mid-roll</div><div class="stage-face hidden" id="cr-face"><video id="cr-face-vid" muted loop playsinline webkit-playsinline preload="auto" poster="assets/scene-throne-poster.webp" src="assets/scene-throne.mp4"></video><div class="sf-cap">👑 King Balsey</div></div><video class="stage-pip hidden" id="cr-pip" muted loop playsinline webkit-playsinline preload="auto" poster="assets/scene-throne-poster.webp" src="assets/scene-throne.mp4"></video></div>'
-  +'<div class="craps-btns"><button class="btn gold big" id="cr-roll">🎲 ROLL THE DICE</button><button class="btn danger big" id="cr-catch" disabled>✋ CATCH IT — 2 LEFT</button>'+(CR.preview?'<button class="btn ghost" id="cr-quit">✕ Quit preview</button>':CR.sample?'<button class="btn ghost" id="cr-quit">✕ Quit sample</button>':"")+'</div></div>'
-  +'<div class="craps-call"><div class="cm" id="cr-callmain">'+(CR.preview?"A million a side. Money's down.":CR.sample?"Sample match — no money down.":"Money's down.")+'</div><div class="cs" id="cr-callsub">Your dice first. Roll when you\'re ready.</div></div>'
+  +'<div class="craps-btns"><button class="btn gold big" id="cr-roll">🎲 ROLL THE DICE</button><button class="btn danger big" id="cr-catch" disabled>✋ CATCH IT — 2 LEFT</button></div></div>'
+  +'<div class="craps-call"><div class="cm" id="cr-callmain">Money\'s down.</div><div class="cs" id="cr-callsub">Your dice first. Roll when you\'re ready.</div></div>'
   +'<div class="craps-log" id="cr-log"></div>'
   +'</div></div>';
  $("#cr-roll").onclick=()=>{ crapsDoRoll(); };
  $("#cr-catch").onclick=()=>{ crapsCatch(); };
- const quitBtn=$("#cr-quit"); if(quitBtn) quitBtn.onclick=()=>{ Snd.ensure(); if(CR.preview){ exitEndScenePreview(); } else { closeCraps(); if(S) render(); } };
  stageGestureKick("#craps-root","#cr-bg","#cr-vid");
  /* same webview quirk as the stage clips: a tap also re-kicks Balsey's
     presence / face panels whenever they're the ones on screen */
@@ -1765,61 +2008,38 @@ function showCrapsMatch(){
 }
 function startCrapsMatch(){
  crapsStake(); render();
- CR.active=true; CR.sample=false; CR.over=false; CR.you=0; CR.bal=0; CR.youCatch=2; CR.balCatch=2; CR.point=null; CR.shooter="you"; CR.rolling=false; CR.log=[];
+ CR.active=true; CR.over=false; CR.you=0; CR.bal=0; CR.youCatch=2; CR.balCatch=2; CR.point=null; CR.shooter="you"; CR.rolling=false; CR.log=[];
  showCrapsMatch();
  log("<b>THE HUSTLE-OFF.</b> Your million is on the concrete and Balsey matched it — street craps for the crown. First to 3 rounds.","gold");
  crapsTurn();
 }
-/* ---------- the free sample: the full hustle-off, nothing on the line ----------
-   Same dice, same street rules — player rolls, 2 catches a shooter, first to
-   3 — but NO stake is taken, NOTHING about the run changes (works from the
-   title screen with no run started, too), and win or lose the exit drops the
-   player exactly where they were. The real million-dollar game still lives
-   behind the compound gate. */
-function startSampleCraps(){
- Snd.ensure();
- crClearTimers();
- CR.sample=true; CR.active=true; CR.over=false; CR.you=0; CR.bal=0; CR.youCatch=2; CR.balCatch=2; CR.point=null; CR.shooter="you"; CR.rolling=false; CR.log=[];
- showCrapsMatch();
- crapsTurn();
-}
-function closeCraps(){ crClearTimers(); CR.active=false; CR.rolling=false; CR.sample=false; CR.preview=false; CR.introCtx=null; navClear("craps"); $("#craps-root").innerHTML=""; navSync(); }
-
-/* ---------- the End Scene preview: the finale, standalone ----------
-   Title-screen door into the whole end scene — compound intro, the full
-   hustle-off, and on a win the ride-off + coronation — with NO stake and
-   NO run: it never calls crapsStake(), never logs, never renders the game
-   screen, and never touches either player's run or best. Win or lose,
-   quitting or finishing lands back on the title screen exactly as left. */
-function startEndScenePreview(){ Snd.ensure(); openCrapsIntro(true); }
-function startEndSceneMatch(){
- crClearTimers();
- CR.active=true; CR.preview=true; CR.sample=false; CR.over=false; CR.you=0; CR.bal=0; CR.youCatch=2; CR.balCatch=2; CR.point=null; CR.shooter="you"; CR.rolling=false; CR.log=[];
- showCrapsMatch();
- crapsTurn();
-}
-function exitEndScenePreview(){
- closeCraps();
- $("#screen-game").classList.add("hidden");
- $("#screen-start").classList.remove("hidden");
- document.body.classList.remove("gaming");
- window.scrollTo(0,0);
- refreshBest();
-}
+function closeCraps(){ crClearTimers(); CR.active=false; CR.rolling=false; CR.introCtx=null; navClear("craps"); $("#craps-root").innerHTML=""; navSync(); }
 
 /* ============================================================
    SIDE CRAPS — the standalone quick game behind PLAY CRAPS
    (down by Wait a Day). NOT the hustle-off: no Balsey match, no
-   gate, no stake. The player shoots solo street craps on the
-   concrete — same pass-line rules, same catch (2 per round) —
-   for fun and practice, whenever they tap it mid-run. It never
-   touches the run: no S reads or writes, no log lines, no day
-   passes. Exit drops the player back on the game exactly as
-   they left it. STREET presentation only: dice on the curb,
-   play money on the ground, the block watching — no table,
-   no felt, no casino chrome, same as the finale.
+   gate. The player shoots solo street craps on the concrete —
+   same pass-line rules, same catch (2 per round) — FOR REAL
+   MONEY (owner, 2026-11-09): the stake is run cash, $100 minimum
+   up to ALL IN, set before the come-out roll and locked while
+   the round runs. Win the round and cash += stake; lose and
+   cash -= stake (never below zero — the stake can never exceed
+   the cash on hand). A catch voids the roll only: no cash moves
+   and the stake stays down. No day passes while you play, and
+   exiting drops the player back on the game with the HUD cash
+   exactly as the dice left it. STREET presentation only: dice
+   on the curb, real money on the ground, the block watching —
+   no table, no felt, no casino chrome, same as the finale.
    ============================================================ */
-const SG={active:false,rolling:false,roundOver:false,point:null,catches:2,won:0,lost:0,cur:null,timers:[],faceInt:null};
+const SG={active:false,rolling:false,roundOver:false,point:null,catches:2,won:0,lost:0,cur:null,timers:[],faceInt:null,stake:100,inRound:false};
+function sgBroke(){ return !S || S.cash<100; }
+function sgSetStake(v){
+ if(!SG.active||SG.rolling||SG.inRound||!S) return;
+ if(v==="all") SG.stake=S.cash;
+ else { const n=parseInt(v,10); if(!isNaN(n)) SG.stake=n; }
+ if(SG.stake>S.cash) SG.stake=S.cash;
+ sgSync();
+}
 const SG_TUMBLE = reduced?1250:2150;
 const SG_LOCK = 600; // final faces show this long before the dice stop — the catch read window
 function sgLater(fn,ms){ const t=setTimeout(fn,ms); SG.timers.push(t); return t; }
@@ -1827,23 +2047,40 @@ function sgClearTimers(){ SG.timers.forEach(clearTimeout); SG.timers=[]; if(SG.f
 function sgCall(main,sub,cls){ const m=$("#sg-callmain"), s=$("#sg-callsub"); if(m){ m.textContent=main; m.className="cm "+(cls||""); } if(s) s.innerHTML=sub||""; }
 function sgLogLine(t){ const el=$("#sg-log"); if(el){ const d=document.createElement("div"); d.innerHTML=t; el.prepend(d); while(el.children.length>4) el.removeChild(el.lastChild); } }
 function sgSync(){
+ // next round's stake can never exceed the cash on hand
+ if(!SG.inRound && S && S.cash>=100 && SG.stake!=null && SG.stake>S.cash) SG.stake=S.cash;
+ if(SG.stake==null) SG.stake=100;
  const w=$("#sg-won"), l=$("#sg-lost"); if(w) w.textContent=SG.won; if(l) l.textContent=SG.lost;
  const cd=$("#sg-cd"); if(cd){ cd.textContent="●".repeat(SG.catches)+"○".repeat(2-SG.catches); cd.className="dots"+(SG.catches?"":" spent"); }
  const pt=$("#sg-point");
  if(pt) pt.innerHTML = SG.point===null ? "Come-out roll — <b>your dice, your curb</b>" : "Point is <b>"+SG.point+"</b> — make it before the seven";
+ ledRender($("#sg-led"),ledLinesSG());
+ const st=$("#sg-stake"); if(st) st.textContent=fmt(SG.stake);
+ const broke=sgBroke();
+ const brokeEl=$("#sg-broke"); if(brokeEl) brokeEl.classList.toggle("hidden",!broke);
+ document.querySelectorAll("#sidecraps-root [data-bet]").forEach(b=>{
+   const v=b.getAttribute("data-bet");
+   const amt=v==="all"?null:parseInt(v,10);
+   b.disabled = SG.rolling||SG.inRound||broke||(amt!==null&&S&&amt>S.cash);
+   b.classList.toggle("active", v==="all" ? (S&&SG.stake===S.cash&&[100,250,500,1000].indexOf(SG.stake)<0) : (amt!==null&&SG.stake===amt));
+ });
  const cb=$("#sg-catch");
  if(cb){ cb.innerHTML="✋ CATCH IT — "+SG.catches+" LEFT"; const live=SG.rolling&&SG.catches>0; cb.disabled=!live; cb.classList.toggle("live",live); }
  const rb=$("#sg-roll");
- if(rb){ rb.disabled=SG.rolling; rb.textContent = SG.rolling ? "🎲 ROLLING…" : (SG.roundOver ? "🎲 NEW ROUND — SHOOT AGAIN" : "🎲 ROLL THE DICE"); }
+ if(rb){ rb.disabled=SG.rolling||broke||SG.stake<100; rb.textContent = SG.rolling ? "🎲 ROLLING…" : (SG.roundOver ? "🎲 NEW ROUND — SHOOT AGAIN" : "🎲 ROLL THE DICE"); }
 }
 function startSideCraps(){
  if(!S||CR.active||SG.active) return;
  Snd.ensure();
- SG.active=true; SG.rolling=false; SG.roundOver=false; SG.point=null; SG.catches=2; SG.won=0; SG.lost=0; SG.cur=null;
+ SG.active=true; SG.rolling=false; SG.roundOver=false; SG.point=null; SG.catches=2; SG.won=0; SG.lost=0; SG.cur=null; SG.stake=100; SG.inRound=false;
  navPush("sidecraps");
  $("#sidecraps-root").innerHTML='<div class="craps-overlay"><div class="craps">'
-  +'<p class="kick">🎲 Side Game · Street Craps — just for fun</p><h3 class="chrome">Street Craps</h3>'
-  +'<div class="craps-status"><span>Rounds won</span><span class="num gold" id="sg-won">0</span><span class="dash">—</span><span class="num" id="sg-lost">0</span><span>Lost</span><span class="meta">Practice · no money down · your run waits for you</span><span class="pt" id="sg-point"></span><span>Catches <span class="dots" id="sg-cd">●●</span></span><span class="pot">On the ground <b>Play money</b></span>'+pinSegHTML()+'</div>'
+  +'<p class="kick">🎲 Side Game · Street Craps — Real Money</p><h3 class="chrome">Street Craps</h3>'
+  +ledSignHTML("sg")+'<div class="hidden" aria-hidden="true"><span id="sg-won">0</span><span id="sg-lost">0</span><span id="sg-point"></span><span id="sg-cd">●●</span></div>'
+  +'<div class="betbar" id="sg-betbar"><div class="betlab">Your bet <span class="betstake" id="sg-stake">$100</span><span class="betmin">$100 min · up to all in</span></div>'
+  +'<div class="betbtns"><button class="btn betbtn" data-bet="100">$100</button><button class="btn betbtn" data-bet="250">$250</button><button class="btn betbtn" data-bet="500">$500</button><button class="btn betbtn" data-bet="1000">$1,000</button><button class="btn betbtn allin" data-bet="all">ALL IN</button></div>'
+  +'<div class="betnote">Set your stake before the come-out roll — it locks when the round starts. Win the round, win your stake. Lose, you lose it. A catch voids the roll only — your money stays on the ground.</div>'
+  +'<div class="broke-msg hidden" id="sg-broke">You need at least $100 to play craps — go make some money.</div></div>'
   +'<div class="concrete"><div class="stage"><video class="stage-bg" id="sg-bg" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/craps-bg-city-subway-ledsign-bright-poster.webp" src="assets/craps-bg-city-subway-ledsign-bright.mp4"></video><video id="sg-vid" class="resting" muted loop playsinline webkit-playsinline preload="auto" poster="assets/roll-player-poster.webp" src="assets/roll-player.mp4"></video><div class="shade"></div><div class="stage-total hidden" id="sg-total"><div class="tt" id="sg-total-t"></div><div class="ts" id="sg-total-s"></div></div><div class="stage-flash hidden" id="sg-flash">✋ Snatched mid-roll</div></div>'
   +'<div class="craps-btns"><button class="btn gold big" id="sg-roll">🎲 ROLL THE DICE</button><button class="btn danger big" id="sg-catch" disabled>✋ CATCH IT — 2 LEFT</button><button class="btn ghost" id="sg-quit">✕ Done — back to the game</button></div></div>'
   +'<div class="craps-call"><div class="cm" id="sg-callmain">Your dice. Your curb.</div><div class="cs" id="sg-callsub">Come-out roll. 7 or 11 takes the round, 2·3·12 craps out, anything else sets the point.</div></div>'
@@ -1852,14 +2089,20 @@ function startSideCraps(){
  $("#sg-roll").onclick=()=>{ sgRoll(); };
  $("#sg-catch").onclick=()=>{ sgCatch(); };
  $("#sg-quit").onclick=()=>{ Snd.ensure(); closeSideCraps(); };
+ document.querySelectorAll("#sidecraps-root [data-bet]").forEach(b=>{ b.onclick=()=>{ Snd.ensure(); sgSetStake(b.getAttribute("data-bet")); }; });
  stageGestureKick("#sidecraps-root","#sg-bg","#sg-vid");
  sgSync(); sgStageTurn();
+ if(sgBroke()) sgCall("You need at least $100 to play craps — go make some money.", "Cash on hand: "+fmt(S.cash)+". Sell something, make a deal — the dice will be here when your pocket's right.","red");
 }
-function closeSideCraps(){ sgClearTimers(); SG.active=false; SG.rolling=false; navClear("sidecraps"); $("#sidecraps-root").innerHTML=""; if(S) render(); navSync(); }
+function closeSideCraps(){ sgClearTimers(); SG.active=false; SG.rolling=false; SG.inRound=false; navClear("sidecraps"); $("#sidecraps-root").innerHTML=""; if(S) render(); navSync(); }
 function sgRoll(){
  if(!SG.active||SG.rolling) return;
  Snd.ensure();
+ if(sgBroke()){ sgCall("You need at least $100 to play craps — go make some money.", "Cash on hand: "+fmt(S.cash)+". The dice don't roll until your pocket's right.","red"); sgSync(); return; }
+ if(SG.stake==null||SG.stake<100){ sgCall("Minimum bet is $100.", "Set a stake of $100 or more before you roll — up to all in.","red"); sgSync(); return; }
+ if(SG.stake>S.cash) SG.stake=S.cash; // all in is the ceiling — a bet can never take cash negative
  if(SG.roundOver){ SG.roundOver=false; SG.point=null; SG.catches=2; sgLogLine("— new round, catches refilled —"); }
+ SG.inRound=true; // the stake locks the moment the round starts
  const pair=rollDicePair();
  SG.cur={a:pair[0],b:pair[1],total:pair[0]+pair[1]};
  SG.rolling=true;
@@ -1888,6 +2131,7 @@ function sgCatch(){
 function sgSettle(){
  if(!SG.active||!SG.rolling) return;
  SG.rolling=false; sgStageSettle();
+ const stake=SG.stake==null?100:SG.stake;
  const d1=$("#sg-die1"), d2=$("#sg-die2");
  [d1,d2].forEach(d=>{ if(d) d.classList.remove("tumbling","settling"); });
  setDie(d1,SG.cur.a); setDie(d2,SG.cur.b);
@@ -1903,18 +2147,21 @@ function sgSettle(){
    sgLogLine("<b>"+diceTxt+"</b> — nothing decided. Point still "+SG.point+".");
    Snd.tone(360,.08,"triangle",.04);
  } else if(j.type==="win"){
-   SG.won++; SG.roundOver=true;
+   SG.won++; SG.roundOver=true; SG.inRound=false;
+   if(S){ S.cash+=stake; if(S.stats) S.stats.earned+=stake; }
    sgCall(j.made ? (total+"! POINT MADE — ROUND IS YOURS.") : (total===7?"SEVEN — NATURAL!":"YO-LEVEN — NATURAL!"),
-     diceTxt+". "+(j.made? "You made the "+pointBefore+" clean." : "Come-out winner.")+" Rounds: won "+SG.won+" — lost "+SG.lost+". Shoot a new round whenever you\'re ready.","green");
-   sgLogLine("<b>"+diceTxt+"</b> — <b>round won</b>. Won "+SG.won+" — lost "+SG.lost+".");
+     diceTxt+". "+(j.made? "You made the "+pointBefore+" clean." : "Come-out winner.")+" You win "+fmt(stake)+" — cash now "+fmt(S.cash)+". Rounds: won "+SG.won+" — lost "+SG.lost+". Set your next stake and shoot again.","green");
+   sgLogLine("<b>"+diceTxt+"</b> — <b>round won</b>, +"+fmt(stake)+". Won "+SG.won+" — lost "+SG.lost+".");
    Snd.good();
  } else {
-   SG.lost++; SG.roundOver=true;
+   SG.lost++; SG.roundOver=true; SG.inRound=false;
+   if(S){ S.cash-=stake; if(S.cash<0) S.cash=0; }
    sgCall(j.sevenOut ? "SEVEN OUT." : (total===2?"SNAKE EYES — CRAPS.":total===3?"ACE-DEUCE — CRAPS.":"BOXCARS — CRAPS."),
-     diceTxt+". "+(j.sevenOut? "The seven lands and the round dies on the curb." : "Come-out craps — dead on arrival.")+" Rounds: won "+SG.won+" — lost "+SG.lost+". Costs you nothing but pride — run it back.","red");
-   sgLogLine("<b>"+diceTxt+"</b> — <b>round lost</b>. Won "+SG.won+" — lost "+SG.lost+".");
+     diceTxt+". "+(j.sevenOut? "The seven lands and the round dies on the curb." : "Come-out craps — dead on arrival.")+" You lose "+fmt(stake)+" — cash now "+fmt(S.cash)+". Rounds: won "+SG.won+" — lost "+SG.lost+"." + (sgBroke() ? " That's under $100 — go make some money before the next round." : " Set your next stake and run it back."),"red");
+   sgLogLine("<b>"+diceTxt+"</b> — <b>round lost</b>, -"+fmt(stake)+". Won "+SG.won+" — lost "+SG.lost+".");
    Snd.bad();
  }
+ if(S) render();
  sgSync();
 }
 function crapsTurn(){
@@ -2017,49 +2264,6 @@ function settleCrapsRoll(){
 function endCrapsMatch(wonMatch){
  if(!CR.active||CR.over) return;
  CR.over=true; crSync();
- if(CR.preview){
-   // preview ends clean too: no cash moves, no crown recorded, no run touched —
-   // but a win still plays the whole ending: ride-off, coronation, the beanie.
-   const prb=$("#cr-roll"); if(prb) prb.disabled=true;
-   const pcb=$("#cr-catch"); if(pcb){ pcb.disabled=true; pcb.classList.remove("live"); }
-   const pq=$("#cr-quit"); if(pq) pq.classList.add("hidden");
-   if(wonMatch){
-     crCall("THREE ROUNDS. IT'S OVER.","You out-shot the King on his own concrete — in the preview. Now watch the crown change hands.","gold");
-     $("#craps-root .craps").insertAdjacentHTML("beforeend",
-       '<div class="craps-btns"><button class="btn gold big" id="cr-preview-crown">🏆 Watch the crown change hands ▸</button></div>');
-     $("#cr-preview-crown").onclick=()=>{ Snd.ensure(); closeCraps();
-       playScene("rideoff",()=>playScene("coronation",()=>{
-         openModal({ kick:"👑 End Scene — Preview", title:"Balsey Is Done",
-          img:"assets/bills.webp",
-          html:"<p>It came down to dice on the concrete — and you took three rounds off the King on his own curb. Balsey stares at the dice a long moment… then laughs, once. He packs his bags, fires up the bike, and rides out of his own city into the sunset. Then your Charger rolls up slow — and you step out wearing his beanie, gold crown emblem catching the light. No literal crown. There never was one. <b>The beanie IS the crown.</b></p><p class='fineprint'>That was the free preview — no money moved and no run was touched. In a real run, Balsey's Compound opens at $1,000,000 net worth, a million a side goes on the concrete, and this ending is for keeps.</p>",
-          choices:[{t:"Back to the title screen", fn:()=>{ closeModal(); exitEndScenePreview(); }}]});
-       }));
-     };
-   } else {
-     crCall("BALSEY TAKES IT, THREE ROUNDS.","The King keeps his crown — this time. In a real run your million would stay on his side of the concrete; in the preview you lose nothing but the argument.","red");
-     $("#craps-root .craps").insertAdjacentHTML("beforeend",
-       '<div class="craps-btns"><button class="btn gold big" id="cr-preview-back">Back to the title screen</button></div>');
-     $("#cr-preview-back").onclick=()=>{ Snd.ensure(); exitEndScenePreview(); };
-   }
-   Snd.ensure(); if(wonMatch) Snd.lm(); else Snd.bad();
-   return;
- }
- if(CR.sample){
-   // sample ends clean: no cash moves, no crown, no log — the run (if any) is untouched
-   if(wonMatch){
-     crCall("THREE ROUNDS — SAMPLE WON.","You out-shot the King with nothing on the line. The real game — a million a side, crown on the concrete — waits behind the gate at Balsey's Compound.","gold");
-   } else {
-     crCall("BALSEY TAKES THE SAMPLE.","The King keeps the practice crown too. Costs you nothing but pride — the real million-dollar game waits at his compound whenever you're ready.","red");
-   }
-   $("#craps-root .craps").insertAdjacentHTML("beforeend",
-     '<div class="craps-btns"><button class="btn gold big" id="cr-sample-done">'+(wonMatch?"🏆 Sample won — back":"Back — sample over")+'</button></div>');
-   const rb2=$("#cr-roll"); if(rb2) rb2.disabled=true;
-   const cb2=$("#cr-catch"); if(cb2){ cb2.disabled=true; cb2.classList.remove("live"); }
-   const qb=$("#cr-quit"); if(qb) qb.classList.add("hidden");
-   $("#cr-sample-done").onclick=()=>{ Snd.ensure(); closeCraps(); if(S) render(); };
-   Snd.ensure(); if(wonMatch) Snd.lm(); else Snd.bad();
-   return;
- }
  if(wonMatch){
    crCall("THREE ROUNDS. IT'S OVER.","You out-shot the King on his own concrete. The pot — and the crown — change hands.","gold");
    $("#craps-root .craps").insertAdjacentHTML("beforeend",
@@ -2094,24 +2298,49 @@ function titleFor(nw){
  if(nw>=0) return "Still Breathing";
  return "Broke Dawg";
 }
+function showOverScreen(fate,note){
+ recordBest();
+ const nw=netWorth();
+ const art=$("#overArt");
+ if(fate==="win"){ art.src="assets/lm-king-poster.webp"; art.alt="King Balsey dethroned — the crown is yours"; }
+ else if(fate==="blocks"){ art.src="assets/charger-blocks.webp"; art.alt="Your black Charger up on blocks behind a chain-link fence — wheels gone, paint fading"; }
+ else if(fate==="death"||fate==="debt"){ art.src="assets/ambulance.webp"; art.alt="The ambulance pulls away with the lights off — chrome GAME OVER lettering, a chalk body outline on the wet street"; }
+ else { art.src="assets/hero.webp"; art.alt="Hustle City 2 cover art"; }
+ $("#overGrade").textContent = fate==="death" ? "Flatlined" : titleFor(nw);
+ $("#overNW").textContent = "Final net worth: "+fmt(nw);
+ $("#overBreak").textContent = "Cash "+fmt(S.cash)+" · Bank "+fmt(S.bank)+" · Stash "+fmt(stashValue())+" · Debt "+fmt(S.debt);
+ $("#overNote").textContent = note||"";
+ $("#ovDay").textContent = Math.min(S.day,TOTAL_DAYS);
+ $("#ovDeals").textContent = S.stats.deals;
+ $("#ovEarned").textContent = fmt(S.stats.earned);
+ $("#ovBusts").textContent = S.stats.busts;
+ $("#ovCred").textContent = S.cred;
+ $("#ovBest").textContent = fmt(best===null?nw:best);
+ $("#screen-game").classList.add("hidden");
+ document.body.classList.remove("gaming");
+ const bb=$("#btn-back"); if(bb) bb.classList.add("hidden");
+ $("#screen-over").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+function hideOverScreen(){ $("#screen-over").classList.add("hidden"); }
 function finishRun(won,note){
  if(S.over) return; S.over=true; S.won=won;
  recordBest();
- const nw=netWorth();
- openModal({ kick: won?"👑 Crown taken":"Day "+TOTAL_DAYS+" — run complete", title: won?"King of Hustle City":titleFor(nw),
-  img: won?"assets/lm-king-poster.webp":"assets/hero.webp",
-  html:"<p>"+(note||(won?"Balsey is dethroned, the trunk is open, and the gold is real. Springfield to Baltimore — the whole map knows the new name." : "The 45 days are up. The city keeps whatever you didn't take from it."))+"</p>"
-   +"<p><b>Final net worth: "+fmt(nw)+"</b><br>Cash "+fmt(S.cash)+" · Bank "+fmt(S.bank)+" · Stash "+fmt(stashValue())+" · Debt "+fmt(S.debt)+"<br>Deals made: "+S.stats.deals+" · Total earned: "+fmt(S.stats.earned)+" · Busts survived: "+S.stats.busts+" · Street Cred: "+S.cred+"</p>"
-   +"<p class='fineprint'>"+players[cur].label+"'s best so far: "+fmt(players[cur].best||nw)+". The other player's run is waiting on the title screen — loser buys the gas.</p>",
-  choices:[
-   {t:"Run it back", fn:()=>{ closeModal(); startRun(cur); }},
-   {t:"Title screen", fn:()=>{ closeModal(); endToStart(); }}
-  ]});
+ const fate = won ? "win" : (S.debt>0 ? "debt" : "clean");
+ const txt = note || (won ? "Balsey is dethroned, the trunk is open, and the gold is real. Springfield to Baltimore — the whole map knows the new name." : "The 45 days are up. The city keeps whatever you didn't take from it.");
+ showOverScreen(fate, txt);
  Snd.good();
+ // Ending beats, HC1 order, once per run, OVER the finished screen:
+ // a day-45 finish still owing the Shark gets the Shark rolling up,
+ // then the ambulance drive-off. Tap skips each (playScene handles
+ // it); reduced motion lands straight on the screen.
+ if(!won && S.debt>0 && S.day>TOTAL_DAYS){
+   playScene("shark", ()=>playScene("ambulance"));
+ }
 }
-function recordBest(){ const nw=netWorth(); if(players[cur].best===null||nw>players[cur].best) players[cur].best=nw; refreshBest(); }
+function recordBest(){ const nw=netWorth(); if(best===null||nw>best) best=nw; saveBest(); refreshBest(); }
 function refreshBest(){
- ["joshua","cheryl"].forEach(k=>{ const el=$("#best-"+k); el.textContent = players[k].best===null? "No finished run yet" : "Best net worth: "+fmt(players[k].best)+" · "+titleFor(players[k].best); });
+ const el=$("#best-single"); if(el) el.textContent = best===null? "No finished run yet" : "Best net worth: "+fmt(best)+" · "+titleFor(best);
 }
 
 /* ---------- the in-game Back button: a simple screen-history stack ----------
@@ -2171,12 +2400,10 @@ function goBack(){
  Snd.ensure();
  if(SG.active){ closeSideCraps(); return; }
  if(CR.active){
-   if(CR.preview){ exitEndScenePreview(); return; }
-   if(CR.sample){ closeCraps(); if(S) render(); return; }
    if(!CR.over){ crCall("No backing out now.","A million a side is on the concrete. Finish the hustle-off — win it or lose it, then the streets are yours again.","red"); return; }
    closeCraps(); if(S) render(); return;
  }
- if(CR.introCtx){ const pv=CR.introCtx==="preview"; CR.introCtx=null; if(pv) exitEndScenePreview(); else closeCraps(); return; }
+ if(CR.introCtx){ CR.introCtx=null; closeCraps(); return; }
  if(typeof sheetDealerIdx!=="undefined" && sheetDealerIdx!==null){ closeSheet(); return; }
  if(ScreenHist.length>0){ const prevScreen=ScreenHist.pop(); showScreen(prevScreen,false); return; }
  const top=NavStack[NavStack.length-1];
@@ -2197,9 +2424,9 @@ function openModal(m){
 function closeModal(){ $("#modal-root").innerHTML=""; }
 
 /* ---------- flow ---------- */
-function startRun(who){
+function startRun(){
  if(CR.active||SG.active) return; // a craps game is on screen — a stray tap can never turn it into a run
- cur=who; S=newRun(); players[who].run=S;
+ S=newRun();
  rollMarket();
  log("Day 1 in <b>Northside, Springfield</b>. $2,000 in your pocket, $2,000 owed to the Shark, and Balsey on a throne in a city you're about to outgrow.","gold");
  log("Buy low here, sell high anywhere. Every city on the map is open — travel costs the trip fee and a day.","");
@@ -2219,9 +2446,9 @@ function endToStart(){
 function confirmNewRun(){
  if(!S) return; Snd.ensure();
  openModal({ kick:"↺ New game", title:"Start a New Run?",
-  html:"<p>This ends <b>"+players[cur].label+"</b>'s current run right now — Day "+S.day+" of "+TOTAL_DAYS+", net worth "+fmt(netWorth())+", gone. The new run starts fresh: <b>Day 1 of "+TOTAL_DAYS+"</b>, <b>"+fmt(START_CASH)+" cash</b>, <b>"+fmt(START_DEBT)+" owed to the Shark</b>, back home in <b>Northside, Springfield</b>.</p>",
+  html:"<p>This ends your current run right now — Day "+S.day+" of "+TOTAL_DAYS+", net worth "+fmt(netWorth())+", gone. The new run starts fresh: <b>Day 1 of "+TOTAL_DAYS+"</b>, <b>"+fmt(START_CASH)+" cash</b>, <b>"+fmt(START_DEBT)+" owed to the Shark</b>, back home in <b>Northside, Springfield</b>.</p>",
   choices:[
-   {t:"↺ Yes — start a new run", fn:()=>{ closeModal(); startRun(cur); }},
+   {t:"↺ Yes — start a new run", fn:()=>{ closeModal(); startRun(); }},
    {t:"Keep playing this run", fn:()=>{ closeModal(); }}
   ]});
 }
@@ -2240,20 +2467,32 @@ endDay=function(reason){
 };
 
 /* ---------- wire up ---------- */
-$("#play-joshua").onclick=()=>{ Snd.ensure(); startRun("joshua"); };
-$("#play-cheryl").onclick=()=>{ Snd.ensure(); startRun("cheryl"); };
-/* The craps entries use addEventListener + stopPropagation, NOT onclick:
-   the start-screen sample button sits right under the two big Play cards,
-   and its tap must belong to the craps game alone — it can never fall
-   through to a player card and start a run. stopPropagation here plus
-   the CR/SG guard inside startRun() make that misroute impossible. */
-$("#play-endscene").addEventListener("click",e=>{ e.preventDefault(); e.stopPropagation(); startEndScenePreview(); });
+$("#play-btn").onclick=()=>{ Snd.ensure(); startRun(); };
+$("#btn-over-again").onclick=()=>{ Snd.ensure(); hideOverScreen(); startRun(); };
+$("#btn-over-title").onclick=()=>{ Snd.ensure(); hideOverScreen(); endToStart(); };
+/* The street-craps entries use addEventListener + stopPropagation, NOT
+   onclick: a tap on them must belong to the craps game alone — it can
+   never fall through to another control and start a run.
+   stopPropagation here plus the CR/SG guard inside startRun() make
+   that misroute impossible. */
 $("#btn-wait").onclick=waitDay;
+/* Screen 2's WAIT A DAY (in the switch bar, replacing the active DRUGS ·
+   PLACES tab while Screen 2 is up) — the identical waitDay() code path
+   as Screen 1's wait, guarded so it stays inert whenever the normal
+   wait is effectively busy: run over/none, a modal open, a scene
+   playing, or a craps game active. The scene guard also stops
+   double-fire: the first tap starts the wait scene (sceneBusy true). */
+$("#btn-wait-s2").onclick=()=>{
+  if(!S || S.over) return;
+  const mr=document.querySelector("#modal-root");
+  if(mr && mr.children.length) return;
+  if(sceneBusy) return;
+  if(CR.active || SG.active) return;
+  waitDay();
+};
 $("#btn-playcraps").addEventListener("click",e=>{ e.preventDefault(); e.stopPropagation(); startSideCraps(); });
 $("#btn-playcraps2").addEventListener("click",e=>{ e.preventDefault(); e.stopPropagation(); startSideCraps(); });
 $("#btn-challenge").onclick=challengeBalsey;
-$("#btn-sample").addEventListener("click",e=>{ e.preventDefault(); e.stopPropagation(); startSampleCraps(); });
-$("#btn-switch").onclick=()=>{ if(S&&!S.over){ recordBest(); } endToStart(); };
 $("#btn-restart").onclick=confirmNewRun;
 $("#btn-newrun").onclick=confirmNewRun;
 $("#btn-sound").onclick=function(){ Snd.muted=!Snd.muted; this.textContent=Snd.muted?"🔇 Muted":"🔊 Sound"; };
@@ -2354,6 +2593,86 @@ var colL=$("#col-left"), colR=$("#col-right");
 var colD=$("#col-drugs"), colP=$("#col-places");
 panelScroll(colL); panelScroll(colD); panelScroll(colP);
 
+/* ---------- Screen 2 hostile-webview hardening (2026-11-09) ----------
+   Three defenses, all measured at runtime (see the CSS note above):
+   (1) HEIGHT SYNC — --app-h is kept equal to the REAL visible viewport
+   height (visualViewport when the webview offers it) and #screen-game
+   sizes from it, so vh/dvh units that lie about the visible area in an
+   in-app webview can no longer stretch or crush the shell.
+   (2) VISIBILITY GUARD — whenever Screen 2 is shown and on every
+   resize, the two columns are measured by their real on-screen
+   rectangles and a hit test. If either column is collapsed, Screen 2
+   degrades in steps — stacked columns with their own scrolls, then a
+   single flowing scroll for the whole screen. The guard re-checks
+   from the natural layout every time, so a healthy engine never keeps
+   a degraded mode it doesn't need.
+   (3) SWITCH TAPS — REPRODUCED ROOT CAUSE of Cheryl's "can't see
+   them": a real press drifts VERTICALLY (the scroll direction). Past
+   the browser's slop the click is suppressed outright, and inside the
+   panels panelScroll claims the gesture while its tap rescue only
+   covers presses under 600ms — a slow, heavy, vertical-drifting press
+   on a screen-switch control simply never landed, so she never left
+   Screen 1. The switch controls therefore ALSO answer touchend
+   directly: small movement (<=30px), any press length, fires the
+   switch exactly once; genuine drags still scroll. */
+(function(){
+ var rootEl=document.documentElement;
+ function visibleH(){
+   var h=0;
+   try{ if(window.visualViewport&&window.visualViewport.height) h=Math.round(window.visualViewport.height); }catch(e){}
+   if(!h) h=window.innerHeight||0;
+   return h;
+ }
+ function colShown(el){
+   if(!el) return false;
+   var r=el.getBoundingClientRect();
+   if(r.width<60||r.height<48) return false;
+   if(r.bottom<=0||r.top>=(window.innerHeight||99999)) return false;
+   var hit=document.elementFromPoint(r.left+r.width/2, r.top+Math.min(r.height/2,80));
+   return !!(hit&&(el===hit||el.contains(hit)));
+ }
+ function colsOk(){
+   if(!colR||colR.classList.contains("hidden")) return true;
+   return colShown(colD)&&colShown(colP);
+ }
+ var guardT=null;
+ function s2Guard(){
+   if(!colR||colR.classList.contains("hidden")) return;
+   colR.classList.remove("s2-stack"); colR.classList.remove("s2-flow");
+   if(colsOk()) return;
+   colR.classList.add("s2-stack");
+   if(colsOk()) return;
+   colR.classList.remove("s2-stack"); colR.classList.add("s2-flow");
+   var b1=$("#scrollbtn-left"), b2=$("#scrollbtn-right");
+   if(b1) b1.classList.add("off"); if(b2) b2.classList.add("off");
+ }
+ function s2GuardSoon(){ if(guardT) clearTimeout(guardT); guardT=setTimeout(s2Guard,60); }
+ function syncH(){
+   var h=visibleH();
+   if(h>0) rootEl.style.setProperty("--app-h",h+"px");
+   s2GuardSoon();
+ }
+ if(window.visualViewport&&window.visualViewport.addEventListener) window.visualViewport.addEventListener("resize",syncH);
+ window.addEventListener("resize",syncH);
+ window.addEventListener("orientationchange",function(){ setTimeout(syncH,250); });
+ syncH(); setTimeout(syncH,300); setTimeout(syncH,1200);
+ var _showScreenH=showScreen;
+ showScreen=function(name,push){ _showScreenH(name,push); requestAnimationFrame(s2Guard); setTimeout(s2Guard,200); };
+ function armSwitchTap(el,target){
+   if(!el) return;
+   var sx=0, sy=0;
+   el.addEventListener("touchstart",function(e){ if(e.touches.length===1){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; } },{passive:true});
+   el.addEventListener("touchend",function(e){
+     var t=e.changedTouches&&e.changedTouches[0]; if(!t) return;
+     if(Math.max(Math.abs(t.clientX-sx),Math.abs(t.clientY-sy))>30) return;
+     e.preventDefault(); e.stopPropagation();
+     gotoScreen(target);
+   },{passive:false});
+ }
+ document.querySelectorAll("[data-screen-tab]").forEach(function(b){ armSwitchTap(b,b.getAttribute("data-screen-tab")); });
+ document.querySelectorAll("[data-goto]").forEach(function(b){ armSwitchTap(b,b.getAttribute("data-goto")); });
+})();
+
 /* ---------- city jump strip: one tap to any city on the map ----------
    The chips sit in the sticky strip at the top of the map panel; tapping
    one scrolls the panel PROGRAMMATICALLY to that city's hoods, so the
@@ -2404,7 +2723,7 @@ wireScrollBtn(sbR,function(){ return currentScreen==="stash"?colP:null; });
 var _renderPanels=render;
 render=function(){ _renderPanels(); requestAnimationFrame(updScrollBtns); };
 var _startRunPanels=startRun;
-startRun=function(who){ NavStack.length=0; ScreenHist.length=0; currentScreen="stash"; showScreen("controls",false); document.body.classList.add("gaming"); _startRunPanels(who); if(colL)colL.scrollTop=0; if(colD)colD.scrollTop=0; if(colP)colP.scrollTop=0; requestAnimationFrame(updScrollBtns); navSync(); };
+startRun=function(){ NavStack.length=0; ScreenHist.length=0; currentScreen="stash"; showScreen("controls",false); document.body.classList.add("gaming"); _startRunPanels(); if(colL)colL.scrollTop=0; if(colD)colD.scrollTop=0; if(colP)colP.scrollTop=0; requestAnimationFrame(updScrollBtns); navSync(); };
 var _endToStartPanels=endToStart;
 endToStart=function(){ NavStack.length=0; document.body.classList.remove("gaming"); _endToStartPanels(); navSync(); };
 
@@ -2413,11 +2732,11 @@ endToStart=function(){ NavStack.length=0; document.body.classList.remove("gaming
    In-memory only, no UI, no effect on normal play. */
 window.__hcTest={ get S(){return S;}, get CR(){return CR;}, startRun:startRun, endDay:endDay,
  playScene:playScene, robBank:robBank, openSheet:openSheet, hoodDealers:hoodDealers, netWorth:netWorth,
- enterCompound:enterCompound, startSampleCraps:startSampleCraps, startEndScenePreview:startEndScenePreview, exitEndScenePreview:exitEndScenePreview, startSideCraps:startSideCraps, closeSideCraps:closeSideCraps, get SG(){return SG;},
+ enterCompound:enterCompound, startSideCraps:startSideCraps, closeSideCraps:closeSideCraps, sgSetStake:sgSetStake, sgRoll:sgRoll, sgCatch:sgCatch, get SG(){return SG;},
  showScreen:showScreen, goBack:goBack, get screen(){return currentScreen;}, get screenHist(){return ScreenHist.slice();},
  get colDrugs(){return colD;}, get colPlaces(){return colP;}, get colControls(){return colL;} };
 
-refreshBest();
+loadBest(); refreshBest();
 </script>
 <!-- ============================================================
      HUSTLE CITY 2 — WEBSITE DEMO LAYER (jdawgsindustries.com)
@@ -2486,7 +2805,7 @@ refreshBest();
       The full run is <b>45 days</b>; this demo hands you <b>a week</b>.</p>
     <div class="demo2-limits">DEMO LIMITS · 7 DAY MOVES OF 45 · THE FULL TWO-SCREEN GAME · FREE TO PLAY</div>
     <button class="demo2-btn blue" id="demo2Start" type="button">▶ START THE DEMO</button>
-    <p class="demo2-sub" style="font-size:12.5px;">Pick a player on the next screen and you're in. Hustle City 2 isn't on sale yet — this demo is the progress report, shown next to the original so you can see how far the game has come.</p>
+    <p class="demo2-sub" style="font-size:12.5px;">Hit ▶ PLAY on the next screen and you're in. Hustle City 2 isn't on sale yet — this demo is the progress report, shown next to the original so you can see how far the game has come.</p>
     <div class="demo2-brand"><b>No fancy logos. Just quality products.</b> · No ads.</div>
   </div>
 </div>
@@ -2571,7 +2890,7 @@ refreshBest();
       endDemo();
       return;
     }
-    if(ev.target.closest && ev.target.closest("#btn-wait")){
+    if(ev.target.closest && (ev.target.closest("#btn-wait") || ev.target.closest("#btn-wait-s2"))){
       ev.preventDefault(); ev.stopPropagation();
       endDemo();
     }
