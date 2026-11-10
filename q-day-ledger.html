@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- Q-Day Ledger™ — flagship sales page. FINAL copy, approved prices (owner, 2026-11-09).
+     PUBLISH GATE: the four buy-button hrefs below are TOKENS. Replace
+     https://buy.stripe.com/dRmeVdgcNaYsectelv3kt0A / https://buy.stripe.com/8x2dR90dPd6A4BT91b3kt0B /
+     https://buy.stripe.com/cNi8wP7Gh3w01pHdhr3kt0C / https://jdawgs.gumroad.com/l/q-day-ledger with the verified
+     live URLs before this file is uploaded. Do not publish with tokens
+     in place. See hidden_files/qday-ops-log.md for the launch sequence. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q-Day Ledger™ — CBOM &amp; Post-Quantum Migration Engine | J-Dawgs Industries</title>
+<meta name="description" content="Q-Day Ledger inventories every cryptographic dependency you run, scores the quantum risk, and writes your deadline-mapped migration plan. Local-first: your code never leaves your machine.">
+<style>
+  :root{
+    --bg:#07090c; --panel:#0d1117; --panel2:#11161f;
+    --chrome:#c9d1d9; --silver:#8b98a5; --blue:#2f9bff; --blue-dim:#1b5fa8;
+    --text:#e6edf3; --muted:#9aa7b1; --line:#1e2632;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+       line-height:1.65;font-size:16.5px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px}
+  header{padding:56px 0 8px}
+  .kicker{color:var(--blue);letter-spacing:.18em;text-transform:uppercase;
+          font-size:.78rem;font-weight:700;margin:0 0 12px}
+  h1{font-size:2.6rem;line-height:1.12;margin:0 0 8px;color:#fff;font-weight:800}
+  h1 .chrome{background:linear-gradient(180deg,#f4f7fa,#9fb0c0 55%,#dbe4ec);
+             -webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.15rem;color:var(--chrome);margin:0 0 18px}
+  .promises{font-weight:700;color:#fff;border-top:1px solid var(--line);
+            border-bottom:1px solid var(--line);padding:10px 0;margin:24px 0 8px}
+  .promises span{margin-right:16px;white-space:nowrap}
+  h2{font-size:1.45rem;margin:44px 0 12px;color:#fff}
+  h3{font-size:1.05rem;margin:22px 0 6px;color:#fff}
+  p,li{color:var(--text)}
+  .muted{color:var(--muted)}
+  .deadlines{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+             gap:12px;margin:16px 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        padding:16px 18px}
+  .card b{color:#fff}
+  .card .date{color:var(--blue);font-weight:800;font-size:1.05rem}
+  .steps{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+         padding:8px 22px}
+  .steps li{margin:12px 0}
+  .localfirst{background:linear-gradient(180deg,var(--panel2),var(--panel));
+              border:1px solid var(--blue-dim);border-radius:10px;padding:20px 22px}
+  figure{margin:18px 0}
+  figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;display:block}
+  figcaption{color:var(--muted);font-size:.9rem;margin-top:8px}
+  .tablewrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+  table.plan{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
+  table.plan th,table.plan td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  table.plan th{background:var(--panel2);color:#fff}
+  pre.cbom{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+           padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.5;color:var(--chrome)}
+  .editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+            gap:12px;margin:18px 0 6px}
+  .edition{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+           padding:20px;display:flex;flex-direction:column}
+  .edition h3{margin:0 0 4px;font-size:1.08rem}
+  .edition .price{font-size:1.7rem;font-weight:800;color:#fff;margin:6px 0 2px}
+  .edition .once{color:var(--muted);font-size:.88rem;margin:0 0 10px}
+  .edition p.scope{color:var(--text);font-size:.95rem;flex:1}
+  .buy{display:block;text-align:center;text-decoration:none;font-weight:700;
+       border-radius:8px;padding:11px 14px;margin-top:10px}
+  .buy.primary{background:var(--blue);color:#04121f}
+  .buy.secondary{border:1px solid var(--blue-dim);color:var(--blue)}
+  .guarantee{border:1px solid var(--blue-dim);border-radius:10px;padding:20px 22px;
+             background:var(--panel);margin:28px 0}
+  .guarantee b{color:#fff}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;
+         color:var(--muted);font-size:.9rem}
+  a{color:var(--blue)}
+  code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:.9em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">J-Dawgs Industries · Project Foresight Build #1</p>
+    <h1><span class="chrome">Q-Day Ledger™</span></h1>
+    <p class="sub">Cryptographic Bill of Materials (CBOM) &amp; Post-Quantum Migration Engine</p>
+    <p>Every lock you own is on a deadline. Most organizations cannot yet list theirs.</p>
+    <div class="promises">
+      <span>No fancy logos. Just quality products.</span>
+      <span>No ads.</span>
+      <span>We never sell your information.</span>
+    </div>
+  </header>
+
+  <h2>The deadlines are already law</h2>
+  <div class="deadlines">
+    <div class="card"><div class="date">31 Dec 2030</div>
+      <b>Federal contractors</b> must meet NIST post-quantum standards
+      (EO 14412; the FAR rule is directed to impose it on covered contractors).</div>
+    <div class="card"><div class="date">2030 / 2033</div>
+      <b>CNSA 2.0 exclusive use</b> — signing and networking by 2030;
+      web, cloud, and OS by 2033 (NSA).</div>
+    <div class="card"><div class="date">2030 → 2035</div>
+      <b>RSA-2048 and ECDSA P-256</b> deprecated after 2030,
+      disallowed after 2035 (NIST IR 8547).</div>
+    <div class="card"><div class="date">Already happening</div>
+      <b>Harvest now, decrypt later</b> — recorded traffic is decrypted
+      when the machines arrive. Long-lived data is exposed today.</div>
+  </div>
+  <p>Before any of it can be fixed, one question has to be answered:
+     <b>what cryptography do we actually run — and when must each piece change?</b>
+     Done by hand, that is months of manual inventory work. Q-Day Ledger does it in an afternoon.</p>
+
+  <h2>What it does</h2>
+  <ol class="steps">
+    <li><b>Finds everything.</b> Four scanners inventory your source code, live TLS
+        endpoints, certificates and firmware signatures, and third-party libraries and SBOMs —
+        every finding with the exact evidence attached.</li>
+    <li><b>Scores the risk.</b> Every asset receives a documented, reproducible 0–100 score
+        plus a harvest-now-decrypt-later class. No unexplained numbers.</li>
+    <li><b>Writes the plan.</b> Each asset mapped to its governing mandate
+        (CNSA 2.0 · EO 14412 · NIST IR 8547 · NSM-10), sequenced into four phases,
+        every line carrying its FIPS 203/204/205 replacement and its deadline.</li>
+    <li><b>Packs the proof.</b> One command exports a CycloneDX 1.6 CBOM and an auditor
+        evidence pack, including a procurement questionnaire answered from your own inventory.</li>
+  </ol>
+
+  <h2>Your code never leaves your machine</h2>
+  <div class="localfirst">
+    <p style="margin-top:0">Q-Day Ledger is <b>local-first, by design</b>. Plain Python 3,
+    zero third-party dependencies. No account, no cloud, no telemetry; nothing phones home.
+    Private keys are recorded by type and size only — key material is never read.
+    For a tool whose job is to inventory your most sensitive systems, that is not a
+    feature bullet. It is the product.</p>
+  </div>
+
+  <h2>See it run</h2>
+  <p>The package includes a bundled sample target and a one-command demo
+     (<code>./demo.sh</code>) that inventories 37 assets and produces the full plan, CBOM,
+     evidence pack, and report. The figures below are unedited output from that demo.</p>
+  <figure>
+    <img src="assets/q-day/demo-report-hero.jpg" alt="Q-Day Ledger demo report: 37 crypto assets, 10 critical, 14 high, 4 harvest-now high, nearest deadline 2030-12-31">
+    <figcaption>The demo report header: 37 assets inventoried, risk-banded, with the nearest governing deadline.</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/q-day/demo-report.jpg" alt="Q-Day Ledger demo report: full asset inventory table with per-asset risk scores, algorithms, and deadlines">
+    <figcaption>The full asset inventory — every asset scored, located, and deadline-mapped.</figcaption>
+  </figure>
+  <h3>The migration plan, excerpted (Phase 1 of the demo run)</h3>
+  <div class="tablewrap">
+  <table class="plan">
+    <tr><th>Asset</th><th>Algorithm</th><th>Risk</th><th>Replacement</th><th>Governing mandate</th><th>Deadline</th></tr>
+    <tr><td>Signature container firmware/firmware-v3.p7s</td><td>RSA</td><td>100 (CRITICAL)</td><td>ML-KEM-768 / ML-DSA-65 (FIPS 203/204)</td><td>CNSA 2.0 — signing</td><td>2030-12-31</td></tr>
+    <tr><td>Certificate legacy.example.internal</td><td>RSA</td><td>91 (CRITICAL)</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA 2.0 — signing</td><td>2030-12-31</td></tr>
+    <tr><td>Certificate ec.example.internal</td><td>ECDSA</td><td>86 (CRITICAL)</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA 2.0 — signing</td><td>2030-12-31</td></tr>
+    <tr><td>DES in src/Service.java</td><td>DES</td><td>75 (CRITICAL)</td><td>AES-256-GCM</td><td>NIST IR 8547</td><td>2030-12-31</td></tr>
+  </table>
+  </div>
+  <p class="muted">Phases 2–4 sequence the remaining assets against the 2030 wall, the 2031
+     signature wave, and the 2033–2035 completion window.</p>
+  <figure>
+    <img src="assets/q-day/demo-migration-plan.jpg" alt="Q-Day Ledger migration plan document: four phases with per-asset replacement, mandate, and deadline">
+    <figcaption>The complete migration plan document produced by the demo.</figcaption>
+  </figure>
+  <h3>The CBOM, excerpted (CycloneDX 1.6)</h3>
+  <pre class="cbom">{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "metadata": {
+    "tools": [
+      { "vendor": "J-Dawgs Industries",
+        "name": "Q-Day Ledger",
+        "version": "1.0.0-vault1" }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "encryption" }
+      }
+    }
+    // … one component per inventoried asset
+  ]
+}</pre>
+
+  <h2>Who it is for</h2>
+  <ul>
+    <li>Federal contractors and subcontractors facing the 2030 deadlines — especially the
+        below-enterprise tier the large platforms do not aim at.</li>
+    <li>Vendors selling software, firmware, or networking into national-security supply chains.</li>
+    <li>Banks, health systems, and any organization holding data that must stay secret for 10+ years.</li>
+    <li>Auditors and consultants producing these inventories for clients — in days, not months.</li>
+  </ul>
+
+  <h2>Verify it yourself</h2>
+  <p>The engine is verifiable byte-for-byte against its sealed build manifest
+     (<code>sha256sum -c MANIFEST.sha256</code>). A 26-test suite is included and verified
+     passing on the shipped package. The full prediction behind this product — with its
+     evidence, its confidence level, and its failure modes — is published in the research
+     dossier that ships in the package.</p>
+
+  <h2>How this could be wrong — stated plainly</h2>
+  <p class="muted">Governments have slipped crypto deadlines before; a formal deferral would
+     soften the 2028–2030 demand crest (the need survives; the urgency moves). If the large
+     platforms ship a free, good-enough inventory inside their enterprise stacks, the
+     independent-tool window narrows to the multi-vendor, below-enterprise tier — the tier
+     this tool is built and priced for. The mandate dates are published law and policy:
+     facts. What the market does with them is a <b>prediction</b>, labeled one everywhere
+     it appears, including in our own sales forecast.</p>
+
+  <h2>Editions and pricing</h2>
+  <p>One-time payment. No subscription, no per-seat metering, no renewal.
+     Your outputs belong to you; we claim the software, never your data.</p>
+  <div class="editions">
+    <div class="edition">
+      <h3>Single-Organization</h3>
+      <p class="price">$1,499</p>
+      <p class="once">One-time · USD</p>
+      <p class="scope">Use within one organization, on its own systems and estates,
+         by its own personnel, for its internal compliance and migration work.</p>
+      <a class="buy primary" href="https://buy.stripe.com/dRmeVdgcNaYsectelv3kt0A">Buy by card — $1,499</a>
+      <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
+    </div>
+    <div class="edition">
+      <h3>Multi-Site</h3>
+      <p class="price">$4,999</p>
+      <p class="once">One-time · USD</p>
+      <p class="scope">Everything in Single-Organization, extended to the licensee's
+         named subsidiaries and sites listed at purchase.</p>
+      <a class="buy primary" href="https://buy.stripe.com/8x2dR90dPd6A4BT91b3kt0B">Buy by card — $4,999</a>
+      <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
+    </div>
+    <div class="edition">
+      <h3>Auditor / Consultant</h3>
+      <p class="price">$7,499</p>
+      <p class="once">One-time · USD</p>
+      <p class="scope">Use on client engagements — up to 25 per year. Client deliverables
+         are the tool's outputs; outputs belong to the client.</p>
+      <a class="buy primary" href="https://buy.stripe.com/cNi8wP7Gh3w01pHdhr3kt0C">Buy by card — $7,499</a>
+      <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
+    </div>
+  </div>
+  <p class="muted">Delivery: <code>q-day-ledger-v1.zip</code> — the complete tool, quickstart,
+     license, bundled sample target with demo outputs, and the research dossier.
+     Card purchases are delivered by email immediately after payment;
+     Gumroad purchases download directly from Gumroad.</p>
+
+  <div class="guarantee">
+    <b>The J-Dawgs fix-it guarantee.</b> Report any issue or bug on our side — easily,
+    no hassle — and we fix it. Reports go to our support page at
+    <a href="support.html">jdawgsindustries.com/support</a> and are worked by us directly.
+    That guarantee stands behind every product we sell, including this one.
+  </div>
+
+  <footer>
+    © 2026 Joshua Dawson / J-Dawgs Industries. Q-Day Ledger™ and Project Foresight™ are
+    trademarks of Joshua Dawson / J-Dawgs Industries.<br>
+    <b>No fancy logos. Just quality products.</b> · No ads. · <b>We never sell your information.</b><br>
+    Predictions in our materials are labeled predictions. Mandate dates cited are published
+    U.S. government law and policy as of November 2026.
+  </footer>
+</div>
+</body>
+</html>
