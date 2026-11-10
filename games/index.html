@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J-Dawgs Arcade — Our Own Ad-Free Store for Games &amp; Apps | J-Dawgs Industries</title>
+<meta name="description" content="J-Dawgs Arcade is J-Dawgs Industries' own store: Hustle City, Hustle City 2, and the J-Dawgs app shelf — sold direct by us. No ads. Ever. We never sell your information. One payment each, yours forever, and everything plays instantly in your browser.">
+<link rel="canonical" href="https://jdawgsindustries.com/games/">
+<meta property="og:title" content="J-Dawgs Arcade — our own ad-free store">
+<meta property="og:description" content="Our games and apps, sold by us at our own door. No ads. Ever. We never sell your information.">
+<meta property="og:image" content="https://jdawgsindustries.com/games/assets/hc1-cover.webp">
+<meta property="og:url" content="https://jdawgsindustries.com/games/">
+<script>document.documentElement.className+=" js"</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/arcade-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/arcade-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#05080E">
+<style>
+  :root{--eb:#3FA9F5;--eb-bright:#6FC3FF;--eb-deep:#2B7FD4}
+  /* ---------- Hustle City hero ---------- */
+  .arcade-hero{position:relative;padding:7.2rem 0 2.6rem;background:#05080E url("assets/hero-street.webp") center 22%/cover no-repeat;overflow:hidden}
+  .arcade-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.72) 0%,rgba(5,8,14,.55) 45%,rgba(5,8,14,.88) 78%,var(--bg) 100%)}
+  .arcade-hero .wrap{position:relative}
+  .arcade-hero .eyebrow{color:var(--eb-bright)}
+  .arcade-hero .eyebrow::before{background:var(--eb-bright)}
+  .chrome-text{font-family:var(--font-display);font-weight:800;font-stretch:118%;letter-spacing:-.01em;line-height:.98;
+    font-size:clamp(2.6rem,11.5vw,5.6rem);margin:.2rem 0 0;text-transform:uppercase;
+    background:linear-gradient(180deg,#FFFFFF 0%,#D7DEE9 34%,#79869B 49%,#EDF1F7 60%,#9AA7BB 82%,#E6EBF3 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 14px rgba(63,169,245,.28))}
+  .promise-line{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem;margin-top:1.15rem;font-family:var(--font-display);
+    font-weight:800;font-size:clamp(1.05rem,4.6vw,1.5rem);color:#fff;letter-spacing:.01em}
+  .promise-line .eb{color:var(--eb-bright)}
+  .arcade-hero .lead{max-width:54ch;margin-top:.9rem;color:#D9E2EF;text-shadow:0 1px 10px rgba(0,0,0,.65)}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:.45rem 1.6rem;margin-top:1.35rem;padding-top:1rem;border-top:1px solid rgba(199,206,218,.25);
+    font-size:.92rem;color:#C3CEDD}
+  .hero-facts b{color:#fff}
+  .hero-facts span{white-space:nowrap}
+  .arcade-hero .hero-facts b{display:inline;font-size:inherit}
+  /* ---------- hero game rows (the headliners, buyable from the first screen) ---------- */
+  .hero-games{display:flex;flex-direction:column;gap:.6rem;margin-top:1.4rem;max-width:600px}
+  .hg-row{display:flex;align-items:center;gap:.9rem;background:rgba(5,8,14,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border:1px solid var(--line-strong);border-radius:10px;padding:.55rem .7rem .55rem .55rem}
+  .hg-row img{width:118px;height:92px;object-fit:cover;border-radius:6px;flex:none}
+  .hg-main{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:.28rem}
+  .hg-main b{font-family:var(--font-display);font-weight:800;color:#fff;font-size:1.05rem;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+  .hg-main span{font-size:.8rem;color:var(--muted);white-space:nowrap}
+  .hg-main .btn{min-height:46px;padding:.5rem 1.1rem;margin-top:.15rem}
+  /* ---------- bands ---------- */
+  .arcade-band{padding:3.4rem 0;border-top:1px solid var(--line)}
+  .arcade-band:first-child{border-top:none}
+  /* ---------- game cards ---------- */
+  .game{display:grid;grid-template-columns:1.08fr .92fr;background:linear-gradient(165deg,var(--panel-2),var(--panel) 65%);
+    border:1px solid var(--line-strong);border-radius:12px;overflow:hidden;margin-top:1.4rem}
+  .game-cover{position:relative;min-height:100%}
+  .game-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .game-info{padding:1.5rem 1.6rem 1.6rem;display:flex;flex-direction:column;gap:.6rem}
+  .game-top{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+  .game-top h3{font-size:clamp(1.45rem,5vw,1.9rem);font-weight:800;font-stretch:112%;letter-spacing:-.01em;text-transform:uppercase}
+  .g-price{font-family:var(--font-display);font-weight:800;font-size:1.7rem;color:#fff;white-space:nowrap}
+  .g-price small{display:block;font-family:var(--font-body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;text-align:right}
+  .game-info p{margin:0;font-size:.97rem}
+  .g-delivery{font-size:.86rem;color:var(--muted)}
+  .g-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:auto;padding-top:.6rem}
+  .btn-buy{background:linear-gradient(180deg,var(--eb-bright),var(--eb-deep));color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
+  .btn-buy:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
+  .g-actions .btn{min-height:52px}
+  /* ---------- app rows ---------- */
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .app{display:flex;gap:1rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.05rem 1.1rem;align-items:flex-start}
+  .app img{width:64px;height:64px;border-radius:14px;flex:none;border:1px solid var(--line-strong);background:#05080E}
+  .app-main{flex:1;min-width:0}
+  .app-main h3{font-size:1.04rem;line-height:1.25}
+  .app-main p{margin:.3rem 0 0;font-size:.89rem;line-height:1.5}
+  .app-buy{display:flex;align-items:center;gap:.8rem;margin-top:.7rem;flex-wrap:wrap}
+  .a-price{font-family:var(--font-display);font-weight:800;font-size:1.15rem;color:#fff;white-space:nowrap}
+  .a-price small{font-family:var(--font-body);font-weight:500;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-left:.3rem}
+  .app-buy .btn{min-height:46px;padding:.55rem 1.15rem}
+  .open-link{font-weight:700;font-size:.9rem;color:var(--eb-bright);text-decoration:none}
+  .open-link:hover{text-decoration:underline}
+  .plays{font-size:.78rem;color:var(--muted);margin-top:.45rem}
+  /* ---------- doors / product cards ---------- */
+  .doors2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .door-card{background:var(--panel);border:1px solid var(--line-strong);border-radius:10px;padding:1.5rem 1.6rem}
+  .door-card h3{font-size:1.3rem;font-weight:800}
+  .door-card p{font-size:.95rem}
+  .door-card .a-price{font-size:1.4rem}
+  .door-card .btn{margin-top:.9rem;min-height:52px}
+  /* ---------- install band ---------- */
+  .install{display:flex;gap:1.4rem;align-items:center;background:linear-gradient(160deg,rgba(63,169,245,.13),var(--panel) 70%);
+    border:1px solid var(--eb);border-radius:12px;padding:1.6rem 1.8rem;margin-top:.4rem}
+  .install img{width:84px;height:84px;border-radius:18px;flex:none}
+  .install h2{font-size:clamp(1.5rem,5vw,2.1rem)}
+  .install p{margin:.45rem 0 0;font-size:.97rem;max-width:56ch}
+  /* ---------- footer ---------- */
+  .arcade-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+  .arcade-foot .guarantee{color:var(--body);max-width:62ch}
+  .arcade-foot .tagline{font-size:1.02rem;margin-top:1.2rem}
+  .arcade-foot nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.1rem}
+  .arcade-foot nav a{font-weight:600}
+  .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  @media (max-width:900px){ .apps{grid-template-columns:1fr} }
+  @media (max-width:700px){
+    .arcade-hero{padding:4.9rem 0 1.3rem;background-position:center 18%}
+    .chrome-text{font-size:clamp(2.3rem,12vw,3rem)}
+    .promise-line{gap:.25rem 1.1rem;margin-top:.7rem}
+    .arcade-hero .lead{font-size:.95rem;line-height:1.5;margin-top:.6rem}
+    .hero-games{margin-top:1rem;gap:.5rem}
+    .hg-row{gap:.7rem}
+    .hg-row img{width:92px;height:92px}
+    .hg-main b{font-size:.98rem}
+    .hg-main span{font-size:.74rem}
+    .hg-main .btn{min-height:44px;padding:.45rem .95rem;font-size:.9rem}
+    .hero-facts{margin-top:.85rem;padding-top:.7rem;font-size:.84rem;gap:.3rem 1rem;flex-direction:column;align-items:flex-start}
+    .arcade-band{padding:2rem 0}
+    .game{grid-template-columns:1fr;margin-top:1rem}
+    .game-cover{position:relative;height:120px;min-height:0}
+    .game-info{padding:.95rem 1.05rem 1.1rem;gap:.45rem}
+    .game-info p{font-size:.9rem;line-height:1.45}
+    .g-actions{padding-top:.35rem;flex-wrap:nowrap}
+    .g-actions .btn{flex:1 1 0;justify-content:center;font-size:.86rem;padding:.6rem .4rem}
+    .doors2{grid-template-columns:1fr}
+    .install{flex-direction:row;padding:1.2rem 1.1rem;gap:1rem}
+    .install img{width:64px;height:64px;border-radius:14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="J-Dawgs Industries — home">
+      <img src="../assets/paw-icon-192.png" alt="" width="38" height="38">
+      <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#tools">Tools &amp; the Pass</a></li>
+        <li><a href="sell.html">Sell on the Arcade</a></li>
+        <li><a href="../ai-tool-store.html">AI Tool Store</a></li>
+        <li><a href="../support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="arcade-hero">
+  <div class="wrap">
+    <p class="eyebrow">Our own store</p>
+    <h1 class="chrome-text">J-Dawgs Arcade</h1>
+    <p class="promise-line"><span class="eb">No ads. Ever.</span><span>We never sell your information.</span></p>
+    <p class="lead">Our games and apps, sold by us, at our own door — no middleman store, no ad SDKs, no trackers. One payment each, yours forever, and everything plays instantly in your browser.</p>
+    <div class="hero-games">
+      <div class="hg-row">
+        <img src="assets/hc1-cover.webp" alt="" width="1920" height="1120">
+        <div class="hg-main"><b>Hustle City</b><span>The original</span>
+          <a class="btn btn-buy" id="buy-hc1" href="https://buy.stripe.com/cNi7sL9Op5E85FX1yJ3kt0I">Buy — $1.99</a></div>
+      </div>
+      <div class="hg-row">
+        <img src="assets/hc2-cover.webp" alt="" width="1920" height="1120">
+        <div class="hg-main"><b>Hustle City 2</b><span>The interactive sequel</span>
+          <a class="btn btn-buy" id="buy-hc2" href="https://buy.stripe.com/8x2dR93q12rW0lDcdn3kt0E">Buy — $4.99</a></div>
+      </div>
+    </div>
+    <div class="hero-facts">
+      <span><b>2 games</b> headlining</span>
+      <span><b>0</b> ads · subscriptions · accounts</span>
+      <span><b>Home-screen ready</b> — no app store needed</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ================= GAMES ================= -->
+  <section class="arcade-band" id="games" style="padding-top:1.5rem">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">The games</p>
+        <h2>Hustle City</h2>
+      </div>
+
+      <article class="game">
+        <div class="game-cover"><img src="assets/hc1-cover.webp" alt="Hustle City — chrome lettering over a black Charger on a rainy neon street" width="1920" height="1120"></div>
+        <div class="game-info">
+          <div class="game-top"><h3>Hustle City</h3><span class="g-price">$1.99<small>one-time</small></span></div>
+          <p>The original street-trading game. Buy low, sell high, stay ahead of the law — 30 days to turn a small stake into a fortune across the city's neighborhoods.</p>
+          <p class="g-delivery">Checkout is instant — your game arrives by email right after payment. Plays instantly in your browser; no download, no install.</p>
+          <div class="g-actions">
+            <a class="btn btn-buy" id="buy-hc1-card" href="https://buy.stripe.com/cNi7sL9Op5E85FX1yJ3kt0I">Buy Hustle City — $1.99</a>
+            <a class="btn btn-ghost" href="https://jdawgsindustries.com/hustle-city-demo/">▶ Play the free demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="game">
+        <div class="game-cover"><img src="assets/hc2-cover.webp" alt="Hustle City 2 — chrome lettering over a black Charger on a rainy neon street" width="1920" height="1120" loading="lazy"></div>
+        <div class="game-info">
+          <div class="game-top"><h3>Hustle City 2</h3><span class="g-price">$4.99<small>one-time</small></span></div>
+          <p>The interactive sequel — seven cities open from day one, a two-screen street market, a million-dollar run, and a street-craps throne match against King Balsey at his compound.</p>
+          <p class="g-delivery">Checkout is instant — your game arrives by email right after payment. Plays instantly in your browser; no download, no install.</p>
+          <div class="g-actions">
+            <a class="btn btn-buy" id="buy-hc2-card" href="https://buy.stripe.com/8x2dR93q12rW0lDcdn3kt0E">Buy Hustle City 2 — $4.99</a>
+            <a class="btn btn-ghost" href="https://jdawgsindustries.com/hustle-city-2-demo/">▶ Play the free demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= APPS ================= -->
+  <section class="arcade-band" id="apps">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">The app shelf</p>
+        <h2>Apps</h2>
+        <p class="lead">Single-purpose apps that run right in your phone's browser. One payment each — no subscription, no account, no ads. Every app below is also included in the Unlimited Pass.</p>
+      </div>
+
+      <div class="apps">
+
+        <article class="app">
+          <img src="icons/studio.png" alt="J-Dawgs Droppin Beats Studio icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Droppin Beats Studio™</h3>
+            <p>A whole studio in your phone: build beats in any style, put your own voice on them, mix in the Edit Room, and export release-quality masters.</p>
+            <div class="app-buy">
+              <span class="a-price">$5.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://jdawgs.gumroad.com/l/argiwm">Buy</a>
+            </div>
+            <p class="plays">Delivered instantly after checkout.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/autotune.png" alt="J-Dawgs Auto Tune Data icon — Joshua's black 2008 Charger" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Auto Tune Data™</h3>
+            <p>A phone dyno and tune advisor: horsepower estimates from your pulls, OBD log imports, live gauges, and a DiabloSport shoot sheet. It reads and advises — it never flashes your ECU.</p>
+            <div class="app-buy">
+              <span class="a-price">$4.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/5kQ6oH1hTaYsfgx4KV3kt0D">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-autotune-xmw6xqbp547ixw/lB-NKAXEax8Q8YFx3icaJ6uuXxk8tslUxtRV9uAi448">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/compass.png" alt="Credential Compass icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>Credential Compass™</h3>
+            <p>Every license, certification and credential you hold — tracked in one place, with renewal dates in front of you before anything lapses.</p>
+            <div class="app-buy">
+              <span class="a-price">$1.00<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/3cI14n3q19UogkB5OZ3kt0z">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-credential-compass-2-gxg6xq4bxtxexl8e/ZDvxTqIUDNWfuM3Smg9CuZphQEzXm4agguZ_v3idYFs">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/plain-talk.png" alt="J-Dawgs Plain Talk icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Plain Talk™</h3>
+            <p>The dictation fixer: paste rough voice-to-text and get clean text back — names, places and terms spelled the way they're supposed to be.</p>
+            <div class="app-buy">
+              <span class="a-price">$1.00<small>one-time</small></span>
+              <a class="btn btn-buy" id="buy-plain-talk" href="https://buy.stripe.com/fZu14n8Kl1nSc4l1yJ3kt0F">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-plain-talk-2-xsxy6xq4xna6xhxos/ChvOfaqRffb56Hf0ruQG5AX93oIcPbI-1w45vYVX3S0">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/caption.png" alt="J-Dawgs Caption &amp; Hook Studio icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Caption &amp; Hook Studio™</h3>
+            <p>Captions and hooks for short-form video — real MP4 export, SRT files and hook-card images, with loudness measured and corrected. Offline, no account.</p>
+            <div class="app-buy">
+              <span class="a-price">$9.99<small>one-time</small></span>
+              <a class="btn btn-buy" id="buy-caption" href="https://buy.stripe.com/4gM6oHe4F3w04BT1yJ3kt0G">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-caption-hook-studio-xcw6xo9yxpr9xso/MH1Jpft48xnf41AGkUrb26QhKi5jWElSn_kAAOGox6w">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/seller-photo.png" alt="J-Dawgs Seller Photo Studio icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Seller Photo Studio™</h3>
+            <p>Product photos sized and framed per marketplace — Amazon, eBay and Etsy specs with on-screen fill guides. Your photos never leave your phone.</p>
+            <div class="app-buy">
+              <span class="a-price">$7.99<small>one-time</small></span>
+              <a class="btn btn-buy" id="buy-seller-photo" href="https://buy.stripe.com/7sY28r0dPaYs5FXcdn3kt0H">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-seller-photo-studio-xdw6xo9znxx4a1/zw5EEp-S_CwupQg0xf-dfLjUmpsy-GtojFZItTpp6-I">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/pocket-player.png" alt="J-Dawgs Pocket Player icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Pocket Player™</h3>
+            <p>Your own music files, louder and clearer — EQ and per-song leveling in a player that's plain and simple, and priced like one.</p>
+            <div class="app-buy">
+              <span class="a-price">$9.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/8x28wP3q1c2w8S9gtD3ks3Q">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-pocket-player-xlo6xn6zjxbc9xd/q5E1sajGQj5TTYEsd0eHYlLOn9wE1sOJBMp9QmBOrMk">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/audio-fixer.png" alt="J-Dawgs Audio Fixer icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Audio Fixer™</h3>
+            <p>Fix quiet or clipping audio in one tap — with measured before-and-after numbers, not a black box.</p>
+            <div class="app-buy">
+              <span class="a-price">$7.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/eVqeVdd0Bd6A0lD3GR3ks3R">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-audio-fixer-x0m6xn6xbltz4xd/c0KaYJ1vXYZs3O00AIImygCEJzOBVfqPF2hLgEopR6o">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/ringtone.png" alt="J-Dawgs Ringtone &amp; Alert Maker icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Ringtone &amp; Alert Maker™</h3>
+            <p>Ringtones and alerts cut from your own audio, loudness-fixed so they actually cut through.</p>
+            <div class="app-buy">
+              <span class="a-price">$3.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/4gM6oH5y90jO7O56T33ks3P">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-ringtone-alert-maker-xpxk6xn6rgxbrwl/nx2junep1-wBQJ5j6dc6zneJdsU-5Un_YsglZXSYX7M">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/speaker-rescue.png" alt="J-Dawgs Speaker Rescue icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Speaker Rescue™</h3>
+            <p>Timed tone sweeps that can help eject surface water and dust from a phone speaker.</p>
+            <div class="app-buy">
+              <span class="a-price">$2.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/00w00j0dP1nS1pHb9j3ks3O">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-speaker-rescue-ixi6xn5xcxqxexvxgxq/vuIgvq0VYwWmS_TRB7Ku8cfwOW4h0b89b9tc909ZmyE">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+        <article class="app">
+          <img src="icons/moving-box.png" alt="J-Dawgs Moving Box &amp; Belongings Finder icon" width="256" height="256" loading="lazy">
+          <div class="app-main">
+            <h3>J-Dawgs Moving Box &amp; Belongings Finder™</h3>
+            <p>Label every box, log what's inside, and find any belonging in seconds — during the move and long after.</p>
+            <div class="app-buy">
+              <span class="a-price">$4.99<small>one-time</small></span>
+              <a class="btn btn-buy" href="https://buy.stripe.com/5kQeVd1hTeaEect5OZ3ks40">Buy</a>
+              <a class="open-link" href="https://muse.ai/s/j-dawgs-moving-box-finder-hxl6xnxgxzxpqixs3/gfSTnhnpiXFXw_4hxieUo0IbnB0yTTeR7D-QP3yGWv0">▶ Open the app</a>
+            </div>
+            <p class="plays">Plays instantly in your browser.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOR BUSINESS ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">For business</p>
+        <h2>Q-Day Ledger™</h2>
+        <p class="lead">Our flagship software product: a post-quantum migration planner for businesses — inventory your cryptography, score what breaks first, and get a migration plan before the federal deadlines land.</p>
+      </div>
+      <div class="doors2">
+        <div class="door-card">
+          <h3>Q-Day Ledger™</h3>
+          <p><span class="a-price">From $1,499<small>one-time</small></span></p>
+          <p>Single-organization, multi-site and auditor editions on the product page, with live checkout.</p>
+          <a class="btn btn-buy" href="https://jdawgsindustries.com/q-day-ledger.html">See Q-Day Ledger →</a>
+        </div>
+        <div class="door-card">
+          <h3>Everything on this page</h3>
+          <p><span class="a-price">$99.99<small>one-time</small></span></p>
+          <p>Every game and app in the Arcade is also inside the Unlimited Pass below — one payment and the whole shelf is yours.</p>
+          <a class="btn btn-ghost" href="#tools">See the Pass ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS & THE PASS ================= -->
+  <section class="arcade-band" id="tools">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Tools &amp; the Pass</p>
+        <h2>One pass. Every tool.</h2>
+      </div>
+      <div class="doors2">
+        <div class="door-card">
+          <h3>Unlimited Pass</h3>
+          <p><span class="a-price">$99.99<small>one-time</small></span></p>
+          <p>Unlimited use of every priced tool and app J-Dawgs makes — including everything in this Arcade, and everything added later. Not a subscription.</p>
+          <a class="btn btn-buy" href="https://jdawgs.gumroad.com/l/phwyv">Buy the Unlimited Pass — $99.99</a>
+        </div>
+        <div class="door-card">
+          <h3>AI Tool Store</h3>
+          <p><span class="a-price">From $0.50<small>per tool</small></span></p>
+          <p>381 working tools built for AIs and the humans who hire them — converters, checkers, auditors and makers, each verified working before it lists.</p>
+          <a class="btn btn-ghost" href="https://jdawgsindustries.com/ai-tool-store.html">Enter the AI Tool Store →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SELL ON THE ARCADE ================= -->
+  <section class="arcade-band" id="sell">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">For developers</p>
+        <h2>Sell on the Arcade</h2>
+        <p class="lead">Made a game? Sell it here — one-time $19.99 · just 3% of sales. No ads in this store, and none in your game either. We test every game like it's our own before it lists; junk doesn't make the shelf.</p>
+      </div>
+      <div class="door-card" style="margin-top:1.6rem">
+        <h3>Your game. Our storefront.</h3>
+        <p>You set your price and keep 97% of every sale — the big stores charge $25 to walk in and then take 15% of every sale forever. Here it's $19.99 at the door and just 3% after, and your players' information is never sold. By anyone.</p>
+        <a class="btn btn-buy" href="sell.html">Sell your game at the Arcade →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSTALL ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="install">
+        <img src="icons/arcade-192.png" alt="J-Dawgs Arcade home-screen icon — a chrome dollar sign" width="192" height="192">
+        <div>
+          <h2>Take the Arcade with you</h2>
+          <p>Add J-Dawgs Arcade to your home screen — no app store needed. On iPhone: Share → <b>Add to Home Screen</b>. On Android: Menu → <b>Add to Home screen</b>. One tap and the store's right there — ad-free, like everything else here.</p>
+        </div>
+      </div>
+      <p style="margin-top:1.6rem"><a class="backlink" href="../index.html">← Back to J-Dawgs Industries</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="arcade-foot">
+  <div class="wrap">
+    <p class="guarantee"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://jdawgsindustries.com/support.html">Report a problem</a></p>
+    <p class="tagline"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
+    <nav aria-label="Footer">
+      <a href="../index.html">J-Dawgs Industries</a>
+      <a href="../ai-tool-store.html">AI Tool Store</a>
+      <a href="../apps.html">Apps</a>
+      <a href="../support.html">Support</a>
+    </nav>
+    <p class="foot-note" style="margin-top:1.2rem">No ads. Nothing on this page tracks you. © 2026 Joshua Dawson · J-Dawgs Industries, Springfield, MO.</p>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

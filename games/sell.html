@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell on the Arcade — List Your Game at J-Dawgs Arcade | J-Dawgs Industries</title>
+<meta name="description" content="Sell your game on J-Dawgs Arcade for a one-time $19.99 fee and just 3% of sales — no ads in the store and none in your game. You set your price; you keep 97% of every sale. We never sell your information — or your players'.">
+<link rel="canonical" href="https://jdawgsindustries.com/games/sell.html">
+<meta property="og:title" content="Sell on the Arcade — $19.99 one-time, just 3% of sales">
+<meta property="og:description" content="Indie games, sold on our ad-free store. One-time $19.99 listing fee, then just 3% of sales — you keep 97%.">
+<meta property="og:image" content="https://jdawgsindustries.com/games/assets/hc1-cover.webp">
+<meta property="og:url" content="https://jdawgsindustries.com/games/sell.html">
+<script>document.documentElement.className+=" js"</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/arcade-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/arcade-180.png">
+<meta name="theme-color" content="#05080E">
+<style>
+  :root{--eb:#3FA9F5;--eb-bright:#6FC3FF;--eb-deep:#2B7FD4}
+  /* ---------- hero (same street as the Arcade) ---------- */
+  .arcade-hero{position:relative;padding:7.2rem 0 2.6rem;background:#05080E url("assets/hero-street.webp") center 22%/cover no-repeat;overflow:hidden}
+  .arcade-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.72) 0%,rgba(5,8,14,.55) 45%,rgba(5,8,14,.88) 78%,var(--bg) 100%)}
+  .arcade-hero .wrap{position:relative}
+  .arcade-hero .eyebrow{color:var(--eb-bright)}
+  .arcade-hero .eyebrow::before{background:var(--eb-bright)}
+  .chrome-text{font-family:var(--font-display);font-weight:800;font-stretch:118%;letter-spacing:-.01em;line-height:.98;
+    font-size:clamp(2.4rem,10.5vw,4.8rem);margin:.2rem 0 0;text-transform:uppercase;
+    background:linear-gradient(180deg,#FFFFFF 0%,#D7DEE9 34%,#79869B 49%,#EDF1F7 60%,#9AA7BB 82%,#E6EBF3 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 14px rgba(63,169,245,.28))}
+  .promise-line{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem;margin-top:1.15rem;font-family:var(--font-display);
+    font-weight:800;font-size:clamp(1.05rem,4.6vw,1.5rem);color:#fff;letter-spacing:.01em}
+  .promise-line .eb{color:var(--eb-bright)}
+  .arcade-hero .lead{max-width:56ch;margin-top:.9rem;color:#D9E2EF;text-shadow:0 1px 10px rgba(0,0,0,.65)}
+  .arcade-hero .lead b{color:#fff}
+  /* ---------- bands ---------- */
+  .arcade-band{padding:3.4rem 0;border-top:1px solid var(--line)}
+  /* ---------- buttons ---------- */
+  .btn-buy{background:linear-gradient(180deg,var(--eb-bright),var(--eb-deep));color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
+  .btn-buy:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
+  /* ---------- the math: us vs them ---------- */
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .vs-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.6rem}
+  .vs-card.ours{background:linear-gradient(165deg,rgba(63,169,245,.14),var(--panel) 70%);border-color:var(--eb)}
+  .vs-card h3{font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+  .vs-card .vs-price{font-family:var(--font-display);font-weight:800;font-size:2rem;color:#fff;margin:.55rem 0 .2rem;line-height:1.05}
+  .vs-card .vs-price small{display:block;font-family:var(--font-body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.3rem}
+  .vs-card ul{margin:.9rem 0 0;padding-left:1.15rem}
+  .vs-card li{margin:.42rem 0;font-size:.95rem;line-height:1.5}
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.5rem}
+  .step .num{font-family:var(--font-display);font-weight:800;font-size:1.9rem;color:var(--eb-bright);line-height:1}
+  .step h3{font-size:1.12rem;font-weight:800;margin-top:.55rem}
+  .step p{margin:.4rem 0 0;font-size:.94rem;line-height:1.55}
+  /* ---------- rules ---------- */
+  .rules{margin:1.4rem 0 0;padding-left:1.2rem;max-width:68ch}
+  .rules li{margin:.55rem 0;font-size:.97rem;line-height:1.55}
+  .rules b{color:#fff}
+  /* ---------- application form ---------- */
+  .apply-form{background:linear-gradient(165deg,var(--panel-2),var(--panel) 65%);border:1px solid var(--line-strong);border-radius:12px;padding:1.6rem 1.7rem;margin-top:1.6rem;max-width:760px}
+  .apply-form .frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.35rem}
+  .field label .opt{font-weight:500;color:var(--muted);font-size:.8rem}
+  .field input,.field textarea{width:100%;background:#05080E;border:1px solid var(--line-strong);border-radius:8px;color:#fff;
+    font:inherit;font-size:16px;padding:.65rem .8rem;min-height:48px}
+  .field textarea{min-height:96px;resize:vertical}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--eb);box-shadow:0 0 0 3px rgba(63,169,245,.25)}
+  .field-error{display:none;color:#FF9D9D;font-size:.83rem;margin-top:.3rem}
+  .field-error.show{display:block}
+  .apply-form .btn{min-height:52px}
+  .apply-note{font-size:.86rem;color:var(--muted);margin-top:.9rem;line-height:1.55}
+  .composed-wrap{margin-top:1.2rem}
+  .composed-wrap textarea{width:100%;background:#05080E;border:1px solid var(--line-strong);border-radius:8px;color:var(--body);
+    font:inherit;font-size:.88rem;padding:.7rem .8rem;min-height:150px}
+  .copy-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:.6rem}
+  .copy-ok{color:var(--eb-bright);font-weight:700;font-size:.9rem}
+  /* ---------- footer ---------- */
+  .arcade-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+  .arcade-foot .guarantee{color:var(--body);max-width:62ch}
+  .arcade-foot .tagline{font-size:1.02rem;margin-top:1.2rem}
+  .arcade-foot nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.1rem}
+  .arcade-foot nav a{font-weight:600}
+  .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  @media (max-width:700px){
+    .arcade-hero{padding:4.9rem 0 1.3rem;background-position:center 18%}
+    .chrome-text{font-size:clamp(2.1rem,11vw,2.8rem)}
+    .promise-line{gap:.25rem 1.1rem;margin-top:.7rem}
+    .arcade-hero .lead{font-size:.95rem;line-height:1.5;margin-top:.6rem}
+    .arcade-band{padding:2rem 0}
+    .vs-grid,.steps{grid-template-columns:1fr}
+    .vs-card,.step{padding:1.15rem 1.2rem}
+    .apply-form{padding:1.15rem 1.1rem}
+    .apply-form .frow{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="J-Dawgs Industries — home">
+      <img src="../assets/paw-icon-192.png" alt="" width="38" height="38">
+      <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#games">Games</a></li>
+        <li><a href="index.html#apps">Apps</a></li>
+        <li><a href="index.html#tools">Tools &amp; the Pass</a></li>
+        <li><a href="../ai-tool-store.html">AI Tool Store</a></li>
+        <li><a href="../support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="arcade-hero">
+  <div class="wrap">
+    <p class="eyebrow">For game developers</p>
+    <h1 class="chrome-text">Sell on the Arcade</h1>
+    <p class="promise-line"><span class="eb">No ads. Ever.</span><span>We never sell your information — or your players'.</span></p>
+    <p class="lead">Made a game? Sell it in our store. List it on J-Dawgs Arcade for a <b>one-time fee of $19.99</b> — one payment per developer, and it covers every game you list with us. After that, the Arcade takes just <b>3% of sales</b>. No ads in the store, and none in your game. You set your price; you keep 97% of every sale.</p>
+  </div>
+</section>
+
+<main>
+
+  <!-- ================= THE MATH ================= -->
+  <section class="arcade-band" style="border-top:none;padding-top:1.5rem">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Us vs. them</p>
+        <h2>The math</h2>
+        <p class="lead">The big store charges you to walk in, then takes 15% of every sale you ever make. We charge $19.99 once — then just 3%.</p>
+      </div>
+
+      <div class="vs-grid">
+        <div class="vs-card">
+          <h3>Google Play</h3>
+          <p class="vs-price">$25 + 15%<small>to open the account — then 15% of every sale, forever</small></p>
+          <ul>
+            <li><b>$25</b> developer fee before you sell a single copy.</li>
+            <li><b>15% of every sale</b> goes to Google — this month, next year, forever.</li>
+            <li>Your game sits in an ad-supported store, next to ad-supported everything.</li>
+          </ul>
+        </div>
+        <div class="vs-card ours">
+          <h3>J-Dawgs Arcade</h3>
+          <p class="vs-price">$19.99 once + 3%<small>one-time listing fee — then just 3% of sales</small></p>
+          <ul>
+            <li><b>You keep 97% of every sale.</b> Standard card processing, about 3%, is the bank's fee — separate, and the only other deduction.</li>
+            <li><b>No ads</b> in the store, and listed games run <b>no ads</b> either.</li>
+            <li>We never sell your information — or your players'.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lead" style="text-align:center;margin-top:1.5rem"><b>3%. We're not greedy.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps to the shelf</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <p class="num">1</p>
+          <h3>Apply with your game</h3>
+          <p>Send us your game with the form below. It has to be web-playable — it runs right in a browser, the same instant-play tech as our own games. No downloads, no sideloading.</p>
+        </div>
+        <div class="step">
+          <p class="num">2</p>
+          <h3>We test it like our own</h3>
+          <p>We play it end to end, on phones too. It has to actually work before it lists — junk doesn't make the shelf. If something's broken, we'll tell you what we found.</p>
+        </div>
+        <div class="step">
+          <p class="num">3</p>
+          <h3>Pay the one-time fee</h3>
+          <p>Once your game passes, you pay the one-time listing fee — <b>$19.99</b>. One payment, per developer, covering every game you list with us — then just 3% of sales. No renewal, no surprise charges later.</p>
+        </div>
+        <div class="step">
+          <p class="num">4</p>
+          <h3>Your game goes live</h3>
+          <p>Your game gets its own Arcade page with a buy button. Sales are delivered to buyers instantly. We collect 3% and pay out the other 97% on a regular schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RULES ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">House rules</p>
+        <h2>The rules, up front</h2>
+      </div>
+      <ul class="rules">
+        <li><b>You own the rights.</b> You must own your game, or hold the rights to sell it. No exceptions.</li>
+        <li><b>No ads in-game.</b> Listed games run no ads — that's the whole point of this store.</li>
+        <li><b>No selling player data.</b> Your players' information is theirs. We never sell it, and neither do you.</li>
+        <li><b>The Fix-It Guarantee covers the store side.</b> If our store breaks your sale — a bad link, a broken page — we fix it free. Your game's bugs stay yours to fix.</li>
+        <li><b>Broken or dishonest gets delisted.</b> If a listed game stops working or wasn't what it claimed to be, we can take it down.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= APPLY ================= -->
+  <section class="arcade-band" id="apply">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Apply</p>
+        <h2>Apply with your game</h2>
+        <p class="lead">Fill this in and your email app opens with the application ready to send — that's the whole intake. We test every game by hand, so give us a link we can play right in the browser.</p>
+      </div>
+
+      <form class="apply-form" id="sellForm" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="sfName">Your name or studio name</label>
+            <input id="sfName" type="text" autocomplete="name">
+            <p class="field-error" id="err-sfName"></p>
+          </div>
+          <div class="field">
+            <label for="sfEmail">Your email</label>
+            <input id="sfEmail" type="email" autocomplete="email">
+            <p class="field-error" id="err-sfEmail"></p>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="sfTitle">Game title</label>
+            <input id="sfTitle" type="text">
+            <p class="field-error" id="err-sfTitle"></p>
+          </div>
+          <div class="field">
+            <label for="sfPrice">Your price, in USD</label>
+            <input id="sfPrice" type="text" inputmode="decimal" placeholder="4.99">
+            <p class="field-error" id="err-sfPrice"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="sfUrl">Playable link</label>
+          <input id="sfUrl" type="url" inputmode="url" placeholder="https://…">
+          <p class="field-error" id="err-sfUrl"></p>
+        </div>
+        <div class="field">
+          <label for="sfPitch">Pitch it <span class="opt">— two or three sentences: what it is, why it's fun</span></label>
+          <textarea id="sfPitch"></textarea>
+          <p class="field-error" id="err-sfPitch"></p>
+        </div>
+        <button class="btn btn-buy" type="submit" id="sfSubmit">Send my application →</button>
+        <p class="apply-note">Pressing send opens your email app with everything filled in, addressed to us — just press send there too. No email app? Copy the application below and email it to <a href="mailto:joshuajdawg0350@gmail.com">joshuajdawg0350@gmail.com</a>. We reply after we've played your game.</p>
+        <div class="composed-wrap" id="sfComposedWrap" hidden>
+          <label for="sfComposed" style="font-weight:700;font-size:.9rem;color:#fff;display:block;margin-bottom:.35rem">Your application, ready to copy:</label>
+          <textarea id="sfComposed" readonly></textarea>
+          <div class="copy-row">
+            <button class="btn btn-ghost" type="button" id="sfCopyBtn">Copy the application</button>
+            <span class="copy-ok" id="sfCopyOk" hidden>Copied ✓</span>
+            <span class="copy-ok" id="sfCopyMsg" hidden style="color:#FF9D9D">Copy didn't work — select the text above and copy it by hand.</span>
+          </div>
+        </div>
+      </form>
+
+      <p style="margin-top:1.6rem"><a class="backlink" href="index.html">← Back to the Arcade</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="arcade-foot">
+  <div class="wrap">
+    <p class="guarantee"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://jdawgsindustries.com/support.html">Report a problem</a></p>
+    <p class="tagline"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
+    <nav aria-label="Footer">
+      <a href="../index.html">J-Dawgs Industries</a>
+      <a href="index.html">J-Dawgs Arcade</a>
+      <a href="../ai-tool-store.html">AI Tool Store</a>
+      <a href="../support.html">Support</a>
+    </nav>
+    <p class="foot-note" style="margin-top:1.2rem">No ads. Nothing on this page tracks you. © 2026 Joshua Dawson · J-Dawgs Industries, Springfield, MO.</p>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+<script>
+(function(){
+  function val(id){ var el=document.getElementById(id); return el ? el.value.trim() : ""; }
+  function setErr(id,msg){
+    var el=document.getElementById("err-"+id);
+    if(el){ el.textContent=msg||""; el.classList.toggle("show", !!msg); }
+    return !msg;
+  }
+  var form=document.getElementById("sellForm");
+  if(!form) return;
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var name=val("sfName"), email=val("sfEmail"), title=val("sfTitle"),
+        priceRaw=val("sfPrice"), url=val("sfUrl"), pitch=val("sfPitch");
+    var ok=true;
+    if(!setErr("sfName", name?"":"Your name or studio name is required.")) ok=false;
+    if(!setErr("sfEmail", !email?"Your email is required.":(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)?"Enter a valid email address.":""))) ok=false;
+    if(!setErr("sfTitle", title?"":"Game title is required.")) ok=false;
+    var price=parseFloat(priceRaw); var priceErr="";
+    if(!priceRaw) priceErr="Your price is required.";
+    else if(isNaN(price)) priceErr="Enter a valid price.";
+    else if(price<=0) priceErr="Price must be more than $0.";
+    else if(price>10000) priceErr="Price must be $10,000 or less.";
+    else if(!/^\d+(\.\d{1,2})?$/.test(priceRaw)) priceErr="Price can have at most 2 decimals.";
+    if(!setErr("sfPrice", priceErr)) ok=false;
+    if(!setErr("sfUrl", !url?"A playable link is required — we test every game in the browser.":(!/^https?:\/\//i.test(url)?"Link must start with http:// or https://":""))) ok=false;
+    if(!setErr("sfPitch", pitch?"":"A short pitch is required.")) ok=false;
+    if(!ok){
+      var firstErr=form.querySelector(".field-error.show");
+      if(firstErr) firstErr.scrollIntoView({behavior:"smooth", block:"center"});
+      return;
+    }
+    var lines=[
+      "ARCADE SELLER APPLICATION",
+      "",
+      "Name / studio: "+name,
+      "Email: "+email,
+      "Game title: "+title,
+      "Playable link: "+url,
+      "Your price in USD: $"+price.toFixed(2),
+      "Pitch: "+pitch,
+      "",
+      "I understand: my game must be web-playable, run no ads, and I own the rights to sell it."
+    ];
+    var body=lines.join("\n");
+    var composed=document.getElementById("sfComposed"); if(composed) composed.value=body;
+    var wrap=document.getElementById("sfComposedWrap"); if(wrap) wrap.hidden=false;
+    var okEl=document.getElementById("sfCopyOk"); if(okEl) okEl.hidden=true;
+    var msgEl=document.getElementById("sfCopyMsg"); if(msgEl) msgEl.hidden=true;
+    var subject="ARCADE SELLER APPLICATION — "+title;
+    var mailto="mailto:joshuajdawg0350@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    setTimeout(function(){ try{ var a=document.createElement("a"); a.href=mailto; a.style.display="none"; document.body.appendChild(a); a.click(); setTimeout(function(){ if(a.parentNode) a.parentNode.removeChild(a); }, 500); }catch(err){} }, 350);
+  });
+  var copyBtn=document.getElementById("sfCopyBtn");
+  if(copyBtn){ copyBtn.addEventListener("click", function(){
+    var box=document.getElementById("sfComposed"); var okEl=document.getElementById("sfCopyOk"); var msgEl=document.getElementById("sfCopyMsg");
+    function fail(){ if(msgEl) msgEl.hidden=false; if(okEl) okEl.hidden=true; if(box){ box.focus(); box.select(); } }
+    function done(){ if(okEl) okEl.hidden=false; if(msgEl) msgEl.hidden=true; }
+    if(!box || !box.value){ fail(); return; }
+    box.focus(); box.select();
+    var copied=false;
+    try{ copied=document.execCommand && document.execCommand("copy"); }catch(e){ copied=false; }
+    if(copied){ done(); return; }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(box.value).then(done).catch(fail);
+    } else { fail(); }
+  }); }
+})();
+</script>
+</body>
+</html>
