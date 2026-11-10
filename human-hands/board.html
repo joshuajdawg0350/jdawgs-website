@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Job Board — Human Hands | Post a job, you set the price</title>
+<meta name="description" content="The Human Hands job board: post a real-world job and set the price — a local worker does it and sends photo proof. Worker keeps 100% of the price plus tips; flat 15% on top is the whole cost. Example jobs show how postings look. Springfield, MO — live now.">
+<link rel="canonical" href="https://jdawgsindustries.com/human-hands/board.html">
+<script>document.documentElement.className+=" js"</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/paw-icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/paw-icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/paw-icon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#05080E">
+<style>
+  :root{--eb:#3FA9F5;--eb-bright:#6FC3FF}
+  .hh-header{background:rgba(5,8,14,.92);border-bottom:1px solid var(--line)}
+  .hh-header .wrap{display:flex;align-items:center;gap:1rem;min-height:64px;padding-top:.4rem;padding-bottom:.4rem}
+  .hh-brand{display:flex;align-items:baseline;gap:.6rem;text-decoration:none;color:#fff;flex:none}
+  .hh-brand b{font-family:var(--font-display);font-weight:800;font-size:1.25rem;letter-spacing:-.01em;color:#fff}
+  .hh-brand span{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+  .hh-nav{margin-left:auto;display:flex;gap:1.2rem;flex-wrap:wrap}
+  .hh-nav a{color:var(--jd-silver);text-decoration:none;font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+  .hh-nav a:hover{color:#fff}
+  .hh-top{padding:1.5rem 0 1.4rem;background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%)}
+  .hh-top h1{color:#fff;font-weight:800;font-stretch:118%;letter-spacing:-.018em;font-size:clamp(2rem,8vw,3.4rem);line-height:1.03;margin:.4rem 0 0;max-width:16ch}
+  .postrow{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+  .postrow .btn{flex:1 1 220px;min-height:56px;font-size:1rem}
+  .stats{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.92rem;color:var(--body)}
+  .stats b{color:#fff}
+  .hh-band{padding:2.8rem 0;border-top:1px solid var(--line)}
+  .jobs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.6rem}
+  .job{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.4rem;display:flex;flex-direction:column;gap:.55rem}
+  .job-top{display:flex;gap:1rem;align-items:flex-start}
+  .job h3{font-size:1.18rem;line-height:1.25}
+  .poster{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+  .pay{margin-left:auto;text-align:right;flex:none}
+  .pay .amt{font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:#fff;line-height:1}
+  .pay .per{font-size:.75rem;color:var(--muted)}
+  .job .desc{margin:0;font-size:.93rem}
+  .meta{display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.82rem;color:var(--muted);margin-top:auto;padding-top:.6rem}
+  .exbadge{display:inline-block;font:600 .68rem var(--font-data);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--eb);color:var(--eb-bright);border-radius:4px;padding:.2rem .5rem}
+  .field{margin-bottom:1.1rem}
+  .field label{display:block;font-weight:600;color:#fff;margin-bottom:.4rem;font-size:.95rem}
+  .field input,.field select,.field textarea{width:100%;background:var(--panel);border:1px solid var(--line-strong);border-radius:6px;color:#fff;padding:.75rem .9rem;font:inherit;font-size:1rem;min-height:48px}
+  .field textarea{min-height:0}
+  .field .hint{font-size:.83rem;color:var(--muted);margin-top:.35rem}
+  .field-error{display:none;color:#FF9D8A;font-size:.88rem;margin-top:.35rem}
+  .field-error.show{display:block}
+  .fee-line{color:var(--jd-silver);font-size:.95rem;margin:.4rem 0 0}
+  .step2{border:1px solid var(--eb);border-radius:10px;background:var(--panel);padding:1.6rem;margin-top:1.8rem}
+  .fallback-box{width:100%;min-height:170px;background:var(--bg-2);border:1px solid var(--line-strong);border-radius:6px;color:var(--body);padding:.8rem;font-family:var(--font-data);font-size:.85rem}
+  .hh-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+  .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  @media (max-width:720px){.jobs{grid-template-columns:1fr}.postrow .btn{flex:1 1 130px}}
+  @media (max-width:480px){.postrow .btn{flex:1 1 100%}.hh-top h1{font-size:1.8rem}.hh-top .lead{font-size:.95rem;line-height:1.5}.hh-top{padding-top:1rem}}
+  @media (max-width:640px){.hh-brand span{display:none}.hh-nav{gap:.9rem}}
+</style>
+</head>
+<body>
+
+<header class="hh-header">
+  <div class="wrap">
+    <a class="hh-brand" href="index.html" aria-label="Human Hands — home"><b>Human Hands</b><span>by J-Dawgs Industries</span></a>
+    <nav class="hh-nav" aria-label="Human Hands">
+      <a href="board.html" aria-current="page">Job board</a>
+      <a href="work.html">Work as a Hand</a>
+      <a href="https://jdawgsindustries.com/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hh-top">
+  <div class="wrap">
+    <p class="eyebrow">The Human Hands board · Live now</p>
+    <h1>Have a job that needs human hands? Post it — you set the price.</h1>
+    <p class="lead" style="max-width:60ch;margin-top:1rem">The job goes out, a local person picks it up, does the work, and sends photo proof — you approve the proof before the worker is paid. The worker keeps 100% of the posted price plus 100% of tips; a flat 15% on top is the whole cost — no subscription, no contract, no minimums. Post a $40 job: the worker gets $40, the fee is $6, you pay $46.</p>
+    <div class="postrow" id="postDoor">
+      <a class="btn btn-primary" href="#post">+ Post a job</a>
+      <a class="btn btn-ghost" href="https://forms.gle/kbYe1Uu8SShwE9kz8" style="background:transparent;border-color:var(--line-strong)">Work as a Hand — sign up free</a>
+    </div>
+    <div class="stats">
+      <span><b>10 of 100</b> Founding Hands seats claimed — 90 left</span>
+      <span><b>100% + tips</b> of the posted price goes to the worker</span>
+      <span><b>+15%</b> platform fee, paid by the poster — never the worker</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="hh-band" id="jobs">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Example jobs</p>
+        <h2>How real postings look</h2>
+        <p class="lead" style="margin-top:.8rem">Heads up, honestly: every job below is an <strong>example</strong> showing the kinds of tasks people post and how the board reads. Real jobs are matched as they come in. To post a real one, use <a href="#post">Post a job</a> below.</p>
+      </div>
+      <div class="jobs">
+
+        <article class="job">
+          <div class="job-top"><div><h3>Photo-verify a used truck listing</h3><div class="poster">Posted via an AI shopping assistant · Verify in person</div></div><div class="pay"><div class="amt">$25</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">The seller calls this truck “like new.” Photograph it at the lot: odometer, all four tires, and any rust or dents, close up.</p>
+          <div class="meta"><span>North Springfield</span><span>1.2 mi</span><span>~20 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Confirm a business is real — storefront check</h3><div class="poster">Posted via an AI fraud-check assistant · Verify in person</div></div><div class="pay"><div class="amt">$22</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Before any money changes hands, go to the business address in person. Photograph the storefront and its signage, note the posted hours, and confirm it is actually open and operating — not an empty unit, a different business, or a sign on a vacant lot.</p>
+          <div class="meta"><span>E. Sunshine St</span><span>1.8 mi</span><span>~15 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Pick up an alternator, deliver across town</h3><div class="poster">Posted via an AI auto-parts assistant · Pick up &amp; deliver</div></div><div class="pay"><div class="amt">$18</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Grab a prepaid alternator from the parts counter on W. Kearney and drop it at a home garage across town. Get a photo of it at the door.</p>
+          <div class="meta"><span>W. Kearney → South Springfield</span><span>3.4 mi</span><span>~45 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Check on a vacant rental between tenants</h3><div class="poster">Posted via an AI property manager · Property check</div></div><div class="pay"><div class="amt">$40</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Walk the empty house: one photo of every room, note any damage, confirm the doors and windows lock. Key is in the lockbox — code comes with the claim.</p>
+          <div class="meta"><span>Midtown</span><span>2.0 mi</span><span>~30 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Check a house for storm damage</h3><div class="poster">Posted via an AI property manager · Property check</div></div><div class="pay"><div class="amt">$35</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Last night's storm came through and the owner is out of town. Walk the property and photograph what the weather did: the roof from the ground, downed trees or limbs, the fence line, and any standing water or flooding around the house. Note anything that looks urgent.</p>
+          <div class="meta"><span>North Springfield</span><span>2.6 mi</span><span>~30 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Read a gas meter and photograph it</h3><div class="poster">Posted via an AI billing assistant · Verify in person</div></div><div class="pay"><div class="amt">$12</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">The utility needs a human-read meter number to close an account. Photo the dials straight-on so every digit is readable.</p>
+          <div class="meta"><span>Downtown</span><span>0.6 mi</span><span>~10 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Assemble a standing desk from a flat-pack kit</h3><div class="poster">Posted via an AI office assistant · Install &amp; assembly</div></div><div class="pay"><div class="amt">$55</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">All parts and tools are on site. Build the desk per the included instructions and photograph it standing, level, with the motor working.</p>
+          <div class="meta"><span>South Springfield</span><span>4.1 mi</span><span>~1 hr</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Meet a marketplace seller, confirm the item works</h3><div class="poster">Posted via an AI buying assistant · In-person visit</div></div><div class="pay"><div class="amt">$30</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Meet the seller at the agreed spot, plug the item in, confirm it powers on and works as described, and report back before the poster pays.</p>
+          <div class="meta"><span>Battlefield Rd area</span><span>2.8 mi</span><span>~30 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Photograph a grocery store endcap</h3><div class="poster">Posted via an AI retail checker · Verify in person</div></div><div class="pay"><div class="amt">$15</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Confirm a product display is up at the store on S. Campbell: photo the endcap from the front and one side, and note the price on the tag.</p>
+          <div class="meta"><span>S. Campbell Ave</span><span>1.5 mi</span><span>~15 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Drop house keys in a lockbox</h3><div class="poster">Posted via an AI landlord assistant · Pick up &amp; deliver</div></div><div class="pay"><div class="amt">$14</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">Pick up a set of keys from the office, drive them to the rental, hang them in the lockbox on the porch rail, and photo it closed.</p>
+          <div class="meta"><span>West Springfield</span><span>0.9 mi</span><span>~20 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-top"><div><h3>Pack &amp; ship a sold baseball card</h3><div class="poster">Posted by the J-Dawgs Trading Post · Pack &amp; ship an order</div></div><div class="pay"><div class="amt">$8</div><div class="per">flat, per job</div></div></div>
+          <p class="desc">A buyer paid for this card online and gave their shipping address at checkout — the address comes with the claim. Sleeve the card, pack it in a rigid mailer, label it, and drop it at the post office.</p>
+          <div class="meta"><span>Home base — Springfield, MO</span><span>0 mi</span><span>~15 min</span><span>Photo proof required</span></div>
+          <div><span class="exbadge">Example job</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hh-band" id="post">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:1.4rem">
+        <p class="eyebrow">Post a job</p>
+        <h2>Post yours</h2>
+        <p class="lead" style="margin-top:.8rem">Fill out the form, send it in Step 1, then pay in Step 2 to activate it. Our goal is to be faster, more efficient, and friendlier than our competition — the AI makes the perfect match, and a friendly local person does the work.</p>
+      </div>
+      <form class="post-form" id="jobPostForm" novalidate>
+        <div class="field">
+          <label for="jpTitle">Job title *</label>
+          <input id="jpTitle" type="text" placeholder="e.g. Photograph the blue house on Elm St" autocomplete="off">
+          <div class="field-error" id="err-jpTitle"></div>
+        </div>
+        <div class="field">
+          <label for="jpCategory">Category *</label>
+          <select id="jpCategory">
+            <option value="">Choose a category</option>
+            <option>Verify in person</option>
+            <option>Pick up &amp; deliver</option>
+            <option>Property check</option>
+            <option>In-person visit</option>
+            <option>Install &amp; assembly</option>
+            <option>Pack &amp; ship an order</option>
+            <option>Something else</option>
+          </select>
+          <div class="field-error" id="err-jpCategory"></div>
+        </div>
+        <div class="field">
+          <label for="jpTier">Tier *</label>
+          <select id="jpTier">
+            <option value="">Choose a tier</option>
+            <option>Open</option>
+            <option>Skilled</option>
+            <option>Licensed-verified</option>
+          </select>
+          <div class="field-error" id="err-jpTier"></div>
+        </div>
+        <div class="field">
+          <label for="jpDesc">Description *</label>
+          <textarea id="jpDesc" rows="4" placeholder="Describe the job, what needs doing, and any details the worker needs."></textarea>
+          <div class="field-error" id="err-jpDesc"></div>
+        </div>
+        <div class="field">
+          <label for="jpFrom">Location — From *</label>
+          <input id="jpFrom" type="text" placeholder="Where the job starts / job location" autocomplete="off">
+          <div class="field-error" id="err-jpFrom"></div>
+        </div>
+        <div class="field">
+          <label for="jpTo">Location — To <span style="color:var(--muted);font-weight:500">(optional, for pickup/delivery jobs)</span></label>
+          <input id="jpTo" type="text" placeholder="Drop-off location, if any" autocomplete="off">
+          <div class="field-error" id="err-jpTo"></div>
+        </div>
+        <div class="field">
+          <label for="jpPrice">Your price in USD *</label>
+          <input id="jpPrice" type="number" inputmode="decimal" step="0.01" min="0.01" max="10000" placeholder="e.g. 40.00">
+          <div class="hint">Must be more than $0, up to $10,000, max 2 decimals. You set it — the worker keeps 100% of this price.</div>
+          <p class="fee-line" id="jpFeeLine">Enter a price to see the 15% fee and your total.</p>
+          <div class="field-error" id="err-jpPrice"></div>
+        </div>
+        <div class="field">
+          <label for="jpPhoto">Photo proof required</label>
+          <select id="jpPhoto">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <div class="field-error" id="err-jpPhoto"></div>
+        </div>
+        <div class="field">
+          <label for="jpName">Your name *</label>
+          <input id="jpName" type="text" placeholder="Your full name" autocomplete="name">
+          <div class="field-error" id="err-jpName"></div>
+        </div>
+        <div class="field">
+          <label for="jpContact">Contact — email or phone *</label>
+          <input id="jpContact" type="text" placeholder="Email or phone we can reach you at" autocomplete="email">
+          <div class="field-error" id="err-jpContact"></div>
+        </div>
+        <p class="post-terms">You set the price. We add 15% on top — that's the whole cost. The worker keeps 100% of your price plus 100% of tips.</p>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;min-height:56px">Submit job post — Step 1: Send it</button>
+        <p class="small muted" style="margin:12px 0 0">Submitting opens your email app with your post addressed to the operator. That email is your submission of record.</p>
+      </form>
+
+      <div class="step2" id="postStep2" hidden>
+        <h3 style="margin-bottom:.6rem">Step 2 — Pay to activate</h3>
+        <p><strong>Your post was composed and your email app was opened.</strong> The operator reviews each post and the job goes on the board once its payment is matched.</p>
+        <p class="fee-line" id="jpTotalLine" style="color:#fff;font-size:1rem"></p>
+        <p style="margin:1rem 0"><a class="btn btn-primary" href="https://buy.stripe.com/00w6oHe4Fd6Ad8pelv3ks1x" target="_blank" rel="noopener" style="min-height:56px">Pay for your job post</a></p>
+        <p>Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers. Any major card, bank transfer, Venmo, Cash App, or PayPal also works.</p>
+        <p>Pay your price plus the 15% fee shown above, and use the same name and contact you put on this form so we can match your payment to your post.</p>
+        <hr style="border:none;border-top:1px solid var(--line);margin:18px 0">
+        <p><strong>If your email app didn't open, copy your post and email it to joshuajdawg0350@gmail.com</strong></p>
+        <textarea class="fallback-box" id="jpComposed" readonly aria-label="Your composed job post — copy and email it"></textarea>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <button type="button" class="btn btn-primary" id="jpCopyBtn">Copy your post</button>
+          <a class="btn btn-ghost" href="#jobs" style="background:transparent;border-color:var(--line-strong)">← Back to the board</a>
+        </div>
+        <p id="jpCopyOk" hidden style="color:var(--good)">Copied — now paste it into an email to joshuajdawg0350@gmail.com</p>
+        <p id="jpCopyMsg" hidden>Copy didn't work here — select the text and copy it manually.</p>
+      </div>
+
+      <p style="margin-top:2rem"><a class="backlink" href="index.html">← Back to Human Hands home</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="hh-foot">
+  <div class="wrap">
+    <p class="guarantee" style="border-top:none;padding-top:0"><strong>The J-Dawgs Fix-It Guarantee:</strong> report any problem with a job and we fix it — no hassle, no runaround. <a href="https://jdawgsindustries.com/support.html">Report a problem</a></p>
+    <p class="tagline" style="font-size:clamp(1.15rem,2.4vw,1.6rem);margin:1.6rem 0 .5rem"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
+    <p class="foot-note">Human Hands is a service of J-Dawgs Industries, Springfield, MO. © 2026 Joshua Dawson. <a href="https://jdawgsindustries.com/">jdawgsindustries.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function jpVal(id){ var el=document.getElementById(id); return el ? el.value.trim() : ""; }
+  function jpMoney(n){ return "$"+n.toFixed(2); }
+  function jpSetErr(id,msg){
+    var e=document.getElementById("err-"+id);
+    if(e){ e.textContent=msg||""; e.className="field-error"+(msg?" show":""); }
+    return !msg;
+  }
+  function jpUpdateFee(){
+    var raw=jpVal("jpPrice"); var line=document.getElementById("jpFeeLine");
+    if(!line) return;
+    var price=parseFloat(raw);
+    if(raw && !isNaN(price) && price>0){
+      var fee=Math.round(price*0.15*100)/100; var total=Math.round((price+fee)*100)/100;
+      line.innerHTML="Your price: <strong>"+jpMoney(price)+"</strong> · 15% fee: <strong>"+jpMoney(fee)+"</strong> · <strong>Total to pay: "+jpMoney(total)+"</strong>";
+    } else {
+      line.textContent="Enter a price to see the 15% fee and your total.";
+    }
+  }
+  var jpPriceEl=document.getElementById("jpPrice");
+  if(jpPriceEl){ jpPriceEl.addEventListener("input", jpUpdateFee); jpPriceEl.addEventListener("change", jpUpdateFee); }
+  var jobForm=document.getElementById("jobPostForm");
+  if(jobForm){
+    jobForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var title=jpVal("jpTitle"), cat=jpVal("jpCategory"), tier=jpVal("jpTier"), desc=jpVal("jpDesc"),
+          fromLoc=jpVal("jpFrom"), toLoc=jpVal("jpTo"), priceRaw=jpVal("jpPrice"),
+          photo=jpVal("jpPhoto")||"Yes", name=jpVal("jpName"), contact=jpVal("jpContact");
+      var ok=true;
+      if(!jpSetErr("jpTitle", title?"":"Job title is required.")) ok=false;
+      if(!jpSetErr("jpCategory", cat?"":"Please choose a category.")) ok=false;
+      if(!jpSetErr("jpTier", tier?"":"Please choose a tier.")) ok=false;
+      if(!jpSetErr("jpDesc", desc?"":"Description is required.")) ok=false;
+      if(!jpSetErr("jpFrom", fromLoc?"":"Location — From is required.")) ok=false;
+      jpSetErr("jpTo","");
+      var price=parseFloat(priceRaw); var priceErr="";
+      if(!priceRaw) priceErr="Your price is required.";
+      else if(isNaN(price)) priceErr="Enter a valid price.";
+      else if(price<=0) priceErr="Price must be more than $0.";
+      else if(price>10000) priceErr="Price must be $10,000 or less.";
+      else if(!/^\d+(\.\d{1,2})?$/.test(priceRaw)) priceErr="Price can have at most 2 decimals.";
+      if(!jpSetErr("jpPrice", priceErr)) ok=false;
+      if(!jpSetErr("jpName", name?"":"Your name is required.")) ok=false;
+      if(!jpSetErr("jpContact", contact?"":"Contact — email or phone is required.")) ok=false;
+      if(!ok){
+        var firstErr=document.querySelector(".field-error.show");
+        if(firstErr) firstErr.scrollIntoView({behavior:"smooth", block:"center"});
+        return;
+      }
+      var fee=Math.round(price*0.15*100)/100; var total=Math.round((price+fee)*100)/100;
+      var lines=[
+        "HUMAN HANDS JOB POST",
+        "",
+        "Job title: "+title,
+        "Category: "+cat,
+        "Tier: "+tier,
+        "Description: "+desc,
+        "Location — From: "+fromLoc,
+        "Location — To: "+(toLoc||"(none)"),
+        "Your price in USD: "+jpMoney(price),
+        "Platform fee (15%): "+jpMoney(fee),
+        "Total to pay: "+jpMoney(total),
+        "Photo proof required: "+photo,
+        "Your name: "+name,
+        "Contact — email or phone: "+contact
+      ];
+      var body=lines.join("\n");
+      var composed=document.getElementById("jpComposed"); if(composed) composed.value=body;
+      var totalLine=document.getElementById("jpTotalLine");
+      if(totalLine) totalLine.innerHTML="Your price: <strong>"+jpMoney(price)+"</strong> · 15% fee: <strong>"+jpMoney(fee)+"</strong> · <strong>Total to pay: "+jpMoney(total)+"</strong>";
+      var step2=document.getElementById("postStep2"); if(step2){ step2.hidden=false; }
+      var copyMsg=document.getElementById("jpCopyMsg"); if(copyMsg) copyMsg.hidden=true;
+      var copyOk=document.getElementById("jpCopyOk"); if(copyOk) copyOk.hidden=true;
+      var subject="HUMAN HANDS JOB POST — "+title;
+      var mailto="mailto:joshuajdawg0350@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+      if(step2) step2.scrollIntoView({behavior:"smooth", block:"start"});
+      setTimeout(function(){ try{ var a=document.createElement("a"); a.href=mailto; a.style.display="none"; document.body.appendChild(a); a.click(); setTimeout(function(){ if(a.parentNode) a.parentNode.removeChild(a); }, 500); }catch(err){} }, 350);
+    });
+  }
+  var copyBtn=document.getElementById("jpCopyBtn");
+  if(copyBtn){ copyBtn.addEventListener("click", function(){
+    var box=document.getElementById("jpComposed"); var okEl=document.getElementById("jpCopyOk"); var msgEl=document.getElementById("jpCopyMsg");
+    function fail(){ if(msgEl) msgEl.hidden=false; if(okEl) okEl.hidden=true; if(box){ box.focus(); box.select(); } }
+    function done(){ if(okEl) okEl.hidden=false; if(msgEl) msgEl.hidden=true; }
+    if(!box || !box.value){ fail(); return; }
+    box.focus(); box.select();
+    var copied=false;
+    try{ copied=document.execCommand && document.execCommand("copy"); }catch(e){ copied=false; }
+    if(copied){ done(); return; }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(box.value).then(done).catch(fail);
+    } else { fail(); }
+  }); }
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+</script>
+</body>
+</html>
