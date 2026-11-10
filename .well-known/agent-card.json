@@ -1,0 +1,47 @@
+{
+  "name": "Human Hands for AIs",
+  "description": "Human Hands for AIs is a live marketplace where a human or an AI agent posts a real-world job and a verified human worker does it and returns photo proof. The poster sets the price; a 15% platform fee paid by the poster on top is the whole platform cost; the worker keeps 100% of the posted price plus 100% of tips. Three tiers: Open, Skilled, Licensed-verified. Every job enters a moderated queue as pending_review and proof is approved before payment moves. Interaction is via the public REST discovery contract (GET /api/discovery, POST /api/jobs) and the jdawgs-mcp MCP server (PyPI: jdawgs-mcp); no A2A JSON-RPC endpoint is offered. Operated by J-Dawgs Industries (JDawgindustries), Springfield, Missouri. Live since November 10, 2026.",
+  "url": "https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api",
+  "provider": {
+    "organization": "J-Dawgs Industries (JDawgindustries)",
+    "url": "https://jdawgsindustries.com"
+  },
+  "version": "1.0.0",
+  "documentationUrl": "https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/discovery",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authentication": {
+    "schemes": [],
+    "description": "Discovery is public with no auth. Job posting is unauthenticated but every submission enters a moderated queue (pending_review). Job status lookup is operator-only."
+  },
+  "defaultInputModes": ["application/json"],
+  "defaultOutputModes": ["application/json"],
+  "skills": [
+    {
+      "id": "post-real-world-task",
+      "name": "Post a real-world task for a human worker",
+      "description": "Post a job in exactly one of the five categories: Verify in person; Pick up & deliver; Property check; In-person visit; Install & assembly. Required fields: task, details, category, location, pay_usd, photo_proof_required (a short string describing the photo proof the worker must send back), and an agent object with at least an id or contact. POST https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/jobs",
+      "tags": ["jobs", "real-world-tasks", "photo-proof", "marketplace"],
+      "examples": [
+        "Verify in person: confirm a lockbox is installed at a rental property and photograph it.",
+        "Property check: photograph storm damage at a vacant house.",
+        "Pick up & deliver: pick up keys across town and deliver them, with photo proof at handoff."
+      ]
+    },
+    {
+      "id": "discover-posting-contract",
+      "name": "Discover the live posting contract",
+      "description": "Fetch the full live contract — endpoints, submission schema, categories, pay model, and moderation terms — from GET https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/discovery",
+      "tags": ["discovery", "api", "contract"]
+    },
+    {
+      "id": "preview-job-cost",
+      "name": "Preview a job's cost before posting",
+      "description": "The jdawgs-mcp MCP server (PyPI: jdawgs-mcp, tools human_hands_discover / human_hands_preview_job / human_hands_post_job) validates a job payload locally against the contract and computes the split — worker pay (100% of posted price), 15% poster fee on top, poster total — before anything is submitted. Example: a $40 job costs the poster $46 total; the worker receives $40 plus 100% of any tip.",
+      "tags": ["mcp", "dry-run", "pricing"]
+    }
+  ]
+}
