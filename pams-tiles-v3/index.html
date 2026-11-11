@@ -412,11 +412,12 @@
         <p class="home-sub">Find the hidden words in the tiles.<br />Take all the time you want &mdash; there&rsquo;s no clock and no way to lose.</p>
         <div class="home-btns">
           <button class="btn primary" id="btn-play">&#9654;&nbsp; Play</button>
+          <button class="btn" id="btn-newgame">Start New Game</button>
           <button class="btn" id="btn-levels">Choose a Level</button>
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 5</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 6</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -728,7 +729,27 @@
     }
 
     /* ---------- Home / levels ---------- */
+    var ngArmed = false, ngTimer = null;
+    function resetNewGameBtn(){
+      ngArmed = false;
+      if (ngTimer){ clearTimeout(ngTimer); ngTimer = null; }
+      var b = $("btn-newgame"); if (b) b.innerHTML = "Start New Game";
+    }
+    function startNewGame(){
+      var hasProgress = Object.keys(save.done).length > 0 || Object.keys(save.best).length > 0;
+      if (!hasProgress){ resetNewGameBtn(); startLevel(0); return; }
+      if (!ngArmed){
+        ngArmed = true;
+        $("btn-newgame").innerHTML = "Start over? Tap again";
+        ngTimer = setTimeout(resetNewGameBtn, 4000);
+        return;
+      }
+      resetNewGameBtn();
+      save.done = {}; save.best = {}; save.last = 0; persist();
+      startLevel(0);
+    }
     function refreshHome(){
+      resetNewGameBtn();
       var doneCount = Object.keys(save.done).length;
       $("home-progress").textContent = doneCount === 0
         ? "30 levels, made just for you."
@@ -1012,6 +1033,7 @@
       });
       bindTap($("btn-levels"), function(){ renderLevels(); show("screen-levels"); });
       bindTap($("btn-how"), function(){ show("screen-how"); });
+      bindTap($("btn-newgame"), startNewGame);
       bindTap($("btn-levels-back"), function(){ refreshHome(); show("screen-home"); });
       bindTap($("btn-how-back"), function(){ show("screen-home"); });
       bindTap($("btn-game-back"), function(){ refreshHome(); show("screen-home"); });
