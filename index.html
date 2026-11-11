@@ -23,6 +23,29 @@
 .hh-roster{margin-top:1rem;font-family:var(--font-data);font-size:.8rem;letter-spacing:.1em;color:#fff}
 .hh-roster a{color:#fff}
 @media (max-width:640px){.hh-first .wrap{padding-top:5.6rem}}
+/* ---- Hustle City Arcade band (homepage, under the Human Hands hero) ---- */
+.arcade-band-home{position:relative;padding:4.5rem 0 4.25rem;overflow:hidden;background:#05080E url("games/assets/hero-street.webp") center 30%/cover no-repeat;border-top:1px solid var(--line)}
+.arcade-band-home::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.90) 0%,rgba(5,8,14,.80) 55%,#05080E 100%)}
+.arcade-band-home .wrap{position:relative}
+.arcade-eyebrow{color:#6FC3FF}
+.arcade-eyebrow::before{background:#6FC3FF}
+.arcade-title{font-family:var(--font-display);font-weight:800;font-stretch:118%;letter-spacing:-.01em;line-height:.98;font-size:clamp(2.4rem,7vw,4.2rem);margin:0;text-transform:uppercase;background:linear-gradient(180deg,#FFFFFF 0%,#D7DEE9 34%,#79869B 49%,#EDF1F7 60%,#9AA7BB 82%,#E6EBF3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 14px rgba(63,169,245,.28))}
+.arcade-promises{display:flex;flex-wrap:wrap;gap:.35rem 1.8rem;margin-top:1rem;font-family:var(--font-display);font-weight:800;font-size:clamp(1.02rem,3.4vw,1.35rem);color:#fff}
+.arcade-promises .eb{color:#6FC3FF}
+.arcade-band-home .lead{color:#D9E2EF;max-width:56ch;margin-top:.85rem}
+.arcade-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.arcade-card{background:linear-gradient(165deg,var(--panel-2),var(--panel) 65%);border:1px solid var(--line-strong);border-radius:12px;overflow:hidden}
+.arcade-card img{width:100%;height:180px;object-fit:cover;display:block}
+.arcade-card-body{padding:1.15rem 1.3rem 1.3rem}
+.arcade-card-body h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.01em}
+.arcade-card-body p{margin:.45rem 0;font-size:.94rem}
+.arcade-price{font-family:var(--font-display);font-weight:800;font-size:1.45rem;color:#fff}
+.arcade-price small{font-family:var(--font-body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-left:.35rem}
+.arcade-demo{font-weight:700;font-size:.92rem;color:#6FC3FF;text-decoration:none}
+.arcade-demo:hover{text-decoration:underline}
+.arcade-btn{background:linear-gradient(180deg,#6FC3FF,#2B7FD4);color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
+.arcade-btn:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
+@media (max-width:700px){.arcade-cards{grid-template-columns:1fr}.arcade-card img{height:140px}.arcade-band-home{padding:3.25rem 0 3rem}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"J-Dawgs Industries","alternateName":["J-DAWGS INDUSTRIES","JDawgs Industries","J-Dawgs"],"founder":{"@type":"Person","name":"Joshua Dawson"},"address":{"@type":"PostalAddress","addressLocality":"Springfield","addressRegion":"MO","addressCountry":"US"},"email":"joshuajdawg0350@gmail.com","sameAs":["https://linktr.ee/jdawgs","https://jdawgs.gumroad.com","https://github.com/joshuajdawg0350","https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8","https://jdawgsindustries.com/human-hands/","https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY","https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"]}
@@ -43,6 +66,7 @@
         <li><a href="human-hands/">Human Hands</a></li>
         <li><a href="agent-services.html">Agent Services</a></li>
         <li><a href="apps.html">Apps</a></li>
+        <li><a href="games/">Arcade</a></li>
         <li><a href="trading-post.html">Trading Post</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="press.html">Press</a></li>
@@ -62,6 +86,38 @@
     </div>
     <p class="hh-payline"><strong>You set the price.</strong> The worker keeps 100% of it, plus 100% of tips. A flat 15% on top is the whole cost — no subscription, no contract, no minimums.</p>
     <p class="hh-roster">FOUNDING ROSTER: 10 OF 100 WORKERS IN — 90 SEATS OPEN · <a href="human-hands/">HOW HUMAN HANDS WORKS →</a></p>
+  </div>
+</section>
+
+<section class="arcade-band-home" id="arcade">
+  <div class="wrap">
+    <p class="eyebrow arcade-eyebrow">Our own game &amp; app store</p>
+    <h2 class="arcade-title">Hustle City Arcade</h2>
+    <p class="arcade-promises"><span class="eb">No ads. Ever.</span><span>We never sell your information.</span></p>
+    <p class="lead"><strong>Real apps. Own icon. No ads.</strong> Our games are sold as apps with their own home-screen icons — and every one has a free web demo you can play right now, no install. One payment each, yours forever.</p>
+    <div class="arcade-cards">
+      <article class="arcade-card">
+        <img src="games/assets/hc2-cover.webp" alt="Hustle City 2 — King Balsey beside the black Charger and the chrome robot on a rainy neon street" width="1920" height="1120" loading="lazy" style="object-position:center 12%">
+        <div class="arcade-card-body">
+          <h3>Hustle City 2</h3>
+          <p>The interactive sequel — seven cities open from day one, a two-screen street market, a million-dollar run, and a street-craps throne match against King Balsey.</p>
+          <p class="arcade-price">$4.99<small>one-time · the app</small></p>
+          <p style="margin:.2rem 0 0"><a class="arcade-demo" href="hustle-city-2-demo/">▶ Play the free demo</a></p>
+        </div>
+      </article>
+      <article class="arcade-card">
+        <img src="games/assets/hc1-cover.webp" alt="Hustle City — chrome lettering over a black Charger on a rainy neon street" width="1920" height="1120" loading="lazy">
+        <div class="arcade-card-body">
+          <h3>Hustle City</h3>
+          <p>The original street-trading game. Buy low, sell high, stay ahead of the law — 30 days to turn a small stake into a fortune across the city's neighborhoods.</p>
+          <p class="arcade-price">$1.99<small>one-time · the app</small></p>
+          <p style="margin:.2rem 0 0"><a class="arcade-demo" href="hustle-city-demo/">▶ Play the free demo</a></p>
+        </div>
+      </article>
+    </div>
+    <div class="hero-actions">
+      <a class="btn arcade-btn" href="games/">Enter the Arcade</a>
+    </div>
   </div>
 </section>
 
@@ -94,6 +150,7 @@
       <a href="https://apify.com/jdawgs/j-dawgs-verified-local-business-data"><b>Verified Local Business Data</b><span>Verified Google Maps business data, on Apify</span></a>
       <a href="trading-post.html"><b>J-Dawgs Trading Post</b><span>Cards, coins, collectibles &amp; consignment</span></a>
       <a href="apps.html"><b>J-Dawgs Apps</b><span>One-time-purchase phone apps, no subscriptions</span></a>
+      <a href="games/"><b>Hustle City Arcade</b><span>Our own ad-free game &amp; app store — real apps, own icons, free demos</span></a>
       <a href="https://joshuajdawg0350.github.io/jdawgs-hub/graphics-pack-studio.html"><b>Graphics Pack Studio</b><span>A design studio that runs in your browser</span></a>
       <a href="voiceproofing.html"><b>Voiceproofing™</b><span>Prove a voice on the phone is really them — a new category, seven free tools</span></a>
     </div>
@@ -215,6 +272,7 @@
         <a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"><b>Trading Post</b><span>Cards, coins, collectibles, consignment</span></a>
         <a href="agent-services.html"><b>Agent Services</b><span>Fixed-price research &amp; listing work</span></a>
         <a href="q-day-ledger.html"><b>Q-Day Ledger™</b><span>Cryptographic inventory &amp; post-quantum migration planning for the 2030 deadlines</span></a>
+        <a href="games/"><b>Hustle City Arcade</b><span>Our own ad-free game &amp; app store — games &amp; apps, sold as apps</span></a>
         <a href="hustle-city-demo/"><b>▶ Hustle City — free demo</b><span>Play a full week of the original, right in your browser</span></a>
         <a href="hustle-city-2-demo/"><b>▶ Hustle City 2 — free demo</b><span>The next one, in the works — play its demo week and see how far it's come</span></a>
       </div>
@@ -233,6 +291,7 @@
           <li><a href="human-hands/">Human Hands</a></li>
           <li><a href="agent-services.html">Agent Services</a></li>
           <li><a href="apps.html">Apps</a></li>
+          <li><a href="games/">Hustle City Arcade</a></li>
           <li><a href="trading-post.html">Trading Post</a></li>
         </ul>
       </div>
@@ -243,6 +302,7 @@
           <li><a href="https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY">Agent Exchange</a></li>
           <li><a href="human-hands/board.html">Human Hands board</a></li>
           <li><a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI">Trading Post shop</a></li>
+          <li><a href="games/">Hustle City Arcade</a></li>
           <li><a href="https://linktr.ee/jdawgs">linktr.ee/jdawgs</a></li>
         </ul>
       </div>

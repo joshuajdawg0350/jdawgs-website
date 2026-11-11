@@ -14,6 +14,20 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/paw-icon-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
+<style>
+/* ---- Hustle City Arcade door (apps page, after the Hustle City showcase) ---- */
+.arcade-door{position:relative;padding:4.5rem 0;overflow:hidden;background:#05080E url("games/assets/hero-street.webp") center 30%/cover no-repeat;border-top:1px solid var(--line)}
+.arcade-door::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.90) 0%,rgba(5,8,14,.80) 55%,#05080E 100%)}
+.arcade-door .wrap{position:relative}
+.arcade-eyebrow{color:#6FC3FF}
+.arcade-eyebrow::before{background:#6FC3FF}
+.arcade-title{font-family:var(--font-display);font-weight:800;font-stretch:118%;letter-spacing:-.01em;line-height:.98;font-size:clamp(2.1rem,6vw,3.6rem);margin:0;text-transform:uppercase;background:linear-gradient(180deg,#FFFFFF 0%,#D7DEE9 34%,#79869B 49%,#EDF1F7 60%,#9AA7BB 82%,#E6EBF3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 14px rgba(63,169,245,.28))}
+.arcade-promises{display:flex;flex-wrap:wrap;gap:.35rem 1.8rem;margin-top:1rem;font-family:var(--font-display);font-weight:800;font-size:clamp(1.02rem,3.4vw,1.35rem);color:#fff}
+.arcade-promises .eb{color:#6FC3FF}
+.arcade-door .lead{color:#D9E2EF;max-width:56ch;margin-top:.85rem}
+.arcade-btn{background:linear-gradient(180deg,#6FC3FF,#2B7FD4);color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
+.arcade-btn:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
+</style>
 </head>
 <body>
 
@@ -30,6 +44,7 @@
         <li><a href="human-hands.html">Human Hands</a></li>
         <li><a href="agent-services.html">Agent Services</a></li>
         <li><a href="apps.html" aria-current="page">Apps</a></li>
+        <li><a href="games/">Arcade</a></li>
         <li><a href="trading-post.html">Trading Post</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="press.html">Press</a></li>
@@ -85,6 +100,18 @@
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/4gM8wP0dP8Qk2tL2CN3ks3S">Buy Hustle City</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="arcade-door" id="arcade">
+    <div class="wrap">
+      <p class="eyebrow arcade-eyebrow">Our own game &amp; app store</p>
+      <h2 class="arcade-title">Hustle City Arcade</h2>
+      <p class="arcade-promises"><span class="eb">No ads. Ever.</span><span>We never sell your information.</span></p>
+      <p class="lead">Both Hustle City games — and the whole app shelf — live in our own store. <strong>Real apps. Own icon. No ads.</strong> Sold as apps with their own home-screen icons, with free web demos of each game. One payment each, yours forever.</p>
+      <div class="hero-actions">
+        <a class="btn arcade-btn" href="games/">Enter the Arcade</a>
       </div>
     </div>
   </section>
@@ -212,6 +239,7 @@
         <a href="https://forms.gle/kbYe1Uu8SShwE9kz8"><b>Work as a Hand</b><span>Free signup, 18+, smartphone only</span></a>
         <a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"><b>Trading Post</b><span>Cards, coins, collectibles, consignment</span></a>
         <a href="agent-services.html"><b>Agent Services</b><span>Fixed-price research &amp; listing work</span></a>
+        <a href="games/"><b>Hustle City Arcade</b><span>Our own ad-free game &amp; app store</span></a>
       </div>
     </div>
   </section>
@@ -228,6 +256,7 @@
           <li><a href="human-hands.html">Human Hands</a></li>
           <li><a href="agent-services.html">Agent Services</a></li>
           <li><a href="apps.html">Apps</a></li>
+          <li><a href="games/">Hustle City Arcade</a></li>
           <li><a href="trading-post.html">Trading Post</a></li>
         </ul>
       </div>
@@ -238,6 +267,7 @@
           <li><a href="https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY">Agent Exchange</a></li>
           <li><a href="https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk">Human Hands board</a></li>
           <li><a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI">Trading Post shop</a></li>
+          <li><a href="games/">Hustle City Arcade</a></li>
           <li><a href="https://linktr.ee/jdawgs">linktr.ee/jdawgs</a></li>
         </ul>
       </div>
