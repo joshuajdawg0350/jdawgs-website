@@ -165,7 +165,7 @@
       .howto-body li{ margin-bottom:10px; }
 
       /* ---------- game ---------- */
-      #screen-game{ height:100dvh; height:100vh; min-height:0; }
+      #screen-game{ height:100vh; height:100dvh; max-height:100vh; max-height:100dvh; overflow:hidden; min-height:0; }
       .game-head{ display:flex; align-items:center; gap:10px; padding:10px 12px 2px; }
       .game-head .lvl{ flex:1; text-align:center; }
       .game-head .lvl .n{ font-size:21px; font-weight:900; }
@@ -437,7 +437,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 8</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 9</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -576,8 +576,152 @@
       { theme:"Spring Rain",      size:5, words:["RAIN","CLOUD","PUDDLE","BOOTS","BLOOM","SPROUT"] },
       { theme:"Harvest Time",     size:5, words:["PUMPKIN","CORN","WHEAT","APPLE","CIDER","BARN"] },
       { theme:"Story Time",       size:5, words:["CASTLE","DRAGON","KNIGHT","MAGIC","QUEST","TALE"] },
-      { theme:"Home Sweet Home",  size:5, words:["FAMILY","LOVE","HOME","HEARTH","KITTEN","GARDEN"] }
+      { theme:"Home Sweet Home",  size:5, words:["FAMILY","LOVE","HOME","HEARTH","KITTEN","GARDEN"] },
+{ theme:"Sunny Porch",    size:4, words:["SUN","SHADE","REST","TEA","ROCK","AIR"] },
+      { theme:"Berry Patch",    size:4, words:["BERRY","PLUM","PEACH","GRAPE","MELON"] },
+      { theme:"Honey Bees",     size:4, words:["HONEY","BEE","HIVE","SWEET","BUZZ"] },
+      { theme:"Puppy Love",     size:4, words:["PUPPY","BONE","RUN","BARK","WAG","PLAY"] },
+      { theme:"Kitten Play",    size:4, words:["KITTY","YARN","PURR","PAWS","NAP"] },
+      { theme:"Soup's On",      size:4, words:["SOUP","STEW","BOWL","CORN","BEAN","HOT"] },
+      { theme:"Fresh Bread",    size:4, words:["BREAD","ROLL","OVEN","WARM","LOAF"] },
+      { theme:"Candy Shop",     size:4, words:["CANDY","GUM","MINT","SUGAR","SWEET"] },
+      { theme:"Rainy Day",      size:4, words:["RAIN","WET","BOOT","COAT","DRIP","GRAY"] },
+      { theme:"Snow Day",       size:4, words:["SNOW","SLED","COLD","MITTS","ICE"] },
+      { theme:"Butterfly",      size:4, words:["WING","FLY","SOFT","GARDEN","AIRY"] },
+      { theme:"Ladybugs",       size:4, words:["BUG","RED","SPOT","LEAF","TINY","ANT"] },
+      { theme:"Rose Garden",    size:4, words:["ROSE","PINK","THORN","BLOOM","PETAL"] },
+      { theme:"Herb Garden",    size:4, words:["MINT","SAGE","HERB","BASIL","GREEN"] },
+      { theme:"Sweet Corn",     size:4, words:["CORN","COB","GOLD","FIELD","SWEET"] },
+      { theme:"Apple Pie",      size:4, words:["APPLE","PIE","CRUST","BAKE","SPICE"] },
+      { theme:"Lemonade",       size:4, words:["LEMON","COLD","SOUR","CUP","SIP","ICE"] },
+      { theme:"Ice Cream",      size:4, words:["CREAM","CONE","SCOOP","COLD","FUDGE"] },
+      { theme:"Campfire",       size:4, words:["FIRE","WOOD","WARM","LOG","GLOW","STAR"] },
+      { theme:"Starlight",      size:4, words:["STAR","MOON","NIGHT","DARK","SHINE"] },
+      { theme:"Pearl's Day",    size:5, words:["PEARL","BONE","WALK","TREAT","LEASH","PARK"] },
+      { theme:"Dog Days",       size:5, words:["DOG","BARK","PAWS","COLLAR","FETCH","BOWL"] },
+      { theme:"Cat Nap",        size:5, words:["CAT","PURR","WHISKER","TAIL","SLEEP","SOFT"] },
+      { theme:"Bird Song",      size:5, words:["BIRD","SONG","NEST","WING","FEATHER","TUNE"] },
+      { theme:"Fish Pond",      size:5, words:["FISH","POND","WATER","SPLASH","FIN","REED"] },
+      { theme:"Horse Farm",     size:5, words:["HORSE","SADDLE","HAY","STABLE","GALLOP","MANE"] },
+      { theme:"Bunny Trail",    size:5, words:["BUNNY","HOP","CARROT","EARS","TRAIL","SOFT"] },
+      { theme:"Turtle Cove",    size:5, words:["TURTLE","SHELL","SLOW","COVE","SAND","SWIM"] },
+      { theme:"Frog Pond",      size:5, words:["FROG","LILY","HOP","POND","GREEN","CROAK"] },
+      { theme:"Owl Night",      size:5, words:["OWL","NIGHT","HOOT","MOON","WISE","DARK"] },
+      { theme:"Autumn Leaves",  size:5, words:["AUTUMN","LEAF","MAPLE","GOLD","CRISP","FALL"] },
+      { theme:"Pumpkin Patch",  size:5, words:["PUMPKIN","PATCH","ORANGE","VINE","HARVEST","PIE"] },
+      { theme:"Cider Mill",     size:5, words:["CIDER","APPLE","MILL","PRESS","SWEET","JUG"] },
+      { theme:"Thanksgiving",   size:5, words:["TURKEY","THANKS","FEAST","FAMILY","GRAVY","PIE"] },
+      { theme:"Christmas Eve",  size:5, words:["SANTA","TREE","BELLS","GIFTS","HOLLY","EVE"] },
+      { theme:"Snowman",        size:5, words:["SNOWMAN","CARROT","SCARF","BUTTON","COLD","HAT"] },
+      { theme:"Valentine",      size:5, words:["HEART","ROSES","LOVE","CARD","CANDY","SWEET"] },
+      { theme:"Easter Eggs",    size:5, words:["EASTER","EGGS","BUNNY","BASKET","SPRING","HUNT"] },
+      { theme:"Fireworks",      size:5, words:["SPARK","LIGHT","BOOM","NIGHT","GLORY","SKY"] },
+      { theme:"Birthday",       size:5, words:["CAKE","CANDLES","PARTY","GIFTS","SONG","WISH"] },
+      { theme:"Wedding Day",    size:5, words:["BRIDE","RING","VOWS","DANCE","CAKE","BELLS"] },
+      { theme:"Baby Shower",    size:5, words:["BABY","SHOWER","GIFTS","PINK","BLUE","CRADLE"] },
+      { theme:"Family Table",   size:5, words:["FAMILY","TABLE","DINNER","LAUGH","SHARE","LOVE"] },
+      { theme:"Sunday Best",    size:5, words:["SUNDAY","DRESS","HAT","SONG","SMILE","BEST"] },
+      { theme:"Church Bells",   size:5, words:["CHURCH","BELLS","CHOIR","SONG","SUNDAY","PEACE"] },
+      { theme:"Front Porch",    size:5, words:["PORCH","SWING","SHADE","BREEZE","CHAIR","TEA"] },
+      { theme:"Rocking Chair",  size:5, words:["ROCKER","CHAIR","CREAK","PORCH","REST","CALM"] },
+      { theme:"Quilt Time",     size:5, words:["QUILT","PATCH","THREAD","WARM","SEW","CLOTH"] },
+      { theme:"Sewing Kit",     size:5, words:["NEEDLE","THREAD","BUTTON","SEW","PATCH","KIT"] },
+      { theme:"Knitting",       size:5, words:["YARN","KNIT","SCARF","SWEATER","WOOL","STITCH"] },
+      { theme:"Farmers Market", size:5, words:["MARKET","CORN","HONEY","EGGS","FRESH","STALL"] },
+      { theme:"Country Fair",   size:5, words:["FAIR","PRIZE","RIDES","MUSIC","BOOTH","CROWD"] },
+      { theme:"Ferris Wheel",   size:5, words:["WHEEL","RIDE","LIGHTS","ROUND","HIGH","FAIR"] },
+      { theme:"Carousel",       size:5, words:["HORSES","ROUND","MUSIC","RIDE","LIGHTS","SPIN"] },
+      { theme:"Popcorn",        size:5, words:["POPCORN","BUTTER","SALT","WARM","BOWL","SNACK"] },
+      { theme:"Cotton Candy",   size:5, words:["COTTON","CANDY","PINK","SWEET","FLUFF","STICK"] },
+      { theme:"Summer Treats",  size:5, words:["MELON","PEACH","BERRY","LEMON","SHADE","JUICE"] },
+      { theme:"Ice Skating",    size:5, words:["SKATE","ICE","GLIDE","COLD","POND","SPIN"] },
+      { theme:"Sledding",       size:5, words:["SLED","HILL","SNOW","FAST","LAUGH","RIDE"] },
+      { theme:"Hot Cocoa",      size:5, words:["COCOA","MARSH","WARM","MUG","SWEET","STEAM"] },
+      { theme:"Gingerbread",    size:5, words:["GINGER","HOUSE","SPICE","ICING","BAKE","SWEET"] },
+      { theme:"Candy Cane",     size:5, words:["CANDY","CANE","MINT","STRIPE","SWEET","RED"] },
+      { theme:"Mistletoe",      size:5, words:["HOLLY","BERRY","GREEN","KISS","DOOR","BOW"] },
+      { theme:"New Year",       size:5, words:["YEAR","BELLS","CHEER","TOAST","NEW","HOPE"] },
+      { theme:"Good Luck",      size:5, words:["LUCK","CLOVER","WISH","CHARM","HOPE","STAR"] },
+      { theme:"Rainbow",        size:5, words:["RAINBOW","COLOR","ARC","RAIN","SUN","SKY"] },
+      { theme:"Summer Storm",   size:5, words:["STORM","THUNDER","RAIN","WIND","CLOUD","FLASH"] },
+      { theme:"April Showers",  size:5, words:["APRIL","SHOWERS","RAIN","PUDDLE","BLOOM","WET"] },
+      { theme:"May Flowers",    size:5, words:["MAY","FLOWERS","BLOOM","PETAL","SPRING","GROW"] },
+      { theme:"Garden Party",   size:5, words:["PARTY","GARDEN","GUESTS","CAKE","MUSIC","TEA"] },
+      { theme:"Wildflowers",    size:5, words:["WILD","FLOWERS","MEADOW","BEE","COLOR","GROW"] },
+      { theme:"Sunflower",      size:5, words:["FLOWER","TALL","GOLD","SEEDS","SUN","BLOOM"] },
+      { theme:"Daisy Chain",    size:5, words:["DAISY","CHAIN","WHITE","PETAL","GRASS","FIELD"] },
+      { theme:"Tulip Time",     size:5, words:["TULIP","SPRING","BULB","COLOR","BED","BLOOM"] },
+      { theme:"Lilac Bloom",    size:5, words:["LILAC","PURPLE","SWEET","BLOOM","BUSH","SCENT"] },
+      { theme:"Violet Patch",   size:5, words:["VIOLET","PURPLE","PATCH","SMALL","SHADE","BLOOM"] },
+      { theme:"Marigold",       size:5, words:["PETALS","GOLD","ORANGE","SUN","BED","BLOOM"] },
+      { theme:"Zinnia Bed",     size:5, words:["ZINNIA","BRIGHT","COLOR","BED","BLOOM","BEE"] },
+      { theme:"Peony Pink",     size:5, words:["PEONY","PINK","SOFT","PETAL","BLOOM","BUSH"] },
+      { theme:"Iris Blue",      size:5, words:["IRIS","BLUE","TALL","PETAL","BED","BLOOM"] },
+      { theme:"Lakeside",       size:5, words:["LAKE","DOCK","FISH","CALM","SHORE","BOAT"] },
+      { theme:"Fishing Trip",   size:5, words:["FISH","POLE","LAKE","WORM","BOAT","CATCH"] },
+      { theme:"Rowboat",        size:5, words:["ROWBOAT","OARS","LAKE","ROW","WATER","RIDE"] },
+      { theme:"Sail Away",      size:5, words:["SAIL","BOAT","WIND","WAVE","AWAY","LAKE"] },
+      { theme:"Shoreline",      size:5, words:["SHORE","SAND","SHELL","WAVE","WALK","WATER"] },
+      { theme:"Lighthouse",     size:5, words:["LIGHT","TOWER","BEAM","SHORE","NIGHT","GUIDE"] },
+      { theme:"Seagull",        size:5, words:["GULL","BEACH","WING","CRY","SAND","FLY"] },
+      { theme:"Dolphin",        size:5, words:["DOLPHIN","JUMP","WAVE","SMART","SWIM","FIN"] },
+      { theme:"Starfish",       size:5, words:["FISH","SAND","TIDE","STAR","SHORE","FIVE"] },
+      { theme:"Coral Reef",     size:5, words:["CORAL","REEF","FISH","COLOR","WAVE","DEEP"] },
+      { theme:"Mountain Air",   size:5, words:["PEAK","AIR","PINE","HIGH","TRAIL","VIEW"] },
+      { theme:"Tall Pines",     size:5, words:["PINE","TALL","FOREST","CONE","SHADE","GREEN"] },
+      { theme:"Cabin Life",     size:5, words:["CABIN","WOOD","FIRE","COZY","LAKE","REST"] },
+      { theme:"Trail Walk",     size:5, words:["TRAIL","WALK","BOOTS","PATH","TREES","STEP"] },
+      { theme:"Waterfall",      size:5, words:["STREAM","FALLS","MIST","ROCKS","FLOW","COOL"] },
+      { theme:"Meadow",         size:5, words:["MEADOW","GRASS","FLOWERS","BEE","SUN","OPEN"] },
+      { theme:"Berry Picking",  size:5, words:["BERRY","PICK","BASKET","SWEET","BUSH","RED"] },
+      { theme:"Golden Honey",   size:5, words:["HONEY","GOLDEN","JAR","BEE","SWEET","THICK"] },
+      { theme:"Berry Jam",      size:5, words:["JAM","BERRY","JAR","SWEET","TOAST","RED"] },
+      { theme:"Preserves",      size:5, words:["JELLY","JARS","FRUIT","SHELF","SWEET","LIDS"] },
+      { theme:"Pantry Shelf",   size:5, words:["PANTRY","SHELF","JARS","FLOUR","SUGAR","TINS"] },
+      { theme:"Cookie Jar",     size:5, words:["COOKIE","JAR","SWEET","BAKE","CHIP","MILK"] },
+      { theme:"Sugar Cookies",  size:5, words:["SUGAR","COOKIE","SWEET","BAKE","OVEN","SOFT"] },
+      { theme:"Vanilla",        size:5, words:["VANILLA","SWEET","CREAM","BEAN","SCENT","SOFT"] },
+      { theme:"Cinnamon",       size:5, words:["SCENT","SPICE","WARM","SWEET","BAKE","STICK"] },
+      { theme:"Nutmeg",         size:5, words:["NUTMEG","SPICE","WARM","BAKE","EGGS","GRATE"] },
+      { theme:"Spice Rack",     size:5, words:["SPICE","RACK","JARS","HERB","SALT","SHAKER"] },
+      { theme:"Herbal Tea",     size:5, words:["HERBAL","TEA","MINT","WARM","CUP","STEEP"] },
+      { theme:"Mint Leaves",    size:5, words:["MINT","LEAVES","GREEN","FRESH","TEA","COOL"] },
+      { theme:"Basil Bed",      size:5, words:["BASIL","BED","GREEN","LEAF","HERB","GROW"] },
+      { theme:"Rosemary",       size:5, words:["AROMA","HERB","GREEN","SCENT","BED","SPRIG"] },
+      { theme:"Lavender",       size:5, words:["FIELDS","PURPLE","SCENT","CALM","BED","BLOOM"] },
+      { theme:"Chamomile",      size:5, words:["HERB","TEA","CALM","DAISY","CUP","SOFT"] },
+      { theme:"Sweet Dreams",   size:5, words:["SWEET","DREAMS","SLEEP","MOON","SOFT","REST"] },
+      { theme:"Moonbeams",      size:5, words:["GLOW","MOON","NIGHT","BEAM","SOFT","DARK"] },
+      { theme:"Fireflies",      size:5, words:["FIREFLY","GLOW","DARK","JAR","LIGHT","DUSK"] },
+      { theme:"Cricket Song",   size:5, words:["CRICKET","SONG","NIGHT","CHIRP","DUSK","CALM"] },
+      { theme:"Morning Dew",    size:5, words:["MORNING","DEW","GRASS","FRESH","LIGHT","COOL"] },
+      { theme:"Sunrise",        size:5, words:["SUNRISE","MORNING","GOLD","LIGHT","RISE","NEW"] },
+      { theme:"Pearl's Garden", size:5, words:["PEARL","GARDEN","BONE","BLOOM","PAWS","LOVE"] }
     ];
+    /* Past the last written level the game makes fresh ones from a bank
+       of common words, so Pam can never run out of levels. The pick is
+       seeded by level number, so a level is the same every visit. */
+    var GEN_THEMES = ["Pearl's Garden", "Bonus Blooms", "Starlight Path", "Pam's Picks", "Garden Walk", "Pearl's Day", "Sweet Stroll", "Sunny Path"];
+    var GEN_BANK = ["APPLE","BERRY","BIRD","BLOOM","BLUE","BOAT","BREAD","BREEZE","BROOK","BUNNY","BUTTER","CANDLE","CANDY","CARROT","CHAIR","CHEESE","CHERRY","CLOUD","CLOVER","COCOA","COOKIE","CORN","COTTON","CREEK","DAISY","DANCE","DEER","DOG","DOVE","DREAM","DRESS","DUCK","EAGLE","EGGS","FEATHER","FENCE","FERN","FIELD","FINCH","FIRE","FISH","FLOWER","FLUTE","FOREST","FOX","FROG","GARDEN","GATE","GENTLE","GINGER","GLOW","GOAT","GOLD","GOLDEN","GOOSE","GRAPE","GRASS","GROVE","HAPPY","HARP","HARVEST","HAZEL","HEART","HEDGE","HEN","HERB","HERON","HILL","HOLLY","HOME","HONEY","HORSE","HOUSE","IRIS","IVY","JAM","KITE","KITTEN","LADDER","LAKE","LAMB","LAMP","LARK","LAUGH","LEAF","LEMON","LIGHT","LILAC","LILY","LIME","LINEN","LION","LOTUS","LOVE","MAPLE","MARKET","MARSH","MEADOW","MELON","MILK","MINT","MIST","MITTEN","MOON","MORNING","MOSS","MOUSE","MUSIC","NEST","NIGHT","OAK","OCEAN","OLIVE","ONION","ORANGE","ORCHARD","OWL","PADDLE","PAINT","PALM","PANSY","PARK","PATH","PEACE","PEACH","PEAR","PEARL","PEBBLE","PENNY","PEPPER","PETAL","PIANO","PICNIC","PIE","PIGEON","PINE","PINK","PLUM","POEM","POND","PONY","POPPY","PORCH","PUDDLE","PUMPKIN","PUPPY","PURPLE","QUILT","RABBIT","RAIN","RAINBOW","RAKE","RANCH","RAVEN","REED","RIDGE","RING","RIPPLE","RIVER","ROAD","ROBIN","ROCK","ROLL","ROOF","ROOM","ROSE","ROSES","RUBY","SADDLE","SAGE","SAIL","SALAD","SALMON","SALT","SAND","SATIN","SAUCE","SCARF","SCENT","SEA","SEAL","SEASON","SEED","SHADE","SHAWL","SHEEP","SHEET","SHELF","SHELL","SHINE","SHIP","SHIRT","SHOE","SHORE","SHOWER","SHRUB","SILK","SILVER","SING","SISTER","SKATE","SKYLARK","SLED","SLEEP","SLICE","SLIDE","SLOPE","SLOW","SMALL","SMART","SMILE","SMOOTH","SNACK","SNAIL","SNORE","SNOW","SNOWY","SNUG","SOAP","SOCK","SODA","SOFA","SOFT","SOIL","SOLAR","SOLID","SOLO","SONG","SOUL","SOUND","SOUP","SOUR","SOUTH","SPARK","SPICE","SPOON","SPRING","SPROUT","SQUARE","STABLE","STAIR","STAMP","STAND","STAR","STARE","START","STAY","STEAK","STEAM","STEEL","STEM","STEP","STEW","STICK","STILL","STITCH","STONE","STOOL","STORE","STORK","STORM","STORY","STOVE","STRAW","STREAM","STREET","STRING","STROLL","STUMP","STYLE","SUGAR","SUIT","SUMMER","SUN","SUNNY","SUNRISE","SUNSET","SUPPER","SURE","SURF","SWALLOW","SWAN","SWAY","SWEATER","SWEEP","SWEET","SWELL","SWEPT","SWIFT","SWIM","SWING","SWIRL","SWITCH","SYRUP","TABLE","TACKLE","TAIL","TAKE","TALE","TALK","TALL","TAME","TANK","TAPE","TARGET","TART","TASTE","TEA","TEACH","TEAM","TEAR","TEASE","TEDDY","TEETH","TELL","TEMPLE","TENDER","TENNIS","TENT","TERM","TEST","TEXT","THANK","THAW","THEATER","THEME","THICK","THIN","THING","THINK","THIRD","THIRST","THISTLE","THORN","THOSE","THOUGHT","THREAD","THREE","THREW","THRIFT","THRILL","THRIVE","THROAT","THRONE","THROUGH","THROW","THUMB","THUNDER","THURSDAY","THYME","TICKET"];
+    function levelAt(idx){
+      if (idx < LEVELS.length) return LEVELS[idx];
+      /* A fresh pick is trial-built on the spot: if this device cannot
+         build it fast, re-pick. A level Pam reaches is never a freeze. */
+      for (var salt = 0; salt < 40; salt++){
+        var rng = mulberry32(7000 + idx * 131 + salt * 100003);
+        var pool = GEN_BANK.slice();
+        var words = [];
+        while (words.length < 6 && pool.length){
+          words.push(pool.splice(Math.floor(rng() * pool.length), 1)[0]);
+        }
+        var candidate = { theme: GEN_THEMES[idx % GEN_THEMES.length], size: 5, words: words };
+        var t0 = performance.now();
+        var made = genBoard(candidate, idx * 3 + 1);
+        if (made && performance.now() - t0 < 800) return candidate;
+        if (salt === 39) return candidate;
+      }
+    }
+
     LEVELS.forEach(function(lv){ lv.words.forEach(function(w){ DICT[w] = true; }); });
 
     /* ---------- Guarded storage: works even where localStorage is blocked ---------- */
@@ -601,7 +745,7 @@
     function persist(){ store.set(save); }
     function highestUnlocked(){
       for (var i = 0; i < LEVELS.length; i++){ if (!save.done[i]) return i; }
-      return LEVELS.length - 1;
+      return LEVELS.length;
     }
 
     /* ---------- Sound: soft WebAudio tones, big mute, all guarded ---------- */
@@ -727,7 +871,7 @@
     /* ---------- Game state ---------- */
     var G = null; // current game
     function newGameState(levelIdx){
-      var level = LEVELS[levelIdx];
+      var level = levelAt(levelIdx);
       var made = genBoardSafe(level, levelIdx * 3 + 1);
       return {
         idx: levelIdx, level: level, size: level.size,
@@ -782,8 +926,10 @@
       resetNewGameBtn();
       var doneCount = Object.keys(save.done).length;
       $("home-progress").textContent = doneCount === 0
-        ? "30 levels, made just for you."
-        : "You have finished " + doneCount + " of " + LEVELS.length + " levels. Lovely work!";
+        ? LEVELS.length + " levels, made just for you — and more after that."
+        : (doneCount >= LEVELS.length
+          ? "You have finished " + doneCount + " levels. Lovely work!"
+          : "You have finished " + doneCount + " of " + LEVELS.length + " levels. Lovely work!");
       $("btn-play").innerHTML = doneCount === 0 ? "&#9654;&nbsp; Start Playing" : "&#9654;&nbsp; Keep Playing";
     }
     function renderLevels(){
@@ -947,7 +1093,7 @@
       $("complete-detail").innerHTML =
         "Level " + (G.idx + 1) + " &middot; " + G.level.theme + "<br />Score: <strong>" + G.score + "</strong>" +
         (G.bonus.length ? "<br />Plus " + G.bonus.length + " bonus " + (G.bonus.length === 1 ? "word" : "words") + "!" : "");
-      $("btn-next").style.display = G.idx + 1 < LEVELS.length ? "" : "none";
+      $("btn-next").style.display = "";
       prizeIdx = 0;
       $("prize-line").textContent = "";
       $("prize-line-game").textContent = "";
@@ -1088,7 +1234,7 @@
       bindTap($("btn-clear"), function(){ if (G) clearSel(); });
       bindTap($("btn-hint"), doHint);
       bindTap($("btn-shuffle"), doShuffle);
-      bindTap($("btn-next"), function(){ if (G && G.idx + 1 < LEVELS.length) startLevel(G.idx + 1); });
+      bindTap($("btn-next"), function(){ if (G) startLevel(G.idx + 1); });
       bindTap($("btn-replay"), function(){ if (G) startLevel(G.idx); });
       bindTap($("btn-all-levels"), function(){
         $("overlay-complete").classList.remove("show"); renderLevels(); show("screen-levels");
@@ -1099,7 +1245,7 @@
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
     else init();
 
-    /* All 30 levels were verified solvable at build time. There is
+    /* All 150 levels were verified solvable at build time, and levels past 150 are generated from a common-word bank. There is
        deliberately NO runtime self-check here: re-generating every board
        on open is a heavy burst of synchronous work that froze the page
        on a phone right after it appeared. genBoardSafe already guarantees
