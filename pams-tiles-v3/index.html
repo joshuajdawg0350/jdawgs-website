@@ -416,7 +416,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 3</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 4</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -439,7 +439,7 @@
         <div class="howto-body">
           <p class="big">How to play Pam&rsquo;s Tiles</p>
           <ul>
-            <li><strong>Tap letters one at a time</strong> to spell a word — each letter you tap has to touch the last one: up, down, sideways, or diagonal all work. When your word looks right, tap <strong>Check</strong>. Tap the last letter again to take it back.</li>
+            <li><strong>Tap letters one at a time</strong> to spell a word — any letters, in any order, anywhere on the board. When your word looks right, tap <strong>Check</strong>. Tap a letter you picked again to take it back.</li>
             <li>Each level hides a few words. The empty boxes at the bottom show how many letters each word has.</li>
             <li>Find all the hidden words to finish the level. Extra real words you find count as <strong>bonus words</strong>!</li>
             <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free, as many times as you like. Tap <strong>Shuffle</strong> to mix the board up.</li>
@@ -826,30 +826,22 @@
        no setPointerCapture, no pointercancel to mishandle, no
        elementFromPoint between the finger and the tile. A tap either
        clicks the button or it doesn't — and on a real button, it does. */
-    function isAdjacent(a, b){
-      var s = G.size, ra = Math.floor(a / s), ca = a % s, rb = Math.floor(b / s), cb = b % s;
-      return Math.abs(ra - rb) <= 1 && Math.abs(ca - cb) <= 1 && a !== b;
-    }
     function tapTile(i){
       if (!G) return;
       ac();
       var sel = G.sel;
       var pos = sel.indexOf(i);
       if (pos !== -1){
-        /* Tapping the last letter again takes it back; tapping the one
-           before it also steps back one. Anything earlier gets a friendly
-           explanation instead of a dead, silent tap. */
-        if (pos === sel.length - 1 || pos === sel.length - 2){
-          var last = sel.pop(); tileEl(last).classList.remove("sel"); sndTap(1); updatePreview();
-        } else {
-          setMessage("That letter is already in your word — tap Clear to start over.", false);
-        }
+        /* Tapping a letter that's already in the word takes just that
+           one letter back out. The rest of the word stays exactly as it
+           was — selWord() rebuilds from the letters still selected, in
+           the order they were tapped. */
+        sel.splice(pos, 1); tileEl(i).classList.remove("sel"); sndTap(1); updatePreview();
         return;
       }
-      if (sel.length && !isAdjacent(sel[sel.length - 1], i)){
-        setMessage("Letters have to touch — pick one right next to the last letter.", false);
-        return;
-      }
+      /* v4: any tile on the board can be tapped next, wherever it sits.
+         There is no touching/adjacency rule — a casual player taps the
+         letters in the order she sees them. */
       sel.push(i); tileEl(i).classList.add("sel"); sndTap(sel.length); updatePreview();
     }
     function clearSel(){
