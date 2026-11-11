@@ -1,6 +1,6 @@
 /* J-Dawgs Industries service worker — makes jdawgsindustries.com installable.
    Network-first for pages (content is never stale), cache-first for icons. */
-const CACHE = 'jdawgs-v2';
+const CACHE = 'jdawgs-v3';
 const PRECACHE = [
   '/',
   '/manifest.webmanifest',
