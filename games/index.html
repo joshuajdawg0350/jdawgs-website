@@ -56,6 +56,8 @@
     border:1px solid var(--line-strong);border-radius:12px;overflow:hidden;margin-top:1.4rem}
   .game-cover{position:relative;min-height:100%}
   .game-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .game-cover video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .g-badge{font-family:var(--font-display);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--eb-bright);border:1px solid var(--eb);border-radius:999px;padding:.4rem .85rem;white-space:nowrap;align-self:center}
   .game-info{padding:1.5rem 1.6rem 1.6rem;display:flex;flex-direction:column;gap:.6rem}
   .game-top{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
   .game-top h3{font-size:clamp(1.45rem,5vw,1.9rem);font-weight:800;font-stretch:112%;letter-spacing:-.01em;text-transform:uppercase}
@@ -193,21 +195,30 @@
           <p class="g-delivery">Buy today and the full game is yours right in your browser — plays instantly, and you can add it to your home screen. <b>Native app version in the works.</b></p>
           <div class="g-actions">
             <a class="btn btn-buy" id="buy-hc1-card" href="https://buy.stripe.com/cNi7sL9Op5E85FX1yJ3kt0I">Get Hustle City — $1.99</a>
-            <a class="btn btn-ghost" href="https://jdawgsindustries.com/hustle-city-demo/">▶ Play the free demo</a>
+            <a class="btn btn-ghost" href="https://jdawgsindustries.com/games/hc1-demo/">▶ Play the free demo</a>
           </div>
         </div>
       </article>
 
       <article class="game">
-        <div class="game-cover"><img src="assets/hc2-cover.webp" alt="Hustle City 2 — King Balsey beside the black Charger and the chrome robot on a rainy neon street" width="1920" height="1120" loading="lazy" style="object-position:center 12%"></div>
+        <div class="game-cover"><img src="assets/hc2-cover.webp" alt="Hustle City 2 — chrome Hustle City lettering over the black Charger on a rainy neon street" width="1920" height="1120" loading="lazy" style="object-position:center 12%"></div>
         <div class="game-info">
           <div class="game-top"><h3>Hustle City 2</h3><span class="g-price">$4.99<small>one-time</small></span></div>
           <p>The interactive sequel — seven cities open from day one, a two-screen street market, a million-dollar run, and a street-craps throne match against King Balsey at his compound.</p>
-          <p class="g-delivery">Pay, and your download page opens right here — the app installs with its own icon on your home screen and plays offline. A backup copy arrives by email too.</p>
+          <p class="g-delivery">Pay, and your game page opens right here: install it as an app straight from your browser — its own icon, full-screen, plays offline, <b>no settings changes</b>. Prefer the Android app file instead? That's on the page too. A backup copy arrives by email.</p>
           <div class="g-actions">
             <a class="btn btn-buy" id="buy-hc2-card" href="https://buy.stripe.com/8x2dR93q12rW0lDcdn3kt0E">Get the Hustle City 2 app — $4.99</a>
-            <a class="btn btn-ghost" href="https://jdawgsindustries.com/hustle-city-2-demo/">▶ Play the free demo</a>
+            <a class="btn btn-ghost" href="https://jdawgsindustries.com/games/hc2-demo/">▶ Play the free demo</a>
           </div>
+        </div>
+      </article>
+
+      <article class="game">
+        <div class="game-cover"><video src="assets/hc3-scotty.mp4" poster="assets/hc3-scotty-poster.jpg" autoplay muted loop playsinline aria-label="Hustle City 3 teaser — Big Body Scotty in front of his blacked-out Cadillac"></video></div>
+        <div class="game-info">
+          <div class="game-top"><h3>Hustle City 3</h3><span class="g-badge">Coming Soon</span></div>
+          <p>Big Body Scotty runs this city now. The biggest Hustle City yet is in the works.</p>
+          <p class="g-delivery"><img src="../assets/paw-icon-192.png" alt="" width="16" height="16" style="vertical-align:-3px"> A J-Dawgs Industries game — in production now. Watch this shelf.</p>
         </div>
       </article>
     </div>
@@ -219,16 +230,17 @@
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">Dead simple</p>
         <h2>How installing works</h2>
-        <p class="lead">Buy → tap to pay → download page → install. Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers. No accounts, no extra steps.</p>
+        <p class="lead">Buy → tap to pay → play. Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers. No accounts — and no digging through your phone's settings.</p>
       </div>
       <div class="doors2">
         <div class="door-card">
-          <h3>Three taps after payment</h3>
-          <p><b>1.</b> Your download page opens the second your payment lands — tap <b>Download the app</b>.<br>
-          <b>2.</b> Open the file. Android asks once to allow installs from your browser — that's normal, tap Allow.<br>
-          <b>3.</b> Tap Install. The game's own icon lands on your home screen, and it plays offline — no ads, ever.</p>
-          <p>Changed phones or lost the file? Your backup copy arrives by email after checkout, and the same download link keeps working — just ask and we'll resend it.</p>
-          <p><b>On iPhone?</b> Apple doesn't allow direct app installs from any store but theirs — so iPhone players get the full game right in the browser instead. Same game, same price, still no ads.</p>
+          <h3>Installs like an app — no settings changes</h3>
+          <p><b>1.</b> Your game page opens the second your payment lands — tap <b>Play</b> and the full game starts.<br>
+          <b>2.</b> Tap your browser's menu → <b>Add to Home screen</b>.<br>
+          <b>3.</b> The game's own icon lands on your home screen. It opens full-screen and plays offline — no ads, ever.</p>
+          <p><b>Want the Android app package (APK) instead?</b> It's on your download page too. Android asks one permission for downloads like that (Allow from this source) — that's Google's rule for every store, not ours.</p>
+          <p>Changed phones or lost the page? Your backup copy arrives by email after checkout, and the same link keeps working — just ask and we'll resend it.</p>
+          <p><b>On iPhone?</b> Apple doesn't allow direct app installs from any store but theirs — so iPhone players open the same game page and add it to the home screen instead. Same game, same price, still no ads.</p>
         </div>
       </div>
     </div>
