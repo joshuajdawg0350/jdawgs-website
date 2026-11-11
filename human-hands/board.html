@@ -15,7 +15,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
 <style>
-  :root{--eb:#3FA9F5;--eb-bright:#6FC3FF}
+  :root{--eb:#39c2ff;--eb-bright:#39c2ff}
   .hh-header{background:rgba(5,8,14,.92);border-bottom:1px solid var(--line)}
   .hh-header .wrap{display:flex;align-items:center;gap:1rem;min-height:64px;padding-top:.4rem;padding-bottom:.4rem}
   .hh-brand{display:flex;align-items:baseline;gap:.6rem;text-decoration:none;color:#fff;flex:none}
@@ -58,8 +58,65 @@
   @media (max-width:480px){.postrow .btn{flex:1 1 100%}.hh-top h1{font-size:1.8rem}.hh-top .lead{font-size:.95rem;line-height:1.5}.hh-top{padding-top:1rem}}
   @media (max-width:640px){.hh-brand span{display:none}.hh-nav{gap:.9rem}}
 </style>
+<style>
+/* ============================================================
+   Hustle Look Kit (jdawgs-hustle-look-kit.md §1-§3, §10) — Wave 3 FACE restyle.
+   Opening-screen only: palette, chrome display type, chrome primary
+   buttons. Working interior layouts, forms, copy and all JS untouched.
+   ============================================================ */
+body.hustle-face{
+  --bg:#05080e; --bg-2:#0b0f16;
+  --panel:#10151f; --panel-2:#151c29;
+  --line:#263144; --line-strong:#33435e;
+  --ink:#eef2f8; --body:#c9d4e4; --muted:#9fb0c6;
+  --jd-navy:#05080e; --jd-navy-2:#151c29;
+  --jd-silver:#9fb0c6; --jd-silver-bright:#eef2f8;
+  --eb:#39c2ff; --eb-bright:#39c2ff;
+  background:#05080e; color:#c9d4e4;
+}
+body.hustle-face ::selection{background:#39c2ff; color:#05080e}
+body.hustle-face a:focus-visible,
+body.hustle-face button:focus-visible{outline-color:#39c2ff}
+/* opening screen — near-black ground with the electric-blue glow */
+body.hustle-face .hh-hero,
+body.hustle-face .hh-top{
+  background:
+    radial-gradient(1100px 420px at 78% -10%, rgba(57,194,255,.16), rgba(57,194,255,0) 60%),
+    linear-gradient(180deg,#0b0f16 0%,#05080e 100%);
+  border-bottom:1px solid #263144;
+}
+/* §2 chrome display type — opening headline + wordmark only */
+body.hustle-face .hh-hero h1,
+body.hustle-face .hh-top h1{
+  font-family:Anton,Impact,"Archivo",sans-serif; font-weight:400;
+  letter-spacing:.02em; text-transform:uppercase; line-height:1.02;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face .hh-brand b{
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face .hh-nav a:hover{color:#39c2ff}
+/* §3 buttons — chrome primary, panel secondary */
+body.hustle-face .btn-primary{
+  background:linear-gradient(180deg,#e8f1fa,#9db4cc); color:#0a0f16;
+  border:1px solid #d7e5f2; border-radius:10px; font-weight:800; min-height:48px;
+  box-shadow:0 4px 18px rgba(160,195,235,.25);
+}
+body.hustle-face .btn-primary:hover{
+  background:linear-gradient(180deg,#f4f8fc,#aec3da); color:#0a0f16; border-color:#39c2ff;
+  box-shadow:0 0 0 1px rgba(57,194,255,.35), 0 10px 30px rgba(57,194,255,.30);
+}
+body.hustle-face .btn-ghost{
+  background:#151c29; color:#eef2f8; border-color:#33435e; border-radius:10px;
+}
+body.hustle-face .btn-ghost:hover{background:#10151f; color:#39c2ff; border-color:#39c2ff}
+body.hustle-face .hh-header{background:rgba(5,8,14,.92); border-bottom-color:#263144}
+body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
+</style>
 </head>
-<body>
+<body class="hustle-face">
 
 <header class="hh-header">
   <div class="wrap">
@@ -203,6 +260,7 @@
             <option>Property check</option>
             <option>In-person visit</option>
             <option>Install &amp; assembly</option>
+            <option>Phone Check</option>
             <option>Pack &amp; ship an order</option>
             <option>Something else</option>
           </select>
