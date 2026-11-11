@@ -338,6 +338,21 @@
       .prize-line{
         min-height:41px; margin:5px 0 0; font-size:29px; font-weight:900; line-height:1.25;
       }
+      .prize-bar{ display:flex; align-items:center; gap:14px; padding:10px 16px 2px; }
+      .prize-box.mini{ width:76px; height:64px; margin:0; flex:none; }
+      .prize-box.mini .prize-lid{ height:17px; border-radius:7px; }
+      .prize-box.mini.pop .prize-lid{ transform:translateY(-9px) rotate(-7deg); }
+      .prize-box.mini .prize-boxbody{ top:13px; border-radius:7px; }
+      .prize-box.mini .prize-boxbody::before{ width:12px; }
+      .prize-box.mini .prize-boxbody::after{ height:12px; }
+      .prize-box.mini .prize-peace{ width:30px; height:30px; }
+      .prize-box.mini .prize-peace svg{ width:19px; height:19px; }
+      .prize-bar-text{ flex:1; min-width:0; }
+      .prize-bar-title{
+        margin:0; font-size:21px; font-weight:900; color:#fff;
+        text-shadow:0 0 14px rgba(53,182,255,.6);
+      }
+      .prize-bar .prize-line{ font-size:23px; min-height:29px; margin:2px 0 0; }
       .burst-piece{
         position:fixed; z-index:70; pointer-events:none; font-size:22px; line-height:1;
         animation:burstfly .95s ease-out forwards;
@@ -417,7 +432,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 6</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 7</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -470,6 +485,16 @@
           <button class="btn" id="btn-clear"><span class="ic">&#10005;</span>Clear</button>
           <button class="btn" id="btn-hint"><span class="ic">&#128161;</span>Hint</button>
           <button class="btn" id="btn-shuffle"><span class="ic">&#128256;</span>Shuffle</button>
+        </div>
+        <div class="prize-bar">
+          <button class="prize-box mini" id="btn-prize-game" aria-label="Prize box — tap it for a celebration">
+            <span class="prize-lid"></span>
+            <span class="prize-boxbody"><span class="prize-peace"><svg viewBox="0 0 100 100" fill="none" stroke="#e9f2ff" stroke-width="7" stroke-linecap="round"><circle cx="50" cy="50" r="44"/><line x1="50" y1="6" x2="50" y2="94"/><line x1="50" y1="50" x2="19" y2="81"/><line x1="50" y1="50" x2="81" y2="81"/></svg></span></span>
+          </button>
+          <div class="prize-bar-text">
+            <p class="prize-bar-title">Prize Box &mdash; tap it!</p>
+            <p class="prize-line chrome-text" id="prize-line-game" aria-live="polite"></p>
+          </div>
         </div>
         <div class="found-area">
           <p class="found-label">Words to find:</p>
@@ -920,7 +945,9 @@
       $("btn-next").style.display = G.idx + 1 < LEVELS.length ? "" : "none";
       prizeIdx = 0;
       $("prize-line").textContent = "";
+      $("prize-line-game").textContent = "";
       $("btn-prize").classList.remove("pop");
+      $("btn-prize-game").classList.remove("pop");
       $("overlay-complete").classList.add("show");
     }
 
@@ -963,12 +990,13 @@
         (function(el){ setTimeout(function(){ el.remove(); }, 1000); })(s);
       }
     }
-    function popPrize(){
-      if (!G) return;
-      var box = $("btn-prize");
+    function popPrize(box){
+      if (!G || !box) return;
       box.classList.remove("pop"); void box.offsetWidth; box.classList.add("pop");
       var lines = prizeLines();
-      $("prize-line").textContent = lines[prizeIdx % lines.length];
+      var line = lines[prizeIdx % lines.length];
+      $("prize-line").textContent = line;
+      $("prize-line-game").textContent = line;
       prizeIdx++;
       sndPrize();
       var r = box.getBoundingClientRect();
@@ -1048,7 +1076,8 @@
       bindTap($("btn-all-levels"), function(){
         $("overlay-complete").classList.remove("show"); renderLevels(); show("screen-levels");
       });
-      bindTap($("btn-prize"), popPrize);
+      bindTap($("btn-prize"), function(){ popPrize($("btn-prize")); });
+      bindTap($("btn-prize-game"), function(){ popPrize($("btn-prize-game")); });
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
     else init();
