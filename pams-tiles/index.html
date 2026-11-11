@@ -54,6 +54,7 @@
         filter:drop-shadow(0 2px 10px rgba(53,182,255,.35));
       }
       .btn{
+        touch-action:manipulation;
         font-family:inherit; font-weight:800; color:var(--ink); cursor:pointer;
         background:linear-gradient(180deg,#22335a,#141f38);
         border:2px solid var(--line); border-radius:16px;
@@ -95,6 +96,7 @@
       }
       /* Peace-sign touches for Pam: chrome silver with the electric-blue glow. */
       .peace-badge{
+        pointer-events:none;
         width:58px; height:58px; margin:-29px auto 0; position:relative; z-index:2;
         border-radius:50%; background:radial-gradient(circle at 35% 30%, #22335a, #0c1425 72%);
         border:2px solid var(--blue);
@@ -176,6 +178,7 @@
       .board.size4{ grid-template-columns:repeat(4,1fr); }
       .board.size5{ width:min(96vw,410px); gap:7px; grid-template-columns:repeat(5,1fr); }
       .tile{
+        touch-action:none;
         aspect-ratio:1/1; border-radius:14px; border:2px solid var(--tile-edge);
         background:var(--tile-face);
         display:flex; align-items:center; justify-content:center;
@@ -586,7 +589,7 @@
         b.className = "btn level-btn" + (save.done[i] ? " done" : "") + (i > unlocked ? " locked" : "");
         b.innerHTML = '<span class="num">' + (save.done[i] ? "&#10003;" : (i + 1)) + '</span><span class="theme">' + lv.theme + "</span>";
         if (i > unlocked) b.disabled = true;
-        b.addEventListener("click", function(){ startLevel(i); });
+        bindTap(b, function(){ startLevel(i); });
         grid.appendChild(b);
       });
     }
@@ -667,7 +670,11 @@
       var sel = G.sel;
       var pos = sel.indexOf(i);
       if (pos !== -1){
-        if (pos === sel.length - 2){ var last = sel.pop(); tileEl(last).classList.remove("sel"); updatePreview(); return "back"; }
+        /* Tapping the last letter again takes it back; tapping the one
+           before it also steps back one. Anything earlier stays put. */
+        if (pos === sel.length - 1 || pos === sel.length - 2){
+          var last = sel.pop(); tileEl(last).classList.remove("sel"); sndTap(1); updatePreview(); return "back";
+        }
         return "present";
       }
       if (sel.length && !isAdjacent(sel[sel.length - 1], i)) return "far";
@@ -683,23 +690,41 @@
       while (el && !(el.classList && el.classList.contains("tile"))) el = el.parentElement;
       return el ? parseInt(el.getAttribute("data-i"), 10) : -1;
     }
+    /* The direct hit: for a plain tap, the event target IS the tile the
+       finger landed on. Resolve there first — elementFromPoint is only
+       the fallback and the drag-tracking path. */
+    function tileIndexFromEvent(e){
+      var el = e.target;
+      while (el && el !== document.body && !(el.classList && el.classList.contains("tile"))) el = el.parentElement;
+      return (el && el.classList && el.classList.contains("tile")) ? parseInt(el.getAttribute("data-i"), 10) : -1;
+    }
     function boardEvents(){
       var board = $("board");
       board.addEventListener("pointerdown", function(e){
         if (!G) return;
-        var i = tileFromPoint(e.clientX, e.clientY);
+        var i = tileIndexFromEvent(e);
+        if (i < 0) i = tileFromPoint(e.clientX, e.clientY);
         if (i < 0) return;
         e.preventDefault(); ac();
         /* Keep this gesture glued to the board: if a finger slips off the
            edge mid-drag, the release still reaches us and nothing sticks. */
         try { board.setPointerCapture(e.pointerId); } catch(err){ /* capture is a nicety, not a requirement */ }
         G.selecting = true; G.dragMoved = false;
+        G.downX = e.clientX; G.downY = e.clientY; G.dragLive = false;
         var r = tryAdd(i);
         if (r === "far") setMessage("Letters have to touch — pick one right next to the last letter.", false);
         else if (r === "present") setMessage("That letter is already in your word — tap Clear to start over.", false);
       });
       board.addEventListener("pointermove", function(e){
         if (!G || !G.selecting) return;
+        /* Slop guard: a real finger is never perfectly still. Movement
+           under ~14px from where the finger landed is still a TAP, not a
+           drag — it must not add letters or turn into an auto-submit. */
+        if (!G.dragLive){
+          var dx = e.clientX - (G.downX || 0), dy = e.clientY - (G.downY || 0);
+          if (dx * dx + dy * dy < 196) return;
+          G.dragLive = true;
+        }
         var i = tileFromPoint(e.clientX, e.clientY);
         if (i < 0) return;
         var before = G.sel.length;
@@ -807,27 +832,46 @@
     }
 
     /* ---------- Wiring ---------- */
+    /* Buttons fire on pointerup, not click alone. A real finger tap on
+       Android can lose its click entirely — a few pixels of drift hands
+       the gesture to the scroller, or the webview just swallows it —
+       while pointerup still arrives. Click stays as the fallback for
+       keyboards and switch devices, deduplicated so nothing fires twice
+       (a double-fired sound toggle or Next Level would be its own bug). */
+    function bindTap(el, fn){
+      var downOn = false, lastRun = 0;
+      el.addEventListener("pointerdown", function(){ downOn = true; });
+      el.addEventListener("pointerup", function(){
+        if (!downOn) return;
+        downOn = false; lastRun = Date.now(); fn();
+      });
+      el.addEventListener("pointercancel", function(){ downOn = false; });
+      el.addEventListener("click", function(){
+        if (Date.now() - lastRun < 700) return;
+        fn();
+      });
+    }
     function init(){
       soundLabel(); refreshHome();
-      $("btn-play").addEventListener("click", function(){
+      bindTap($("btn-play"), function(){
         var idx = Math.min(save.last || 0, LEVELS.length - 1);
         if (save.done[idx] && idx + 1 < LEVELS.length && !save.done[idx + 1] ) idx = idx + 1;
         startLevel(idx);
       });
-      $("btn-levels").addEventListener("click", function(){ renderLevels(); show("screen-levels"); });
-      $("btn-how").addEventListener("click", function(){ show("screen-how"); });
-      $("btn-levels-back").addEventListener("click", function(){ refreshHome(); show("screen-home"); });
-      $("btn-how-back").addEventListener("click", function(){ show("screen-home"); });
-      $("btn-game-back").addEventListener("click", function(){ refreshHome(); show("screen-home"); });
-      $("btn-sound-levels").addEventListener("click", toggleSound);
-      $("btn-sound-game").addEventListener("click", toggleSound);
-      $("btn-check").addEventListener("click", function(){ if (G && G.sel.length) submitWord(); else setMessage("Pick some letters first — drag or tap.", false); });
-      $("btn-clear").addEventListener("click", function(){ if (G) clearSel(); });
-      $("btn-hint").addEventListener("click", doHint);
-      $("btn-shuffle").addEventListener("click", doShuffle);
-      $("btn-next").addEventListener("click", function(){ if (G && G.idx + 1 < LEVELS.length) startLevel(G.idx + 1); });
-      $("btn-replay").addEventListener("click", function(){ if (G) startLevel(G.idx); });
-      $("btn-all-levels").addEventListener("click", function(){
+      bindTap($("btn-levels"), function(){ renderLevels(); show("screen-levels"); });
+      bindTap($("btn-how"), function(){ show("screen-how"); });
+      bindTap($("btn-levels-back"), function(){ refreshHome(); show("screen-home"); });
+      bindTap($("btn-how-back"), function(){ show("screen-home"); });
+      bindTap($("btn-game-back"), function(){ refreshHome(); show("screen-home"); });
+      bindTap($("btn-sound-levels"), toggleSound);
+      bindTap($("btn-sound-game"), toggleSound);
+      bindTap($("btn-check"), function(){ if (G && G.sel.length) submitWord(); else setMessage("Pick some letters first — drag or tap.", false); });
+      bindTap($("btn-clear"), function(){ if (G) clearSel(); });
+      bindTap($("btn-hint"), doHint);
+      bindTap($("btn-shuffle"), doShuffle);
+      bindTap($("btn-next"), function(){ if (G && G.idx + 1 < LEVELS.length) startLevel(G.idx + 1); });
+      bindTap($("btn-replay"), function(){ if (G) startLevel(G.idx); });
+      bindTap($("btn-all-levels"), function(){
         $("overlay-complete").classList.remove("show"); renderLevels(); show("screen-levels");
       });
       boardEvents();
