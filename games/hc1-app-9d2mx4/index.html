@@ -4239,5 +4239,92 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+<style>
+#hcInstallWrap{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:99990;display:none;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#EAF4FF}
+#hcInstallWrap.show{display:block}
+#hcInstallSteps{display:none;background:rgba(8,14,22,.98);border:1px solid rgba(111,195,255,.55);border-radius:14px;padding:12px 14px;box-shadow:0 10px 34px rgba(0,0,0,.55);font-size:.9rem;line-height:1.45;margin-bottom:8px}
+#hcInstallSteps.show{display:block}
+#hcInstallSteps p{margin:.25rem 0;color:#A9C3DE}
+#hcInstallSteps b{color:#EAF4FF}
+#hcInstallBar{display:flex;align-items:center;gap:9px;background:rgba(8,14,22,.97);border:1px solid rgba(111,195,255,.55);border-radius:14px;padding:8px 10px;box-shadow:0 10px 34px rgba(0,0,0,.55)}
+#hcInstallBar img{width:38px;height:38px;border-radius:9px;flex:none}
+#hcInstallBar .hcib-t{flex:1;min-width:0}
+#hcInstallBar .hcib-t b{display:block;font-size:.92rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#hcInstallBar .hcib-t span{display:block;font-size:.74rem;line-height:1.25;color:#A9C3DE;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#hcInstallBtn{flex:none;background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;border:1px solid rgba(111,195,255,.65);font-weight:800;font-size:.92rem;border-radius:10px;padding:.55rem .8rem;min-height:44px;cursor:pointer}
+#hcInstallHide{flex:none;background:transparent;border:none;color:#A9C3DE;font-size:1.15rem;line-height:1;padding:.3rem .35rem;min-height:44px;min-width:38px;cursor:pointer}
+</style>
+<div id="hcInstallWrap">
+  <div id="hcInstallSteps" role="region" aria-label="How to install">
+    <p><b>Put Hustle City on your home screen:</b></p>
+    <p><b>Android (Chrome):</b> tap the <b>⋮ menu</b> at the top right, choose <b>Add to Home screen</b> (some phones call it <b>Install app</b>), then tap <b>Add</b>.</p>
+    <p><b>iPhone (Safari):</b> tap <b>Share</b>, then <b>Add to Home Screen</b>, then <b>Add</b>.</p>
+    <p>The chrome dollar-sign icon lands on your home screen and opens full-screen like a real app.</p>
+  </div>
+  <div id="hcInstallBar" role="region" aria-label="Install this app">
+    <img src="/games/hc1-app-9d2mx4/icons/icon-192.png" alt="" width="38" height="38">
+    <div class="hcib-t"><b>Install Hustle City</b><span>Plays offline · no ads</span></div>
+    <button id="hcInstallBtn" type="button">Install</button>
+    <button id="hcInstallHide" type="button" aria-label="Not now">✕</button>
+  </div>
+</div>
+<script>
+/* Install door (added 2026-11-11): native prompt when Chrome offers one,
+   manual Add-to-Home-screen steps everywhere else. Steps panel and bar
+   share one fixed wrapper so they can never overlap. Fully guarded so a
+   storage-restricted webview or old browser can never break the game. */
+(function () {
+  try {
+    if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return;
+    if (window.navigator && window.navigator.standalone) return;
+    var KEY = "hc1-install-dismissed", dismissed = false;
+    try { dismissed = !!window.localStorage.getItem(KEY); } catch (e) {}
+    if (dismissed) return;
+    var wrap = document.getElementById("hcInstallWrap"),
+        btn = document.getElementById("hcInstallBtn"),
+        steps = document.getElementById("hcInstallSteps"),
+        hide = document.getElementById("hcInstallHide");
+    if (!wrap || !btn || !hide) return;
+    var deferred = null;
+    function show() { wrap.classList.add("show"); }
+    function hideAll() {
+      wrap.classList.remove("show");
+      if (steps) steps.classList.remove("show");
+    }
+    window.addEventListener("beforeinstallprompt", function (ev) {
+      ev.preventDefault();
+      deferred = ev;
+      btn.textContent = "Install";
+      show();
+    });
+    window.addEventListener("appinstalled", function () {
+      deferred = null;
+      hideAll();
+      try { window.localStorage.setItem(KEY, "1"); } catch (e) {}
+    });
+    btn.addEventListener("click", function () {
+      if (deferred) {
+        var d = deferred;
+        deferred = null;
+        try {
+          d.prompt();
+          if (d.userChoice && d.userChoice.then) {
+            d.userChoice.then(function () { hideAll(); });
+          } else { hideAll(); }
+        } catch (e) { if (steps) steps.classList.toggle("show"); }
+      } else if (steps) {
+        steps.classList.toggle("show");
+      }
+    });
+    hide.addEventListener("click", function () {
+      hideAll();
+      try { window.localStorage.setItem(KEY, "1"); } catch (e) {}
+    });
+    setTimeout(function () {
+      if (!deferred) { btn.textContent = "How to add"; show(); }
+    }, 2500);
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

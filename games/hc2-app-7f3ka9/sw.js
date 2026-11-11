@@ -1,7 +1,7 @@
 /* Hustle City 2 — offline service worker.
    Precaches the full game on first load; after that it boots and plays
    with no network at all. Bump CACHE when the game build changes. */
-var CACHE = "hc2-full-v1";
+var CACHE = "hc2-full-v2";
 var PRECACHE = [
  "./",
  "index.html",
