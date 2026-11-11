@@ -72,7 +72,7 @@
         filter:drop-shadow(0 2px 10px rgba(53,182,255,.35)) drop-shadow(0 0 26px rgba(53,182,255,.30));
       }
       .btn{
-        touch-action:manipulation;
+        touch-action:none;
         font-family:inherit; font-weight:800; color:var(--ink); cursor:pointer;
         background:linear-gradient(180deg,#22335a,#141f38);
         border:2px solid #7d9cc6; border-radius:16px;
@@ -166,6 +166,7 @@
 
       /* ---------- game ---------- */
       #screen-game{ height:100vh; height:100dvh; max-height:100vh; max-height:100dvh; overflow:hidden; min-height:0; }
+      #screen-game.active{ display:flex !important; flex-direction:column; }
       .game-head{ display:flex; align-items:center; gap:10px; padding:10px 12px 2px; }
       .game-head .lvl{ flex:1; text-align:center; }
       .game-head .lvl .n{ font-size:21px; font-weight:900; }
@@ -191,7 +192,7 @@
       }
       .message.warm{ color:var(--gold); }
       .board-wrap{
-        display:flex; justify-content:center; padding:8px 10px 2px; position:relative;
+        display:flex; justify-content:center; align-items:center; flex:1; min-height:0; padding:8px 10px 2px; position:relative;
         /* The board sits on a clean dark panel, always: the city glows
            around it, never behind the letters. Readability is the gate. */
         margin:6px 10px 0;
@@ -212,7 +213,7 @@
            can never be stretched taller/wider than the cap by its own
            content (a big tile font inflating row height used to do
            exactly that, overflowing the board off both screen edges). */
-        display:grid; gap:8px; aspect-ratio:1/1;
+        display:grid; gap:8px; aspect-ratio:1/1; touch-action:none;
         width:min(94vw,400px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px)));
         user-select:none; -webkit-user-select:none;
       }
@@ -221,7 +222,7 @@
       .tile{
         /* Tiles are real <button>s now: plain click handling, no custom
            gesture code anywhere near them. */
-        touch-action:manipulation;
+        touch-action:none;
         font-family:inherit; -webkit-appearance:none; appearance:none; padding:0; margin:0;
         /* The cell decides the tile's size, never the letter inside it:
            min-width/height 0 lets the tile shrink below its content, so a
@@ -243,6 +244,7 @@
         transform:scale(1.05);
       }
       .tile.found-flash{ animation:pop .6s ease; border-color:var(--good); }
+      .tile.hint-target{ animation:hintpulse 0.85s ease-in-out infinite; border-color:var(--gold); }
       .tile.hint-flash{ animation:hintpulse 0.85s ease 3; }
       @keyframes pop{ 0%{transform:scale(1)} 40%{transform:scale(1.18)} 100%{transform:scale(1)} }
       @keyframes hintpulse{
@@ -254,7 +256,19 @@
       }
       .controls .btn{ min-height:54px; font-size:18.5px; padding:8px 4px; border-radius:14px; flex-direction:column; gap:0; line-height:1.15; }
       .controls .btn .ic{ font-size:23px; }
-      .found-area{ flex:1; overflow-y:auto; padding:8px 14px 14px; min-height:0; }
+      .mode-row{ display:flex; align-items:center; gap:8px; padding:8px 14px 0; }
+      .mode-cap{ font-size:17px; font-weight:800; color:var(--ink-dim); }
+      .mode-opt{
+        flex:1; min-height:48px; border-radius:999px; cursor:pointer;
+        font-family:inherit; font-size:18.5px; font-weight:900; letter-spacing:.5px;
+        background:var(--panel); color:#8298bb; border:2px solid var(--line);
+        touch-action:manipulation;
+      }
+      .mode-opt.on{
+        background:linear-gradient(180deg,#dfe9f7,#8fa8c9); color:#0a1526;
+        border-color:#e8f2ff; box-shadow:0 0 14px rgba(53,182,255,.45);
+      }
+      .found-area{ padding:2px 14px 0; }
       .found-label{ font-size:16.5px; font-weight:800; color:var(--ink-dim); margin:2px 0 6px; }
       .chips{ display:flex; flex-wrap:wrap; gap:8px; }
       .chip{
@@ -377,6 +391,35 @@
         .board.size4{ width:min(88vw,330px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); }
         .board.size5{ width:min(92vw,350px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); }
       }
+      /* v10: shorter phones (older Androids, small iPhones). The board
+         width formula already shrinks the board by viewport height;
+         these tiers shrink everything AROUND it too, so the board, the
+         Check row and the Prize Box all stay on one screen down to
+         about 600px tall — nothing a player needs can be pushed off. */
+      @media (max-height:700px){
+        .game-head{ padding-top:4px; }
+        .game-head .lvl .n{ font-size:19px; }
+        .preview{ min-height:38px; font-size:24px; margin-top:2px; }
+        .preview.empty{ font-size:16.5px; }
+        .message{ min-height:20px; font-size:17px; }
+        .board-wrap{ margin-top:3px; padding-top:5px; }
+        .controls .btn{ min-height:46px; font-size:16.5px; }
+        .controls .btn .ic{ font-size:19px; }
+        .found-area{ padding-top:3px; }
+        .found-label{ font-size:15px; margin-bottom:3px; }
+        .chip{ font-size:15px; padding:3px 9px; }
+        .prize-bar{ padding:4px 14px 6px; gap:10px; }
+        .prize-bar .prize-line{ font-size:19px; min-height:24px; }
+      }
+      @media (max-height:620px){
+        .progress-line{ display:none; }
+        .mode-row{ padding-top:5px; }
+        .mode-opt{ min-height:42px; font-size:16.5px; }
+        .preview{ min-height:34px; font-size:22px; }
+        .controls .btn{ min-height:42px; }
+        .prize-bar-title{ display:none; }
+        .prize-bar .prize-line{ font-size:17px; min-height:21px; }
+      }
       @media (prefers-reduced-motion: reduce){
         .tile.found-flash,.tile.hint-flash,.spark,.burst-piece{ animation:none !important; }
         .btn:active,.tile.sel{ transform:none; }
@@ -437,7 +480,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 9</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 10</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -460,10 +503,11 @@
         <div class="howto-body">
           <p class="big">How to play Pam&rsquo;s Tiles</p>
           <ul>
-            <li><strong>Tap letters one at a time</strong> to spell a word — any letters, in any order, anywhere on the board. When your word looks right, tap <strong>Check</strong>. Tap a letter you picked again to take it back.</li>
-            <li>Each level hides a few words. The empty boxes at the bottom show how many letters each word has.</li>
+            <li><strong>Drag your finger across the letters</strong> of a word — or tap them one at a time. Either way works, and the word <strong>counts by itself</strong> the moment you finish it. No Check button to hunt for. Made a mistake? Keep dragging back, or tap <strong>Clear</strong>.</li>
+            <li>Each level hides a few words. The blanks at the TOP show how many letters each word has — find a word and its blank fills in.</li>
+            <li>Pick how you like to play with the three buttons under the board: <strong>Drag</strong> only, <strong>Tap</strong> only, or <strong>Both</strong>. The game remembers your choice. A stylus works too, in every mode.</li>
             <li>Find all the hidden words to finish the level. Extra real words you find count as <strong>bonus words</strong>!</li>
-            <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free, as many times as you like. Tap <strong>Shuffle</strong> to mix the board up.</li>
+            <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free. The first tap lights the word up letter by letter; tap it again and it starts the word for you, with just one glowing letter left to tap. Tap <strong>Shuffle</strong> to mix the board up.</li>
           </ul>
           <p>There is <strong>no timer</strong>, no score you have to beat, and no way to lose. Play at your own pace.</p>
           <p><strong>No ads. Ever.</strong> Nothing here watches you or phones home. Your game saves right on this phone, just for you.</p>
@@ -482,8 +526,16 @@
           <button class="btn icon-btn" id="btn-sound-game" aria-label="Turn sound on or off">&#128266;</button>
         </div>
         <div class="progress-line" id="progress-line"></div>
-        <div class="preview empty" id="preview">Tap letters to make a word</div>
+        <div class="preview empty" id="preview">Drag across the letters — or tap them — words count by themselves!</div>
         <div class="message" id="message" aria-live="polite"></div>
+        <div class="found-area">
+          <p class="found-label">Your words — fill in the blanks:</p>
+          <div class="chips" id="chips-targets"></div>
+          <div id="bonus-block" style="display:none">
+            <p class="found-label" style="margin-top:10px">Bonus words you found:</p>
+            <div class="chips" id="chips-bonus"></div>
+          </div>
+        </div>
         <div class="board-wrap"><div class="board-peace" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"><circle cx="50" cy="50" r="45"/><line x1="50" y1="5" x2="50" y2="95"/><line x1="50" y1="50" x2="18" y2="82"/><line x1="50" y1="50" x2="82" y2="82"/></svg></div><div class="board size4" id="board"></div></div>
         <div class="controls">
           <button class="btn" id="btn-check"><span class="ic">&#10003;</span>Check</button>
@@ -491,13 +543,11 @@
           <button class="btn" id="btn-hint"><span class="ic">&#128161;</span>Hint</button>
           <button class="btn" id="btn-shuffle"><span class="ic">&#128256;</span>Shuffle</button>
         </div>
-        <div class="found-area">
-          <p class="found-label">Words to find:</p>
-          <div class="chips" id="chips-targets"></div>
-          <div id="bonus-block" style="display:none">
-            <p class="found-label" style="margin-top:10px">Bonus words you found:</p>
-            <div class="chips" id="chips-bonus"></div>
-          </div>
+        <div class="mode-row" role="group" aria-label="How letters are picked">
+          <span class="mode-cap">Letters:</span>
+          <button class="mode-opt" id="mode-drag" type="button">Drag</button>
+          <button class="mode-opt" id="mode-tap" type="button">Tap</button>
+          <button class="mode-opt" id="mode-both" type="button">Both</button>
         </div>
         <div class="prize-bar">
           <button class="prize-box mini" id="btn-prize-game" aria-label="Prize box — tap it for a celebration">
@@ -902,6 +952,34 @@
       if (save.sound) sndGood();
     }
 
+    /* ---------- Letter-pick mode (v10, Joshua's ask) ----------
+       Three big buttons — Drag / Tap / Both — so Pam (or Joshua
+       testing for her) can turn either way of picking letters off.
+       The choice is saved on the phone and survives reloads. */
+    function pickMode(){
+      if (save.dragOn !== false && save.tapOn !== false) return "both";
+      if (save.dragOn !== false) return "drag";
+      if (save.tapOn !== false) return "tap";
+      return "both";
+    }
+    function modeLabel(){
+      $("mode-drag").classList.toggle("on", save.dragOn !== false);
+      $("mode-tap").classList.toggle("on", save.tapOn !== false);
+      $("mode-both").classList.toggle("on", save.dragOn !== false && save.tapOn !== false);
+    }
+    function setPickMode(m){
+      if (m === "drag"){ save.dragOn = true; save.tapOn = false; }
+      else if (m === "tap"){ save.dragOn = false; save.tapOn = true; }
+      else { save.dragOn = true; save.tapOn = true; }
+      persist(); modeLabel();
+      if (G) clearSel();
+      setMessage(m === "drag" ? "Dragging only — slide your finger or stylus across the letters."
+        : m === "tap" ? "Tapping only — tap the letters one at a time."
+        : "Both ways on — drag or tap, whichever you like.", false);
+      sndTap(2);
+    }
+    /* (togglePick removed: the three buttons are mode choices, not switches.) */
+
     /* ---------- Home / levels ---------- */
     var ngArmed = false, ngTimer = null;
     function resetNewGameBtn(){
@@ -976,7 +1054,7 @@
     function selWord(){ return G.sel.map(function(i){ return G.grid[i]; }).join(""); }
     function updatePreview(){
       var p = $("preview"), w = selWord();
-      if (!w){ p.textContent = "Tap letters to make a word"; p.className = "preview empty"; }
+      if (!w){ var m = pickMode(); p.textContent = m === "drag" ? "Drag across the letters — words count by themselves!" : m === "tap" ? "Tap the letters one at a time — words count by themselves!" : "Drag across the letters — or tap them — words count by themselves!"; p.className = "preview empty"; }
       else { p.textContent = w; p.className = "preview"; }
     }
     function updateProgress(){
@@ -1025,6 +1103,8 @@
        clicks the button or it doesn't — and on a real button, it does. */
     function tapTile(i){
       if (!G) return;
+      if (pickMode() === "drag") return;
+      if (Date.now() - dragSuppress < 600){ dragSuppress = 0; return; }
       ac();
       var sel = G.sel;
       var pos = sel.indexOf(i);
@@ -1033,13 +1113,147 @@
            one letter back out. The rest of the word stays exactly as it
            was — selWord() rebuilds from the letters still selected, in
            the order they were tapped. */
-        sel.splice(pos, 1); tileEl(i).classList.remove("sel"); sndTap(1); updatePreview();
+        sel.splice(pos, 1); tileEl(i).classList.remove("sel"); clearHintTarget(); sndTap(1); updatePreview();
         return;
       }
       /* v4: any tile on the board can be tapped next, wherever it sits.
          There is no touching/adjacency rule — a casual player taps the
          letters in the order she sees them. */
-      sel.push(i); tileEl(i).classList.add("sel"); sndTap(sel.length); updatePreview();
+      selectTile(i);
+    }
+    function clearHintTarget(){
+      var els = document.querySelectorAll(".tile.hint-target");
+      for (var q = 0; q < els.length; q++) els[q].classList.remove("hint-target");
+    }
+    function selectTile(i){
+      clearHintTarget();
+      G.sel.push(i); tileEl(i).classList.add("sel"); sndTap(G.sel.length); updatePreview();
+      maybeAutoSubmit();
+    }
+    /* ---------- Drag to spell (v10) ----------
+       Pam plays word games by dragging her finger across the letters,
+       so the board takes drags as well as taps. Pointer events on the
+       board container only; tiles stay plain buttons, and a tap still
+       arrives as a plain click underneath — the drag layer records
+       what it handled and tapTile ignores the click that follows a
+       drag, so the two paths can never fight or double-fire. Dragging
+       back over the letter you just picked takes it back off. */
+    var dragState = null, dragSuppress = 0;
+    function tileFromPoint(x, y){
+      var el = document.elementFromPoint(x, y);
+      if (!el || !el.classList || !el.classList.contains("tile")) return -1;
+      return parseInt(el.getAttribute("data-i"), 10);
+    }
+    function dragSelect(i){
+      if (!G) return;
+      var sel = G.sel;
+      if (sel.length && sel[sel.length - 1] === i) return;
+      if (sel.length > 1 && sel[sel.length - 2] === i){
+        var last = sel.pop(); tileEl(last).classList.remove("sel"); updatePreview(); return;
+      }
+      if (sel.indexOf(i) !== -1) return;
+      dragState.moved = true;
+      selectTile(i);
+    }
+    /* The Drag/Tap gate, enforced at the BOARD in the capture phase so
+       a mode can never leak: in Tap mode, pointer input (finger, mouse,
+       or stylus) never starts a drag; in Drag mode, neither pointer
+       taps nor plain clicks ever reach a tile. Stylus pens arrive as
+       pointerType "pen" and are covered by the same pointer path in
+       every mode — no special-casing, so a pen drags and taps exactly
+       like a finger. */
+    function tileGate(e){
+      var t = e.target;
+      if (!t || !t.classList || !t.classList.contains("tile")) return;
+      var m = pickMode();
+      if (e.type === "pointerdown" && m === "tap"){ e.stopImmediatePropagation(); return; }
+      if (e.type === "pointerdown" && m === "drag"){
+        /* In Drag mode a press that never moves is a TAP, not a drag —
+           and a tap must not pick a letter. Judge it at release: if
+           the pointer stayed on its starting tile and selected nothing
+           beyond it, give the letter back. (An earlier build stopped
+           pointerdown dead, which also killed drags dead.) */
+        var ix = parseInt(t.getAttribute("data-i"), 10);
+        gateTap = { idx: ix, wasSel: G ? G.sel.indexOf(ix) !== -1 : false, x: e.clientX, y: e.clientY };
+        return;
+      }
+      if (e.type === "click" && m === "drag"){
+        if (!gateTapSuppress){ e.stopImmediatePropagation(); e.preventDefault(); }
+      }
+    }
+    var gateTap = null, gateTapSuppress = false;
+    document.addEventListener("pointerup", function(e){
+      if (!gateTap) return;
+      var gt = gateTap; gateTap = null;
+      if (!G || pickMode() !== "drag") return;
+      var moved = Math.abs(e.clientX - gt.x) > 14 || Math.abs(e.clientY - gt.y) > 14;
+      if (!moved && !gt.wasSel && G.sel.length && G.sel[G.sel.length - 1] === gt.idx){
+        G.sel.pop(); tileEl(gt.idx).classList.remove("sel"); updatePreview();
+        gateTapSuppress = true;
+        setTimeout(function(){ gateTapSuppress = false; }, 700);
+      }
+    }, true);
+    function initDrag(){
+      var board = $("board");
+      board.addEventListener("pointerdown", function(e){
+        if (!G || pickMode() === "tap") return;
+        var i = tileFromPoint(e.clientX, e.clientY);
+        if (i === -1) return;
+        dragState = { moved:false, startIdx:i, wasSel: G.sel.indexOf(i) !== -1 };
+        try { board.setPointerCapture(e.pointerId); } catch(err){}
+        if (!dragState.wasSel) selectTile(i);
+        if (e.cancelable) e.preventDefault();
+      });
+      board.addEventListener("pointermove", function(e){
+        if (!dragState) return;
+        var i = tileFromPoint(e.clientX, e.clientY);
+        if (i !== -1) dragSelect(i);
+      });
+      function endDrag(){
+        if (!dragState) return;
+        if (!dragState.moved && dragState.wasSel){
+          var pos = G.sel.indexOf(dragState.startIdx);
+          if (pos !== -1){ G.sel.splice(pos, 1); tileEl(dragState.startIdx).classList.remove("sel"); updatePreview(); }
+        }
+        dragState = null;
+        dragSuppress = Date.now();
+      }
+      board.addEventListener("pointerup", endDrag);
+      board.addEventListener("pointercancel", endDrag);
+      board.addEventListener("click", tileGate, true);
+      board.addEventListener("pointerdown", tileGate, true);
+    }
+    /* v10: a finished word counts BY ITSELF — no Check button hunt.
+       The prefix rule, final form (after the SOR / SEA / ROS lessons):
+       - A LEVEL word always waits if it is the opening of a longer
+         LEVEL word whose remaining letters are still on the board
+         (ROS must not fire if ROSE can still be finished) — and a
+         completed level word registers the moment it is whole, even
+         if a longer level word happens to start with it.
+       - A BONUS (dictionary) word registers immediately UNLESS it is
+         exactly the reachable opening of a level word — then it waits
+         for one more letter; if that letter doesn't complete the level
+         word, the sequence is no word at all and nothing fires early. */
+    function maybeAutoSubmit(){
+      var w = selWord();
+      if (w.length < 3) return;
+      var isTarget = G.level.words.indexOf(w) !== -1 && !G.found[w];
+      var isBonus = !isTarget && !!DICT[w] && G.bonus.indexOf(w) === -1 && G.level.words.indexOf(w) === -1;
+      if (!isTarget && !isBonus) return;
+      var used = {}; G.sel.forEach(function(ix){ used[ix] = true; });
+      for (var k = 0; k < G.level.words.length; k++){
+        var W = G.level.words[k];
+        if (W.length <= w.length || W.indexOf(w) !== 0 || G.found[W]) continue;
+        var rest = W.slice(w.length), ok = true;
+        for (var c = 0; c < rest.length; c++){
+          var hit = -1;
+          for (var t = 0; t < G.grid.length; t++){ if (!used[t] && G.grid[t] === rest[c]){ hit = t; break; } }
+          if (hit === -1){ ok = false; break; }
+          used[hit] = true;
+        }
+        if (ok) return; /* she may be spelling the longer level word — wait */
+      }
+      submitWord();
     }
     function clearSel(){
       G.sel.forEach(function(i){ tileEl(i).classList.remove("sel"); });
@@ -1169,19 +1383,29 @@
     /* ---------- Hint & shuffle ---------- */
     function doHint(){
       if (!G) return;
-      clearSel();
       var remaining = G.level.words.filter(function(w){ return !G.found[w]; });
       if (!remaining.length) return;
       var w = remaining[0];
       if (G.hintWord !== w){ G.hintWord = w; G.hintStage = 0; }
       G.hintStage++;
       var path = G.paths[w];
+      clearSel();
       if (G.hintStage === 1){
-        flashTiles([path[0]]);
-        setMessage("Hint: one word starts with the letter " + w[0] + " — look for the glowing tile.", false);
+        /* Light the whole word up one letter at a time, in order, so
+           she can SEE the word, not just hear about a clue. */
+        path.forEach(function(ix, k){
+          setTimeout(function(){ flashTiles([ix]); }, k * 480);
+        });
+        setMessage("Hint: watch the glowing letters — they spell a word, in order. Drag across them!", false);
       } else {
-        flashTiles(path);
-        setMessage("Hint: follow the glowing tiles — " + w[0] + " ... " + w[w.length - 1] + ", " + w.length + " letters.", false);
+        /* Second tap: start the word for her. All but the last letter
+           are picked; the last one glows until she taps it. */
+        for (var j = 0; j < path.length - 1; j++){
+          G.sel.push(path[j]); tileEl(path[j]).classList.add("sel");
+        }
+        updatePreview();
+        tileEl(path[path.length - 1]).classList.add("hint-target");
+        setMessage("Almost there — tap the glowing letter to finish the word!", false);
         G.hintWord = null; G.hintStage = 0;
       }
       sndTap(3);
@@ -1216,7 +1440,11 @@
       el.addEventListener("click", function(){ fn(); });
     }
     function init(){
-      soundLabel(); refreshHome();
+      initDrag();
+      soundLabel(); modeLabel(); refreshHome();
+      bindTap($("mode-drag"), function(){ setPickMode("drag"); });
+      bindTap($("mode-tap"), function(){ setPickMode("tap"); });
+      bindTap($("mode-both"), function(){ setPickMode("both"); });
       bindTap($("btn-play"), function(){
         var idx = Math.min(save.last || 0, LEVELS.length - 1);
         if (save.done[idx] && idx + 1 < LEVELS.length && !save.done[idx + 1] ) idx = idx + 1;
