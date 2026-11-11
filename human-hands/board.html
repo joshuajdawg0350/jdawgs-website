@@ -243,7 +243,7 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
       <div class="sec-head" style="margin-bottom:1.4rem">
         <p class="eyebrow">Post a job</p>
         <h2>Post yours</h2>
-        <p class="lead" style="margin-top:.8rem">Fill out the form, send it in Step 1, then pay in Step 2 to activate it. Our goal is to be faster, more efficient, and friendlier than our competition — the AI makes the perfect match, and a friendly local person does the work.</p>
+        <p class="lead" style="margin-top:.8rem">Fill out the form and submit it in Step 1 — it goes straight to the operator, no email needed — then pay in Step 2 to activate it. Our goal is to be faster, more efficient, and friendlier than our competition — the AI makes the perfect match, and a friendly local person does the work.</p>
       </div>
       <form class="post-form" id="jobPostForm" novalidate>
         <div class="field">
@@ -318,26 +318,23 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         </div>
         <p class="post-terms">You set the price. We add 15% on top — that's the whole cost. The worker keeps 100% of your price plus 100% of tips.</p>
         <p class="post-terms"><strong>No match, no charge:</strong> if no worker matches your job, your payment is refunded in full automatically. Cancel before work starts for a full refund. Full policy: <a href="https://jdawgsindustries.com/refunds.html">https://jdawgsindustries.com/refunds.html</a></p>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;min-height:56px">Submit job post — Step 1: Send it</button>
-        <p class="small muted" style="margin:12px 0 0">Submitting opens your email app with your post addressed to the operator. That email is your submission of record.</p>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;min-height:56px">Submit job post — Step 1: Submit</button>
+        <p class="small muted" style="margin:12px 0 0">Submitting sends your post straight to the operator's review queue — no email needed. Your confirmation and exact total appear right here.</p>
       </form>
+      <p id="jpSubmitError" hidden style="color:#ff9c9c;margin-top:14px"></p>
 
       <div class="step2" id="postStep2" hidden>
         <h3 style="margin-bottom:.6rem">Step 2 — Pay to activate</h3>
-        <p><strong>Your post was composed and your email app was opened.</strong> The operator reviews each post and the job goes on the board once its payment is matched.</p>
+        <p id="jpConfirmLine"><strong>Your post is in.</strong> It went straight to the operator's review queue — no email needed.</p>
         <p class="fee-line" id="jpTotalLine" style="color:#fff;font-size:1rem"></p>
+        <p id="jpPayExact" style="color:#fff"></p>
+        <p>The operator reviews each post, and the job goes on the board once its payment is matched.</p>
         <p style="margin:1rem 0"><a class="btn btn-primary" href="https://buy.stripe.com/00w6oHe4Fd6Ad8pelv3ks1x" target="_blank" rel="noopener" style="min-height:56px">Pay for your job post</a></p>
         <p>Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers. Any major card, bank transfer, Venmo, Cash App, or PayPal also works.</p>
-        <p>Pay your price plus the 15% fee shown above, and use the same name and contact you put on this form so we can match your payment to your post.</p>
-        <hr style="border:none;border-top:1px solid var(--line);margin:18px 0">
-        <p><strong>If your email app didn't open, copy your post and email it to joshuajdawg0350@gmail.com</strong></p>
-        <textarea class="fallback-box" id="jpComposed" readonly aria-label="Your composed job post — copy and email it"></textarea>
+        <p>Pay the exact total shown above, and use the same name and contact you put on this form so we can match your payment to your post <span id="jpJobRef"></span>.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-          <button type="button" class="btn btn-primary" id="jpCopyBtn">Copy your post</button>
           <a class="btn btn-ghost" href="#jobs" style="background:transparent;border-color:var(--line-strong)">← Back to the board</a>
         </div>
-        <p id="jpCopyOk" hidden style="color:var(--good)">Copied — now paste it into an email to joshuajdawg0350@gmail.com</p>
-        <p id="jpCopyMsg" hidden>Copy didn't work here — select the text and copy it manually.</p>
       </div>
 
       <p style="margin-top:2rem"><a class="backlink" href="index.html">← Back to Human Hands home</a></p>
@@ -404,50 +401,50 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         if(firstErr) firstErr.scrollIntoView({behavior:"smooth", block:"center"});
         return;
       }
-      var fee=Math.round(price*0.15*100)/100; var total=Math.round((price+fee)*100)/100;
-      var lines=[
-        "HUMAN HANDS JOB POST",
-        "",
-        "Job title: "+title,
-        "Category: "+cat,
-        "Tier: "+tier,
-        "Description: "+desc,
-        "Location — From: "+fromLoc,
-        "Location — To: "+(toLoc||"(none)"),
-        "Your price in USD: "+jpMoney(price),
-        "Platform fee (15%): "+jpMoney(fee),
-        "Total to pay: "+jpMoney(total),
-        "Photo proof required: "+photo,
-        "Your name: "+name,
-        "Contact — email or phone: "+contact
-      ];
-      var body=lines.join("\n");
-      var composed=document.getElementById("jpComposed"); if(composed) composed.value=body;
-      var totalLine=document.getElementById("jpTotalLine");
-      if(totalLine) totalLine.innerHTML="Your price: <strong>"+jpMoney(price)+"</strong> · 15% fee: <strong>"+jpMoney(fee)+"</strong> · <strong>Total to pay: "+jpMoney(total)+"</strong>";
-      var step2=document.getElementById("postStep2"); if(step2){ step2.hidden=false; }
-      var copyMsg=document.getElementById("jpCopyMsg"); if(copyMsg) copyMsg.hidden=true;
-      var copyOk=document.getElementById("jpCopyOk"); if(copyOk) copyOk.hidden=true;
-      var subject="HUMAN HANDS JOB POST — "+title;
-      var mailto="mailto:joshuajdawg0350@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-      if(step2) step2.scrollIntoView({behavior:"smooth", block:"start"});
-      setTimeout(function(){ try{ var a=document.createElement("a"); a.href=mailto; a.style.display="none"; document.body.appendChild(a); a.click(); setTimeout(function(){ if(a.parentNode) a.parentNode.removeChild(a); }, 500); }catch(err){} }, 350);
+      var submitBtn=jobForm.querySelector("button[type=submit]");
+      var errBox=document.getElementById("jpSubmitError");
+      if(errBox) errBox.hidden=true;
+      if(submitBtn){ submitBtn.disabled=true; submitBtn.textContent="Sending your post…"; }
+      function jpFail(){
+        if(submitBtn){ submitBtn.disabled=false; submitBtn.textContent="Submit job post — Step 1: Submit"; }
+        if(errBox){ errBox.textContent="Your post didn't reach the operator — nothing was submitted. Please check your connection and press Submit again."; errBox.hidden=false; errBox.scrollIntoView({behavior:"smooth", block:"center"}); }
+      }
+      var payload={
+        task: title,
+        details: desc+"\n\nTier requested: "+tier+(toLoc?("\nDrop-off location: "+toLoc):"")+"\nPosted by: "+name+" ("+contact+") via the Human Hands job board.",
+        category: cat,
+        location: fromLoc,
+        pay_usd: price,
+        photo_proof_required: (photo==="Yes") ? "Yes — photo proof required from the worker" : "No — photo proof not required",
+        agent: { name: name, contact: contact },
+        idempotency_key: "board-"+Date.now()+"-"+Math.random().toString(36).slice(2,10)
+      };
+      fetch("https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/jobs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function(res){
+        return res.json().then(function(data){ return { ok: res.ok, data: data }; });
+      }).then(function(r){
+        if(submitBtn){ submitBtn.disabled=false; submitBtn.textContent="Submit job post — Step 1: Submit"; }
+        if(!r.ok || !r.data || !r.data.job || !r.data.job.id){ jpFail(); return; }
+        var job=r.data.job; var t=job.totals||{};
+        var totalLine=document.getElementById("jpTotalLine");
+        if(totalLine && t.worker_pay_usd!==undefined && t.platform_fee_usd!==undefined && t.payer_total_usd!==undefined){
+          totalLine.innerHTML="Your price: <strong>"+jpMoney(Number(t.worker_pay_usd))+"</strong> · 15% fee: <strong>"+jpMoney(Number(t.platform_fee_usd))+"</strong> · <strong>Total to pay: "+jpMoney(Number(t.payer_total_usd))+"</strong>";
+        }
+        var payExact=document.getElementById("jpPayExact");
+        if(payExact && t.payer_total_usd!==undefined){
+          payExact.innerHTML="<strong>Your total is "+jpMoney(Number(t.payer_total_usd))+" — enter "+jpMoney(Number(t.payer_total_usd))+" on the payment page.</strong>";
+        }
+        var confirmLine=document.getElementById("jpConfirmLine");
+        if(confirmLine){ confirmLine.innerHTML="<strong>Your post is in.</strong> It went straight to the operator's review queue — no email needed. Your job reference: <strong>"+job.id+"</strong>"; }
+        var jobRef=document.getElementById("jpJobRef");
+        if(jobRef){ jobRef.textContent="(job reference "+job.id+")"; }
+        var step2=document.getElementById("postStep2"); if(step2){ step2.hidden=false; step2.scrollIntoView({behavior:"smooth", block:"start"}); }
+      }).catch(function(){ jpFail(); });
     });
   }
-  var copyBtn=document.getElementById("jpCopyBtn");
-  if(copyBtn){ copyBtn.addEventListener("click", function(){
-    var box=document.getElementById("jpComposed"); var okEl=document.getElementById("jpCopyOk"); var msgEl=document.getElementById("jpCopyMsg");
-    function fail(){ if(msgEl) msgEl.hidden=false; if(okEl) okEl.hidden=true; if(box){ box.focus(); box.select(); } }
-    function done(){ if(okEl) okEl.hidden=false; if(msgEl) msgEl.hidden=true; }
-    if(!box || !box.value){ fail(); return; }
-    box.focus(); box.select();
-    var copied=false;
-    try{ copied=document.execCommand && document.execCommand("copy"); }catch(e){ copied=false; }
-    if(copied){ done(); return; }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(box.value).then(done).catch(fail);
-    } else { fail(); }
-  }); }
 })();
 </script>
 <script>
