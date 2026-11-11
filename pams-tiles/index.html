@@ -44,29 +44,47 @@
           radial-gradient(600px 420px at -120px 70%, rgba(53,182,255,.10), transparent 65%),
           linear-gradient(180deg,#070b16 0%, #05070d 100%);
       }
+      /* Rain over the city: faint diagonal streaks, always still (no
+         animation — kind to older eyes and weak processors). */
+      body::after{
+        content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+        background:repeating-linear-gradient(100deg, transparent 0 42px, rgba(170,210,255,.05) 42px 43px, transparent 43px 86px);
+      }
+      /* The Hustle City skyline along the bottom, with its wet-street
+         reflection (mirrored by the browser, no extra artwork). It sits
+         behind the app and never takes a tap. */
+      #cityscape{ position:fixed; left:0; right:0; bottom:0; z-index:0; pointer-events:none; }
+      #cityscape .sky{
+        display:block; width:100%; height:118px;
+        -webkit-box-reflect:below 3px linear-gradient(transparent 62%, rgba(255,255,255,.13));
+      }
+      #cityscape .streetline{
+        height:2px; margin-top:3px;
+        background:linear-gradient(90deg, transparent, rgba(53,182,255,.55) 30%, rgba(53,182,255,.8) 50%, rgba(53,182,255,.55) 70%, transparent);
+      }
       #app{ position:relative; z-index:1; max-width:560px; margin:0 auto; min-height:100dvh; display:flex; flex-direction:column; }
-      .screen{ display:none; flex-direction:column; flex:1; min-height:100dvh; }
+      .screen{ display:none; flex-direction:column; flex:1; min-height:100vh; min-height:100dvh; }
       .screen.active{ display:flex; }
 
       /* ---------- shared ---------- */
       .chrome-text{
         background:var(--chrome); -webkit-background-clip:text; background-clip:text; color:transparent;
-        filter:drop-shadow(0 2px 10px rgba(53,182,255,.35));
+        filter:drop-shadow(0 2px 10px rgba(53,182,255,.35)) drop-shadow(0 0 26px rgba(53,182,255,.30));
       }
       .btn{
         touch-action:manipulation;
         font-family:inherit; font-weight:800; color:var(--ink); cursor:pointer;
         background:linear-gradient(180deg,#22335a,#141f38);
-        border:2px solid var(--line); border-radius:16px;
+        border:2px solid #7d9cc6; border-radius:16px;
         min-height:56px; padding:12px 20px; font-size:20px;
         display:inline-flex; align-items:center; justify-content:center; gap:10px;
-        box-shadow:0 4px 14px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.12);
+        box-shadow:0 4px 14px rgba(0,0,0,.45), 0 0 12px rgba(53,182,255,.14), inset 0 1px 0 rgba(255,255,255,.22);
       }
       .btn:active{ transform:scale(.97); }
       .btn:focus-visible{ outline:3px solid var(--blue); outline-offset:2px; }
       .btn.primary{
         background:linear-gradient(180deg,#4fc3ff,#0f7fd6);
-        border-color:#9adcff; color:#ffffff; text-shadow:0 1px 3px rgba(0,40,80,.55);
+        border-color:#e8f6ff; color:#ffffff; text-shadow:0 1px 3px rgba(0,40,80,.55);
         box-shadow:0 6px 22px rgba(53,182,255,.45), inset 0 1px 0 rgba(255,255,255,.5);
       }
       .btn.good{ background:linear-gradient(180deg,#2f9e63,#1c6b40); border-color:#7fe6ab; }
@@ -147,7 +165,7 @@
       .howto-body li{ margin-bottom:10px; }
 
       /* ---------- game ---------- */
-      #screen-game{ height:100dvh; min-height:0; }
+      #screen-game{ height:100vh; height:100dvh; min-height:0; }
       .game-head{ display:flex; align-items:center; gap:10px; padding:10px 12px 2px; }
       .game-head .lvl{ flex:1; text-align:center; }
       .game-head .lvl .n{ font-size:21px; font-weight:900; }
@@ -155,7 +173,9 @@
       .progress-line{
         text-align:center; font-size:18.5px; font-weight:800; color:var(--ink-dim); padding:2px 10px 0;
       }
-      .progress-line b{ color:#fff; }
+      .progress-line b{
+        background:var(--chrome); -webkit-background-clip:text; background-clip:text; color:transparent;
+      }
       .preview{
         margin:8px 14px 0; min-height:58px; border-radius:16px;
         background:var(--panel); border:2px solid var(--line);
@@ -170,28 +190,56 @@
         padding:5px 16px 0;
       }
       .message.warm{ color:var(--gold); }
-      .board-wrap{ display:flex; justify-content:center; padding:8px 10px 2px; position:relative; }
-      .board{
-        display:grid; gap:8px; width:min(94vw,400px);
-        touch-action:none; user-select:none; -webkit-user-select:none;
+      .board-wrap{
+        display:flex; justify-content:center; padding:8px 10px 2px; position:relative;
+        /* The board sits on a clean dark panel, always: the city glows
+           around it, never behind the letters. Readability is the gate. */
+        margin:6px 10px 0;
+        background:linear-gradient(180deg, rgba(10,16,30,.90), rgba(6,9,18,.95));
+        border:2px solid rgba(95,150,220,.35); border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,.5), inset 0 0 34px rgba(53,182,255,.05);
       }
-      .board.size4{ grid-template-columns:repeat(4,1fr); }
-      .board.size5{ width:min(96vw,410px); gap:7px; grid-template-columns:repeat(5,1fr); }
+      .board{
+        /* Width is capped by the height actually available, not just the
+           screen width: at large system font sizes the fixed rows above
+           and below the board grow, and a width-only board pushes the
+           Check/Hint/Shuffle row off the bottom of the screen — buttons
+           a player has to scroll to find read as buttons that don't work.
+           dvh is resolved against a (possibly not-yet-shown) browser
+           toolbar, vh against the layout viewport the player actually
+           sees — vh is the smaller, safer measure, so it comes last.
+           The board is a square (aspect-ratio) with 1fr rows: the grid
+           can never be stretched taller/wider than the cap by its own
+           content (a big tile font inflating row height used to do
+           exactly that, overflowing the board off both screen edges). */
+        display:grid; gap:8px; aspect-ratio:1/1;
+        width:min(94vw,400px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px)));
+        user-select:none; -webkit-user-select:none;
+      }
+      .board.size4{ grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(4,1fr); }
+      .board.size5{ width:min(96vw,410px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); gap:7px; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); }
       .tile{
-        touch-action:none;
-        aspect-ratio:1/1; border-radius:14px; border:2px solid var(--tile-edge);
-        background:var(--tile-face);
+        /* Tiles are real <button>s now: plain click handling, no custom
+           gesture code anywhere near them. */
+        touch-action:manipulation;
+        font-family:inherit; -webkit-appearance:none; appearance:none; padding:0; margin:0;
+        /* The cell decides the tile's size, never the letter inside it:
+           min-width/height 0 lets the tile shrink below its content, so a
+           large system font can never blow the grid past the board. */
+        min-width:0; min-height:0; width:100%; height:100%; overflow:hidden;
+        border-radius:14px; border:2px solid #8fa8c9;
+        background:linear-gradient(165deg,#4a5872 0%,#232f49 45%,#141d31 62%,#2b3a58 100%);
         display:flex; align-items:center; justify-content:center;
         font-weight:900; color:#f7fbff; cursor:pointer; position:relative;
-        box-shadow:0 4px 10px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.28), inset 0 -3px 0 rgba(0,0,0,.35);
+        box-shadow:0 4px 10px rgba(0,0,0,.5), 0 0 8px rgba(53,182,255,.10), inset 0 1px 0 rgba(255,255,255,.38), inset 0 -3px 0 rgba(0,0,0,.35);
         text-shadow:0 2px 4px rgba(0,0,0,.6);
       }
       .board.size4 .tile{ font-size:37px; }
       .board.size5 .tile{ font-size:30px; }
       .tile.sel{
-        background:linear-gradient(160deg,#57c6ff,#0f7fd6);
-        border-color:#bfe9ff; color:#fff;
-        box-shadow:0 0 18px rgba(53,182,255,.75), inset 0 1px 0 rgba(255,255,255,.55);
+        background:linear-gradient(160deg,#6fd0ff,#1290e8 55%,#0a68b8);
+        border-color:#eaf7ff; color:#fff;
+        box-shadow:0 0 22px rgba(53,182,255,.9), 0 0 46px rgba(53,182,255,.35), inset 0 1px 0 rgba(255,255,255,.6);
         transform:scale(1.05);
       }
       .tile.found-flash{ animation:pop .6s ease; border-color:var(--good); }
@@ -227,7 +275,7 @@
       /* ---------- complete overlay ---------- */
       .overlay{
         position:fixed; inset:0; z-index:50; display:none; align-items:center; justify-content:center;
-        background:rgba(3,6,12,.78); padding:20px;
+        background:rgba(3,6,12,.78); padding:20px; overflow-y:auto;
       }
       .overlay.show{ display:flex; }
       .card{
@@ -241,19 +289,117 @@
       .card .btns{ display:flex; flex-direction:column; gap:11px; margin-top:20px; }
       .card .btns .btn{ min-height:60px; font-size:21px; }
 
+      /* ---------- Hustle City Prize Box ---------- */
+      /* Pure celebration: no currency, nothing to spend, nothing that
+         runs out. Pam can tap it twenty times and it cheers twenty times. */
+      .prize-zone{ margin-top:16px; }
+      .prize-box{
+        position:relative; width:128px; height:112px; margin:0 auto; display:block;
+        background:none; border:none; cursor:pointer; padding:0;
+        touch-action:manipulation; -webkit-appearance:none; appearance:none;
+      }
+      .prize-box:active{ transform:scale(.96); }
+      .prize-box:focus-visible{ outline:3px solid var(--blue); outline-offset:3px; border-radius:12px; }
+      .prize-lid{
+        position:absolute; left:2px; right:2px; top:0; height:30px; z-index:2;
+        border-radius:10px; border:2px solid #eaf4ff;
+        background:linear-gradient(180deg,#ffffff,#c9d9ee 45%,#8fa8c4 62%,#e6f1ff);
+        box-shadow:0 0 16px rgba(53,182,255,.55), inset 0 1px 0 rgba(255,255,255,.9);
+        transition:transform .18s ease;
+      }
+      .prize-box.pop .prize-lid{ transform:translateY(-17px) rotate(-7deg); }
+      .prize-boxbody{
+        position:absolute; left:8px; right:8px; top:24px; bottom:0;
+        border-radius:10px; border:2px solid #eaf4ff; overflow:hidden;
+        background:linear-gradient(165deg,#dfeaf8,#93a9c6 40%,#5f7ba6 62%,#c3d5ec);
+        box-shadow:0 8px 22px rgba(0,0,0,.5), 0 0 20px rgba(53,182,255,.35), inset 0 1px 0 rgba(255,255,255,.7);
+        display:flex; align-items:center; justify-content:center;
+      }
+      .prize-boxbody::before{
+        content:""; position:absolute; top:0; bottom:0; left:50%; width:22px; transform:translateX(-50%);
+        background:linear-gradient(180deg,#57c6ff,#0f7fd6); box-shadow:0 0 12px rgba(53,182,255,.8);
+      }
+      .prize-boxbody::after{
+        content:""; position:absolute; left:0; right:0; top:50%; height:22px; transform:translateY(-50%);
+        background:linear-gradient(90deg,#57c6ff,#0f7fd6); box-shadow:0 0 12px rgba(53,182,255,.8);
+      }
+      .prize-peace{
+        position:relative; z-index:1; width:52px; height:52px; border-radius:50%;
+        background:radial-gradient(circle at 35% 30%, #22335a, #0c1425 75%);
+        border:2px solid var(--blue);
+        display:flex; align-items:center; justify-content:center;
+        box-shadow:0 0 14px rgba(53,182,255,.7);
+      }
+      .prize-peace svg{ width:33px; height:33px; filter:drop-shadow(0 0 4px rgba(53,182,255,.85)); }
+      .prize-label{
+        margin:9px 0 0; font-size:21px; font-weight:900; color:#fff;
+        text-shadow:0 0 14px rgba(53,182,255,.6);
+      }
+      .prize-line{
+        min-height:41px; margin:5px 0 0; font-size:29px; font-weight:900; line-height:1.25;
+      }
+      .burst-piece{
+        position:fixed; z-index:70; pointer-events:none; font-size:22px; line-height:1;
+        animation:burstfly .95s ease-out forwards;
+      }
+      @keyframes burstfly{ to{ transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.4); opacity:0; } }
+
       @media (max-height:760px){
-        .preview{ min-height:50px; font-size:27px; }
+        .preview{ min-height:44px; font-size:27px; margin-top:4px; }
+        .message{ min-height:22px; padding-top:2px; }
+        .progress-line{ padding-top:0; }
+        .game-head{ padding-top:6px; padding-bottom:0; }
+        .game-head .lvl .t{ display:none; }
+        .controls{ padding-top:6px; }
+        .controls .btn{ min-height:52px; }
+        .found-area{ min-height:26px; padding-top:4px; }
         #screen-home h1{ font-size:44px; }
-        .board.size4{ width:min(88vw,330px); }
-        .board.size5{ width:min(92vw,350px); }
+        .board.size4{ width:min(88vw,330px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); }
+        .board.size5{ width:min(92vw,350px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); }
       }
       @media (prefers-reduced-motion: reduce){
-        .tile.found-flash,.tile.hint-flash,.spark{ animation:none !important; }
+        .tile.found-flash,.tile.hint-flash,.spark,.burst-piece{ animation:none !important; }
         .btn:active,.tile.sel{ transform:none; }
       }
     </style>
   </head>
   <body>
+    <!-- The Hustle City skyline: one inline SVG, silhouetted buildings
+         with a few lit windows, mirrored by the browser into the wet
+         street below. No image file, no extra request. -->
+    <div id="cityscape" aria-hidden="true">
+      <svg class="sky" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <g fill="#0a1220">
+          <rect x="60" y="90" width="70" height="110"/><rect x="330" y="80" width="60" height="120"/>
+          <rect x="700" y="70" width="80" height="130"/><rect x="1060" y="85" width="70" height="115"/>
+        </g>
+        <g fill="#060b16">
+          <rect x="0" y="70" width="90" height="130"/><rect x="85" y="110" width="60" height="90"/>
+          <rect x="140" y="50" width="110" height="150"/><rect x="245" y="95" width="70" height="105"/>
+          <rect x="310" y="65" width="95" height="135"/><rect x="400" y="120" width="55" height="80"/>
+          <rect x="450" y="80" width="120" height="120"/><rect x="565" y="45" width="75" height="155"/>
+          <rect x="635" y="100" width="90" height="100"/><rect x="720" y="60" width="60" height="140"/>
+          <rect x="775" y="90" width="110" height="110"/><rect x="880" y="55" width="70" height="145"/>
+          <rect x="945" y="115" width="95" height="85"/><rect x="1035" y="75" width="65" height="125"/>
+          <rect x="1095" y="50" width="120" height="150"/><rect x="1210" y="95" width="80" height="105"/>
+          <rect x="1285" y="70" width="60" height="130"/><rect x="1340" y="105" width="100" height="95"/>
+        </g>
+        <g fill="#35b6ff" opacity=".55">
+          <rect x="160" y="70" width="7" height="9"/><rect x="185" y="95" width="7" height="9"/>
+          <rect x="470" y="100" width="7" height="9"/><rect x="585" y="65" width="7" height="9"/>
+          <rect x="800" y="110" width="7" height="9"/><rect x="1115" y="75" width="7" height="9"/>
+          <rect x="1240" y="115" width="7" height="9"/><rect x="30" y="95" width="7" height="9"/>
+        </g>
+        <g fill="#ffd34d" opacity=".6">
+          <rect x="350" y="90" width="7" height="9"/><rect x="660" y="120" width="7" height="9"/>
+          <rect x="960" y="130" width="7" height="9"/><rect x="1310" y="90" width="7" height="9"/>
+        </g>
+        <g fill="#35b6ff">
+          <circle cx="207" cy="128" r="3.5"/><circle cx="905" cy="86" r="3.5"/><circle cx="1252" cy="140" r="3.5"/>
+        </g>
+      </svg>
+      <div class="streetline"></div>
+    </div>
     <div id="app">
 
       <!-- ============ HOME ============ -->
@@ -270,7 +416,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 3</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -293,7 +439,7 @@
         <div class="howto-body">
           <p class="big">How to play Pam&rsquo;s Tiles</p>
           <ul>
-            <li><strong>Drag your finger</strong> across touching letters to spell a word &mdash; up, down, sideways, or diagonal all work. You can also <strong>tap letters one at a time</strong>, then tap <strong>Check</strong>.</li>
+            <li><strong>Tap letters one at a time</strong> to spell a word — each letter you tap has to touch the last one: up, down, sideways, or diagonal all work. When your word looks right, tap <strong>Check</strong>. Tap the last letter again to take it back.</li>
             <li>Each level hides a few words. The empty boxes at the bottom show how many letters each word has.</li>
             <li>Find all the hidden words to finish the level. Extra real words you find count as <strong>bonus words</strong>!</li>
             <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free, as many times as you like. Tap <strong>Shuffle</strong> to mix the board up.</li>
@@ -315,7 +461,7 @@
           <button class="btn icon-btn" id="btn-sound-game" aria-label="Turn sound on or off">&#128266;</button>
         </div>
         <div class="progress-line" id="progress-line"></div>
-        <div class="preview empty" id="preview">Drag or tap letters to make a word</div>
+        <div class="preview empty" id="preview">Tap letters to make a word</div>
         <div class="message" id="message" aria-live="polite"></div>
         <div class="board-wrap"><div class="board-peace" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"><circle cx="50" cy="50" r="45"/><line x1="50" y1="5" x2="50" y2="95"/><line x1="50" y1="50" x2="18" y2="82"/><line x1="50" y1="50" x2="82" y2="82"/></svg></div><div class="board size4" id="board"></div></div>
         <div class="controls">
@@ -341,6 +487,14 @@
         <div class="card-peace" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="#e9f2ff" stroke-width="6" stroke-linecap="round"><circle cx="50" cy="50" r="44"/><line x1="50" y1="6" x2="50" y2="94"/><line x1="50" y1="50" x2="19" y2="81"/><line x1="50" y1="50" x2="81" y2="81"/></svg></div>
         <h2 class="chrome-text">You found them all!</h2>
         <p id="complete-detail"></p>
+        <div class="prize-zone">
+          <button class="prize-box" id="btn-prize" aria-label="Prize box — tap it for a celebration">
+            <span class="prize-lid"></span>
+            <span class="prize-boxbody"><span class="prize-peace"><svg viewBox="0 0 100 100" fill="none" stroke="#e9f2ff" stroke-width="7" stroke-linecap="round"><circle cx="50" cy="50" r="44"/><line x1="50" y1="6" x2="50" y2="94"/><line x1="50" y1="50" x2="19" y2="81"/><line x1="50" y1="50" x2="81" y2="81"/></svg></span></span>
+          </button>
+          <p class="prize-label">Prize Box &mdash; tap it!</p>
+          <p class="prize-line chrome-text" id="prize-line" aria-live="polite"></p>
+        </div>
         <div class="btns">
           <button class="btn primary" id="btn-next">Next Level &rarr;</button>
           <button class="btn" id="btn-replay">Play This Level Again</button>
@@ -548,7 +702,7 @@
         idx: levelIdx, level: level, size: level.size,
         grid: made.grid, paths: made.paths, variant: made.variant,
         found: {}, bonus: [], score: 0, sel: [],
-        hintWord: null, hintStage: 0, dragMoved: false, selecting: false
+        hintWord: null, hintStage: 0
       };
     }
 
@@ -609,11 +763,15 @@
       var board = $("board"); board.innerHTML = "";
       board.className = "board size" + G.size;
       G.grid.forEach(function(ch, i){
-        var d = document.createElement("div");
+        /* Each tile is a REAL button with a plain click handler — the
+           operating system's own tap path. No pointer events, no drag
+           math, no elementFromPoint: if a finger taps it, it clicks. */
+        var d = document.createElement("button");
+        d.type = "button";
         d.className = "tile"; d.textContent = ch;
         d.setAttribute("data-i", i);
-        d.setAttribute("role", "button");
         d.setAttribute("aria-label", "Letter " + ch);
+        d.addEventListener("click", function(){ tapTile(i); });
         board.appendChild(d);
       });
     }
@@ -621,7 +779,7 @@
     function selWord(){ return G.sel.map(function(i){ return G.grid[i]; }).join(""); }
     function updatePreview(){
       var p = $("preview"), w = selWord();
-      if (!w){ p.textContent = "Drag or tap letters to make a word"; p.className = "preview empty"; }
+      if (!w){ p.textContent = "Tap letters to make a word"; p.className = "preview empty"; }
       else { p.textContent = w; p.className = "preview"; }
     }
     function updateProgress(){
@@ -661,84 +819,42 @@
       }
     }
 
-    /* ---------- Selection: drag or tap ---------- */
+    /* ---------- Selection: TAP ONLY (v3 rebuild) ----------
+       Drag-to-spell is gone, on purpose. Every tile is a real button and
+       a tap is a plain click — the browser's own, most-tested code path.
+       There is NO pointer state left to wedge: no pointerdown/move/up,
+       no setPointerCapture, no pointercancel to mishandle, no
+       elementFromPoint between the finger and the tile. A tap either
+       clicks the button or it doesn't — and on a real button, it does. */
     function isAdjacent(a, b){
       var s = G.size, ra = Math.floor(a / s), ca = a % s, rb = Math.floor(b / s), cb = b % s;
       return Math.abs(ra - rb) <= 1 && Math.abs(ca - cb) <= 1 && a !== b;
     }
-    function tryAdd(i){
+    function tapTile(i){
+      if (!G) return;
+      ac();
       var sel = G.sel;
       var pos = sel.indexOf(i);
       if (pos !== -1){
         /* Tapping the last letter again takes it back; tapping the one
-           before it also steps back one. Anything earlier stays put. */
+           before it also steps back one. Anything earlier gets a friendly
+           explanation instead of a dead, silent tap. */
         if (pos === sel.length - 1 || pos === sel.length - 2){
-          var last = sel.pop(); tileEl(last).classList.remove("sel"); sndTap(1); updatePreview(); return "back";
+          var last = sel.pop(); tileEl(last).classList.remove("sel"); sndTap(1); updatePreview();
+        } else {
+          setMessage("That letter is already in your word — tap Clear to start over.", false);
         }
-        return "present";
+        return;
       }
-      if (sel.length && !isAdjacent(sel[sel.length - 1], i)) return "far";
+      if (sel.length && !isAdjacent(sel[sel.length - 1], i)){
+        setMessage("Letters have to touch — pick one right next to the last letter.", false);
+        return;
+      }
       sel.push(i); tileEl(i).classList.add("sel"); sndTap(sel.length); updatePreview();
-      return "added";
     }
     function clearSel(){
       G.sel.forEach(function(i){ tileEl(i).classList.remove("sel"); });
       G.sel = []; updatePreview();
-    }
-    function tileFromPoint(x, y){
-      var el = document.elementFromPoint(x, y);
-      while (el && !(el.classList && el.classList.contains("tile"))) el = el.parentElement;
-      return el ? parseInt(el.getAttribute("data-i"), 10) : -1;
-    }
-    /* The direct hit: for a plain tap, the event target IS the tile the
-       finger landed on. Resolve there first — elementFromPoint is only
-       the fallback and the drag-tracking path. */
-    function tileIndexFromEvent(e){
-      var el = e.target;
-      while (el && el !== document.body && !(el.classList && el.classList.contains("tile"))) el = el.parentElement;
-      return (el && el.classList && el.classList.contains("tile")) ? parseInt(el.getAttribute("data-i"), 10) : -1;
-    }
-    function boardEvents(){
-      var board = $("board");
-      board.addEventListener("pointerdown", function(e){
-        if (!G) return;
-        var i = tileIndexFromEvent(e);
-        if (i < 0) i = tileFromPoint(e.clientX, e.clientY);
-        if (i < 0) return;
-        e.preventDefault(); ac();
-        /* Keep this gesture glued to the board: if a finger slips off the
-           edge mid-drag, the release still reaches us and nothing sticks. */
-        try { board.setPointerCapture(e.pointerId); } catch(err){ /* capture is a nicety, not a requirement */ }
-        G.selecting = true; G.dragMoved = false;
-        G.downX = e.clientX; G.downY = e.clientY; G.dragLive = false;
-        var r = tryAdd(i);
-        if (r === "far") setMessage("Letters have to touch — pick one right next to the last letter.", false);
-        else if (r === "present") setMessage("That letter is already in your word — tap Clear to start over.", false);
-      });
-      board.addEventListener("pointermove", function(e){
-        if (!G || !G.selecting) return;
-        /* Slop guard: a real finger is never perfectly still. Movement
-           under ~14px from where the finger landed is still a TAP, not a
-           drag — it must not add letters or turn into an auto-submit. */
-        if (!G.dragLive){
-          var dx = e.clientX - (G.downX || 0), dy = e.clientY - (G.downY || 0);
-          if (dx * dx + dy * dy < 196) return;
-          G.dragLive = true;
-        }
-        var i = tileFromPoint(e.clientX, e.clientY);
-        if (i < 0) return;
-        var before = G.sel.length;
-        tryAdd(i);
-        if (G.sel.length !== before) G.dragMoved = true;
-      });
-      function endDrag(){
-        if (!G || !G.selecting) return;
-        G.selecting = false;
-        if (G.dragMoved && G.sel.length >= 3) submitWord();
-        else if (G.dragMoved && G.sel.length > 0 && G.sel.length < 3) setMessage("Words need at least 3 letters — keep going, or tap Clear.", false);
-      }
-      board.addEventListener("pointerup", endDrag);
-      board.addEventListener("pointercancel", endDrag);
     }
 
     /* ---------- Word checking ---------- */
@@ -789,7 +905,61 @@
         "Level " + (G.idx + 1) + " &middot; " + G.level.theme + "<br />Score: <strong>" + G.score + "</strong>" +
         (G.bonus.length ? "<br />Plus " + G.bonus.length + " bonus " + (G.bonus.length === 1 ? "word" : "words") + "!" : "");
       $("btn-next").style.display = G.idx + 1 < LEVELS.length ? "" : "none";
+      prizeIdx = 0;
+      $("prize-line").textContent = "";
+      $("btn-prize").classList.remove("pop");
       $("overlay-complete").classList.add("show");
+    }
+
+    /* ---------- Hustle City Prize Box ----------
+       Pam's favorite part of her old game, our way: a prize box that
+       cheers every single time she taps it. Nothing is won, spent,
+       counted down, or used up — it is pure celebration, forever. */
+    var prizeIdx = 0;
+    var PEACE_BURST_SVG = '<svg viewBox="0 0 100 100" width="23" height="23" fill="none" stroke="#bfe6ff" stroke-width="8" stroke-linecap="round"><circle cx="50" cy="50" r="44"/><line x1="50" y1="6" x2="50" y2="94"/><line x1="50" y1="50" x2="19" y2="81"/><line x1="50" y1="50" x2="81" y2="81"/></svg>';
+    function prizeLines(){
+      var theme = G ? G.level.theme : "";
+      return [
+        "1st Place, Pam!",
+        "You did it, Pam!",
+        "Winner!",
+        theme + " Champion, Pam!",
+        "Top of the board, Pam!",
+        "First place — again, Pam!"
+      ];
+    }
+    function sndPrize(){
+      tone(659, 0, 0.18); tone(784, 0.08, 0.18); tone(988, 0.16, 0.22); tone(1319, 0.24, 0.36);
+    }
+    function prizeBurst(x, y){
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var glyphs = ["\u2605", "\u2726", "\u2605", "\u2727"];
+      for (var i = 0; i < 14; i++){
+        var s = document.createElement("span"); s.className = "burst-piece";
+        if (i % 3 === 0) s.innerHTML = PEACE_BURST_SVG;
+        else {
+          s.textContent = glyphs[i % glyphs.length];
+          s.style.color = i % 2 ? "#ffd34d" : "#57c6ff";
+          s.style.textShadow = "0 0 10px rgba(53,182,255,.8)";
+        }
+        s.style.left = x + "px"; s.style.top = y + "px";
+        s.style.setProperty("--dx", (Math.random() * 200 - 100) + "px");
+        s.style.setProperty("--dy", (Math.random() * -160 - 25) + "px");
+        s.style.setProperty("--rot", (Math.random() * 260 - 130) + "deg");
+        document.body.appendChild(s);
+        (function(el){ setTimeout(function(){ el.remove(); }, 1000); })(s);
+      }
+    }
+    function popPrize(){
+      if (!G) return;
+      var box = $("btn-prize");
+      box.classList.remove("pop"); void box.offsetWidth; box.classList.add("pop");
+      var lines = prizeLines();
+      $("prize-line").textContent = lines[prizeIdx % lines.length];
+      prizeIdx++;
+      sndPrize();
+      var r = box.getBoundingClientRect();
+      prizeBurst(r.left + r.width / 2, r.top + r.height / 3);
     }
 
     /* ---------- Hint & shuffle ---------- */
@@ -832,24 +1002,14 @@
     }
 
     /* ---------- Wiring ---------- */
-    /* Buttons fire on pointerup, not click alone. A real finger tap on
-       Android can lose its click entirely — a few pixels of drift hands
-       the gesture to the scroller, or the webview just swallows it —
-       while pointerup still arrives. Click stays as the fallback for
-       keyboards and switch devices, deduplicated so nothing fires twice
-       (a double-fired sound toggle or Next Level would be its own bug). */
+    /* v3: buttons are bound with plain 'click' — nothing else. The v2
+       pointerup scheme was clever and fragile; a real <button> receiving
+       a real tap fires click through the browser's own input pipeline,
+       the most heavily tested code path on the phone. touch-action:
+       manipulation on .btn (in the CSS) removes the old double-tap
+       delay, so click arrives promptly. */
     function bindTap(el, fn){
-      var downOn = false, lastRun = 0;
-      el.addEventListener("pointerdown", function(){ downOn = true; });
-      el.addEventListener("pointerup", function(){
-        if (!downOn) return;
-        downOn = false; lastRun = Date.now(); fn();
-      });
-      el.addEventListener("pointercancel", function(){ downOn = false; });
-      el.addEventListener("click", function(){
-        if (Date.now() - lastRun < 700) return;
-        fn();
-      });
+      el.addEventListener("click", function(){ fn(); });
     }
     function init(){
       soundLabel(); refreshHome();
@@ -865,7 +1025,7 @@
       bindTap($("btn-game-back"), function(){ refreshHome(); show("screen-home"); });
       bindTap($("btn-sound-levels"), toggleSound);
       bindTap($("btn-sound-game"), toggleSound);
-      bindTap($("btn-check"), function(){ if (G && G.sel.length) submitWord(); else setMessage("Pick some letters first — drag or tap.", false); });
+      bindTap($("btn-check"), function(){ if (G && G.sel.length) submitWord(); else setMessage("Pick some letters first — tap them one at a time.", false); });
       bindTap($("btn-clear"), function(){ if (G) clearSel(); });
       bindTap($("btn-hint"), doHint);
       bindTap($("btn-shuffle"), doShuffle);
@@ -874,7 +1034,7 @@
       bindTap($("btn-all-levels"), function(){
         $("overlay-complete").classList.remove("show"); renderLevels(); show("screen-levels");
       });
-      boardEvents();
+      bindTap($("btn-prize"), popPrize);
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
     else init();
