@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="dark" />
-<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
-<link rel="apple-touch-icon" href="icons/icon-192.png" />
-<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" type="image/png" sizes="192x192" href="/games/hc2-app-7f3ka9/icons/icon-192.png" />
+<link rel="apple-touch-icon" href="/games/hc2-app-7f3ka9/icons/icon-192.png" />
+<link rel="manifest" href="/games/hc2-app-7f3ka9/manifest.webmanifest" />
 <meta name="theme-color" content="#05080e" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -832,26 +832,27 @@ const Snd={ctx:null,muted:false,
 };
 
 /* ---------- the music: the owner's own track, under the whole game ----------
-   "All Apple No Pie" (instrumental) — Joshua Dawson. Browsers will not
-   start audio with sound on their own, so the track begins on the
-   player's FIRST tap anywhere and then loops CONTINUOUSLY under
-   everything — trades, travel, scene videos, dice rolls, catches
-   (owner's rule, 2026-11-09: it never ducks or steps aside). Only two
-   things stop it: the MUSIC ON/OFF toggle pinned in the top HUD, and
-   the page going hidden — switch apps or close the game and it stops
-   cold; it resumes on return only while the toggle is on. The choice
-   is kept in guarded storage (try/catch — a sandboxed frame may refuse
-   it, and the game must never break over a preference). Default: on. */
-const Music={ el:null, started:false,
- on:(function(){ try{ return localStorage.getItem("hc2-music")!=="off"; }catch(e){ return true; } })(),
- init(){ this.el=$("#bg-music"); if(this.el){ this.el.loop=true; this.el.volume=.55; } this.syncBtn(); },
- save(){ try{ localStorage.setItem("hc2-music", this.on?"on":"off"); }catch(e){} },
+   "All Apple No Pie" (instrumental) — Joshua Dawson. The opening scene
+   needs the music (owner's order, 2026-11-10): the track starts ON at
+   the title screen on EVERY launch and EVERY reset — a new run, RUN IT
+   BACK, or a return to the title all reset it to ON. Where the platform
+   allows autoplay (the app/WebView) it begins on load; where it does
+   not, it begins on the player's FIRST tap anywhere and then loops
+   CONTINUOUSLY under everything — trades, travel, scene videos, dice
+   rolls, catches (owner's rule, 2026-11-09: it never ducks or steps
+   aside). The MUSIC ON/OFF toggle pinned in the top HUD silences it for
+   the CURRENT session only: nothing is stored, so a previous session's
+   "off" never carries into the next launch. The page going hidden also
+   stops it cold; it resumes on return only while the toggle is on. */
+const Music={ el:null, started:false, on:true,
+ init(){ this.el=$("#bg-music"); if(this.el){ this.el.loop=true; this.el.volume=.55; } try{ localStorage.removeItem("hc2-music"); }catch(e){} this.syncBtn(); this.begin(); },
  begin(){ if(this.started) return; this.started=true; if(this.on) this.play(); },
- play(){ if(!this.el||!this.on) return; try{ const p=this.el.play(); if(p&&p.catch) p.catch(()=>{}); }catch(e){} },
+ play(){ if(!this.el||!this.on) return; try{ const p=this.el.play(); if(p&&p.catch) p.catch(()=>{ this.started=false; }); }catch(e){} },
  pause(){ if(this.el){ try{ this.el.pause(); }catch(e){} } },
  suspend(){ this.pause(); },
  resume(){ if(this.started&&this.on) this.play(); },
- toggle(){ this.on=!this.on; this.save(); if(this.on){ this.started=true; this.play(); } else this.pause(); this.syncBtn(); },
+ toggle(){ this.on=!this.on; if(this.on){ this.started=true; this.play(); } else this.pause(); this.syncBtn(); },
+ resetOn(){ this.on=true; this.syncBtn(); if(this.started) this.play(); else this.begin(); },
  syncBtn(){ const b=$("#btn-music"); if(b){ b.textContent=this.on?"🔊 MUSIC ON":"🔇 MUSIC OFF"; b.setAttribute("aria-pressed",this.on?"true":"false"); } }
 };
 document.addEventListener("pointerdown",()=>{ Music.begin(); },{passive:true});
@@ -2430,6 +2431,7 @@ function closeModal(){ $("#modal-root").innerHTML=""; }
 /* ---------- flow ---------- */
 function startRun(){
  if(CR.active||SG.active) return; // a craps game is on screen — a stray tap can never turn it into a run
+ Music.resetOn(); // every new run opens with the music on (owner's order, 2026-11-10)
  S=newRun();
  rollMarket();
  log("Day 1 in <b>Northside, Springfield</b>. $2,000 in your pocket, $2,000 owed to the Shark, and Balsey on a throne in a city you're about to outgrow.","gold");
@@ -2441,6 +2443,7 @@ function startRun(){
  playScene("throne"); // the King's arrival opens every run, on film
 }
 function endToStart(){
+ Music.resetOn(); // back at the title = the opening scene, and it gets its music (owner's order, 2026-11-10)
  $("#screen-game").classList.add("hidden");
  $("#screen-start").classList.remove("hidden");
  refreshBest(); window.scrollTo(0,0);
@@ -2738,7 +2741,7 @@ loadBest(); refreshBest();
 /* PWA: cache the game for offline play after first load. */
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
-    navigator.serviceWorker.register("sw.js", { scope: "./" }).catch(function () {});
+    navigator.serviceWorker.register("/games/hc2-app-7f3ka9/sw.js", { scope: "/games/hc2-app-7f3ka9/" }).catch(function () {});
   });
 }
 </script>
