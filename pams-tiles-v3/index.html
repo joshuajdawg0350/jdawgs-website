@@ -165,7 +165,7 @@
       .howto-body li{ margin-bottom:10px; }
 
       /* ---------- game ---------- */
-      #screen-game{ height:100vh; height:100dvh; min-height:0; }
+      #screen-game{ height:100dvh; height:100vh; min-height:0; }
       .game-head{ display:flex; align-items:center; gap:10px; padding:10px 12px 2px; }
       .game-head .lvl{ flex:1; text-align:center; }
       .game-head .lvl .n{ font-size:21px; font-weight:900; }
@@ -213,11 +213,11 @@
            content (a big tile font inflating row height used to do
            exactly that, overflowing the board off both screen edges). */
         display:grid; gap:8px; aspect-ratio:1/1;
-        width:min(94vw,400px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px)));
+        width:min(94vw,400px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px)));
         user-select:none; -webkit-user-select:none;
       }
       .board.size4{ grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(4,1fr); }
-      .board.size5{ width:min(96vw,410px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); gap:7px; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); }
+      .board.size5{ width:min(96vw,410px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); gap:7px; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); }
       .tile{
         /* Tiles are real <button>s now: plain click handling, no custom
            gesture code anywhere near them. */
@@ -252,9 +252,9 @@
       .controls{
         display:grid; grid-template-columns:repeat(4,1fr); gap:9px; padding:10px 12px 2px;
       }
-      .controls .btn{ min-height:58px; font-size:18.5px; padding:8px 4px; border-radius:14px; flex-direction:column; gap:0; line-height:1.15; }
+      .controls .btn{ min-height:54px; font-size:18.5px; padding:8px 4px; border-radius:14px; flex-direction:column; gap:0; line-height:1.15; }
       .controls .btn .ic{ font-size:23px; }
-      .found-area{ flex:1; overflow-y:auto; padding:8px 14px 14px; min-height:64px; }
+      .found-area{ flex:1; overflow-y:auto; padding:8px 14px 14px; min-height:0; }
       .found-label{ font-size:16.5px; font-weight:800; color:var(--ink-dim); margin:2px 0 6px; }
       .chips{ display:flex; flex-wrap:wrap; gap:8px; }
       .chip{
@@ -338,8 +338,8 @@
       .prize-line{
         min-height:41px; margin:5px 0 0; font-size:29px; font-weight:900; line-height:1.25;
       }
-      .prize-bar{ display:flex; align-items:center; gap:14px; padding:10px 16px 2px; }
-      .prize-box.mini{ width:76px; height:64px; margin:0; flex:none; }
+      .prize-bar{ display:flex; align-items:center; gap:14px; padding:7px 16px 9px; }
+      .prize-box.mini{ width:76px; height:58px; margin:0; flex:none; }
       .prize-box.mini .prize-lid{ height:17px; border-radius:7px; }
       .prize-box.mini.pop .prize-lid{ transform:translateY(-9px) rotate(-7deg); }
       .prize-box.mini .prize-boxbody{ top:13px; border-radius:7px; }
@@ -357,6 +357,11 @@
         position:fixed; z-index:70; pointer-events:none; font-size:22px; line-height:1;
         animation:burstfly .95s ease-out forwards;
       }
+      .burst-name{
+        font-size:30px; font-weight:900; letter-spacing:.5px; color:#eaf6ff;
+        text-shadow:0 0 14px rgba(53,182,255,.95), 0 2px 0 rgba(0,0,0,.4);
+      }
+      .bone-svg{ filter:drop-shadow(0 0 6px rgba(255,220,150,.65)); }
       @keyframes burstfly{ to{ transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.4); opacity:0; } }
 
       @media (max-height:760px){
@@ -369,8 +374,8 @@
         .controls .btn{ min-height:52px; }
         .found-area{ min-height:26px; padding-top:4px; }
         #screen-home h1{ font-size:44px; }
-        .board.size4{ width:min(88vw,330px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); }
-        .board.size5{ width:min(92vw,350px, max(170px, calc(100dvh - 490px)), max(170px, calc(100vh - 490px))); }
+        .board.size4{ width:min(88vw,330px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); }
+        .board.size5{ width:min(92vw,350px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); }
       }
       @media (prefers-reduced-motion: reduce){
         .tile.found-flash,.tile.hint-flash,.spark,.burst-piece{ animation:none !important; }
@@ -432,7 +437,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 7</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 8</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -486,6 +491,14 @@
           <button class="btn" id="btn-hint"><span class="ic">&#128161;</span>Hint</button>
           <button class="btn" id="btn-shuffle"><span class="ic">&#128256;</span>Shuffle</button>
         </div>
+        <div class="found-area">
+          <p class="found-label">Words to find:</p>
+          <div class="chips" id="chips-targets"></div>
+          <div id="bonus-block" style="display:none">
+            <p class="found-label" style="margin-top:10px">Bonus words you found:</p>
+            <div class="chips" id="chips-bonus"></div>
+          </div>
+        </div>
         <div class="prize-bar">
           <button class="prize-box mini" id="btn-prize-game" aria-label="Prize box — tap it for a celebration">
             <span class="prize-lid"></span>
@@ -494,14 +507,6 @@
           <div class="prize-bar-text">
             <p class="prize-bar-title">Prize Box &mdash; tap it!</p>
             <p class="prize-line chrome-text" id="prize-line-game" aria-live="polite"></p>
-          </div>
-        </div>
-        <div class="found-area">
-          <p class="found-label">Words to find:</p>
-          <div class="chips" id="chips-targets"></div>
-          <div id="bonus-block" style="display:none">
-            <p class="found-label" style="margin-top:10px">Bonus words you found:</p>
-            <div class="chips" id="chips-bonus"></div>
           </div>
         </div>
       </section>
@@ -956,6 +961,7 @@
        cheers every single time she taps it. Nothing is won, spent,
        counted down, or used up — it is pure celebration, forever. */
     var prizeIdx = 0;
+    var BONE_BURST_SVG = '<svg class="bone-svg" viewBox="0 0 100 64" width="30" height="19" fill="#fff6e8"><circle cx="18" cy="18" r="14"/><circle cx="18" cy="46" r="14"/><circle cx="82" cy="18" r="14"/><circle cx="82" cy="46" r="14"/><rect x="18" y="25" width="64" height="14" rx="7"/></svg>';
     var PEACE_BURST_SVG = '<svg viewBox="0 0 100 100" width="23" height="23" fill="none" stroke="#bfe6ff" stroke-width="8" stroke-linecap="round"><circle cx="50" cy="50" r="44"/><line x1="50" y1="6" x2="50" y2="94"/><line x1="50" y1="50" x2="19" y2="81"/><line x1="50" y1="50" x2="81" y2="81"/></svg>';
     function prizeLines(){
       var theme = G ? G.level.theme : "";
@@ -971,24 +977,35 @@
     function sndPrize(){
       tone(659, 0, 0.18); tone(784, 0.08, 0.18); tone(988, 0.16, 0.22); tone(1319, 0.24, 0.36);
     }
-    function prizeBurst(x, y){
+    function prizeBurst(x, y, fanRight){
       if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       var glyphs = ["\u2605", "\u2726", "\u2605", "\u2727"];
       for (var i = 0; i < 14; i++){
         var s = document.createElement("span"); s.className = "burst-piece";
         if (i % 3 === 0) s.innerHTML = PEACE_BURST_SVG;
+        else if (i % 2 === 0) s.innerHTML = BONE_BURST_SVG;
         else {
           s.textContent = glyphs[i % glyphs.length];
           s.style.color = i % 2 ? "#ffd34d" : "#57c6ff";
           s.style.textShadow = "0 0 10px rgba(53,182,255,.8)";
         }
         s.style.left = x + "px"; s.style.top = y + "px";
-        s.style.setProperty("--dx", (Math.random() * 200 - 100) + "px");
+        s.style.setProperty("--dx", (fanRight ? (Math.random() * 190 - 10) : (Math.random() * 200 - 100)) + "px");
         s.style.setProperty("--dy", (Math.random() * -160 - 25) + "px");
         s.style.setProperty("--rot", (Math.random() * 260 - 130) + "deg");
         document.body.appendChild(s);
         (function(el){ setTimeout(function(){ el.remove(); }, 1000); })(s);
       }
+      var n = document.createElement("span");
+      n.className = "burst-piece burst-name";
+      n.textContent = "Pearl";
+      n.style.left = x + "px"; n.style.top = (y - 16) + "px";
+      n.style.marginLeft = "-36px";
+      n.style.setProperty("--dx", "0px");
+      n.style.setProperty("--dy", "-125px");
+      n.style.setProperty("--rot", "0deg");
+      document.body.appendChild(n);
+      setTimeout(function(){ n.remove(); }, 1000);
     }
     function popPrize(box){
       if (!G || !box) return;
@@ -1000,7 +1017,7 @@
       prizeIdx++;
       sndPrize();
       var r = box.getBoundingClientRect();
-      prizeBurst(r.left + r.width / 2, r.top + r.height / 3);
+      prizeBurst(r.left + r.width / 2, r.top + r.height / 3, box.id === "btn-prize-game");
     }
 
     /* ---------- Hint & shuffle ---------- */
