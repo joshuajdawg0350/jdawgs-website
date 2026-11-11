@@ -178,16 +178,16 @@
         background:var(--chrome); -webkit-background-clip:text; background-clip:text; color:transparent;
       }
       .preview{
-        margin:8px 14px 0; min-height:58px; border-radius:16px;
+        margin:8px 14px 0; min-height:48px; border-radius:16px;
         background:var(--panel); border:2px solid var(--line);
         display:flex; align-items:center; justify-content:center; padding:6px 12px;
-        font-size:31px; font-weight:900; letter-spacing:5px; color:#fff; text-align:center;
+        font-size:27px; font-weight:900; letter-spacing:5px; color:#fff; text-align:center;
         text-shadow:0 0 14px rgba(53,182,255,.45);
       }
       .preview.empty{ font-size:18.5px; letter-spacing:0; color:#8298bb; font-weight:700; text-shadow:none; }
       .preview.good{ border-color:var(--good); box-shadow:0 0 18px rgba(67,224,138,.4); }
       .message{
-        min-height:30px; text-align:center; font-size:19px; font-weight:800; color:var(--blue);
+        min-height:52px; text-align:center; font-size:19px; font-weight:800; color:var(--blue);
         padding:5px 16px 0;
       }
       .message.warm{ color:var(--gold); }
@@ -213,12 +213,10 @@
            can never be stretched taller/wider than the cap by its own
            content (a big tile font inflating row height used to do
            exactly that, overflowing the board off both screen edges). */
-        display:grid; gap:8px; aspect-ratio:1/1; touch-action:none;
+        display:grid; gap:8px; touch-action:none;
         width:min(94vw,400px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px)));
         user-select:none; -webkit-user-select:none;
       }
-      .board.size4{ grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(4,1fr); }
-      .board.size5{ width:min(96vw,410px, max(170px, calc(100dvh - 524px)), max(170px, calc(100vh - 524px))); gap:7px; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); }
       .tile{
         /* Tiles are real <button>s now: plain click handling, no custom
            gesture code anywhere near them. */
@@ -231,12 +229,10 @@
         border-radius:14px; border:2px solid #8fa8c9;
         background:linear-gradient(165deg,#4a5872 0%,#232f49 45%,#141d31 62%,#2b3a58 100%);
         display:flex; align-items:center; justify-content:center;
-        font-weight:900; color:#f7fbff; cursor:pointer; position:relative;
+        font-weight:900; color:#f7fbff; cursor:pointer; position:relative; font-size:var(--tilefont, 38px);
         box-shadow:0 4px 10px rgba(0,0,0,.5), 0 0 8px rgba(53,182,255,.10), inset 0 1px 0 rgba(255,255,255,.38), inset 0 -3px 0 rgba(0,0,0,.35);
         text-shadow:0 2px 4px rgba(0,0,0,.6);
       }
-      .board.size4 .tile{ font-size:37px; }
-      .board.size5 .tile{ font-size:30px; }
       .tile.sel{
         background:linear-gradient(160deg,#6fd0ff,#1290e8 55%,#0a68b8);
         border-color:#eaf7ff; color:#fff;
@@ -252,7 +248,7 @@
         50%{ box-shadow:0 0 26px 6px rgba(255,211,77,.9); border-color:var(--gold); }
       }
       .controls{
-        display:grid; grid-template-columns:repeat(4,1fr); gap:9px; padding:10px 12px 2px;
+        display:grid; grid-template-columns:repeat(3,1fr); gap:9px; padding:10px 12px 2px;
       }
       .controls .btn{ min-height:54px; font-size:18.5px; padding:8px 4px; border-radius:14px; flex-direction:column; gap:0; line-height:1.15; }
       .controls .btn .ic{ font-size:23px; }
@@ -285,6 +281,24 @@
         animation:sparkfly .8s ease-out forwards;
       }
       @keyframes sparkfly{ to{ transform:translate(var(--dx),var(--dy)) scale(.3); opacity:0; } }
+
+      .tile .cnt{
+        position:absolute; right:6px; bottom:3px; font-size:15px; font-weight:900;
+        color:#bfe6ff; text-shadow:0 1px 3px rgba(0,0,0,.8); letter-spacing:0;
+      }
+      .tile.used-up{ visibility:hidden; }
+      #chips-targets{ display:flex; flex-direction:column; align-items:center; gap:6px; }
+      .blankrow{ display:flex; gap:6px; justify-content:center; }
+      .blank{
+        width:38px; height:40px; border-radius:10px;
+        border:2px dashed #41598a; background:var(--panel);
+        display:flex; align-items:center; justify-content:center;
+        font-size:20px; font-weight:900; color:#fff;
+      }
+      .blank.filled{
+        border:2px solid var(--good); background:#0d2f1d; color:#b9ffd6;
+        box-shadow:0 0 10px rgba(67,224,138,.30);
+      }
 
       /* ---------- complete overlay ---------- */
       .overlay{
@@ -380,7 +394,7 @@
 
       @media (max-height:760px){
         .preview{ min-height:44px; font-size:27px; margin-top:4px; }
-        .message{ min-height:22px; padding-top:2px; }
+        .message{ min-height:44px; padding-top:2px; }
         .progress-line{ padding-top:0; }
         .game-head{ padding-top:6px; padding-bottom:0; }
         .game-head .lvl .t{ display:none; }
@@ -401,13 +415,14 @@
         .game-head .lvl .n{ font-size:19px; }
         .preview{ min-height:38px; font-size:24px; margin-top:2px; }
         .preview.empty{ font-size:16.5px; }
-        .message{ min-height:20px; font-size:17px; }
+        .message{ min-height:42px; font-size:17px; }
         .board-wrap{ margin-top:3px; padding-top:5px; }
         .controls .btn{ min-height:46px; font-size:16.5px; }
         .controls .btn .ic{ font-size:19px; }
         .found-area{ padding-top:3px; }
         .found-label{ font-size:15px; margin-bottom:3px; }
         .chip{ font-size:15px; padding:3px 9px; }
+        .blank{ width:33px; height:35px; font-size:18px; border-radius:9px; }
         .prize-bar{ padding:4px 14px 6px; gap:10px; }
         .prize-bar .prize-line{ font-size:19px; min-height:24px; }
       }
@@ -417,6 +432,7 @@
         .mode-opt{ min-height:42px; font-size:16.5px; }
         .preview{ min-height:34px; font-size:22px; }
         .controls .btn{ min-height:42px; }
+        .blank{ width:29px; height:31px; font-size:16px; border-radius:8px; }
         .prize-bar-title{ display:none; }
         .prize-bar .prize-line{ font-size:17px; min-height:21px; }
       }
@@ -480,7 +496,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 11</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 13</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -503,12 +519,12 @@
         <div class="howto-body">
           <p class="big">How to play Pam&rsquo;s Tiles</p>
           <ul>
-            <li><strong>Drag your finger across the letters</strong> of a word — or tap them one at a time. Either way works, and the word <strong>counts by itself</strong> the moment you finish it. No Check button to hunt for. Made a mistake? Keep dragging back, or tap <strong>Clear</strong>.</li>
-            <li><strong>Words run in a line</strong> — up, down, or sideways, and they can turn a corner. <strong>Never diagonal.</strong> Just follow the line with your finger or stylus.</li>
+            <li><strong>Drag your finger across the letters</strong> of a word — anywhere on the board — and <strong>let go</strong>. The word flies up into its blanks and counts. Or tap the letters one at a time; a finished word counts by itself. No Check button to hunt for. Made a mistake? Drag back over the last letter, or tap <strong>Clear</strong>.</li>
+            <li>The letters live in a little tray, like your other game. A letter with a <strong>small number</strong> on it has that many copies — when a word uses a copy up, the number goes down, and when the copies are gone the letter is gone too.</li>
             <li>Each level hides a few words. The blanks at the TOP show how many letters each word has — find a word and its blank fills in.</li>
             <li>Pick how you like to play with the three buttons under the board: <strong>Drag</strong> only, <strong>Tap</strong> only, or <strong>Both</strong>. The game remembers your choice. A stylus works too, in every mode.</li>
-            <li>Find all the hidden words to finish the level. Extra real words you find count as <strong>bonus words</strong>!</li>
-            <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free. The first tap lights the word up letter by letter; tap it again and it starts the word for you, with just one glowing letter left to tap. Tap <strong>Shuffle</strong> to mix the board up.</li>
+            <li>Find all the hidden words to finish the level. Other real words you make count as <strong>Extra Words</strong> — they pile up under the blanks, and they don't use up any letters!</li>
+            <li>Stuck? Tap <strong>Hint</strong> &mdash; it&rsquo;s always free. The first tap lights the word up letter by letter; tap it again and it starts the word for you, with just one glowing letter left to tap. Tap <strong>Shuffle</strong> to mix the letters up.</li>
           </ul>
           <p>There is <strong>no timer</strong>, no score you have to beat, and no way to lose. Play at your own pace.</p>
           <p><strong>No ads. Ever.</strong> Nothing here watches you or phones home. Your game saves right on this phone, just for you.</p>
@@ -533,13 +549,12 @@
           <p class="found-label">Your words — fill in the blanks:</p>
           <div class="chips" id="chips-targets"></div>
           <div id="bonus-block" style="display:none">
-            <p class="found-label" style="margin-top:10px">Bonus words you found:</p>
+            <p class="found-label" style="margin-top:10px">Extra words you found:</p>
             <div class="chips" id="chips-bonus"></div>
           </div>
         </div>
         <div class="board-wrap"><div class="board-peace" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"><circle cx="50" cy="50" r="45"/><line x1="50" y1="5" x2="50" y2="95"/><line x1="50" y1="50" x2="18" y2="82"/><line x1="50" y1="50" x2="82" y2="82"/></svg></div><div class="board size4" id="board"></div></div>
         <div class="controls">
-          <button class="btn" id="btn-check"><span class="ic">&#10003;</span>Check</button>
           <button class="btn" id="btn-clear"><span class="ic">&#10005;</span>Clear</button>
           <button class="btn" id="btn-hint"><span class="ic">&#128161;</span>Hint</button>
           <button class="btn" id="btn-shuffle"><span class="ic">&#128256;</span>Shuffle</button>
@@ -756,8 +771,8 @@
     var GEN_BANK = ["APPLE","BERRY","BIRD","BLOOM","BLUE","BOAT","BREAD","BREEZE","BROOK","BUNNY","BUTTER","CANDLE","CANDY","CARROT","CHAIR","CHEESE","CHERRY","CLOUD","CLOVER","COCOA","COOKIE","CORN","COTTON","CREEK","DAISY","DANCE","DEER","DOG","DOVE","DREAM","DRESS","DUCK","EAGLE","EGGS","FEATHER","FENCE","FERN","FIELD","FINCH","FIRE","FISH","FLOWER","FLUTE","FOREST","FOX","FROG","GARDEN","GATE","GENTLE","GINGER","GLOW","GOAT","GOLD","GOLDEN","GOOSE","GRAPE","GRASS","GROVE","HAPPY","HARP","HARVEST","HAZEL","HEART","HEDGE","HEN","HERB","HERON","HILL","HOLLY","HOME","HONEY","HORSE","HOUSE","IRIS","IVY","JAM","KITE","KITTEN","LADDER","LAKE","LAMB","LAMP","LARK","LAUGH","LEAF","LEMON","LIGHT","LILAC","LILY","LIME","LINEN","LION","LOTUS","LOVE","MAPLE","MARKET","MARSH","MEADOW","MELON","MILK","MINT","MIST","MITTEN","MOON","MORNING","MOSS","MOUSE","MUSIC","NEST","NIGHT","OAK","OCEAN","OLIVE","ONION","ORANGE","ORCHARD","OWL","PADDLE","PAINT","PALM","PANSY","PARK","PATH","PEACE","PEACH","PEAR","PEARL","PEBBLE","PENNY","PEPPER","PETAL","PIANO","PICNIC","PIE","PIGEON","PINE","PINK","PLUM","POEM","POND","PONY","POPPY","PORCH","PUDDLE","PUMPKIN","PUPPY","PURPLE","QUILT","RABBIT","RAIN","RAINBOW","RAKE","RANCH","RAVEN","REED","RIDGE","RING","RIPPLE","RIVER","ROAD","ROBIN","ROCK","ROLL","ROOF","ROOM","ROSE","ROSES","RUBY","SADDLE","SAGE","SAIL","SALAD","SALMON","SALT","SAND","SATIN","SAUCE","SCARF","SCENT","SEA","SEAL","SEASON","SEED","SHADE","SHAWL","SHEEP","SHEET","SHELF","SHELL","SHINE","SHIP","SHIRT","SHOE","SHORE","SHOWER","SHRUB","SILK","SILVER","SING","SISTER","SKATE","SKYLARK","SLED","SLEEP","SLICE","SLIDE","SLOPE","SLOW","SMALL","SMART","SMILE","SMOOTH","SNACK","SNAIL","SNORE","SNOW","SNOWY","SNUG","SOAP","SOCK","SODA","SOFA","SOFT","SOIL","SOLAR","SOLID","SOLO","SONG","SOUL","SOUND","SOUP","SOUR","SOUTH","SPARK","SPICE","SPOON","SPRING","SPROUT","SQUARE","STABLE","STAIR","STAMP","STAND","STAR","STARE","START","STAY","STEAK","STEAM","STEEL","STEM","STEP","STEW","STICK","STILL","STITCH","STONE","STOOL","STORE","STORK","STORM","STORY","STOVE","STRAW","STREAM","STREET","STRING","STROLL","STUMP","STYLE","SUGAR","SUIT","SUMMER","SUN","SUNNY","SUNRISE","SUNSET","SUPPER","SURE","SURF","SWALLOW","SWAN","SWAY","SWEATER","SWEEP","SWEET","SWELL","SWEPT","SWIFT","SWIM","SWING","SWIRL","SWITCH","SYRUP","TABLE","TACKLE","TAIL","TAKE","TALE","TALK","TALL","TAME","TANK","TAPE","TARGET","TART","TASTE","TEA","TEACH","TEAM","TEAR","TEASE","TEDDY","TEETH","TELL","TEMPLE","TENDER","TENNIS","TENT","TERM","TEST","TEXT","THANK","THAW","THEATER","THEME","THICK","THIN","THING","THINK","THIRD","THIRST","THISTLE","THORN","THOSE","THOUGHT","THREAD","THREE","THREW","THRIFT","THRILL","THRIVE","THROAT","THRONE","THROUGH","THROW","THUMB","THUNDER","THURSDAY","THYME","TICKET"];
     function levelAt(idx){
       if (idx < LEVELS.length) return LEVELS[idx];
-      /* A fresh pick is trial-built on the spot: if this device cannot
-         build it fast, re-pick. A level Pam reaches is never a freeze. */
+      /* Pool levels build instantly — there is nothing to trial-build,
+         so a level Pam reaches can never be a freeze. */
       for (var salt = 0; salt < 40; salt++){
         var rng = mulberry32(7000 + idx * 131 + salt * 100003);
         var pool = GEN_BANK.slice();
@@ -765,11 +780,7 @@
         while (words.length < 6 && pool.length){
           words.push(pool.splice(Math.floor(rng() * pool.length), 1)[0]);
         }
-        var candidate = { theme: GEN_THEMES[idx % GEN_THEMES.length], size: 5, words: words };
-        var t0 = performance.now();
-        var made = genBoard(candidate, idx * 3 + 1);
-        if (made && performance.now() - t0 < 800) return candidate;
-        if (salt === 39) return candidate;
+        return { theme: GEN_THEMES[idx % GEN_THEMES.length], size: 5, words: words };
       }
     }
 
@@ -828,7 +839,19 @@
     function sndSoft(){ tone(330, 0, 0.2); }
     function sndWin(){ [523,659,784,1047,784,1047].forEach(function(f,i){ tone(f, i * 0.13, 0.35); }); }
 
-    /* ---------- Board generation: place each target word on a real path ---------- */
+    /* ---------- Letter pool (v13 — her Word Tiles gameplay) ----------
+       Joshua sent a screen recording of Pam's actual game (2026-11-11)
+       and ordered: same gameplay, her stuff. The recording's model,
+       frame-checked and arithmetic-verified:
+       - The board is a small POOL of letter tiles, not a grid with
+         hidden paths. Each tile is a STACK: its little number is how
+         many copies of that letter the pool holds. The copies are
+         exactly the letters of the level's words (FUN + ROAD + KID
+         needs D twice, so the D stack is 2).
+       - A found word USES UP its copies; a stack that runs out is gone.
+       - Extra (bonus) words use nothing — they just collect.
+       - Words are dragged in any order, anywhere — no touching rule,
+         no paths. The word counts when the drag is LET GO. */
     function mulberry32(a){
       return function(){
         a |= 0; a = a + 0x6D2B79F5 | 0;
@@ -837,160 +860,43 @@
         return ((t ^ t >>> 14) >>> 0) / 4294967296;
       };
     }
-    function neighbors(idx, size){
-      /* Pam's rule (2026-11-11, from her own play report): dragged words
-         sit in a lineup and NEVER step diagonal. Board paths therefore
-         move only up, down, left, or right — a word can turn a corner,
-         but every step is a straight step she can follow with a stylus. */
-      var r = Math.floor(idx / size), c = idx % size, out = [];
-      var dirs = [[-1, 0], [1, 0], [0, -1], [0, 1]];
-      for (var d = 0; d < dirs.length; d++){
-        var nr = r + dirs[d][0], nc = c + dirs[d][1];
-        if (nr >= 0 && nr < size && nc >= 0 && nc < size) out.push(nr * size + nc);
-      }
-      return out;
-    }
     function shuffleArr(arr, rng){
       for (var i = arr.length - 1; i > 0; i--){
-        var j = Math.floor(rng() * (i + 1)), t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+        var j = Math.floor(rng() * (i + 1));
+        var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
       }
       return arr;
     }
-    /* Placement (v11): candidate-path search. For the word being placed,
-       enumerate its possible lineup paths on the current grid (straight
-       steps only — see neighbors()), then always place next the word
-       with the FEWEST workable paths (most-constrained first) and
-       backtrack across words when a later word cannot fit. The old
-       one-word-at-a-time walk could thrash for minutes on dense boards
-       once diagonal steps were removed; this search settles the same
-       boards in milliseconds because it never wanders down a path that
-       cannot complete the word. */
-    function candidatePaths(grid, size, word, rng, cap){
-      var out = [];
-      var starts = [];
-      for (var i = 0; i < grid.length; i++) if (grid[i] === null || grid[i] === word[0]) starts.push(i);
-      shuffleArr(starts, rng);
-      for (var s = 0; s < starts.length && out.length < cap; s++){
-        var path = [starts[s]], used = {};
-        used[starts[s]] = true;
-        growPath(grid, size, word, path, used, out, rng, cap);
-      }
-      /* Overlap bonus: a path that crosses letters already on the board
-         knits the words together and leaves more open room for the words
-         still to come, so those paths go first. (Dense levels live or
-         die on shared letters; a purely random order wastes its budget
-         walling later words out.) Sort is stable, ties keep the shuffle. */
-      function crossOf(p){
-        var n = 0;
-        for (var k = 0; k < p.length; k++) if (grid[p[k]] !== null) n++;
-        return n;
-      }
-      var deco = out.map(function(p, i){ return { p: p, c: crossOf(p), i: i }; });
-      deco.sort(function(a, b){ return (b.c - a.c) || (a.i - b.i); });
-      return deco.map(function(d){ return d.p; });
-    }
-    function growPath(grid, size, word, path, used, out, rng, cap){
-      if (out.length >= cap) return;
-      if (path.length === word.length){ out.push(path.slice()); return; }
-      var ns = shuffleArr(neighbors(path[path.length - 1], size), rng);
-      for (var n = 0; n < ns.length; n++){
-        var cell = ns[n];
-        if (used[cell]) continue;
-        if (grid[cell] !== null && grid[cell] !== word[path.length]) continue;
-        path.push(cell); used[cell] = true;
-        growPath(grid, size, word, path, used, out, rng, cap);
-        path.pop(); delete used[cell];
-        if (out.length >= cap) return;
-      }
-    }
-    function placeWords(grid, size, words, wi, paths, rng, budget){
-      var placed = {};
-      for (var p in paths) placed[p] = true;
-      var bestWord = null, bestCands = null, bestScore = null;
-      for (var i = 0; i < words.length; i++){
-        var w = words[i];
-        if (placed[w]) continue;
-        var cands = candidatePaths(grid, size, w, rng, 80);
-        if (!cands.length) return false;
-        /* Most-constrained first means fewest crossing paths as well as
-           fewest paths: a word whose every lineup crosses existing
-           letters in few spots is the wall later words crash into, so
-           place it while the board is still open. */
-        var maxCross = 0;
-        for (var cc = 0; cc < cands.length; cc++){
-          var cx = 0;
-          for (var kk = 0; kk < cands[cc].length; kk++) if (grid[cands[cc][kk]] !== null) cx++;
-          if (cx > maxCross) maxCross = cx;
+    function poolFor(level, idx, variant){
+      var counts = {}, order = [];
+      level.words.forEach(function(w){
+        for (var k = 0; k < w.length; k++){
+          var ch = w.charAt(k);
+          if (!counts[ch]){ counts[ch] = 0; order.push(ch); }
+          counts[ch]++;
         }
-        var score = cands.length * 100 - maxCross;
-        if (bestScore === null || score < bestScore){ bestWord = w; bestCands = cands; bestScore = score; }
-      }
-      if (!bestWord) return true;
-      if (budget.left-- <= 0) return false;
-      /* bestCands arrives overlap-first from candidatePaths (only the
-         tail is shuffled there); a full shuffle here used to throw that
-         ordering away and dense levels paid seconds for it. */
-      for (var c = 0; c < bestCands.length; c++){
-        if (budget.left-- <= 0) return false; /* heavy-tailed attempt: die young, genBoard restarts with a fresh shuffle */
-        var path = bestCands[c], changed = [];
-        for (var j = 0; j < path.length; j++) if (grid[path[j]] === null){ grid[path[j]] = bestWord[j]; changed.push(path[j]); }
-        paths[bestWord] = path.slice();
-        if (placeWords(grid, size, words, wi + 1, paths, rng, budget)) return true;
-        delete paths[bestWord];
-        for (var k = 0; k < changed.length; k++) grid[changed[k]] = null;
-      }
-      return false;
-    }
-    var FILL_BAG = "EEEEEEEEAAAAAAAIIIIIOOOOOONNNNRRRRTTTTLLLLSSSSUUUDDDGGGBBCCMMPPFFHHVVWWYYKJXQZ";
-    function genBoard(level, variant){
-      var size = level.size;
-      var words = level.words.slice().sort(function(a,b){ return b.length - a.length; });
-      for (var attempt = 0; attempt < 60; attempt++){
-        var rng = mulberry32(1000 + (variant * 7919) + attempt * 131);
-        var grid = new Array(size * size).fill(null);
-        var paths = {};
-        if (!placeWords(grid, size, words, 0, paths, rng, { left: 20000 })) continue;
-        for (var i = 0; i < grid.length; i++) if (grid[i] === null) grid[i] = FILL_BAG[Math.floor(rng() * FILL_BAG.length)];
-        return { grid: grid, paths: paths };
-      }
-      return null;
-    }
-    /* A level must never fail to build: scan forward through board variants
-       until one succeeds, so Play, Next Level, and Shuffle can never land
-       on a dead board. Returns the board plus the variant that built it. */
-    function genBoardSafe(level, variant){
-      for (var v = variant; v < variant + 80; v++){
-        var made = genBoard(level, v);
-        if (made){ made.variant = v; return made; }
-      }
-      return null;
+      });
+      var rng = mulberry32((idx + 1) * 7919 + variant * 131 + 17);
+      shuffleArr(order, rng);
+      var cells = order.map(function(ch){ return { ch: ch, total: counts[ch], used: 0 }; });
+      var cols = cells.length <= 9 ? 3 : 4;
+      return { cells: cells, cols: cols, rows: Math.ceil(cells.length / cols) };
     }
 
-    /* Boards for the 150 written levels are BAKED IN (v11): each was
-       built once by the generator above, checked cell by cell — every
-       word on a lineup path, no diagonal steps — and stored here, so
-       opening any written level is instant on any phone. Three boards
-       per level; Shuffle walks through them. Levels past 150 are made
-       fresh by the generator, as before. */
-    var BAKED = {"0":[{"g":"RFADONEESULEEEBS","p":{"ROSE":[0,4,8,12],"BEE":[14,13,12],"SUN":[8,9,5],"LEAF":[10,6,2,1],"SEED":[15,11,7,3]}},{"g":"EBSDEREESOAFUNEL","p":{"ROSE":[5,9,8,4],"SUN":[8,12,13],"BEE":[1,0,4],"LEAF":[15,14,10,11],"SEED":[2,6,7,3]}},{"g":"NUSEREDEOBAFSEEL","p":{"ROSE":[4,8,12,13],"SUN":[2,1,0],"BEE":[9,13,14],"LEAF":[15,14,10,11],"SEED":[2,3,7,6]}}],"1":[{"g":"EGGYUOSMPIEICAKL","p":{"CAKE":[12,13,14,10],"PIE":[8,9,10],"MILK":[7,11,15,14],"SOUP":[6,5,4,8],"EGGS":[0,1,2,6]}},{"g":"OSGGUPIEMILKPGCA","p":{"CAKE":[14,15,11,7],"PIE":[5,6,7],"EGGS":[7,3,2,1],"MILK":[8,9,10,11],"SOUP":[1,0,4,5]}},{"g":"MSGGILKEOSAIUPCP","p":{"CAKE":[14,10,6,7],"PIE":[15,11,7],"SOUP":[9,8,12,13],"EGGS":[7,3,2,1],"MILK":[0,4,5,6]}}],"2":[{"g":"DRIBTACDBEGOFISH","p":{"BIRD":[3,2,1,0],"CAT":[6,5,4],"DOG":[7,11,10],"FISH":[12,13,14,15],"BEAR":[8,9,5,1]}},{"g":"GHSIODTFIRAEBDCB","p":{"BIRD":[12,8,9,13],"CAT":[14,10,6],"DOG":[5,4,0],"FISH":[7,3,2,1],"BEAR":[15,11,10,9]}},{"g":"FISHBEDOCATGDRIB","p":{"BIRD":[15,14,13,12],"CAT":[8,9,10],"DOG":[6,7,11],"FISH":[0,1,2,3],"BEAR":[4,5,9,13]}}],"3":[{"g":"OWNLLNAVELDSSHBCRIIOBAOTA","p":{"SHELL":[12,13,8,3,4],"WAVE":[1,6,7,8],"SAND":[11,6,5,10],"BOAT":[14,19,24,23],"CRAB":[15,16,21,20]}},{"g":"WGCRAAIDTBVBNAOELLSBHSNSO","p":{"SHELL":[21,20,15,16,17],"SAND":[18,13,12,7],"BOAT":[9,14,13,8],"CRAB":[2,3,4,9],"WAVE":[0,5,10,15]}},{"g":"AEVDEAWANBVSSSOEHCTALLRAB","p":{"SHELL":[11,16,15,20,21],"WAVE":[6,5,10,15],"SAND":[12,7,8,3],"BOAT":[9,14,19,18],"CRAB":[17,22,23,24]}}],"4":[{"g":"AREINGUSPIIEKACDYOOKNACEI","p":{"COOKIE":[22,17,18,19,24,23],"CANDY":[22,21,20,15,16],"SUGAR":[7,6,5,0,1],"PIE":[8,3,2],"CAKE":[14,13,12,11]}},{"g":"TCELEOYDCOGANAOURAKKSPIEI","p":{"COOKIE":[8,9,14,19,24,23],"CAKE":[8,13,18,23],"PIE":[21,22,23],"CANDY":[8,13,12,7,6],"SUGAR":[20,15,10,11,16]}},{"g":"EEYDNKIPRAOEKACOCUGYLDSFI","p":{"COOKIE":[16,15,10,5,6,11],"PIE":[7,6,11],"CAKE":[14,13,12,11],"SUGAR":[22,17,18,13,8],"CANDY":[14,9,4,3,2]}}],"5":[{"g":"RAIVEENTDSPUROIL","p":{"TULIP":[7,11,15,14,10],"SEED":[9,5,4,8],"RAIN":[0,1,2,6],"VINE":[3,2,6,5],"ROSE":[12,13,9,5]}},{"g":"VINEPARDILOETUSE","p":{"TULIP":[12,13,9,8,4],"SEED":[14,15,11,7],"RAIN":[6,5,1,2],"ROSE":[6,10,14,15],"VINE":[0,1,2,3]}},{"g":"SORAEENIEILVDPUT","p":{"TULIP":[15,14,10,9,13],"SEED":[0,4,8,12],"RAIN":[2,3,7,6],"VINE":[11,7,6,5],"ROSE":[2,1,0,4]}}],"6":[{"g":"OCCOWENRAHBAYGIP","p":{"BARN":[10,11,7,6],"COW":[1,0,4],"PIG":[15,14,13],"HAY":[9,8,12],"CORN":[2,3,7,6],"HEN":[9,5,6]}},{"g":"ROWGNCPINEHARABY","p":{"BARN":[14,13,12,8],"COW":[5,1,2],"PIG":[6,7,3],"HAY":[10,11,15],"CORN":[5,1,0,4],"HEN":[10,9,8]}},{"g":"RNEBOWHACYARGIPN","p":{"BARN":[3,7,11,15],"COW":[8,4,5],"PIG":[14,13,12],"HEN":[6,2,1],"HAY":[6,10,9],"CORN":[8,4,0,1]}}],"7":[{"g":"WCHALALRIKMPOSOWFODOSIREB","p":{"CHAIR":[1,2,3,8,7],"DOOR":[18,17,12,7],"BED":[24,23,18],"LAMP":[6,5,10,11],"FIRE":[16,21,22,23],"BOOK":[24,19,14,9]}},{"g":"PEIBKMNEOOAFIRDLHAEDECUBC","p":{"CHAIR":[21,16,17,12,13],"FIRE":[11,12,13,18],"BED":[23,18,19],"DOOR":[14,9,8,13],"LAMP":[15,10,5,0],"BOOK":[3,8,9,4]}},{"g":"EWNFERTVIROPMALOHCHKDEBOO","p":{"CHAIR":[17,18,13,8,9],"LAMP":[14,13,12,11],"BED":[22,21,20],"BOOK":[22,23,24,19],"DOOR":[20,15,10,5],"FIRE":[3,8,9,4]}}],"8":[{"g":"OLEBGDULREIPGENK","p":{"GREEN":[12,8,9,13,14],"RED":[8,9,5],"PINK":[11,10,14,15],"BLUE":[3,7,6,2],"GOLD":[4,0,1,5]}},{"g":"IPULNEEBKGRETOLD","p":{"GREEN":[9,10,6,5,4],"PINK":[1,0,4,8],"GOLD":[9,13,14,15],"BLUE":[7,3,2,6],"RED":[10,11,15]}},{"g":"BLPKEUINLDEEOGRN","p":{"GREEN":[13,14,10,11,15],"RED":[14,10,9],"PINK":[2,6,7,3],"BLUE":[0,1,5,4],"GOLD":[13,12,8,9]}}],"9":[{"g":"GGRTWEESROBEENIN","p":{"ROBIN":[8,9,10,14,15],"EGG":[5,1,0],"NEST":[15,11,7,3],"WREN":[4,8,12,13],"TREE":[3,2,6,5],"BEE":[10,6,5]}},{"g":"SIBOENERGSENGTRW","p":{"ROBIN":[7,3,2,1,5],"EGG":[4,8,12],"BEE":[2,6,10],"NEST":[11,10,9,13],"WREN":[15,14,10,11],"TREE":[13,14,10,6]}},{"g":"EOBEERIEGTNWGSER","p":{"ROBIN":[5,1,2,6,10],"EGG":[4,8,12],"TREE":[9,5,4,0],"WREN":[11,15,14,10],"NEST":[10,14,13,9],"BEE":[2,3,7]}}],"10":[{"g":"GSNOCGECIAOATUBTSTJMYREJA","p":{"BUTTER":[14,13,12,17,22,21],"TOAST":[15,10,11,16,17],"JAM":[23,24,19],"EGGS":[6,5,0,1],"BACON":[14,9,4,3,2],"JUICE":[18,13,8,7,6]}},{"g":"BUCMETTSAJERTONJUICASGGEB","p":{"BUTTER":[0,1,6,5,10,11],"TOAST":[12,13,8,7,6],"JAM":[9,8,3],"BACON":[24,19,18,13,14],"EGGS":[23,22,21,20],"JUICE":[15,16,17,18,23]}},{"g":"ECCONAIABEJUTGGABTSAMRETO","p":{"BUTTER":[16,11,12,17,22,21],"TOAST":[23,24,19,18,17],"JAM":[10,15,20],"EGGS":[9,14,13,18],"BACON":[8,7,2,3,4],"JUICE":[10,11,6,1,0]}}],"11":[{"g":"BRATULILEPOSYSOOTAIRMEDET","p":{"DAISY":[22,17,18,13,12],"LILY":[5,6,7,12],"BLOOM":[0,5,10,15,20],"PETAL":[9,8,3,2,7],"ROSE":[19,14,13,8],"STEM":[11,16,21,20]}},{"g":"MSEPDOOTIAORASILILYSBRMET","p":{"DAISY":[4,9,14,13,18],"LILY":[15,16,17,18],"PETAL":[3,2,7,12,17],"BLOOM":[20,15,10,5,0],"ROSE":[11,6,1,2],"STEM":[19,24,23,22]}},{"g":"BEASYLALIAOTYLDOEPERMETSO","p":{"DAISY":[14,9,8,3,4],"LILY":[7,8,13,12],"PETAL":[17,16,11,6,7],"BLOOM":[0,5,10,15,20],"ROSE":[19,24,23,18],"STEM":[23,22,21,20]}}],"12":[{"g":"TGNECFLIPREMAREROCTENSSQK","p":{"ACORN":[12,17,16,15,20],"FERN":[5,10,15,20],"TRAIL":[18,13,12,7,6],"MOSS":[11,16,21,22],"PINE":[8,7,2,3],"CREEK":[4,9,14,19,24]}},{"g":"KEMOSREIASCOLRTAREFAENIPR","p":{"ACORN":[15,10,11,16,21],"PINE":[23,22,21,20],"FERN":[18,17,16,21],"CREEK":[10,5,6,1,0],"TRAIL":[14,13,8,7,12],"MOSS":[2,3,4,9]}},{"g":"EOCAICRNOMNEESLIFKSIPUTRA","p":{"ACORN":[3,2,1,6,7],"FERN":[16,11,6,7],"CREEK":[5,6,11,12,17],"MOSS":[9,8,13,18],"TRAIL":[22,23,24,19,14],"PINE":[20,15,10,11]}}],"13":[{"g":"IROOCFETCORUMMAAWOITCSNET","p":{"MITTEN":[13,18,19,24,23,22],"SNOW":[21,22,17,16],"COAT":[8,9,14,19],"COCOA":[8,3,4,9,14],"SCARF":[21,20,15,10,5],"FIRE":[5,0,1,6]}},{"g":"MITTOLBAERFWONIRACSFAAOCB","p":{"MITTEN":[0,1,2,3,8,13],"SNOW":[18,13,12,11],"FIRE":[19,14,9,8],"COAT":[17,12,7,2],"SCARF":[18,17,16,15,10],"COCOA":[23,22,17,12,7]}},{"g":"IREOWFCSNCRAOCFITTOAMNECN","p":{"MITTEN":[20,15,16,17,22,21],"COAT":[13,12,11,16],"COCOA":[23,18,13,12,11],"SCARF":[7,6,11,10,5],"FIRE":[5,0,1,2],"SNOW":[7,8,3,4]}}],"14":[{"g":"BOOKSUIAPHQEGDESTYALSOREF","p":{"STORY":[15,16,21,22,17],"QUIET":[10,5,6,11,16],"PAGE":[8,7,12,11],"SHELF":[4,9,14,19,24],"BOOK":[0,1,2,3],"READ":[22,23,18,13]}},{"g":"EROTSAYGEHDBAIEKBPULOOYQF","p":{"STORY":[4,3,2,1,6],"QUIET":[23,18,13,8,3],"SHELF":[4,9,14,19,24],"PAGE":[17,12,7,8],"BOOK":[16,21,20,15],"READ":[1,0,5,10]}},{"g":"YVTOTDAERSKUIYHOQFLEOBPAG","p":{"STORY":[9,4,3,8,13],"SHELF":[9,14,19,18,17],"PAGE":[22,23,24,19],"READ":[8,7,6,5],"QUIET":[16,11,12,7,2],"BOOK":[21,20,15,10]}}],"15":[{"g":"ABPCHSGIEEKRASEEEPPLTNOME","p":{"CHEESE":[3,4,9,14,13,8],"APPLE":[12,17,18,19,14],"PIE":[2,7,8],"GRAPE":[6,11,12,17,16],"BASKET":[1,0,5,10,15,20],"LEMON":[19,24,23,22,21]}},{"g":"SABONKLEMCEIGRHTPPAEOLESE","p":{"CHEESE":[9,14,19,24,23,22],"APPLE":[18,17,16,21,22],"GRAPE":[12,13,18,17,22],"PIE":[16,11,10],"LEMON":[6,7,8,3,4],"BASKET":[2,1,0,5,10,15]}},{"g":"BAPEMESPLOIKESNPETEEARGCH","p":{"CHEESE":[23,24,19,18,13,12],"BASKET":[0,1,6,11,12,17],"PIE":[15,10,5],"LEMON":[8,3,4,9,14],"GRAPE":[22,21,20,15,16],"APPLE":[1,2,7,8,3]}}],"16":[{"g":"FSHLSIPELCDEAROITLEWWHAVA","p":{"WHALE":[20,21,22,17,18],"CORAL":[9,14,13,12,17],"PEARL":[6,11,12,13,8],"TIDE":[16,15,10,11],"SHELL":[1,2,7,8,3],"WAVE":[19,24,23,18]}},{"g":"OSLLTJSHEIECOVDLARAEWHLWP","p":{"WHALE":[20,21,16,15,10],"CORAL":[11,12,17,16,15],"PEARL":[24,19,18,17,22],"TIDE":[4,9,14,19],"WAVE":[23,18,13,8],"SHELL":[6,7,8,3,2]}},{"g":"SWEPRSHARLTELOEIDLCSAEVAW","p":{"WHALE":[1,6,7,12,11],"SHELL":[5,6,11,12,17],"CORAL":[18,13,8,7,12],"TIDE":[10,15,16,11],"PEARL":[3,2,7,8,9],"WAVE":[24,23,22,21]}}],"17":[{"g":"CRUBUAKOLTAEVFTLNARELIGUS","p":{"VANILLA":[12,17,16,21,20,15,10],"OVEN":[7,12,11,16],"FLOUR":[13,8,7,2,1],"BUTTER":[3,4,9,14,19,18],"SUGAR":[24,23,22,17,18],"CAKE":[0,5,6,11]}},{"g":"ILLRENAATTEVOUBKFLRAACSUG","p":{"VANILLA":[11,6,5,0,1,2,7],"OVEN":[12,11,10,5],"FLOUR":[16,17,12,13,18],"BUTTER":[14,13,8,9,4,3],"SUGAR":[22,23,24,19,18],"CAKE":[21,20,15,10]}},{"g":"INEKALAVFCLAOLSTTURUERBAG","p":{"VANILLA":[7,6,1,0,5,10,11],"OVEN":[12,7,2,1],"FLOUR":[8,13,12,17,18],"BUTTER":[22,17,16,15,20,21],"SUGAR":[14,19,24,23,18],"CAKE":[9,4,3,2]}}],"18":[{"g":"PIHDANAECNOSNDRNGUTUISLNM","p":{"PIANO":[0,1,6,5,10],"SONG":[11,10,15,16],"SING":[21,20,15,16],"DANCE":[3,4,9,8,7],"TUNE":[18,17,12,7],"DRUM":[13,14,19,24]}},{"g":"TSODRUCNAUNEGIMSINPKEGRLL","p":{"PIANO":[18,13,8,7,2],"DANCE":[3,8,7,6,11],"SONG":[1,2,7,12],"DRUM":[3,4,9,14],"SING":[15,16,17,12],"TUNE":[0,5,10,11]}},{"g":"BHIADURPNCMDSOEINENGTUMIS","p":{"PIANO":[7,2,3,8,13],"DANCE":[4,3,8,9,14],"SONG":[12,13,18,19],"SING":[24,23,18,19],"DRUM":[11,6,5,10],"TUNE":[20,21,16,17]}}],"19":[{"g":"BNYKDUNXCUSGOFENARFSLIMOU","p":{"MOUSE":[22,23,24,19,14],"SNAIL":[10,15,16,21,20],"BUNNY":[0,5,6,1,2],"FOX":[13,12,7],"DUCK":[4,9,8,3],"FROG":[18,17,12,11]}},{"g":"UNNYNBELIGMSNAOOUCKRSDXOF","p":{"MOUSE":[10,15,16,11,6],"DUCK":[21,16,17,18],"FOX":[24,23,22],"FROG":[24,19,14,9],"BUNNY":[5,0,1,2,3],"SNAIL":[11,12,13,8,7]}},{"g":"CUDUBKYNNELNSMSIAFOUGORXK","p":{"MOUSE":[13,18,19,14,9],"FOX":[17,18,23],"SNAIL":[12,11,16,15,10],"DUCK":[2,1,0,5],"BUNNY":[4,3,8,7,6],"FROG":[17,22,21,20]}}],"20":[{"g":"LPARDANGNEATYNNWEWFUGROLS","p":{"GARDEN":[7,2,3,4,9,8],"FLOWER":[18,23,22,17,16,21],"SUNNY":[24,19,14,13,12],"PLANT":[1,0,5,6,11],"WATER":[15,10,11,16,21],"GROW":[20,21,22,17]}},{"g":"PFLGAGRODRPEWERLTANUANYNS","p":{"GARDEN":[3,4,9,8,13,18],"FLOWER":[1,2,7,12,13,14],"GROW":[5,6,7,12],"WATER":[12,17,16,11,6],"SUNNY":[24,19,18,23,22],"PLANT":[10,15,20,21,16]}},{"g":"OWETWLDRAGFETWRYNNUOPLASW","p":{"GARDEN":[9,8,7,6,11,16],"WATER":[13,8,3,2,7],"GROW":[9,14,19,24],"FLOWER":[10,5,0,1,2,7],"PLANT":[20,21,22,17,12],"SUNNY":[23,18,17,16,15]}}],"21":[{"g":"LSCTTEHOLEMONEKRAESPMWYCU","p":{"KETTLE":[14,9,4,3,8,13],"SCONES":[1,2,7,12,13,18],"CUP":[23,24,19],"HONEY":[6,7,12,17,22],"WARM":[21,16,15,20],"LEMON":[0,5,10,11,12]}},{"g":"KENOHEYUPWTTCSAELOMRSENEL","p":{"KETTLE":[0,5,10,11,16,21],"SCONES":[13,12,17,22,21,20],"CUP":[12,7,8],"HONEY":[4,3,2,1,6],"LEMON":[24,23,18,17,22],"WARM":[9,14,19,18]}},{"g":"ESNEYNHOWAOCEKRMSTPMELTUC","p":{"KETTLE":[13,12,17,22,21,20],"LEMON":[21,20,15,10,5],"CUP":[24,23,18],"SCONES":[16,11,10,5,0,1],"WARM":[8,9,14,19],"HONEY":[6,7,2,3,4]}}],"22":[{"g":"ERRYAHCPAARAEBRMULHAAPPCN","p":{"CHERRY":[6,5,0,1,2,3],"PEACH":[7,12,11,6,5],"PEAR":[7,12,11,10],"APPLE":[20,21,22,17,12],"PLUM":[22,17,16,15],"BRANCH":[13,14,19,24,23,18]}},{"g":"UICHAMTNYRUPARRLPRBEEEACH","p":{"CHERRY":[23,24,19,14,13,8],"PEACH":[16,21,22,23,24],"PEAR":[16,21,22,17],"APPLE":[12,11,16,15,20],"PLUM":[16,15,10,5],"BRANCH":[18,17,12,7,2,3]}},{"g":"SULPPIMEEABRANCYAYCHPERRE","p":{"CHERRY":[14,19,24,23,22,17],"BRANCH":[10,11,12,13,14,19],"PEACH":[3,8,9,14,19],"APPLE":[9,4,3,2,7],"PLUM":[3,2,1,6],"PEAR":[20,21,16,11]}}],"23":[{"g":"ONRTGOMAEICETRUDNSDQNIGHT","p":{"COMET":[10,5,6,11,12],"DREAM":[18,13,8,7,6],"MOON":[6,5,0,1],"STAR":[17,12,7,2],"NIGHT":[16,21,22,23,24],"QUIET":[19,14,9,8,3]}},{"g":"ATSETRDUINERQGHAMCCTNOOME","p":{"COMET":[17,22,23,24,19],"MOON":[23,22,21,20],"NIGHT":[9,8,13,14,19],"DREAM":[6,11,10,15,16],"STAR":[2,1,0,5],"QUIET":[12,7,8,3,4]}},{"g":"OMEIUCHTRQSGINVTAROODREAM","p":{"COMET":[5,0,1,2,7],"NIGHT":[13,12,11,6,7],"QUIET":[9,4,3,2,7],"MOON":[24,19,18,13],"STAR":[10,15,16,17],"DREAM":[20,21,22,23,24]}}],"24":[{"g":"LYVACIFGRSMAOREPSTNNOTAID","p":{"POTATO":[15,20,21,22,17,12],"CARROT":[4,3,8,13,12,17],"FAMILY":[6,11,10,5,0,1],"DINNER":[24,23,18,19,14,13],"ROAST":[13,12,11,16,17],"GRAVY":[7,8,3,2,1]}},{"g":"CAGVYERRATNPOTONFASYIDMIL","p":{"POTATO":[11,12,13,8,9,14],"CARROT":[0,1,6,7,12,13],"ROAST":[7,12,17,18,13],"DINNER":[21,20,15,10,5,6],"GRAVY":[2,7,8,3,4],"FAMILY":[16,17,22,23,24,19]}},{"g":"VARGDYCREILAONNISTATMAFPO","p":{"POTATO":[23,24,19,18,17,12],"CARROT":[6,1,2,7,12,17],"FAMILY":[22,21,20,15,10,5],"GRAVY":[3,2,1,0,5],"DINNER":[4,9,14,13,8,7],"ROAST":[7,12,11,16,17]}}],"25":[{"g":"RGENOIDHSTVINIFEROWWHBLLI","p":{"BRIDGE":[21,16,11,6,1,2],"RIVER":[0,5,10,15,16],"HERON":[20,15,16,17,12],"STONE":[8,9,4,3,2],"WILLOW":[19,24,23,22,17,18],"FISH":[14,13,8,7]}},{"g":"EGDIRNOHVBOTSERRWIFWEHLLO","p":{"BRIDGE":[9,4,3,2,1,0],"STONE":[12,11,6,5,0],"HERON":[21,20,15,10,5],"RIVER":[4,3,8,13,14],"WILLOW":[16,17,22,23,24,19],"FISH":[18,17,12,7]}},{"g":"IFIRBSRDGEHERONWVITSOLLIW","p":{"BRIDGE":[4,3,2,7,8,9],"STONE":[19,18,13,14,9],"HERON":[10,11,12,13,14],"WILLOW":[24,23,22,21,20,15],"RIVER":[12,17,16,11,6],"FISH":[1,0,5,10]}}],"26":[{"g":"PSTOMROUOBACBLEILPDPNOUDA","p":{"PUDDLE":[17,22,23,18,13,14],"SPROUT":[1,0,5,6,7,2],"BOOTS":[9,8,3,2,1],"BLOOM":[12,13,8,3,4],"CLOUD":[11,16,21,22,23],"RAIN":[5,10,15,20]}},{"g":"RAIMXLDNOBEDUOLTSPTCUORSZ","p":{"PUDDLE":[17,12,11,6,5,10],"CLOUD":[19,14,13,12,11],"RAIN":[0,1,2,7],"BOOTS":[9,8,13,18,23],"BLOOM":[9,14,13,8,3],"SPROUT":[16,17,22,21,20,15]}},{"g":"STPSNUORAITOMELEBODDCLOUP","p":{"PUDDLE":[24,23,18,19,14,13],"CLOUD":[20,21,22,23,18],"BLOOM":[16,21,22,17,12],"BOOTS":[16,11,6,1,0],"SPROUT":[3,2,7,6,5,10],"RAIN":[7,8,9,4]}}],"27":[{"g":"BAIKPORNAMCRPPUDELTAICWHE","p":{"PUMPKIN":[13,14,9,4,3,2,7],"APPLE":[8,13,12,17,16],"CORN":[10,5,6,7],"WHEAT":[22,23,24,19,18],"BARN":[0,1,6,7],"CIDER":[21,20,15,16,11]}},{"g":"RBAPPECROLDINCETKPMUAEHWP","p":{"PUMPKIN":[24,19,18,17,16,11,12],"CORN":[13,8,7,12],"WHEAT":[23,22,21,20,15],"APPLE":[2,3,4,9,14],"CIDER":[6,11,10,5,0],"BARN":[1,2,7,12]}},{"g":"HWPUMEATKPPPDICALENOBARNR","p":{"PUMPKIN":[2,3,4,9,8,13,18],"CIDER":[14,13,12,17,22],"APPLE":[15,10,11,16,17],"WHEAT":[1,0,5,6,7],"BARN":[20,21,22,23],"CORN":[14,19,24,23]}}],"28":[{"g":"ELQUITAMELHCASTGIGAAKNORD","p":{"CASTLE":[11,12,13,14,9,8],"MAGIC":[7,12,17,16,11],"DRAGON":[24,23,18,17,22,21],"KNIGHT":[20,21,16,15,10,5],"QUEST":[2,3,8,13,14],"TALE":[5,6,1,0]}},{"g":"TAMAGELACIHTSEUGOGAQINKRD","p":{"CASTLE":[8,7,12,11,6,5],"TALE":[0,1,6,5],"QUEST":[19,14,13,12,11],"KNIGHT":[22,21,20,15,10,11],"DRAGON":[24,23,18,17,16,21],"MAGIC":[2,3,4,9,8]}},{"g":"EMARDLHGICATONKQSESAUELTC","p":{"CASTLE":[24,19,18,23,22,21],"QUEST":[15,20,21,16,11],"KNIGHT":[14,13,8,7,6,11],"DRAGON":[4,3,2,7,12,13],"MAGIC":[1,2,7,8,9],"TALE":[11,10,5,0]}}],"29":[{"g":"GTHNKARDEIEVYTTHOLIMEMUFA","p":{"FAMILY":[23,24,19,18,17,12],"LOVE":[17,16,11,10],"HEARTH":[15,10,5,6,1,2],"KITTEN":[4,9,14,13,8,3],"GARDEN":[0,5,6,7,8,3],"HOME":[15,16,21,20]}},{"g":"KIOMINTFALETHLYDRVOMGAEHE","p":{"FAMILY":[7,8,3,4,9,14],"HEARTH":[23,22,21,16,11,12],"GARDEN":[20,21,16,15,10,5],"KITTEN":[0,1,6,11,10,5],"LOVE":[13,18,17,22],"HOME":[23,18,19,24]}},{"g":"HEAGNYLRDEMITHVAKTOOFNEML","p":{"FAMILY":[20,15,10,11,6,5],"HEARTH":[0,1,2,7,12,13],"LOVE":[24,19,14,9],"GARDEN":[3,2,7,8,9,4],"KITTEN":[16,11,12,17,22,21],"HOME":[13,18,23,22]}}],"30":[{"g":"RETSIADESHORUNCK","p":{"SHADE":[8,9,5,6,7],"ROCK":[11,10,14,15],"REST":[11,7,3,2],"SUN":[8,12,13],"AIR":[5,4,0],"TEA":[2,1,5]}},{"g":"USCKNHORIADERETS","p":{"SHADE":[1,5,9,10,11],"ROCK":[7,6,2,3],"REST":[7,11,15,14],"SUN":[1,0,4],"AIR":[9,8,12],"TEA":[14,13,9]}},{"g":"CKNUORISTEAHTSDE","p":{"SHADE":[7,11,10,14,15],"SUN":[7,3,2],"TEA":[8,9,10],"ROCK":[5,4,0,1],"REST":[5,9,13,12],"AIR":[10,6,5]}}],"31":[{"g":"MULHSEAPCGLREALOGREBNYRAU","p":{"BERRY":[19,18,17,22,21],"PEACH":[7,12,13,8,3],"PLUM":[7,2,1,0],"MELON":[0,5,10,15,20],"GRAPE":[16,11,6,7,12]}},{"g":"TGRANNEMPEOLUCABPYHAERRTU","p":{"BERRY":[15,20,21,22,17],"PEACH":[8,9,14,13,18],"GRAPE":[1,2,3,8,9],"MELON":[7,6,11,10,5],"PLUM":[16,11,12,7]}},{"g":"OCNYRPGBERLRAPEUNOCAMELHE","p":{"BERRY":[7,8,9,4,3],"GRAPE":[6,11,12,13,8],"PEACH":[13,14,19,18,23],"MELON":[20,21,22,17,16],"PLUM":[5,10,15,20]}}],"32":[{"g":"UBETZYENZSWOEVIH","p":{"HONEY":[15,11,7,6,5],"BEE":[1,2,6],"SWEET":[9,10,6,2,3],"HIVE":[15,14,13,12],"BUZZ":[1,0,4,8]}},{"g":"VEYZINUZHOBSTEEW","p":{"HONEY":[8,9,5,1,2],"BEE":[10,14,13],"SWEET":[11,15,14,13,12],"HIVE":[8,4,0,1],"BUZZ":[10,6,7,3]}},{"g":"WSYEEVINETHOBUZZ","p":{"HONEY":[10,11,7,3,2],"BEE":[12,8,4],"BUZZ":[12,13,14,15],"SWEET":[1,0,4,8,9],"HIVE":[10,6,5,4]}}],"33":[{"g":"MRYGWBENGAAPOBSRUPPYKNPLA","p":{"PUPPY":[11,16,17,18,19],"PLAY":[22,23,24,19],"RUN":[15,16,21],"WAG":[4,9,8],"BONE":[13,12,7,6],"BARK":[5,10,15,20]}},{"g":"RKWAGURAAENEBPUOTLPPBSAYE","p":{"PUPPY":[13,14,19,18,23],"PLAY":[18,17,22,23],"BONE":[20,15,10,11],"WAG":[2,3,4],"RUN":[0,5,10],"BARK":[12,7,6,1]}},{"g":"YUPRUPPDENLSKROAVWABYEGGD","p":{"PUPPY":[2,1,6,5,0],"BONE":[19,14,9,8],"WAG":[17,18,23],"RUN":[3,4,9],"BARK":[19,18,13,12],"PLAY":[5,10,15,20]}}],"34":[{"g":"KIYPPTTUANRRWSAY","p":{"KITTY":[0,1,5,6,2],"NAP":[9,8,4],"PURR":[3,7,11,10],"PAWS":[4,8,12,13],"YARN":[15,14,10,9]}},{"g":"WAPRSNURTIKNTYAR","p":{"KITTY":[10,9,8,12,13],"NAP":[5,1,2],"YARN":[13,14,15,11],"PURR":[2,6,7,3],"PAWS":[2,1,0,4]}},{"g":"RRKINUTTAPYNWSAR","p":{"KITTY":[2,3,7,6,10],"NAP":[4,8,9],"PURR":[9,5,1,0],"PAWS":[9,8,12,13],"YARN":[10,14,15,11]}}],"35":[{"g":"WEBEBOTNALHSROSBOECOEWLPU","p":{"SOUP":[14,19,24,23],"STEW":[11,6,1,0],"HOT":[10,5,6],"BOWL":[15,16,21,22],"CORN":[18,13,12,7],"BEAN":[2,3,8,7]}},{"g":"PROCXYNBOMNAEWLHOTSPQDNOU","p":{"SOUP":[18,23,24,19],"STEW":[18,17,12,13],"BEAN":[7,12,11,6],"HOT":[15,16,17],"CORN":[3,2,1,6],"BOWL":[7,8,13,14]}},{"g":"HBPUNOTSOBWEWWEBROLAYNCAN","p":{"SOUP":[7,8,3,2],"BOWL":[9,8,13,18],"STEW":[7,6,11,10],"HOT":[0,5,6],"CORN":[22,17,16,21],"BEAN":[9,14,19,24]}}],"36":[{"g":"RBRWKOVENILDARELAWMSOAFOL","p":{"BREAD":[1,2,7,12,11],"OVEN":[5,6,7,8],"ROLL":[0,5,10,15],"WARM":[17,12,13,18],"LOAF":[15,20,21,22]}},{"g":"YYDMLPELLBMFAORRNEVEAWSDA","p":{"BREAD":[9,14,19,24,23],"ROLL":[14,13,8,7],"OVEN":[13,18,17,16],"WARM":[21,20,15,10],"LOAF":[8,13,12,11]}},{"g":"VENWDOLLAAROBRELAFMFIRJCS","p":{"BREAD":[12,13,14,9,4],"WARM":[3,8,13,18],"ROLL":[10,5,6,7],"OVEN":[5,0,1,2],"LOAF":[6,11,16,17]}}],"37":[{"g":"NTPNDIMCAYRUSKMAGWEOEECET","p":{"CANDY":[7,8,3,4,9],"SUGAR":[12,11,16,15,10],"GUM":[16,11,6],"MINT":[6,5,0,1],"SWEET":[12,17,18,23,24]}},{"g":"CMYUESUDNFWGAACEERMTCTNIN","p":{"CANDY":[14,13,8,7,2],"SUGAR":[5,6,11,12,17],"SWEET":[5,10,15,16,21],"GUM":[11,6,1],"MINT":[18,23,22,21]}},{"g":"DYSIMNACSUIMLTGNSWRATEEOR","p":{"CANDY":[7,6,5,0,1],"SUGAR":[8,9,14,19,18],"GUM":[14,9,4],"SWEET":[16,17,22,21,20],"MINT":[11,10,15,20]}}],"38":[{"g":"DWIAYPENRGLTIQBRDOAOIPCTO","p":{"RAIN":[8,3,2,7],"BOOT":[14,19,24,23],"GRAY":[9,8,3,4],"COAT":[22,17,18,23],"WET":[1,6,11],"DRIP":[16,15,20,21]}},{"g":"BCOAAOKGTEODRAITLIYNEWPTE","p":{"RAIN":[12,13,14,19],"GRAY":[7,12,13,18],"DRIP":[11,12,17,22],"WET":[21,20,15],"BOOT":[0,5,10,15],"COAT":[1,2,3,8]}},{"g":"OCLNIAYBRATOOGPEWDRIIIPAY","p":{"RAIN":[8,9,4,3],"BOOT":[7,12,11,10],"WET":[16,15,10],"DRIP":[17,18,19,14],"COAT":[1,0,5,10],"GRAY":[13,18,23,24]}}],"39":[{"g":"WONCTTSOIMLLCEED","p":{"MITTS":[9,8,4,5,6],"ICE":[8,12,13],"COLD":[3,7,11,15],"SNOW":[6,2,1,0],"SLED":[6,10,14,15]}},{"g":"LOMSDCINEETOLSTW","p":{"MITTS":[2,6,10,14,13],"ICE":[6,5,9],"SNOW":[3,7,11,15],"SLED":[13,12,8,4],"COLD":[5,1,0,4]}},{"g":"OWMINSTTILCOCEDL","p":{"MITTS":[2,3,7,6,5],"ICE":[8,12,13],"COLD":[10,11,15,14],"SNOW":[5,4,0,1],"SLED":[5,9,13,14]}}],"40":[{"g":"AROTYIYOFLRYSNINEDGWMCRAN","p":{"GARDEN":[18,23,22,17,16,15],"WING":[19,14,13,18],"FLY":[8,9,4],"SOFT":[12,7,8,3],"AIRY":[0,5,10,11]}},{"g":"DFLYRWIFTIZNODAGGSUNOARDE","p":{"GARDEN":[16,21,22,23,24,19],"WING":[5,6,11,16],"FLY":[1,2,3],"SOFT":[17,12,7,8],"AIRY":[14,9,4,3]}},{"g":"OYZTFGRBVONIWVSEAGNEDRYLF","p":{"GARDEN":[17,16,21,20,15,10],"WING":[12,11,10,5],"FLY":[24,23,22],"SOFT":[14,9,4,3],"AIRY":[16,11,6,1]}}],"41":[{"g":"LEYTEFANISRETOPLDUGSKVBOH","p":{"SPOT":[19,14,13,12],"ANT":[6,7,12],"BUG":[22,17,18],"RED":[10,11,16],"LEAF":[0,1,6,5],"TINY":[3,8,7,2]}},{"g":"OTNDNPSAELIBFRLEUGNYSPTIM","p":{"SPOT":[6,5,0,1],"ANT":[7,2,1],"LEAF":[9,8,7,12],"BUG":[11,16,17],"RED":[13,8,3],"TINY":[22,23,18,19]}},{"g":"ORUGUOVLEBKRFASREDNPYNITO","p":{"SPOT":[14,19,24,23],"ANT":[13,18,23],"LEAF":[7,8,13,12],"BUG":[9,4,3],"RED":[15,16,17],"TINY":[23,22,21,20]}}],"42":[{"g":"AOSULCRETAXIPHBSNROLBKNOM","p":{"THORN":[8,13,18,17,22],"BLOOM":[14,19,18,23,24],"PETAL":[12,7,8,9,4],"ROSE":[6,1,2,7],"PINK":[12,11,16,21]}},{"g":"AIPMAONKOOERWBLSOHETPETAL","p":{"THORN":[22,17,16,11,6],"ROSE":[11,16,15,10],"PETAL":[20,21,22,23,24],"PINK":[2,1,6,7],"BLOOM":[13,14,9,8,3]}},{"g":"OOVITMLBDHLORKOASINRTEPAC","p":{"THORN":[4,9,14,19,18],"PINK":[22,17,18,13],"BLOOM":[7,6,1,0,5],"ROSE":[12,11,16,21],"PETAL":[22,21,20,15,10]}}],"43":[{"g":"GRBEHEAGMESIINTL","p":{"BASIL":[2,6,10,11,15],"MINT":[8,12,13,14],"GREEN":[0,1,5,9,13],"HERB":[4,5,1,2],"SAGE":[10,6,7,3]}},{"g":"EBILGASTREENBHMI","p":{"BASIL":[1,5,6,2,3],"MINT":[14,15,11,7],"GREEN":[4,8,9,10,11],"SAGE":[6,5,4,0],"HERB":[13,9,8,12]}},{"g":"TENENERGIHBAMLIS","p":{"BASIL":[10,11,15,14,13],"SAGE":[15,11,7,3],"MINT":[12,8,4,0],"GREEN":[7,6,5,1,2],"HERB":[9,5,6,10]}}],"44":[{"g":"GOLDCTEIOBEFRNWS","p":{"FIELD":[11,7,6,2,3],"COB":[4,8,9],"SWEET":[15,14,10,6,5],"CORN":[4,8,12,13],"GOLD":[0,1,2,3]}},{"g":"DLOGIETBFEROSWNC","p":{"FIELD":[8,4,5,1,0],"COB":[15,11,7],"GOLD":[3,2,1,0],"SWEET":[12,13,9,5,6],"CORN":[15,11,10,14]}},{"g":"FIDGTELOWEBNSCOR","p":{"FIELD":[0,1,5,6,2],"COB":[13,14,10],"SWEET":[12,8,9,5,4],"CORN":[13,14,15,11],"GOLD":[3,7,6,2]}}],"45":[{"g":"TSURPPICALEEBAKV","p":{"APPLE":[8,4,5,9,10],"CRUST":[7,3,2,1,0],"SPICE":[1,5,6,7,11],"BAKE":[12,13,14,10],"PIE":[5,6,10]}},{"g":"BAPPTKELSPIEURCE","p":{"APPLE":[1,2,3,7,11],"PIE":[9,10,11],"CRUST":[14,13,12,8,4],"BAKE":[0,1,5,6],"SPICE":[8,9,10,14,15]}},{"g":"BPLEAPSTKIESECRU","p":{"APPLE":[4,5,1,2,3],"PIE":[5,9,10],"CRUST":[13,14,15,11,7],"BAKE":[0,4,8,12],"SPICE":[6,5,9,13,12]}}],"46":[{"g":"PULDICONSEMEOURL","p":{"LEMON":[15,11,10,6,7],"CUP":[5,1,0],"SOUR":[8,12,13,14],"COLD":[5,6,2,3],"SIP":[8,4,0],"ICE":[4,5,9]}},{"g":"GDURELOSMECIONUP","p":{"LEMON":[5,4,8,12,13],"CUP":[10,14,15],"SIP":[7,11,15],"SOUR":[7,6,2,3],"ICE":[11,10,9],"COLD":[10,6,5,1]}},{"g":"NRLDOUOSMECIELUP","p":{"LEMON":[13,12,8,4,0],"CUP":[10,14,15],"SIP":[7,11,15],"ICE":[11,10,9],"COLD":[10,6,2,3],"SOUR":[7,6,5,1]}}],"47":[{"g":"SCRENOOAELPMGDUF","p":{"CREAM":[1,2,3,7,11],"SCOOP":[0,1,5,6,10],"FUDGE":[15,14,13,12,8],"COLD":[1,5,9,13],"CONE":[1,5,4,8]}},{"g":"GENSDLOCUPORFMAE","p":{"CREAM":[7,11,15,14,13],"SCOOP":[3,7,6,10,9],"FUDGE":[12,8,4,0,1],"COLD":[7,6,5,4],"CONE":[7,6,2,1]}},{"g":"GDUFELRENOCAPOSM","p":{"CREAM":[10,6,7,11,15],"COLD":[10,9,5,1],"FUDGE":[3,2,1,0,4],"SCOOP":[14,10,9,13,12],"CONE":[10,9,8,4]}}],"48":[{"g":"TARMSWEROOLIDGGF","p":{"FIRE":[15,11,7,6],"LOG":[10,9,13],"WARM":[5,1,2,3],"STAR":[4,0,1,2],"WOOD":[5,9,8,12],"GLOW":[14,10,9,5]}},{"g":"GLFIGOORSWDETARM","p":{"FIRE":[2,3,7,11],"LOG":[1,5,4],"WARM":[9,13,14,15],"WOOD":[9,5,6,10],"GLOW":[0,1,5,9],"STAR":[8,12,13,14]}},{"g":"SFIRTGLEAWOGRMOD","p":{"FIRE":[1,2,3,7],"LOG":[6,10,11],"WARM":[9,8,12,13],"WOOD":[9,10,14,15],"GLOW":[5,6,10,9],"STAR":[0,4,8,12]}}],"49":[{"g":"ENOOHIGMSDHTTARK","p":{"NIGHT":[1,5,6,10,11],"DARK":[9,13,14,15],"STAR":[8,12,13,14],"MOON":[7,3,2,1],"SHINE":[8,4,5,1,0]}},{"g":"KTHGRSHIATONDMOE","p":{"NIGHT":[11,7,3,2,1],"SHINE":[5,6,7,11,15],"DARK":[12,8,4,0],"MOON":[13,14,10,11],"STAR":[5,9,8,4]}},{"g":"KEMORHGOATINDSHE","p":{"NIGHT":[11,10,6,5,9],"DARK":[12,8,4,0],"STAR":[13,9,8,4],"MOON":[2,3,7,11],"SHINE":[13,14,10,11,15]}}],"50":[{"g":"GSHTAPAENEARLOREKTBTPLAWE","p":{"PEARL":[20,15,10,11,12],"PARK":[5,10,11,16],"WALK":[23,22,21,16],"LEASH":[12,7,6,1,2],"BONE":[18,13,8,7],"TREAT":[19,14,9,4,3]}},{"g":"ROBELTNTASREAWHAKLPPKKRAE","p":{"PEARL":[19,24,23,22,17],"WALK":[13,12,17,16],"PARK":[18,23,22,21],"TREAT":[5,10,11,12,7],"LEASH":[4,3,8,9,14],"BONE":[2,1,6,11]}},{"g":"WAUBNRLKONKRTAEPASHRLEPNT","p":{"PEARL":[22,21,16,11,6],"LEASH":[20,21,16,17,18],"WALK":[0,1,6,7],"BONE":[3,8,9,14],"TREAT":[24,19,14,13,12],"PARK":[15,16,11,10]}}],"51":[{"g":"DGKRSDOSABIAWLOHPFLWCTEOC","p":{"COLLAR":[24,23,18,13,8,3],"BARK":[9,8,3,2],"BOWL":[9,14,19,18],"FETCH":[17,22,21,20,15],"DOG":[5,6,1],"PAWS":[16,11,12,7]}},{"g":"OGSBHDFWAPHEARKCTLLLBOWOC","p":{"COLLAR":[24,23,18,17,12,13],"BARK":[3,8,13,14],"DOG":[5,0,1],"FETCH":[6,11,16,15,10],"BOWL":[20,21,22,17],"PAWS":[9,8,7,2]}},{"g":"BOSBKRWWARALLPGHCODOUTEFT","p":{"COLLAR":[16,17,12,11,10,5],"BOWL":[0,1,6,11],"DOG":[18,19,14],"FETCH":[23,22,21,16,15],"BARK":[3,8,9,4],"PAWS":[13,8,7,2]}}],"52":[{"g":"VPURRSCLBETAISKFWHLPOSIEE","p":{"WHISKER":[16,17,12,13,14,9,4],"CAT":[6,11,10],"SLEEP":[13,18,23,24,19],"TAIL":[10,11,12,7],"PURR":[1,2,3,4],"SOFT":[21,20,15,10]}},{"g":"EPASOEIHWFLSKATIRECPATRRU","p":{"WHISKER":[8,7,6,11,12,17,16],"CAT":[18,13,14],"SLEEP":[11,10,5,0,1],"SOFT":[3,4,9,14],"TAIL":[21,20,15,10],"PURR":[19,24,23,22]}},{"g":"LSIPASLEEKOLURSFIPRITACWH","p":{"WHISKER":[23,24,19,14,9,8,13],"SLEEP":[1,6,7,8,3],"CAT":[22,21,20],"SOFT":[5,10,15,20],"TAIL":[20,21,16,11],"PURR":[17,12,13,18]}}],"53":[{"g":"FOSNEENUTSAGBINTHIWGDERDP","p":{"FEATHER":[0,5,10,15,16,21,22],"TUNE":[8,7,6,5],"BIRD":[12,17,22,23],"SONG":[2,1,6,11],"WING":[18,13,14,19],"NEST":[3,4,9,8]}},{"g":"EFDRIATHEBSSUTVDENGSTWINO","p":{"FEATHER":[1,0,5,6,7,8,3],"NEST":[17,16,11,6],"BIRD":[9,4,3,2],"WING":[21,22,17,18],"TUNE":[13,12,17,16],"SONG":[19,24,23,18]}},{"g":"OADXWBIREHGFEATNOSTTIWENU","p":{"FEATHER":[11,12,13,14,9,8,7],"BIRD":[5,6,7,2],"NEST":[23,22,17,18],"WING":[21,20,15,10],"SONG":[17,16,15,10],"TUNE":[19,24,23,22]}}],"54":[{"g":"DCEDFNRENIOFTOSPLASHSDWIF","p":{"SPLASH":[20,15,16,17,18,19],"FISH":[4,9,14,19],"FIN":[4,9,8],"WATER":[22,17,12,7,6],"POND":[15,10,5,0],"REED":[6,7,2,3]}},{"g":"OPOFANDNISPEHSPSEWALKRETA","p":{"SPLASH":[9,14,19,18,13,12],"FISH":[3,8,13,12],"FIN":[3,8,7],"POND":[1,2,7,6],"WATER":[17,18,23,22,21],"REED":[21,16,11,6]}},{"g":"WSPDEATLHEREASRPONIENGDFY","p":{"SPLASH":[1,2,7,12,13,8],"FISH":[23,18,13,8],"FIN":[23,18,17],"REED":[14,9,4,3],"POND":[15,16,17,22],"WATER":[0,5,6,11,10]}}],"55":[{"g":"ALLOPGNEATMALBSAHDDAYORSE","p":{"SADDLE":[14,19,18,17,12,7],"HAY":[16,15,20],"MANE":[10,11,6,7],"GALLOP":[5,0,1,2,3,4],"STABLE":[14,9,8,13,12,7],"HORSE":[16,21,22,23,24]}},{"g":"OHMLORNALPSEGTSDLBAYDASHF","p":{"SADDLE":[22,21,20,15,16,11],"STABLE":[14,13,18,17,16,11],"HAY":[23,18,19],"HORSE":[1,0,5,10,11],"GALLOP":[12,7,8,3,4,9],"MANE":[2,7,6,11]}},{"g":"ROHMASTAYNELBGELDDASPOLLX","p":{"SADDLE":[19,18,17,16,15,10],"STABLE":[5,6,7,12,11,10],"HAY":[2,7,8],"GALLOP":[13,18,23,22,21,20],"MANE":[3,4,9,14],"HORSE":[2,1,0,5,10]}}],"56":[{"g":"EJDPYACHONRSBUNROFAIOTTRL","p":{"CARROT":[6,5,10,15,20,21],"EARS":[0,5,10,11],"SOFT":[11,16,17,22],"HOP":[7,8,3],"BUNNY":[12,13,14,9,4],"TRAIL":[22,23,18,19,24]}},{"g":"ARRRAITOMCLFYNNPOHEUESRAB","p":{"CARROT":[9,4,3,2,7,6],"SOFT":[21,16,11,6],"HOP":[17,16,15],"EARS":[18,23,22,21],"BUNNY":[24,19,14,13,12],"TRAIL":[6,1,0,5,10]}},{"g":"NNSORUYFTRBTOCALRSOHIAEPV","p":{"CARROT":[13,14,9,4,3,8],"SOFT":[17,12,7,8],"HOP":[19,18,23],"EARS":[22,21,16,17],"BUNNY":[10,5,0,1,6],"TRAIL":[11,16,21,20,15]}}],"57":[{"g":"EOWSMSLTWIELUEVHTRCOSANDH","p":{"TURTLE":[7,12,17,16,11,10],"SHELL":[20,15,10,11,6],"SLOW":[5,6,1,2],"SAND":[20,21,22,23],"COVE":[18,19,14,13],"SWIM":[3,8,9,4]}},{"g":"TRSHELUTLLEVOSAIMCLNWSWOD","p":{"TURTLE":[7,6,1,0,5,10],"COVE":[17,12,11,10],"SHELL":[2,3,4,9,8],"SLOW":[13,18,23,22],"SAND":[13,14,19,24],"SWIM":[21,20,15,16]}},{"g":"RUTSATLEHNSLVODWOHCRIMIDN","p":{"TURTLE":[2,1,0,5,6,7],"SHELL":[3,8,7,6,11],"COVE":[18,13,12,7],"SAND":[3,4,9,14],"SWIM":[10,15,20,21],"SLOW":[10,11,16,15]}}],"58":[{"g":"UPFDNGORCORHOAPEENKYUCLIL","p":{"GREEN":[5,10,15,16,17],"FROG":[2,7,6,5],"HOP":[11,6,1],"CROAK":[8,7,12,13,18],"LILY":[22,23,24,19],"POND":[14,9,4,3]}},{"g":"HOPRWKNDAEACYLIORFYLGREEN","p":{"GREEN":[20,21,22,23,24],"FROG":[17,16,15,20],"CROAK":[11,16,15,10,5],"HOP":[0,1,2],"LILY":[19,14,13,12],"POND":[2,1,6,7]}},{"g":"ROERGCAEAOBKNDRYLOPFLIHFU","p":{"GREEN":[4,3,2,7,12],"FROG":[19,14,9,4],"POND":[18,17,12,13],"HOP":[22,17,18],"LILY":[16,21,20,15],"CROAK":[5,0,1,6,11]}}],"59":[{"g":"NOHGIMOTDNLWRAENAKSEYORIW","p":{"NIGHT":[9,4,3,2,7],"HOOT":[2,1,6,7],"MOON":[5,6,1,0],"WISE":[24,23,18,19],"OWL":[6,11,10],"DARK":[8,13,12,17]}},{"g":"DAWELKRISANMMHLITOOWGHNNN","p":{"NIGHT":[10,15,20,21,16],"HOOT":[13,18,17,16],"OWL":[18,19,14],"MOON":[12,17,18,23],"WISE":[2,7,8,3],"DARK":[0,1,6,5]}},{"g":"ESINXOAWKRMOHDAWOTINLNHGQ","p":{"NIGHT":[19,18,23,22,17],"HOOT":[12,11,16,17],"OWL":[16,15,20],"MOON":[10,11,16,21],"WISE":[7,2,1,0],"DARK":[13,14,9,8]}}],"60":[{"g":"DCRISLLAFPOGMAEMNAPLUTUOH","p":{"AUTUMN":[17,22,21,20,15,16],"MAPLE":[12,17,18,19,14],"LEAF":[19,14,13,8],"GOLD":[11,10,5,0],"CRISP":[1,2,3,4,9],"FALL":[8,7,6,5]}},{"g":"LMAGDELPOLAFSCLUHIRATUMNF","p":{"AUTUMN":[10,15,20,21,22,23],"LEAF":[6,5,10,11],"MAPLE":[1,2,7,6,5],"CRISP":[13,18,17,12,7],"GOLD":[3,8,9,4],"FALL":[24,19,14,9]}},{"g":"CRISPLAFOGLEDLYPUTUAAMNOE","p":{"AUTUMN":[19,18,17,16,21,22],"MAPLE":[21,20,15,10,11],"FALL":[7,6,5,10],"GOLD":[9,8,13,12],"CRISP":[0,1,2,3,4],"LEAF":[10,11,6,7]}}],"61":[{"g":"NAHCPGROTAEVESTNIMUEIKPPI","p":{"PUMPKIN":[23,18,17,22,21,20,15],"PIE":[23,24,19],"ORANGE":[7,6,1,0,5,10],"HARVEST":[2,1,6,11,12,13,14],"PATCH":[4,9,8,3,2],"VINE":[11,16,15,10]}},{"g":"IPUMNEATPKNICHIEVRANSTOEG","p":{"PUMPKIN":[1,2,3,8,9,14,19],"ORANGE":[22,17,18,19,24,23],"PIE":[1,0,5],"VINE":[16,11,10,5],"PATCH":[1,6,7,12,13],"HARVEST":[13,18,17,16,15,20,21]}},{"g":"VRAHVEONNISTGEKAPUMPTCHEI","p":{"PUMPKIN":[16,17,18,19,14,9,8],"PIE":[19,24,23],"VINE":[4,9,8,13],"ORANGE":[6,1,2,7,12,13],"HARVEST":[3,2,1,0,5,10,11],"PATCH":[16,15,20,21,22]}}],"62":[{"g":"RPREDSSECIEWLPLEGAPLTUJMI","p":{"CIDER":[8,9,4,3,2],"PRESS":[1,2,7,6,5],"APPLE":[17,18,13,12,7],"JUG":[22,21,16],"SWEET":[6,11,10,15,20],"MILL":[23,24,19,14]}},{"g":"MAJUGTPPMREPRILELEDLWSSIC","p":{"CIDER":[24,23,18,17,12],"PRESS":[7,12,17,22,21],"JUG":[2,3,4],"MILL":[8,13,14,19],"APPLE":[1,6,11,16,17],"SWEET":[21,20,15,10,5]}},{"g":"TEEWSGUJIMPPLLCAREDINSSWO","p":{"CIDER":[14,19,18,17,16],"PRESS":[11,16,17,22,21],"JUG":[7,6,5],"SWEET":[4,3,2,1,0],"MILL":[9,8,13,12],"APPLE":[15,10,11,12,17]}}],"63":[{"g":"IMAFQLFRUTYEKNAVASTHGRPIE","p":{"TURKEY":[9,8,7,12,11,10],"PIE":[22,23,24],"FAMILY":[3,2,1,0,5,10],"GRAVY":[20,21,16,15,10],"THANKS":[18,19,14,13,12,17],"FEAST":[6,11,16,17,18]}},{"g":"KEYMARULIFHTSAEANKPIYVARG","p":{"TURKEY":[11,6,5,0,1,2],"FAMILY":[9,4,3,8,7,2],"PIE":[18,19,14],"GRAVY":[24,23,22,21,20],"THANKS":[11,10,15,16,17,12],"FEAST":[9,14,13,12,11]}},{"g":"IEASKPFGTNVARYAYMKEHLIRUT","p":{"TURKEY":[24,23,22,17,18,13],"THANKS":[24,19,14,9,4,3],"PIE":[5,0,1],"FEAST":[6,1,2,3,8],"GRAVY":[7,12,11,10,15],"FAMILY":[6,11,16,21,20,15]}}],"64":[{"g":"ATNAELEVSELBETRSHOFIYLLIG","p":{"SANTA":[8,3,2,1,0],"GIFTS":[24,19,18,13,8],"EVE":[6,7,12],"BELLS":[11,6,5,10,15],"HOLLY":[16,17,22,21,20],"TREE":[13,14,9,4]}},{"g":"JOLEBEHLSPVEYANFTSRTIGEEA","p":{"SANTA":[8,13,14,19,24],"BELLS":[4,3,2,7,8],"HOLLY":[6,1,2,7,12],"EVE":[11,10,5],"GIFTS":[21,20,15,16,17],"TREE":[19,18,23,22]}},{"g":"EEGYLARIOLBTFHAESANTLLEVE","p":{"SANTA":[16,17,18,19,14],"BELLS":[10,15,20,21,16],"EVE":[22,23,24],"GIFTS":[2,7,12,11,16],"HOLLY":[13,8,9,4,3],"TREE":[11,6,1,0]}}],"65":[{"g":"LDTAHOCMWOTTASNUONCFBRRAR","p":{"SNOWMAN":[13,14,9,8,7,12,17],"HAT":[4,3,2],"CARROT":[18,23,22,21,16,11],"SCARF":[13,18,23,24,19],"COLD":[6,5,0,1],"BUTTON":[20,15,10,11,16,17]}},{"g":"ISWMAENORNLDTRFOUTACCBIHS","p":{"SNOWMAN":[1,6,7,2,3,4,9],"BUTTON":[21,16,17,12,7,6],"SCARF":[24,19,18,13,14],"CARROT":[19,18,13,8,7,12],"COLD":[20,15,10,11],"HAT":[23,18,17]}},{"g":"CBTONOUTMALHAWODROTNFRACS","p":{"SNOWMAN":[24,19,14,13,8,9,4],"BUTTON":[1,6,7,2,3,4],"HAT":[11,12,7],"COLD":[0,5,10,15],"CARROT":[23,22,21,16,17,18],"SCARF":[24,23,22,21,20]}}],"66":[{"g":"OVEETLYWSHFDSEAPNOHRCARDT","p":{"HEART":[18,13,14,19,24],"ROSES":[22,17,12,13,8],"CARD":[20,21,22,23],"CANDY":[20,21,16,11,6],"LOVE":[5,0,1,2],"SWEET":[8,7,2,3,4]}},{"g":"ESOCDSTRARNDHETAYVEOCLOWS","p":{"HEART":[12,13,8,7,6],"ROSES":[7,2,1,0,5],"SWEET":[24,23,18,13,14],"CARD":[3,8,9,4],"CANDY":[20,15,10,11,16],"LOVE":[21,22,17,18]}},{"g":"IEDRAOVSOCLTEECARSWAEHYDN","p":{"HEART":[21,20,15,16,11],"SWEET":[17,18,13,12,11],"ROSES":[3,8,7,12,17],"CANDY":[14,19,24,23,22],"LOVE":[10,5,6,1],"CARD":[9,4,3,2]}}],"67":[{"g":"SBTSAPAERERSKYNIGHUNNGEBT","p":{"EASTER":[9,4,3,2,7,8],"BASKET":[1,6,11,12,7,2],"EGGS":[22,21,16,11],"SPRING":[0,5,10,15,20,21],"BUNNY":[23,18,19,14,13],"HUNT":[17,18,19,24]}},{"g":"LBKEVEASTEGNPBRGIRUHSYNNT","p":{"EASTER":[5,6,7,8,9,14],"BASKET":[1,6,7,2,3,8],"SPRING":[7,12,17,16,11,10],"BUNNY":[13,18,23,22,21],"EGGS":[5,10,15,20],"HUNT":[19,18,23,24]}},{"g":"YEABENBSGGNUKNITHEARRETSP","p":{"EASTER":[17,18,23,22,21,20],"BASKET":[3,2,7,12,17,22],"HUNT":[16,11,10,15],"SPRING":[23,24,19,14,13,8],"BUNNY":[6,11,10,5,0],"EGGS":[4,9,8,7]}}],"68":[{"g":"ESPARYKYOKROLGTBOGGHMONIL","p":{"SPARK":[1,2,3,4,9],"LIGHT":[24,23,18,19,14],"NIGHT":[22,23,18,19,14],"SKY":[1,6,5],"GLORY":[17,12,11,10,5],"BOOM":[15,16,21,20]}},{"g":"TGLRGHMORYGBOQKINKPSLLRAI","p":{"SPARK":[19,18,23,22,17],"SKY":[19,14,9],"GLORY":[1,2,7,8,9],"LIGHT":[20,15,10,5,0],"NIGHT":[16,15,10,5,0],"BOOM":[11,12,7,6]}},{"g":"OOLHTBMIGDAPNRORSKYLKAOQG","p":{"SPARK":[16,11,10,15,20],"SKY":[16,17,18],"GLORY":[24,19,14,13,18],"LIGHT":[2,7,8,3,4],"NIGHT":[12,7,8,3,4],"BOOM":[5,0,1,6]}}],"69":[{"g":"YTKANSRECDOAPHLNGTSEUIFIW","p":{"CANDLES":[8,3,4,9,14,19,18],"CAKE":[8,3,2,7],"GIFTS":[16,21,22,17,18],"WISH":[24,23,18,13],"PARTY":[12,11,6,1,0],"SONG":[5,10,15,16]}},{"g":"SONTRKEGYAACTFPNESIWDLHGS","p":{"CANDLES":[11,10,15,20,21,16,17],"GIFTS":[23,18,13,12,17],"WISH":[19,18,17,22],"CAKE":[11,10,5,6],"SONG":[0,1,2,7],"PARTY":[14,9,4,3,8]}},{"g":"PSEFKAOLDNRNWCATGIFKYHSTE","p":{"CANDLES":[13,14,9,8,7,2,1],"CAKE":[13,14,19,24],"GIFTS":[16,17,18,23,22],"PARTY":[0,5,10,15,20],"WISH":[12,17,22,21],"SONG":[1,6,11,16]}}],"70":[{"g":"AKEBRCLLNIVSFDDOWRAEGNINC","p":{"BRIDE":[3,4,9,14,19],"DANCE":[13,18,23,24,19],"BELLS":[3,2,7,6,11],"RING":[17,22,21,20],"CAKE":[5,0,1,2],"VOWS":[10,15,16,11]}},{"g":"WPLLRNCESWAEBVODIRINEKACG","p":{"BRIDE":[12,17,16,15,20],"BELLS":[12,7,2,3,8],"DANCE":[15,10,5,6,7],"CAKE":[23,22,21,20],"RING":[17,18,19,24],"VOWS":[13,14,9,8]}},{"g":"LSWOVLMNCEEDAKEBICBDGNIRI","p":{"BRIDE":[18,23,24,19,14],"CAKE":[17,12,13,14],"DANCE":[11,12,7,8,9],"VOWS":[4,3,2,1],"BELLS":[15,10,5,0,1],"RING":[23,22,21,20]}}],"71":[{"g":"HSEULOTPYBWFIGAELNKBRDARC","p":{"SHOWER":[1,0,5,10,15,20],"CRADLE":[24,23,22,21,16,15],"GIFTS":[13,12,11,6,1],"BABY":[19,14,9,8],"BLUE":[9,4,3,2],"PINK":[7,12,17,18]}},{"g":"YBPINBADLKLRREWUCFTOEGISH","p":{"SHOWER":[23,24,19,14,13,12],"CRADLE":[16,11,6,7,8,13],"GIFTS":[21,22,17,18,23],"PINK":[2,3,4,9],"BLUE":[5,10,15,20],"BABY":[5,6,1,0]}},{"g":"ABYNKBCPIGLRRFTUAEWSEDLOH","p":{"SHOWER":[19,24,23,18,17,12],"CRADLE":[6,11,16,21,22,17],"BABY":[5,0,1,2],"GIFTS":[9,8,13,14,19],"PINK":[7,8,3,4],"BLUE":[5,10,15,20]}}],"72":[{"g":"AUGHTLOVYADNELBINRIMSHAFA","p":{"FAMILY":[23,24,19,18,13,8],"TABLE":[4,9,14,13,12],"DINNER":[10,15,16,11,12,17],"LAUGH":[5,0,1,2,3],"SHARE":[20,21,22,17,12],"LOVE":[5,6,7,12]}},{"g":"MAFNIIELNDLYBEVATAROUGHSL","p":{"FAMILY":[2,1,0,5,10,11],"DINNER":[9,4,3,8,13,18],"LOVE":[24,19,14,13],"TABLE":[16,17,12,7,6],"LAUGH":[10,15,20,21,22],"SHARE":[23,22,17,18,13]}},{"g":"GUENNHARTISLYADFILBLAMEVO","p":{"FAMILY":[15,20,21,16,17,12],"TABLE":[8,13,18,17,22],"LOVE":[19,24,23,22],"LAUGH":[11,6,1,0,5],"DINNER":[14,9,4,3,2,7],"SHARE":[10,5,6,7,2]}}],"73":[{"g":"EXGSEAYNTBDNOAHSUSSDMILER","p":{"SUNDAY":[15,16,11,10,5,6],"SMILE":[15,20,21,22,23],"HAT":[14,13,8],"DRESS":[19,24,23,18,17],"SONG":[17,12,7,2],"BEST":[9,4,3,8]}},{"g":"MSUNBDSWDEREYASILHATMSONG","p":{"SUNDAY":[1,2,3,8,13,12],"DRESS":[5,10,11,6,1],"HAT":[17,18,19],"SMILE":[21,20,15,16,11],"SONG":[21,22,23,24],"BEST":[4,9,14,19]}},{"g":"TSVDEAEBRLHNUEIDDSSMYAONG","p":{"SUNDAY":[17,12,11,16,21,20],"DRESS":[3,8,13,18,17],"HAT":[10,5,0],"SMILE":[18,19,14,9,4],"SONG":[17,22,23,24],"BEST":[7,6,1,0]}}],"74":[{"g":"SYAOSLPDNULEBGHRACECIOHUR","p":{"CHURCH":[17,22,23,24,19,14],"CHOIR":[17,22,21,20,15],"PEACE":[6,11,16,17,18],"SONG":[4,3,8,13],"SUNDAY":[4,9,8,7,2,1],"BELLS":[12,11,10,5,0]}},{"g":"HUHOICRCERNDAYGULEBNSLPSO","p":{"CHURCH":[5,0,1,6,7,2],"CHOIR":[7,2,3,4,9],"PEACE":[22,17,12,7,8],"SUNDAY":[20,15,10,11,12,13],"BELLS":[18,17,16,21,20],"SONG":[23,24,19,14]}},{"g":"HPYHULEACRLBDECSUNRHONGIO","p":{"CHURCH":[8,3,4,9,14,19],"CHOIR":[14,19,24,23,18],"PEACE":[1,6,7,8,13],"SUNDAY":[15,16,17,12,7,2],"BELLS":[11,6,5,10,15],"SONG":[15,20,21,22]}}],"75":[{"g":"GCGNSSHTIWIAEZERDERBHCROP","p":{"BREEZE":[19,18,17,12,13,14],"SHADE":[5,6,11,16,17],"TEA":[7,12,11],"CHAIR":[1,6,11,10,15],"SWING":[4,9,8,3,2],"PORCH":[24,23,22,21,20]}},{"g":"RBGIREENAHEZIWCDAHSPTECRO","p":{"BREEZE":[1,0,5,6,11,10],"SHADE":[18,17,16,15,10],"TEA":[20,21,16],"PORCH":[19,24,23,22,17],"SWING":[18,13,12,7,2],"CHAIR":[14,9,8,3,4]}},{"g":"TIRHAEAHSDSWCRENIPOZGBREE","p":{"BREEZE":[21,22,23,24,19,14],"SHADE":[8,3,4,9,14],"PORCH":[17,18,13,12,7],"TEA":[0,5,6],"SWING":[10,11,16,15,20],"CHAIR":[12,7,6,1,2]}}],"76":[{"g":"LMIOAATSERCKCHAREORIKAPCH","p":{"ROCKER":[18,17,12,11,16,15],"PORCH":[22,17,18,23,24],"CHAIR":[12,13,14,19,18],"CREAK":[10,15,16,21,20],"REST":[9,8,7,6],"CALM":[10,5,0,1]}},{"g":"IREACPCHKAORATLCOISMKEREQ","p":{"ROCKER":[11,16,15,20,21,22],"CHAIR":[6,7,12,17,22],"PORCH":[5,10,11,6,7],"CREAK":[6,1,2,3,8],"CALM":[4,9,14,19],"REST":[22,23,18,13]}},{"g":"CHCPERAROMOICALCRKTRKEASE","p":{"ROCKER":[5,10,15,20,21,16],"CREAK":[15,16,21,22,17],"CHAIR":[0,1,6,11,16],"PORCH":[3,8,7,2,1],"CALM":[12,13,14,9],"REST":[19,24,23,18]}}],"77":[{"g":"LTOLCIHRDTUWEATQASPCMRGJH","p":{"THREAD":[1,6,7,12,13,8],"SEW":[17,12,11],"QUILT":[15,10,5,0,1],"CLOTH":[4,3,2,1,6],"PATCH":[18,13,14,19,24],"WARM":[11,16,21,20]}},{"g":"SLTHREIDAEWUHCLAQHTORMIAP","p":{"THREAD":[2,3,4,9,8,7],"QUILT":[16,11,6,1,2],"SEW":[0,5,10],"PATCH":[24,23,18,13,12],"CLOTH":[13,14,19,18,17],"WARM":[10,15,20,21]}},{"g":"TLILOHQUCTREWEHRAWSCMDPAT","p":{"THREAD":[0,5,10,11,16,21],"QUILT":[6,7,2,1,0],"SEW":[18,13,12],"CLOTH":[8,3,4,9,14],"PATCH":[22,23,24,19,14],"WARM":[17,16,15,20]}}],"78":[{"g":"ITSPAKAERTLDWHCEEOTBEENTU","p":{"NEEDLE":[22,21,16,11,10,15],"THREAD":[18,13,8,7,6,11],"SEW":[2,7,12],"PATCH":[3,4,9,14,13],"BUTTON":[19,24,23,18,17,22],"KIT":[5,0,1]}},{"g":"TAPEECWADNHEELOKSRBTITHUT","p":{"NEEDLE":[9,4,3,8,13,12],"THREAD":[21,22,17,12,7,8],"SEW":[16,11,6],"BUTTON":[18,23,24,19,14,9],"PATCH":[2,1,0,5,10],"KIT":[15,20,21]}},{"g":"HCTAPAERBSDLHUEEETTWENOIK","p":{"NEEDLE":[21,20,15,10,11,16],"BUTTON":[8,13,18,17,22,21],"SEW":[9,14,19],"KIT":[24,23,18],"PATCH":[4,3,2,1,0],"THREAD":[17,12,7,6,5,10]}}],"79":[{"g":"ESCAYEWLRFAOONKTEHITMRCTS","p":{"SWEATER":[1,6,5,10,15,16,21],"SCARF":[1,2,3,8,9],"YARN":[4,3,8,13],"WOOL":[6,11,12,7],"STITCH":[24,19,18,23,22,17],"KNIT":[14,13,18,23]}},{"g":"FRLOOTACSWEEWKHRASNCNYTIT","p":{"SWEATER":[17,12,11,6,5,10,15],"SCARF":[8,7,6,1,0],"KNIT":[13,18,23,22],"WOOL":[9,4,3,2],"YARN":[21,16,15,20],"STITCH":[17,22,23,24,19,14]}},{"g":"ARSCAYNKERTIATFCTEOLHSWOW","p":{"SWEATER":[21,22,17,12,13,8,9],"STITCH":[21,16,11,10,15,20],"SCARF":[2,3,4,9,14],"YARN":[5,0,1,6],"WOOL":[22,23,18,19],"KNIT":[7,6,11,16]}}],"80":[{"g":"LHROMLONCAATEKRESYFRGGHSE","p":{"MARKET":[4,9,14,13,12,11],"HONEY":[1,6,7,12,17],"FRESH":[18,19,24,23,22],"STALL":[16,11,10,5,0],"CORN":[8,3,2,7],"EGGS":[15,20,21,16]}},{"g":"GSHARGEOYSFRNETMARKAECOLL","p":{"MARKET":[15,16,17,18,13,14],"HONEY":[2,7,12,13,8],"FRESH":[10,11,6,1,2],"STALL":[9,14,19,24,23],"CORN":[21,22,17,12],"EGGS":[6,5,0,1]}},{"g":"LATONLESHEFRGGYRNKETOCRAM","p":{"MARKET":[24,23,22,17,18,19],"EGGS":[18,13,12,7],"FRESH":[10,11,6,7,8],"STALL":[7,2,1,0,5],"HONEY":[8,3,4,9,14],"CORN":[21,20,15,16]}}],"81":[{"g":"RCISUOWDEMEZIRBYPRHOFAITO","p":{"PRIZE":[16,17,12,11,10],"RIDES":[13,12,7,8,3],"BOOTH":[14,19,24,23,18],"MUSIC":[9,4,3,2,1],"CROWD":[1,0,5,6,7],"FAIR":[20,21,22,17]}},{"g":"IRHTODPREOEMIZBSUAFDICROW","p":{"PRIZE":[6,7,12,13,8],"FAIR":[18,17,12,7],"RIDES":[1,0,5,10,15],"BOOTH":[14,9,4,3,2],"CROWD":[21,22,23,24,19],"MUSIC":[11,16,15,20,21]}},{"g":"RCFAROWDIRBAEZPOOSUMHTICB","p":{"PRIZE":[14,9,8,13,12],"FAIR":[2,3,8,9],"RIDES":[9,8,7,12,17],"MUSIC":[19,18,17,22,23],"CROWD":[1,0,5,6,7],"BOOTH":[10,15,16,21,20]}}],"82":[{"g":"UFILWTHGIHSOUNEIRIDEAFRRL","p":{"LIGHTS":[3,2,7,6,5,10],"HIGH":[9,8,7,6],"WHEEL":[4,9,14,19,24],"RIDE":[22,17,18,19],"ROUND":[16,11,12,13,18],"FAIR":[21,20,15,16]}},{"g":"IRIADDKEFNEELSUHWITOHIGHR","p":{"LIGHTS":[12,17,22,23,18,13],"WHEEL":[16,15,10,11,12],"HIGH":[20,21,22,23],"RIDE":[1,0,5,10],"FAIR":[8,3,2,1],"ROUND":[24,19,14,9,4]}},{"g":"AIDELFRSEIMOTHGAUNWIHADOH","p":{"LIGHTS":[4,9,14,13,12,7],"WHEEL":[18,13,8,3,4],"RIDE":[6,1,2,3],"HIGH":[24,19,14,13],"FAIR":[5,0,1,6],"ROUND":[6,11,16,17,22]}}],"83":[{"g":"RDMTHINUSGPHOIISSRCLSEIDE","p":{"HORSES":[11,12,17,16,21,20],"ROUND":[17,12,7,6,1],"MUSIC":[2,7,8,13,18],"LIGHTS":[19,14,9,4,3,8],"RIDE":[17,22,23,24],"SPIN":[15,10,5,6]}},{"g":"ORSPIHSEDNILCIUGSIROHTSUM","p":{"HORSES":[5,0,1,2,7,6],"LIGHTS":[11,10,15,20,21,16],"RIDE":[18,13,8,7],"MUSIC":[24,23,22,17,12],"ROUND":[18,19,14,9,8],"SPIN":[2,3,4,9]}},{"g":"VLHTRPIGSISNMEDDNUSIVHORC","p":{"HORSES":[21,22,23,18,13,8],"ROUND":[23,22,17,16,15],"LIGHTS":[1,6,7,2,3,8],"MUSIC":[12,17,18,19,24],"SPIN":[10,5,6,11],"RIDE":[4,9,14,13]}}],"84":[{"g":"MRKOPNACPRSWOBEALRTTGTNUB","p":{"POPCORN":[4,3,8,7,12,17,22],"BUTTER":[24,23,18,19,14,9],"SNACK":[10,5,6,7,2],"BOWL":[13,12,11,16],"WARM":[11,6,1,0],"SALT":[10,15,16,21]}},{"g":"MTLASRAWNNEBORATBCPCTUPOK","p":{"POPCORN":[18,23,22,17,12,13,8],"BUTTER":[16,21,20,15,10,5],"SALT":[4,3,2,1],"SNACK":[4,9,14,19,24],"WARM":[7,6,5,0],"BOWL":[11,12,7,2]}},{"g":"OWKCABLASNUTTPRMWEOORARPC","p":{"POPCORN":[13,18,23,24,19,14,9],"BUTTER":[5,10,11,12,17,22],"SNACK":[8,9,4,3,2],"WARM":[16,21,20,15],"BOWL":[5,0,1,6],"SALT":[8,7,6,11]}}],"85":[{"g":"FSPYDLTICNUONKAFTTOCFEEWS","p":{"COTTON":[19,18,17,16,11,12],"CANDY":[19,14,9,4,3],"PINK":[2,7,12,13],"FLUFF":[0,5,10,15,20],"STICK":[1,6,7,8,13],"SWEET":[24,23,22,21,16]}},{"g":"TICIPSWKNDEECAYTTOUFONFLF","p":{"COTTON":[12,17,16,15,20,21],"SWEET":[5,6,11,10,15],"STICK":[5,0,1,2,7],"CANDY":[12,13,8,9,14],"FLUFF":[22,23,18,19,24],"PINK":[4,3,8,7]}},{"g":"CATEEDNCOWYOTTSLFPICUFFNK","p":{"COTTON":[7,8,13,12,11,6],"CANDY":[0,1,6,5,10],"SWEET":[14,9,4,3,2],"PINK":[17,18,23,24],"FLUFF":[16,15,20,21,22],"STICK":[14,13,18,19,24]}}],"86":[{"g":"EMONJBELIUERRCECHYSDAEPHA","p":{"MELON":[1,6,7,2,3],"BERRY":[5,6,11,12,17],"LEMON":[7,6,1,2,3],"PEACH":[22,21,20,15,16],"SHADE":[18,23,24,19,14],"JUICE":[4,9,8,13,14]}},{"g":"BDECIEAHCURLSAJREMEPYNOLB","p":{"MELON":[17,18,23,22,21],"PEACH":[19,18,13,8,7],"LEMON":[11,16,17,22,21],"BERRY":[0,5,10,15,20],"JUICE":[14,9,4,3,2],"SHADE":[12,7,6,1,2]}},{"g":"UICAHJPEDSAELONCMEMBHYRRE","p":{"MELON":[16,11,12,13,14],"LEMON":[12,17,18,13,14],"PEACH":[6,11,10,15,20],"BERRY":[19,24,23,22,21],"SHADE":[9,4,3,8,7],"JUICE":[5,0,1,2,7]}}],"87":[{"g":"SKAIOTAPDSECONPDILGISADAN","p":{"SKATE":[0,1,6,5,10],"GLIDE":[18,17,16,15,10],"ICE":[16,11,10],"COLD":[11,12,17,22],"SPIN":[9,14,19,24],"POND":[7,12,13,8]}},{"g":"IPSKANOCBTDLGCEDGLIDVTERV","p":{"SKATE":[2,3,4,9,14],"SPIN":[2,1,0,5],"POND":[1,6,5,10],"GLIDE":[16,17,18,19,14],"ICE":[18,13,14],"COLD":[7,6,11,10]}},{"g":"SKAEHLDTECOCGDIIPLIDNSPON","p":{"SKATE":[0,1,2,7,8],"GLIDE":[12,17,18,13,8],"ICE":[14,9,8],"POND":[22,23,24,19],"COLD":[11,10,5,6],"SPIN":[21,16,15,20]}}],"88":[{"g":"HMNRILJLEDPTSNOHFAUWILLGH","p":{"LAUGH":[22,17,18,23,24],"FAST":[16,17,12,11],"SNOW":[12,13,14,19],"HILL":[15,20,21,22],"SLED":[12,7,8,9],"RIDE":[3,4,9,8]}},{"g":"DEHSWIFINORALHGTSLAUSDESI","p":{"LAUGH":[17,18,19,14,13],"SLED":[16,17,22,21],"HILL":[2,7,12,17],"FAST":[6,11,16,15],"SNOW":[3,8,9,4],"RIDE":[10,5,0,1]}},{"g":"HILLAJIRSUFTISGASDNHSLEOW","p":{"LAUGH":[3,4,9,14,19],"HILL":[0,1,2,3],"SLED":[20,21,22,17],"RIDE":[7,12,17,22],"FAST":[10,15,16,11],"SNOW":[13,18,23,24]}}],"89":[{"g":"VTCOCOEOAEWEWMTSGARSCUMAH","p":{"COCOA":[4,3,2,7,8],"STEAM":[19,14,9,8,13],"MARSH":[22,17,18,19,24],"MUG":[22,21,16],"SWEET":[15,10,11,6,1],"WARM":[12,17,18,13]}},{"g":"TSTAAGUEEACMAWSOARMQCOSHW","p":{"COCOA":[10,15,20,21,16],"MARSH":[11,16,17,22,23],"STEAM":[1,2,7,12,11],"MUG":[11,6,5],"WARM":[13,12,17,18],"SWEET":[14,13,8,7,2]}},{"g":"ARMSHOAGTECWUMAOCHSRTEEWS","p":{"COCOA":[16,15,10,5,0],"MARSH":[13,14,19,18,17],"MUG":[13,12,7],"SWEET":[18,23,22,21,20],"STEAM":[3,8,9,14,13],"WARM":[11,6,1,2]}}],"90":[{"g":"HOWEKOUSEAERETBCIGGISPNIC","p":{"GINGER":[18,23,22,17,12,11],"ICING":[19,24,23,22,17],"HOUSE":[0,1,6,7,12],"SWEET":[7,2,3,8,13],"SPICE":[20,21,16,15,10],"BAKE":[14,9,4,3]}},{"g":"SPICEBAKNITREGCESUNIEWOHG","p":{"GINGER":[24,19,18,13,12,11],"ICING":[19,14,9,8,13],"HOUSE":[23,22,17,16,15],"BAKE":[5,6,7,12],"SPICE":[0,1,2,3,4],"SWEET":[16,21,20,15,10]}},{"g":"AKERWBEGGJUSNIZOPICTHSWEE","p":{"GINGER":[8,13,12,7,2,3],"ICING":[13,18,17,12,7],"SPICE":[11,16,17,18,23],"HOUSE":[20,15,10,11,6],"SWEET":[21,22,23,24,19],"BAKE":[5,0,1,6]}}],"91":[{"g":"TWSACEEDNTPRYICIRTMARSSEN","p":{"STRIPE":[22,17,16,15,10,5],"SWEET":[2,1,6,5,0],"RED":[11,6,7],"CANDY":[4,3,8,7,12],"MINT":[18,13,8,9],"CANE":[14,19,24,23]}},{"g":"AEWSEREDDNKTNYATRIMCSEPNL","p":{"STRIPE":[20,15,16,17,22,21],"MINT":[18,17,12,11],"RED":[5,6,7],"CANE":[19,14,9,4],"SWEET":[3,2,1,6,11],"CANDY":[19,14,9,8,13]}},{"g":"TRQHESISWPTPEERINTDYMCANE","p":{"STRIPE":[5,0,1,6,11,12],"SWEET":[7,8,13,12,17],"RED":[14,13,18],"CANDY":[21,22,23,18,19],"MINT":[20,15,16,17],"CANE":[21,22,23,24]}}],"92":[{"g":"SBDOOLOWKRLHOISYRRGSOBEEN","p":{"HOLLY":[11,6,5,10,15],"BERRY":[21,22,17,16,15],"BOW":[1,6,7],"GREEN":[18,17,22,23,24],"KISS":[8,13,14,19],"DOOR":[2,3,4,9]}},{"g":"LLODCOYOWOHRREBSSGECKIHNL","p":{"HOLLY":[10,5,0,1,6],"BERRY":[14,13,12,11,6],"BOW":[14,9,8],"KISS":[20,21,16,15],"GREEN":[17,12,13,18,23],"DOOR":[3,2,7,12]}},{"g":"LLYXROHENOOBEDOWRRSSHYGIK","p":{"HOLLY":[6,5,0,1,2],"BERRY":[11,12,17,16,21],"BOW":[11,10,15],"GREEN":[22,17,12,7,8],"KISS":[24,23,18,19],"DOOR":[13,14,9,4]}}],"93":[{"g":"GBELLARPTSEEONAYEHCONEWHT","p":{"BELLS":[1,2,3,4,9],"HOPE":[17,12,7,2],"NEW":[20,21,22],"CHEER":[18,17,16,11,6],"TOAST":[24,19,14,9,8],"YEAR":[15,10,5,6]}},{"g":"EEEWTHRNAOCEPSTRHOLBAEYLE","p":{"BELLS":[19,24,23,18,13],"CHEER":[10,5,0,1,6],"NEW":[7,2,3],"HOPE":[16,17,12,11],"TOAST":[4,9,8,13,14],"YEAR":[22,21,20,15]}},{"g":"ECTWEPOBYNCHELTYRELSEATOA","p":{"BELLS":[7,12,13,18,19],"CHEER":[10,11,12,17,16],"NEW":[9,4,3],"TOAST":[22,23,24,19,14],"YEAR":[15,20,21,16],"HOPE":[11,6,5,0]}}],"94":[{"g":"IEIWRATSVELAHOPMRCLKHWFUC","p":{"CLOVER":[17,18,13,8,9,4],"LUCK":[18,23,24,19],"HOPE":[12,13,14,9],"CHARM":[17,12,11,16,15],"WISH":[3,2,7,12],"STAR":[7,6,11,16]}},{"g":"HATSECREVOEMCULPOKFCIHSIW","p":{"CLOVER":[19,14,9,8,7,6],"CHARM":[5,0,1,6,11],"STAR":[3,2,1,6],"LUCK":[14,13,12,17],"WISH":[24,23,22,21],"HOPE":[21,16,15,10]}},{"g":"KCLOVCHAREUSTMPLICHOGWRMN","p":{"CLOVER":[1,2,3,4,9,8],"CHARM":[5,6,7,8,13],"STAR":[11,12,7,8],"WISH":[21,16,11,6],"LUCK":[15,10,5,0],"HOPE":[18,19,14,9]}}],"95":[{"g":"OLTEVROCNIARCUSINWEKCBOTY","p":{"RAINBOW":[11,10,15,16,21,22,17],"RAIN":[5,10,15,16],"ARC":[10,11,12],"SUN":[14,13,8],"SKY":[14,19,24],"COLOR":[7,6,1,0,5]}},{"g":"UNOCNSFLONKLCRWYIAAIOWOBN","p":{"RAINBOW":[13,18,19,24,23,22,21],"RAIN":[13,18,19,24],"ARC":[18,13,12],"COLOR":[3,2,7,8,13],"SUN":[5,0,1],"SKY":[5,10,15]}},{"g":"RCOLOAITORRNUSNSBMYAGOWKS","p":{"RAINBOW":[0,5,6,11,16,21,22],"RAIN":[10,5,6,11],"ARC":[5,0,1],"COLOR":[1,2,3,4,9],"SKY":[24,23,18],"SUN":[13,12,11]}}],"96":[{"g":"FRMAWLOTSIASHUNIAREDNCLOU","p":{"THUNDER":[7,12,13,14,19,18,17],"STORM":[8,7,6,1,2],"WIND":[4,9,14,19],"RAIN":[17,16,15,20],"CLOUD":[21,22,23,24,19],"FLASH":[0,5,10,11,12]}},{"g":"RORMFATSALINHTTWDUNDCLORE","p":{"THUNDER":[13,12,17,18,19,24,23],"FLASH":[4,9,8,7,12],"STORM":[7,6,1,2,3],"WIND":[15,10,11,16],"CLOUD":[20,21,22,17,16],"RAIN":[0,5,10,11]}},{"g":"HSCSTRALFOWIOERDNUDMTHUNL","p":{"THUNDER":[20,21,22,23,18,13,14],"CLOUD":[2,7,12,17,18],"STORM":[3,4,9,14,19],"RAIN":[5,6,11,16],"FLASH":[8,7,6,1,0],"WIND":[10,11,16,15]}}],"97":[{"g":"UPLRBDNIALDSRPOLTEWOESHOM","p":{"SHOWERS":[21,22,23,18,17,12,11],"WET":[18,17,16],"APRIL":[8,13,12,7,2],"PUDDLE":[1,0,5,10,15,20],"BLOOM":[4,9,14,19,24],"RAIN":[3,8,7,6]}},{"g":"EWETMROHOOSESLBDLRINDUPAR","p":{"SHOWERS":[12,7,6,1,0,5,10],"WET":[1,2,3],"PUDDLE":[22,21,20,15,16,11],"RAIN":[24,23,18,19],"BLOOM":[14,13,8,9,4],"APRIL":[23,22,17,18,13]}},{"g":"NBLOOIDDAMALUPRREWLISTOHS","p":{"SHOWERS":[24,23,22,17,16,15,20],"WET":[17,16,21],"PUDDLE":[13,12,7,6,11,16],"BLOOM":[1,2,3,4,9],"RAIN":[15,10,5,0],"APRIL":[8,13,14,19,18]}}],"98":[{"g":"YAMLASLFETROMPSEWORGBLOIN","p":{"FLOWERS":[7,6,11,16,15,10,5],"BLOOM":[20,21,22,17,12],"MAY":[2,1,0],"GROW":[19,18,17,16],"PETAL":[13,8,9,4,3],"SPRING":[14,13,18,23,24,19]}},{"g":"AMATEYFLBPSROOMPEWORRINGG","p":{"FLOWERS":[6,7,12,17,16,11,10],"MAY":[1,0,5],"BLOOM":[8,7,12,13,14],"SPRING":[10,15,20,21,22,23],"PETAL":[9,4,3,2,7],"GROW":[24,19,18,17]}},{"g":"NGSRTIRPETYBGWAALROLMOOMF","p":{"FLOWERS":[24,19,18,13,8,3,2],"GROW":[12,17,18,13],"MAY":[20,15,10],"BLOOM":[11,16,21,22,23],"SPRING":[2,7,6,5,0,1],"PETAL":[7,8,9,14,19]}}],"99":[{"g":"AGNSYRDETTCAKSRISUEAMUGTP","p":{"GARDEN":[1,0,5,6,7,2],"CAKE":[10,11,12,7],"MUSIC":[20,21,16,15,10],"TEA":[23,18,19],"GUESTS":[22,17,18,13,8,3],"PARTY":[24,19,14,9,4]}},{"g":"KACISENYMUDGTRARAESPFGUTS","p":{"GARDEN":[11,16,15,10,5,6],"CAKE":[2,1,0,5],"MUSIC":[8,9,4,3,2],"TEA":[12,17,16],"PARTY":[19,14,13,12,7],"GUESTS":[21,22,17,18,23,24]}},{"g":"CISUMAETTRKESYAGURDPGGAEN","p":{"GARDEN":[21,22,17,18,23,24],"GUESTS":[15,16,11,12,7,2],"PARTY":[19,14,9,8,13],"MUSIC":[4,3,2,1,0],"CAKE":[0,5,10,11],"TEA":[7,6,5]}}],"100":[{"g":"EBCMEEWODARSLORLIFOMDWORG","p":{"FLOWERS":[17,12,7,6,5,10,11],"BEE":[1,0,5],"MEADOW":[3,4,9,8,7,6],"GROW":[24,23,22,21],"COLOR":[2,7,12,13,14],"WILD":[21,16,15,20]}},{"g":"FLORGCOWSNLDERBIAEMCWABMO","p":{"FLOWERS":[0,1,2,7,12,13,8],"COLOR":[5,6,1,2,3],"BEE":[22,17,12],"MEADOW":[18,17,16,11,6,7],"GROW":[4,3,2,7],"WILD":[20,15,10,11]}},{"g":"DCOLOLIWORBEEAGSNMDFREWOL","p":{"FLOWERS":[19,24,23,22,21,20,15],"MEADOW":[17,12,13,18,23,22],"BEE":[10,11,12],"COLOR":[1,2,3,4,9],"WILD":[7,6,5,0],"GROW":[14,9,8,7]}}],"101":[{"g":"MOOLESDEBFATEDLLUSWOLNREG","p":{"FLOWER":[9,14,19,18,23,22],"GOLD":[24,19,14,13],"SEEDS":[17,12,7,6,5],"BLOOM":[8,3,2,1,0],"SUN":[17,16,21],"TALL":[11,10,15,20]}},{"g":"SUNOMTAGOSFLLLDAOWBELRESE","p":{"FLOWER":[10,11,16,17,22,21],"TALL":[5,6,11,12],"SUN":[0,1,2],"BLOOM":[18,13,8,3,4],"SEEDS":[23,24,19,14,9],"GOLD":[7,8,13,14]}},{"g":"DESANMEDSUOOLFLTGBWOALLER","p":{"FLOWER":[13,14,19,18,23,24],"SEEDS":[2,1,6,7,8],"SUN":[8,9,4],"GOLD":[16,11,12,7],"BLOOM":[17,12,11,10,5],"TALL":[15,20,21,22]}}],"102":[{"g":"LATEPNDIFIIAHWESYCDLSARGA","p":{"DAISY":[6,11,10,15,16],"CHAIN":[17,12,11,10,5],"WHITE":[13,12,7,2,3],"FIELD":[8,9,14,19,18],"GRASS":[23,22,21,20,15],"PETAL":[4,3,2,1,0]}},{"g":"AISSADLYGRPETIBFIAHCTNLWV","p":{"DAISY":[5,0,1,2,7],"FIELD":[15,16,11,6,5],"CHAIN":[19,18,17,16,21],"PETAL":[10,11,12,17,22],"GRASS":[8,9,4,3,2],"WHITE":[23,18,13,12,11]}},{"g":"SCHLENIADISSPEFAYATWRGLIH","p":{"DAISY":[8,7,6,11,16],"CHAIN":[1,2,7,6,5],"GRASS":[21,20,15,10,11],"FIELD":[14,9,4,3,8],"WHITE":[19,24,23,18,13],"PETAL":[12,13,18,17,22]}}],"103":[{"g":"AUDTBMBEULOOCBIBLORPEGNIS","p":{"SPRING":[24,19,18,23,22,21],"TULIP":[3,8,9,14,19],"BED":[6,7,2],"COLOR":[12,11,16,17,18],"BLOOM":[15,16,11,10,5],"BULB":[13,8,9,4]}},{"g":"UTBULLIDEBSPTBCIROLONGOMX","p":{"SPRING":[10,11,16,15,20,21],"COLOR":[14,19,18,17,16],"BED":[13,8,7],"TULIP":[1,0,5,6,11],"BLOOM":[13,18,17,22,23],"BULB":[2,3,4,9]}},{"g":"MTPSBOURDEOLINGLBPLOUBROC","p":{"SPRING":[3,2,7,12,13,14],"TULIP":[1,6,11,12,17],"BED":[4,9,8],"BLOOM":[16,11,10,5,0],"COLOR":[24,19,18,23,22],"BULB":[21,20,15,16]}}],"104":[{"g":"OOMETLBUELIHSWPLENTRACSPU","p":{"PURPLE":[23,24,19,14,9,8],"SWEET":[12,13,8,3,4],"BUSH":[6,7,12,11],"LILAC":[5,10,15,20,21],"BLOOM":[6,5,0,1,2],"SCENT":[22,21,16,17,18]}},{"g":"PURECSWPLACEEILHNTMOSUBLO","p":{"PURPLE":[0,1,2,7,8,3],"LILAC":[14,13,8,9,4],"SWEET":[5,6,11,12,17],"BLOOM":[22,23,24,19,18],"BUSH":[22,21,20,15],"SCENT":[5,10,11,16,17]}},{"g":"SWELPEEPURTLILONAHBOECSUM","p":{"PURPLE":[7,8,9,4,3,2],"LILAC":[13,12,11,16,21],"SWEET":[0,1,6,5,10],"SCENT":[22,21,20,15,10],"BLOOM":[18,13,14,19,24],"BUSH":[18,23,22,17]}}],"105":[{"g":"VIOLESMOBTSALLPHADERCTAPU","p":{"VIOLET":[0,1,2,3,4,9],"PURPLE":[23,24,19,14,13,18],"BLOOM":[8,3,2,7,6],"PATCH":[23,22,21,20,15],"SMALL":[5,6,11,12,13],"SHADE":[10,15,16,17,18]}},{"g":"SMVIOHADELCLLTPTAPURBLOOM","p":{"VIOLET":[2,3,4,9,8,13],"PURPLE":[17,18,19,14,9,8],"PATCH":[17,16,15,10,5],"BLOOM":[20,21,22,23,24],"SMALL":[0,1,6,11,12],"SHADE":[0,5,6,7,8]}},{"g":"LLSHABAMCDLPATEOURPLOMVIO","p":{"VIOLET":[22,23,24,19,14,13],"PATCH":[11,12,13,8,3],"BLOOM":[5,10,15,20,21],"PURPLE":[11,16,17,18,19,14],"SMALL":[2,7,6,1,0],"SHADE":[2,3,4,9,14]}}],"106":[{"g":"OIGEARANBELSULDATGOIGEPOM","p":{"PETALS":[22,21,16,15,10,11],"SUN":[11,12,7],"BED":[8,9,14],"ORANGE":[0,5,6,7,2,3],"BLOOM":[8,13,18,23,24],"GOLD":[17,18,13,14]}},{"g":"ATEGOLSPNUGOOASBLMRODDDEB","p":{"PETALS":[7,2,1,0,5,6],"ORANGE":[19,18,13,8,3,2],"BED":[24,23,22],"SUN":[14,9,8],"BLOOM":[15,16,11,12,17],"GOLD":[10,11,16,21]}},{"g":"OLNUSGDEBLRANYAOMGETOLBPN","p":{"PETALS":[23,18,19,14,9,4],"ORANGE":[15,10,11,12,17,18],"BED":[8,7,6],"BLOOM":[22,21,20,15,16],"GOLD":[5,0,1,6],"SUN":[4,3,2]}}],"107":[{"g":"DENNICBIBAOLZREROGIEMOHTB","p":{"ZINNIA":[12,7,2,3,4,9],"BRIGHT":[8,13,18,17,22,23],"BED":[6,1,0],"BEE":[24,19,14],"COLOR":[5,10,11,16,15],"BLOOM":[6,11,16,21,20]}},{"g":"MODEECOLBTIROAHINNIGZINRB","p":{"ZINNIA":[20,15,16,17,18,13],"BRIGHT":[24,23,18,19,14,9],"BED":[8,3,2],"BEE":[8,3,4],"COLOR":[5,6,7,12,11],"BLOOM":[8,7,6,1,0]}},{"g":"EEBGHADRITINOLBONIOOMNZCM","p":{"ZINNIA":[22,17,16,11,10,5],"BRIGHT":[2,7,8,3,4,9],"BED":[2,1,6],"BEE":[2,1,0],"BLOOM":[14,13,18,19,24],"COLOR":[23,18,13,12,7]}}],"108":[{"g":"EKNILOMHPABUSETBLOOMDTFNY","p":{"PEONY":[8,13,18,23,24],"PETAL":[8,13,14,9,4],"BLOOM":[15,16,17,18,19],"PINK":[8,3,2,1],"SOFT":[12,17,22,21],"BUSH":[10,11,12,7]}},{"g":"AOEPIYNSKNTFOOMPELBHATAUS","p":{"PEONY":[3,2,1,6,5],"PINK":[3,4,9,8],"PETAL":[15,16,21,22,17],"SOFT":[7,12,11,10],"BLOOM":[18,17,12,13,14],"BUSH":[18,23,24,19]}},{"g":"ETNOVPAYEPOLFTIOBOKNMUSHC","p":{"PEONY":[9,8,3,2,7],"PETAL":[5,0,1,6,11],"BLOOM":[16,11,10,15,20],"PINK":[9,14,19,18],"SOFT":[22,17,12,13],"BUSH":[16,21,22,23]}}],"109":[{"g":"YRQMOBLDAOEUEBLSILLAIRPET","p":{"PETAL":[22,23,24,19,14],"BLOOM":[13,14,9,4,3],"TALL":[24,19,18,17],"BED":[13,12,7],"BLUE":[5,6,11,12],"IRIS":[20,21,16,15]}},{"g":"MLBLOLUEDOLEPRMATISTFERIA","p":{"PETAL":[12,11,16,15,10],"TALL":[16,15,10,5],"BLUE":[2,1,6,11],"BED":[2,7,8],"IRIS":[23,22,17,18],"BLOOM":[2,3,4,9,14]}},{"g":"DSWLLEPETABLUAEEOWISMOIRA","p":{"PETAL":[6,7,8,9,4],"BLUE":[10,11,12,7],"BED":[10,5,0],"TALL":[8,9,4,3],"BLOOM":[10,11,16,21,20],"IRIS":[22,23,18,19]}}],"110":[{"g":"TAOOHCYBRSHDOECSICKAKFCML","p":{"SHORE":[9,4,3,8,13],"LAKE":[24,19,18,13],"DOCK":[11,12,17,18],"FISH":[21,16,15,10],"BOAT":[7,2,1,0],"CALM":[14,19,24,23]}},{"g":"STFHOFAISRMLAKEJOCOBODKAT","p":{"SHORE":[8,3,4,9,14],"FISH":[2,7,8,3],"LAKE":[11,12,13,14],"CALM":[17,12,11,10],"BOAT":[19,18,23,24],"DOCK":[21,16,17,22]}},{"g":"MLDOALADBTKCOREOFHAKEISLL","p":{"SHORE":[22,17,12,13,14],"FISH":[16,21,22,17],"LAKE":[23,18,19,14],"DOCK":[7,12,11,10],"BOAT":[8,3,4,9],"CALM":[11,6,5,0]}}],"111":[{"g":"ILQOBKATACEWCIFROHSEMCPOL","p":{"CATCH":[9,8,7,12,17],"BOAT":[4,3,8,7],"FISH":[14,13,18,17],"POLE":[22,23,24,19],"LAKE":[1,6,5,10],"WORM":[11,16,15,20]}},{"g":"FHCTFISOACOWBLEREKOPMLAQD","p":{"CATCH":[9,8,3,2,1],"FISH":[0,5,6,1],"BOAT":[12,7,8,3],"POLE":[19,18,13,14],"LAKE":[21,22,17,16],"WORM":[11,10,15,20]}},{"g":"LELAKOPFISCATCHROWLAMBREK","p":{"CATCH":[10,11,12,13,14],"BOAT":[21,16,11,12],"FISH":[7,8,9,14],"LAKE":[18,19,24,23],"WORM":[17,16,15,20],"POLE":[6,5,0,1]}}],"112":[{"g":"RSDILATEREOAKALBWOLFDARNE","p":{"ROWBOAT":[22,17,16,15,10,5,6],"ROW":[22,17,16],"OARS":[10,5,0,1],"WATER":[16,11,6,7,8],"LAKE":[14,13,12,7],"RIDE":[8,3,2,7]}},{"g":"ATRSTOBAORMWALIROWADETAKE","p":{"ROWBOAT":[15,16,11,6,5,0,1],"ROW":[15,16,11],"WATER":[17,22,21,20,15],"OARS":[8,7,2,3],"LAKE":[13,18,23,24],"RIDE":[9,14,19,24]}},{"g":"GTEDLWARIABOSEKWOMDAARANR","p":{"ROWBOAT":[21,16,15,10,11,6,1],"ROW":[21,16,15],"WATER":[5,6,1,2,7],"OARS":[11,6,7,12],"RIDE":[7,8,3,2],"LAKE":[4,9,14,13]}}],"113":[{"g":"ATOVEOEWAKBDULIDNIWACQYAS","p":{"SAIL":[24,19,14,13],"AWAY":[19,18,23,22],"WIND":[18,17,16,15],"LAKE":[13,8,9,4],"WAVE":[7,8,3,4],"BOAT":[10,5,0,1]}},{"g":"WAYSSASSTAIBOADLAVANAKEWI","p":{"SAIL":[6,5,10,15],"AWAY":[5,0,1,2],"LAKE":[15,20,21,22],"WAVE":[23,18,17,22],"WIND":[23,24,19,14],"BOAT":[11,12,13,8]}},{"g":"EALIAEKSAOVOATBAMLIWWAYND","p":{"SAIL":[7,8,3,2],"BOAT":[14,9,8,13],"LAKE":[2,1,6,5],"WAVE":[20,15,10,5],"AWAY":[15,20,21,22],"WIND":[19,18,23,24]}}],"114":[{"g":"JWAVIKLLEIWASHONNWAREDRTE","p":{"SHORE":[12,13,14,19,24],"WATER":[17,18,23,24,19],"SHELL":[12,13,8,7,6],"SAND":[12,11,16,21],"WAVE":[1,2,3,8],"WALK":[10,11,6,5]}},{"g":"IKRNDKSVASNREWKAOTALSHELL","p":{"SHORE":[20,21,16,11,12],"SHELL":[20,21,22,23,24],"WATER":[13,18,17,12,11],"WALK":[13,18,19,14],"WAVE":[13,8,7,12],"SAND":[9,8,3,4]}},{"g":"UVALKSQWLLDNASEWEVSHATERO","p":{"SHORE":[18,19,24,23,22],"WATER":[15,20,21,22,23],"WAVE":[7,12,17,22],"SHELL":[18,19,14,9,8],"SAND":[13,12,11,10],"WALK":[7,2,3,4]}}],"115":[{"g":"BMLIEEAIIDNIGURDOHTEERSOW","p":{"LIGHT":[2,7,12,17,18],"NIGHT":[10,11,12,17,18],"SHORE":[22,17,16,21,20],"BEAM":[0,5,6,1],"GUIDE":[12,13,8,9,4],"TOWER":[18,23,24,19,14]}},{"g":"IGHGRLUTIEAIDNWSBEAOHORMT","p":{"LIGHT":[5,0,1,2,7],"GUIDE":[1,6,11,12,17],"NIGHT":[13,8,3,2,7],"BEAM":[16,17,18,23],"TOWER":[24,19,14,9,4],"SHORE":[15,20,21,22,17]}},{"g":"DENIGIUGLHHORETSIAWOZMAEB","p":{"LIGHT":[8,3,4,9,14],"TOWER":[14,19,18,13,12],"NIGHT":[2,3,4,9,14],"SHORE":[15,10,11,12,13],"GUIDE":[7,6,5,0,1],"BEAM":[24,23,22,21]}}],"116":[{"g":"RYLFICHCUGIWALSNBELAGEMDN","p":{"BEACH":[16,17,12,7,6],"FLY":[3,2,1],"CRY":[5,0,1],"GULL":[9,8,13,18],"SAND":[14,19,24,23],"WING":[11,10,15,20]}},{"g":"GGHCALUIBELYRCOFNDNGNASIW","p":{"BEACH":[8,9,4,3,2],"GULL":[1,6,5,10],"FLY":[15,10,11],"CRY":[13,12,11],"WING":[24,23,18,19],"SAND":[22,21,16,17]}},{"g":"GUBIBFLYOEDLRCANASHYWINGR","p":{"BEACH":[4,9,14,13,18],"CRY":[13,12,7],"FLY":[5,6,7],"WING":[20,21,22,23],"SAND":[17,16,15,10],"GULL":[0,1,6,11]}}],"117":[{"g":"EVAJEMSWUDANIMORIHPLTFQCL","p":{"DOLPHIN":[9,14,19,18,17,16,11],"FIN":[21,16,11],"JUMP":[3,8,13,18],"WAVE":[7,2,1,0],"SMART":[6,5,10,15,20],"SWIM":[6,7,12,13]}},{"g":"EHIFPSPNIMMLSWUAODAJRTAVE","p":{"DOLPHIN":[17,16,11,6,1,2,7],"FIN":[3,2,7],"SMART":[5,10,15,20,21],"JUMP":[19,14,9,4],"WAVE":[13,18,23,24],"SWIM":[12,13,8,9]}},{"g":"NEWWIFVASMIJUMANIHPRRDOLT","p":{"DOLPHIN":[21,22,23,18,17,16,15],"JUMP":[11,12,13,18],"FIN":[5,10,15],"WAVE":[2,7,6,1],"SMART":[8,13,14,19,24],"SWIM":[8,3,4,9]}}],"118":[{"g":"PSIFIZHORVTIDEEUFNAARATSL","p":{"SHORE":[1,6,7,8,13],"FISH":[3,2,1,6],"TIDE":[10,11,12,13],"SAND":[23,18,17,12],"FIVE":[3,4,9,14],"STAR":[23,22,21,20]}},{"g":"HSIFFOREVIANDMDSRITXTATAV","p":{"SHORE":[1,0,5,6,7],"FISH":[3,2,1,0],"TIDE":[22,17,12,7],"SAND":[15,10,11,12],"STAR":[15,20,21,16],"FIVE":[4,9,8,7]}},{"g":"DITEEEVWORVISHAMFASTCDNSN","p":{"SHORE":[12,13,8,9,4],"FISH":[16,11,12,13],"FIVE":[16,11,6,5],"TIDE":[2,1,0,5],"SAND":[12,17,22,21],"STAR":[18,19,14,9]}}],"119":[{"g":"DEEPNCALOWOROCNVEEBHAWFIS","p":{"CORAL":[5,10,11,6,7],"COLOR":[13,8,7,12,11],"REEF":[11,16,17,22],"FISH":[22,23,24,19],"WAVE":[21,20,15,16],"DEEP":[0,1,2,3]}},{"g":"EFISHERDALOLOROCDEECWAVPI","p":{"CORAL":[19,14,13,8,9],"COLOR":[15,10,11,12,13],"FISH":[1,2,3,4],"WAVE":[20,21,22,17],"DEEP":[16,17,18,23],"REEF":[6,5,0,1]}},{"g":"UIFRYLSEEPAHDVAROLRWOCOPA","p":{"CORAL":[21,20,15,10,5],"COLOR":[21,22,17,16,15],"REEF":[3,8,7,2],"FISH":[2,1,6,11],"WAVE":[19,14,13,8],"DEEP":[12,7,8,9]}}],"120":[{"g":"ILHIGAHNPHRTPIWIAENEPKPVI","p":{"TRAIL":[11,10,5,0,1],"AIR":[16,15,10],"PEAK":[12,17,16,21],"PINE":[8,13,18,17],"HIGH":[2,3,4,9],"VIEW":[23,24,19,14]}},{"g":"PINRTHPEAKIGRILVHTAEIEWTL","p":{"TRAIL":[4,3,8,13,14],"AIR":[8,13,12],"PEAK":[6,7,8,9],"PINE":[0,1,2,7],"HIGH":[5,10,11,16],"VIEW":[15,20,21,22]}},{"g":"SLITGAKARWTWEIAIGPVDHHINE","p":{"TRAIL":[3,8,7,2,1],"PEAK":[17,12,7,6],"AIR":[14,13,8],"HIGH":[20,15,16,21],"VIEW":[18,13,12,11],"PINE":[17,22,23,24]}}],"121":[{"g":"PIERGONESICLWHCALDAFTSERO","p":{"FOREST":[19,24,23,22,21,20],"SHADE":[8,13,18,17,22],"TALL":[20,15,16,11],"PINE":[0,1,6,7],"GREEN":[4,3,2,7,6],"CONE":[10,5,6,7]}},{"g":"DAGENEHREIESTAPROFLLICONE","p":{"FOREST":[17,16,15,10,11,12],"SHADE":[11,6,1,0,5],"TALL":[12,13,18,19],"GREEN":[2,7,8,3,4],"PINE":[14,9,4,3],"CONE":[21,22,23,24]}},{"g":"UATEMLLSAHNEEDSIGROFPENOC","p":{"FOREST":[19,18,17,12,7,2],"GREEN":[16,17,12,11,10],"SHADE":[14,9,8,13,12],"TALL":[2,1,6,5],"PINE":[20,15,10,11],"CONE":[24,23,22,21]}}],"122":[{"g":"IABWOWCIOOGONFDYZRILTSEKA","p":{"CABIN":[6,1,2,7,12],"COZY":[6,11,16,15],"WOOD":[3,8,9,14],"FIRE":[13,18,17,22],"LAKE":[19,24,23,22],"REST":[17,22,21,20]}},{"g":"ESTOZRWOCYIFODICRNELABIKA","p":{"CABIN":[15,20,21,22,17],"WOOD":[6,7,12,13],"FIRE":[11,10,5,0],"REST":[5,0,1,2],"COZY":[8,3,4,9],"LAKE":[19,24,23,18]}},{"g":"TSEKDYZRAOWOILOOCFRWUABIN","p":{"CABIN":[16,21,22,23,24],"WOOD":[19,14,9,4],"FIRE":[17,12,7,2],"LAKE":[13,8,3,2],"REST":[7,2,1,0],"COZY":[16,11,6,5]}}],"123":[{"g":"RARTHLIPAWDAELTOOTKRBMSEE","p":{"TRAIL":[3,2,1,6,5],"PATH":[7,8,3,4],"STEP":[22,17,12,7],"WALK":[9,8,13,18],"BOOTS":[20,15,16,17,22],"TREES":[14,19,24,23,22]}},{"g":"ETSSEPOTREAOBAITHWALONWWK","p":{"TRAIL":[7,8,13,14,19],"TREES":[7,8,9,4,3],"BOOTS":[12,11,6,7,2],"PATH":[5,10,15,16],"STEP":[2,1,0,5],"WALK":[17,18,19,24]}},{"g":"PETHPOKSTAALTOOWEESBTRAIL","p":{"TRAIL":[20,21,22,23,24],"BOOTS":[19,14,13,12,7],"TREES":[20,21,16,17,18],"WALK":[15,10,11,6],"PATH":[4,9,8,3],"STEP":[7,2,1,0]}}],"124":[{"g":"FERTSLALLLOMIAFWTSKRLOOCO","p":{"STREAM":[4,3,2,1,6,11],"FALLS":[14,13,8,9,4],"MIST":[11,12,17,16],"ROCKS":[19,24,23,18,17],"FLOW":[0,5,10,15],"COOL":[23,22,21,20]}},{"g":"OOLFDCROCPAMWKMERTSIFALLI","p":{"STREAM":[18,17,16,15,10,11],"MIST":[14,19,18,17],"FALLS":[20,21,22,23,18],"ROCKS":[6,7,8,13,18],"FLOW":[3,2,7,12],"COOL":[5,0,1,2]}},{"g":"COREAKSTAMRIMCOAFFWOLLSFL","p":{"STREAM":[6,7,2,3,4,9],"MIST":[12,11,6,7],"ROCKS":[2,1,0,5,6],"FALLS":[16,15,20,21,22],"COOL":[13,14,19,24],"FLOW":[23,24,19,18]}}],"125":[{"g":"SOWELFLGRSPODASEWEEUNABMN","p":{"FLOWERS":[5,6,1,2,3,8,9],"GRASS":[7,8,13,14,9],"BEE":[22,17,18],"SUN":[14,19,24],"MEADOW":[23,18,13,12,11,16],"OPEN":[11,10,15,20]}},{"g":"UNMEASRBEDNEPOOFWRAWLOGSS","p":{"FLOWERS":[15,20,21,16,11,6,5],"OPEN":[13,12,11,10],"BEE":[7,8,3],"SUN":[5,0,1],"GRASS":[22,17,18,23,24],"MEADOW":[2,3,4,9,14,19]}},{"g":"FLMESWODAEERSUNEBSYEGRAOP","p":{"FLOWERS":[0,1,6,5,10,11,12],"MEADOW":[2,3,8,7,6,5],"BEE":[16,15,10],"SUN":[12,13,14],"OPEN":[23,24,19,14],"GRASS":[20,21,22,17,12]}}],"126":[{"g":"YRDERHRSWESEPFEUBICTUASKE","p":{"BASKET":[16,21,22,23,24,19],"SWEET":[7,8,9,14,19],"RED":[4,3,2],"PICK":[12,17,18,23],"BUSH":[16,15,10,5],"BERRY":[16,11,6,1,0]}},{"g":"NRCIPTEKBUBDSASEAWEHRRYET","p":{"BASKET":[8,13,12,7,6,5],"RED":[1,6,11],"PICK":[4,3,2,7],"SWEET":[12,17,18,23,24],"BERRY":[10,15,20,21,22],"BUSH":[8,9,14,19]}},{"g":"PICKESWYJRDERREKETUBSABSH","p":{"BASKET":[22,21,20,15,16,17],"SWEET":[5,6,11,16,17],"RED":[12,11,10],"BERRY":[19,14,13,12,7],"PICK":[0,1,2,3],"BUSH":[19,18,23,24]}}],"127":[{"g":"AJKCTRHEIHNOGWSELDENYEBET","p":{"GOLDEN":[12,11,16,17,18,19],"JAR":[1,0,5],"BEE":[22,23,18],"THICK":[4,9,8,3,2],"SWEET":[14,13,18,23,24],"HONEY":[6,11,10,15,20]}},{"g":"ENOHTDEYICLERSKOBAWEGDJTE","p":{"GOLDEN":[20,15,10,5,0,1],"HONEY":[3,2,1,6,7],"THICK":[4,3,8,9,14],"JAR":[22,17,12],"SWEET":[13,18,19,24,23],"BEE":[16,11,6]}},{"g":"AREEKJYBHCOLYOIGDENHSWEET","p":{"GOLDEN":[15,10,11,16,17,18],"HONEY":[8,13,18,17,12],"JAR":[5,0,1],"SWEET":[20,21,22,23,24],"BEE":[7,2,3],"THICK":[24,19,14,9,4]}}],"128":[{"g":"OJAMTTEEWSBITOAEDTPRRRYJA","p":{"BERRY":[10,15,20,21,22],"RED":[20,15,16],"SWEET":[9,8,7,6,5],"JAM":[1,2,3],"JAR":[23,24,19],"TOAST":[12,13,14,9,4]}},{"g":"EBTSTRRYALAJSOTMAWEEDERUY","p":{"BERRY":[1,0,5,6,7],"JAR":[11,10,5],"JAM":[11,10,15],"SWEET":[12,17,18,19,14],"TOAST":[14,13,8,3,4],"RED":[22,21,20]}},{"g":"TSAOTTWBUDEEERRAMDAYJNLJN","p":{"BERRY":[7,12,13,14,19],"RED":[13,12,17],"JAM":[20,15,16],"SWEET":[1,6,11,10,5],"TOAST":[4,3,2,1,0],"JAR":[23,18,13]}}],"129":[{"g":"LSWEEIDRATRFSJFUVHELITEYL","p":{"JELLY":[13,18,19,24,23],"FRUIT":[11,10,15,20,21],"SHELF":[12,17,18,19,14],"JARS":[13,8,7,12],"SWEET":[1,2,3,4,9],"LIDS":[0,5,6,1]}},{"g":"EWRSHESAJETDILLIUYYFYRFGD","p":{"JELLY":[8,9,14,13,18],"JARS":[8,7,2,3],"LIDS":[13,12,11,6],"FRUIT":[22,21,16,15,10],"SHELF":[3,4,9,14,19],"SWEET":[6,1,0,5,10]}},{"g":"ETILEEWULJSSRYAHEFERFLIDS","p":{"JELLY":[9,4,3,8,13],"JARS":[9,14,19,24],"LIDS":[21,22,23,24],"SHELF":[10,15,16,21,20],"FRUIT":[17,12,7,2,1],"SWEET":[11,6,5,0,1]}}],"130":[{"g":"LOULJFTRTPLIYNAENGARHSUJS","p":{"PANTRY":[9,14,13,8,7,12],"FLOUR":[5,0,1,2,7],"SHELF":[21,20,15,10,5],"JARS":[23,18,19,24],"TINS":[6,11,16,21],"SUGAR":[21,22,17,18,19]}},{"g":"LEHSUFYINGLRTJAOUNARZCAPS","p":{"PANTRY":[23,22,17,12,11,6],"FLOUR":[5,10,15,16,11],"SHELF":[3,2,1,0,5],"JARS":[13,18,19,24],"SUGAR":[3,4,9,14,19],"TINS":[12,7,8,3]}},{"g":"PAFLEANUOHLTRJSINYARTSUGO","p":{"PANTRY":[0,1,6,11,12,17],"FLOUR":[2,3,8,7,12],"JARS":[13,18,19,14],"SHELF":[14,9,4,3,2],"SUGAR":[21,22,23,18,19],"TINS":[20,15,16,21]}}],"131":[{"g":"TEIOCWEKOHSBARIIMJNPLKOEH","p":{"COOKIE":[4,3,8,7,2,1],"SWEET":[10,5,6,1,0],"BAKE":[11,12,7,6],"JAR":[17,12,13],"MILK":[16,15,20,21],"CHIP":[4,9,14,19]}},{"g":"IMPWSLKIEEOCHBTOKRAJIIEKE","p":{"COOKIE":[11,10,15,16,21,22],"BAKE":[13,18,23,22],"JAR":[19,18,17],"CHIP":[11,12,7,2],"SWEET":[4,3,8,9,14],"MILK":[1,0,5,6]}},{"g":"CHHWEEIPSECKLITOOEMJBAKRA","p":{"COOKIE":[10,15,16,11,6,5],"CHIP":[0,1,6,7],"MILK":[18,13,12,11],"SWEET":[8,3,4,9,14],"BAKE":[20,21,22,17],"JAR":[19,24,23]}}],"132":[{"g":"EVOCSNROEOGAKIFUBEETSAWSM","p":{"COOKIE":[3,2,7,12,13,18],"SWEET":[23,22,17,18,19],"BAKE":[16,11,12,17],"SUGAR":[20,15,10,11,6],"SOFT":[4,9,14,19],"OVEN":[2,1,0,5]}},{"g":"NSBAKEOFREVCTAGOOESUKIEWB","p":{"COOKIE":[11,16,15,20,21,22],"SWEET":[18,23,22,17,12],"SUGAR":[18,19,14,13,8],"BAKE":[2,3,4,9],"OVEN":[15,10,5,0],"SOFT":[1,6,7,12]}},{"g":"GARKEUSBAIEWVOKENEOCTFOSR","p":{"COOKIE":[19,18,13,14,9,4],"BAKE":[7,8,3,4],"OVEN":[13,12,17,16],"SOFT":[23,22,21,20],"SUGAR":[6,5,0,1,2],"SWEET":[6,11,10,15,20]}}],"133":[{"g":"VANTABEAMLTRETLFCENIOSWAV","p":{"VANILLA":[24,23,18,19,14,9,4],"SCENT":[21,16,17,18,13],"SWEET":[21,22,17,12,13],"CREAM":[16,11,12,7,8],"SOFT":[21,20,15,10],"BEAN":[5,6,7,2]}},{"g":"ILATVCLINARNEECEAWTSBMSFO","p":{"VANILLA":[4,9,8,7,6,1,2],"SCENT":[19,14,13,8,3],"SWEET":[22,17,12,13,18],"CREAM":[5,10,15,16,21],"BEAN":[20,15,16,11],"SOFT":[19,24,23,18]}},{"g":"ANIFTVLLOSNAEBCSMRCEWEETN","p":{"VANILLA":[5,0,1,2,7,6,11],"BEAN":[13,12,11,10],"CREAM":[18,17,12,11,16],"SWEET":[15,20,21,22,23],"SCENT":[9,14,19,24,23],"SOFT":[9,8,3,4]}}],"134":[{"g":"EMCIIBRKTSAAWSPKEECIATNSE","p":{"SCENT":[23,18,17,22,21],"SWEET":[13,12,17,16,21],"SPICE":[9,14,19,18,17],"WARM":[12,11,6,1],"STICK":[13,8,3,2,7],"BAKE":[5,10,15,16]}},{"g":"ECIPSNSKABTEEWSRAWKTMIMCI","p":{"SCENT":[6,1,0,5,10],"SWEET":[14,13,12,11,10],"SPICE":[4,3,2,1,0],"STICK":[14,19,24,23,18],"WARM":[17,16,15,20],"BAKE":[9,8,7,12]}},{"g":"IWBANRAAKEMTICSWSPEEEETNS","p":{"SCENT":[14,13,18,23,22],"SPICE":[16,17,12,13,18],"STICK":[16,11,12,13,8],"WARM":[1,6,5,10],"SWEET":[16,15,20,21,22],"BAKE":[2,3,8,9]}}],"135":[{"g":"MTEKCRAWASGSIBPGTUCIEMNES","p":{"NUTMEG":[22,17,16,21,20,15],"EGGS":[20,15,10,11],"SPICE":[9,14,19,18,23],"GRATE":[10,5,6,1,2],"WARM":[7,6,5,0],"BAKE":[13,8,3,2]}},{"g":"NDTECORAPIWGGSEAEUNKRMTBA","p":{"NUTMEG":[18,17,22,21,16,11],"EGGS":[16,11,12,13],"SPICE":[13,8,9,4,3],"WARM":[10,15,20,21],"BAKE":[23,24,19,14],"GRATE":[11,6,7,2,3]}},{"g":"SBAKANGNECURATITMWSPAEGGE","p":{"NUTMEG":[5,10,15,16,21,22],"WARM":[17,12,11,16],"GRATE":[6,11,12,13,8],"SPICE":[18,19,14,9,8],"BAKE":[1,2,3,8],"EGGS":[21,22,23,18]}}],"136":[{"g":"TECKCYGIRARBPLTEHSARKAHJS","p":{"SHAKER":[17,22,21,20,15,10],"HERB":[16,15,10,11],"SPICE":[17,12,7,2,1],"RACK":[8,9,4,3],"SALT":[17,18,13,14],"JARS":[23,18,19,24]}},{"g":"SPDEJHIALTACSEIKERAJEHBCK","p":{"SHAKER":[0,5,10,15,16,17],"HERB":[21,16,17,22],"RACK":[17,18,23,24],"SPICE":[0,1,6,11,16],"JARS":[19,18,17,12],"SALT":[12,7,8,9]}},{"g":"REHSHBJARAIICEKCPSRATLAKC","p":{"SHAKER":[3,4,9,14,13,18],"SPICE":[17,16,11,12,13],"RACK":[18,19,24,23],"HERB":[2,1,0,5],"JARS":[6,7,8,3],"SALT":[17,22,21,20]}}],"137":[{"g":"EBATNPRLMIEEHRQSTEAWACUPA","p":{"HERBAL":[12,11,6,1,2,7],"STEEP":[15,16,11,10,5],"CUP":[21,22,23],"TEA":[16,17,18],"MINT":[8,9,4,3],"WARM":[19,18,13,8]}},{"g":"MLTSLMAEEPHBWWUERAWCOMINT","p":{"HERBAL":[10,15,16,11,6,1],"WARM":[18,17,16,21],"CUP":[19,14,9],"TEA":[2,7,6],"MINT":[21,22,23,24],"STEEP":[3,2,7,8,9]}},{"g":"PPIRESEIBHTERAWNIMLCAETPU","p":{"HERBAL":[9,4,3,8,13,18],"WARM":[14,13,12,17],"TEA":[22,21,20],"CUP":[19,24,23],"MINT":[17,16,15,10],"STEEP":[5,10,11,6,1]}}],"138":[{"g":"IMOOLNTCTEIGLSAFREEVTHSNP","p":{"LEAVES":[4,9,14,19,18,13],"TEA":[8,9,14],"GREEN":[11,16,17,18,23],"COOL":[7,2,3,4],"FRESH":[15,16,17,22,21],"MINT":[1,0,5,6]}},{"g":"SENSFAVEERETCSGLOOHTNIMIN","p":{"LEAVES":[15,10,5,6,1,0],"COOL":[12,17,16,15],"TEA":[11,10,5],"GREEN":[14,9,8,7,2],"FRESH":[4,9,8,13,18],"MINT":[22,23,24,19]}},{"g":"ALREEWFGINHRHMTSEVAEDCOOL","p":{"LEAVES":[24,19,18,17,16,15],"FRESH":[6,11,16,15,10],"TEA":[14,19,18],"COOL":[21,22,23,24],"MINT":[13,8,9,14],"GREEN":[7,2,3,4,9]}}],"139":[{"g":"LJRBYGHEASROWLIEDEEABGRNF","p":{"BASIL":[3,8,9,14,13],"HERB":[6,7,2,3],"BED":[20,15,16],"GROW":[5,10,11,12],"GREEN":[21,22,17,18,23],"LEAF":[13,18,19,24]}},{"g":"DEEAFRBLOWEHGRNASIEEBHLOH","p":{"BASIL":[20,15,16,17,22],"GREEN":[12,13,18,19,14],"BED":[6,1,0],"LEAF":[7,2,3,4],"GROW":[12,13,8,9],"HERB":[11,10,5,6]}},{"g":"EERBANHGRESILOWABEDRNFATH","p":{"BASIL":[16,15,10,11,12],"LEAF":[12,17,22,21],"BED":[16,17,18],"GREEN":[7,2,1,0,5],"HERB":[6,1,2,3],"GROW":[7,8,13,14]}}],"140":[{"g":"AGSORHIAMAERBEDSPTGRCENEE","p":{"AROMA":[9,4,3,8,7],"GREEN":[18,19,24,23,22],"BED":[12,13,14],"SCENT":[15,20,21,22,17],"HERB":[5,10,11,12],"SPRIG":[15,16,11,6,1]}},{"g":"ENEEECTGRASBGOLPRIMAHEBED","p":{"AROMA":[9,8,13,18,19],"GREEN":[7,8,3,2,1],"BED":[22,23,24],"SCENT":[10,5,0,1,6],"SPRIG":[10,15,16,17,12],"HERB":[20,21,16,11]}},{"g":"ERBEDHGITNAMRCEIOPSEBRAGR","p":{"AROMA":[22,21,16,11,10],"GREEN":[23,24,19,14,9],"BED":[2,3,4],"SCENT":[18,13,14,9,8],"SPRIG":[18,17,12,7,6],"HERB":[5,0,1,2]}}],"141":[{"g":"PULELDRPIDEBLFSMOOTCLACNE","p":{"FIELDS":[13,8,3,4,9,14],"PURPLE":[0,1,6,7,2,3],"BED":[11,10,5],"SCENT":[14,19,24,23,18],"CALM":[22,21,20,15],"BLOOM":[11,12,17,16,15]}},{"g":"CSDEBEBLEENTOILCMOFPALPUR","p":{"FIELDS":[18,13,8,7,2,1],"PURPLE":[22,23,24,19,14,9],"BED":[4,3,2],"SCENT":[1,0,5,10,11],"BLOOM":[6,7,12,17,16],"CALM":[15,20,21,16]}},{"g":"SNTRUCEIPPAEDLELBSMIMLOOF","p":{"FIELDS":[24,19,14,13,12,17],"PURPLE":[9,4,3,8,13,14],"BED":[16,11,12],"CALM":[5,10,15,20],"BLOOM":[16,21,22,23,18],"SCENT":[0,5,6,1,2]}}],"142":[{"g":"ISOYSVDFHIUCTEAPAORDMLXBL","p":{"DAISY":[19,14,9,4,3],"TEA":[12,13,14],"HERB":[8,13,18,23],"CUP":[11,10,15],"SOFT":[1,2,7,12],"CALM":[11,16,21,20]}},{"g":"EAIAPTDSCUFAYRAOCABRSMLHE","p":{"DAISY":[6,1,2,7,12],"HERB":[23,24,19,18],"CUP":[8,9,4],"TEA":[5,0,1],"CALM":[16,17,22,21],"SOFT":[20,15,10,5]}},{"g":"BAOMERETLRJHCADIYSICTFOPU","p":{"DAISY":[14,13,18,17,16],"CALM":[12,13,8,3],"TEA":[7,6,1],"SOFT":[17,22,21,20],"HERB":[11,6,5,0],"CUP":[19,24,23]}}],"143":[{"g":"DSMOOREAONBSLSOATETFGPEWS","p":{"DREAMS":[0,5,6,7,2,1],"SWEET":[24,23,22,17,18],"SLEEP":[13,12,17,22,21],"MOON":[2,3,4,9],"SOFT":[13,14,19,18],"REST":[5,6,11,16]}},{"g":"CDSPLFOWEETSLETREOONDAMSA","p":{"DREAMS":[20,15,16,21,22,23],"REST":[15,16,11,10],"SOFT":[11,6,5,10],"MOON":[22,17,18,19],"SLEEP":[11,12,13,8,3],"SWEET":[2,7,8,13,14]}},{"g":"LSMADEESERUPTWSOFEEMSTNOO","p":{"DREAMS":[4,9,8,3,2,1],"REST":[9,8,7,12],"SLEEP":[1,0,5,6,11],"SWEET":[14,13,18,17,12],"MOON":[19,24,23,22],"SOFT":[20,15,16,21]}}],"144":[{"g":"HKRADTEBWOFAMTLOSOHGEUONI","p":{"NIGHT":[23,24,19,18,13],"GLOW":[19,14,9,8],"MOON":[12,17,22,23],"BEAM":[7,6,11,12],"SOFT":[16,15,10,5],"DARK":[4,3,2,1]}},{"g":"SOFTBKOLGERWOMAARONIDHTHG","p":{"NIGHT":[18,19,24,23,22],"MOON":[13,12,17,18],"GLOW":[8,7,12,11],"DARK":[20,15,10,5],"SOFT":[0,1,2,3],"BEAM":[4,9,14,13]}},{"g":"DALMAKROOEAINSBHGLOWTITFE","p":{"NIGHT":[12,11,16,15,20],"GLOW":[16,17,18,19],"MOON":[3,8,7,12],"DARK":[0,1,6,5],"BEAM":[14,9,4,3],"SOFT":[13,18,23,22]}}],"145":[{"g":"FLYKREFGDARILOKAGQWSJHTDU","p":{"FIREFLY":[6,11,10,5,0,1,2],"JAR":[20,15,10],"LIGHT":[12,11,16,21,22],"GLOW":[7,12,13,18],"DARK":[8,9,4,3],"DUSK":[23,24,19,14]}},{"g":"GILARHWYDKTOLGSFEFTUIRAJD","p":{"FIREFLY":[15,20,21,16,17,12,7],"JAR":[23,22,21],"GLOW":[13,12,11,6],"DARK":[8,3,4,9],"LIGHT":[2,1,0,5,10],"DUSK":[24,19,14,9]}},{"g":"GLOADDTWRUYHFKSLGILEFERAJ","p":{"FIREFLY":[12,17,22,21,20,15,10],"LIGHT":[18,17,16,11,6],"JAR":[24,23,22],"DARK":[4,3,8,13],"GLOW":[0,1,2,7],"DUSK":[4,9,14,13]}}],"146":[{"g":"DPRCVUSIHCGKCLANETMNOSHGI","p":{"CRICKET":[3,2,7,12,11,16,17],"CHIRP":[9,8,7,2,1],"SONG":[21,20,15,10],"DUSK":[0,5,6,11],"NIGHT":[19,24,23,22,17],"CALM":[9,14,13,18]}},{"g":"DUCIRNSKECIGHTACNOSLHIRPM","p":{"CRICKET":[9,4,3,2,7,8,13],"NIGHT":[5,10,11,12,13],"CHIRP":[15,20,21,22,23],"DUSK":[0,1,6,7],"SONG":[18,17,16,11],"CALM":[9,14,19,24]}},{"g":"ALMMKCHDUSRIRPOKCGINETHNG","p":{"CRICKET":[5,10,11,16,15,20,21],"CHIRP":[5,6,11,12,13],"NIGHT":[23,18,17,22,21],"SONG":[9,14,19,24],"CALM":[5,0,1,2],"DUSK":[7,8,9,4]}}],"147":[{"g":"GSSERNAHTFIRGILNWEDOROMCO","p":{"MORNING":[22,21,20,15,10,5,0],"GRASS":[12,11,6,1,2],"DEW":[18,17,16],"COOL":[23,24,19,14],"LIGHT":[14,13,12,7,8],"FRESH":[9,4,3,2,7]}},{"g":"YNGRFNIWEDROMSSOOTHACLIGR","p":{"MORNING":[12,11,10,5,6,1,2],"LIGHT":[21,22,23,18,17],"DEW":[9,8,7],"GRASS":[23,24,19,14,13],"FRESH":[4,3,8,13,18],"COOL":[20,15,16,21]}},{"g":"EDINGWRNARCOMSFLOTSRIGHSE","p":{"MORNING":[12,11,6,7,2,3,4],"COOL":[10,11,16,15],"DEW":[1,0,5],"GRASS":[4,9,8,13,18],"LIGHT":[15,20,21,22,17],"FRESH":[14,19,24,23,22]}}],"148":[{"g":"GILOMHTNRSWEINGRNUSOISEDL","p":{"SUNRISE":[18,17,16,15,20,21,22],"RISE":[15,20,21,22],"NEW":[16,11,10],"MORNING":[4,3,8,7,12,13,14],"LIGHT":[2,1,0,5,6],"GOLD":[14,19,24,23]}},{"g":"LDMNGOGOIWLERNEISIUSGHTGN","p":{"SUNRISE":[19,18,13,12,17,16,11],"NEW":[13,14,9],"GOLD":[6,5,0,1],"MORNING":[2,7,12,13,8,3,4],"LIGHT":[10,15,20,21,22],"RISE":[12,17,16,11]}},{"g":"IRNUSSIINEERNGWLOGTHDMLIG","p":{"SUNRISE":[4,3,2,1,0,5,10],"RISE":[11,6,5,10],"MORNING":[21,16,11,12,7,8,13],"NEW":[8,9,14],"LIGHT":[22,23,24,19,18],"GOLD":[17,16,15,20]}}],"149":[{"g":"EDRLUNAAEPOMGLABOEEWLOVLS","p":{"GARDEN":[12,7,2,1,0,5],"PEARL":[9,8,7,2,3],"BONE":[15,10,5,0],"BLOOM":[15,20,21,16,11],"PAWS":[9,14,19,24],"LOVE":[20,21,22,17]}},{"g":"MOOVEPGLBGEARNPNUDEAOBVSW","p":{"GARDEN":[6,11,12,17,18,13],"PEARL":[5,10,11,12,7],"BLOOM":[8,7,2,1,0],"PAWS":[14,19,24,23],"LOVE":[7,2,3,4],"BONE":[21,20,15,10]}},{"g":"TMOOLZENOBGDOVEARLSEEPAWO","p":{"GARDEN":[10,15,16,11,6,7],"BONE":[9,8,7,6],"PEARL":[21,20,15,16,17],"PAWS":[21,22,23,18],"LOVE":[17,12,13,14],"BLOOM":[9,4,3,2,1]}}]};
     /* ---------- Game state ---------- */
-    function bakedBoard(levelIdx, variant){
-      var set = BAKED[levelIdx];
-      if (!set || !set.length) return null;
-      var pick = set[Math.abs(variant) % set.length];
-      var paths = {};
-      for (var w in pick.p) paths[w] = pick.p[w].slice();
-      return { grid: pick.g.split(""), paths: paths, variant: variant };
-    }
-    var G = null; // current game
+    var G = null;
     function newGameState(levelIdx){
       var level = levelAt(levelIdx);
-      var made = bakedBoard(levelIdx, levelIdx * 3 + 1) || genBoardSafe(level, levelIdx * 3 + 1);
+      /* Blank rows on top are sorted the way her game sorts them:
+         shortest first, then A-Z. */
+      var rows = level.words.slice().sort(function(a, b){
+        return a.length - b.length || (a < b ? -1 : a > b ? 1 : 0);
+      });
       return {
-        idx: levelIdx, level: level, size: level.size,
-        grid: made.grid, paths: made.paths, variant: made.variant,
-        found: {}, bonus: [], score: 0, sel: [],
-        hintWord: null, hintStage: 0
+        idx: levelIdx, level: level, rows: rows,
+        pool: poolFor(level, levelIdx, 0), variant: 0,
+        sel: [], found: {}, bonus: [], score: 0,
+        hintWord: null, hintStage: 0, selFromHint: false
       };
     }
 
@@ -1004,6 +910,10 @@
     function setMessage(txt, warm){
       var m = $("message"); m.textContent = txt || "";
       m.className = "message" + (warm ? " warm" : "");
+      /* A longer message can grow the fixed rows and shrink the
+         board's space — refit the board so it never creeps over the
+         buttons below it. */
+      fitBoard();
     }
     function soundLabel(){
       var t = save.sound ? "\uD83D\uDD0A" : "\uD83D\uDD07";
@@ -1086,38 +996,102 @@
       });
     }
 
-    /* ---------- Level play ---------- */
+    /* ---------- Level play (v13: letter pool) ----------
+       Play it the way her game plays:
+       - Drag across the letters of a word, anywhere on the board, in
+         spelling order. The letters light up and the pill on top shows
+         the word as it grows. LET GO and the word counts: it flies up
+         into its blank row and its letters are used up.
+       - Dragging B-U-N-T past a target word scores BUNT as an extra
+         word — nothing locks in mid-drag (her recording proves it).
+       - Taps still work too: tap letters in order and a finished word
+         counts by itself, the moment it is whole. */
     function startLevel(idx){
       G = newGameState(idx);
       save.last = idx; persist();
       $("game-level-num").textContent = "Level " + (idx + 1);
       $("game-level-theme").textContent = G.level.theme;
       $("overlay-complete").classList.remove("show");
-      buildBoard(); renderFound(); updatePreview(); updateProgress();
+      buildBoard(); renderBlanks(); updatePreview(); updateProgress();
       setMessage("Find " + G.level.words.length + " hidden words. Good luck!", false);
       show("screen-game");
+      /* Fonts and the blanks settle a beat after the screen shows —
+         refit once they have, so the board is sized on final numbers. */
+      setTimeout(function(){ fitBoard(); }, 350);
     }
     function buildBoard(){
       var board = $("board"); board.innerHTML = "";
-      board.className = "board size" + G.size;
-      G.grid.forEach(function(ch, i){
-        /* Each tile is a REAL button with a plain click handler — the
-           operating system's own tap path. No pointer events, no drag
-           math, no elementFromPoint: if a finger taps it, it clicks. */
+      board.className = "board pool";
+      board.style.gridTemplateColumns = "repeat(" + G.pool.cols + ", 1fr)";
+      board.style.aspectRatio = G.pool.cols + " / " + G.pool.rows;
+      var ratio = (G.pool.cols / G.pool.rows).toFixed(3);
+      board.style.width = "min(94vw, 400px, max(170px, calc((100dvh - 585px) * " + ratio + ")), max(170px, calc((100vh - 585px) * " + ratio + ")))";
+      board.style.setProperty("--tilefont", (G.pool.cols <= 3 ? 44 : 36) + "px");
+      fitBoard();
+      if (window.requestAnimationFrame) requestAnimationFrame(function(){ fitBoard(); });
+      G.pool.cells.forEach(function(cell, i){
         var d = document.createElement("button");
         d.type = "button";
-        d.className = "tile"; d.textContent = ch;
+        d.className = "tile";
         d.setAttribute("data-i", i);
-        d.setAttribute("aria-label", "Letter " + ch);
+        d.setAttribute("aria-label", "Letter " + cell.ch);
         d.addEventListener("click", function(){ tapTile(i); });
         board.appendChild(d);
+        refreshTile(i);
       });
     }
+    /* The board must NEVER be taller than the space the screen
+       actually leaves for it: a board that overflows its wrap paints
+       itself over the Clear / Hint / Shuffle row, and a button with
+       board on top of it is a button that "doesn't work." The CSS
+       width in buildBoard is only an estimate (fixed rows grow with
+       message wraps and system font size), so once the board is laid
+       out, measure the wrap and fit the board inside it exactly. */
+    function fitBoard(){
+      var board = $("board"); if (!board || !G || !G.pool) return;
+      var wrap = board.parentElement; if (!wrap) return;
+      var cs = window.getComputedStyle(wrap);
+      var ah = wrap.clientHeight - (parseFloat(cs.paddingTop) || 0) - (parseFloat(cs.paddingBottom) || 0) - 6;
+      var aw = wrap.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0) - 4;
+      if (ah < 70 || aw < 120) return; /* hidden / not laid out yet */
+      var w = Math.min(aw, ah * (G.pool.cols / G.pool.rows), 400);
+      if (w >= 120) board.style.width = Math.floor(w) + "px";
+    }
+    window.addEventListener("resize", function(){ fitBoard(); });
     function tileEl(i){ return $("board").children[i]; }
-    function selWord(){ return G.sel.map(function(i){ return G.grid[i]; }).join(""); }
+    function selCount(i){
+      var n = 0;
+      G.sel.forEach(function(x){ if (x === i) n++; });
+      return n;
+    }
+    /* Copies of this tile not used up and not already in hand. */
+    function cellLeft(i){
+      var c = G.pool.cells[i];
+      return c.total - c.used - selCount(i);
+    }
+    function refreshTile(i){
+      var c = G.pool.cells[i], el = tileEl(i);
+      if (!el) return;
+      var left = c.total - c.used;
+      el.innerHTML = "";
+      var ch = document.createElement("span"); ch.className = "ch"; ch.textContent = c.ch;
+      el.appendChild(ch);
+      if (c.total > 1){
+        var cnt = document.createElement("span"); cnt.className = "cnt"; cnt.textContent = left;
+        el.appendChild(cnt);
+      }
+      el.classList.toggle("used-up", left <= 0);
+      el.classList.toggle("sel", selCount(i) > 0);
+    }
+    function refreshSel(){
+      if (!G) return;
+      G.pool.cells.forEach(function(c, i){ refreshTile(i); });
+      updatePreview();
+    }
+    function selWord(){ return G.sel.map(function(i){ return G.pool.cells[i].ch; }).join(""); }
     function updatePreview(){
       var p = $("preview"), w = selWord();
-      if (!w){ var m = pickMode(); p.textContent = m === "drag" ? "Drag across the letters — words count by themselves!" : m === "tap" ? "Tap the letters one at a time — words count by themselves!" : "Drag across the letters — or tap them — words count by themselves!"; p.className = "preview empty"; }
+      if (!w){ var m = pickMode(); p.textContent = m === "drag" ? "Drag across the letters to make a word!" : m === "tap" ? "Tap the letters one at a time to make a word!" : "Drag across the letters — or tap them — to make a word!"; p.className = "preview empty"; }
       else { p.textContent = w; p.className = "preview"; }
     }
     function updateProgress(){
@@ -1125,17 +1099,20 @@
       var n = Object.keys(G.found).length;
       $("progress-line").innerHTML = "Found <b>" + n + " of " + total + "</b> words &nbsp;&middot;&nbsp; Score <b>" + G.score + "</b>";
     }
-    function renderFound(){
+    /* The blanks on top: one row of tile blanks per word, the way her
+       game shows them. A found word fills its whole row in, letter by
+       letter. Extra words collect underneath. */
+    function renderBlanks(){
       var tc = $("chips-targets"); tc.innerHTML = "";
-      G.level.words.forEach(function(w){
-        var s = document.createElement("span");
-        if (G.found[w]){ s.className = "chip"; s.textContent = w; }
-        else {
-          s.className = "chip slot";
-          s.textContent = w.split("").map(function(){ return "_"; }).join(" ");
-          s.title = w.length + " letters";
+      G.rows.forEach(function(w){
+        var row = document.createElement("div"); row.className = "blankrow";
+        for (var k = 0; k < w.length; k++){
+          var cell = document.createElement("span");
+          if (G.found[w]){ cell.className = "blank filled"; cell.textContent = w.charAt(k); }
+          else { cell.className = "blank"; cell.textContent = ""; }
+          row.appendChild(cell);
         }
-        tc.appendChild(s);
+        tc.appendChild(row);
       });
       var bb = $("bonus-block"), bc = $("chips-bonus"); bc.innerHTML = "";
       if (G.bonus.length){
@@ -1144,6 +1121,7 @@
           var s = document.createElement("span"); s.className = "chip bonus"; s.textContent = w; bc.appendChild(s);
         });
       } else bb.style.display = "none";
+      fitBoard();
     }
     function sparks(x, y, n){
       if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -1156,67 +1134,77 @@
         (function(el){ setTimeout(function(){ el.remove(); }, 850); })(s);
       }
     }
-
-    /* ---------- Selection: TAP ONLY (v3 rebuild) ----------
-       Drag-to-spell is gone, on purpose. Every tile is a real button and
-       a tap is a plain click — the browser's own, most-tested code path.
-       There is NO pointer state left to wedge: no pointerdown/move/up,
-       no setPointerCapture, no pointercancel to mishandle, no
-       elementFromPoint between the finger and the tile. A tap either
-       clicks the button or it doesn't — and on a real button, it does. */
+    function clearHintTarget(){
+      var els = document.querySelectorAll(".tile.hint-target");
+      for (var q = 0; q < els.length; q++) els[q].classList.remove("hint-target");
+    }
+    /* Add one copy of tile i to the word in hand. fromTap decides
+       whether a finished word counts right away (taps) or waits for
+       the drag to be let go (drags, like her game). */
+    function pushCopy(i, fromTap){
+      if (cellLeft(i) <= 0) return false;
+      clearHintTarget();
+      G.sel.push(i); G.selFromHint = false;
+      refreshTile(i); sndTap(G.sel.length); updatePreview();
+      if (fromTap) maybeAutoSubmit();
+      return true;
+    }
+    /* ---------- Taps ---------- */
     function tapTile(i){
       if (!G) return;
       if (pickMode() === "drag") return;
       if (Date.now() - dragSuppress < 600){ dragSuppress = 0; return; }
       ac();
-      var sel = G.sel;
-      var pos = sel.indexOf(i);
-      if (pos !== -1){
-        /* Tapping a letter that's already in the word takes just that
-           one letter back out. The rest of the word stays exactly as it
-           was — selWord() rebuilds from the letters still selected, in
-           the order they were tapped. */
-        sel.splice(pos, 1); tileEl(i).classList.remove("sel"); clearHintTarget(); sndTap(1); updatePreview();
+      var c = G.pool.cells[i];
+      if (c.used >= c.total) return;
+      if (selCount(i) > 0 && cellLeft(i) <= 0){
+        /* All copies are already in hand — this tap takes one back out. */
+        var pos = G.sel.lastIndexOf(i);
+        G.sel.splice(pos, 1); G.selFromHint = false;
+        clearHintTarget(); refreshTile(i); sndTap(1); updatePreview();
         return;
       }
-      /* v4: any tile on the board can be tapped next, wherever it sits.
-         There is no touching/adjacency rule — a casual player taps the
-         letters in the order she sees them. */
-      selectTile(i);
+      pushCopy(i, true);
     }
-    function clearHintTarget(){
-      var els = document.querySelectorAll(".tile.hint-target");
-      for (var q = 0; q < els.length; q++) els[q].classList.remove("hint-target");
-    }
-    function selectTile(i){
-      clearHintTarget();
-      G.sel.push(i); tileEl(i).classList.add("sel"); sndTap(G.sel.length); updatePreview();
-      maybeAutoSubmit();
-    }
-    /* ---------- Drag to spell (v10) ----------
-       Pam plays word games by dragging her finger across the letters,
-       so the board takes drags as well as taps. Pointer events on the
-       board container only; tiles stay plain buttons, and a tap still
-       arrives as a plain click underneath — the drag layer records
-       what it handled and tapTile ignores the click that follows a
-       drag, so the two paths can never fight or double-fire. Dragging
-       back over the letter you just picked takes it back off. */
+    /* ---------- Drag to spell ----------
+       Pointer events on the board container only; tiles stay plain
+       buttons, and a tap still arrives as a plain click underneath —
+       the drag layer records what it handled and tapTile ignores the
+       click that follows a drag, so the two paths can never fight or
+       double-fire. The drag picks the tiles the finger passes over, in
+       order — anywhere on the board. Dragging back over the letter you
+       just picked takes it back off. NOTHING counts until the drag is
+       let go: that is exactly how her game plays, and it makes the
+       "first word worked, the next one wouldn't" bug impossible —
+       there is no mid-drag registration to poison the next word. */
     var dragState = null, dragSuppress = 0;
     function tileFromPoint(x, y){
       var el = document.elementFromPoint(x, y);
-      if (!el || !el.classList || !el.classList.contains("tile")) return -1;
-      return parseInt(el.getAttribute("data-i"), 10);
+      if (!el || !el.closest) return -1;
+      var t = el.closest(".tile");
+      if (!t) return -1;
+      return parseInt(t.getAttribute("data-i"), 10);
     }
     function dragSelect(i){
-      if (!G) return;
+      if (!G || !dragState) return;
       var sel = G.sel;
-      if (sel.length && sel[sel.length - 1] === i) return;
-      if (sel.length > 1 && sel[sel.length - 2] === i){
-        var last = sel.pop(); tileEl(last).classList.remove("sel"); updatePreview(); return;
+      if (sel.length && sel[sel.length - 1] === i){
+        /* Off the tile and back onto it again = another copy, when the
+           stack has one (that's how a double letter like the EE in BEE
+           gets dragged from a single stack). */
+        if (dragState.offTile && cellLeft(i) > 0){
+          dragState.offTile = false; dragState.moved = true;
+          pushCopy(i, false);
+        }
+        return;
       }
-      if (sel.indexOf(i) !== -1) return;
+      dragState.offTile = false;
+      if (sel.length > 1 && sel[sel.length - 2] === i){
+        var last = sel.pop(); refreshTile(last); refreshTile(i); updatePreview(); return;
+      }
+      if (cellLeft(i) <= 0) return;
       dragState.moved = true;
-      selectTile(i);
+      pushCopy(i, false);
     }
     /* The Drag/Tap gate, enforced at the BOARD in the capture phase so
        a mode can never leak: in Tap mode, pointer input (finger, mouse,
@@ -1231,11 +1219,6 @@
       var m = pickMode();
       if (e.type === "pointerdown" && m === "tap"){ e.stopImmediatePropagation(); return; }
       if (e.type === "pointerdown" && m === "drag"){
-        /* In Drag mode a press that never moves is a TAP, not a drag —
-           and a tap must not pick a letter. Judge it at release: if
-           the pointer stayed on its starting tile and selected nothing
-           beyond it, give the letter back. (An earlier build stopped
-           pointerdown dead, which also killed drags dead.) */
         var ix = parseInt(t.getAttribute("data-i"), 10);
         gateTap = { idx: ix, wasSel: G ? G.sel.indexOf(ix) !== -1 : false, x: e.clientX, y: e.clientY };
         return;
@@ -1251,7 +1234,7 @@
       if (!G || pickMode() !== "drag") return;
       var moved = Math.abs(e.clientX - gt.x) > 14 || Math.abs(e.clientY - gt.y) > 14;
       if (!moved && !gt.wasSel && G.sel.length && G.sel[G.sel.length - 1] === gt.idx){
-        G.sel.pop(); tileEl(gt.idx).classList.remove("sel"); updatePreview();
+        G.sel.pop(); refreshTile(gt.idx); updatePreview();
         gateTapSuppress = true;
         setTimeout(function(){ gateTapSuppress = false; }, 700);
       }
@@ -1262,71 +1245,90 @@
         if (!G || pickMode() === "tap") return;
         var i = tileFromPoint(e.clientX, e.clientY);
         if (i === -1) return;
+        var c = G.pool.cells[i];
+        if (c.used >= c.total) return;
         dragState = { moved:false, startIdx:i, wasSel: G.sel.indexOf(i) !== -1 };
         try { board.setPointerCapture(e.pointerId); } catch(err){}
-        if (!dragState.wasSel) selectTile(i);
+        if (!dragState.wasSel) pushCopy(i, false);
         if (e.cancelable) e.preventDefault();
       });
       board.addEventListener("pointermove", function(e){
         if (!dragState) return;
         var i = tileFromPoint(e.clientX, e.clientY);
-        if (i !== -1) dragSelect(i);
+        if (i === -1){ dragState.offTile = true; return; }
+        dragSelect(i);
       });
       function endDrag(){
         if (!dragState) return;
-        if (!dragState.moved && dragState.wasSel){
-          var pos = G.sel.indexOf(dragState.startIdx);
-          if (pos !== -1){ G.sel.splice(pos, 1); tileEl(dragState.startIdx).classList.remove("sel"); updatePreview(); }
+        var wasDrag = dragState.moved, wasSel = dragState.wasSel, startIdx = dragState.startIdx;
+        if (!wasDrag && wasSel && G && G.selFromHint){
+          var ht = tileEl(startIdx);
+          if (ht && ht.classList.contains("hint-target")){
+            /* The glowing last letter of a hint word can be a tile
+               already in hand (a double letter drawn from one stack).
+               This tap means "finish the word," never "take it back." */
+            dragState = null; dragSuppress = Date.now();
+            pushCopy(startIdx, true);
+            return;
+          }
+        }
+        if (!wasDrag && wasSel){
+          var pos = G.sel.lastIndexOf(dragState.startIdx);
+          if (pos !== -1){ G.sel.splice(pos, 1); refreshTile(dragState.startIdx); updatePreview(); }
         }
         dragState = null;
         dragSuppress = Date.now();
+        /* LET GO = the word counts, like her game. */
+        if (wasDrag && G && G.sel.length) submitSelection();
+        /* A plain tap picks its letter on the way down (pointerdown);
+           in a tap-allowing mode the word still has to count the
+           moment it is whole, same as a tile click ever did. */
+        else if (!wasDrag && !wasSel && G && pickMode() !== "drag") maybeAutoSubmit();
       }
       board.addEventListener("pointerup", endDrag);
       board.addEventListener("pointercancel", endDrag);
       board.addEventListener("click", tileGate, true);
       board.addEventListener("pointerdown", tileGate, true);
     }
-    /* v10: a finished word counts BY ITSELF — no Check button hunt.
-       The prefix rule, final form (after the SOR / SEA / ROS lessons):
-       - A LEVEL word always waits if it is the opening of a longer
-         LEVEL word whose remaining letters are still on the board
-         (ROS must not fire if ROSE can still be finished) — and a
-         completed level word registers the moment it is whole, even
-         if a longer level word happens to start with it.
-       - A BONUS (dictionary) word registers immediately UNLESS it is
-         exactly the reachable opening of a level word — then it waits
-         for one more letter; if that letter doesn't complete the level
-         word, the sequence is no word at all and nothing fires early. */
+    /* A word built by TAPS counts by itself the moment it is whole —
+       no release exists to wait for. The prefix rule: a finished word
+       waits only if it is the opening of a longer LEVEL word whose
+       remaining letters are still in the pool. */
     function maybeAutoSubmit(){
       var w = selWord();
       if (w.length < 3) return;
       var isTarget = G.level.words.indexOf(w) !== -1 && !G.found[w];
       var isBonus = !isTarget && !!DICT[w] && G.bonus.indexOf(w) === -1 && G.level.words.indexOf(w) === -1;
       if (!isTarget && !isBonus) return;
-      var used = {}; G.sel.forEach(function(ix){ used[ix] = true; });
       for (var k = 0; k < G.level.words.length; k++){
         var W = G.level.words[k];
         if (W.length <= w.length || W.indexOf(w) !== 0 || G.found[W]) continue;
         var rest = W.slice(w.length), ok = true;
-        for (var c = 0; c < rest.length; c++){
-          var hit = -1;
-          for (var t = 0; t < G.grid.length; t++){ if (!used[t] && G.grid[t] === rest[c]){ hit = t; break; } }
-          if (hit === -1){ ok = false; break; }
-          used[hit] = true;
+        var need = {};
+        for (var c = 0; c < rest.length; c++) need[rest.charAt(c)] = (need[rest.charAt(c)] || 0) + 1;
+        for (var ch in need){
+          var have = 0;
+          G.pool.cells.forEach(function(cell){ if (cell.ch === ch) have += cell.total - cell.used; });
+          G.sel.forEach(function(ix){ if (G.pool.cells[ix].ch === ch) have--; });
+          if (have < need[ch]){ ok = false; break; }
         }
         if (ok) return; /* she may be spelling the longer level word — wait */
       }
-      submitWord();
+      submitSelection();
     }
     function clearSel(){
-      G.sel.forEach(function(i){ tileEl(i).classList.remove("sel"); });
-      G.sel = []; updatePreview();
+      G.sel = [];
+      refreshSel();
     }
-
-    /* ---------- Word checking ---------- */
-    function submitWord(){
+    /* ---------- Word checking: a finished word counts ----------
+       Target word: its copies are used up, its blank row fills in,
+       and the letters flash as they fly home. Extra word: it joins
+       the Extra Words list and uses nothing. Not a word: the letters
+       just let go — no penalty, ever. */
+    function submitSelection(){
+      if (!G) return;
       var w = selWord();
-      if (w.length < 3){ setMessage("Words need at least 3 letters.", false); return; }
+      if (w.length < 3){ setMessage("Words need at least 3 letters.", false); clearSel(); return; }
       var selCopy = G.sel.slice();
       if (G.level.words.indexOf(w) !== -1){
         if (G.found[w]){
@@ -1336,13 +1338,19 @@
         G.found[w] = true;
         G.score += w.length * 10;
         sndGood();
+        var midEl = tileEl(selCopy[Math.floor(selCopy.length / 2)]);
+        if (midEl){
+          var r = midEl.getBoundingClientRect();
+          sparks(r.left + r.width / 2, r.top, 12);
+        }
         selCopy.forEach(function(i){
-          var t = tileEl(i); t.classList.add("found-flash");
-          setTimeout(function(){ t.classList.remove("found-flash"); }, 650);
+          var t = tileEl(i); if (t) t.classList.add("found-flash");
+          G.pool.cells[i].used++;
         });
-        var mid = tileEl(selCopy[Math.floor(selCopy.length / 2)]).getBoundingClientRect();
-        sparks(mid.left + mid.width / 2, mid.top, 12);
-        clearSel(); renderFound(); updateProgress();
+        setTimeout(function(){
+          selCopy.forEach(function(i){ refreshTile(i); });
+        }, 350);
+        G.sel = []; renderBlanks(); updateProgress(); updatePreview();
         var left = G.level.words.length - Object.keys(G.found).length;
         if (left === 0){ setTimeout(levelComplete, 700); }
         else setMessage("You found " + w + "! " + left + (left === 1 ? " word" : " words") + " to go.", true);
@@ -1350,12 +1358,12 @@
       }
       if (DICT[w]){
         if (G.bonus.indexOf(w) !== -1){
-          setMessage("You already found bonus word " + w + ".", false);
+          setMessage("You already found extra word " + w + ".", false);
           sndSoft(); clearSel(); return;
         }
         G.bonus.push(w); G.score += w.length * 5;
-        sndBonus(); clearSel(); renderFound(); updateProgress();
-        setMessage("Bonus word: " + w + "! Lovely — that's extra.", true);
+        sndBonus(); clearSel(); renderBlanks(); updateProgress();
+        setMessage("Extra word: " + w + "! Lovely — that's extra.", true);
         return;
       }
       sndSoft();
@@ -1369,7 +1377,7 @@
       sndWin();
       $("complete-detail").innerHTML =
         "Level " + (G.idx + 1) + " &middot; " + G.level.theme + "<br />Score: <strong>" + G.score + "</strong>" +
-        (G.bonus.length ? "<br />Plus " + G.bonus.length + " bonus " + (G.bonus.length === 1 ? "word" : "words") + "!" : "");
+        (G.bonus.length ? "<br />Plus " + G.bonus.length + " extra " + (G.bonus.length === 1 ? "word" : "words") + "!" : "");
       $("btn-next").style.display = "";
       prizeIdx = 0;
       $("prize-line").textContent = "";
@@ -1444,30 +1452,47 @@
     }
 
     /* ---------- Hint & shuffle ---------- */
+    /* Which tiles spell w, using copies still in the pool. A stack
+       with 2 copies can give the same tile twice. */
+    function wordCells(w){
+      var picked = [], taken = {};
+      for (var k = 0; k < w.length; k++){
+        var ch = w.charAt(k), hit = -1;
+        for (var t = 0; t < G.pool.cells.length; t++){
+          var c = G.pool.cells[t];
+          if (c.ch !== ch) continue;
+          if (c.total - c.used - (taken[t] || 0) > 0){ hit = t; break; }
+        }
+        if (hit === -1) return null;
+        taken[hit] = (taken[hit] || 0) + 1;
+        picked.push(hit);
+      }
+      return picked;
+    }
     function doHint(){
       if (!G) return;
-      var remaining = G.level.words.filter(function(w){ return !G.found[w]; });
+      var remaining = G.rows.filter(function(w){ return !G.found[w]; });
       if (!remaining.length) return;
       var w = remaining[0];
       if (G.hintWord !== w){ G.hintWord = w; G.hintStage = 0; }
       G.hintStage++;
-      var path = G.paths[w];
+      var cells = wordCells(w);
+      if (!cells) return;
       clearSel();
       if (G.hintStage === 1){
         /* Light the whole word up one letter at a time, in order, so
            she can SEE the word, not just hear about a clue. */
-        path.forEach(function(ix, k){
+        cells.forEach(function(ix, k){
           setTimeout(function(){ flashTiles([ix]); }, k * 480);
         });
         setMessage("Hint: watch the glowing letters — they spell a word, in order. Drag across them!", false);
       } else {
         /* Second tap: start the word for her. All but the last letter
            are picked; the last one glows until she taps it. */
-        for (var j = 0; j < path.length - 1; j++){
-          G.sel.push(path[j]); tileEl(path[j]).classList.add("sel");
-        }
-        updatePreview();
-        tileEl(path[path.length - 1]).classList.add("hint-target");
+        G.sel = cells.slice(0, cells.length - 1);
+        G.selFromHint = true;
+        refreshSel();
+        tileEl(cells[cells.length - 1]).classList.add("hint-target");
         setMessage("Almost there — tap the glowing letter to finish the word!", false);
         G.hintWord = null; G.hintStage = 0;
       }
@@ -1475,7 +1500,8 @@
     }
     function flashTiles(list){
       list.forEach(function(i){
-        var t = tileEl(i); t.classList.remove("hint-flash");
+        var t = tileEl(i); if (!t) return;
+        t.classList.remove("hint-flash");
         void t.offsetWidth;
         t.classList.add("hint-flash");
         setTimeout(function(){ t.classList.remove("hint-flash"); }, 2700);
@@ -1483,12 +1509,12 @@
     }
     function doShuffle(){
       if (!G) return;
-      clearSel();
-      var made = bakedBoard(G.idx, G.variant + 1) || genBoardSafe(G.level, G.variant + 1);
-      if (made){ G.grid = made.grid; G.paths = made.paths; G.variant = made.variant; }
-      G.hintWord = null; G.hintStage = 0;
-      buildBoard();
-      setMessage("Board shuffled — fresh eyes help!", false);
+      G.variant++;
+      G.pool = poolFor(G.level, G.idx, G.variant);
+      G.sel = [];
+      G.hintWord = null; G.hintStage = 0; G.selFromHint = false;
+      buildBoard(); updatePreview();
+      setMessage("Letters shuffled — fresh eyes help!", false);
       sndTap(2);
     }
 
@@ -1521,7 +1547,6 @@
       bindTap($("btn-game-back"), function(){ refreshHome(); show("screen-home"); });
       bindTap($("btn-sound-levels"), toggleSound);
       bindTap($("btn-sound-game"), toggleSound);
-      bindTap($("btn-check"), function(){ if (G && G.sel.length) submitWord(); else setMessage("Pick some letters first — tap them one at a time.", false); });
       bindTap($("btn-clear"), function(){ if (G) clearSel(); });
       bindTap($("btn-hint"), doHint);
       bindTap($("btn-shuffle"), doShuffle);
@@ -1539,8 +1564,8 @@
     /* All 150 levels were verified solvable at build time, and levels past 150 are generated from a common-word bank. There is
        deliberately NO runtime self-check here: re-generating every board
        on open is a heavy burst of synchronous work that froze the page
-       on a phone right after it appeared. genBoardSafe already guarantees
-       a live game can never land on a board that fails to build. */
+       on a phone right after it appeared. The letter-pool builder
+       cannot fail: a tray of letters always builds. */
     </script>
   </body>
 </html>
