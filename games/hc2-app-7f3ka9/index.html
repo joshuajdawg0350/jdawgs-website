@@ -97,6 +97,7 @@ img,video{display:block;max-width:100%}
 
 /* ---------- game shell: pinned, no page scroll on desktop ---------- */
 #screen-game{position:fixed;inset:0;height:100vh;height:100dvh;height:var(--app-h,100vh);display:flex;flex-direction:column;overflow:hidden}
+#screen-game{max-height:100dvh}
 body.gaming{overflow:hidden}
 .hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:7px 12px 7px;z-index:5}
 .hud-row{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
@@ -576,6 +577,28 @@ tr.notstocked td{opacity:.48}
 #col-right.s2-stack #col-drugs{border-right:none;border-bottom:1px solid var(--line2)}
 #col-right.s2-flow{display:block;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 #col-right.s2-flow .s2col{flex:none;width:auto;height:auto;overflow:visible;padding-bottom:16px}
+/* ---------- Screen 2 split height-lock (2026-11-11, Cheryl's phone) ----------
+   Root cause of the recurring collapse: the split's height reached the
+   columns only through two soft links — the JS-synced --app-h variable
+   (in-app webviews report viewport heights that lie, and a wrong value
+   outranks the CSS dvh unit, stretching the fixed shell past the
+   visible screen so the split's lower half sits off-screen), and
+   nested-flex stretch sizing (older engines resolve stretched heights
+   as indefinite, so the columns size to content and never scroll).
+   Defenses, container CSS only: the shell is capped at the dynamic
+   viewport height no matter what --app-h says, and the split region
+   (#col-right and, in its natural row mode, each column) takes a
+   definite height:100% chain from .main, whose height is set by the
+   shell's flex column. The guard's degraded modes (.s2-stack /
+   .s2-flow) and the <=340px stacked layout are deliberately excluded
+   and keep their original sizing. Column scroll mechanics were
+   already right and are unchanged: overflow-y:auto,
+   -webkit-overflow-scrolling:touch, overscroll-behavior:contain,
+   touch-action:pan-y. */
+#col-right{height:100%;max-height:100%}
+@media (min-width:341px){
+  #col-right:not(.s2-stack):not(.s2-flow) .s2col{height:100%;max-height:100%}
+}
 @media (max-width:340px){
   #col-right{flex-direction:column}
   #col-right .s2col{flex:1 1 0}
@@ -619,6 +642,16 @@ tr.notstocked td{opacity:.48}
     </div>
   </div>
   <div class="start-body">
+    <div class="players" role="group" aria-label="Start the game">
+      <button class="pcard" id="play-btn">
+        <div class="who">▶ Play</div>
+        <p class="sub">$2,000 in your pocket, $2,000 owed to the Shark, 45 days — one crown to take.</p>
+        <div class="best" id="best-single">No finished run yet</div>
+      </button>
+      <button class="pcard" id="btnInstallStart" type="button">
+        <div class="who">📲 Install app</div>
+        <p class="sub">Put Hustle City 2 on your home screen — it opens full-screen like a real app. No ads.</p>
+      </button>
     <div class="throne">
       <img class="face" src="assets/balsey.webp" alt="Balsey, the reigning King of Hustle City — black beanie with a gold crown emblem, rainy neon street" />
       <div>
@@ -627,12 +660,6 @@ tr.notstocked td{opacity:.48}
       </div>
     </div>
 
-    <div class="players" role="group" aria-label="Start the game">
-      <button class="pcard" id="play-btn">
-        <div class="who">▶ Play</div>
-        <p class="sub">$2,000 in your pocket, $2,000 owed to the Shark, 45 days — one crown to take.</p>
-        <div class="best" id="best-single">No finished run yet</div>
-      </button>
     </div>
     <p class="footline">The finale is earned in a run: reach <b>$750,000 net worth</b> to challenge King Balsey, and at <b>$1,000,000</b> walk into <b>Balsey's Compound</b> for the hustle-off — <b>a million against a million</b>, real run money on the concrete, winner takes the $2,000,000 pot and the crown.</p>
     <div class="startgrid">
@@ -647,7 +674,7 @@ tr.notstocked td{opacity:.48}
         You get <b style="color:var(--ink)">45 days</b>, <b style="color:var(--ink)">$2,000 cash</b>, and a <b style="color:var(--ink)">$2,000 debt to the Shark</b> at 7% a day. Buy cheap in one neighborhood, travel, sell high in another. Traveling or waiting ends the day: interest hits, prices re-roll, the city moves. Banked cash earns 5% a day and can't be mugged. Your coat holds 100 slots (Lean takes 4). Heat brings busts; busts and brawls cost health; zero health is the ambulance. Flat broke with nothing to sell, the Shark offers one $1,000 rescue loan — refuse it and your Charger ends up on blocks. Final score is <b style="color:var(--ink)">net worth</b>: cash + bank + stash − debt. Every city is open from day one — travel costs the trip fee and ends the day. Springfield is home: King Balsey's throne is the one unlock that matters, opening at $750,000 to challenge and $1,000,000 to take — and at a million, <b style="color:var(--ink)">Balsey's Compound</b> on the Springfield map unlocks too: walk through its gate and you go straight to the hustle-off, street craps for the crown. The market list on the street panel shows every product on the block with live prices and BUY / SELL buttons — trade right there. Or deal face to face: find a dealer standing on the street, open their deal sheet — big simple buttons, dollars printed on every one. Past <b style="color:var(--ink)">$10,000 net worth</b> the wholesale lots unlock — pounds of 20 and kilos of 50 at bulk prices — and so does the <b style="color:var(--ink)">bank job</b>: once a day, your call. Bail early for a clean $25,000, or see it through on a true 50/50 flip for $250,000. Lose the flip and the run is over. Past $20,000 net worth the BIG MONEY TIER opens for the rest of the run — a 400-slot coat, 100- and 250-unit wholesale lots, a +25% dealer premium on every sell, and a wilder market with richer spikes. That's the ramp: $750,000 challenges the King, $1,000,000 takes the crown.
       </p>
     </div>
-    <p class="footline"><b>No fancy logos. Just quality products.</b> · No ads. · ™ + © 2026 Joshua Dawson · J-Dawgs Industries <img class="paw" src="assets/paw.png" alt="" /></p>
+    <p class="footline"><b>No fancy logos. Just quality products.</b> · <b>No ads.</b> · <b>We never sell your information.</b> · ™ + © 2026 Joshua Dawson · J-Dawgs Industries <img class="paw" src="assets/paw.png" alt="" /></p>
     <p class="footline">Music: "All Apple No Pie" (instrumental) — Joshua Dawson · Made with J-Dawgs Droppin Beats Studio</p>
   </div>
 </section>
@@ -776,7 +803,7 @@ tr.notstocked td{opacity:.48}
       <button class="btn primary" id="btn-over-again">RUN IT BACK</button>
       <button class="btn" id="btn-over-title">TITLE SCREEN</button>
     </div>
-    <p class="footline"><b>No fancy logos. Just quality products.</b> · No ads. · ™ + © 2026 Joshua Dawson · J-Dawgs Industries</p>
+    <p class="footline"><b>No fancy logos. Just quality products.</b> · <b>No ads.</b> · <b>We never sell your information.</b> · ™ + © 2026 Joshua Dawson · J-Dawgs Industries</p>
   </div>
 </section>
 
@@ -2746,89 +2773,104 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 <style>
-#hcInstallWrap{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:99990;display:none;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#EAF4FF}
-#hcInstallWrap.show{display:block}
-#hcInstallSteps{display:none;background:rgba(8,14,22,.98);border:1px solid rgba(111,195,255,.55);border-radius:14px;padding:12px 14px;box-shadow:0 10px 34px rgba(0,0,0,.55);font-size:.9rem;line-height:1.45;margin-bottom:8px}
-#hcInstallSteps.show{display:block}
-#hcInstallSteps p{margin:.25rem 0;color:#A9C3DE}
-#hcInstallSteps b{color:#EAF4FF}
-#hcInstallBar{display:flex;align-items:center;gap:9px;background:rgba(8,14,22,.97);border:1px solid rgba(111,195,255,.55);border-radius:14px;padding:8px 10px;box-shadow:0 10px 34px rgba(0,0,0,.55)}
-#hcInstallBar img{width:38px;height:38px;border-radius:9px;flex:none}
-#hcInstallBar .hcib-t{flex:1;min-width:0}
-#hcInstallBar .hcib-t b{display:block;font-size:.92rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#hcInstallBar .hcib-t span{display:block;font-size:.74rem;line-height:1.25;color:#A9C3DE;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#hcInstallBtn{flex:none;background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;border:1px solid rgba(111,195,255,.65);font-weight:800;font-size:.92rem;border-radius:10px;padding:.55rem .8rem;min-height:44px;cursor:pointer}
-#hcInstallHide{flex:none;background:transparent;border:none;color:#A9C3DE;font-size:1.15rem;line-height:1;padding:.3rem .35rem;min-height:44px;min-width:38px;cursor:pointer}
+/* ================================================================
+   INSTALL DOOR v3 (2026-11-11 redesign) — repertoire chrome.
+   The fixed bottom install bar is GONE (same bar that failed the
+   Lesson-Gate over HC1: it painted over live game controls). The
+   install action lives in ONE place in the flow — the start
+   screen's own card row (#btnInstallStart, next to Play) — styled
+   as a chrome plate with the house gradient copied from the
+   repertoire (j-dawgs-repertoire/type/house-type.css, the .chrome
+   treatment stops). The manual steps live in a normal modal
+   (#modal-install) that opens only on a tap. Nothing fixed,
+   nothing floating, nothing over the game in any state.
+   The Play + Install cards were also moved ABOVE the throne lore
+   card, and the hero is compacted on phone widths, so both cards
+   land in the first viewport: pay -> play / install, simple.
+   ================================================================ */
+#btnInstallStart{
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  color:#0a0f16;border:1px solid #d7e5f2;
+  box-shadow:0 4px 18px rgba(160,195,235,.25), inset 0 1px 0 #fff;
+}
+#btnInstallStart .who{color:#0a0f16}
+#btnInstallStart .sub{color:#33475e}
+#btnInstallStart[hidden]{display:none!important}
+#btnInstallStart.lit{animation:installPulse 1.6s ease-in-out infinite}
+@keyframes installPulse{0%,100%{box-shadow:0 0 0 0 rgba(57,194,255,0),0 4px 18px rgba(160,195,235,.25)}50%{box-shadow:0 0 0 3px rgba(57,194,255,.55),0 4px 22px rgba(57,194,255,.4)}}
+#modal-install .steps p{margin:.45rem 0;line-height:1.55;color:#cfdae8}
+#modal-install .steps b{color:#fff}
+/* Pin-strip stash value: cap the bold value at its (clipping) flex
+   slot so its layout box stays on-screen at large system font
+   sizes — the strip already ellipsizes it visually. */
+#pin-strip .pin-stash b{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+@media (max-width:560px){
+  .hero-in{padding-top:18px}
+  .hero-king{margin-bottom:12px}
+  .hero-king img{height:clamp(200px,54vw,440px)}
+  .hero .tag{margin-top:8px}
+  .hero .priceline{margin-top:10px}
+  .kicker{margin-bottom:3px}
+  .pcard{padding:13px}
+  .players{gap:10px}
+}
+@media (min-width:561px) and (max-width:900px){
+  .hero-king img{height:330px}
+}
 </style>
-<div id="hcInstallWrap">
-  <div id="hcInstallSteps" role="region" aria-label="How to install">
-    <p><b>Put Hustle City 2 on your home screen:</b></p>
-    <p><b>Android (Chrome):</b> tap the <b>⋮ menu</b> at the top right, choose <b>Add to Home screen</b> (some phones call it <b>Install app</b>), then tap <b>Add</b>.</p>
-    <p><b>iPhone (Safari):</b> tap <b>Share</b>, then <b>Add to Home Screen</b>, then <b>Add</b>.</p>
-    <p>The chrome dollar-sign icon lands on your home screen and opens full-screen like a real app.</p>
-  </div>
-  <div id="hcInstallBar" role="region" aria-label="Install this app">
-    <img src="/games/hc2-app-7f3ka9/icons/icon-192.png" alt="" width="38" height="38">
-    <div class="hcib-t"><b style="font-size:.84rem">Install Hustle City 2</b><span>Plays offline · no ads</span></div>
-    <button id="hcInstallBtn" type="button">Install</button>
-    <button id="hcInstallHide" type="button" aria-label="Not now">✕</button>
+<div class="overlay hidden" id="modal-install">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="installTitleH">
+    <p class="kick">Install</p>
+    <h3 id="installTitleH">Put Hustle City 2 on your home screen</h3>
+    <div class="steps">
+      <p><b>Android (Chrome):</b> tap the <b>&#8942; menu</b> at the top right, choose <b>Add to Home screen</b> (some phones call it <b>Install app</b>), then tap <b>Add</b>.</p>
+      <p><b>iPhone (Safari):</b> tap <b>Share</b>, then <b>Add to Home Screen</b>, then <b>Add</b>.</p>
+      <p>The chrome dollar-sign icon lands on your home screen and opens full-screen like a real app. <b>No ads.</b> <b>We never sell your information.</b></p>
+    </div>
+    <div class="choices"><button class="btn primary" id="btnInstallClose" type="button">Close</button></div>
   </div>
 </div>
 <script>
-/* Install door (added 2026-11-11): native prompt when Chrome offers one,
-   manual Add-to-Home-screen steps everywhere else. Steps panel and bar
-   share one fixed wrapper so they can never overlap. Fully guarded so a
-   storage-restricted webview or old browser can never break the game. */
+/* Install door v3 (2026-11-11 redesign): ONE in-flow door — the
+   start screen's install card. It fires Chrome's install prompt
+   when the browser offers one; a dismissed prompt (or no prompt at
+   all) falls back to the manual steps modal. The card hides for
+   good once the app is installed or already running installed.
+   No bar, no HUD button, no polling. Fully guarded: a storage-
+   restricted webview or an old browser can never break the game. */
 (function () {
   try {
-    if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return;
-    if (window.navigator && window.navigator.standalone) return;
-    var KEY = "hc2-install-dismissed", dismissed = false;
-    try { dismissed = !!window.localStorage.getItem(KEY); } catch (e) {}
-    if (dismissed) return;
-    var wrap = document.getElementById("hcInstallWrap"),
-        btn = document.getElementById("hcInstallBtn"),
-        steps = document.getElementById("hcInstallSteps"),
-        hide = document.getElementById("hcInstallHide");
-    if (!wrap || !btn || !hide) return;
-    var deferred = null;
-    function show() { wrap.classList.add("show"); }
-    function hideAll() {
-      wrap.classList.remove("show");
-      if (steps) steps.classList.remove("show");
-    }
-    window.addEventListener("beforeinstallprompt", function (ev) {
-      ev.preventDefault();
-      deferred = ev;
-      btn.textContent = "Install";
-      show();
-    });
-    window.addEventListener("appinstalled", function () {
-      deferred = null;
-      hideAll();
-      try { window.localStorage.setItem(KEY, "1"); } catch (e) {}
-    });
-    btn.addEventListener("click", function () {
+    var entry = document.getElementById("btnInstallStart"),
+        modal = document.getElementById("modal-install"),
+        closeBtn = document.getElementById("btnInstallClose");
+    if (!entry) return;
+    var standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || !!window.navigator.standalone;
+    var deferred = null, installed = false, prompting = false;
+    function render() { entry.hidden = installed || standalone; }
+    function openSteps() { if (modal) modal.classList.remove("hidden"); }
+    function closeSteps() { if (modal) modal.classList.add("hidden"); }
+    function openDoor() {
+      if (installed || standalone || prompting) return;
       if (deferred) {
-        var d = deferred;
-        deferred = null;
+        var d = deferred; deferred = null; prompting = true;
+        var settled = false;
+        function settle() { if (settled) return; settled = true; prompting = false; if (!installed) openSteps(); }
         try {
           d.prompt();
-          if (d.userChoice && d.userChoice.then) {
-            d.userChoice.then(function () { hideAll(); });
-          } else { hideAll(); }
-        } catch (e) { if (steps) steps.classList.toggle("show"); }
-      } else if (steps) {
-        steps.classList.toggle("show");
+          if (d.userChoice && d.userChoice.then) { d.userChoice.then(settle); setTimeout(settle, 2500); }
+          else settle();
+        } catch (e) { settle(); }
+      } else {
+        openSteps();
       }
-    });
-    hide.addEventListener("click", function () {
-      hideAll();
-      try { window.localStorage.setItem(KEY, "1"); } catch (e) {}
-    });
-    setTimeout(function () {
-      if (!deferred) { btn.textContent = "How to add"; show(); }
-    }, 2500);
+    }
+    entry.addEventListener("click", openDoor);
+    if (closeBtn) closeBtn.addEventListener("click", closeSteps);
+    if (modal) modal.addEventListener("click", function (ev) { if (ev.target === modal) closeSteps(); });
+    window.addEventListener("beforeinstallprompt", function (ev) { ev.preventDefault(); deferred = ev; render(); });
+    window.addEventListener("appinstalled", function () { installed = true; deferred = null; closeSteps(); render(); });
+    if ((location.hash || "").indexOf("install") >= 0) entry.classList.add("lit");
+    render();
   } catch (e) {}
 })();
 </script>

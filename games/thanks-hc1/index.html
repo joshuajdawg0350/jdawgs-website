@@ -1,81 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You got Hustle City — Play It Now, No Settings Changes | Hustle City Arcade</title>
-<meta name="description" content="Your Hustle City is ready: install it as an app straight from your browser — no settings changes, no permissions. Plays offline, no ads ever.">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>You own Hustle City — install it | J-Dawgs Industries</title>
+<meta name="description" content="Your copy of Hustle City is ready. One tap puts it on your home screen — full-screen, no ads, we never sell your information." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/png" sizes="192x192" href="../hc1-app-9d2mx4/icons/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  :root{--eb:#6FC3FF;--eb-bright:#8ACBFF;--eb-deep:#3A8EDB;--ink:#EAF4FF;--dim:#A9C3DE;--panel:#0B1626;--line:rgba(111,195,255,.35)}
-  *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#050B16;color:var(--ink);line-height:1.55}
-  .wrap{max-width:640px;margin:0 auto;padding:2rem 1.1rem 3rem}
-  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--eb);font-weight:700;margin:0 0 .4rem}
-  h1{font-size:2rem;line-height:1.15;margin:.2rem 0 .6rem}
-  h2{font-size:1.25rem;margin:2rem 0 .5rem}
-  p{color:var(--dim)}
-  p b,li b{color:var(--ink)}
-  .cover{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
-  .btn-play{display:block;text-align:center;margin:1.4rem 0 .6rem;padding:1.15rem 1rem;font-size:1.25rem;font-weight:800;color:#04101F;text-decoration:none;border-radius:14px;background:linear-gradient(180deg,var(--eb-bright),var(--eb-deep));border:1px solid rgba(111,195,255,.65)}
-  .btn-play:active{transform:translateY(1px)}
-  .play-note{text-align:center;font-size:.95rem;margin:.2rem 0 0;color:var(--ink)}
-  .iconrow{display:flex;gap:1rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;margin-top:1.4rem}
-  .iconrow img{width:84px;height:84px;border-radius:18px;flex:none;border:1px solid var(--line)}
-  .iconrow p{margin:.2rem 0}
-  ol{color:var(--dim);padding-left:1.3rem}
-  li{margin:.45rem 0}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;margin-top:1.4rem}
-  .card p{margin:.3rem 0}
-  a{color:var(--eb)}
-  .tagline{margin-top:2.2rem;font-size:.92rem}
-  .foot{margin-top:1rem;font-size:.85rem;color:var(--dim)}
+  :root{ --bg:#05080e; --panel:#0d1420; --line:#1e2c42; --ink:#eef4fb; --mut:#9db4cc; --blue:#39c2ff; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--ink); font-family:Barlow,system-ui,sans-serif;
+        min-height:100dvh; display:flex; flex-direction:column; align-items:center;
+        padding:28px 18px 22px; text-align:center; }
+  .icon{ width:92px; height:92px; border-radius:22px; box-shadow:0 10px 34px rgba(0,0,0,.6), 0 0 0 1px var(--line); }
+  .kick{ font-weight:700; letter-spacing:.3em; text-transform:uppercase; color:var(--blue); font-size:12px; margin:18px 0 6px; }
+  h1{ font-family:Anton,Impact,sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:.02em;
+      font-size:clamp(34px,9vw,46px); line-height:1.04; margin:0 0 8px;
+      background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub{ color:var(--mut); font-size:16.5px; line-height:1.45; max-width:400px; margin:0 0 26px; }
+  .btn-install{ display:flex; align-items:center; justify-content:center; gap:10px;
+      width:min(420px,100%); min-height:68px; padding:14px 20px; border-radius:16px;
+      background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+      color:#0a0f16; font-weight:800; font-size:20px; text-decoration:none; border:1px solid #d7e5f2;
+      box-shadow:0 6px 24px rgba(160,195,235,.28), inset 0 1px 0 #fff; }
+  .btn-install small{ display:block; font-size:13px; font-weight:600; color:#33475e; }
+  .btn-install .txt{ text-align:left; line-height:1.15; }
+  .btn-play{ display:inline-block; margin-top:18px; color:var(--blue); font-weight:700; font-size:16.5px;
+      text-decoration:none; border-bottom:1px solid rgba(57,194,255,.4); padding-bottom:2px; }
+  .note{ color:var(--mut); font-size:13.5px; line-height:1.5; max-width:400px; margin:26px 0 0; }
+  .note a{ color:var(--blue); }
+  footer{ margin-top:auto; padding-top:28px; color:var(--mut); font-size:13px; line-height:1.6; }
+  footer .trio{ color:var(--ink); }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <p class="eyebrow">Payment received — thank you</p>
-  <h1>You got Hustle City</h1>
-  <img class="cover" src="../assets/hc1-cover.webp" alt="Hustle City — chrome lettering over a black Charger on a rainy neon street" width="1920" height="1120">
-  <p>Your game is ready. This page isn't listed anywhere on our site — you got here because you paid, so keep the address handy. A backup copy of this page also arrives by email.</p>
+  <img class="icon" src="../hc1-app-9d2mx4/icons/icon-192.png" alt="Hustle City app icon" />
+  <p class="kick">Payment received — thank you</p>
+  <h1>You own<br />Hustle City</h1>
+  <p class="sub">One tap takes you to the game and lights up its Install button. The game walks you through the rest — no settings to change, nothing else to buy.</p>
 
-  <a class="btn-play" href="https://jdawgsindustries.com/games/hc1-app-9d2mx4/">▶ Play Hustle City — install it as an app</a>
-  <p class="play-note"><b>No settings changes. No permissions to allow.</b> The full game, straight from your browser.</p>
+  <a class="btn-install" href="https://jdawgsindustries.com/games/hc1-app-9d2mx4/#install">
+    <span aria-hidden="true">📲</span>
+    <span class="txt">Install Hustle City<small>Put it on your home screen</small></span>
+  </a>
 
-  <div class="iconrow">
-    <img src="/games/hc1-app-9d2mx4/icons/icon-512.png" alt="Hustle City app icon — a chrome dollar sign" width="512" height="512">
-    <div>
-      <p><b>This is your app's own icon</b> — the chrome dollar sign.</p>
-      <p>When it lands on your home screen, that's the real app: full-screen, offline, yours.</p>
-    </div>
-  </div>
+  <a class="btn-play" href="https://jdawgsindustries.com/games/hc1-app-9d2mx4/">▶ Or play in your browser first</a>
 
-  <h2>Put it on your home screen — three steps</h2>
-  <ol>
-    <li><b>Tap the button above.</b> The full game opens — hit PLAY and try it right now. There's an <b>Install</b> button right inside the game, too.</li>
-    <li><b>Tap Chrome's ⋮ menu</b> (top right) and choose <b>Add to Home screen</b> — some phones call it <b>Install app</b>.</li>
-    <li><b>Done.</b> The chrome dollar-sign icon lands on your home screen. It opens full-screen like a real app and plays fully offline — no ads, no account, nothing phoning home.</li>
-  </ol>
+  <p class="note">Trouble installing? Our <b>Fix-It Guarantee</b> covers you: we fix it or refund it. <a href="https://jdawgsindustries.com/support.html">Get help</a>.</p>
 
-  <div class="card">
-    <p><b>On an iPhone?</b> Apple doesn't allow direct app installs from any store but theirs — so open <a href="https://jdawgsindustries.com/games/hc1-app-9d2mx4/">the game</a>, tap <b>Share → Add to Home Screen</b>, and it lives on your home screen with its own icon, same as an app. Same game, still no ads.</p>
-  </div>
-
-  <div class="card">
-    <p><b>Lost this page or changed phones?</b> Come back to this address any time, or check the backup email we sent after checkout. Still stuck? <a href="https://jdawgsindustries.com/support.html">Tell us once — we fix it free.</a> That's the J-Dawgs Fix-It Guarantee.</p>
-    <p><b>Updates:</b> when a new version of the game posts, we email buyers the fresh copy — free, always.</p>
-  </div>
-
-  <div class="card">
-    <p><b>Refunds:</b> If it doesn't work and we can't fix it, you get your money back — and 14 days to change your mind on anything digital. Full policy: <a href="https://jdawgsindustries.com/refunds.html">jdawgsindustries.com/refunds.html</a></p>
-  </div>
-
-  <div class="card">
-    <p>Build games too? Check the <a href="https://jdawgsindustries.com/ai-tool-store.html">For Game &amp; App Developers collection in the AI Tool Store</a> — tools for developers who build with AI — and <a href="https://jdawgsindustries.com/games/sell.html">sell your game on Hustle City Arcade</a>, which takes outside games.</p>
-  </div>
-
-  <p class="tagline"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
-  <p class="foot">Hustle City™ · © 2026 Joshua Dawson / J-Dawgs Industries. All rights reserved.<br>© 2026 Joshua Dawson · J-Dawgs Industries, Springfield, MO · <a href="https://jdawgsindustries.com/games/">Back to Hustle City Arcade</a></p>
-</div>
+  <footer>
+    <div class="trio"><b>No fancy logos. Just quality products.</b> <b>No ads.</b> <b>We never sell your information.</b></div>
+    <div>HUSTLE CITY™ · J-DAWGS INDUSTRIES · © 2026 Joshua Dawson</div>
+  </footer>
 </body>
 </html>

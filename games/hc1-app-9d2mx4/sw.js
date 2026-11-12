@@ -2,7 +2,7 @@
    NOTE: scene videos stream from joshuajdawg0350.github.io/jdawgs-hub and
    are NOT precached — they need a connection. Everything else (game code,
    art, saves in localStorage) works offline after the first load. */
-var CACHE = "hc1-full-v2";
+var CACHE = "hc1-full-v4";
 var PRECACHE = [
  "./",
  "index.html",
