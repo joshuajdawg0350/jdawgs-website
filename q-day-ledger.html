@@ -12,69 +12,83 @@
 <title>Q-Day Ledger™ — CBOM &amp; Post-Quantum Migration Engine | J-Dawgs Industries</title>
 <meta name="description" content="Q-Day Ledger inventories every cryptographic dependency you run, scores the quantum risk, and writes your deadline-mapped migration plan. Local-first: your code never leaves your machine.">
 <style>
+  /* Hustle Look Kit (jdawgs-hustle-look-kit.md §1-§3, §10) — Wave 2 FACE restyle.
+     Palette/headline/button treatment only; copy, prices, links unchanged. */
   :root{
-    --bg:#07090c; --panel:#0d1117; --panel2:#11161f;
-    --chrome:#c9d1d9; --silver:#8b98a5; --blue:#2f9bff; --blue-dim:#1b5fa8;
-    --text:#e6edf3; --muted:#9aa7b1; --line:#1e2632;
+    color-scheme:dark;
+    --bg:#05080e; --bg2:#0b0f16;
+    --panel:#10151f; --panel2:#151c29;
+    --line:#263144; --line2:#33435e;
+    --ink:#eef2f8; --mut:#9fb0c6; --dim:#6d7f97;
+    --cyan:#39c2ff;
+    --gold:#ffd34d;
+    --text:#eef2f8; --muted:#9fb0c6;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);
-       font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
        line-height:1.65;font-size:16.5px}
   .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px}
   header{padding:56px 0 8px}
-  .kicker{color:var(--blue);letter-spacing:.18em;text-transform:uppercase;
+  .kicker{color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;
           font-size:.78rem;font-weight:700;margin:0 0 12px}
   h1{font-size:2.6rem;line-height:1.12;margin:0 0 8px;color:#fff;font-weight:800}
-  h1 .chrome{background:linear-gradient(180deg,#f4f7fa,#9fb0c0 55%,#dbe4ec);
-             -webkit-background-clip:text;background-clip:text;color:transparent}
-  .sub{font-size:1.15rem;color:var(--chrome);margin:0 0 18px}
-  .promises{font-weight:700;color:#fff;border-top:1px solid var(--line);
-            border-bottom:1px solid var(--line);padding:10px 0;margin:24px 0 8px}
+  h1 .chrome{
+    font-family:Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;line-height:.95;
+    font-size:clamp(2.6rem,9vw,4.2rem);font-weight:400;
+    background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.15rem;color:var(--mut);margin:0 0 18px}
+  .promises{font-weight:700;color:var(--ink);border-top:1px solid var(--line2);
+            border-bottom:1px solid var(--line2);padding:10px 0;margin:24px 0 8px}
   .promises span{margin-right:16px;white-space:nowrap}
-  h2{font-size:1.45rem;margin:44px 0 12px;color:#fff}
-  h3{font-size:1.05rem;margin:22px 0 6px;color:#fff}
-  p,li{color:var(--text)}
-  .muted{color:var(--muted)}
+  h2{font-size:1.45rem;margin:44px 0 12px;color:var(--ink);
+     font-family:Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;font-weight:400}
+  h3{font-size:1.05rem;margin:22px 0 6px;color:var(--ink)}
+  p,li{color:var(--ink)}
+  .muted{color:var(--mut)}
   .deadlines{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
              gap:12px;margin:16px 0}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
         padding:16px 18px}
-  .card b{color:#fff}
-  .card .date{color:var(--blue);font-weight:800;font-size:1.05rem}
-  .steps{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  .card b{color:var(--ink)}
+  .card .date{color:var(--cyan);font-weight:800;font-size:1.05rem}
+  .steps{background:var(--panel);border:1px solid var(--line);border-radius:14px;
          padding:8px 22px}
   .steps li{margin:12px 0}
   .localfirst{background:linear-gradient(180deg,var(--panel2),var(--panel));
-              border:1px solid var(--blue-dim);border-radius:10px;padding:20px 22px}
+              border:1px solid var(--line2);border-radius:14px;padding:20px 22px}
   figure{margin:18px 0}
   figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;display:block}
-  figcaption{color:var(--muted);font-size:.9rem;margin-top:8px}
+  figcaption{color:var(--mut);font-size:.9rem;margin-top:8px}
   .tablewrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
   table.plan{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
   table.plan th,table.plan td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
-  table.plan th{background:var(--panel2);color:#fff}
+  table.plan th{background:var(--panel2);color:var(--ink)}
   pre.cbom{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-           padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.5;color:var(--chrome)}
+           padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.5;color:var(--mut)}
   .editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
             gap:12px;margin:18px 0 6px}
-  .edition{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  .edition{background:var(--panel);border:1px solid var(--line);border-radius:14px;
            padding:20px;display:flex;flex-direction:column}
   .edition h3{margin:0 0 4px;font-size:1.08rem}
-  .edition .price{font-size:1.7rem;font-weight:800;color:#fff;margin:6px 0 2px}
-  .edition .once{color:var(--muted);font-size:.88rem;margin:0 0 10px}
-  .edition p.scope{color:var(--text);font-size:.95rem;flex:1}
-  .buy{display:block;text-align:center;text-decoration:none;font-weight:700;
-       border-radius:8px;padding:11px 14px;margin-top:10px}
-  .buy.primary{background:var(--blue);color:#04121f}
-  .buy.secondary{border:1px solid var(--blue-dim);color:var(--blue)}
-  .guarantee{border:1px solid var(--blue-dim);border-radius:10px;padding:20px 22px;
+  .edition .price{font-size:1.7rem;font-weight:800;color:var(--gold);margin:6px 0 2px}
+  .edition .once{color:var(--mut);font-size:.88rem;margin:0 0 10px}
+  .edition p.scope{color:var(--ink);font-size:.95rem;flex:1}
+  .buy{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;font-weight:800;
+       border-radius:10px;padding:11px 18px;margin-top:10px;min-height:48px;font-size:15px;letter-spacing:.02em}
+  .buy.primary{ /* kit §3 chrome primary */
+    background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;
+    border:1px solid #d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+  .buy.secondary{border:1px solid var(--line2);background:var(--panel2);color:var(--cyan)}
+  .guarantee{border:1px solid var(--line2);border-radius:14px;padding:20px 22px;
              background:var(--panel);margin:28px 0}
-  .guarantee b{color:#fff}
+  .guarantee b{color:var(--ink)}
   footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;
-         color:var(--muted);font-size:.9rem}
-  a{color:var(--blue)}
+         color:var(--mut);font-size:.9rem}
+  a{color:var(--cyan)}
   code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:.9em}
+.tap-note{font-size:.85rem;color:#93A1B5;margin:.55rem 0 0}
 </style>
 </head>
 <body>
@@ -201,6 +215,26 @@
      evidence, its confidence level, and its failure modes — is published in the research
      dossier that ships in the package.</p>
 
+  <h2>Free: see a real CBOM, and get your outside scan</h2>
+  <p><b>Sample CBOM pack (free download).</b> The complete demonstration output of
+     Q-Day Ledger, labeled SAMPLE throughout: a CycloneDX 1.6 CBOM, the migration
+     plan, the inventory report, and the auditor evidence pack for the bundled
+     sample target (37 assets inventoried). It is a demonstration target, not a
+     real company's inventory — it shows exactly the artifact class a prime or
+     auditor will one day ask you for.</p>
+  <p><a class="buy secondary" href="assets/q-day/q-day-ledger-sample-pack.zip">Download the free sample CBOM pack (ZIP, 25 KB)</a></p>
+  <p><b>Free external TLS scan.</b> We will run the product's TLS prober against
+     your company's public-facing endpoints from outside your network and send
+     you a short report graded against the 2030/2035 deadlines, within three
+     business days. No install, no obligation. To request one, email
+     <a href="mailto:joshuajdawg0350@gmail.com?subject=Free%20external%20TLS%20scan%20request%20—%20Q-Day%20Ledger">joshuajdawg0350@gmail.com</a>
+     with your name, company, work email, the domains to scan, and this line:
+     “I affirm the domains above are mine or under my administration.”
+     We scan only what is publicly reachable. The report is yours;
+     <b>we never sell your information.</b> This scan sees the outside of the
+     house only — source code, internal certificates, firmware, and libraries
+     are what the full product inventories.</p>
+
   <h2>How this could be wrong — stated plainly</h2>
   <p class="muted">Governments have slipped crypto deadlines before; a formal deferral would
      soften the 2028–2030 demand crest (the need survives; the urgency moves). If the large
@@ -221,6 +255,7 @@
       <p class="scope">Use within one organization, on its own systems and estates,
          by its own personnel, for its internal compliance and migration work.</p>
       <a class="buy primary" href="https://buy.stripe.com/dRmeVdgcNaYsectelv3kt0A">Buy by card — $1,499</a>
+      <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
       <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
     </div>
     <div class="edition">
@@ -230,6 +265,7 @@
       <p class="scope">Everything in Single-Organization, extended to the licensee's
          named subsidiaries and sites listed at purchase.</p>
       <a class="buy primary" href="https://buy.stripe.com/8x2dR90dPd6A4BT91b3kt0B">Buy by card — $4,999</a>
+      <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
       <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
     </div>
     <div class="edition">
@@ -239,6 +275,7 @@
       <p class="scope">Use on client engagements — up to 25 per year. Client deliverables
          are the tool's outputs; outputs belong to the client.</p>
       <a class="buy primary" href="https://buy.stripe.com/cNi8wP7Gh3w01pHdhr3kt0C">Buy by card — $7,499</a>
+      <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
       <a class="buy secondary" href="https://jdawgs.gumroad.com/l/q-day-ledger">Buy on Gumroad</a>
     </div>
   </div>
@@ -257,7 +294,7 @@
   <footer>
     © 2026 Joshua Dawson / J-Dawgs Industries. Q-Day Ledger™ and Project Foresight™ are
     trademarks of Joshua Dawson / J-Dawgs Industries.<br>
-    <b>No fancy logos. Just quality products.</b> · No ads. · <b>We never sell your information.</b><br>
+    <b>No fancy logos. Just quality products.</b> · <b>No ads.</b> · <b>We never sell your information.</b><br>
     Predictions in our materials are labeled predictions. Mandate dates cited are published
     U.S. government law and policy as of November 2026.
   </footer>
