@@ -41,6 +41,11 @@
   .qr-card p{margin:0}
   .hh-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
   .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  .hh-google-block{border:1px solid var(--eb);border-radius:10px;background:linear-gradient(160deg,rgba(57,194,255,.10),var(--panel) 72%);padding:1.2rem 1.4rem;margin:1.6rem 0 .4rem;max-width:560px}
+  .hh-google-block .gg-label{font-weight:700;color:#fff;margin:0 0 .3rem;font-size:1.02rem}
+  .hh-google-block .gg-sub{font-size:.9rem;color:var(--muted);margin:0 0 .9rem;max-width:52ch}
+  .hh-google-status{font-size:.92rem;margin:.8rem 0 0;color:var(--body)}
+  .hh-google-status:empty{margin:0}
   @media (max-width:640px){.tiers{grid-template-columns:1fr}.hh-brand span{display:none}.hh-nav{gap:.9rem}}
 </style>
 <style>
@@ -119,6 +124,12 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
     <p class="eyebrow">Work as a Hand · Founding roster</p>
     <h1>Your hands. Real work. Your pay stays yours.</h1>
     <p class="lead">People around Springfield post regular jobs — check on a vacant rental, take lockbox photos, run a pickup across town — and Human Hands matches the job to a local person. That person could be you. Signing up is free, takes about two minutes, and joins you to the founding roster for matching.</p>
+    <div class="hh-google-block" data-hh-google-block hidden>
+      <p class="gg-label">Fastest way in — one tap</p>
+      <p class="gg-sub">Continue with Google and your name and email land on the signup form already filled in — no typing, and your contact counts as verified, so your roster spot is solid. Optional, always: the signup button works the same without it.</p>
+      <div data-hh-google-btn></div>
+      <p class="hh-google-status" data-hh-google-status role="status"></p>
+    </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://forms.gle/kbYe1Uu8SShwE9kz8">Sign up free — about 2 minutes</a>
       <a class="btn btn-ghost" href="board.html" style="background:transparent;border-color:var(--line-strong)">See the job board</a>
@@ -182,6 +193,29 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
   </div>
 </footer>
 
+<script src="hh-config.js"></script>
+<script src="hh-google.js"></script>
+<script>
+// After a verified Google sign-in, point every signup button at the signup
+// form with the worker's name (entry.1582642706) and contact email
+// (entry.1607165618) pre-filled — the two fields that decide whether a
+// signup lands on the official roster or sits pending with no contact.
+// Entry IDs read from the live form's own field definitions, 2026-11-11.
+if (window.HHGoogle) {
+  window.HHGoogle.onVerified(function (p) {
+    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSe_gdtsRTKrYf2CTozSRHzeJJqvVKR9etYboY1CmsosSnBSSg/viewform?usp=pp_url' +
+      '&entry.1582642706=' + encodeURIComponent(p.name || '') +
+      '&entry.1607165618=' + encodeURIComponent(p.email || '');
+    var links = document.querySelectorAll('a[href="https://forms.gle/kbYe1Uu8SShwE9kz8"]');
+    for (var i = 0; i < links.length; i++) links[i].href = url;
+    var status = document.querySelector('[data-hh-google-status]');
+    if (status) {
+      status.textContent = 'Signed in as ' + (p.name || p.email) + ' (' + p.email + ') — verified by Google. ' +
+        'Tap Sign up: your name and email are already filled in on the form.';
+    }
+  });
+}
+</script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {

@@ -54,6 +54,13 @@
   .fallback-box{width:100%;min-height:170px;background:var(--bg-2);border:1px solid var(--line-strong);border-radius:6px;color:var(--body);padding:.8rem;font-family:var(--font-data);font-size:.85rem}
   .hh-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
   .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  .hh-google-block{border:1px solid var(--eb);border-radius:10px;background:linear-gradient(160deg,rgba(57,194,255,.10),var(--panel) 72%);padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .hh-google-block .gg-label{font-weight:700;color:#fff;margin:0 0 .3rem;font-size:1.02rem}
+  .hh-google-block .gg-sub{font-size:.9rem;color:var(--muted);margin:0 0 .9rem;max-width:56ch}
+  .hh-google-status{font-size:.92rem;margin:.8rem 0 0;color:var(--body)}
+  .hh-google-status:empty{margin:0}
+  .hh-remembered{font-size:.92rem;color:var(--body);margin:0 0 1.2rem}
+  .hh-remembered button{background:none;border:none;color:var(--eb-bright);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;padding:.4rem .2rem;min-height:44px}
   @media (max-width:720px){.jobs{grid-template-columns:1fr}.postrow .btn{flex:1 1 130px}}
   @media (max-width:480px){.postrow .btn{flex:1 1 100%}.hh-top h1{font-size:1.8rem}.hh-top .lead{font-size:.95rem;line-height:1.5}.hh-top{padding-top:1rem}}
   @media (max-width:640px){.hh-brand span{display:none}.hh-nav{gap:.9rem}}
@@ -245,6 +252,13 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         <h2>Post yours</h2>
         <p class="lead" style="margin-top:.8rem">Fill out the form and submit it in Step 1 — it goes straight to the operator, no email needed — then pay in Step 2 to activate it. Our goal is to be faster, more efficient, and friendlier than our competition — the AI makes the perfect match, and a friendly local person does the work.</p>
       </div>
+      <div class="hh-google-block" data-hh-google-block hidden>
+        <p class="gg-label">Fastest way to post — one tap</p>
+        <p class="gg-sub">Continue with Google and we'll fill in your name and email for you — and remember them on this device for your next post. Optional, always: the form works the same without it.</p>
+        <div data-hh-google-btn></div>
+        <p class="hh-google-status" data-hh-google-status role="status"></p>
+      </div>
+      <p class="hh-remembered" id="hhRemembered" hidden></p>
       <form class="post-form" id="jobPostForm" novalidate>
         <div class="field">
           <label for="jpTitle">Job title *</label>
@@ -443,6 +457,66 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         if(jobRef){ jobRef.textContent="(job reference "+job.id+")"; }
         var step2=document.getElementById("postStep2"); if(step2){ step2.hidden=false; step2.scrollIntoView({behavior:"smooth", block:"start"}); }
       }).catch(function(){ jpFail(); });
+    });
+  }
+})();
+</script>
+<script src="hh-config.js"></script>
+<script src="hh-google.js"></script>
+<script>
+// "Continue with Google" on the board: a verified sign-in fills the poster's
+// name + contact email and remembers them on this device (localStorage) so
+// the next post starts filled in. Sign-in is optional — the form below is
+// the same either way. A remembered identity is a typing shortcut only; the
+// "verified" label is shown only for a sign-in checked this visit.
+(function () {
+  var KEY = 'hhPosterIdentity';
+  function fill(name, email) {
+    var n = document.getElementById('jpName');
+    var c = document.getElementById('jpContact');
+    if (n && name) n.value = name;
+    if (c && email) c.value = email;
+  }
+  function forget() {
+    try { localStorage.removeItem(KEY); } catch (e) { /* storage unavailable */ }
+    var note = document.getElementById('hhRemembered');
+    if (note) { note.hidden = true; note.textContent = ''; }
+  }
+  // Returning poster: pre-fill from this device's memory.
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (saved && saved.email) {
+      fill(saved.name || '', saved.email);
+      var note = document.getElementById('hhRemembered');
+      if (note) {
+        note.innerHTML = 'Welcome back — posting as <strong></strong> (remembered on this device). ';
+        note.querySelector('strong').textContent = (saved.name || saved.email) + ' · ' + saved.email;
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = 'Not you? Clear';
+        btn.addEventListener('click', function () {
+          forget();
+          fill('', '');
+          document.getElementById('jpName').value = '';
+          document.getElementById('jpContact').value = '';
+        });
+        note.appendChild(btn);
+        note.hidden = false;
+      }
+    }
+  } catch (e) { /* storage unavailable — form simply starts blank */ }
+  // Fresh verified sign-in: fill + remember.
+  if (window.HHGoogle) {
+    window.HHGoogle.onVerified(function (p) {
+      fill(p.name || '', p.email);
+      try { localStorage.setItem(KEY, JSON.stringify({ name: p.name || '', email: p.email })); } catch (e) { /* ignore */ }
+      var note = document.getElementById('hhRemembered');
+      if (note) { note.hidden = true; note.textContent = ''; }
+      var status = document.querySelector('[data-hh-google-status]');
+      if (status) {
+        status.textContent = 'Signed in as ' + (p.name || p.email) + ' (' + p.email + ') — verified by Google. ' +
+          'Your name and contact are filled in below, and we\'ll remember them on this device for your next post.';
+      }
     });
   }
 })();
