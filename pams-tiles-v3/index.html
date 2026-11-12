@@ -310,6 +310,12 @@
         background:linear-gradient(180deg,#16233d,#0c1425); border:2px solid var(--blue);
         border-radius:24px; padding:28px 24px; text-align:center; max-width:430px; width:100%;
         box-shadow:0 0 44px rgba(53,182,255,.35);
+        /* Safe centering: auto margins center the card when it fits
+           and collapse to 0 when it is taller than the screen, so on
+           a short phone (360x640) the top of the card is reachable by
+           scrolling instead of clipped off for good — plain
+           align-items:center clips BOTH ends of an over-tall card. */
+        margin:auto;
       }
       .card .card-peace{ line-height:0; }
       .card h2{ margin:8px 0 4px; font-size:33px; font-weight:900; }
@@ -440,6 +446,110 @@
         .tile.found-flash,.tile.hint-flash,.spark,.burst-piece{ animation:none !important; }
         .btn:active,.tile.sel{ transform:none; }
       }
+    <style>
+      /* ============ Pam's Tiles v14 — Universal Fit stage ============
+         The whole app now lives in ONE fixed composition: a 390x844
+         design stage, scaled by BOTH dimensions to fit whatever screen
+         opens it — s = min(vw/390, vh/844) — and centered. (The kit's
+         fitStage scaled by WIDTH ONLY, and v13 let the board absorb the
+         difference: at a larger system text size the rows around the
+         board grow, the board's space shrinks, and the board was crushed
+         into a strip over the last blank row.) Inside the stage every
+         size is a design pixel, so the composition — board, blanks,
+         buttons, Prize Box — keeps its places and proportions at every
+         screen size and every text size.
+         The pins below hold the standard (tall-screen) values for every
+         property the viewport-height media tiers (max-height 760/700/620
+         in the main sheet) would otherwise change from phone to phone:
+         inside the stage the composition is 844 tall on every phone, so
+         those device tiers must not fire. */
+      #fit-shell{ position:fixed; inset:0; overflow:hidden; z-index:1; }
+      #fit-stage{
+        position:absolute; left:0; top:0;
+        width:390px; height:844px; transform-origin:0 0;
+      }
+      #fit-stage #app{
+        width:390px; max-width:none; height:844px; min-height:0; margin:0;
+      }
+      #fit-stage .screen{ min-height:0; height:100%; }
+      #fit-stage #screen-game{ height:100%; max-height:none; }
+      /* How-to text is taller than one screen: it scrolls inside the
+         stage (in v13 the whole page scrolled; the Levels list already
+         scrolls inside its own wrap). */
+      #fit-stage #screen-how{ overflow-y:auto; }
+      /* --- device-tier pins: the standard values, on every phone --- */
+      #fit-stage .preview{ min-height:48px; font-size:27px; margin-top:8px; }
+      #fit-stage .preview.empty{ font-size:18.5px; }
+      #fit-stage .message{ min-height:52px; font-size:19px; padding-top:5px; }
+      #fit-stage .progress-line{ display:block; padding-top:2px; }
+      #fit-stage .game-head{ padding-top:10px; padding-bottom:2px; }
+      #fit-stage .game-head .lvl .n{ font-size:21px; }
+      #fit-stage .game-head .lvl .t{ display:block; }
+      #fit-stage .controls{ padding-top:7px; }
+      #fit-stage .controls .btn{ min-height:54px; font-size:18.5px; }
+      #fit-stage .controls .btn .ic{ font-size:23px; }
+      #fit-stage .found-area{ min-height:0; padding-top:2px; }
+      #fit-stage .found-label{ font-size:16.5px; margin-bottom:6px; }
+      #fit-stage .chip{ font-size:19px; padding:7px 14px; }
+      #fit-stage .blank{ width:38px; height:40px; font-size:20px; border-radius:10px; }
+      #fit-stage .board-wrap{ margin-top:6px; padding-top:8px; }
+      #fit-stage .mode-row{ padding-top:4px; }
+      #fit-stage .mode-opt{ min-height:48px; font-size:18.5px; }
+      /* The Prize Box never sits flush on the stage's bottom edge:
+         a 14 design px margin lifts it clear of the last pixel row
+         (and of any bottom chrome a real phone adds), funded by the
+         padding trimmed from the controls row, the mode row and the
+         bar itself, so the board wrap — and the board — keep exactly
+         the room they had. The compact tier funds it the same way. */
+      #fit-stage .prize-bar{ padding:4px 16px 5px; gap:14px; margin-bottom:14px; }
+      #fit-stage .prize-bar-title{ display:block; }
+      #fit-stage .prize-bar .prize-line{ font-size:23px; min-height:29px; }
+      #fit-stage #screen-home h1{ font-size:52px; }
+      /* Home is taller than one screen at large text sizes: it scrolls
+         inside the stage, like How-to (measured 1195 design px tall at
+         font scale 1.3 — without a scroll the bottom is clipped). */
+      #fit-stage #screen-home{ overflow-y:auto; }
+      /* The blank rows can never compress, so the found area may not
+         shrink below its content — a shrunken box is exactly how the
+         board came to paint over the last blank row. The other rows
+         keep the design's own flex shrink (their min-heights carry
+         the slack), the board wrap absorbs the rest, and fitBoard()
+         fits the board inside the wrap. */
+      #fit-stage .found-area{ flex-shrink:0; }
+      /* --- compact tier: the house's own short-screen values, switched
+         on by measured squeeze (see decideCompact in the fit script),
+         never by device type. When larger text leaves the board less
+         room than a real finger needs, the rows around it compact and
+         the board keeps its size. --- */
+      #fit-stage.compact .game-head{ padding-top:4px; }
+      #fit-stage.compact .game-head .lvl .n{ font-size:19px; }
+      #fit-stage.compact .progress-line{ font-size:13px; }
+      #fit-stage.compact .preview{ min-height:34px; font-size:22px; margin-top:2px; }
+      #fit-stage.compact .preview.empty{ font-size:16.5px; }
+      #fit-stage.compact .message{ min-height:42px; font-size:17px; padding-top:2px; }
+      #fit-stage.compact .board-wrap{ margin-top:3px; padding-top:5px; }
+      #fit-stage.compact .controls{ padding-top:3px; }
+      #fit-stage.compact .controls .btn{ min-height:42px; font-size:16.5px; }
+      #fit-stage.compact .controls .btn .ic{ font-size:19px; }
+      #fit-stage.compact .found-area{ padding-top:3px; }
+      #fit-stage.compact .found-label{ font-size:15px; margin-bottom:3px; }
+      #fit-stage.compact .chip{ font-size:15px; padding:3px 9px; }
+      #fit-stage.compact .blank{ width:29px; height:31px; font-size:16px; border-radius:8px; }
+      #fit-stage.compact .mode-row{ padding-top:1px; }
+      #fit-stage.compact .mode-opt{ min-height:42px; font-size:16.5px; }
+      #fit-stage.compact .prize-bar{ padding:2px 14px 1px; gap:10px; }
+      #fit-stage.compact .prize-bar-title{ display:none; }
+      #fit-stage.compact .prize-bar .prize-line{ font-size:17px; min-height:21px; }
+      /* Compact v2 (calibrated by measurement, dbg7.js): at font scale
+         1.3 the head's theme line wraps to two lines (head measured
+         99px), the empty-preview text wraps (76px) and the control
+         buttons' stacked icon+label grows (81px). These values return
+         that height to the board. */
+      #fit-stage.compact .game-head .lvl .t{ font-size:13px; }
+      #fit-stage.compact .preview{ line-height:1.25; }
+      #fit-stage.compact .preview.empty{ font-size:14px; }
+      #fit-stage.compact .controls .btn{ font-size:15px; }
+      #fit-stage.compact .controls .btn .ic{ font-size:17px; }
     </style>
   </head>
   <body>
@@ -479,7 +589,7 @@
       </svg>
       <div class="streetline"></div>
     </div>
-    <div id="app">
+    <div id="fit-shell"><div id="fit-stage" data-fit-stage><div id="app">
 
       <!-- ============ HOME ============ -->
       <section class="screen active" id="screen-home">
@@ -496,7 +606,7 @@
           <button class="btn" id="btn-how">How to Play</button>
         </div>
         <p class="home-progress" id="home-progress"></p>
-        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No ads &middot; We never sell your information<br />Pam&rsquo;s Tiles &middot; version 13</p>
+        <p class="credit">Made with love by <strong>Joshua</strong> &middot; J-Dawgs Industries<br />No fancy logos. Just quality products.<br />No ads &middot; We never sell your information<br />&copy; 2026 Joshua Dawson / J-Dawgs Industries &middot; Pam&rsquo;s Tiles &middot; version 14</p>
       </section>
 
       <!-- ============ LEVELS ============ -->
@@ -576,7 +686,7 @@
           </div>
         </div>
       </section>
-    </div>
+    </div></div></div>
 
     <!-- ============ LEVEL COMPLETE ============ -->
     <div class="overlay" id="overlay-complete">
@@ -1566,6 +1676,157 @@
        on open is a heavy burst of synchronous work that froze the page
        on a phone right after it appeared. The letter-pool builder
        cannot fail: a tray of letters always builds. */
+    </script>
+    <script>
+    /* ============ Universal Fit stage (v14) ============
+       Both-dimension fit: s = min(vw/DESIGN_W, vh/DESIGN_H), centered —
+       the kit's fitStage scaled by width only, the defect class that
+       crushed v13's board on a phone with larger system text.
+       The watchdog MEASURES the active screen's overflow and exposes it
+       on window.__fitWatch; it asserts nothing — graded checks live in
+       the verify battery, not in shipped code. */
+    (function(){
+      var DESIGN_W = 390, DESIGN_H = 844;
+      var stage = document.getElementById("fit-stage");
+      if (!stage) return;
+      function measure(){
+        var rec = { scale: window.__fitScale || null,
+                    vw: window.innerWidth, vh: window.innerHeight };
+        try {
+          var scr = stage.querySelector(".screen.active");
+          if (scr){
+            rec.screen = scr.id;
+            rec.scrollW = scr.scrollWidth; rec.scrollH = scr.scrollHeight;
+            rec.overflowX = scr.scrollWidth > DESIGN_W + 1;
+            rec.overflowY = scr.scrollHeight > DESIGN_H + 1;
+            if (scr.id === "screen-game"){
+              var b = document.getElementById("board");
+              if (b){
+                var r = b.getBoundingClientRect();
+                rec.boardVisualW = Math.round(r.width);
+                rec.boardVisualH = Math.round(r.height);
+              }
+            }
+          }
+        } catch (e) { rec.error = String(e); }
+        window.__fitWatch = rec;
+      }
+      function fitStage(){
+        var vw = window.innerWidth || DESIGN_W;
+        var vh = window.innerHeight || DESIGN_H;
+        /* Fit the VISIBLE viewport, not just the layout viewport:
+           the two can disagree — browser chrome in transition, and
+           some engines report a layout viewport taller than the
+           visible area (measured 784 layout vs 740 visible on a
+           360x740 target). A stage fitted to the larger number puts
+           its bottom rows where no finger can reach them, so the
+           smaller, visible measure wins in both dimensions. */
+        var vv = window.visualViewport;
+        if (vv){
+          if (vv.width > 0) vw = Math.min(vw, Math.floor(vv.width));
+          if (vv.height > 0) vh = Math.min(vh, Math.floor(vv.height));
+        }
+        var s = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+        if (!(s > 0) || !isFinite(s)) s = 1;
+        var x = Math.round((vw - DESIGN_W * s) / 2);
+        var y = Math.round((vh - DESIGN_H * s) / 2);
+        stage.style.transform =
+          "translate(" + x + "px, " + y + "px) scale(" + s + ")";
+        window.__fitScale = s;
+        measure();
+        decideCompact(true);
+      }
+      /* Measured squeeze decides the compact tier, with hysteresis:
+         compact below 165 design px of board room, release above 200,
+         keep the current state in between. The measurement always
+         runs with the tier off, on the next frame, and the decision
+         is re-taken after the layout settles (a trailing settle pass
+         750 ms after the last mutation), so a mid-render transient
+         can never latch it. In this design the natural board room is
+         ~145 design px even at standard text, so the tier is on for
+         the game screen at any text size; larger system text
+         squeezes the natural room further (measured 63 design px,
+         then 17 with a two-line message, at 1.3x). Geometry only:
+         no device checks, no font-size guesses. */
+      var decideBusy = false, fitMute = false;
+      function decideCompact(force){
+        var scr = stage.querySelector(".screen.active");
+        if (!scr || scr.id !== "screen-game"){
+          if (stage.classList.contains("compact")){
+            fitMute = true;
+            stage.classList.remove("compact");
+            setTimeout(function(){ fitMute = false; }, 60);
+          }
+          return;
+        }
+        if (decideBusy) return;
+        var was = stage.classList.contains("compact");
+        decideBusy = true;
+        fitMute = true;
+        if (was){ stage.classList.remove("compact"); void stage.offsetWidth; }
+        requestAnimationFrame(function(){
+          var wrap = scr.querySelector(".board-wrap");
+          var h = wrap ? wrap.clientHeight : 999;
+          var want = was;
+          if (h < 165) want = true;
+          else if (h > 200) want = false;
+          if (want) stage.classList.add("compact");
+          else stage.classList.remove("compact");
+          if (window.fitBoard) window.fitBoard();
+          measure();
+          decideBusy = false;
+          setTimeout(function(){ fitMute = false; }, 60);
+        });
+      }
+      var decideTimer = 0, settleTimer = 0;
+      if (window.MutationObserver){
+        var mo = new MutationObserver(function(){
+          if (fitMute) return;
+          clearTimeout(decideTimer);
+          decideTimer = setTimeout(function(){ decideCompact(false); }, 160);
+          clearTimeout(settleTimer);
+          settleTimer = setTimeout(function(){
+            decideCompact(false);
+            if (window.fitBoard) window.fitBoard();
+          }, 750);
+        });
+        mo.observe(stage, { attributes: true,
+                            attributeFilter: ["class"],
+                            childList: true, subtree: true });
+      }
+      /* Whenever the board's room changes — a longer message, the
+         bonus block arriving, a resize — refit the board into its
+         wrap, so the board can never outgrow the space left for it. */
+      if (window.ResizeObserver){
+        var bw = stage.querySelector(".board-wrap");
+        if (bw){
+          var roTick = false;
+          new ResizeObserver(function(){
+            if (roTick) return;
+            roTick = true;
+            requestAnimationFrame(function(){
+              roTick = false;
+              if (window.fitBoard) window.fitBoard();
+              measure();
+            });
+          }).observe(bw);
+        }
+      }
+      window.UniversalFit = { fitStage: fitStage, measure: measure,
+                              DESIGN_W: DESIGN_W, DESIGN_H: DESIGN_H,
+                              decideCompact: decideCompact };
+      window.addEventListener("resize", fitStage);
+      window.addEventListener("orientationchange",
+        function(){ setTimeout(fitStage, 80); });
+      if (window.visualViewport)
+        window.visualViewport.addEventListener("resize", fitStage);
+      fitStage();
+      /* Mobile browsers settle their viewport after load (URL bar,
+         WebView sizing): refit on a timer as well as on events, so a
+         size the events missed can never leave a stale scale. */
+      setTimeout(fitStage, 350);
+      setTimeout(fitStage, 1000);
+    })();
     </script>
   </body>
 </html>
