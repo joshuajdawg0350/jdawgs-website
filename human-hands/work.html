@@ -196,10 +196,13 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
 <script src="hh-config.js"></script>
 <script src="hh-google.js"></script>
 <script>
-// After a verified Google sign-in, point every signup button at the signup
-// form with the worker's name (entry.1582642706) and contact email
-// (entry.1607165618) pre-filled — the two fields that decide whether a
-// signup lands on the official roster or sits pending with no contact.
+// After a verified Google sign-in, TAKE the worker straight to the signup
+// form — the spot where they fill out their tiers and the work they'll do —
+// with their name (entry.1582642706) and contact email (entry.1607165618)
+// pre-filled — the two fields that decide whether a signup lands on the
+// official roster or sits pending with no contact. (Owner rule, 2026-11-11:
+// sign-in must land you on the tier form, not just arm a button.) The plain
+// signup buttons are repointed too, in case the worker comes back here.
 // Entry IDs read from the live form's own field definitions, 2026-11-11.
 if (window.HHGoogle) {
   window.HHGoogle.onVerified(function (p) {
@@ -211,8 +214,9 @@ if (window.HHGoogle) {
     var status = document.querySelector('[data-hh-google-status]');
     if (status) {
       status.textContent = 'Signed in as ' + (p.name || p.email) + ' (' + p.email + ') — verified by Google. ' +
-        'Tap Sign up: your name and email are already filled in on the form.';
+        'Taking you to the signup form — your name and email are already filled in.';
     }
+    window.location.href = url;
   });
 }
 </script>
