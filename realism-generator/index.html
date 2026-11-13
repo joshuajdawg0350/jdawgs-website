@@ -340,6 +340,16 @@
         .engine-line { margin-top: 6px; }
         .chips { margin-top: 12px; }
       }
+      /* ---------- Simple front door ---------- */
+      .simple-q { display: block; font-weight: 800; font-size: 19px; letter-spacing: 0.01em; color: var(--ink); margin: 0; }
+      #plateSimple { margin-top: 6px; padding-top: 8px; }
+      #sGoal { min-height: 74px; font-size: 17px; padding-top: 7px; padding-bottom: 7px; }
+      .s-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+      .s-chips .chip { min-height: 46px; font-size: 16px; padding: 7px 16px; }
+      #sMake { width: 100%; margin-top: 8px; min-height: 56px; font-size: 19px; }
+      #sResult { margin-top: 16px; }
+      .more-toggle { width: 100%; margin-top: 14px; min-height: 52px; font-size: 16px; }
+
       @media (prefers-reduced-motion: reduce) { .toast { transition: none; } .chip:active, .btn-chrome:active, .btn-blue:active { transform: none; } }
     </style>
   </head>
@@ -354,8 +364,36 @@
           <span><b>We never sell your information.</b></span>
           <span>No accounts — nothing leaves your device.</span>
         </div>
-        <p class="engine-line">Now a <b>universal autoprompt engine</b>: state <b>any goal</b> in plain words — a realism shot, a post, an ad, an app, a deep-dive, instructions for an agent — and get an <b>expert-grade prompt</b>, formatted for the AI that does the work. Add it to your home screen and it's always one tap away.</p>
       </header>
+
+      <!-- ============ SIMPLE FRONT DOOR ============ -->
+      <section class="plate" id="plateSimple" aria-label="Make a prompt">
+        <label class="simple-q" for="sGoal">What do you want to make?</label>
+        <textarea id="sGoal" rows="2" autocomplete="off" placeholder="Say it in your own words — an ad for my shop, a photo of a cowboy at sunset, a game idea, instructions for an AI…"></textarea>
+        <div class="s-chips" id="sChips" role="group" aria-label="What kind of thing is it">
+          <button type="button" class="chip" data-kind="picture" aria-pressed="false">Picture</button>
+          <button type="button" class="chip" data-kind="video" aria-pressed="false">Video</button>
+          <button type="button" class="chip" data-kind="writing" aria-pressed="false">Writing</button>
+          <button type="button" class="chip" data-kind="ad" aria-pressed="false">Ad or Post</button>
+          <button type="button" class="chip" data-kind="code" aria-pressed="false">Code</button>
+          <button type="button" class="chip" data-kind="agent" aria-pressed="false">Agent Prompt</button>
+        </div>
+        <button type="button" class="btn-blue" id="sMake">Make my prompt</button>
+        <div id="sResult" hidden>
+          <p class="target-note" id="sInfer"></p>
+          <div class="out-block" id="sOutBlock">
+            <p class="out-text" id="sOut"></p>
+            <div class="out-actions">
+              <button type="button" class="btn-chrome" id="sCopy">Copy</button>
+              <span class="copy-note" id="sNote"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button type="button" class="btn-ghost more-toggle" id="moreBtn" aria-expanded="false" aria-controls="moreWrap">More options ▾</button>
+
+      <div id="moreWrap" hidden>
 
       <!-- ============ ENGINE PICKER ============ -->
       <section class="plate" aria-label="Choose your engine">
@@ -569,6 +607,10 @@
         <p class="target-note" id="tTargetNote"></p>
         <div id="tOutputs"></div>
       </section>
+
+      </div><!-- /#moreWrap -->
+
+      <p class="engine-line">Now a <b>universal autoprompt engine</b>: state <b>any goal</b> in plain words — a realism shot, a post, an ad, an app, a deep-dive, instructions for an agent — and get an <b>expert-grade prompt</b>, formatted for the AI that does the work. Add it to your home screen and it's always one tap away.</p>
 
       <footer>
         <div class="foot-brand">J-Dawgs Industries</div>
@@ -978,6 +1020,21 @@
 
         syncChips();
         render();
+
+        /* ---- bridge for the simple front door: set the dials from one
+           plain sentence, then hand back the Direct (Clean) prompt ---- */
+        window.HCPG = window.HCPG || {};
+        window.HCPG.realismSetup = function (goalText, isVideo, charName) {
+          $("subject").value = goalText;
+          $("target").value = isVideo ? "video" : "generic";
+          $("detail").value = "realism";
+          if (charName) {
+            $("likenessName").value = charName;
+            if (!likeness.on) $("likenessLock").click();
+          }
+          render();
+        };
+        window.HCPG.realismDirect = function () { return combinedText("clean"); };
       })();
     </script>
 
@@ -1616,6 +1673,174 @@
           $("plateTextOut").hidden = isReal;
           if (!isReal) loadFamily(fid);
         }
+
+        /* ---- bridge for the simple front door: feed one plain goal into
+           a family and hand back its Direct variant ---- */
+        window.HCPG = window.HCPG || {};
+        window.HCPG.textDirect = function (fid, goalText) {
+          state[fid].goal = goalText;
+          return buildTextVariant(fid, "direct");
+        };
+      })();
+    </script>
+
+    <script>
+      /* ============================================================
+         SIMPLE FRONT DOOR — one box, plain chips, one button.
+         Reads the goal in the user's own words, picks a kind (their
+         chip, or a plain guess from their words), and asks the two
+         engines above for their Direct prompt through the HCPG
+         bridges. Everything else lives under "More options".
+         ============================================================ */
+      (function () {
+        "use strict";
+        var $ = function (id) { return document.getElementById(id); };
+
+        var KIND_LABEL = {
+          picture: "a picture", video: "a video", writing: "writing",
+          ad: "an ad", code: "code", agent: "an agent prompt"
+        };
+        var TEXT_FID = { writing: "writing", ad: "business", code: "coding", agent: "agent" };
+
+        /* ---- chips: one at a time, tap again to clear ---- */
+        var chosen = null;
+        var chips = Array.prototype.slice.call(document.querySelectorAll("#sChips .chip"));
+        chips.forEach(function (c) {
+          c.addEventListener("click", function () {
+            var k = c.getAttribute("data-kind");
+            chosen = (chosen === k) ? null : k;
+            chips.forEach(function (x) {
+              var on = x.getAttribute("data-kind") === chosen;
+              x.classList.toggle("active", on);
+              x.setAttribute("aria-pressed", on ? "true" : "false");
+            });
+          });
+        });
+
+        /* ---- plain-word inference when no chip is picked ---- */
+        var SIGNALS = {
+          video:   ["video", "clip", "reel", "commercial", "animation", "animate", "footage", "movie", "tiktok", "short film"],
+          code:    ["code", "coding", "an app", "app that", "game", "website", "web page", "webpage", "script", "program", "debug", "software", "build me a"],
+          ad:      ["ad for", "advertis", "sell", "marketing", "promote", "promotion", "pitch", "flyer", "consignment", "facebook post", "instagram post", "social media post"],
+          agent:   ["agent", "system prompt", "instructions for an ai", "instructions for ai", "ai assistant", "chatbot", "bot that"],
+          picture: ["picture", "image", "photo", "portrait", "drawing", "draw ", "logo", "illustration", "painting", "poster", "cover art", "character"],
+          writing: ["write", "story", "article", "letter", "essay", "poem", "blog", "caption", "speech"]
+        };
+        function infer(goal) {
+          var g = " " + goal.toLowerCase() + " ";
+          var best = null, bestScore = 0;
+          Object.keys(SIGNALS).forEach(function (k) {
+            var score = 0;
+            SIGNALS[k].forEach(function (w) { if (g.indexOf(w) !== -1) score += 1; });
+            if (score > bestScore) { bestScore = score; best = k; }
+          });
+          if (best) return best;
+          if (/\b(man|woman|guy|girl|boy|cowboy|worker|king|queen|dog|cat|horse|car|truck|street|sunset|mountain|ocean|beach|city|night|rain|snow)\b/.test(g)) return "picture";
+          return "writing";
+        }
+
+        /* ---- a named character: "King Balsey", or "of Balsey" ---- */
+        function findName(goal) {
+          var m = goal.match(/\b([A-Z][a-z]+ [A-Z][a-z]+)\b/);
+          if (m) return m[1];
+          var m2 = goal.match(/\bof ([A-Z][a-z]+)\b/);
+          return m2 ? m2[1] : null;
+        }
+
+        /* ---- copy with the same visible fallback as the engines ---- */
+        var toastTimer = null;
+        function toast(msg) {
+          var t = $("toast");
+          t.textContent = msg;
+          t.classList.add("show");
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400);
+        }
+        function selectText(el) {
+          try {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          } catch (e) { /* best-effort */ }
+        }
+        var lastText = "";
+        $("sCopy").addEventListener("click", function () {
+          if (!lastText) return;
+          var btn = $("sCopy"), noteEl = $("sNote"), textEl = $("sOut");
+          function done(ok) {
+            if (ok) {
+              noteEl.textContent = "Copied.";
+              noteEl.className = "copy-note ok";
+              toast("Copied to clipboard");
+            } else {
+              selectText(textEl);
+              noteEl.textContent = "Copy was blocked — the text above is selected. Long-press it and tap Copy.";
+              noteEl.className = "copy-note warn";
+              toast("Text selected — long-press to copy");
+            }
+            var old = "Copy";
+            btn.textContent = ok ? "Copied ✓" : "Selected — long-press";
+            setTimeout(function () { btn.textContent = old; }, 2400);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(lastText).then(function () { done(true); }, function () {
+              selectText(textEl);
+              var ok = false;
+              try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+              done(ok);
+            });
+          } else {
+            selectText(textEl);
+            var ok2 = false;
+            try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
+            done(ok2);
+          }
+        });
+
+        /* ---- the one button ---- */
+        $("sMake").addEventListener("click", function () {
+          var goal = $("sGoal").value.trim();
+          var result = $("sResult"), block = $("sOutBlock");
+          if (!goal) {
+            lastText = "";
+            $("sInfer").textContent = "First, tell me what you want to make — one plain sentence in the box above is plenty.";
+            block.hidden = true;
+            result.hidden = false;
+            $("sGoal").focus();
+            return;
+          }
+          var kind = chosen || infer(goal);
+          var wasInferred = !chosen;
+          var name = null, text = "";
+          if (kind === "picture" || kind === "video") {
+            name = findName(goal);
+            window.HCPG.realismSetup(goal, kind === "video", name);
+            text = window.HCPG.realismDirect();
+          } else {
+            text = window.HCPG.textDirect(TEXT_FID[kind], goal);
+          }
+          lastText = text;
+          var line = "Made as: " + KIND_LABEL[kind] + ".";
+          if (name) line += " " + name + " is played by their real likeness.";
+          if (wasInferred) line += " (We picked that from your words — change it under More options.)";
+          $("sInfer").textContent = line;
+          $("sOut").textContent = text;
+          $("sNote").textContent = "";
+          block.hidden = false;
+          result.hidden = false;
+          result.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        });
+
+        /* ---- the fold: everything else, closed by default ---- */
+        $("moreBtn").addEventListener("click", function () {
+          var wrap = $("moreWrap");
+          var opening = wrap.hidden;
+          wrap.hidden = !opening;
+          this.setAttribute("aria-expanded", opening ? "true" : "false");
+          this.textContent = opening ? "Hide options ▴" : "More options ▾";
+        });
       })();
     </script>
   </body>
