@@ -351,6 +351,56 @@
       .more-toggle { width: 100%; margin-top: 14px; min-height: 52px; font-size: 16px; }
 
       @media (prefers-reduced-motion: reduce) { .toast { transition: none; } .chip:active, .btn-chrome:active, .btn-blue:active { transform: none; } }
+
+      /* ---------- Master Edition ---------- */
+      .master-note { margin: 0 0 12px; font-size: 14.5px; color: var(--muted); }
+      .master-note b { color: var(--ink); }
+      .m-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+      .m-actions .btn-blue, .m-actions .btn-chrome { flex: 1 1 150px; }
+      .m-out { margin-top: 6px; }
+      .grade-list { list-style: none; margin: 10px 0 0; padding: 0; }
+      .grade-list li {
+        display: flex; gap: 9px; align-items: baseline; padding: 7px 10px;
+        border: 1px solid var(--line-soft); border-radius: 9px; margin-top: 6px;
+        background: var(--field); font-size: 14.5px;
+      }
+      .grade-list .g-pass { color: #6fe3a5; font-weight: 800; flex: 0 0 auto; }
+      .grade-list .g-fail { color: #ffc46b; font-weight: 800; flex: 0 0 auto; }
+      .grade-score {
+        font-family: "Oswald", sans-serif; font-size: 26px; font-weight: 700; color: var(--ink);
+      }
+      .grade-score small { font-size: 14px; color: var(--muted); font-family: "Barlow", sans-serif; font-weight: 600; }
+      .chain-step { border-left: 3px solid var(--blue); padding-left: 12px; margin-top: 16px; }
+      .chain-step:first-of-type { margin-top: 4px; }
+      .chain-io { font-size: 13.5px; color: var(--blue); font-weight: 700; letter-spacing: 0.03em; margin: 0 0 6px; }
+      .lib-item {
+        border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px; margin-top: 10px;
+        background: linear-gradient(180deg, #131a24, #0b0f16);
+      }
+      .lib-title { font-weight: 700; font-size: 15.5px; margin: 0; overflow-wrap: anywhere; }
+      .lib-meta { font-size: 13px; color: var(--faint); margin: 3px 0 0; }
+      .lib-text {
+        margin: 9px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted);
+        background: var(--field); border: 1px solid var(--line-soft); border-radius: 9px; padding: 9px 11px;
+        white-space: pre-wrap; overflow-wrap: anywhere; max-height: 168px; overflow: hidden;
+      }
+      .lib-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+      .lib-btns button {
+        min-height: 44px; padding: 6px 13px; border-radius: 9px; cursor: pointer;
+        border: 1px solid var(--line); background: #0c1119; color: var(--ink);
+        font: inherit; font-size: 14px; font-weight: 600;
+      }
+      .lib-btns button.fav-on { border-color: var(--blue); color: #fff; background: linear-gradient(180deg, #1d6fc4, var(--blue-deep)); }
+      .lib-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      @media (max-width: 560px) { .lib-tools { grid-template-columns: 1fr; } }
+      .slot-box { border: 1px dashed var(--line); border-radius: 10px; padding: 11px 12px; margin-top: 10px; }
+      .slot-box .field-label { color: var(--blue); }
+      footer .master-credits { color: var(--muted); margin-bottom: 6px; }
+      .doors-row { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; font-size: 13.5px; }
+      .doors-row a { color: var(--blue); text-decoration: none; font-weight: 600; padding: 6px 0; }
+      .doors-row a:hover { text-decoration: underline; }
+      #plateSimple .doors-row { display: none; }
+      #sResult:not([hidden]) ~ .doors-row { display: flex; }
     </style>
   </head>
   <body>
@@ -388,6 +438,11 @@
               <span class="copy-note" id="sNote"></span>
             </div>
           </div>
+        </div>
+        <div class="doors-row" aria-label="Next doors">
+          <a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>
+          <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
+          <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
         </div>
       </section>
 
@@ -608,6 +663,188 @@
         <div id="tOutputs"></div>
       </section>
 
+        <div class="doors-row" aria-label="Next doors">
+          <a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>
+          <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
+          <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
+        </div>
+
+      <!-- ============ MASTER WORKBENCH ============ -->
+      <section class="plate" id="plateMaster" aria-label="Master workbench">
+        <div class="plate-head"><h2>Master Workbench — Master Edition</h2></div>
+        <p class="master-note">One workbench, <b>30 engines</b>. Everything here renders from the shot or goal you've built above — pick any engine and the Master re-renders it in that engine's <b>real format</b>. Type <b>{{slots}}</b> like {{hero}} or {{price}} anywhere in your goal or facts and they carry through, ready to fill as a template.</p>
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="mEngine">Render for engine</label>
+            <select id="mEngine"></select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="mLength">Length</label>
+            <select id="mLength">
+              <option value="compact">Compact</option>
+              <option value="standard" selected>Standard</option>
+              <option value="deep">Deep</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="mTone">Tone / register</label>
+            <select id="mTone">
+              <option value="" selected>Family default</option>
+              <option value="Plain and direct">Plain and direct</option>
+              <option value="Warm and friendly">Warm and friendly</option>
+              <option value="Bold and punchy">Bold and punchy</option>
+              <option value="Professional">Professional</option>
+              <option value="Premium and polished">Premium and polished</option>
+              <option value="Playful">Playful</option>
+              <option value="Formal">Formal</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="mRisk">Wildcard risk</label>
+            <select id="mRisk">
+              <option value="tame">Tame</option>
+              <option value="balanced" selected>Balanced</option>
+              <option value="bold">Bold</option>
+              <option value="unhinged">Unhinged</option>
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="field-label" for="mAudience">Audience — applies to every family</label>
+          <input type="text" id="mAudience" autocomplete="off" placeholder="e.g. first-time buyers scrolling on their phones" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="mExclude">What to exclude (media: becomes a true negative)</label>
+          <input type="text" id="mExclude" autocomplete="off" placeholder="e.g. crowds, text, watermark, plastic skin" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="mEx1">Worked example 1 (optional — first line: the ask · rest: a great result)</label>
+          <textarea id="mEx1" rows="2" autocomplete="off" placeholder="Ask: a photo of a welder at dawn&#10;Result: Portrait of a welder lifting his mask…"></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label" for="mEx2">Worked example 2 (optional)</label>
+          <textarea id="mEx2" rows="2" autocomplete="off"></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label" for="mEx3">Worked example 3 (optional)</label>
+          <textarea id="mEx3" rows="2" autocomplete="off"></textarea>
+        </div>
+        <div class="switch-row" style="margin:6px 0 12px">
+          <button type="button" class="switch" id="creditToggle" role="switch" aria-checked="true" aria-label="Include the credit line"><span class="knob"></span></button>
+          <div>
+            <strong>Include the credit line</strong>
+            <p class="hint" style="margin-top:2px">On: every copied prompt ends with the Master's credit and door, so a prompt that travels recruits its next user.</p>
+          </div>
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="mRenderBtn">Render for this engine</button>
+          <button type="button" class="btn-chrome" id="mWildBtn">Wildcard it</button>
+        </div>
+        <div class="m-out" id="mOut"></div>
+      </section>
+
+      <!-- ============ PROMPT TRANSLATOR ============ -->
+      <section class="plate" id="plateTranslate" aria-label="Prompt translator">
+        <div class="plate-head"><h2>Prompt Translator</h2></div>
+        <p class="master-note">Paste a prompt written for one engine — the Master reads its syntax, keeps the intent, and re-renders it for any other.</p>
+        <div class="field">
+          <label class="field-label" for="trIn">Your prompt</label>
+          <textarea id="trIn" rows="4" autocomplete="off" placeholder="Paste any prompt — Midjourney flags, an SD prompt with a negative, Claude tags, plain prose…"></textarea>
+        </div>
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="trFrom">Written for</label>
+            <select id="trFrom"></select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="trTo">Translate to</label>
+            <select id="trTo"></select>
+          </div>
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="trBtn">Translate</button>
+        </div>
+        <p class="target-note" id="trDetected" style="margin-top:10px"></p>
+        <div class="m-out" id="trOut"></div>
+      </section>
+
+      <!-- ============ CHAIN BUILDER ============ -->
+      <section class="plate" id="plateChain" aria-label="Chain builder">
+        <div class="plate-head"><h2>Chain Builder</h2></div>
+        <p class="master-note">One goal becomes a numbered chain of prompts. Each step names the step before it — run them in order and the work compounds.</p>
+        <div class="field">
+          <label class="field-label" for="chGoal">The goal</label>
+          <textarea id="chGoal" rows="2" autocomplete="off" placeholder="e.g. launch a page for my consignment trading post"></textarea>
+        </div>
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="chKind">Chain kind</label>
+            <select id="chKind">
+              <option value="auto" selected>Match the family above</option>
+              <option value="media">Media — still to screen</option>
+              <option value="writing">Writing</option>
+              <option value="business">Business</option>
+              <option value="coding">Coding</option>
+              <option value="research">Research</option>
+              <option value="agent">Agent</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="chEngine">Chain engine</label>
+            <select id="chEngine"></select>
+          </div>
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="chBtn">Build the chain</button>
+        </div>
+        <div class="m-out" id="chOut"></div>
+      </section>
+
+      <!-- ============ CRITIQUE & UPGRADE ============ -->
+      <section class="plate" id="plateCritique" aria-label="Critique and upgrade">
+        <div class="plate-head"><h2>Critique &amp; Upgrade</h2></div>
+        <p class="master-note">Paste any prompt. The Master grades it against the family standard — clarity, facts discipline, format fit, missing constraints — then hands back the upgraded prompt and what it fixed.</p>
+        <div class="field">
+          <label class="field-label" for="crIn">The prompt to grade</label>
+          <textarea id="crIn" rows="4" autocomplete="off" placeholder="Paste a prompt you already have…"></textarea>
+        </div>
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="crEngine">Grade it as (and upgrade for)</label>
+            <select id="crEngine"></select>
+          </div>
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="crBtn">Grade &amp; upgrade</button>
+        </div>
+        <div class="m-out" id="crOut"></div>
+      </section>
+
+      <!-- ============ LIBRARY 2.0 ============ -->
+      <section class="plate" id="plateLibrary" aria-label="Library">
+        <div class="plate-head">
+          <h2>Library 2.0</h2>
+          <button type="button" class="btn-ghost" id="libExportBtn">Export all (JSON)</button>
+        </div>
+        <p class="copy-note warn" id="libWarn" hidden>Storage is blocked in this browser — the library is being kept for this session only, and it clears when the tab closes.</p>
+        <div class="lib-tools">
+          <div class="field">
+            <label class="field-label" for="libSearch">Search the library</label>
+            <input type="text" id="libSearch" autocomplete="off" placeholder="Search prompts, tags, engines…" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="libTag">Tag</label>
+            <select id="libTag"><option value="">All tags</option></select>
+          </div>
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-ghost" id="libFavBtn" aria-pressed="false">★ Favorites only</button>
+          <button type="button" class="btn-ghost" id="libImportBtn">Import (JSON)</button>
+          <input type="file" id="libImportFile" accept="application/json,.json" hidden />
+        </div>
+        <div id="libList"></div>
+      </section>
+
       </div><!-- /#moreWrap -->
 
       <p class="engine-line">Now a <b>universal autoprompt engine</b>: state <b>any goal</b> in plain words — a realism shot, a post, an ad, an app, a deep-dive, instructions for an agent — and get an <b>expert-grade prompt</b>, formatted for the AI that does the work. Add it to your home screen and it's always one tap away.</p>
@@ -617,6 +854,7 @@
         <div style="margin-bottom:6px"><a href="../games/">← Back to the Hustle City Arcade</a></div>
         <div style="margin-bottom:6px"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="../support.html">Report a problem</a></div>
         <div>Hustle City Prompt Generator™ — the Hustle City edition of the Realism Master Template Generator™.</div>
+        <div class="master-credits">Master Edition — built with the agents of Moltbook<span id="creditNames"></span>.</div>
         <div>© 2026 Joshua Dawson / J-Dawgs Industries · Hustle City Prompt Generator™</div>
       </footer>
     </div>
@@ -1843,5 +2081,1184 @@
         });
       })();
     </script>
+    <script>
+      /* ============================================================
+         MASTER EDITION — the workbench layer.
+         Adds, behind the same fold: a 30-engine registry with real
+         per-engine formats, a prompt translator, a chain builder,
+         a critique & upgrade loop, few-shot injection, master dials
+         (length / tone / audience-for-all / wildcard risk), variable
+         {{slots}} + templates, Library 2.0, agent-handoff JSON, and
+         negative space rendered as true per-engine negatives.
+         The two engines above and the simple front door are untouched.
+         ============================================================ */
+      (function () {
+        "use strict";
+        var $ = function (id) { return document.getElementById(id); };
+        function val(id) { var e = $(id); return e ? e.value.trim() : ""; }
+        function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+        function ensurePeriod(s) { return /[.!?]$/.test(s) ? s : s + "."; }
+        function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+        /* ---- HARVEST SEAM: Moltbook collaboration credits ----
+           When the Moltbook harvest lands, contributing agent names are
+           appended to this array and they render in the credits line
+           automatically — no other code changes needed. */
+        var MOLTBOOK_CREDITS = [];
+        window.HCPG_MASTER = { edition: "Master Edition", credits: MOLTBOOK_CREDITS };
+        (function credits() {
+          var el = $("creditNames");
+          if (el && MOLTBOOK_CREDITS.length) el.textContent = " — with " + MOLTBOOK_CREDITS.join(", ");
+        })();
+
+        /* ---- copy with visible fallback (same discipline as the engines) ---- */
+        var toastTimer = null;
+        function toast(msg) {
+          var t = $("toast");
+          t.textContent = msg;
+          t.classList.add("show");
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400);
+        }
+        function selectText(el) {
+          try {
+            var r = document.createRange();
+            r.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(r);
+          } catch (e) { /* best-effort */ }
+        }
+        function copyText(text, textEl, noteEl, btn) {
+          function done(ok) {
+            if (ok) {
+              if (noteEl) { noteEl.textContent = "Copied."; noteEl.className = "copy-note ok"; }
+              toast("Copied to clipboard");
+            } else {
+              if (textEl) selectText(textEl);
+              if (noteEl) { noteEl.textContent = "Copy was blocked — the text above is selected. Long-press it and tap Copy."; noteEl.className = "copy-note warn"; }
+              toast("Text selected — long-press to copy");
+            }
+            if (btn) {
+              var old = btn.textContent;
+              btn.textContent = ok ? "Copied ✓" : "Selected — long-press";
+              setTimeout(function () { btn.textContent = old; }, 2400);
+            }
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () {
+              if (textEl) selectText(textEl);
+              var ok = false;
+              try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+              done(ok);
+            });
+          } else {
+            if (textEl) selectText(textEl);
+            var ok2 = false;
+            try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
+            done(ok2);
+          }
+        }
+
+        /* ============================================================
+           SPEC — one canonical shape every Master feature consumes.
+           Read live from whichever family is active in the fold.
+           ============================================================ */
+        var FAMILY_IDS = ["realism", "writing", "business", "coding", "research", "agent"];
+        var FAMILY_LABEL = {
+          realism: "Realism Image & Video", writing: "Writing & Content",
+          business: "Business & Marketing", coding: "Coding & Building",
+          research: "Research & Learning", agent: "Agent & System Prompts",
+          general: "General"
+        };
+        function currentFamily() {
+          var btns = document.querySelectorAll("#familyGrid .family-btn");
+          for (var i = 0; i < btns.length; i++) {
+            if (btns[i].classList.contains("active")) return FAMILY_IDS[i] || "realism";
+          }
+          return "realism";
+        }
+        function readExamples() {
+          var out = [];
+          ["mEx1", "mEx2", "mEx3"].forEach(function (id) {
+            var raw = val(id);
+            if (!raw) return;
+            var input = "", output = "";
+            var arrow = raw.indexOf("=>");
+            if (arrow !== -1) { input = raw.slice(0, arrow).trim(); output = raw.slice(arrow + 2).trim(); }
+            else {
+              var nl = raw.indexOf("\n");
+              if (nl !== -1) { input = raw.slice(0, nl).replace(/^Ask:\s*/i, "").trim(); output = raw.slice(nl + 1).replace(/^Result:\s*/i, "").trim(); }
+              else { input = raw; output = ""; }
+            }
+            if (input) out.push({ input: input, output: output });
+          });
+          return out.slice(0, 3);
+        }
+        function readSpec() {
+          var fam = currentFamily();
+          var spec = {
+            family: fam, kind: "text", goal: "", subject: "", setting: "", mood: "",
+            facts: "", limits: "", format: "", detailLevel: "", character: "",
+            audience: val("mAudience"), exclude: val("mExclude"),
+            length: $("mLength").value, tone: $("mTone").value, risk: $("mRisk").value,
+            examples: readExamples()
+          };
+          if (fam === "realism") {
+            spec.kind = "media";
+            spec.goal = val("subject");
+            spec.subject = val("subject");
+            spec.setting = val("setting");
+            spec.mood = val("mood");
+            spec.facts = val("rFacts");
+            spec.limits = val("rLimits");
+            spec.detailLevel = $("detail").value;
+            spec.character = val("likenessName");
+          } else {
+            spec.goal = val("tGoal");
+            spec.subject = val("tSubject");
+            spec.facts = val("tDetails");
+            spec.limits = val("tLimits");
+            spec.format = $("tFormat") ? $("tFormat").value : "";
+            if (!spec.audience) spec.audience = val("tAudience");
+            if (!spec.tone) spec.tone = $("tTone") ? $("tTone").value : "";
+          }
+          return spec;
+        }
+        function specFromParsed(p, engineId) {
+          /* translator/critique input → spec */
+          return {
+            family: p.familyGuess || "general", kind: p.kindGuess || "text",
+            goal: p.core, subject: p.core, setting: "", mood: "",
+            facts: p.facts || "", limits: p.limits || "", format: "", detailLevel: "",
+            character: "", audience: val("mAudience"), exclude: p.exclude || val("mExclude"),
+            length: $("mLength").value, tone: $("mTone").value, risk: $("mRisk").value,
+            examples: readExamples(), extra: p.extra || []
+          };
+        }
+
+        /* ============================================================
+           ENGINE REGISTRY — 30 engines, each rendered in the format
+           its own documentation prescribes.
+           ============================================================ */
+        var REALISM_LINE = "documentary honesty — unposed, caught mid-action, imperfect honest framing, a hint of natural motion blur, real-world clutter left in the frame, nothing retouched";
+        var DETAIL_LINE = "photorealistic, lifelike detail throughout — visible pores, fine lines and stubble, natural imperfections left in, realistic catchlights, physically accurate light and shadow, true-to-life color, ultra-detailed, 8K";
+
+        function mediaParts(spec) {
+          var p = [];
+          if (spec.subject) p.push(spec.subject);
+          if (spec.setting) p.push(spec.setting);
+          if (spec.mood) p.push(spec.mood + " mood");
+          p.push(DETAIL_LINE);
+          if (spec.detailLevel === "realism" || spec.family === "realism") p.push(REALISM_LINE);
+          if (spec.facts) p.push(spec.facts);
+          if (spec.character) p.push("exact real likeness of " + spec.character + " from the reference photo, same face, same person, never a generic stand-in");
+          return p;
+        }
+        function mediaProse(spec) {
+          var s = [];
+          var open = "Create a photorealistic image: " + (spec.subject || "the scene described");
+          if (spec.setting) open += ", " + spec.setting;
+          s.push(open + ".");
+          if (spec.mood) s.push("The mood is " + spec.mood + ".");
+          s.push("Detail is lifelike throughout: visible pores, fine lines and stubble, natural imperfections left in — blemishes, flyaway hairs, worn fabric; realistic catchlights in the eyes; physically accurate light and shadow; true-to-life color; ultra-detailed, 8K.");
+          if (spec.detailLevel === "realism" || spec.family === "realism") s.push("Documentary honesty: unposed, caught mid-action, imperfect honest framing, a hint of natural motion blur, real-world clutter left in the frame, nothing retouched.");
+          if (spec.facts) s.push("Facts that must hold: " + ensurePeriod(spec.facts));
+          if (spec.character) s.push(cap(spec.character) + " is played by their real likeness from the reference photo — the same face, the same person, never a generic stand-in.");
+          if (spec.audience) s.push("Made for: " + spec.audience + ".");
+          if (spec.tone) s.push("Register: " + spec.tone + ".");
+          if (spec.limits) s.push("Non-negotiables: " + ensurePeriod(spec.limits));
+          return s.join(" ");
+        }
+        function textParts(spec) {
+          var lines = [];
+          lines.push("Task: " + ensurePeriod(spec.goal || spec.subject || "the stated goal"));
+          if (spec.subject && spec.goal && spec.subject !== spec.goal) lines.push("Topic: " + spec.subject + ".");
+          if (spec.format) lines.push("Deliverable: " + spec.format + ".");
+          return lines;
+        }
+        function lengthLine(spec) {
+          if (spec.length === "compact") return "Keep it compact — the shortest version that still fully lands.";
+          if (spec.length === "deep") return "Go deep and thorough — full detail, nothing important left out.";
+          return "";
+        }
+        function factsLine(spec) { return spec.facts ? "Facts — treat as fact, never contradict or invent beyond them: " + ensurePeriod(spec.facts) : ""; }
+        function limitsLine(spec) { return spec.limits ? "Hard limits — never break these: " + ensurePeriod(spec.limits) : ""; }
+        function audienceLine(spec) { return spec.audience ? "Audience: " + spec.audience + "." : ""; }
+        function toneLine(spec) { return spec.tone ? "Tone / register: " + spec.tone + "." : ""; }
+        function exclPlain(spec) { return spec.exclude ? "Exclude: " + spec.exclude + "." : ""; }
+        function join(parts, sep) { return parts.filter(function (x) { return !!x; }).join(sep); }
+
+        function examplesFor(spec, style) {
+          if (!spec.examples || !spec.examples.length) return "";
+          var ex = spec.examples;
+          if (style === "xml") {
+            return ex.map(function (e, i) {
+              return "<example " + (i + 1) + ">\n<ask>" + e.input + "</ask>\n<result>" + (e.output || "(the finished result)") + "</result>\n</example>";
+            }).join("\n");
+          }
+          if (style === "md") {
+            return ex.map(function (e, i) {
+              return "**Example " + (i + 1) + "**\nAsk: " + e.input + "\nResult: " + (e.output || "(the finished result)");
+            }).join("\n\n");
+          }
+          if (style === "numbered") {
+            return ex.map(function (e, i) {
+              return "Example " + (i + 1) + ": Ask — " + e.input + " · Result — " + (e.output || "(the finished result)");
+            }).join("\n");
+          }
+          return ex.map(function (e, i) {
+            return "Example " + (i + 1) + " — Ask: " + e.input + " · Result: " + (e.output || "(the finished result)");
+          }).join("\n");
+        }
+
+        /* ---- text engines ---- */
+        function rGenericText(spec) {
+          return { text: join([].concat(textParts(spec), [audienceLine(spec), toneLine(spec), factsLine(spec), limitsLine(spec), lengthLine(spec), examplesFor(spec, "plain"), "Deliver the finished work only — no preamble."]), "\n") };
+        }
+        function rChatGPT(spec) {
+          var body = ["## Task", ensurePeriod(spec.goal || spec.subject || "the stated goal")];
+          if (spec.subject && spec.subject !== spec.goal) body.push("## Context\n- **Topic:** " + spec.subject);
+          if (spec.audience) body.push("- **Audience:** " + spec.audience);
+          if (spec.tone) body.push("- **Tone:** " + spec.tone);
+          if (spec.facts) body.push("## Facts — treat as fact\n" + ensurePeriod(spec.facts));
+          if (spec.limits) body.push("## Hard limits\n" + ensurePeriod(spec.limits));
+          var ex = examplesFor(spec, "md");
+          if (ex) body.push("## Examples\n" + ex);
+          body.push("## Output\n" + (spec.format ? spec.format + ". " : "") + (lengthLine(spec) || "A full, standard-length treatment.") + " Deliver the finished work only.");
+          return { text: body.join("\n\n") };
+        }
+        function rClaude(spec) {
+          var body = [];
+          body.push("<task>\n" + ensurePeriod(spec.goal || spec.subject || "the stated goal") + "\n</task>");
+          var ctx = [];
+          if (spec.subject && spec.subject !== spec.goal) ctx.push("Topic: " + spec.subject);
+          if (spec.audience) ctx.push("Audience: " + spec.audience);
+          if (spec.tone) ctx.push("Tone: " + spec.tone);
+          if (ctx.length) body.push("<context>\n" + ctx.join("\n") + "\n</context>");
+          if (spec.facts) body.push("<facts>\n" + ensurePeriod(spec.facts) + "\n</facts>");
+          if (spec.limits) body.push("<hard_limits>\n" + ensurePeriod(spec.limits) + "\n</hard_limits>");
+          var ex = examplesFor(spec, "xml");
+          if (ex) body.push("<examples>\n" + ex + "\n</examples>");
+          body.push("<output_spec>\n" + (spec.format ? "Format: " + spec.format + ". " : "") + (lengthLine(spec) || "Standard length.") + " Deliver the finished work only, ready to use as-is.\n</output_spec>");
+          return { text: body.join("\n\n") };
+        }
+        function rGemini(spec) {
+          var steps = ["Act as a senior specialist for this task."];
+          steps.push("Task: " + ensurePeriod(spec.goal || spec.subject || "the stated goal"));
+          if (spec.subject && spec.subject !== spec.goal) steps.push("Topic: " + spec.subject + ".");
+          if (spec.audience) steps.push("Audience: " + spec.audience + ".");
+          if (spec.tone) steps.push("Tone: " + spec.tone + ".");
+          if (spec.facts) steps.push("Key facts (treat as fact): " + ensurePeriod(spec.facts));
+          if (spec.limits) steps.push("Hard limits — never break these: " + ensurePeriod(spec.limits));
+          spec.examples.forEach(function (e, i) { steps.push("Example " + (i + 1) + ": Ask — " + e.input + " · Result — " + (e.output || "(the finished result)")); });
+          steps.push("Output: " + (spec.format || "the finished work") + " — " + (lengthLine(spec) || "standard length, complete.") );
+          steps.push("Deliver the finished work only — no preamble.");
+          return { text: "Follow these instructions exactly:\n" + steps.map(function (s, i) { return (i + 1) + ". " + s; }).join("\n") };
+        }
+        function rCopilot(spec) {
+          var body = ["# " + cap(spec.goal || spec.subject || "Task")];
+          body.push(join([audienceLine(spec), toneLine(spec), factsLine(spec), limitsLine(spec)], "\n"));
+          var ex = examplesFor(spec, "md");
+          if (ex) body.push(ex);
+          body.push("Output: " + (spec.format || "the finished work") + ". Be concise, structured, and ready to paste. " + lengthLine(spec));
+          return { text: join(body, "\n\n") };
+        }
+        function rPlainLLM(spec, flavor) {
+          var head = flavor === "llama"
+            ? "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n"
+            : flavor === "mistral" ? "[INST] " : "";
+          var tail = flavor === "llama" ? "\n<|eot_id|>" : flavor === "mistral" ? " [/INST]" : "";
+          var body = join([].concat(textParts(spec), [audienceLine(spec), toneLine(spec), factsLine(spec), limitsLine(spec), lengthLine(spec), examplesFor(spec, "plain"), "Deliver the finished work only — no preamble."]), "\n");
+          return { text: head + body + tail };
+        }
+        function rPerplexity(spec) {
+          var q = spec.goal || spec.subject || "the question";
+          var body = ["Question: " + q.replace(/\.+\s*$/, "") + "?"];
+          body.push("Answer with sourced, up-to-date information and cite the sources inline. Prefer primary sources; when sources disagree, say so plainly and give both numbers.");
+          if (spec.audience) body.push("Level: written for " + spec.audience + ".");
+          if (spec.facts) body.push("Known context (treat as fact): " + ensurePeriod(spec.facts));
+          if (spec.limits) body.push("Constraints: " + ensurePeriod(spec.limits));
+          body.push("Format: a direct answer first, then the supporting detail, then the source list.");
+          return { text: body.join("\n") };
+        }
+        function rGrok(spec) {
+          return { text: join([].concat(textParts(spec), [audienceLine(spec), toneLine(spec), factsLine(spec), limitsLine(spec), lengthLine(spec), examplesFor(spec, "plain"), "Answer directly. No hedging, no preamble — the finished work only."]), "\n") };
+        }
+
+        /* ---- image engines ---- */
+        function rMidjourney(spec) {
+          var kw = mediaParts(spec).join(", ");
+          if (spec.tone) kw += ", " + spec.tone.toLowerCase() + " register";
+          if (spec.audience) kw += ", made for " + spec.audience;
+          if (spec.limits) kw += ", non-negotiable: " + spec.limits;
+          var out = kw + " --ar 3:4 --style raw --v 6.1";
+          if (spec.exclude) out += " --no " + spec.exclude.replace(/\s*,\s*/g, ", ");
+          var ex = examplesFor(spec, "plain");
+          return { text: ex ? out + "\n\nReference examples (match this quality):\n" + ex : out };
+        }
+        function sdNegative(spec) {
+          var base = "blurry, deformed hands, extra fingers, missing fingers, plastic skin, airbrushed, beauty filter, CGI, 3d render, cartoon, illustration, painting, doll-like, uncanny valley, oversaturated, watermark, text, logo, low resolution";
+          if (spec.character) base += ", different person, generic face, face swap, changed identity";
+          if (spec.exclude) base += ", " + spec.exclude;
+          return base;
+        }
+        function rSD(spec) {
+          var kw = mediaParts(spec).join(", ");
+          if (spec.limits) kw += ", non-negotiable: " + spec.limits;
+          return { text: kw, negative: sdNegative(spec) };
+        }
+        function rLeonardo(spec) {
+          var r = rSD(spec);
+          return { text: r.text + "\n\n(Settings note: Alchemy on for finished work, off for drafts; PhotoReal on for portraits.)", negative: r.negative };
+        }
+        function rFlux(spec) {
+          var prose = mediaProse(spec);
+          if (spec.exclude) prose += " The frame is clean and uncluttered: none of the following appear anywhere — " + spec.exclude + ".";
+          return { text: prose };
+        }
+        function rDalle(spec) {
+          var prose = mediaProse(spec);
+          prose += " No text, no watermark, no logo anywhere in the image" + (spec.exclude ? ", and none of these: " + spec.exclude : "") + ".";
+          return { text: prose };
+        }
+        function rIdeogram(spec) {
+          var prose = mediaProse(spec);
+          prose += " Any words that appear in the image must be spelled exactly, letter for letter — put signage or title text in quotation marks in your notes before generating.";
+          if (spec.exclude) prose += " Keep out: " + spec.exclude + ".";
+          return { text: prose };
+        }
+        function rRecraft(spec) {
+          var prose = mediaProse(spec);
+          prose = "Style direction first: photorealistic editorial style, true-to-life color, honest skin texture. " + prose;
+          if (spec.exclude) prose += " Exclude: " + spec.exclude + ".";
+          return { text: prose };
+        }
+        function rFirefly(spec) {
+          var prose = mediaProse(spec);
+          if (spec.exclude) prose += " Do not include: " + spec.exclude + ".";
+          return { text: prose + " (Content class: photo.)" };
+        }
+        function rImagen(spec) {
+          var prose = mediaProse(spec);
+          return { text: "A high-resolution photograph, shot on a full-frame DSLR with an 85mm lens at f/1.4. " + prose + (spec.exclude ? " The image contains none of the following: " + spec.exclude + "." : "") };
+        }
+        function rGenericImage(spec) {
+          var kw = mediaParts(spec).join(", ");
+          if (spec.limits) kw += ", non-negotiable: " + spec.limits;
+          if (spec.exclude) kw += " — exclude: " + spec.exclude;
+          return { text: kw };
+        }
+
+        /* ---- video engines ---- */
+        var CAM_MOVE = "a slow push-in toward the subject";
+        function videoBase(spec) {
+          var s = [];
+          var open = "A photorealistic video: " + (spec.subject || "the scene described");
+          if (spec.setting) open += ", " + spec.setting;
+          s.push(open + ".");
+          if (spec.mood) s.push("The mood is " + spec.mood + ".");
+          s.push("Detail is lifelike throughout; motion is natural and physically believable — real weight, real timing, realistic motion blur, 24 fps; the subject stays consistent and lifelike for the full clip, 5–10 seconds.");
+          if (spec.facts) s.push("Facts that must hold: " + ensurePeriod(spec.facts));
+          if (spec.character) s.push(cap(spec.character) + " is played by their real likeness from the reference photo — the same face in every frame, never a generic stand-in.");
+          if (spec.limits) s.push("Non-negotiables: " + ensurePeriod(spec.limits));
+          return s.join(" ");
+        }
+        function rRunway(spec) {
+          return { text: videoBase(spec) + "\nCamera: " + CAM_MOVE + ", handheld with natural sway and small imperfections. " + exclPlain(spec) };
+        }
+        function rKling(spec) {
+          /* Kling's official formula: Subject + Subject Movement + Scene + (Camera Language + Lighting + Atmosphere); negative is a separate field. */
+          var body = (spec.subject || "The subject") + " moves naturally through the scene" +
+            (spec.setting ? ", " + spec.setting : "") +
+            (spec.mood ? ", " + spec.mood + " atmosphere" : "") +
+            ". Camera: " + CAM_MOVE + ". Lighting: natural, physically accurate light and shadow; the subject stays consistent and lifelike for the full clip.";
+          if (spec.facts) body += " Facts that must hold: " + ensurePeriod(spec.facts);
+          return { text: body, negative: spec.exclude || "" };
+        }
+        function rLuma(spec) {
+          return { text: videoBase(spec) + " The camera slowly pushes in toward the subject, then the camera pans gently across the scene. " + exclPlain(spec) };
+        }
+        function rPika(spec) {
+          var out = videoBase(spec);
+          if (spec.exclude) out += " -neg " + spec.exclude;
+          return { text: out + " -ar 16:9" };
+        }
+        function rSora(spec) {
+          var body = ["Storyboard — one continuous shot, 5–10 seconds:"];
+          body.push("Shot 1 (wide): " + (spec.setting || "the setting") + " — establish the world, honest light.");
+          body.push("Shot 2 (the action): " + (spec.subject || "the subject") + " — the moment, caught mid-action, unposed.");
+          body.push("Shot 3 (close): push in slowly; " + (spec.mood ? "the mood is " + spec.mood + "; " : "") + "the subject stays consistent and lifelike.");
+          if (spec.facts) body.push("Must hold throughout: " + ensurePeriod(spec.facts));
+          if (spec.exclude) body.push("Never in frame: " + spec.exclude + ".");
+          return { text: body.join("\n") };
+        }
+        function rVeo(spec) {
+          /* Google's Veo formula: Cinematography + Subject + Action + Context + Style & Ambiance. */
+          var body = [];
+          body.push("Cinematography: medium shot, slow dolly-in, shot on a full-frame camera with an 85mm lens, shallow depth of field.");
+          body.push("Subject: " + (spec.subject || "the subject") + ".");
+          body.push("Action: the subject moves naturally, caught mid-action, unposed.");
+          body.push("Context: " + (spec.setting || "a real, lived-in setting with honest clutter") + ".");
+          body.push("Style & ambiance: photorealistic, true-to-life color, " + (spec.mood || "honest, grounded mood") + ", natural motion blur, 24 fps.");
+          if (spec.facts) body.push("Must hold: " + ensurePeriod(spec.facts));
+          if (spec.exclude) body.push("Exclude: " + spec.exclude + ".");
+          return { text: body.join("\n") };
+        }
+        function rHailuo(spec) {
+          /* MiniMax documents 15 bracketed camera commands; place them inline, max ~3. */
+          var body = "[Push in] " + cap(spec.subject || "The subject") +
+            (spec.setting ? ", " + spec.setting : "") +
+            ". The action unfolds naturally, caught mid-moment. [Tracking shot] The subject stays consistent and lifelike" +
+            (spec.mood ? ", " + spec.mood + " mood" : "") +
+            ", physically accurate light and shadow, true-to-life color.";
+          if (spec.facts) body += " " + ensurePeriod(spec.facts);
+          return { text: body };
+        }
+
+        /* ---- audio engines ---- */
+        function audioSpec(spec) {
+          var theme = spec.goal || spec.subject || "the song described";
+          return theme;
+        }
+        function rSuno(spec) {
+          var style = join([spec.tone || "heartfelt, honest", spec.mood || "", "real instruments, human feel, no autotune gloss"], ", ");
+          var body = ["Style: " + style, "", "[Verse]", "Write the opening verse about: " + audioSpec(spec) + ".", "", "[Chorus]", "Write a chorus that lands the one true line of the song — plain words, sung like they're meant.", "", "[Bridge]", "Strip it back — voice and one instrument, the honest part said out loud.", "", "[Outro]", "Fade on the chorus line, once more, quieter."];
+          if (spec.facts) body.push("", "Must include these facts, word-accurate: " + ensurePeriod(spec.facts));
+          if (spec.limits) body.push("Hard limits: " + ensurePeriod(spec.limits));
+          return { text: body.join("\n") };
+        }
+        function rUdio(spec) {
+          var tags = join([spec.tone || "singer-songwriter", spec.mood || "", "warm, human, recorded-live feel"], ", ");
+          var body = ["Tags: " + tags, "", "Lyrics:", "[Verse 1]", "Sing about: " + audioSpec(spec) + ".", "[Chorus]", "The hook — simple, true, repeatable.", "[Verse 2]", "The same story, one level deeper.", "[Chorus]", "(repeat)"];
+          if (spec.facts) body.push("", "Must include: " + ensurePeriod(spec.facts));
+          return { text: body.join("\n") };
+        }
+        function rElevenLabs(spec) {
+          var body = ["[calm, close-mic'd] " + ensurePeriod(spec.goal || spec.subject || "the narration")];
+          body.push("[natural pacing] Read it like a person talking to one person — real breaths, honest pauses… never a announcer voice.");
+          if (spec.audience) body.push("[spoken for: " + spec.audience + "]");
+          if (spec.facts) body.push("Facts in the script are word-accurate and must not be paraphrased: " + ensurePeriod(spec.facts));
+          if (spec.limits) body.push("Delivery limits: " + ensurePeriod(spec.limits));
+          return { text: body.join("\n") };
+        }
+
+        var ENGINES = [
+          { id: "generic", name: "Generic — any AI", group: "Text", kind: "text", render: rGenericText },
+          { id: "chatgpt", name: "ChatGPT", group: "Text", kind: "text", render: rChatGPT },
+          { id: "claude", name: "Claude", group: "Text", kind: "text", render: rClaude },
+          { id: "gemini", name: "Gemini", group: "Text", kind: "text", render: rGemini },
+          { id: "copilot", name: "Microsoft Copilot", group: "Text", kind: "text", render: rCopilot },
+          { id: "mistral", name: "Mistral", group: "Text", kind: "text", render: function (s) { return rPlainLLM(s, "mistral"); } },
+          { id: "llama", name: "Llama", group: "Text", kind: "text", render: function (s) { return rPlainLLM(s, "llama"); } },
+          { id: "deepseek", name: "DeepSeek", group: "Text", kind: "text", render: function (s) { return rPlainLLM(s, "plain"); } },
+          { id: "perplexity", name: "Perplexity", group: "Text", kind: "text", render: rPerplexity },
+          { id: "grok", name: "Grok", group: "Text", kind: "text", render: rGrok },
+          { id: "genericimage", name: "Generic — any image tool", group: "Image", kind: "media", render: rGenericImage },
+          { id: "midjourney", name: "Midjourney", group: "Image", kind: "media", render: rMidjourney },
+          { id: "sd", name: "Stable Diffusion", group: "Image", kind: "media", render: rSD },
+          { id: "flux", name: "Flux", group: "Image", kind: "media", render: rFlux },
+          { id: "dalle", name: "DALL·E / GPT-image", group: "Image", kind: "media", render: rDalle },
+          { id: "ideogram", name: "Ideogram", group: "Image", kind: "media", render: rIdeogram },
+          { id: "leonardo", name: "Leonardo", group: "Image", kind: "media", render: rLeonardo },
+          { id: "recraft", name: "Recraft", group: "Image", kind: "media", render: rRecraft },
+          { id: "firefly", name: "Adobe Firefly", group: "Image", kind: "media", render: rFirefly },
+          { id: "imagen", name: "Imagen", group: "Image", kind: "media", render: rImagen },
+          { id: "runway", name: "Runway", group: "Video", kind: "media", render: rRunway },
+          { id: "kling", name: "Kling", group: "Video", kind: "media", render: rKling },
+          { id: "luma", name: "Luma Dream Machine", group: "Video", kind: "media", render: rLuma },
+          { id: "pika", name: "Pika", group: "Video", kind: "media", render: rPika },
+          { id: "sora", name: "Sora", group: "Video", kind: "media", render: rSora },
+          { id: "veo", name: "Veo", group: "Video", kind: "media", render: rVeo },
+          { id: "hailuo", name: "Hailuo (MiniMax)", group: "Video", kind: "media", render: rHailuo },
+          { id: "suno", name: "Suno", group: "Audio", kind: "text", render: rSuno },
+          { id: "udio", name: "Udio", group: "Audio", kind: "text", render: rUdio },
+          { id: "elevenlabs", name: "ElevenLabs (voice)", group: "Audio", kind: "text", render: rElevenLabs }
+        ];
+        var ENGINE_BY_ID = {};
+        ENGINES.forEach(function (e) { ENGINE_BY_ID[e.id] = e; });
+        window.HCPG_MASTER.engines = ENGINES.map(function (e) { return e.id; });
+
+        function fillEngineSelect(sel, includeAuto) {
+          sel.innerHTML = "";
+          if (includeAuto) {
+            var o = document.createElement("option");
+            o.value = "auto"; o.textContent = "Auto-detect";
+            sel.appendChild(o);
+          }
+          var groups = {};
+          ENGINES.forEach(function (e) {
+            if (!groups[e.group]) {
+              var g = document.createElement("optgroup");
+              g.label = e.group;
+              groups[e.group] = g;
+              sel.appendChild(g);
+            }
+            var opt = document.createElement("option");
+            opt.value = e.id;
+            opt.textContent = e.name;
+            groups[e.group].appendChild(opt);
+          });
+        }
+
+        /* ============================================================
+           THE FUNNEL — every output is a door (owner amendment).
+           ============================================================ */
+        var CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries · https://jdawgsindustries.com/realism-generator/";
+        var TOOL_URL = "https://jdawgsindustries.com/realism-generator/";
+        var HYDRANT_URL = "https://the-hydrant.vercel.app";
+        var creditOn = true;
+        $("creditToggle").addEventListener("click", function () {
+          creditOn = !creditOn;
+          this.setAttribute("aria-checked", creditOn ? "true" : "false");
+        });
+        function withCredit(text) {
+          if (!creditOn || typeof text !== "string") return text;
+          var t = text.replace(/\s+$/, "");
+          if (t.length < 40) return text;
+          if (t.indexOf("Made with the Hustle City Prompt Generator") !== -1) return text;
+          var first = t.charAt(0);
+          if (first === "{" || first === "[") return text; /* never corrupt JSON handoffs */
+          return t + "\n\n" + CREDIT_LINE;
+        }
+        window.HCPG_MASTER.withCredit = withCredit;
+        window.HCPG_MASTER.creditLine = CREDIT_LINE;
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            var origWriteText = navigator.clipboard.writeText.bind(navigator.clipboard);
+            navigator.clipboard.writeText = function (t) { return origWriteText(withCredit(t)); };
+          }
+        } catch (e) { /* clipboard stays stock; Master copies still add the line at the source */ }
+
+        function doorsRow() {
+          var d = document.createElement("div");
+          d.className = "doors-row";
+          d.innerHTML =
+            '<a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>' +
+            '<a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>' +
+            '<a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>';
+          return d;
+        }
+
+        /* ---- agent handoff JSON (feature I + funnel fields) ---- */
+        function specJSON(spec, engineId, text, negative) {
+          return JSON.stringify({
+            product: "Hustle City Prompt Generator",
+            edition: "Master Edition",
+            family: FAMILY_LABEL[spec.family] || spec.family,
+            engine: ENGINE_BY_ID[engineId] ? ENGINE_BY_ID[engineId].name : engineId,
+            facts: spec.facts || "",
+            limits: spec.limits || "",
+            audience: spec.audience || "",
+            prompt: text,
+            negative: negative || null,
+            tool_url: TOOL_URL,
+            hydrant_url: HYDRANT_URL,
+            maker: "J-Dawgs Industries"
+          }, null, 2);
+        }
+
+        /* ---- slots (feature G) ---- */
+        function findSlots(text) {
+          var seen = {}, out = [];
+          var re = /\{\{\s*([a-zA-Z0-9_ -]+?)\s*\}\}/g, m;
+          while ((m = re.exec(text)) !== null) {
+            var name = m[1].trim();
+            if (!seen[name]) { seen[name] = true; out.push(name); }
+          }
+          return out;
+        }
+
+        /* ============================================================
+           LIBRARY 2.0 (feature H) — tags, search, favorites,
+           duplicate-as-template, export/import, blocked-storage
+           fallback with a visible warning.
+           ============================================================ */
+        var LIB_KEY = "hcpg.master.library.v1";
+        var lib = { items: [], ok: true, favOnly: false };
+        function libLoad() {
+          try {
+            var probe = "__hcpg_probe__";
+            localStorage.setItem(probe, "1");
+            localStorage.removeItem(probe);
+            var raw = localStorage.getItem(LIB_KEY);
+            if (raw) lib.items = JSON.parse(raw) || [];
+          } catch (e) {
+            lib.ok = false;
+            lib.items = [];
+            $("libWarn").hidden = false;
+          }
+        }
+        function libPersist() {
+          if (!lib.ok) return;
+          try { localStorage.setItem(LIB_KEY, JSON.stringify(lib.items)); }
+          catch (e) { lib.ok = false; $("libWarn").hidden = false; }
+        }
+        function libAdd(item) {
+          item.id = "it" + Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36);
+          item.ts = Date.now();
+          lib.items.unshift(item);
+          libPersist();
+          renderLib();
+        }
+        function allTags() {
+          var seen = {};
+          lib.items.forEach(function (it) { (it.tags || []).forEach(function (t) { seen[t] = true; }); });
+          return Object.keys(seen).sort();
+        }
+        function renderLib() {
+          var q = val("libSearch").toLowerCase();
+          var tag = $("libTag").value;
+          var tagSel = $("libTag");
+          var cur = tagSel.value;
+          tagSel.innerHTML = '<option value="">All tags</option>';
+          allTags().forEach(function (t) {
+            var o = document.createElement("option");
+            o.value = t; o.textContent = t;
+            tagSel.appendChild(o);
+          });
+          tagSel.value = cur;
+          tag = tagSel.value;
+          var box = $("libList");
+          box.innerHTML = "";
+          var shown = 0;
+          lib.items.forEach(function (it) {
+            if (lib.favOnly && !it.fav) return;
+            if (tag && (it.tags || []).indexOf(tag) === -1) return;
+            if (q) {
+              var hay = (it.title + " " + it.text + " " + (it.engine || "") + " " + (it.family || "") + " " + (it.tags || []).join(" ")).toLowerCase();
+              if (hay.indexOf(q) === -1) return;
+            }
+            shown++;
+            box.appendChild(libCard(it));
+          });
+          if (!shown) {
+            var p = document.createElement("p");
+            p.className = "target-note";
+            p.textContent = lib.items.length ? "Nothing in the library matches that filter." : "Nothing saved yet — generate something in the workbench and tap Save.";
+            box.appendChild(p);
+          }
+        }
+        function libCard(it) {
+          var card = document.createElement("div");
+          card.className = "lib-item";
+          var title = document.createElement("p");
+          title.className = "lib-title";
+          title.textContent = (it.kind === "template" ? "Template · " : "") + it.title;
+          card.appendChild(title);
+          var meta = document.createElement("p");
+          meta.className = "lib-meta";
+          meta.textContent = (FAMILY_LABEL[it.family] || it.family || "") + " · " + (it.engineName || it.engine || "") + " · " +
+            new Date(it.ts).toLocaleDateString() + ((it.tags && it.tags.length) ? " · tags: " + it.tags.join(", ") : "");
+          card.appendChild(meta);
+          var txt = document.createElement("p");
+          txt.className = "lib-text";
+          txt.textContent = it.text + (it.negative ? "\n\nNegative prompt: " + it.negative : "");
+          card.appendChild(txt);
+          var btns = document.createElement("div");
+          btns.className = "lib-btns";
+          function mkBtn(label, fn, cls) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.textContent = label;
+            if (cls) b.className = cls;
+            b.addEventListener("click", function () { fn(b); });
+            btns.appendChild(b);
+            return b;
+          }
+          mkBtn("Copy", function (b) {
+            var note = document.createElement("span");
+            copyText(it.negative ? it.text + "\n\nNegative prompt: " + it.negative : it.text, txt, note, b);
+          });
+          mkBtn("Copy JSON", function (b) {
+            var note = document.createElement("span");
+            copyText(specJSON(it, it.engine, it.text, it.negative), txt, note, b);
+          });
+          mkBtn(it.fav ? "★ Favorited" : "☆ Favorite", function (b) {
+            it.fav = !it.fav;
+            libPersist();
+            renderLib();
+          }, it.fav ? "fav-on" : "");
+          var slots = findSlots(it.text);
+          if (slots.length || it.kind === "template") {
+            mkBtn("Fill slots", function () { toggleSlotBox(card, it, txt); });
+            mkBtn("Duplicate as template", function () {
+              libAdd({ kind: "template", title: it.title + " (template)", family: it.family, engine: it.engine, engineName: it.engineName, text: it.text, negative: it.negative, tags: (it.tags || []).slice(), fav: false });
+              toast("Saved as a template in the library");
+            });
+          }
+          mkBtn("Delete", function () {
+            lib.items = lib.items.filter(function (x) { return x.id !== it.id; });
+            libPersist();
+            renderLib();
+          });
+          card.appendChild(btns);
+          return card;
+        }
+        function toggleSlotBox(card, it, txtEl) {
+          var existing = card.querySelector(".slot-box");
+          if (existing) { existing.remove(); return; }
+          var slots = findSlots(it.text);
+          var box = document.createElement("div");
+          box.className = "slot-box";
+          if (!slots.length) {
+            var p = document.createElement("p");
+            p.className = "target-note";
+            p.textContent = "No {{slots}} in this one — type slots like {{hero}} into a goal or fact and they will show up here, ready to fill.";
+            box.appendChild(p);
+            card.appendChild(box);
+            return;
+          }
+          var values = {};
+          slots.forEach(function (name) {
+            var f = document.createElement("div");
+            f.className = "field";
+            var lab = document.createElement("label");
+            lab.className = "field-label";
+            lab.textContent = "{{" + name + "}}";
+            var inp = document.createElement("input");
+            inp.type = "text";
+            inp.autocomplete = "off";
+            inp.addEventListener("input", function () { values[name] = inp.value; });
+            f.appendChild(lab);
+            f.appendChild(inp);
+            box.appendChild(f);
+          });
+          var out = document.createElement("p");
+          out.className = "lib-text";
+          out.hidden = true;
+          box.appendChild(out);
+          var row = document.createElement("div");
+          row.className = "lib-btns";
+          var renderBtn = document.createElement("button");
+          renderBtn.type = "button";
+          renderBtn.textContent = "Render filled copy";
+          renderBtn.addEventListener("click", function () {
+            var filled = it.text.replace(/\{\{\s*([a-zA-Z0-9_ -]+?)\s*\}\}/g, function (m, name) {
+              var v = values[name.trim()];
+              return v ? v : m;
+            });
+            out.textContent = filled;
+            out.hidden = false;
+            var note = document.createElement("span");
+            copyText(filled, out, note, renderBtn);
+          });
+          row.appendChild(renderBtn);
+          box.appendChild(row);
+          card.appendChild(box);
+        }
+
+        /* ---- output card used by every Master feature ---- */
+        function renderOut(container, spec, engineId, result, titleText) {
+          container.innerHTML = "";
+          var engine = ENGINE_BY_ID[engineId];
+          var card = document.createElement("article");
+          card.className = "variant";
+          var head = document.createElement("div");
+          head.className = "variant-head";
+          var tb = document.createElement("div");
+          var h3 = document.createElement("h3");
+          h3.className = "variant-name";
+          h3.textContent = titleText || (engine ? engine.name : "Prompt");
+          var tag = document.createElement("p");
+          tag.className = "variant-tag";
+          tag.textContent = (FAMILY_LABEL[spec.family] || "") + " · Master Edition render";
+          tb.appendChild(h3);
+          tb.appendChild(tag);
+          head.appendChild(tb);
+          card.appendChild(head);
+
+          var blocks = [{ label: null, text: result.text }];
+          if (result.negative) blocks.push({ label: "Negative prompt", text: result.negative });
+          var firstTextEl = null;
+          blocks.forEach(function (block, i) {
+            var wrap = document.createElement("div");
+            wrap.className = "out-block";
+            if (block.label) {
+              var lab = document.createElement("p");
+              lab.className = "out-label";
+              lab.textContent = block.label;
+              wrap.appendChild(lab);
+            }
+            var txt = document.createElement("p");
+            txt.className = "out-text";
+            txt.textContent = block.text;
+            if (!firstTextEl) firstTextEl = txt;
+            wrap.appendChild(txt);
+            var actions = document.createElement("div");
+            actions.className = "out-actions";
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "btn-chrome";
+            btn.textContent = block.label ? "Copy negative" : "Copy prompt";
+            var note = document.createElement("span");
+            note.className = "copy-note";
+            btn.addEventListener("click", function () { copyText(block.text, txt, note, btn); });
+            actions.appendChild(btn);
+            actions.appendChild(note);
+            wrap.appendChild(actions);
+            card.appendChild(wrap);
+          });
+
+          var actions2 = document.createElement("div");
+          actions2.className = "out-actions";
+          var jbtn = document.createElement("button");
+          jbtn.type = "button";
+          jbtn.className = "btn-ghost";
+          jbtn.textContent = "Copy as JSON";
+          var jnote = document.createElement("span");
+          jnote.className = "copy-note";
+          jbtn.addEventListener("click", function () {
+            copyText(specJSON(spec, engineId, result.text, result.negative), firstTextEl, jnote, jbtn);
+          });
+          actions2.appendChild(jbtn);
+          var sbtn = document.createElement("button");
+          sbtn.type = "button";
+          sbtn.className = "btn-ghost";
+          sbtn.textContent = "Save to Library";
+          sbtn.addEventListener("click", function () {
+            var tagsRaw = window.prompt("Tags for this save (comma-separated, optional):", "") || "";
+            var tags = tagsRaw.split(",").map(function (t) { return t.trim().toLowerCase(); }).filter(function (t) { return !!t; });
+            libAdd({ kind: "prompt", title: (spec.goal || spec.subject || "Untitled prompt").slice(0, 90), family: spec.family, engine: engineId, engineName: engine ? engine.name : engineId, text: result.text, negative: result.negative || "", tags: tags, fav: false, facts: spec.facts || "", limits: spec.limits || "", audience: spec.audience || "" });
+            toast("Saved to your library");
+          });
+          actions2.appendChild(sbtn);
+          var slots = findSlots(result.text);
+          if (slots.length) {
+            var tbtn = document.createElement("button");
+            tbtn.type = "button";
+            tbtn.className = "btn-ghost";
+            tbtn.textContent = "Save as template";
+            tbtn.addEventListener("click", function () {
+              libAdd({ kind: "template", title: (spec.goal || "Template").slice(0, 90), family: spec.family, engine: engineId, engineName: engine ? engine.name : engineId, text: result.text, negative: result.negative || "", tags: [], fav: false });
+              toast("Template saved — fill its slots any time");
+            });
+            actions2.appendChild(tbtn);
+            var hint = document.createElement("span");
+            hint.className = "copy-note";
+            hint.textContent = "Slots: " + slots.map(function (s) { return "{{" + s + "}}"; }).join(" ");
+            actions2.appendChild(hint);
+          }
+          actions2.appendChild(jnote);
+          card.appendChild(actions2);
+          container.appendChild(card);
+          container.appendChild(doorsRow());
+          return card;
+        }
+
+        /* ============================================================
+           WORKBENCH (A + F + J) and WILDCARD RISK DIAL (F)
+           ============================================================ */
+        var ANGLES = {
+          writing: ["Open in the middle of the action — no introduction; start where it's already interesting.", "Build the whole piece around one small, vivid, true detail and let everything else orbit it."],
+          business: ["Lead with the objection — name the reason someone would say no, answer it honestly, then make the offer.", "Write the shop-window version: so clear and short it could be painted on glass."],
+          coding: ["Build the smallest version that fully works first, then extend it — deliver both stages, clearly labeled.", "Optimize for the beginner reading it at midnight: generous comments, zero clever tricks."],
+          research: ["Teach it backwards: start from the practical payoff, then unpack the theory only as deep as needed.", "End with a 3-question self-quiz (answers included) that locks the idea in."],
+          agent: ["Give the agent a name, a one-line motto, and a personality paragraph before the rules — identity first, then law.", "Add a self-check section: before answering, the agent re-reads its instructions and verifies its output against them."],
+          realism: ["caught through a doorway, half a second before the subject notices the camera", "shot from the hip at street level, the city moving around a still subject"],
+          general: ["Attack the goal from the sharpest honest angle — the one a careful expert would pick if they could only pick one.", "Invert it: state what the finished work must never be, then build everything toward its opposite."]
+        };
+        function pickAngle(fam, goal) {
+          var pool = ANGLES[fam] || ANGLES.general;
+          var h = 0;
+          var s = goal || "";
+          for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+          return pool[Math.abs(h) % pool.length];
+        }
+        $("mRenderBtn").addEventListener("click", function () {
+          var spec = readSpec();
+          var engineId = $("mEngine").value;
+          var engine = ENGINE_BY_ID[engineId];
+          var result = engine.render(spec);
+          renderOut($("mOut"), spec, engineId, result, engine.name + " — rendered");
+        });
+        $("mWildBtn").addEventListener("click", function () {
+          var spec = readSpec();
+          var engineId = $("mEngine").value;
+          var engine = ENGINE_BY_ID[engineId];
+          var angle = pickAngle(spec.family, spec.goal);
+          var risk = spec.risk;
+          var result = engine.render(spec);
+          if (risk !== "tame") {
+            var angleText = "Angle: " + angle;
+            if (risk === "bold") angleText += "\nRaise the stakes: name the real cost of getting this wrong, then write like it matters.";
+            if (risk === "unhinged") angleText += "\nNo safety net: take the angle all the way — the boldest honest version, the one a committee would soften. Keep every fact and hard limit exactly as given; only the nerve is unlimited.";
+            if (engineId === "claude") angleText = "<angle>" + angleText.replace(/^Angle: /, "") + "</angle>";
+            result = { text: angleText + "\n\n" + result.text, negative: result.negative };
+          }
+          renderOut($("mOut"), spec, engineId, result, engine.name + " — Wildcard (" + risk + ")");
+        });
+
+        /* ============================================================
+           TRANSLATOR (B) — parse any engine's syntax, re-render.
+           ============================================================ */
+        function detectEngine(text) {
+          if (/\[Push in\]|\[Pan left\]|\[Pan right\]|\[Tracking shot\]|\[Static shot\]|\[Zoom in\]/i.test(text)) return "hailuo";
+          if (/--ar\b|--style raw|--v\s?\d|--chaos\b/.test(text)) return "midjourney";
+          if (/-neg\b/.test(text)) return "pika";
+          if (/negative prompt\s*:/i.test(text)) return "sd";
+          if (/<\|start_header_id\|>|<\|begin_of_text\|>/.test(text)) return "llama";
+          if (/\[INST\]/.test(text)) return "mistral";
+          if (/<\/?(task|context|role|requirements|hard_limits|output_spec)>/i.test(text)) return "claude";
+          if (/\[Verse\]|\[Chorus\]|\[Bridge\]|\[Outro\]/.test(text)) return "suno";
+          if (/^Follow these instructions exactly:/m.test(text)) return "gemini";
+          if (/^##\s|^\*\*(Task|Role|Context)/m.test(text)) return "chatgpt";
+          if (/cinematography\s*:/i.test(text) && /subject\s*:/i.test(text)) return "veo";
+          if (/photoreal|image|picture|photo/i.test(text)) return "genericimage";
+          return "generic";
+        }
+        function parsePrompt(raw) {
+          var text = raw || "";
+          var exclude = "", negative = "";
+          var mNo = text.match(/--no\s+(.+?)(?=\s+--\w|\s*$)/m);
+          if (mNo) { exclude = mNo[1].trim(); text = text.replace(mNo[0], " "); }
+          var mNeg = text.match(/-neg\s+(.+?)(?=\s+-\w|\s*$)/m);
+          if (mNeg) { exclude = mNeg[1].trim(); text = text.replace(mNeg[0], " "); }
+          var nIdx = text.search(/negative prompt\s*:/i);
+          if (nIdx !== -1) { negative = text.slice(nIdx).replace(/negative prompt\s*:/i, "").trim(); text = text.slice(0, nIdx); if (!exclude) exclude = negative; }
+          text = text.replace(/--[a-z]+\s+([^\s]+)?/g, " ").replace(/-\w+\s+([^\s]+)?/g, " ");
+          text = text.replace(/<\|[^|]+\|>/g, " ").replace(/\[INST\]|\[\/INST\]/g, " ");
+          text = text.replace(/<\/?[a-z_]+>/gi, "\n").replace(/^#{1,4}\s*/gm, "").replace(/\*\*/g, "");
+          var facts = "", limits = "";
+          var lines = text.split(/\n+/).map(function (l) { return l.trim(); }).filter(function (l) { return !!l; });
+          var rest = [];
+          lines.forEach(function (l) {
+            if (/^(facts|key facts|key details)/i.test(l) && !facts) facts = l.replace(/^[^:]*:\s*/i, "");
+            else if (/^(hard limits|non-negotiables|limits|constraints)/i.test(l) && !limits) limits = l.replace(/^[^:]*:\s*/i, "");
+            else rest.push(l.replace(/^[-•\d.)\s]+/, ""));
+          });
+          var core = rest.length ? rest[0] : "";
+          var extra = rest.slice(1);
+          if (extra.length && core.length < 400) core = core + " " + extra.join(" ");
+          var kindGuess = /photoreal|image|picture|photo|video|camera|shot of/i.test(raw) ? "media" : "text";
+          return { core: core.replace(/\s+/g, " ").trim(), facts: facts, limits: limits, exclude: exclude, negative: negative, extra: [], kindGuess: kindGuess, familyGuess: kindGuess === "media" ? "realism" : "general" };
+        }
+        $("trBtn").addEventListener("click", function () {
+          var raw = val("trIn");
+          if (!raw) { $("trDetected").textContent = "Paste a prompt first — any engine's format works."; return; }
+          var fromSel = $("trFrom").value;
+          var detected = detectEngine(raw);
+          var fromId = fromSel === "auto" ? detected : fromSel;
+          var parsed = parsePrompt(raw);
+          var spec = specFromParsed(parsed, fromId);
+          var toId = $("trTo").value;
+          var engine = ENGINE_BY_ID[toId];
+          var result = engine.render(spec);
+          $("trDetected").innerHTML = "Read as: <b>" + esc(ENGINE_BY_ID[fromId].name) + "</b>" + (fromSel === "auto" ? " (auto-detected from its syntax)" : "") + " → rendered for <b>" + esc(engine.name) + "</b>. Intent kept; syntax converted.";
+          renderOut($("trOut"), spec, toId, result, "Translated → " + engine.name);
+        });
+
+        /* ============================================================
+           CHAIN BUILDER (C)
+           ============================================================ */
+        var CHAINS = {
+          media: [
+            { name: "Character sheet", out: "character-sheet", make: function (g) { return "The definitive character sheet for " + g + " — one hero portrait that locks the face, wardrobe, and presence. Everything after this step matches it."; } },
+            { name: "Scene still", out: "scene-still", make: function (g) { return "The key scene still for " + g + " — the character from the character-sheet, placed in the world, caught mid-action."; } },
+            { name: "Motion", out: "motion-clip", make: function (g) { return "Bring the scene-still to life for " + g + " — one honest camera move, natural motion, the character consistent in every frame."; } },
+            { name: "Poster & caption", out: "poster-pack", make: function (g) { return "The poster frame and caption for " + g + " — the single most arresting still from the motion-clip, plus one caption line that earns the click."; } }
+          ],
+          writing: [
+            { name: "Research brief", out: "research-brief", make: function (g) { return "Research brief for: " + g + " — the true facts, the sharpest true detail, and what a reader actually cares about. Flag anything uncertain instead of guessing."; } },
+            { name: "Outline", out: "outline", make: function (g) { return "Outline the piece for: " + g + " — built on the research-brief: the opening moment, the beats in order, and the line it lands on."; } },
+            { name: "Draft", out: "draft", make: function (g) { return "Write the full draft for: " + g + " — follow the outline, use only facts from the research-brief, every sentence earning its place."; } },
+            { name: "Polish", out: "final-piece", make: function (g) { return "Polish the draft for: " + g + " — cut filler and clichés, sharpen the first and last lines, keep the voice exactly. Deliver the finished piece only."; } }
+          ],
+          business: [
+            { name: "Audience research", out: "audience-map", make: function (g) { return "Research and target the audience for: " + g + " — who they are, the specific groups and communities where they gather, ranked by likelihood to act. Aim everything after this at the top group."; } },
+            { name: "Angle & hook", out: "angle-sheet", make: function (g) { return "Find the angle and the hook for: " + g + " — from the audience-map: the customer's real problem, the one-line promise that is provably true, and the opening line."; } },
+            { name: "Copy draft", out: "copy-draft", make: function (g) { return "Write the copy for: " + g + " — using the angle-sheet. Claims only from supplied facts; problem and benefit first; exactly one call to action, stated once, stated plainly."; } },
+            { name: "Proof pass & CTA", out: "final-copy", make: function (g) { return "Proof pass on the copy-draft for: " + g + " — check every claim against the facts, cut any hype word the copy can't back up, confirm the single CTA. Deliver the final copy only."; } }
+          ],
+          coding: [
+            { name: "Plan", out: "build-plan", make: function (g) { return "Plan the build for: " + g + " — architecture, the smallest version that fully works, the edge cases it must survive, in plain language."; } },
+            { name: "Build", out: "working-code", make: function (g) { return "Build it: " + g + " — follow the build-plan. Complete runnable code, no placeholders, the stated stack and constraints exactly."; } },
+            { name: "Test & edge cases", out: "test-report", make: function (g) { return "Test the working-code for: " + g + " — empty input, bad input, small screens, double-taps, storage blocked. List what you ran and what each did."; } },
+            { name: "Harden & document", out: "final-build", make: function (g) { return "Harden the build for: " + g + " — fix everything in the test-report, then a short plain-language rundown: how to run it and how each part works. Deliver the finished build only."; } }
+          ],
+          research: [
+            { name: "Scope the question", out: "scoped-question", make: function (g) { return "Scope this research: " + g + " — the exact question, the sub-questions inside it, and what a complete answer must cover."; } },
+            { name: "Gather & compare", out: "evidence-pack", make: function (g) { return "Gather and compare the evidence for: " + g + " — per the scoped-question. Concrete numbers and examples; flag anything uncertain, dated, or contested instead of stating it as settled."; } },
+            { name: "Synthesize", out: "synthesis", make: function (g) { return "Synthesize the evidence-pack on: " + g + " — the answer, structured for skimming, with the disagreements stated plainly."; } },
+            { name: "Teach-back", out: "final-explainer", make: function (g) { return "Turn the synthesis on: " + g + " into the final explainer — concrete examples throughout, ending with the 3 most important takeaways and one good next question."; } }
+          ],
+          agent: [
+            { name: "Identity & role", out: "agent-identity", make: function (g) { return "Define the agent for: " + g + " — name, one-line motto, personality paragraph, role, and the goal it is judged by. Identity first, then law."; } },
+            { name: "Workflow & tools", out: "agent-workflow", make: function (g) { return "Write the step-by-step workflow for the agent in the agent-identity, serving: " + g + " — its inputs and tools, the exact output format it follows every time."; } },
+            { name: "Guardrails & limits", out: "agent-guardrails", make: function (g) { return "Write the hard limits and guardrails for the agent-workflow on: " + g + " — what it must refuse or escalate, as absolutes; missing information means one short question, never invention; mistakes are owned and fixed, never smoothed over."; } },
+            { name: "Test conversations", out: "agent-tests", make: function (g) { return "Write the worked examples for the guardrails on: " + g + " — one ideal interaction and one edge case handled right, in the agent's own voice."; } }
+          ]
+        };
+        $("chBtn").addEventListener("click", function () {
+          var goal = val("chGoal");
+          var out = $("chOut");
+          if (!goal) { out.innerHTML = ""; var p = document.createElement("p"); p.className = "target-note"; p.textContent = "Give the chain a goal first — one plain sentence is plenty."; out.appendChild(p); return; }
+          var kind = $("chKind").value;
+          if (kind === "auto") { var f = currentFamily(); kind = f === "realism" ? "media" : f; }
+          var engineId = $("chEngine").value;
+          var engine = ENGINE_BY_ID[engineId];
+          out.innerHTML = "";
+          var chain = CHAINS[kind] || CHAINS.writing;
+          var spec = readSpec();
+          spec.goal = goal;
+          chain.forEach(function (step, i) {
+            var wrap = document.createElement("div");
+            wrap.className = "chain-step";
+            var io = document.createElement("p");
+            io.className = "chain-io";
+            io.textContent = "STEP " + (i + 1) + " — " + step.name + (i === 0 ? " · Input: your goal" : " · Input: the output of Step " + i + " (“" + chain[i - 1].out + "”)") + " · Produces: “" + step.out + "”";
+            wrap.appendChild(io);
+            var holder = document.createElement("div");
+            wrap.appendChild(holder);
+            out.appendChild(wrap);
+            var s2 = Object.assign({}, spec);
+            s2.goal = step.make(goal);
+            if (s2.kind === "media" || engine.kind === "media") { s2.subject = step.make(goal); }
+            var result = engine.render(s2);
+            renderOut(holder, s2, engineId, result, "Step " + (i + 1) + " · " + step.name + " → " + engine.name);
+          });
+        });
+
+        /* ============================================================
+           CRITIQUE & UPGRADE (D)
+           ============================================================ */
+        var VAGUE = ["beautiful", "amazing", "stunning", "nice", "good quality", "high quality", "perfect", "awesome", "incredible", "breathtaking"];
+        function gradePrompt(raw, engineId) {
+          var checks = [];
+          var chars = raw.length;
+          checks.push({ ok: chars >= 120, label: "Substance — " + chars + " characters (" + (chars >= 120 ? "enough to direct a result" : "under 120: too thin to direct anything specific") + ")" });
+          var firstLine = (raw.split(/\n/)[0] || "").trim();
+          checks.push({ ok: firstLine.split(/\s+/).length >= 4, label: "Names its subject or goal up front" });
+          var hasConstraints = /\bmust\b|\bnever\b|\bonly\b|\bexactly\b|\bno\s+[a-z]|\bexclude\b|\blimit/i.test(raw);
+          checks.push({ ok: hasConstraints, label: "Carries explicit constraints (must / never / only / exclude)" });
+          var hasNums = /(\$|%)\s?\d|\d+\s?(dollars|percent|%)/i.test(raw);
+          var hasFacts = /fact|treat as fact|use only|do not invent|don't invent/i.test(raw);
+          checks.push({ ok: !hasNums || hasFacts, label: hasNums ? (hasFacts ? "Numbers present AND fenced by a facts rule" : "Numbers appear with NO facts discipline — the model is free to invent around them") : "No unbacked numbers to discipline" });
+          var engine = ENGINE_BY_ID[engineId];
+          var fmtOk = true, fmtLabel = "Format fits " + engine.name;
+          if (engineId === "midjourney") { fmtOk = /--/.test(raw); fmtLabel = fmtOk ? "Midjourney parameters present" : "No Midjourney parameters (--ar / --style) — it will render as a generic guess"; }
+          else if (engineId === "sd" || engineId === "leonardo") { fmtOk = /negative prompt\s*:/i.test(raw) || /negative/i.test(raw); fmtLabel = fmtOk ? "Negative prompt present" : "No negative prompt — the classic AI look (plastic skin, bad hands) is unguarded"; }
+          else if (engineId === "claude") { fmtOk = /<|>/.test(raw) || /\n/.test(raw); fmtLabel = fmtOk ? "Structured for Claude" : "One unbroken block — Claude tracks tagged sections far better"; }
+          else if (engineId === "hailuo") { fmtOk = /\[(Push in|Pan|Tracking|Static|Zoom|Tilt)/i.test(raw); fmtLabel = fmtOk ? "Bracketed camera commands present" : "No bracketed camera commands — Hailuo's documented [Push in] / [Pan left] syntax is unused"; }
+          else if (engineId === "suno" || engineId === "udio") { fmtOk = /\[Verse\]|\[Chorus\]/i.test(raw); fmtLabel = fmtOk ? "Song section structure present" : "No [Verse]/[Chorus] structure — the song has no skeleton"; }
+          checks.push({ ok: fmtOk, label: fmtLabel });
+          if (engine.kind === "media") {
+            var hasExcl = /negative|--no|-neg|\bexclude\b|\bno\s+(text|watermark|logo)/i.test(raw);
+            checks.push({ ok: hasExcl, label: hasExcl ? "Exclusions handled (negative / --no / explicit)" : "Nothing excluded — expect text, watermarks, and plastic skin by default" });
+          }
+          var vagueCount = 0;
+          VAGUE.forEach(function (w) { if (raw.toLowerCase().indexOf(w) !== -1) vagueCount++; });
+          checks.push({ ok: vagueCount <= 1, label: vagueCount <= 1 ? "Specific language — " + vagueCount + " vague praise word(s)" : vagueCount + " vague praise words (beautiful / amazing / stunning…) doing the work that detail should do" });
+          var passed = checks.filter(function (c) { return c.ok; }).length;
+          return { checks: checks, score: Math.round(100 * passed / checks.length) };
+        }
+        $("crBtn").addEventListener("click", function () {
+          var raw = val("crIn");
+          var out = $("crOut");
+          if (!raw) { out.innerHTML = ""; var p = document.createElement("p"); p.className = "target-note"; p.textContent = "Paste a prompt first — the Master will grade it and hand back the upgrade."; out.appendChild(p); return; }
+          var sel = $("crEngine").value;
+          var engineId = sel === "auto" ? detectEngine(raw) : sel;
+          var grade = gradePrompt(raw, engineId);
+          var parsed = parsePrompt(raw);
+          var spec = specFromParsed(parsed, engineId);
+          var result = ENGINE_BY_ID[engineId].render(spec);
+          out.innerHTML = "";
+          var card = document.createElement("article");
+          card.className = "variant";
+          var score = document.createElement("p");
+          score.className = "grade-score";
+          score.innerHTML = grade.score + " <small>/ 100 — graded as a " + esc(ENGINE_BY_ID[engineId].name) + " prompt, rule-based Master grade</small>";
+          card.appendChild(score);
+          var ul = document.createElement("ul");
+          ul.className = "grade-list";
+          grade.checks.forEach(function (c) {
+            var li = document.createElement("li");
+            li.innerHTML = '<span class="' + (c.ok ? "g-pass" : "g-fail") + '">' + (c.ok ? "PASS" : "FIX") + "</span><span>" + esc(c.label) + "</span>";
+            ul.appendChild(li);
+          });
+          card.appendChild(ul);
+          var fixes = grade.checks.filter(function (c) { return !c.ok; }).map(function (c) { return c.label; });
+          var fp = document.createElement("p");
+          fp.className = "target-note";
+          fp.style.marginTop = "10px";
+          fp.textContent = fixes.length ? "What the upgrade does: re-renders the same intent in " + ENGINE_BY_ID[engineId].name + "'s real format with the family standard applied — structure, constraints, facts discipline, and exclusions made explicit. (" + fixes.length + " graded item(s) needed it.)" : "What the upgrade does: re-renders the same intent in " + ENGINE_BY_ID[engineId].name + "'s real format — it was already strong; the upgrade holds every graded item.";
+          card.appendChild(fp);
+          out.appendChild(card);
+          var holder = document.createElement("div");
+          holder.style.marginTop = "14px";
+          out.appendChild(holder);
+          renderOut(holder, spec, engineId, result, "Upgraded → " + ENGINE_BY_ID[engineId].name);
+        });
+
+        /* ============================================================
+           LIBRARY wiring + INIT
+           ============================================================ */
+        $("libSearch").addEventListener("input", renderLib);
+        $("libTag").addEventListener("change", renderLib);
+        $("libFavBtn").addEventListener("click", function () {
+          lib.favOnly = !lib.favOnly;
+          this.setAttribute("aria-pressed", lib.favOnly ? "true" : "false");
+          this.classList.toggle("fav-on", lib.favOnly);
+          renderLib();
+        });
+        $("libExportBtn").addEventListener("click", function () {
+          var payload = JSON.stringify({ product: "Hustle City Prompt Generator", edition: "Master Edition", exported_at: new Date().toISOString(), tool_url: TOOL_URL, maker: "J-Dawgs Industries", items: lib.items }, null, 2);
+          try {
+            var blob = new Blob([payload], { type: "application/json" });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "hustle-city-prompt-generator-library.json";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+            toast("Library exported — " + lib.items.length + " item(s)");
+          } catch (e) {
+            copyText(payload, $("libList"), document.createElement("span"), null);
+            toast("Export copied instead — downloads are blocked here");
+          }
+        });
+        $("libImportBtn").addEventListener("click", function () { $("libImportFile").click(); });
+        $("libImportFile").addEventListener("change", function () {
+          var file = this.files && this.files[0];
+          if (!file) return;
+          var reader = new FileReader();
+          reader.onload = function () {
+            try {
+              var data = JSON.parse(String(reader.result));
+              var items = Array.isArray(data) ? data : data.items;
+              if (!Array.isArray(items)) throw new Error("no items");
+              var added = 0;
+              items.forEach(function (it) {
+                if (it && typeof it.text === "string") {
+                  lib.items.unshift({ id: "it" + Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36) + added, ts: it.ts || Date.now(), kind: it.kind === "template" ? "template" : "prompt", title: String(it.title || "Imported prompt").slice(0, 90), family: it.family || "general", engine: it.engine || "generic", engineName: it.engineName || it.engine || "", text: it.text, negative: it.negative || "", tags: Array.isArray(it.tags) ? it.tags : [], fav: !!it.fav });
+                  added++;
+                }
+              });
+              libPersist();
+              renderLib();
+              toast(added ? "Imported " + added + " item(s)" : "Nothing importable in that file");
+            } catch (e) {
+              toast("That file isn't a library export — nothing imported");
+            }
+          };
+          reader.readAsText(file);
+          this.value = "";
+        });
+
+        fillEngineSelect($("mEngine"), false);
+        fillEngineSelect($("trFrom"), true);
+        fillEngineSelect($("trTo"), false);
+        fillEngineSelect($("chEngine"), false);
+        fillEngineSelect($("crEngine"), true);
+        $("mEngine").value = "generic";
+        $("trTo").value = "midjourney";
+        $("chEngine").value = "claude";
+        libLoad();
+        renderLib();
+      })();
+    </script>
+
   </body>
 </html>
