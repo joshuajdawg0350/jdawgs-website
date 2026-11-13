@@ -428,13 +428,13 @@
           <button type="button" class="chip" data-kind="code" aria-pressed="false">Code</button>
           <button type="button" class="chip" data-kind="agent" aria-pressed="false">Agent Prompt</button>
         </div>
-        <button type="button" class="btn-blue" id="sMake">Make my prompt</button>
+        <button type="button" class="btn-blue" id="sMake">Make my prompts</button>
         <div id="sResult" hidden>
           <p class="target-note" id="sInfer"></p>
-          <div class="out-block" id="sOutBlock">
-            <p class="out-text" id="sOut"></p>
+          <div id="sOutWrap" hidden>
+            <div id="sOutBlocks"></div>
             <div class="out-actions">
-              <button type="button" class="btn-chrome" id="sCopy">Copy</button>
+              <button type="button" class="btn-blue" id="sCopyAll">Copy all three</button>
               <span class="copy-note" id="sNote"></span>
             </div>
           </div>
@@ -1273,6 +1273,18 @@
           render();
         };
         window.HCPG.realismDirect = function () { return combinedText("clean"); };
+        /* ---- front door: all three variants, not just Direct ---- */
+        window.HCPG.realismVariants = function () {
+          return ["clean", "cinematic", "raw"].map(function (key) {
+            return { key: key, name: VARIANT_FLAVOR[key].name, text: combinedText(key) };
+          });
+        };
+        window.HCPG.realismAll = function () {
+          var targetName = TARGET_NAMES[$("target").value];
+          return ["clean", "cinematic", "raw"].map(function (key) {
+            return "— " + VARIANT_FLAVOR[key].name + " (" + targetName + ") —\n" + combinedText(key);
+          }).join("\n\n");
+        };
       })();
     </script>
 
@@ -1919,6 +1931,19 @@
           state[fid].goal = goalText;
           return buildTextVariant(fid, "direct");
         };
+        /* ---- front door: all three variants, not just Direct ---- */
+        window.HCPG.textVariants = function (fid, goalText) {
+          state[fid].goal = goalText;
+          return ["direct", "expert", "wildcard"].map(function (key) {
+            return { key: key, name: VARIANT_META[key].name, text: buildTextVariant(fid, key) };
+          });
+        };
+        window.HCPG.textAll = function (fid) {
+          var st = state[fid];
+          return ["direct", "expert", "wildcard"].map(function (key) {
+            return "— " + VARIANT_META[key].name + " (" + FAMILY_META[fid].name + " · " + TARGET_NAMES_TEXT[st.target] + ") —\n" + buildTextVariant(fid, key);
+          }).join("\n\n");
+        };
       })();
     </script>
 
@@ -1927,8 +1952,9 @@
          SIMPLE FRONT DOOR — one box, plain chips, one button.
          Reads the goal in the user's own words, picks a kind (their
          chip, or a plain guess from their words), and asks the two
-         engines above for their Direct prompt through the HCPG
-         bridges. Everything else lives under "More options".
+         engines above for all three of their variants through the
+         HCPG bridges — each copyable on its own, plus one
+         "Copy all three". Everything else lives under "More options".
          ============================================================ */
       (function () {
         "use strict";
@@ -2003,10 +2029,11 @@
             sel.addRange(range);
           } catch (e) { /* best-effort */ }
         }
-        var lastText = "";
-        $("sCopy").addEventListener("click", function () {
-          if (!lastText) return;
-          var btn = $("sCopy"), noteEl = $("sNote"), textEl = $("sOut");
+        /* ---- copy one prompt, or all three, from the front door.
+           Same visible fallback as the engines; the credit line rides
+           along because the global clipboard wrapper adds it. ---- */
+        function copyDoorText(text, textEl, noteEl, btn, btnLabel) {
+          if (!text) return;
           function done(ok) {
             if (ok) {
               noteEl.textContent = "Copied.";
@@ -2018,12 +2045,12 @@
               noteEl.className = "copy-note warn";
               toast("Text selected — long-press to copy");
             }
-            var old = "Copy";
+            var old = btnLabel;
             btn.textContent = ok ? "Copied ✓" : "Selected — long-press";
             setTimeout(function () { btn.textContent = old; }, 2400);
           }
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(lastText).then(function () { done(true); }, function () {
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () {
               selectText(textEl);
               var ok = false;
               try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
@@ -2035,38 +2062,78 @@
             try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
             done(ok2);
           }
-        });
+        }
 
-        /* ---- the one button ---- */
+        /* ---- the one button: three separate prompts, every time ---- */
         $("sMake").addEventListener("click", function () {
           var goal = $("sGoal").value.trim();
-          var result = $("sResult"), block = $("sOutBlock");
+          var result = $("sResult"), wrap = $("sOutWrap"), blocksEl = $("sOutBlocks");
           if (!goal) {
-            lastText = "";
             $("sInfer").textContent = "First, tell me what you want to make — one plain sentence in the box above is plenty.";
-            block.hidden = true;
+            wrap.hidden = true;
             result.hidden = false;
             $("sGoal").focus();
             return;
           }
           var kind = chosen || infer(goal);
           var wasInferred = !chosen;
-          var name = null, text = "";
+          var name = null, variants = [], combinedAll = "";
           if (kind === "picture" || kind === "video") {
             name = findName(goal);
             window.HCPG.realismSetup(goal, kind === "video", name);
-            text = window.HCPG.realismDirect();
+            variants = window.HCPG.realismVariants();
+            combinedAll = window.HCPG.realismAll();
           } else {
-            text = window.HCPG.textDirect(TEXT_FID[kind], goal);
+            variants = window.HCPG.textVariants(TEXT_FID[kind], goal);
+            combinedAll = window.HCPG.textAll(TEXT_FID[kind]);
           }
-          lastText = text;
           var line = "Made as: " + KIND_LABEL[kind] + ".";
           if (name) line += " " + name + " is played by their real likeness.";
           if (wasInferred) line += " (We picked that from your words — change it under More options.)";
           $("sInfer").textContent = line;
-          $("sOut").textContent = text;
+          blocksEl.innerHTML = "";
+          variants.forEach(function (v) {
+            var card = document.createElement("article");
+            card.className = "variant";
+            var head = document.createElement("div");
+            head.className = "variant-head";
+            var titleBox = document.createElement("div");
+            var h3 = document.createElement("h3");
+            h3.className = "variant-name";
+            h3.textContent = v.name;
+            titleBox.appendChild(h3);
+            head.appendChild(titleBox);
+            card.appendChild(head);
+            var wrapBlock = document.createElement("div");
+            wrapBlock.className = "out-block";
+            var txt = document.createElement("p");
+            txt.className = "out-text";
+            txt.textContent = v.text;
+            wrapBlock.appendChild(txt);
+            var actions = document.createElement("div");
+            actions.className = "out-actions";
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "btn-chrome";
+            var label = "Copy " + v.name;
+            btn.textContent = label;
+            var note = document.createElement("span");
+            note.className = "copy-note";
+            btn.addEventListener("click", function () { copyDoorText(v.text, txt, note, btn, label); });
+            actions.appendChild(btn);
+            actions.appendChild(note);
+            wrapBlock.appendChild(actions);
+            card.appendChild(wrapBlock);
+            blocksEl.appendChild(card);
+          });
           $("sNote").textContent = "";
-          block.hidden = false;
+          var allBtn = $("sCopyAll");
+          var allLabel = "Copy all three";
+          allBtn.onclick = function () {
+            var firstText = blocksEl.querySelector(".out-text");
+            copyDoorText(combinedAll, firstText, $("sNote"), allBtn, allLabel);
+          };
+          wrap.hidden = false;
           result.hidden = false;
           result.scrollIntoView({ block: "nearest", behavior: "smooth" });
         });
