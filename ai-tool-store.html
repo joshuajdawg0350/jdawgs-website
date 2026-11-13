@@ -86,6 +86,56 @@ body.hustle-face .site-footer a:hover{color:#39c2ff}
 body.hustle-face .product .p-price{color:#ffd34d}
 body.hustle-face figure img{border:1px solid #263144}
 </style>
+<style>
+/* ============================================================
+   Storefront search + presentation fixes (2026-11-12).
+   Page-scoped. The search is a live client-side filter over the
+   plans and doors below (no backend). Fixes: reachable hit
+   areas for text links (32px finger floor), the footer refunds
+   URL overflowing phone widths, and the hero action's fold
+   position on phones.
+   ============================================================ */
+.jd-search-sticky{position:sticky;top:71px;z-index:30}
+@media (max-width:640px){.jd-search-sticky{top:59px}}
+.jd-search{margin:1.25rem 0 .75rem;padding:.7rem .7rem .75rem;
+  background:linear-gradient(180deg,rgba(18,24,36,.98),rgba(8,11,17,.98));
+  border:1px solid #33435e;border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)}
+.jd-search label{display:block;font-family:Archivo,Inter,sans-serif;font-weight:700;
+  letter-spacing:.14em;font-size:.78rem;text-transform:uppercase;color:#7dd8ff;margin:0 0 .45rem .15rem}
+.jd-search-row{display:flex;gap:.5rem;align-items:stretch}
+.jd-search input{flex:1 1 auto;min-width:0;min-height:52px;padding:.7rem .9rem;
+  font:inherit;font-size:1rem;color:#f2f7ff;background:#0a0d13;
+  border:1px solid rgba(120,190,255,.5);border-radius:12px}
+.jd-search input::placeholder{color:#8fa8c4}
+.jd-search input:focus{outline:2px solid #39c2ff;outline-offset:1px;border-color:#39c2ff}
+.jd-search-clear{flex:0 0 auto;min-width:52px;min-height:52px;border-radius:12px;cursor:pointer;
+  font-size:1.3rem;line-height:1;color:#0a0f16;
+  background:linear-gradient(180deg,#ffffff,#c9d4e4 55%,#93a5bd);
+  border:1px solid #d7e5f2;box-shadow:0 2px 0 #5f7089,0 6px 14px rgba(0,0,0,.35)}
+.jd-search-clear[hidden]{display:none}
+.jd-search-count{margin:.55rem .15rem 0;font-size:.92rem;color:#a9c6e8}
+.jd-search-empty{margin:0 0 .75rem;padding:1rem 1.1rem;border:1px dashed rgba(120,190,255,.55);
+  border-radius:14px;background:rgba(10,16,26,.8);color:#e8f3ff}
+.jd-search-empty[hidden]{display:none}
+.jd-search-empty button{margin-left:.6rem;min-height:44px;padding:.5rem 1rem;border-radius:10px;
+  cursor:pointer;font:inherit;font-weight:700;color:#081018;
+  background:linear-gradient(180deg,#7dd8ff,#2ea8ec);border:1px solid rgba(255,255,255,.4)}
+/* tap floor: text links get a reachable hit area without moving the layout */
+.site-footer a,main p a:not(.btn){
+  display:inline-block;padding-top:.45rem;padding-bottom:.45rem;margin-top:-.45rem;margin-bottom:-.45rem}
+/* the footer's full refunds URL wraps instead of overflowing the phone */
+.site-footer .guarantee a{overflow-wrap:anywhere}
+/* hero fold at phone sizes: shorter cover figure, tighter hero top */
+@media (min-width:341px) and (max-width:720px){
+  body>figure img{max-height:180px !important}
+}
+@media (min-width:341px) and (max-width:640px){
+  body.hustle-face .hero .wrap{padding-top:4.5rem}
+  body.hustle-face .hero h1{font-size:2.2rem}
+  .hero .lead{margin-top:.5rem}
+}
+</style>
 </head>
 <body class="hustle-face">
 
@@ -132,24 +182,36 @@ body.hustle-face figure img{border:1px solid #263144}
 
 <main>
 
-  <section class="band">
+  <div class="wrap jd-search-sticky">
+    <div class="jd-search" role="search">
+      <label for="jd-search-input">Search tools &amp; plans</label>
+      <div class="jd-search-row">
+        <input id="jd-search-input" type="search" autocomplete="off" placeholder="Search tools &amp; plans — try “safety” or “pass”">
+        <button class="jd-search-clear" id="jd-search-clear" type="button" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <p class="jd-search-count" id="jd-search-count" role="status" aria-live="polite"></p>
+    </div>
+    <p class="jd-search-empty" id="jd-search-empty" hidden>No matches — <button type="button" id="jd-search-empty-clear">Clear search</button></p>
+  </div>
+
+  <section class="band" data-search-group>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">How buying works</p>
         <h2>Plain prices, plain USD, no games</h2>
       </div>
       <div class="grid-3">
-        <div>
+        <div data-search-item>
           <h3>Per use — $0.50–$1.00</h3>
           <p>Pay by card for a single tool when you need it. The price shown is the whole price: no prepaid credits to buy or lock in, no per-token charges added after.</p>
         </div>
-        <div>
+        <div data-search-item>
           <h3>Everything Stack — $19.99</h3>
           <p>One full pass through every priced tool on the shelf today. A snapshot of the store as it stands.</p>
           <p><a class="btn btn-ghost btn-sm" href="https://buy.stripe.com/3cI9AT1hT4A47O5b9j3ks00">Buy the Stack — $19.99</a></p>
           <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div>
+        <div data-search-item>
           <h3>Unlimited Pass — $99.99</h3>
           <p>Unlimited use of every priced tool — including every tool added in the future — plus every app on the shelf. One payment. Not a subscription.</p>
           <p><a class="btn btn-primary btn-sm" href="https://buy.stripe.com/eVq8wP4u58Qkd8p4KV3ks1s">Buy the Pass — $99.99</a></p>
@@ -162,7 +224,7 @@ body.hustle-face figure img{border:1px solid #263144}
     </div>
   </section>
 
-  <section class="band band-alt">
+  <section class="band band-alt" data-search-item>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">For agents, by design</p>
@@ -180,7 +242,7 @@ body.hustle-face figure img{border:1px solid #263144}
     </div>
   </section>
 
-  <section class="band">
+  <section class="band" data-search-item>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Free, and worth your agent's time</p>
@@ -201,13 +263,13 @@ body.hustle-face figure img{border:1px solid #263144}
         <h2>Every door, one tap away</h2>
         <p class="lead">No hunting, no dead ends. These are the live doors into every J-Dawgs business.</p>
       </div>
-      <div class="doors-grid">
-        <a href="https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8"><b>AI Tool Store</b><span>Browse and run the tools</span></a>
-        <a href="https://buy.stripe.com/eVq8wP4u58Qkd8p4KV3ks1s"><b>Unlimited Pass — $99.99</b><span>Every tool and app, one payment</span></a>
-        <a href="https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk"><b>Human Hands board</b><span>See the job board</span></a>
-        <a href="https://forms.gle/kbYe1Uu8SShwE9kz8"><b>Work as a Hand</b><span>Free signup, 18+, smartphone only</span></a>
-        <a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"><b>Trading Post</b><span>Cards, coins, collectibles, consignment</span></a>
-        <a href="agent-services.html"><b>Agent Services</b><span>Fixed-price research &amp; listing work</span></a>
+      <div class="doors-grid" data-search-group>
+        <a href="https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8" data-search-item><b>AI Tool Store</b><span>Browse and run the tools</span></a>
+        <a href="https://buy.stripe.com/eVq8wP4u58Qkd8p4KV3ks1s" data-search-item><b>Unlimited Pass — $99.99</b><span>Every tool and app, one payment</span></a>
+        <a href="https://muse.ai/s/human-hands-for-ais-pv6xkxwjerqjx0/aCG4H_Lq8I8kWp0d5p44CFD_jhBVCRMxUXQtcgP3Vxk" data-search-item><b>Human Hands board</b><span>See the job board</span></a>
+        <a href="https://forms.gle/kbYe1Uu8SShwE9kz8" data-search-item><b>Work as a Hand</b><span>Free signup, 18+, smartphone only</span></a>
+        <a href="https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI" data-search-item><b>Trading Post</b><span>Cards, coins, collectibles, consignment</span></a>
+        <a href="agent-services.html" data-search-item><b>Agent Services</b><span>Fixed-price research &amp; listing work</span></a>
       </div>
     </div>
   </section>
@@ -272,6 +334,43 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(function () {});
   });
 }
+</script>
+<script>
+/* Storefront search — live client-side filter over the plans and doors. */
+(function(){
+  var input=document.getElementById('jd-search-input');
+  if(!input) return;
+  var clearBtn=document.getElementById('jd-search-clear'),
+      count=document.getElementById('jd-search-count'),
+      empty=document.getElementById('jd-search-empty'),
+      emptyBtn=document.getElementById('jd-search-empty-clear'),
+      items=Array.prototype.slice.call(document.querySelectorAll('[data-search-item]')),
+      groups=Array.prototype.slice.call(document.querySelectorAll('[data-search-group]')),
+      total=items.length;
+  function apply(){
+    var q=input.value.trim().toLowerCase(), shown=0;
+    items.forEach(function(it){
+      var hit=!q||it.textContent.toLowerCase().indexOf(q)>-1;
+      it.style.display=hit?'':'none';
+      if(hit) shown++;
+    });
+    groups.forEach(function(g){
+      var any=false;
+      Array.prototype.forEach.call(g.querySelectorAll('[data-search-item]'),function(k){
+        if(k.style.display!=='none') any=true;
+      });
+      g.style.display=(!q||any)?'':'none';
+    });
+    clearBtn.hidden=!q;
+    count.textContent=q?('Showing '+shown+' of '+total+' tools & plans'):('Showing all '+total+' tools & plans');
+    empty.hidden=!(q&&shown===0);
+  }
+  function reset(){ input.value=''; apply(); input.focus(); }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',reset);
+  emptyBtn.addEventListener('click',reset);
+  apply();
+})();
 </script>
 </body>
 </html>
