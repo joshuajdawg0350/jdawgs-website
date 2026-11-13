@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
     <link rel="icon" href="../assets/favicon.ico" sizes="any" />
-    <title>Hustle City Prompt Generator — J-Dawgs Industries</title>
-    <meta name="description" content="The Hustle City Prompt Generator: type a subject, setting, and mood — get perfect photorealism prompts for any AI image or video tool. The Hustle City edition of the Realism Master Template Generator. No ads. We never sell your information." />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#06080b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Prompt Engine" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Hustle City Prompt Generator — Universal Autoprompt Engine | J-Dawgs Industries</title>
+    <meta name="description" content="The Hustle City Prompt Generator is now a universal autoprompt engine: state any goal in plain words — realism image & video, writing, business, coding, research, or agent instructions — and get an expert-grade prompt formatted for the AI that does the work. No ads. We never sell your information." />
     <link rel="canonical" href="https://jdawgsindustries.com/realism-generator/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,10 +46,10 @@
         font-size: 17px;
         line-height: 1.45;
       }
-      .wrap { max-width: 920px; margin: 0 auto; padding: 14px 16px 40px; }
+      .wrap { max-width: 920px; margin: 0 auto; padding: 12px 16px 40px; }
 
       /* ---------- Header / brand ---------- */
-      header.brand { text-align: center; padding: 6px 0 4px; }
+      header.brand { text-align: center; padding: 4px 0 4px; }
       .brand-mark {
         display: inline-block;
         font-family: "Oswald", sans-serif;
@@ -64,7 +71,7 @@
         letter-spacing: 0.015em;
         line-height: 1.04;
         font-size: clamp(34px, 8.4vw, 58px);
-        margin: 12px 0 6px;
+        margin: 10px 0 5px;
         background: linear-gradient(180deg, #fdfeff 0%, #e6eef7 30%, #8fa5bd 49%, #eef4fb 52%, #aebfd4 72%, #f4f8fc 100%);
         -webkit-background-clip: text;
         background-clip: text;
@@ -79,7 +86,7 @@
         font-size: clamp(17px, 4.6vw, 22px);
         letter-spacing: 0.04em;
         color: #39c2ff;
-        margin: 2px 0 12px;
+        margin: 2px 0 10px;
         text-shadow: 0 0 18px rgba(57, 194, 255, 0.45);
       }
       .pledges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
@@ -101,7 +108,7 @@
       }
       .plate-head {
         display: flex; align-items: center; justify-content: space-between; gap: 12px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
       .plate-head h2 {
         font-family: "Oswald", sans-serif; font-weight: 600; text-transform: uppercase;
@@ -116,11 +123,11 @@
       /* ---------- Form ---------- */
       label.field-label {
         display: block; font-weight: 700; font-size: 14px; letter-spacing: 0.05em;
-        text-transform: uppercase; color: var(--muted); margin: 0 0 7px;
+        text-transform: uppercase; color: var(--muted); margin: 0 0 5px;
       }
-      .field { margin-bottom: 16px; }
+      .field { margin-bottom: 12px; }
       .field:last-child { margin-bottom: 0; }
-      input[type="text"], select {
+      input[type="text"], select, textarea {
         width: 100%; min-height: 50px;
         background: var(--field);
         border: 1px solid var(--line);
@@ -130,14 +137,15 @@
         padding: 9px 13px;
         appearance: none; -webkit-appearance: none;
       }
+      textarea { line-height: 1.45; resize: vertical; }
       select {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%2338a9ff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 14px center;
         padding-right: 40px;
       }
-      input[type="text"]::placeholder { color: var(--faint); }
-      input[type="text"]:focus, select:focus {
+      input[type="text"]::placeholder, textarea::placeholder { color: var(--faint); }
+      input[type="text"]:focus, select:focus, textarea:focus {
         outline: 2px solid var(--blue); outline-offset: 1px; border-color: var(--blue);
       }
       .hint { font-size: 13.5px; color: var(--faint); margin: 6px 0 0; }
@@ -242,6 +250,35 @@
         z-index: 50; max-width: calc(100vw - 32px); text-align: center;
       }
       .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+      /* ---------- Universal engine additions ---------- */
+      [hidden] { display: none !important; }
+      .engine-line {
+        max-width: 640px; margin: 10px auto 0; text-align: center;
+        color: var(--muted); font-size: 15.5px; line-height: 1.5;
+      }
+      .engine-line b { color: var(--ink); }
+      .family-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 8px;
+      }
+      .family-btn {
+        min-height: 58px; padding: 8px 13px; text-align: left;
+        display: flex; flex-direction: column; justify-content: center; gap: 2px;
+        border-radius: 12px; border: 1px solid var(--line);
+        background: #0c1119; color: var(--ink); font: inherit; cursor: pointer;
+      }
+      .family-btn:active { transform: translateY(1px); }
+      .family-name {
+        font-family: "Oswald", sans-serif; font-weight: 600; font-size: 15.5px;
+        letter-spacing: 0.045em; text-transform: uppercase; line-height: 1.2;
+      }
+      .family-blurb { font-size: 13px; color: var(--muted); line-height: 1.3; }
+      .family-btn.active {
+        border-color: var(--blue); color: #fff;
+        background: linear-gradient(180deg, #1d6fc4, var(--blue-deep));
+        box-shadow: 0 0 14px rgba(56, 169, 255, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+      }
+      .family-btn.active .family-blurb { color: #dceeff; }
       @media (min-width: 380px) and (max-width: 560px) {
         h1 { margin-bottom: 2px; }
         .plate-head { margin-bottom: 6px; }
@@ -255,14 +292,33 @@
         label.field-label { margin-bottom: 4px; }
         input[type="text"] { min-height: 48px; }
         .btn-ghost { min-height: 46px; }
+        .family-grid { gap: 6px; }
+        .family-btn { min-height: 54px; }
       }
       @media (min-width: 401px) and (max-width: 560px) {
         .tagline { margin: 0 0 8px; }
         .chips { margin-top: 10px; }
-        .plate { margin-top: 12px; padding-top: 10px; }
+        .plate { margin-top: 6px; padding-top: 6px; }
         .plate + .plate { margin-top: 27px; }
         label.field-label { margin-bottom: 4px; }
         input[type="text"] { min-height: 48px; }
+        .brand-mark { padding-top: 5px; padding-bottom: 5px; }
+        .engine-line { margin-top: 6px; }
+        h1 { margin-top: 8px; }
+        .pledges span { padding: 4px 12px; }
+        .family-grid { gap: 10px; }
+      }
+      @media (max-width: 379px) {
+        .brand-mark { padding-top: 5px; padding-bottom: 5px; }
+        .plate { margin-top: 10px; padding: 13px; }
+        .plate-head { margin-bottom: 7px; }
+        .engine-line { margin-top: 9px; }
+        .family-grid { gap: 10px; }
+      }
+      @media (min-width: 561px) and (max-width: 900px) {
+        .plate { margin-top: 12px; }
+        .engine-line { margin-top: 6px; }
+        .chips { margin-top: 12px; }
       }
       @media (prefers-reduced-motion: reduce) { .toast { transition: none; } .chip:active, .btn-chrome:active, .btn-blue:active { transform: none; } }
     </style>
@@ -278,10 +334,17 @@
           <span><b>We never sell your information.</b></span>
           <span>No accounts — nothing leaves your device.</span>
         </div>
+        <p class="engine-line">Now a <b>universal autoprompt engine</b>: state <b>any goal</b> in plain words — a realism shot, a post, an ad, an app, a deep-dive, instructions for an agent — and get an <b>expert-grade prompt</b>, formatted for the AI that does the work. Add it to your home screen and it's always one tap away.</p>
       </header>
 
+      <!-- ============ ENGINE PICKER ============ -->
+      <section class="plate" aria-label="Choose your engine">
+        <div class="plate-head"><h2>Choose Your Engine</h2></div>
+        <div class="family-grid" id="familyGrid" role="group" aria-label="Prompt families"></div>
+      </section>
+
       <!-- ============ INPUTS ============ -->
-      <section class="plate" aria-label="Prompt ingredients">
+      <section class="plate" id="plateShot" aria-label="Prompt ingredients">
         <div class="plate-head">
           <h2>The Shot</h2>
           <button type="button" class="btn-ghost" id="surpriseBtn">Surprise me</button>
@@ -318,7 +381,7 @@
       </section>
 
       <!-- ============ DIALS ============ -->
-      <section class="plate" aria-label="Camera dials">
+      <section class="plate" id="plateDials" aria-label="Camera dials">
         <div class="plate-head"><h2>The Dials</h2></div>
         <div class="dial-grid">
           <div class="field">
@@ -382,13 +445,80 @@
       </section>
 
       <!-- ============ OUTPUTS ============ -->
-      <section class="plate" aria-label="Generated prompts">
+      <section class="plate" id="plateRealismOut" aria-label="Generated prompts">
         <div class="plate-head">
           <h2>Your Prompts</h2>
           <button type="button" class="btn-blue" id="copyAllBtn">Copy all three</button>
         </div>
         <p class="target-note" id="targetNote"></p>
         <div id="outputs"></div>
+      </section>
+
+      <!-- ============ TEXT-FAMILY INPUTS ============ -->
+      <section class="plate" id="plateTextIn" aria-label="Your goal" hidden>
+        <div class="plate-head">
+          <h2 id="textPlateTitle">Your Goal</h2>
+          <button type="button" class="btn-ghost" id="tSurpriseBtn">Surprise me</button>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tGoal" id="tGoalLabel">The goal</label>
+          <textarea id="tGoal" rows="2" autocomplete="off"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tSubject" id="tSubjectLabel">Topic</label>
+          <input type="text" id="tSubject" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tAudience" id="tAudienceLabel">Audience</label>
+          <input type="text" id="tAudience" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tDetails" id="tDetailsLabel">Key details</label>
+          <textarea id="tDetails" rows="3" autocomplete="off"></textarea>
+        </div>
+
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="tTone" id="tToneLabel">Tone</label>
+            <select id="tTone"></select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="tFormat" id="tFormatLabel">Output format</label>
+            <select id="tFormat"></select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="tLength">Length</label>
+            <select id="tLength">
+              <option value="brief">Brief</option>
+              <option value="standard" selected>Standard</option>
+              <option value="deep">In-depth</option>
+              <option value="max">Exhaustive</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="tTarget">Target AI</label>
+            <select id="tTarget">
+              <option value="generic" selected>Generic — any AI</option>
+              <option value="chatgpt">ChatGPT-style</option>
+              <option value="claude">Claude-style</option>
+              <option value="gemini">Gemini-style</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TEXT-FAMILY OUTPUTS ============ -->
+      <section class="plate" id="plateTextOut" aria-label="Generated prompts" hidden>
+        <div class="plate-head">
+          <h2>Your Prompts</h2>
+          <button type="button" class="btn-blue" id="tCopyAllBtn">Copy all three</button>
+        </div>
+        <p class="target-note" id="tTargetNote"></p>
+        <div id="tOutputs"></div>
       </section>
 
       <footer>
@@ -764,6 +894,611 @@
 
         syncChips();
         render();
+      })();
+    </script>
+
+    <script>
+      /* ============================================================
+         UNIVERSAL AUTOPROMPT ENGINE — text families + family picker.
+         The realism engine above is untouched; this block adds the
+         Writing / Business / Coding / Research / Agent families.
+         ============================================================ */
+      (function () {
+        "use strict";
+
+        var $ = function (id) { return document.getElementById(id); };
+
+        var LENGTHS = {
+          brief:    { label: "Brief",      phrase: "keep it brief — the shortest version that still lands" },
+          standard: { label: "Standard",   phrase: "a full, standard-length treatment" },
+          deep:     { label: "In-depth",   phrase: "go deep and thorough" },
+          max:      { label: "Exhaustive", phrase: "be exhaustive — cover it completely and leave nothing important out" }
+        };
+
+        var FAMILY_META = {
+          realism:  { name: "Realism Image & Video",  blurb: "Photoreal prompts for any image or video tool" },
+          writing:  { name: "Writing & Content",      blurb: "Posts, articles, stories, scripts" },
+          business: { name: "Business & Marketing",   blurb: "Ads, pitches, product copy, emails" },
+          coding:   { name: "Coding & Building",      blurb: "Apps, scripts, debugging, game dev" },
+          research: { name: "Research & Learning",    blurb: "Explain, compare, deep-dive" },
+          agent:    { name: "Agent & System Prompts", blurb: "Instructions for an AI agent or assistant" }
+        };
+        var ORDER = ["realism", "writing", "business", "coding", "research", "agent"];
+
+        var FAMILIES = {
+          writing: {
+            plateTitle: "The Piece",
+            goalLabel: "The goal — what should it write?",
+            goalPh: "e.g. write a post about why hand-done work still matters",
+            subjectKey: "Topic", subjectLabel: "Topic / subject",
+            subjectPh: "e.g. small local services vs big apps",
+            audienceKey: "Audience", audienceLabel: "Audience — who will read it?",
+            audiencePh: "e.g. neighbors in Springfield, MO",
+            toneKey: "Tone", toneLabel: "Tone",
+            tones: ["Plain and direct", "Warm and friendly", "Bold and punchy", "Professional", "Witty", "Storyteller", "Formal"],
+            detailsLabel: "Key details & facts to include",
+            detailsPh: "Names, facts, lines that must appear, things to avoid…",
+            formatLabel: "Output format",
+            formats: ["Social media post", "Article / blog post", "Short story", "Video script", "Speech / talk", "Newsletter", "Poem / song lyrics"],
+            roleBare: "an expert writer and editor",
+            roleTail: "a sharp ear for voice and zero tolerance for filler",
+            role: "You are an award-winning writer and editor with a sharp ear for voice, a love of concrete detail, and zero tolerance for filler. You write like a person, not a content machine.",
+            requirements: [
+              "Write in the stated tone from the first line — no warm-up throat-clearing.",
+              "Show, don't tell: concrete details, moments, and scenes over summaries and adjectives.",
+              "Every sentence must earn its place — cut filler, clichés, and generic AI phrasing.",
+              "Stay true to the key details — invent nothing that contradicts them."
+            ],
+            angles: [
+              "Open in the middle of the action — no introduction; start where it's already interesting.",
+              "Write it as if telling it to one specific friend over coffee — then polish that voice, don't replace it.",
+              "Build the whole piece around one small, vivid, true detail and let everything else orbit it."
+            ],
+            defaults: {
+              goal: "write a post about why hand-done work still matters",
+              subject: "small local services vs big apps",
+              audience: "neighbors in Springfield, MO",
+              details: "Open on a specific moment, not a slogan. Mention Springfield, MO once, naturally."
+            },
+            surprise: [
+              { goal: "write a post about a small-town crew that still does house calls", subject: "human work vs automation", audience: "local homeowners", details: "Open on a specific moment, not a slogan." },
+              { goal: "write the story of the last video-store clerk in town", subject: "a town changing around one stubborn shopkeeper", audience: "anyone who grew up renting movies on Fridays", details: "One scene must take place at the counter, five minutes before closing." },
+              { goal: "write a script for a 45-second video about a porch that needs fixing", subject: "a wobbly porch rail and the neighbor who notices", audience: "homeowners scrolling at lunch", details: "End on the fixed rail and a wave, not a sales pitch." }
+            ]
+          },
+
+          business: {
+            plateTitle: "The Pitch",
+            goalLabel: "The goal — what should it produce?",
+            goalPh: "e.g. sell my consignment trading post to local collectors",
+            subjectKey: "Product / offer", subjectLabel: "Product / offer",
+            subjectPh: "e.g. a consignment trading post — no listing fee",
+            audienceKey: "Audience", audienceLabel: "Audience — who are you selling to?",
+            audiencePh: "e.g. people with garages full of collectibles",
+            toneKey: "Tone", toneLabel: "Tone",
+            tones: ["Plain and honest", "Confident", "Friendly neighbor", "Bold and punchy", "Premium and polished", "Urgent — honest scarcity only"],
+            detailsLabel: "Facts, terms & proof (true things only)",
+            detailsPh: "Prices, terms, guarantees, deadlines — only what's true…",
+            formatLabel: "Output format",
+            formats: ["Ad copy", "Sales pitch (one-pager)", "Product description", "Cold email", "Social media ad", "Flyer / sign copy", "Landing page section"],
+            roleBare: "a senior direct-response copywriter",
+            roleTail: "you sell real products to real people — concrete benefits, honest claims, no hype that can't be backed up",
+            role: "You are a senior direct-response copywriter who has sold real products to real people. You lead with the customer's problem, prove every claim, and write like a person talking to a person.",
+            requirements: [
+              "Lead with the customer's problem and the concrete benefit — features come second.",
+              "Use only claims that are true of the product — never invent prices, stats, guarantees, or testimonials.",
+              "One clear call to action, stated once, stated plainly.",
+              "No hype words ('revolutionary', 'game-changing', 'unlock') unless the proof is right there in the copy."
+            ],
+            angles: [
+              "Write it as a story: one real customer moment, problem to payoff, with the offer as the ending.",
+              "Lead with the objection — name the reason someone would say no, answer it honestly, then make the offer.",
+              "Write the shop-window version: so clear and short it could be painted on glass, every word earning its space."
+            ],
+            defaults: {
+              goal: "write an ad for a consignment trading post",
+              subject: "J-Dawgs Trading Post — consignment sales for local sellers",
+              audience: "local collectors and people clearing out a garage",
+              details: "No listing fee, no sale no fee. Sellers keep 65% under $100 and 75% at $100+. Payout within 3 business days."
+            },
+            surprise: [
+              { goal: "write a one-pager pitching a local task service to property managers", subject: "Human Hands — local people for house checks, deliveries, and yard work", audience: "property managers with 200+ units", details: "Posters set the price and pay +15% — that's the whole cost. Photo proof on every job." },
+              { goal: "write a product description for a vintage slot machine", subject: "a working pachislo slot machine, sold as-is", audience: "game-room collectors", details: "Disclose the as-is condition plainly, including the E1 display code." },
+              { goal: "write a cold email to a local shop owner", subject: "a no-ads game arcade looking for cross-promotion", audience: "a busy shop owner who deletes most emails", details: "Keep it under 120 words. One ask only: a counter card by the register." }
+            ]
+          },
+
+          coding: {
+            plateTitle: "The Build",
+            goalLabel: "The goal — what should it build or fix?",
+            goalPh: "e.g. build a tip calculator / fix my login bug",
+            subjectKey: "Project", subjectLabel: "Project / app",
+            subjectPh: "e.g. a one-page web app for splitting a check",
+            audienceKey: "Built for", audienceLabel: "Who is it for?",
+            audiencePh: "e.g. a total beginner — explain everything",
+            toneKey: "Code style", toneLabel: "Code style",
+            tones: ["Clean and commented", "Minimal and tight", "Production-grade", "Beginner-friendly", "Game-dev: fast and fun"],
+            detailsLabel: "Stack, constraints & details",
+            detailsPh: "e.g. single HTML file, must work on a phone, no build step…",
+            formatLabel: "Output format",
+            formats: ["Build it — full code", "Write a script", "Debug / fix my code", "Plan the build (architecture first)", "Explain this code", "Game feature / mechanic"],
+            roleBare: "a senior software engineer",
+            roleTail: "you ship clean, working code and explain your decisions in plain language",
+            role: "You are a senior software engineer who ships clean, complete, working code. You favor standard tools over exotic ones, handle edge cases without being asked, and explain your work in plain language.",
+            requirements: [
+              "Deliver complete, runnable code — no placeholders, no 'the rest follows the same pattern'.",
+              "Follow the stated stack and constraints exactly; prefer standard libraries over exotic dependencies.",
+              "Handle the obvious edge cases (empty input, bad input, small screens) and say which ones you handled.",
+              "After the code, give a short plain-language rundown: how to run it and how each part works."
+            ],
+            angles: [
+              "Build the smallest version that fully works first, then extend it — deliver both stages, clearly labeled.",
+              "Write it like a pair-programming session: code block, one-line 'why', code block, one-line 'why'.",
+              "Optimize for the beginner reading it at midnight: generous comments, zero clever tricks, everything named plainly."
+            ],
+            defaults: {
+              goal: "build a tip calculator",
+              subject: "a one-page web app",
+              audience: "anyone splitting a restaurant check",
+              details: "Single HTML file, no build step. Must work on a phone screen. Round the total up to the nearest dollar as an option."
+            },
+            surprise: [
+              { goal: "build a one-page dice roller for a street-craps mini game", subject: "a browser dice game helper", audience: "players on phones", details: "Two dice, a roll button with real physics-feel animation, and a running win/loss tally. Single file." },
+              { goal: "write a script that renames photo files by the date they were taken", subject: "a small automation script", audience: "a non-programmer running it once", details: "Dry-run mode first that only prints what would change. Never overwrite an existing file." },
+              { goal: "build a tip calculator", subject: "a one-page web app", audience: "anyone splitting a restaurant check", details: "Single HTML file, no build step. Must work on a phone screen." }
+            ]
+          },
+
+          research: {
+            plateTitle: "The Question",
+            goalLabel: "The goal — what should it explain or research?",
+            goalPh: "e.g. explain how compound interest actually works",
+            subjectKey: "Topic", subjectLabel: "Topic",
+            subjectPh: "e.g. compound interest",
+            audienceKey: "Level", audienceLabel: "Your level",
+            audiencePh: "e.g. smart beginner / high-school student / pro refresher",
+            toneKey: "Teaching style", toneLabel: "Teaching style",
+            tones: ["Plain and clear", "Like I'm five — then level up", "Academic", "Story-driven", "Socratic — questions first"],
+            detailsLabel: "Focus & confusions",
+            detailsPh: "e.g. I keep mixing up APR and APY; use dollar examples…",
+            formatLabel: "Output format",
+            formats: ["Explainer", "Comparison / versus", "Deep-dive report", "Study guide", "Pros & cons breakdown", "Timeline / how it developed"],
+            roleBare: "an expert researcher and teacher",
+            roleTail: "you value accuracy over speed and say so when something is uncertain",
+            role: "You are an expert researcher and teacher who can make hard ideas land for any level. You put accuracy first: when a fact is uncertain or contested, you say so plainly instead of guessing.",
+            requirements: [
+              "Accuracy first — if a fact is uncertain, dated, or contested, flag it instead of stating it as settled.",
+              "Structure for skimming: short paragraphs, clear headings, bullets where they genuinely help.",
+              "Use concrete examples, numbers, and comparisons — abstractions alone don't teach.",
+              "End with the 3 most important takeaways and one good next question to explore."
+            ],
+            angles: [
+              "Teach it backwards: start from the practical payoff, then unpack the theory only as deep as needed.",
+              "Build a comparison table early and hang the whole answer off it.",
+              "End with a 3-question self-quiz (answers included) that locks the idea in."
+            ],
+            defaults: {
+              goal: "explain how compound interest actually works",
+              subject: "compound interest",
+              audience: "a smart beginner",
+              details: "Use one concrete $100 example throughout. Flag the difference between APR and APY."
+            },
+            surprise: [
+              { goal: "explain why the sky is blue — first like I'm a curious kid, then like a physicist", subject: "Rayleigh scattering", audience: "a curious beginner who wants both levels", details: "Keep the kid version honest — no 'because it reflects the ocean'." },
+              { goal: "compare renting vs buying a house in a small city", subject: "rent vs buy, small-city Midwest", audience: "a first-time buyer doing the math", details: "Use a $150,000 house and $950/month rent as the running example." },
+              { goal: "deep-dive: how GPS knows where you are", subject: "GPS positioning", audience: "a student before an exam", details: "Cover trilateration and why the clocks matter. Flag the relativistic correction as a fact worth pausing on." }
+            ]
+          },
+
+          agent: {
+            plateTitle: "The Agent",
+            goalLabel: "The goal — what should this agent do?",
+            goalPh: "e.g. an agent that answers my shop's customer messages",
+            subjectKey: "Domain", subjectLabel: "Agent's job / domain",
+            subjectPh: "e.g. customer support for a trading post",
+            audienceKey: "Serves", audienceLabel: "Who will the agent serve?",
+            audiencePh: "e.g. buyers asking about listings and shipping",
+            toneKey: "Personality", toneLabel: "Agent personality",
+            tones: ["Helpful and plain-spoken", "Warm and patient", "Strictly professional", "Short and direct", "Friendly with a sense of humor"],
+            detailsLabel: "Rules, tools & limits",
+            detailsPh: "e.g. can check order status; never promise refunds over $50; escalate angry customers…",
+            formatLabel: "Output format",
+            formats: ["Full system prompt", "Agent instruction set", "Chatbot persona + rules", "Workflow prompt (step-by-step)", "Single-task prompt"],
+            roleBare: "an expert AI systems designer",
+            roleTail: "you write agent instructions that are precise, testable, and hard to misread",
+            role: "You are an expert AI systems designer. You write agent instructions the way engineers write specs: precise, testable, complete on edge cases, and impossible to misread on purpose.",
+            requirements: [
+              "Write in second person, imperative voice — 'You are…', 'Always…', 'Never…'.",
+              "Define the role, the goal, the inputs/tools available, and the hard limits — what the agent must refuse or escalate.",
+              "Include a step-by-step workflow and an exact output format the agent follows every time.",
+              "Add guardrails for missing information, ambiguity, and mistakes: ask one short question — never invent."
+            ],
+            angles: [
+              "Include 2 short worked examples inside the prompt: one ideal interaction, one edge case handled right.",
+              "Give the agent a name, a one-line motto, and a short personality paragraph before the rules — identity first, then law.",
+              "Add a self-check section: before answering, the agent re-reads its instructions and verifies its output against them."
+            ],
+            defaults: {
+              goal: "an agent that answers my shop's customer messages",
+              subject: "customer support for a consignment trading post",
+              audience: "buyers asking about listings, prices, and shipping",
+              details: "Never promise a refund or a discount. If an item's status is unknown, say so and offer to check. Escalate anything about a dispute to the owner."
+            },
+            surprise: [
+              { goal: "an agent that triages my email and drafts replies", subject: "email triage assistant for a small business owner", audience: "the owner, reviewing drafts each morning", details: "Never send anything — drafts only. Flag anything involving money, contracts, or an unhappy customer as urgent." },
+              { goal: "an agent that writes product listings from photos", subject: "listing-writing agent for a trading post", audience: "shoppers browsing the listings", details: "Describe only what's visible in the photo. State condition honestly, including flaws. Never invent a brand or a year." },
+              { goal: "an agent that plans my work week every Sunday night", subject: "scheduling assistant for a construction worker who also runs a small business", audience: "the owner, on his phone, in under two minutes", details: "Day job is fixed first. Business tasks fill the gaps. Flag any week with no day off." }
+            ]
+          }
+        };
+
+        var TARGET_NOTES_TEXT = {
+          generic: "Plain-text prompts that work in <b>any AI chat</b> — paste them anywhere.",
+          chatgpt: "Formatted for <b>ChatGPT-style</b> models — markdown headers and bullets they follow tightly.",
+          claude: "Formatted for <b>Claude-style</b> models — tagged context blocks that Claude tracks precisely.",
+          gemini: "Formatted for <b>Gemini-style</b> models — numbered instructions, one requirement per line."
+        };
+        var TARGET_NAMES_TEXT = { generic: "Generic", chatgpt: "ChatGPT-style", claude: "Claude-style", gemini: "Gemini-style" };
+
+        var VARIANT_META = {
+          direct:   { name: "Direct",   tag: "Tight and ready to paste. The fastest route to a strong result." },
+          expert:   { name: "Expert",   tag: "The full skeleton — role, task, context, requirements, output spec. Maximum control." },
+          wildcard: { name: "Wildcard", tag: "The same goal, attacked from a sharper angle." }
+        };
+
+        /* ---------- state ---------- */
+        var state = {};
+        Object.keys(FAMILIES).forEach(function (fid) {
+          var fam = FAMILIES[fid];
+          state[fid] = {
+            goal: fam.defaults.goal, subject: fam.defaults.subject,
+            audience: fam.defaults.audience, details: fam.defaults.details,
+            tone: fam.tones[0], format: fam.formats[0],
+            length: "standard", target: "generic"
+          };
+        });
+        var current = "realism";
+
+        function clean(s) { return (s || "").trim(); }
+        function lowerFirst(s) { return s ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+        function hashOf(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); }
+
+        function buildModel(fid) {
+          var fam = FAMILIES[fid], st = state[fid];
+          var goal = clean(st.goal) || "the stated goal";
+          var goalSentence = goal.replace(/\.+\s*$/, "") + ".";
+          var len = LENGTHS[st.length] || LENGTHS.standard;
+          var pairs = [];
+          if (clean(st.subject)) pairs.push({ k: fam.subjectKey, v: clean(st.subject) });
+          if (clean(st.audience)) pairs.push({ k: fam.audienceKey, v: clean(st.audience) });
+          pairs.push({ k: fam.toneKey, v: st.tone });
+          return {
+            fam: fam, st: st, goalSentence: goalSentence,
+            format: st.format, formatLower: lowerFirst(st.format),
+            lenLabel: len.label, lenPhrase: len.phrase,
+            tone: st.tone, toneKey: fam.toneKey,
+            pairs: pairs, details: clean(st.details),
+            requirements: fam.requirements,
+            angle: fam.angles[hashOf(goal) % fam.angles.length]
+          };
+        }
+
+        var DETAILS_FALLBACK = "None provided — do not invent specifics. Where a detail is missing, make the most reasonable choice and flag it in one line.";
+        var DETAILS_FALLBACK_SHORT = "none supplied — do not invent specifics";
+
+        /* ---------- renderers per target AI ---------- */
+        function pairsInline(m) {
+          return m.pairs.map(function (p) { return p.k + ": " + p.v; }).join("; ");
+        }
+
+        function renderPlain(m, variant) {
+          if (variant === "expert") {
+            var out = [];
+            out.push("ROLE\n" + m.fam.role);
+            out.push("TASK\n" + m.goalSentence);
+            var ctx = m.pairs.map(function (p) { return "- " + p.k + ": " + p.v; }).join("\n");
+            out.push("CONTEXT\n" + ctx);
+            out.push("KEY DETAILS — TREAT AS FACT\n" + (m.details || DETAILS_FALLBACK));
+            out.push("REQUIREMENTS\n" + m.requirements.map(function (r, i) { return (i + 1) + ". " + r; }).join("\n"));
+            out.push("OUTPUT SPEC\nFormat: " + m.format + ". Length: " + m.lenLabel + " — " + m.lenPhrase + ". " + m.toneKey + ": " + m.tone + ".\nDeliver the finished work only, ready to use as-is.");
+            return out.join("\n\n");
+          }
+          var direct = [];
+          direct.push("You are " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
+          direct.push("Your task: " + m.goalSentence.replace(/\.$/, "") + ", delivered as " + m.formatLower + " (" + m.lenLabel.toLowerCase() + " — " + m.lenPhrase + ").");
+          direct.push("Context: " + pairsInline(m) + ".");
+          direct.push(m.details ? "Work from these facts — do not contradict them: " + m.details : "Key details: " + DETAILS_FALLBACK_SHORT + ".");
+          direct.push("Non-negotiables: " + m.requirements.join(" "));
+          direct.push("Deliver only the finished " + m.formatLower + " — no preamble, no explanation of what you are about to do.");
+          var body = direct.join("\n");
+          return variant === "wildcard" ? "Angle: " + m.angle + "\n\n" + body : body;
+        }
+
+        function renderMarkdown(m, variant) {
+          if (variant === "expert") {
+            var out = [];
+            out.push("## Role\n" + m.fam.role);
+            out.push("## Task\n" + m.goalSentence);
+            out.push("## Context\n" + m.pairs.map(function (p) { return "- **" + p.k + ":** " + p.v; }).join("\n"));
+            out.push("## Key details — treat as fact\n" + (m.details || DETAILS_FALLBACK));
+            out.push("## Requirements\n" + m.requirements.map(function (r) { return "- " + r; }).join("\n"));
+            out.push("## Output spec\n**Format:** " + m.format + " · **Length:** " + m.lenLabel + " (" + m.lenPhrase + ") · **" + m.toneKey + ":** " + m.tone + "\nDeliver the finished work only, ready to use as-is.");
+            return out.join("\n\n");
+          }
+          var direct = [];
+          direct.push("**You are** " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
+          direct.push("**Task:** " + m.goalSentence);
+          direct.push("**Context:** " + pairsInline(m) + ".");
+          direct.push("**Key details:** " + (m.details || DETAILS_FALLBACK_SHORT) + ".");
+          direct.push("**Format:** " + m.format + " · **Length:** " + m.lenLabel + " · **" + m.toneKey + ":** " + m.tone);
+          direct.push("**Non-negotiables:** " + m.requirements.join(" "));
+          direct.push("Deliver the finished " + m.formatLower + " only — no preamble.");
+          var body = direct.join("\n");
+          return variant === "wildcard" ? "> **Angle:** " + m.angle + "\n\n" + body : body;
+        }
+
+        function renderClaude(m, variant) {
+          if (variant === "expert") {
+            var out = [];
+            out.push("<role>\n" + m.fam.role + "\n</role>");
+            out.push("<task>\n" + m.goalSentence + "\n</task>");
+            out.push("<context>\n" + m.pairs.map(function (p) { return p.k + ": " + p.v; }).join("\n") + "\n</context>");
+            out.push("<key_details>\n" + (m.details || DETAILS_FALLBACK) + "\n</key_details>");
+            out.push("<requirements>\n" + m.requirements.map(function (r, i) { return (i + 1) + ". " + r; }).join("\n") + "\n</requirements>");
+            out.push("<output_spec>\nFormat: " + m.format + ". Length: " + m.lenLabel + " — " + m.lenPhrase + ". " + m.toneKey + ": " + m.tone + ". Deliver the finished work only, ready to use as-is.\n</output_spec>");
+            return out.join("\n\n");
+          }
+          var direct = [];
+          direct.push("You are " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
+          direct.push("Task: " + m.goalSentence);
+          direct.push("<context>" + pairsInline(m) + "</context>");
+          direct.push("<key_details>" + (m.details || DETAILS_FALLBACK_SHORT) + "</key_details>");
+          direct.push("Requirements: " + m.requirements.join(" "));
+          direct.push("Output: " + m.format + ", " + m.lenLabel.toLowerCase() + ". Deliver the finished work only — no preamble.");
+          var body = direct.join("\n");
+          return variant === "wildcard" ? "<angle>" + m.angle + "</angle>\n\n" + body : body;
+        }
+
+        function renderGemini(m, variant) {
+          var steps = [];
+          if (variant === "wildcard") steps.push("Angle: " + m.angle);
+          steps.push("Act as " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
+          steps.push("Task: " + m.goalSentence);
+          steps.push("Context: " + pairsInline(m) + ".");
+          steps.push("Key details (treat as fact): " + (m.details || DETAILS_FALLBACK_SHORT) + ".");
+          if (variant === "expert") {
+            steps.push("Requirements:\n" + m.requirements.map(function (r) { return "   - " + r; }).join("\n"));
+          } else {
+            m.requirements.forEach(function (r) { steps.push("Requirement: " + r); });
+          }
+          steps.push("Output: " + m.format + " — " + m.lenLabel + " (" + m.lenPhrase + "), " + m.toneKey.toLowerCase() + ": " + m.tone + ".");
+          steps.push("Deliver the finished work only — no preamble, no explanation of what you are about to do.");
+          return "Follow these instructions exactly:\n" + steps.map(function (s, i) { return (i + 1) + ". " + s; }).join("\n");
+        }
+
+        var RENDERERS = { generic: renderPlain, chatgpt: renderMarkdown, claude: renderClaude, gemini: renderGemini };
+
+        function buildTextVariant(fid, variant) {
+          var m = buildModel(fid);
+          return RENDERERS[m.st.target](m, variant);
+        }
+
+        /* ---------- copy (same discipline as the realism engine) ---------- */
+        var toastTimer = null;
+        function toast(msg) {
+          var t = $("toast");
+          t.textContent = msg;
+          t.classList.add("show");
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400);
+        }
+        function selectText(el) {
+          try {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          } catch (e) { /* best-effort */ }
+        }
+        function copyText(text, textEl, noteEl, btn) {
+          function done(ok) {
+            if (ok) {
+              noteEl.textContent = "Copied.";
+              noteEl.className = "copy-note ok";
+              toast("Copied to clipboard");
+            } else {
+              selectText(textEl);
+              noteEl.textContent = "Copy was blocked — the text above is selected. Long-press it and tap Copy.";
+              noteEl.className = "copy-note warn";
+              toast("Text selected — long-press to copy");
+            }
+            if (btn) {
+              var old = btn.textContent;
+              btn.textContent = ok ? "Copied ✓" : "Selected — long-press";
+              setTimeout(function () { btn.textContent = old; }, 2400);
+            }
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () {
+              selectText(textEl);
+              var ok = false;
+              try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+              done(ok);
+            });
+          } else {
+            selectText(textEl);
+            var ok2 = false;
+            try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
+            done(ok2);
+          }
+        }
+
+        /* ---------- text outputs rendering ---------- */
+        function renderText() {
+          if (current === "realism") return;
+          var st = state[current];
+          $("tTargetNote").innerHTML = TARGET_NOTES_TEXT[st.target];
+          var box = $("tOutputs");
+          box.innerHTML = "";
+          ["direct", "expert", "wildcard"].forEach(function (key) {
+            var meta = VARIANT_META[key];
+            var text = buildTextVariant(current, key);
+            var card = document.createElement("article");
+            card.className = "variant";
+            var head = document.createElement("div");
+            head.className = "variant-head";
+            var titleBox = document.createElement("div");
+            var h3 = document.createElement("h3");
+            h3.className = "variant-name";
+            h3.textContent = meta.name;
+            var tag = document.createElement("p");
+            tag.className = "variant-tag";
+            tag.textContent = meta.tag;
+            titleBox.appendChild(h3);
+            titleBox.appendChild(tag);
+            head.appendChild(titleBox);
+            card.appendChild(head);
+
+            var wrap = document.createElement("div");
+            wrap.className = "out-block";
+            var txt = document.createElement("p");
+            txt.className = "out-text";
+            txt.textContent = text;
+            wrap.appendChild(txt);
+            var actions = document.createElement("div");
+            actions.className = "out-actions";
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "btn-chrome";
+            btn.textContent = "Copy prompt";
+            var note = document.createElement("span");
+            note.className = "copy-note";
+            btn.addEventListener("click", function () { copyText(text, txt, note, btn); });
+            actions.appendChild(btn);
+            actions.appendChild(note);
+            wrap.appendChild(actions);
+            card.appendChild(wrap);
+            box.appendChild(card);
+          });
+        }
+
+        /* ---------- family form wiring ---------- */
+        function fillSelect(sel, options, value) {
+          sel.innerHTML = "";
+          options.forEach(function (o) {
+            var opt = document.createElement("option");
+            opt.value = o;
+            opt.textContent = o;
+            sel.appendChild(opt);
+          });
+          sel.value = value;
+        }
+
+        function saveCurrent() {
+          if (current === "realism") return;
+          var st = state[current];
+          st.goal = $("tGoal").value;
+          st.subject = $("tSubject").value;
+          st.audience = $("tAudience").value;
+          st.details = $("tDetails").value;
+          st.tone = $("tTone").value;
+          st.format = $("tFormat").value;
+          st.length = $("tLength").value;
+          st.target = $("tTarget").value;
+        }
+
+        function loadFamily(fid) {
+          var fam = FAMILIES[fid], st = state[fid];
+          $("textPlateTitle").textContent = fam.plateTitle;
+          $("tGoalLabel").textContent = fam.goalLabel;
+          $("tGoal").placeholder = fam.goalPh;
+          $("tGoal").value = st.goal;
+          $("tSubjectLabel").textContent = fam.subjectLabel;
+          $("tSubject").placeholder = fam.subjectPh;
+          $("tSubject").value = st.subject;
+          $("tAudienceLabel").textContent = fam.audienceLabel;
+          $("tAudience").placeholder = fam.audiencePh;
+          $("tAudience").value = st.audience;
+          $("tDetailsLabel").textContent = fam.detailsLabel;
+          $("tDetails").placeholder = fam.detailsPh;
+          $("tDetails").value = st.details;
+          $("tToneLabel").textContent = fam.toneLabel;
+          fillSelect($("tTone"), fam.tones, st.tone);
+          $("tFormatLabel").textContent = fam.formatLabel;
+          fillSelect($("tFormat"), fam.formats, st.format);
+          $("tLength").value = st.length;
+          $("tTarget").value = st.target;
+          renderText();
+        }
+
+        ["tGoal", "tSubject", "tAudience", "tDetails", "tTone", "tFormat", "tLength", "tTarget"].forEach(function (id) {
+          $(id).addEventListener("input", function () { saveCurrent(); renderText(); });
+          $(id).addEventListener("change", function () { saveCurrent(); renderText(); });
+        });
+
+        $("tSurpriseBtn").addEventListener("click", function () {
+          if (current === "realism") return;
+          var pool = FAMILIES[current].surprise;
+          var pick = pool[Math.floor(Math.random() * pool.length)];
+          var st = state[current];
+          st.goal = pick.goal; st.subject = pick.subject;
+          st.audience = pick.audience; st.details = pick.details;
+          loadFamily(current);
+        });
+
+        $("tCopyAllBtn").addEventListener("click", function () {
+          if (current === "realism") return;
+          var st = state[current];
+          var all = ["direct", "expert", "wildcard"].map(function (key) {
+            return "— " + VARIANT_META[key].name + " (" + FAMILY_META[current].name + " · " + TARGET_NAMES_TEXT[st.target] + ") —\n" + buildTextVariant(current, key);
+          }).join("\n\n");
+          var firstText = $("tOutputs").querySelector(".out-text");
+          var btn = $("tCopyAllBtn");
+          copyText(all, firstText, document.createElement("span"), null);
+          var old = btn.textContent;
+          btn.textContent = "Copied ✓";
+          setTimeout(function () { btn.textContent = old; }, 2400);
+        });
+
+        /* ---------- family picker ---------- */
+        var grid = $("familyGrid");
+        var familyBtns = {};
+        ORDER.forEach(function (fid) {
+          var meta = FAMILY_META[fid];
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "family-btn" + (fid === "realism" ? " active" : "");
+          b.setAttribute("aria-pressed", fid === "realism" ? "true" : "false");
+          var n = document.createElement("span");
+          n.className = "family-name";
+          n.textContent = meta.name;
+          var bl = document.createElement("span");
+          bl.className = "family-blurb";
+          bl.textContent = meta.blurb;
+          b.appendChild(n);
+          b.appendChild(bl);
+          b.addEventListener("click", function () { setFamily(fid); });
+          familyBtns[fid] = b;
+          grid.appendChild(b);
+        });
+
+        function setFamily(fid) {
+          saveCurrent();
+          current = fid;
+          ORDER.forEach(function (f) {
+            var on = f === fid;
+            familyBtns[f].classList.toggle("active", on);
+            familyBtns[f].setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          var isReal = fid === "realism";
+          $("plateShot").hidden = !isReal;
+          $("plateDials").hidden = !isReal;
+          $("plateRealismOut").hidden = !isReal;
+          $("plateTextIn").hidden = isReal;
+          $("plateTextOut").hidden = isReal;
+          if (!isReal) loadFamily(fid);
+        }
       })();
     </script>
   </body>
