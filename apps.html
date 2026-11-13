@@ -28,8 +28,125 @@
 .arcade-btn{background:linear-gradient(180deg,#6FC3FF,#2B7FD4);color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
 .arcade-btn:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
 </style>
+<style>
+/* ============================================================
+   Hustle Look Kit (jdawgs-hustle-look-kit.md \u00a71-\u00a73, \u00a710) \u2014 Wave 3 FACE restyle.
+   Page-scoped overrides only: palette, chrome display type, chrome
+   primary buttons. Shared assets/site.css untouched; no copy, price,
+   link, form, or JS behavior changes.
+   ============================================================ */
+body.hustle-face{
+  --bg:#05080e; --bg-2:#0b0f16;
+  --panel:#10151f; --panel-2:#151c29;
+  --line:#263144; --line-strong:#33435e;
+  --ink:#eef2f8; --body:#c9d4e4; --muted:#9fb0c6;
+  --jd-navy:#05080e; --jd-navy-2:#151c29;
+  --jd-silver:#9fb0c6; --jd-silver-bright:#eef2f8;
+  background:#05080e; color:#c9d4e4;
+}
+body.hustle-face ::selection{background:#39c2ff; color:#05080e}
+body.hustle-face a:focus-visible,
+body.hustle-face button:focus-visible{outline-color:#39c2ff}
+/* \u00a72 chrome display type \u2014 hero headline + section headings */
+body.hustle-face .hero h1,
+body.hustle-face h2{
+  font-family:Anton,Impact,"Archivo",sans-serif; font-weight:400;
+  letter-spacing:.02em; text-transform:uppercase; line-height:1.02;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face .hero h1{font-stretch:100%; font-size:clamp(2.35rem,10.5vw,5.9rem)}
+body.hustle-face .brand .brand-name{
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face h3{color:#eef2f8}
+body.hustle-face .eyebrow{color:#39c2ff}
+body.hustle-face .eyebrow::before{background:#39c2ff}
+body.hustle-face .hero{background-color:#05080e}
+body.hustle-face .hero .eyebrow{color:#39c2ff}
+body.hustle-face .hero .eyebrow::before{background:#39c2ff}
+body.hustle-face .hero-facts{border-top-color:#33435e}
+body.hustle-face .band-alt{background:linear-gradient(180deg,#0b0f16 0%,#05080e 100%)}
+/* \u00a73 buttons \u2014 chrome primary, panel secondary */
+body.hustle-face .btn-primary{
+  background:linear-gradient(180deg,#e8f1fa,#9db4cc); color:#0a0f16;
+  border:1px solid #d7e5f2; border-radius:10px; font-weight:800; min-height:48px;
+  box-shadow:0 4px 18px rgba(160,195,235,.25);
+}
+body.hustle-face .btn-primary:hover{
+  background:linear-gradient(180deg,#f4f8fc,#aec3da); color:#0a0f16; border-color:#39c2ff;
+  box-shadow:0 0 0 1px rgba(57,194,255,.35), 0 10px 30px rgba(57,194,255,.30);
+}
+body.hustle-face .btn-ghost{
+  background:#151c29; color:#eef2f8; border-color:#33435e; border-radius:10px;
+}
+body.hustle-face .btn-ghost:hover{background:#10151f; color:#39c2ff; border-color:#39c2ff}
+/* \u00a71 panels on kit colors */
+body.hustle-face .tile{background:#10151f}
+body.hustle-face .tile:hover{background:#151c29}
+body.hustle-face .tile h3 a{color:#39c2ff}
+body.hustle-face .callout{border-color:#263144; border-left-color:#39c2ff; background:#10151f}
+body.hustle-face .doors{background:#05080e}
+body.hustle-face .doors-grid a{background:#10151f}
+body.hustle-face .doors-grid a:hover{background:#151c29}
+body.hustle-face .doors-grid a::after{color:#39c2ff}
+body.hustle-face .site-header.scrolled{background:rgba(5,8,14,.92); border-bottom-color:#263144}
+body.hustle-face .site-nav a[aria-current="page"]{border-bottom-color:#39c2ff}
+body.hustle-face .site-footer{background:#05080e; border-top-color:#263144}
+body.hustle-face .site-footer a{color:#9fb0c6}
+body.hustle-face .site-footer a:hover{color:#39c2ff}
+/* money-only gold (kit \u00a71): prices keep a gold tone, never a gold theme */
+body.hustle-face .product .p-price{color:#ffd34d}
+body.hustle-face figure img{border:1px solid #263144}
+</style>
+<style>
+/* ============================================================
+   Storefront search + presentation fixes (2026-11-12).
+   Page-scoped. The search is a live client-side filter over the
+   app cards below (no backend). Fixes: reachable hit areas for
+   text links (32px finger floor), long display words at large
+   font scale, and the hero action's fold position on phones.
+   ============================================================ */
+.jd-search-sticky{position:sticky;top:71px;z-index:30}
+@media (max-width:640px){.jd-search-sticky{top:59px}}
+.jd-search{margin:1.25rem 0 .75rem;padding:.7rem .7rem .75rem;
+  background:linear-gradient(180deg,rgba(18,24,36,.98),rgba(8,11,17,.98));
+  border:1px solid #33435e;border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)}
+.jd-search label{display:block;font-family:Archivo,Inter,sans-serif;font-weight:700;
+  letter-spacing:.14em;font-size:.78rem;text-transform:uppercase;color:#7dd8ff;margin:0 0 .45rem .15rem}
+.jd-search-row{display:flex;gap:.5rem;align-items:stretch}
+.jd-search input{flex:1 1 auto;min-width:0;min-height:52px;padding:.7rem .9rem;
+  font:inherit;font-size:1rem;color:#f2f7ff;background:#0a0d13;
+  border:1px solid rgba(120,190,255,.5);border-radius:12px}
+.jd-search input::placeholder{color:#8fa8c4}
+.jd-search input:focus{outline:2px solid #39c2ff;outline-offset:1px;border-color:#39c2ff}
+.jd-search-clear{flex:0 0 auto;min-width:52px;min-height:52px;border-radius:12px;cursor:pointer;
+  font-size:1.3rem;line-height:1;color:#0a0f16;
+  background:linear-gradient(180deg,#ffffff,#c9d4e4 55%,#93a5bd);
+  border:1px solid #d7e5f2;box-shadow:0 2px 0 #5f7089,0 6px 14px rgba(0,0,0,.35)}
+.jd-search-clear[hidden]{display:none}
+.jd-search-count{margin:.55rem .15rem 0;font-size:.92rem;color:#a9c6e8}
+.jd-search-empty{margin:0 0 .75rem;padding:1rem 1.1rem;border:1px dashed rgba(120,190,255,.55);
+  border-radius:14px;background:rgba(10,16,26,.8);color:#e8f3ff}
+.jd-search-empty[hidden]{display:none}
+.jd-search-empty button{margin-left:.6rem;min-height:44px;padding:.5rem 1rem;border-radius:10px;
+  cursor:pointer;font:inherit;font-weight:700;color:#081018;
+  background:linear-gradient(180deg,#7dd8ff,#2ea8ec);border:1px solid rgba(255,255,255,.4)}
+/* tap floor: text links get a reachable hit area without moving the layout */
+.site-footer a,main p a:not(.btn){
+  display:inline-block;padding-top:.45rem;padding-bottom:.45rem;margin-top:-.45rem;margin-bottom:-.45rem}
+/* large-font fit: long display words wrap instead of overflowing the phone */
+@media (max-width:480px){main h2{overflow-wrap:anywhere}}
+/* hero fold: keep the hero action whole at phone sizes */
+@media (min-width:341px) and (max-width:640px){
+  body.hustle-face .hero .wrap{padding-top:4.5rem}
+  .hero .lead{margin-top:.45rem}
+}
+</style>
 </head>
-<body>
+<body class="hustle-face">
 
 <header class="site-header">
   <div class="wrap">
@@ -71,24 +188,37 @@
 
 <main>
 
-  <section class="band">
+  <div class="wrap jd-search-sticky">
+    <div class="jd-search" role="search">
+      <label for="jd-search-input">Search apps</label>
+      <div class="jd-search-row">
+        <input id="jd-search-input" type="search" autocomplete="off" placeholder="Search apps — try “music” or “ringtone”">
+        <button class="jd-search-clear" id="jd-search-clear" type="button" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <p class="jd-search-count" id="jd-search-count" role="status" aria-live="polite"></p>
+    </div>
+    <p class="jd-search-empty" id="jd-search-empty" hidden>No matches — <button type="button" id="jd-search-empty-clear">Clear search</button></p>
+  </div>
+
+  <section class="band" data-search-group>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">The flagship</p>
       </div>
       <div class="rows">
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Universal Music Maker™</h3>
             <p>Make the music you want to hear anytime, anywhere. A full studio on your phone: build beats in any style or genre, put your own voice onto your beats, edit in a full Edit Room, and export release-quality masters. If you can do it in a million-dollar studio, the aim is to do it on your phone.</p>
             <p><a href="https://joshuajdawg0350.github.io/jdawgs-hub/music-maker.html">Full details &amp; honest limits</a></p>
           </div>
           <div class="p-buy">
-            <span class="p-price">$19.99<small>one-time</small></span>
+            <span class="p-price">$9.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/3cI28raSt0jO5FXfpz3ks3D">Buy Music Maker</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>Hustle City™</h3>
             <p>A 30-day buy-low / sell-high street-trading game. Try the free playable demo right here — two cities, a full week, the real game underneath. The full game is $1.99 at jdawgsindustries.com/games.</p>
@@ -99,6 +229,7 @@
             <span class="p-price">$1.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/4gM8wP0dP8Qk2tL2CN3ks3S">Buy Hustle City</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
       </div>
     </div>
@@ -116,14 +247,14 @@
     </div>
   </section>
 
-  <section class="band band-alt">
+  <section class="band band-alt" data-search-group>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Newest on the shelf</p>
         <h2>Built for the lanes people actually buy in</h2>
       </div>
       <div class="rows">
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Caption &amp; Hook Studio™</h3>
             <p>Captions and hooks for short-form video — offline, no account, platform-neutral. Real MP4 export, SRT files, and hook-card images, with loudness measured and corrected. Practical lane: clips up to about 3 minutes.</p>
@@ -132,8 +263,9 @@
             <span class="p-price">$9.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/4gM6oHe4F3w04BT1yJ3kt0G">Buy Caption &amp; Hook Studio</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Seller Photo Studio™</h3>
             <p>Product photos exported sized and framed per marketplace — Amazon, eBay and Etsy specs with on-screen fill guides — plus brightness and fix tools. Everything happens on your phone; your photos never leave it.</p>
@@ -142,20 +274,21 @@
             <span class="p-price">$7.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/7sY28r0dPaYs5FXcdn3kt0H">Buy Seller Photo Studio</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
       </div>
       <p class="small muted" style="margin-top:1.75rem">Solo Stripe checkout for both of the newest apps is live in their rows above.</p>
     </div>
   </section>
 
-  <section class="band">
+  <section class="band" data-search-group>
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">The audio shelf</p>
         <h2>Fix it, play it, ring it</h2>
       </div>
       <div class="rows">
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Pocket Player™</h3>
             <p>Your own music files, louder and clearer, with EQ and per-song leveling. A player — plain and simple, and priced like one.</p>
@@ -165,8 +298,9 @@
             <span class="p-price">$9.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/8x28wP3q1c2w8S9gtD3ks3Q">Buy Pocket Player</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Audio Fixer™</h3>
             <p>Fix quiet or clipping audio in one tap, with measured before/after numbers — not a black box.</p>
@@ -176,8 +310,9 @@
             <span class="p-price">$7.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/eVqeVdd0Bd6A0lD3GR3ks3R">Buy Audio Fixer</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Ringtone &amp; Alert Maker™</h3>
             <p>Ringtones and alerts cut from your own audio, loudness-fixed so they actually cut through.</p>
@@ -187,8 +322,9 @@
             <span class="p-price">$3.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/4gM6oH5y90jO7O56T33ks3P">Buy Ringtone Maker</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
-        <div class="product">
+        <div class="product" data-search-item>
           <div class="p-body">
             <h3>J-Dawgs Speaker Rescue™</h3>
             <p>Timed tone sweeps that can help eject surface water and dust from a phone speaker.</p>
@@ -198,6 +334,7 @@
             <span class="p-price">$2.99<small>one-time</small></span>
             <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/00w00j0dP1nS1pHb9j3ks3O">Buy Speaker Rescue</a>
           </div>
+            <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         </div>
       </div>
     </div>
@@ -304,6 +441,43 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(function () {});
   });
 }
+</script>
+<script>
+/* Storefront search — live client-side filter over the app cards. */
+(function(){
+  var input=document.getElementById('jd-search-input');
+  if(!input) return;
+  var clearBtn=document.getElementById('jd-search-clear'),
+      count=document.getElementById('jd-search-count'),
+      empty=document.getElementById('jd-search-empty'),
+      emptyBtn=document.getElementById('jd-search-empty-clear'),
+      items=Array.prototype.slice.call(document.querySelectorAll('[data-search-item]')),
+      groups=Array.prototype.slice.call(document.querySelectorAll('[data-search-group]')),
+      total=items.length;
+  function apply(){
+    var q=input.value.trim().toLowerCase(), shown=0;
+    items.forEach(function(it){
+      var hit=!q||it.textContent.toLowerCase().indexOf(q)>-1;
+      it.style.display=hit?'':'none';
+      if(hit) shown++;
+    });
+    groups.forEach(function(g){
+      var any=false;
+      Array.prototype.forEach.call(g.querySelectorAll('[data-search-item]'),function(k){
+        if(k.style.display!=='none') any=true;
+      });
+      g.style.display=(!q||any)?'':'none';
+    });
+    clearBtn.hidden=!q;
+    count.textContent=q?('Showing '+shown+' of '+total+' apps'):('Showing all '+total+' apps');
+    empty.hidden=!(q&&shown===0);
+  }
+  function reset(){ input.value=''; apply(); input.focus(); }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',reset);
+  emptyBtn.addEventListener('click',reset);
+  apply();
+})();
 </script>
 </body>
 </html>
