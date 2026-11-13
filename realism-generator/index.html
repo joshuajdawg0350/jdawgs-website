@@ -193,6 +193,26 @@
         font: inherit; font-weight: 600; font-size: 15px; white-space: nowrap;
       }
 
+      /* ---------- Likeness switch ---------- */
+      .switch-row { display: flex; gap: 12px; align-items: center; margin-bottom: 4px; }
+      .switch {
+        position: relative; width: 56px; height: 36px; flex: 0 0 auto;
+        border-radius: 999px; border: 1px solid var(--line);
+        background: #0c1119; cursor: pointer; padding: 0;
+      }
+      .switch .knob {
+        position: absolute; top: 3px; left: 3px; width: 28px; height: 28px; border-radius: 50%;
+        background: linear-gradient(180deg, #ffffff 0%, #cfd9e6 42%, #8d9cb3 54%, #e2eaf4 100%);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px 0 #fff;
+        transition: left .18s ease;
+      }
+      .switch[aria-checked="true"] {
+        background: linear-gradient(180deg, #1d6fc4, var(--blue-deep)); border-color: var(--blue);
+        box-shadow: 0 0 12px rgba(56, 169, 255, 0.35);
+      }
+      .switch[aria-checked="true"] .knob { left: 24px; }
+      .switch-row strong { font-size: 15.5px; }
+
       /* ---------- Output cards ---------- */
       .variant {
         border: 1px solid var(--line); border-radius: var(--radius);
@@ -378,6 +398,29 @@
             <button type="button" class="chip" data-mood="calm, peaceful, unhurried">Calm</button>
           </div>
         </div>
+
+        <div class="field">
+          <label class="field-label" for="rFacts">Facts — treat as fact (optional)</label>
+          <input type="text" id="rFacts" autocomplete="off" placeholder="e.g. the car is a black 2008 Charger; he wears a black beanie with a small crown emblem" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="rLimits">Non-negotiables (optional)</label>
+          <input type="text" id="rLimits" autocomplete="off" placeholder="e.g. no text in the image; never change his face" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="likenessName">Character name — for likeness lock (optional)</label>
+          <input type="text" id="likenessName" autocomplete="off" placeholder="e.g. King Balsey" />
+        </div>
+
+        <div class="switch-row">
+          <button type="button" class="switch" id="likenessLock" role="switch" aria-checked="false" aria-label="Likeness lock"><span class="knob"></span></button>
+          <div>
+            <strong>Likeness lock</strong>
+            <p class="hint" style="margin-top:2px">On: the named character is played by their real reference likeness — never a generic stand-in.</p>
+          </div>
+        </div>
       </section>
 
       <!-- ============ DIALS ============ -->
@@ -429,6 +472,7 @@
               <option value="standard">Standard</option>
               <option value="high" selected>High</option>
               <option value="max">Maximum</option>
+              <option value="realism">The Realism Standard — top tier</option>
             </select>
           </div>
           <div class="field">
@@ -479,6 +523,11 @@
         <div class="field">
           <label class="field-label" for="tDetails" id="tDetailsLabel">Key details</label>
           <textarea id="tDetails" rows="3" autocomplete="off"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tLimits">Non-negotiables / hard limits</label>
+          <textarea id="tLimits" rows="2" autocomplete="off"></textarea>
         </div>
 
         <div class="dial-grid">
@@ -572,7 +621,8 @@
         var DETAIL = {
           standard: ["photorealistic", "lifelike skin with visible pores and fine texture", "natural imperfections left in", "physically accurate light and shadow", "true-to-life color"],
           high:     ["photorealistic", "lifelike skin with visible pores, fine lines and stubble", "natural imperfections left in — blemishes, flyaway hairs, worn fabric", "realistic catchlights in the eyes", "physically accurate light and shadow", "true-to-life color", "ultra-detailed, 8K"],
-          max:      ["photorealistic", "extreme skin detail — visible pores, peach fuzz, fine lines, stubble and sweat", "natural imperfections left in — blemishes, scars, flyaway hairs, dirt under fingernails, fabric weave and scuffs", "realistic catchlights and moisture in the eyes", "physically accurate light, shadow and subsurface scattering", "true-to-life color and micro-contrast", "ultra-detailed, 8K, high dynamic range"]
+          max:      ["photorealistic", "extreme skin detail — visible pores, peach fuzz, fine lines, stubble and sweat", "natural imperfections left in — blemishes, scars, flyaway hairs, dirt under fingernails, fabric weave and scuffs", "realistic catchlights and moisture in the eyes", "physically accurate light, shadow and subsurface scattering", "true-to-life color and micro-contrast", "ultra-detailed, 8K, high dynamic range"],
+          realism:  ["photorealistic", "documentary honesty — unposed, caught mid-action, imperfect honest framing, a hint of natural motion blur, real-world clutter left in the frame, nothing retouched", "lifelike detail throughout — visible pores, fine lines and stubble, natural imperfections and blemishes, flyaway hairs, worn fabric", "realistic catchlights in the eyes", "physically accurate light and shadow", "true-to-life color", "ultra-detailed, 8K"]
         };
 
         var VARIANT_FLAVOR = {
@@ -631,6 +681,25 @@
           };
         }
 
+        /* ---- facts, non-negotiables, likeness lock (2026-11-12 upgrade) ---- */
+        function rFacts() { return val("rFacts"); }
+        function rLimits() { return val("rLimits"); }
+        var likeness = { on: false };
+        function likenessName() { return val("likenessName"); }
+        function ensurePeriod(s) { return /[.!?]$/.test(s) ? s : s + "."; }
+        function likenessKw() {
+          var n = likenessName();
+          return n
+            ? "exact real likeness of " + n + " from the reference photo, same face, same person, never a generic stand-in"
+            : "the named character in their exact real likeness from the reference photo, same face, same person, never a generic stand-in";
+        }
+        function likenessProse() {
+          var n = likenessName();
+          return n
+            ? cap(n) + " is played by their real likeness from the reference photo — the same face, the same person, in every frame, never a generic stand-in."
+            : "The named character is played by their real likeness from the reference photo — the same face, the same person, throughout, never a generic stand-in.";
+        }
+
         /* ---- keyword-style text: Generic / Midjourney / Stable Diffusion ---- */
         function keywordText(variantKey) {
           var p = pieces();
@@ -645,6 +714,9 @@
           p.detail.forEach(function (x) { parts.push(x); });
           parts.push(p.cam.kw);
           if (p.era.kw) parts.push(p.era.kw);
+          if (rFacts()) parts.push("must be true: " + rFacts());
+          if (rLimits()) parts.push("non-negotiable: " + rLimits());
+          if (likeness.on) parts.push(likenessKw());
           return parts.join(", ");
         }
 
@@ -663,6 +735,9 @@
           s.push("Detail is lifelike throughout: " + p.detail.slice(1).join(", ") + ".");
           s.push(p.cam.prose + ".");
           if (p.era.prose) s.push(p.era.prose + ".");
+          if (rFacts()) s.push("Facts that must hold: " + ensurePeriod(rFacts()));
+          if (rLimits()) s.push("Non-negotiables: " + ensurePeriod(rLimits()));
+          if (likeness.on) s.push(likenessProse());
           if (!forVideo) s.push("No text, no watermark, no logo anywhere in the image.");
           return s.join(" ");
         }
@@ -670,11 +745,13 @@
         function videoText(variantKey) {
           var p = pieces();
           var base = proseText(variantKey, true);
-          var move = variantKey === "raw"
-            ? "handheld, following the subject with natural sway and small imperfections"
-            : variantKey === "cinematic"
-              ? p.shot.move + ", with a slow cinematic arc"
-              : p.shot.move;
+          var move = $("detail").value === "realism"
+            ? p.shot.move + ", handheld with natural sway and small imperfections"
+            : variantKey === "raw"
+              ? "handheld, following the subject with natural sway and small imperfections"
+              : variantKey === "cinematic"
+                ? p.shot.move + ", with a slow cinematic arc"
+                : p.shot.move;
           return base + " Camera movement: " + move + ". Motion is natural and physically believable — real weight, real timing, realistic motion blur, 24 fps. The subject stays consistent and lifelike for the full clip, 5–10 seconds.";
         }
 
@@ -693,7 +770,7 @@
           if (target === "sd") {
             return [
               { label: "Prompt", text: keywordText(variantKey) },
-              { label: "Negative prompt", text: SD_NEGATIVE }
+              { label: "Negative prompt", text: SD_NEGATIVE + (likeness.on ? ", different person, generic face, face swap, changed identity" : "") }
             ];
           }
           return [{ label: null, text: keywordText(variantKey) }];
@@ -886,8 +963,15 @@
           setTimeout(function () { btn.textContent = old; }, 2400);
         });
 
+        /* ---- likeness lock switch ---- */
+        $("likenessLock").addEventListener("click", function () {
+          likeness.on = !likeness.on;
+          this.setAttribute("aria-checked", likeness.on ? "true" : "false");
+          render();
+        });
+
         /* ---- live regeneration ---- */
-        ["subject", "setting", "mood", "shot", "lighting", "camera", "era", "detail", "target"].forEach(function (id) {
+        ["subject", "setting", "mood", "shot", "lighting", "camera", "era", "detail", "target", "rFacts", "rLimits", "likenessName"].forEach(function (id) {
           $(id).addEventListener("input", render);
           $(id).addEventListener("change", render);
         });
@@ -936,8 +1020,10 @@
             audiencePh: "e.g. neighbors in Springfield, MO",
             toneKey: "Tone", toneLabel: "Tone",
             tones: ["Plain and direct", "Warm and friendly", "Bold and punchy", "Professional", "Witty", "Storyteller", "Formal"],
-            detailsLabel: "Key details & facts to include",
+            detailsLabel: "Key details & facts — treat as fact",
             detailsPh: "Names, facts, lines that must appear, things to avoid…",
+            limitsPh: "e.g. never mention competitors; keep it under 200 words…",
+            limitsDefault: "",
             formatLabel: "Output format",
             formats: ["Social media post", "Article / blog post", "Short story", "Video script", "Speech / talk", "Newsletter", "Poem / song lyrics"],
             roleBare: "an expert writer and editor",
@@ -974,11 +1060,13 @@
             subjectKey: "Product / offer", subjectLabel: "Product / offer",
             subjectPh: "e.g. a consignment trading post — no listing fee",
             audienceKey: "Audience", audienceLabel: "Audience — who are you selling to?",
-            audiencePh: "e.g. people with garages full of collectibles",
+            audiencePh: "e.g. people with garages full of collectibles — or write 'research and target'",
             toneKey: "Tone", toneLabel: "Tone",
             tones: ["Plain and honest", "Confident", "Friendly neighbor", "Bold and punchy", "Premium and polished", "Urgent — honest scarcity only"],
-            detailsLabel: "Facts, terms & proof (true things only)",
+            detailsLabel: "Facts — treat as fact (the only source of claims)",
             detailsPh: "Prices, terms, guarantees, deadlines — only what's true…",
+            limitsPh: "e.g. never quote a price that isn't in the facts…",
+            limitsDefault: "Never invent prices, stats, guarantees, or testimonials. Hype words are banned unless the proof is in the copy.",
             formatLabel: "Output format",
             formats: ["Ad copy", "Sales pitch (one-pager)", "Product description", "Cold email", "Social media ad", "Flyer / sign copy", "Landing page section"],
             roleBare: "a senior direct-response copywriter",
@@ -987,6 +1075,7 @@
             requirements: [
               "Lead with the customer's problem and the concrete benefit — features come second.",
               "Use only claims that are true of the product — never invent prices, stats, guarantees, or testimonials.",
+              "Every claim must trace to the facts block — if it isn't in the facts, cut it.",
               "One clear call to action, stated once, stated plainly.",
               "No hype words ('revolutionary', 'game-changing', 'unlock') unless the proof is right there in the copy."
             ],
@@ -1018,8 +1107,10 @@
             audiencePh: "e.g. a total beginner — explain everything",
             toneKey: "Code style", toneLabel: "Code style",
             tones: ["Clean and commented", "Minimal and tight", "Production-grade", "Beginner-friendly", "Game-dev: fast and fun"],
-            detailsLabel: "Stack, constraints & details",
+            detailsLabel: "Facts, stack & constraints — treat as fact",
             detailsPh: "e.g. single HTML file, must work on a phone, no build step…",
+            limitsPh: "e.g. no external dependencies; must run offline…",
+            limitsDefault: "No placeholders or half-finished code. Never silently break a stated constraint.",
             formatLabel: "Output format",
             formats: ["Build it — full code", "Write a script", "Debug / fix my code", "Plan the build (architecture first)", "Explain this code", "Game feature / mechanic"],
             roleBare: "a senior software engineer",
@@ -1029,7 +1120,8 @@
               "Deliver complete, runnable code — no placeholders, no 'the rest follows the same pattern'.",
               "Follow the stated stack and constraints exactly; prefer standard libraries over exotic dependencies.",
               "Handle the obvious edge cases (empty input, bad input, small screens) and say which ones you handled.",
-              "After the code, give a short plain-language rundown: how to run it and how each part works."
+              "After the code, give a short plain-language rundown: how to run it and how each part works.",
+              "If a stated constraint truly cannot be met, say so in one line — never silently break it or ship code that ignores it."
             ],
             angles: [
               "Build the smallest version that fully works first, then extend it — deliver both stages, clearly labeled.",
@@ -1059,8 +1151,10 @@
             audiencePh: "e.g. smart beginner / high-school student / pro refresher",
             toneKey: "Teaching style", toneLabel: "Teaching style",
             tones: ["Plain and clear", "Like I'm five — then level up", "Academic", "Story-driven", "Socratic — questions first"],
-            detailsLabel: "Focus & confusions",
+            detailsLabel: "Focus & confusions (facts here are treated as fact)",
             detailsPh: "e.g. I keep mixing up APR and APY; use dollar examples…",
+            limitsPh: "e.g. cite nothing you can't back; flag speculation as speculation…",
+            limitsDefault: "Never state an uncertain or contested fact as settled.",
             formatLabel: "Output format",
             formats: ["Explainer", "Comparison / versus", "Deep-dive report", "Study guide", "Pros & cons breakdown", "Timeline / how it developed"],
             roleBare: "an expert researcher and teacher",
@@ -1100,8 +1194,10 @@
             audiencePh: "e.g. buyers asking about listings and shipping",
             toneKey: "Personality", toneLabel: "Agent personality",
             tones: ["Helpful and plain-spoken", "Warm and patient", "Strictly professional", "Short and direct", "Friendly with a sense of humor"],
-            detailsLabel: "Rules, tools & limits",
-            detailsPh: "e.g. can check order status; never promise refunds over $50; escalate angry customers…",
+            detailsLabel: "Facts, tools & limits — treat as fact",
+            detailsPh: "e.g. agent name + motto (optional); the tools it can use; who it serves…",
+            limitsPh: "e.g. never send email — drafts only; escalate disputes to the owner…",
+            limitsDefault: "Never invent facts, prices, or capabilities. When a needed fact is missing, ask one short question — never guess.",
             formatLabel: "Output format",
             formats: ["Full system prompt", "Agent instruction set", "Chatbot persona + rules", "Workflow prompt (step-by-step)", "Single-task prompt"],
             roleBare: "an expert AI systems designer",
@@ -1109,9 +1205,12 @@
             role: "You are an expert AI systems designer. You write agent instructions the way engineers write specs: precise, testable, complete on edge cases, and impossible to misread on purpose.",
             requirements: [
               "Write in second person, imperative voice — 'You are…', 'Always…', 'Never…'.",
-              "Define the role, the goal, the inputs/tools available, and the hard limits — what the agent must refuse or escalate.",
-              "Include a step-by-step workflow and an exact output format the agent follows every time.",
-              "Add guardrails for missing information, ambiguity, and mistakes: ask one short question — never invent."
+              "Open with IDENTITY: an optional agent name, a one-line motto, and a short personality paragraph — identity first, then law.",
+              "Define the role, the goal the agent is judged by, the inputs/tools available, and who it serves.",
+              "Include a step-by-step workflow the agent follows every time, and an exact output format it follows every time.",
+              "Include a HARD LIMITS section: what the agent must refuse or escalate, stated as absolutes.",
+              "Add guardrails for missing information, ambiguity, and mistakes: ask one short question — never invent; own mistakes and fix them, never smooth them into success language.",
+              "Close with WORKED EXAMPLES inside the prompt: one ideal interaction, one edge case handled right."
             ],
             angles: [
               "Include 2 short worked examples inside the prompt: one ideal interaction, one edge case handled right.",
@@ -1153,6 +1252,7 @@
           state[fid] = {
             goal: fam.defaults.goal, subject: fam.defaults.subject,
             audience: fam.defaults.audience, details: fam.defaults.details,
+            limits: fam.limitsDefault || "",
             tone: fam.tones[0], format: fam.formats[0],
             length: "standard", target: "generic"
           };
@@ -1172,19 +1272,26 @@
           if (clean(st.subject)) pairs.push({ k: fam.subjectKey, v: clean(st.subject) });
           if (clean(st.audience)) pairs.push({ k: fam.audienceKey, v: clean(st.audience) });
           pairs.push({ k: fam.toneKey, v: st.tone });
+          var reqs = fam.requirements;
+          if (fid === "business" && /research/i.test(clean(st.audience))) {
+            reqs = ["AUDIENCE — RESEARCH AND TARGET FIRST: before writing, research who this audience is, identify the specific groups and communities where they gather, rank them by likelihood to act, and aim the copy at the top group."].concat(reqs);
+          }
           return {
             fam: fam, st: st, goalSentence: goalSentence,
             format: st.format, formatLower: lowerFirst(st.format),
             lenLabel: len.label, lenPhrase: len.phrase,
             tone: st.tone, toneKey: fam.toneKey,
-            pairs: pairs, details: clean(st.details),
-            requirements: fam.requirements,
+            pairs: pairs, details: clean(st.details), limits: clean(st.limits),
+            requirements: reqs,
             angle: fam.angles[hashOf(goal) % fam.angles.length]
           };
         }
 
         var DETAILS_FALLBACK = "None provided — do not invent specifics. Where a detail is missing, make the most reasonable choice and flag it in one line.";
         var DETAILS_FALLBACK_SHORT = "none supplied — do not invent specifics";
+        var LIMITS_FALLBACK = "None supplied — follow the requirements exactly, never invent extra rules, and never break a rule that was given.";
+        var LIMITS_FALLBACK_SHORT = "none supplied — never invent rules the user didn't state";
+        function sentence(s) { return s.replace(/\.+$/, "") + "."; }
 
         /* ---------- renderers per target AI ---------- */
         function pairsInline(m) {
@@ -1198,7 +1305,8 @@
             out.push("TASK\n" + m.goalSentence);
             var ctx = m.pairs.map(function (p) { return "- " + p.k + ": " + p.v; }).join("\n");
             out.push("CONTEXT\n" + ctx);
-            out.push("KEY DETAILS — TREAT AS FACT\n" + (m.details || DETAILS_FALLBACK));
+            out.push("FACTS — TREAT AS FACT\n" + (m.details || DETAILS_FALLBACK));
+            out.push("HARD LIMITS — REFUSE OR ESCALATE\n" + (m.limits || LIMITS_FALLBACK));
             out.push("REQUIREMENTS\n" + m.requirements.map(function (r, i) { return (i + 1) + ". " + r; }).join("\n"));
             out.push("OUTPUT SPEC\nFormat: " + m.format + ". Length: " + m.lenLabel + " — " + m.lenPhrase + ". " + m.toneKey + ": " + m.tone + ".\nDeliver the finished work only, ready to use as-is.");
             return out.join("\n\n");
@@ -1208,6 +1316,7 @@
           direct.push("Your task: " + m.goalSentence.replace(/\.$/, "") + ", delivered as " + m.formatLower + " (" + m.lenLabel.toLowerCase() + " — " + m.lenPhrase + ").");
           direct.push("Context: " + pairsInline(m) + ".");
           direct.push(m.details ? "Work from these facts — do not contradict them: " + m.details : "Key details: " + DETAILS_FALLBACK_SHORT + ".");
+          direct.push("Hard limits — never break these: " + sentence(m.limits || LIMITS_FALLBACK_SHORT));
           direct.push("Non-negotiables: " + m.requirements.join(" "));
           direct.push("Deliver only the finished " + m.formatLower + " — no preamble, no explanation of what you are about to do.");
           var body = direct.join("\n");
@@ -1220,7 +1329,8 @@
             out.push("## Role\n" + m.fam.role);
             out.push("## Task\n" + m.goalSentence);
             out.push("## Context\n" + m.pairs.map(function (p) { return "- **" + p.k + ":** " + p.v; }).join("\n"));
-            out.push("## Key details — treat as fact\n" + (m.details || DETAILS_FALLBACK));
+            out.push("## Facts — treat as fact\n" + (m.details || DETAILS_FALLBACK));
+            out.push("## Hard limits — refuse or escalate\n" + (m.limits || LIMITS_FALLBACK));
             out.push("## Requirements\n" + m.requirements.map(function (r) { return "- " + r; }).join("\n"));
             out.push("## Output spec\n**Format:** " + m.format + " · **Length:** " + m.lenLabel + " (" + m.lenPhrase + ") · **" + m.toneKey + ":** " + m.tone + "\nDeliver the finished work only, ready to use as-is.");
             return out.join("\n\n");
@@ -1229,7 +1339,8 @@
           direct.push("**You are** " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
           direct.push("**Task:** " + m.goalSentence);
           direct.push("**Context:** " + pairsInline(m) + ".");
-          direct.push("**Key details:** " + (m.details || DETAILS_FALLBACK_SHORT) + ".");
+          direct.push("**Facts — treat as fact:** " + (m.details || DETAILS_FALLBACK_SHORT) + ".");
+          direct.push("**Hard limits:** " + sentence(m.limits || LIMITS_FALLBACK_SHORT));
           direct.push("**Format:** " + m.format + " · **Length:** " + m.lenLabel + " · **" + m.toneKey + ":** " + m.tone);
           direct.push("**Non-negotiables:** " + m.requirements.join(" "));
           direct.push("Deliver the finished " + m.formatLower + " only — no preamble.");
@@ -1243,7 +1354,8 @@
             out.push("<role>\n" + m.fam.role + "\n</role>");
             out.push("<task>\n" + m.goalSentence + "\n</task>");
             out.push("<context>\n" + m.pairs.map(function (p) { return p.k + ": " + p.v; }).join("\n") + "\n</context>");
-            out.push("<key_details>\n" + (m.details || DETAILS_FALLBACK) + "\n</key_details>");
+            out.push("<facts>\n" + (m.details || DETAILS_FALLBACK) + "\n</facts>");
+            out.push("<hard_limits>\n" + (m.limits || LIMITS_FALLBACK) + "\n</hard_limits>");
             out.push("<requirements>\n" + m.requirements.map(function (r, i) { return (i + 1) + ". " + r; }).join("\n") + "\n</requirements>");
             out.push("<output_spec>\nFormat: " + m.format + ". Length: " + m.lenLabel + " — " + m.lenPhrase + ". " + m.toneKey + ": " + m.tone + ". Deliver the finished work only, ready to use as-is.\n</output_spec>");
             return out.join("\n\n");
@@ -1252,7 +1364,8 @@
           direct.push("You are " + m.fam.roleBare + " — " + m.fam.roleTail + ".");
           direct.push("Task: " + m.goalSentence);
           direct.push("<context>" + pairsInline(m) + "</context>");
-          direct.push("<key_details>" + (m.details || DETAILS_FALLBACK_SHORT) + "</key_details>");
+          direct.push("<facts>" + (m.details || DETAILS_FALLBACK_SHORT) + "</facts>");
+          direct.push("<hard_limits>" + (m.limits || LIMITS_FALLBACK_SHORT) + "</hard_limits>");
           direct.push("Requirements: " + m.requirements.join(" "));
           direct.push("Output: " + m.format + ", " + m.lenLabel.toLowerCase() + ". Deliver the finished work only — no preamble.");
           var body = direct.join("\n");
@@ -1266,6 +1379,7 @@
           steps.push("Task: " + m.goalSentence);
           steps.push("Context: " + pairsInline(m) + ".");
           steps.push("Key details (treat as fact): " + (m.details || DETAILS_FALLBACK_SHORT) + ".");
+          steps.push("Hard limits — never break these: " + sentence(m.limits || LIMITS_FALLBACK_SHORT));
           if (variant === "expert") {
             steps.push("Requirements:\n" + m.requirements.map(function (r) { return "   - " + r; }).join("\n"));
           } else {
@@ -1402,6 +1516,7 @@
           st.subject = $("tSubject").value;
           st.audience = $("tAudience").value;
           st.details = $("tDetails").value;
+          st.limits = $("tLimits").value;
           st.tone = $("tTone").value;
           st.format = $("tFormat").value;
           st.length = $("tLength").value;
@@ -1423,6 +1538,8 @@
           $("tDetailsLabel").textContent = fam.detailsLabel;
           $("tDetails").placeholder = fam.detailsPh;
           $("tDetails").value = st.details;
+          $("tLimits").placeholder = fam.limitsPh || "";
+          $("tLimits").value = st.limits;
           $("tToneLabel").textContent = fam.toneLabel;
           fillSelect($("tTone"), fam.tones, st.tone);
           $("tFormatLabel").textContent = fam.formatLabel;
@@ -1432,7 +1549,7 @@
           renderText();
         }
 
-        ["tGoal", "tSubject", "tAudience", "tDetails", "tTone", "tFormat", "tLength", "tTarget"].forEach(function (id) {
+        ["tGoal", "tSubject", "tAudience", "tDetails", "tLimits", "tTone", "tFormat", "tLength", "tTarget"].forEach(function (id) {
           $(id).addEventListener("input", function () { saveCurrent(); renderText(); });
           $(id).addEventListener("change", function () { saveCurrent(); renderText(); });
         });
