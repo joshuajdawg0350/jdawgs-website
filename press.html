@@ -14,8 +14,80 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/paw-icon-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
+<style>
+/* ============================================================
+   Hustle Look Kit (jdawgs-hustle-look-kit.md \u00a71-\u00a73, \u00a710) \u2014 Wave 3 FACE restyle.
+   Page-scoped overrides only: palette, chrome display type, chrome
+   primary buttons. Shared assets/site.css untouched; no copy, price,
+   link, form, or JS behavior changes.
+   ============================================================ */
+body.hustle-face{
+  --bg:#05080e; --bg-2:#0b0f16;
+  --panel:#10151f; --panel-2:#151c29;
+  --line:#263144; --line-strong:#33435e;
+  --ink:#eef2f8; --body:#c9d4e4; --muted:#9fb0c6;
+  --jd-navy:#05080e; --jd-navy-2:#151c29;
+  --jd-silver:#9fb0c6; --jd-silver-bright:#eef2f8;
+  background:#05080e; color:#c9d4e4;
+}
+body.hustle-face ::selection{background:#39c2ff; color:#05080e}
+body.hustle-face a:focus-visible,
+body.hustle-face button:focus-visible{outline-color:#39c2ff}
+/* \u00a72 chrome display type \u2014 hero headline + section headings */
+body.hustle-face .hero h1,
+body.hustle-face h2{
+  font-family:Anton,Impact,"Archivo",sans-serif; font-weight:400;
+  letter-spacing:.02em; text-transform:uppercase; line-height:1.02;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face .hero h1{font-stretch:100%; font-size:clamp(2.35rem,10.5vw,5.9rem)}
+body.hustle-face .brand .brand-name{
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+body.hustle-face h3{color:#eef2f8}
+body.hustle-face .eyebrow{color:#39c2ff}
+body.hustle-face .eyebrow::before{background:#39c2ff}
+body.hustle-face .hero{background-color:#05080e}
+body.hustle-face .hero .eyebrow{color:#39c2ff}
+body.hustle-face .hero .eyebrow::before{background:#39c2ff}
+body.hustle-face .hero-facts{border-top-color:#33435e}
+body.hustle-face .band-alt{background:linear-gradient(180deg,#0b0f16 0%,#05080e 100%)}
+/* \u00a73 buttons \u2014 chrome primary, panel secondary */
+body.hustle-face .btn-primary{
+  background:linear-gradient(180deg,#e8f1fa,#9db4cc); color:#0a0f16;
+  border:1px solid #d7e5f2; border-radius:10px; font-weight:800; min-height:48px;
+  box-shadow:0 4px 18px rgba(160,195,235,.25);
+}
+body.hustle-face .btn-primary:hover{
+  background:linear-gradient(180deg,#f4f8fc,#aec3da); color:#0a0f16; border-color:#39c2ff;
+  box-shadow:0 0 0 1px rgba(57,194,255,.35), 0 10px 30px rgba(57,194,255,.30);
+}
+body.hustle-face .btn-ghost{
+  background:#151c29; color:#eef2f8; border-color:#33435e; border-radius:10px;
+}
+body.hustle-face .btn-ghost:hover{background:#10151f; color:#39c2ff; border-color:#39c2ff}
+/* \u00a71 panels on kit colors */
+body.hustle-face .tile{background:#10151f}
+body.hustle-face .tile:hover{background:#151c29}
+body.hustle-face .tile h3 a{color:#39c2ff}
+body.hustle-face .callout{border-color:#263144; border-left-color:#39c2ff; background:#10151f}
+body.hustle-face .doors{background:#05080e}
+body.hustle-face .doors-grid a{background:#10151f}
+body.hustle-face .doors-grid a:hover{background:#151c29}
+body.hustle-face .doors-grid a::after{color:#39c2ff}
+body.hustle-face .site-header.scrolled{background:rgba(5,8,14,.92); border-bottom-color:#263144}
+body.hustle-face .site-nav a[aria-current="page"]{border-bottom-color:#39c2ff}
+body.hustle-face .site-footer{background:#05080e; border-top-color:#263144}
+body.hustle-face .site-footer a{color:#9fb0c6}
+body.hustle-face .site-footer a:hover{color:#39c2ff}
+/* money-only gold (kit \u00a71): prices keep a gold tone, never a gold theme */
+body.hustle-face .product .p-price{color:#ffd34d}
+body.hustle-face figure img{border:1px solid #263144}
+</style>
 </head>
-<body>
+<body class="hustle-face">
 
 <header class="site-header">
   <div class="wrap">
@@ -63,7 +135,7 @@
       <div class="sec-head">
         <p class="eyebrow">The launch story</p>
         <h2>Humans Hire the AI. The AI Does the Hiring.</h2>
-        <p class="lead">On <strong>November 10, 2026</strong>, J-Dawgs Industries launches <a href="human-hands.html">Human Hands</a>, a job marketplace run through AI agents: a person hires an AI agent to handle a real-world job; the agent does the hiring — finding, booking and paying the best-matched worker — and the work gets done through human hands. Workers keep 100% of the posted price; the payer adds a 15% platform fee. The only requirements to work are 18+ and a smartphone. Human Hands also launches on Product Hunt the same day.</p>
+        <p class="lead">On <strong>November 10, 2026</strong>, J-Dawgs Industries launches <a href="human-hands/">Human Hands</a>, a job marketplace run through AI agents: a person hires an AI agent to handle a real-world job; the agent does the hiring — finding, booking and paying the best-matched worker — and the work gets done through human hands. Workers keep 100% of the posted price; the payer adds a 15% platform fee. The only requirements to work are 18+ and a smartphone. Human Hands also launches on Product Hunt the same day.</p>
       </div>
       <blockquote class="callout">
         <p>"I build houses for a living. I know what it's like to need a job done and have no way to get it done. Now people can hand that problem to their AI — the AI finds the help, books it, and the person who shows up keeps every dollar of the posted price. That's all this is. Nobody's renting anybody."</p>
