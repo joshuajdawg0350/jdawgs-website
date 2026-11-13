@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <title>Hustle City Prompt Generator — J-Dawgs Industries</title>
+    <meta name="description" content="The Hustle City Prompt Generator: type a subject, setting, and mood — get perfect photorealism prompts for any AI image or video tool. The Hustle City edition of the Realism Master Template Generator. No ads. We never sell your information." />
+    <link rel="canonical" href="https://jdawgsindustries.com/realism-generator/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #06080b;
+        --panel: #10151d;
+        --panel-2: #151c26;
+        --field: #0a0e14;
+        --line: #2b3648;
+        --line-soft: #1d2635;
+        --ink: #e9eef6;
+        --muted: #a3b4c9;
+        --faint: #7186a0;
+        --blue: #38a9ff;
+        --blue-deep: #0b6fd6;
+        --blue-dim: rgba(56, 169, 255, 0.14);
+        --radius: 14px;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(1100px 480px at 50% -160px, rgba(56, 169, 255, 0.13), transparent 65%),
+          linear-gradient(180deg, #0a0e14 0%, var(--bg) 340px);
+        color: var(--ink);
+        font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 17px;
+        line-height: 1.45;
+      }
+      .wrap { max-width: 920px; margin: 0 auto; padding: 14px 16px 40px; }
+
+      /* ---------- Header / brand ---------- */
+      header.brand { text-align: center; padding: 6px 0 4px; }
+      .brand-mark {
+        display: inline-block;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 16px 7px 19px;
+        background: linear-gradient(180deg, #1a222f, #0c1119);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+      }
+      h1 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.015em;
+        line-height: 1.04;
+        font-size: clamp(34px, 8.4vw, 58px);
+        margin: 12px 0 6px;
+        background: linear-gradient(180deg, #fdfeff 0%, #e6eef7 30%, #8fa5bd 49%, #eef4fb 52%, #aebfd4 72%, #f4f8fc 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        filter: drop-shadow(0 2px 10px rgba(56, 169, 255, 0.22));
+      }
+      h1 .tm { font-size: 0.42em; vertical-align: super; letter-spacing: 0; }
+      .tagline {
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+        font-size: clamp(17px, 4.6vw, 22px);
+        letter-spacing: 0.04em;
+        color: #39c2ff;
+        margin: 2px 0 12px;
+        text-shadow: 0 0 18px rgba(57, 194, 255, 0.45);
+      }
+      .pledges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+      .pledges span {
+        font-size: 13.5px; font-weight: 600; color: var(--muted);
+        border: 1px solid var(--line-soft); border-radius: 999px;
+        padding: 6px 12px; background: rgba(255,255,255,0.02);
+      }
+      .pledges span b { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Panels ---------- */
+      .plate {
+        background: linear-gradient(180deg, var(--panel-2), var(--panel));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 14px 34px rgba(0,0,0,0.45);
+        padding: 18px;
+        margin-top: 16px;
+      }
+      .plate-head {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        margin-bottom: 14px;
+      }
+      .plate-head h2 {
+        font-family: "Oswald", sans-serif; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.09em; font-size: 15px; margin: 0; color: var(--ink);
+      }
+      .plate-head h2::before {
+        content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+        background: var(--blue); box-shadow: 0 0 10px var(--blue); margin-right: 9px;
+        vertical-align: 1px;
+      }
+
+      /* ---------- Form ---------- */
+      label.field-label {
+        display: block; font-weight: 700; font-size: 14px; letter-spacing: 0.05em;
+        text-transform: uppercase; color: var(--muted); margin: 0 0 7px;
+      }
+      .field { margin-bottom: 16px; }
+      .field:last-child { margin-bottom: 0; }
+      input[type="text"], select {
+        width: 100%; min-height: 50px;
+        background: var(--field);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: var(--ink);
+        font: inherit; font-size: 16px;
+        padding: 9px 13px;
+        appearance: none; -webkit-appearance: none;
+      }
+      select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%2338a9ff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 40px;
+      }
+      input[type="text"]::placeholder { color: var(--faint); }
+      input[type="text"]:focus, select:focus {
+        outline: 2px solid var(--blue); outline-offset: 1px; border-color: var(--blue);
+      }
+      .hint { font-size: 13.5px; color: var(--faint); margin: 6px 0 0; }
+
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .chip {
+        min-height: 44px; padding: 8px 16px;
+        border-radius: 999px; border: 1px solid var(--line);
+        background: #0c1119; color: var(--ink);
+        font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+      }
+      .chip:active { transform: translateY(1px); }
+      .chip.active {
+        border-color: var(--blue); color: #fff;
+        background: linear-gradient(180deg, #1d6fc4, var(--blue-deep));
+        box-shadow: 0 0 14px rgba(56, 169, 255, 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+      }
+
+      .dial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }
+      @media (max-width: 560px) { .dial-grid { grid-template-columns: 1fr; } }
+      .dial-grid .field { margin-bottom: 0; }
+
+      .btn-chrome {
+        min-height: 50px; padding: 10px 20px;
+        border: 1px solid #6d7c92; border-radius: 11px; cursor: pointer;
+        background: linear-gradient(180deg, #ffffff 0%, #cfd9e6 42%, #8d9cb3 54%, #e2eaf4 100%);
+        color: #0a1017; font: inherit; font-weight: 700; font-size: 15.5px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.5), inset 0 1px 0 #fff;
+        white-space: nowrap;
+      }
+      .btn-chrome:active { transform: translateY(1px); }
+      .btn-blue {
+        min-height: 50px; padding: 10px 18px;
+        border: 1px solid #2f8fe0; border-radius: 11px; cursor: pointer;
+        background: linear-gradient(180deg, #2b93ec, var(--blue-deep));
+        color: #fff; font: inherit; font-weight: 700; font-size: 15.5px;
+        box-shadow: 0 0 16px rgba(56,169,255,0.28), inset 0 1px 0 rgba(255,255,255,0.3);
+        white-space: nowrap;
+      }
+      .btn-blue:active { transform: translateY(1px); }
+      .btn-ghost {
+        min-height: 50px; padding: 10px 16px;
+        border: 1px solid var(--line); border-radius: 11px; cursor: pointer;
+        background: #0c1119; color: var(--ink);
+        font: inherit; font-weight: 600; font-size: 15px; white-space: nowrap;
+      }
+
+      /* ---------- Output cards ---------- */
+      .variant {
+        border: 1px solid var(--line); border-radius: var(--radius);
+        background: linear-gradient(180deg, #131a24, #0b0f16);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        padding: 16px; margin-top: 14px;
+      }
+      .variant:first-of-type { margin-top: 0; }
+      .variant-head {
+        display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+        margin-bottom: 10px;
+      }
+      .variant-name {
+        font-family: "Oswald", sans-serif; font-weight: 600; font-size: 19px;
+        letter-spacing: 0.05em; text-transform: uppercase; margin: 0;
+      }
+      .variant-tag { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
+      .out-block + .out-block { margin-top: 12px; }
+      .out-label {
+        font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--blue); margin: 0 0 5px;
+      }
+      .out-text {
+        margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink);
+        background: var(--field); border: 1px solid var(--line-soft); border-radius: 10px;
+        padding: 12px 13px;
+        -webkit-user-select: text; user-select: text;
+        overflow-wrap: anywhere; white-space: pre-wrap;
+      }
+      .out-actions { display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+      .copy-note { font-size: 13.5px; color: var(--faint); }
+      .copy-note.ok { color: #6fe3a5; font-weight: 600; }
+      .copy-note.warn { color: #ffc46b; font-weight: 600; }
+
+      .target-note {
+        margin: 0 0 4px; font-size: 14.5px; color: var(--muted);
+      }
+      .target-note b { color: var(--ink); }
+
+      footer {
+        margin-top: 26px; text-align: center; color: var(--faint); font-size: 14px;
+      }
+      footer a { color: var(--blue); display: inline-block; padding: 10px 8px; }
+      footer .foot-brand {
+        font-family: "Oswald", sans-serif; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--muted); font-size: 13px; margin-bottom: 4px;
+      }
+      .toast {
+        position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%) translateY(80px);
+        background: linear-gradient(180deg, #1d6fc4, var(--blue-deep));
+        color: #fff; font-weight: 700; font-size: 15px;
+        padding: 12px 22px; border-radius: 999px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.55), 0 0 18px rgba(56,169,255,0.4);
+        opacity: 0; pointer-events: none; transition: transform .25s ease, opacity .25s ease;
+        z-index: 50; max-width: calc(100vw - 32px); text-align: center;
+      }
+      .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+      @media (min-width: 380px) and (max-width: 560px) {
+        h1 { margin-bottom: 2px; }
+        .plate-head { margin-bottom: 6px; }
+        .field { margin-bottom: 10px; }
+        .chips { margin-top: 6px; }
+      }
+      @media (min-width: 380px) and (max-width: 400px) {
+        .brand-mark { padding-top: 5px; padding-bottom: 5px; }
+        .tagline { margin: 0 0 8px; }
+        .plate { margin-top: 12px; padding-top: 10px; }
+        label.field-label { margin-bottom: 4px; }
+        input[type="text"] { min-height: 48px; }
+        .btn-ghost { min-height: 46px; }
+      }
+      @media (min-width: 401px) and (max-width: 560px) {
+        .tagline { margin: 0 0 8px; }
+        .chips { margin-top: 10px; }
+        .plate { margin-top: 12px; padding-top: 10px; }
+        .plate + .plate { margin-top: 27px; }
+        label.field-label { margin-bottom: 4px; }
+        input[type="text"] { min-height: 48px; }
+      }
+      @media (prefers-reduced-motion: reduce) { .toast { transition: none; } .chip:active, .btn-chrome:active, .btn-blue:active { transform: none; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="brand">
+        <span class="brand-mark">J-Dawgs Industries</span>
+        <h1>Hustle City<br />Prompt Generator<span class="tm">™</span></h1>
+        <p class="tagline">No fancy logos. Just quality products.</p>
+        <div class="pledges">
+          <span><b>No ads.</b></span>
+          <span><b>We never sell your information.</b></span>
+          <span>No accounts — nothing leaves your device.</span>
+        </div>
+      </header>
+
+      <!-- ============ INPUTS ============ -->
+      <section class="plate" aria-label="Prompt ingredients">
+        <div class="plate-head">
+          <h2>The Shot</h2>
+          <button type="button" class="btn-ghost" id="surpriseBtn">Surprise me</button>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="subject">Subject</label>
+          <input type="text" id="subject" autocomplete="off" placeholder="e.g. a construction worker in a hard hat, wiping sweat"
+            value="a construction worker in a hard hat, wiping sweat from his forehead" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="setting">Setting</label>
+          <input type="text" id="setting" autocomplete="off" placeholder="e.g. a downtown job site at sunrise"
+            value="a downtown job site at sunrise, steel beams and dust in the air" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="mood">Mood</label>
+          <input type="text" id="mood" autocomplete="off" placeholder="e.g. proud, tired, and real" value="proud, tired, and real" />
+          <div class="chips" id="moodChips" role="group" aria-label="Mood quick picks">
+            <button type="button" class="chip" data-mood="cinematic and dramatic">Cinematic</button>
+            <button type="button" class="chip" data-mood="gritty and honest">Gritty</button>
+            <button type="button" class="chip" data-mood="warm golden-hour glow">Golden hour</button>
+            <button type="button" class="chip" data-mood="dark noir, all shadow and suspicion">Noir</button>
+            <button type="button" class="chip" data-mood="joyful and full of life">Joyful</button>
+            <button type="button" class="chip" data-mood="tense, holding its breath">Tense</button>
+            <button type="button" class="chip" data-mood="quiet and melancholy">Melancholy</button>
+            <button type="button" class="chip" data-mood="epic and larger than life">Epic</button>
+            <button type="button" class="chip" data-mood="intimate and close">Intimate</button>
+            <button type="button" class="chip" data-mood="calm, peaceful, unhurried">Calm</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DIALS ============ -->
+      <section class="plate" aria-label="Camera dials">
+        <div class="plate-head"><h2>The Dials</h2></div>
+        <div class="dial-grid">
+          <div class="field">
+            <label class="field-label" for="shot">Shot type</label>
+            <select id="shot">
+              <option value="closeup">Close-up</option>
+              <option value="portrait" selected>Portrait</option>
+              <option value="fullbody">Full body</option>
+              <option value="wide">Wide</option>
+              <option value="aerial">Aerial</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="lighting">Lighting</label>
+            <select id="lighting">
+              <option value="daylight" selected>Natural daylight</option>
+              <option value="golden">Golden hour</option>
+              <option value="neon">Neon night</option>
+              <option value="overcast">Overcast</option>
+              <option value="studio">Studio</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="camera">Camera &amp; lens</label>
+            <select id="camera">
+              <option value="film35">35mm film</option>
+              <option value="dslr85" selected>DSLR · 85mm</option>
+              <option value="iphone">iPhone candid</option>
+              <option value="cinema">Cinema camera</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="era">Era</label>
+            <select id="era">
+              <option value="modern" selected>Modern day</option>
+              <option value="y90s">1990s</option>
+              <option value="y70s">1970s</option>
+              <option value="y50s">1950s</option>
+              <option value="timeless">Timeless</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="detail">Detail level</label>
+            <select id="detail">
+              <option value="standard">Standard</option>
+              <option value="high" selected>High</option>
+              <option value="max">Maximum</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="target">Target tool</label>
+            <select id="target">
+              <option value="generic" selected>Generic — any tool</option>
+              <option value="midjourney">Midjourney</option>
+              <option value="dalle">DALL·E-style</option>
+              <option value="sd">Stable Diffusion</option>
+              <option value="video">Video</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OUTPUTS ============ -->
+      <section class="plate" aria-label="Generated prompts">
+        <div class="plate-head">
+          <h2>Your Prompts</h2>
+          <button type="button" class="btn-blue" id="copyAllBtn">Copy all three</button>
+        </div>
+        <p class="target-note" id="targetNote"></p>
+        <div id="outputs"></div>
+      </section>
+
+      <footer>
+        <div class="foot-brand">J-Dawgs Industries</div>
+        <div style="margin-bottom:6px"><a href="../games/">← Back to the Hustle City Arcade</a></div>
+        <div style="margin-bottom:6px"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="../support.html">Report a problem</a></div>
+        <div>Hustle City Prompt Generator™ — the Hustle City edition of the Realism Master Template Generator™.</div>
+        <div>© 2026 Joshua Dawson / J-Dawgs Industries · Hustle City Prompt Generator™</div>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var $ = function (id) { return document.getElementById(id); };
+
+        var SHOT = {
+          closeup:  { phrase: "Extreme close-up", ar: "4:5",  move: "a slow push-in toward the face, settling into the eyes" },
+          portrait: { phrase: "Portrait, head and shoulders", ar: "3:4", move: "a slow, steady push-in" },
+          fullbody: { phrase: "Full-body shot", ar: "2:3",  move: "a smooth tracking shot that follows the subject" },
+          wide:     { phrase: "Wide establishing shot", ar: "16:9", move: "a slow glide across the scene, taking it all in" },
+          aerial:   { phrase: "Aerial drone shot looking down", ar: "16:9", move: "a slow drone descent with a gentle forward drift" }
+        };
+
+        var LIGHTING = {
+          daylight: { kw: "bright natural daylight", prose: "The light is bright, natural daylight" },
+          golden:   { kw: "warm golden-hour sunlight, long soft shadows", prose: "Warm golden-hour sunlight rakes across the scene, throwing long, soft shadows" },
+          neon:     { kw: "neon night lighting, wet reflective surfaces, mixed color temperatures", prose: "Neon light spills across wet, reflective surfaces in mixed color temperatures" },
+          overcast: { kw: "soft overcast daylight, even diffused light, gentle shadows", prose: "Soft overcast daylight wraps the scene in even, diffused light with gentle shadows" },
+          studio:   { kw: "controlled studio lighting, soft key light, gentle fill, clean falloff", prose: "Controlled studio lighting shapes the subject with a soft key light and gentle fill" }
+        };
+
+        var CAMERA = {
+          film35: { kw: "shot on 35mm film, Kodak Portra 400, subtle organic film grain", prose: "It is shot on 35mm film (Kodak Portra 400), with subtle, organic grain" },
+          dslr85: { kw: "shot on a full-frame DSLR with an 85mm f/1.4 lens, shallow depth of field, creamy bokeh", prose: "It is shot on a full-frame DSLR with an 85mm f/1.4 lens, so the background melts into creamy bokeh" },
+          iphone: { kw: "shot on a smartphone, candid everyday photograph, natural color and dynamic range", prose: "It looks like a candid smartphone photograph, with natural color and everyday dynamic range" },
+          cinema: { kw: "shot on an ARRI Alexa cinema camera with anamorphic lenses, cinematic depth of field", prose: "It is shot on an ARRI Alexa cinema camera with anamorphic lenses" }
+        };
+
+        var ERA = {
+          modern:   { kw: "", prose: "" },
+          y90s:     { kw: "1990s period detail, period-correct clothing, cars and signage", prose: "Every detail is period-correct for the 1990s — the clothing, cars, and signage" },
+          y70s:     { kw: "1970s period detail, period-correct clothing, cars and signage, warm analog color", prose: "Every detail is period-correct for the 1970s — the clothing, cars, and signage — with warm analog color" },
+          y50s:     { kw: "1950s period detail, period-correct clothing, cars and signage", prose: "Every detail is period-correct for the 1950s — the clothing, cars, and signage" },
+          timeless: { kw: "timeless, era-neutral styling", prose: "The styling is timeless and era-neutral" }
+        };
+
+        var DETAIL = {
+          standard: ["photorealistic", "lifelike skin with visible pores and fine texture", "natural imperfections left in", "physically accurate light and shadow", "true-to-life color"],
+          high:     ["photorealistic", "lifelike skin with visible pores, fine lines and stubble", "natural imperfections left in — blemishes, flyaway hairs, worn fabric", "realistic catchlights in the eyes", "physically accurate light and shadow", "true-to-life color", "ultra-detailed, 8K"],
+          max:      ["photorealistic", "extreme skin detail — visible pores, peach fuzz, fine lines, stubble and sweat", "natural imperfections left in — blemishes, scars, flyaway hairs, dirt under fingernails, fabric weave and scuffs", "realistic catchlights and moisture in the eyes", "physically accurate light, shadow and subsurface scattering", "true-to-life color and micro-contrast", "ultra-detailed, 8K, high dynamic range"]
+        };
+
+        var VARIANT_FLAVOR = {
+          clean: {
+            name: "Clean",
+            tag: "Polished and true-to-life. The safe, professional take.",
+            kw: ["clean composition", "balanced, honest framing"],
+            prose: "The composition is clean and balanced, framed honestly."
+          },
+          cinematic: {
+            name: "Cinematic",
+            tag: "Drama and atmosphere. A frame pulled from a feature film.",
+            kw: ["cinematic composition", "dramatic motivated lighting", "rich cinematic color grade", "gentle halation on the highlights", "subtle film grain", "frame from a feature film"],
+            prose: "The composition is cinematic, with dramatic motivated lighting, a rich film color grade, and gentle halation on the highlights — a frame pulled from a feature film."
+          },
+          raw: {
+            name: "Raw Candid",
+            tag: "Unposed and unretouched. Caught, not staged.",
+            kw: ["unposed candid moment, caught mid-action", "imperfect, honest framing", "slight natural motion blur", "available light only", "zero retouching", "real-world clutter left in frame", "documentary realism"],
+            prose: "The moment is unposed and caught mid-action, with imperfect, honest framing, a hint of natural motion blur, and real-world clutter left in the frame. Nothing is retouched — it has the honesty of documentary photography."
+          }
+        };
+
+        var SD_NEGATIVE = "blurry, deformed hands, extra fingers, missing fingers, plastic skin, airbrushed, beauty filter, CGI, 3d render, cartoon, illustration, painting, doll-like, uncanny valley, oversaturated, watermark, text, logo, low resolution";
+
+        var TARGET_NAMES = {
+          generic: "Generic",
+          midjourney: "Midjourney",
+          dalle: "DALL·E-style",
+          sd: "Stable Diffusion",
+          video: "Video"
+        };
+
+        var TARGET_NOTES = {
+          generic: "One flowing prompt that works in <b>any image tool</b> — paste it anywhere.",
+          midjourney: "Formatted for <b>Midjourney</b> — keyword style with <b>--ar</b>, <b>--style raw</b> and version flags matched to your shot type.",
+          dalle: "Formatted for <b>DALL·E-style</b> tools — plain descriptive prose, no flags or keyword stacking.",
+          sd: "Formatted for <b>Stable Diffusion</b> — a prompt plus a matched <b>negative prompt</b> that kills the plastic, AI look.",
+          video: "Formatted for <b>video generators</b> — the still description plus real camera movement and motion language."
+        };
+
+        function val(id) { return $(id).value.trim(); }
+        function subject() { return val("subject") || "a lone figure"; }
+        function setting() { return val("setting"); }
+        function mood() { return val("mood"); }
+        function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+        function lower(s) { return s ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+
+        function pieces() {
+          return {
+            shot: SHOT[$("shot").value],
+            light: LIGHTING[$("lighting").value],
+            cam: CAMERA[$("camera").value],
+            era: ERA[$("era").value],
+            detail: DETAIL[$("detail").value]
+          };
+        }
+
+        /* ---- keyword-style text: Generic / Midjourney / Stable Diffusion ---- */
+        function keywordText(variantKey) {
+          var p = pieces();
+          var flavor = VARIANT_FLAVOR[variantKey];
+          var parts = [];
+          var head = p.shot.phrase + " of " + subject();
+          if (setting()) head += ", " + setting();
+          parts.push(head);
+          if (mood()) parts.push(mood() + " mood");
+          parts.push(p.light.kw);
+          flavor.kw.forEach(function (x) { parts.push(x); });
+          p.detail.forEach(function (x) { parts.push(x); });
+          parts.push(p.cam.kw);
+          if (p.era.kw) parts.push(p.era.kw);
+          return parts.join(", ");
+        }
+
+        /* ---- prose text: DALL·E-style / Video base ---- */
+        function proseText(variantKey, forVideo) {
+          var p = pieces();
+          var flavor = VARIANT_FLAVOR[variantKey];
+          var s = [];
+          var open = (forVideo ? "A photorealistic video: " : "Create a photorealistic image: ") +
+            lower(p.shot.phrase) + " of " + subject();
+          if (setting()) open += ", " + setting();
+          s.push(open + ".");
+          if (mood()) s.push("The mood is " + mood() + ".");
+          s.push(p.light.prose + ".");
+          s.push(flavor.prose);
+          s.push("Detail is lifelike throughout: " + p.detail.slice(1).join(", ") + ".");
+          s.push(p.cam.prose + ".");
+          if (p.era.prose) s.push(p.era.prose + ".");
+          if (!forVideo) s.push("No text, no watermark, no logo anywhere in the image.");
+          return s.join(" ");
+        }
+
+        function videoText(variantKey) {
+          var p = pieces();
+          var base = proseText(variantKey, true);
+          var move = variantKey === "raw"
+            ? "handheld, following the subject with natural sway and small imperfections"
+            : variantKey === "cinematic"
+              ? p.shot.move + ", with a slow cinematic arc"
+              : p.shot.move;
+          return base + " Camera movement: " + move + ". Motion is natural and physically believable — real weight, real timing, realistic motion blur, 24 fps. The subject stays consistent and lifelike for the full clip, 5–10 seconds.";
+        }
+
+        function mjText(variantKey) {
+          var p = pieces();
+          var chaos = variantKey === "raw" ? " --chaos 8" : variantKey === "cinematic" ? " --chaos 5" : "";
+          return keywordText(variantKey) + " --ar " + p.shot.ar + " --style raw --v 6.1" + chaos;
+        }
+
+        /* ---- build the blocks for one variant under the current target ---- */
+        function buildBlocks(variantKey) {
+          var target = $("target").value;
+          if (target === "midjourney") return [{ label: null, text: mjText(variantKey) }];
+          if (target === "dalle") return [{ label: null, text: proseText(variantKey, false) }];
+          if (target === "video") return [{ label: null, text: videoText(variantKey) }];
+          if (target === "sd") {
+            return [
+              { label: "Prompt", text: keywordText(variantKey) },
+              { label: "Negative prompt", text: SD_NEGATIVE }
+            ];
+          }
+          return [{ label: null, text: keywordText(variantKey) }];
+        }
+
+        function combinedText(variantKey) {
+          return buildBlocks(variantKey).map(function (b) {
+            return (b.label ? b.label + ": " : "") + b.text;
+          }).join("\n");
+        }
+
+        /* ---- rendering ---- */
+        var outputsEl = $("outputs");
+
+        function render() {
+          $("targetNote").innerHTML = TARGET_NOTES[$("target").value];
+          outputsEl.innerHTML = "";
+          ["clean", "cinematic", "raw"].forEach(function (key) {
+            var flavor = VARIANT_FLAVOR[key];
+            var card = document.createElement("article");
+            card.className = "variant";
+
+            var head = document.createElement("div");
+            head.className = "variant-head";
+            var titleBox = document.createElement("div");
+            var h3 = document.createElement("h3");
+            h3.className = "variant-name";
+            h3.textContent = flavor.name;
+            var tag = document.createElement("p");
+            tag.className = "variant-tag";
+            tag.textContent = flavor.tag;
+            titleBox.appendChild(h3);
+            titleBox.appendChild(tag);
+            head.appendChild(titleBox);
+            card.appendChild(head);
+
+            buildBlocks(key).forEach(function (block, i) {
+              var wrap = document.createElement("div");
+              wrap.className = "out-block";
+              if (block.label) {
+                var lab = document.createElement("p");
+                lab.className = "out-label";
+                lab.textContent = block.label;
+                wrap.appendChild(lab);
+              }
+              var txt = document.createElement("p");
+              txt.className = "out-text";
+              txt.textContent = block.text;
+              wrap.appendChild(txt);
+
+              var actions = document.createElement("div");
+              actions.className = "out-actions";
+              var btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = i === 0 && buildBlocks(key).length > 1 ? "btn-chrome" : "btn-chrome";
+              btn.textContent = block.label ? "Copy " + lower(block.label) : "Copy prompt";
+              var note = document.createElement("span");
+              note.className = "copy-note";
+              btn.addEventListener("click", function () { copyText(block.text, txt, note, btn); });
+              actions.appendChild(btn);
+              actions.appendChild(note);
+              wrap.appendChild(actions);
+
+              card.appendChild(wrap);
+            });
+
+            outputsEl.appendChild(card);
+          });
+        }
+
+        /* ---- copy with visible fallback ---- */
+        var toastTimer = null;
+        function toast(msg) {
+          var t = $("toast");
+          t.textContent = msg;
+          t.classList.add("show");
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400);
+        }
+
+        function selectText(el) {
+          try {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          } catch (e) { /* selection is best-effort */ }
+        }
+
+        function copyText(text, textEl, noteEl, btn) {
+          function done(ok, fallbackUsed) {
+            if (ok) {
+              noteEl.textContent = "Copied.";
+              noteEl.className = "copy-note ok";
+              toast("Copied to clipboard");
+            } else {
+              selectText(textEl);
+              noteEl.textContent = "Copy was blocked — the text above is selected. Long-press it and tap Copy.";
+              noteEl.className = "copy-note warn";
+              toast("Text selected — long-press to copy");
+            }
+            if (btn) {
+              var old = btn.textContent;
+              btn.textContent = ok ? "Copied ✓" : "Selected — long-press";
+              setTimeout(function () { btn.textContent = old; }, 2400);
+            }
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () {
+              selectText(textEl);
+              var ok = false;
+              try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+              done(ok, true);
+            });
+          } else {
+            selectText(textEl);
+            var ok2 = false;
+            try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
+            done(ok2, true);
+          }
+        }
+
+        /* ---- mood chips ---- */
+        var moodInput = $("mood");
+        var chips = Array.prototype.slice.call(document.querySelectorAll("#moodChips .chip"));
+        function syncChips() {
+          var current = moodInput.value.trim().toLowerCase();
+          chips.forEach(function (c) {
+            c.classList.toggle("active", c.getAttribute("data-mood").toLowerCase() === current);
+          });
+        }
+        chips.forEach(function (c) {
+          c.addEventListener("click", function () {
+            moodInput.value = c.getAttribute("data-mood");
+            syncChips();
+            render();
+          });
+        });
+        moodInput.addEventListener("input", syncChips);
+
+        /* ---- surprise me ---- */
+        var SURPRISE = {
+          subjects: [
+            "a street vendor arranging fruit on her cart",
+            "a retired boxer wrapping his hands before training",
+            "a young mother laughing with her kid on her hip",
+            "an old fisherman mending a net with rough hands",
+            "a night-shift nurse taking a breath outside the hospital",
+            "a barber giving a boy his first haircut",
+            "a farmer looking up at the weather rolling in",
+            "a jazz drummer lost in the middle of a set",
+            "a grandmother kneading dough, flour on her hands",
+            "a welder lifting his mask, sparks still hanging in the air"
+          ],
+          settings: [
+            "a rain-slick city alley behind a diner",
+            "a small-town diner with cracked vinyl booths",
+            "a working harbor at dawn, gulls overhead",
+            "a dusty rodeo arena just before the gates open",
+            "a crowded night market strung with bare bulbs",
+            "a quiet farmhouse kitchen, morning light through lace curtains",
+            "a downtown job site, steel beams and dust in the air",
+            "a neon-lit subway platform late at night",
+            "a desert gas station at dusk, one pump still working",
+            "a mountain cabin porch above a sea of fog"
+          ],
+          moods: ["gritty and honest", "warm and joyful", "tense, holding its breath", "quiet and melancholy", "golden-hour nostalgic", "dark noir, all shadow and suspicion", "electric and alive", "calm and intimate"]
+        };
+        function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+        $("surpriseBtn").addEventListener("click", function () {
+          $("subject").value = pick(SURPRISE.subjects);
+          $("setting").value = pick(SURPRISE.settings);
+          moodInput.value = pick(SURPRISE.moods);
+          syncChips();
+          render();
+        });
+
+        /* ---- copy all ---- */
+        $("copyAllBtn").addEventListener("click", function () {
+          var targetName = TARGET_NAMES[$("target").value];
+          var all = ["clean", "cinematic", "raw"].map(function (key) {
+            return "— " + VARIANT_FLAVOR[key].name + " (" + targetName + ") —\n" + combinedText(key);
+          }).join("\n\n");
+          var firstText = outputsEl.querySelector(".out-text");
+          var btn = $("copyAllBtn");
+          copyText(all, firstText, document.createElement("span"), null);
+          var old = btn.textContent;
+          btn.textContent = "Copied ✓";
+          setTimeout(function () { btn.textContent = old; }, 2400);
+        });
+
+        /* ---- live regeneration ---- */
+        ["subject", "setting", "mood", "shot", "lighting", "camera", "era", "detail", "target"].forEach(function (id) {
+          $(id).addEventListener("input", render);
+          $(id).addEventListener("change", render);
+        });
+
+        syncChips();
+        render();
+      })();
+    </script>
+  </body>
+</html>
