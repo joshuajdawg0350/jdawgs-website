@@ -139,6 +139,40 @@
     .install img{width:64px;height:64px;border-radius:14px}
   }
 </style>
+<style>
+/* ============================================================
+   Storefront search (2026-11-12).
+   Page-scoped. A live client-side filter over the Arcade's
+   cards below (no backend) — the same component that shipped
+   on apps.html and ai-tool-store.html.
+   ============================================================ */
+.jd-search-sticky{position:sticky;top:71px;z-index:30}
+@media (max-width:640px){.jd-search-sticky{top:59px}}
+.jd-search{margin:1.25rem 0 .75rem;padding:.7rem .7rem .75rem;
+  background:linear-gradient(180deg,rgba(18,24,36,.98),rgba(8,11,17,.98));
+  border:1px solid #33435e;border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)}
+.jd-search label{display:block;font-family:Archivo,Inter,sans-serif;font-weight:700;
+  letter-spacing:.14em;font-size:.78rem;text-transform:uppercase;color:#7dd8ff;margin:0 0 .45rem .15rem}
+.jd-search-row{display:flex;gap:.5rem;align-items:stretch}
+.jd-search input{flex:1 1 auto;min-width:0;min-height:52px;padding:.7rem .9rem;
+  font:inherit;font-size:1rem;color:#f2f7ff;background:#0a0d13;
+  border:1px solid rgba(120,190,255,.5);border-radius:12px}
+.jd-search input::placeholder{color:#8fa8c4}
+.jd-search input:focus{outline:2px solid #39c2ff;outline-offset:1px;border-color:#39c2ff}
+.jd-search-clear{flex:0 0 auto;min-width:52px;min-height:52px;border-radius:12px;cursor:pointer;
+  font-size:1.3rem;line-height:1;color:#0a0f16;
+  background:linear-gradient(180deg,#ffffff,#c9d4e4 55%,#93a5bd);
+  border:1px solid #d7e5f2;box-shadow:0 2px 0 #5f7089,0 6px 14px rgba(0,0,0,.35)}
+.jd-search-clear[hidden]{display:none}
+.jd-search-count{margin:.55rem .15rem 0;font-size:.92rem;color:#a9c6e8}
+.jd-search-empty{margin:0 0 .75rem;padding:1rem 1.1rem;border:1px dashed rgba(120,190,255,.55);
+  border-radius:14px;background:rgba(10,16,26,.8);color:#e8f3ff}
+.jd-search-empty[hidden]{display:none}
+.jd-search-empty button{margin-left:.6rem;min-height:44px;padding:.5rem 1rem;border-radius:10px;
+  cursor:pointer;font:inherit;font-weight:700;color:#081018;
+  background:linear-gradient(180deg,#7dd8ff,#2ea8ec);border:1px solid rgba(255,255,255,.4)}
+</style>
 </head>
 <body>
 
@@ -195,15 +229,27 @@
 
 <main>
 
+  <div class="wrap jd-search-sticky">
+    <div class="jd-search" role="search">
+      <label for="jd-search-input">Search the Arcade</label>
+      <div class="jd-search-row">
+        <input id="jd-search-input" type="search" autocomplete="off" placeholder="Search the Arcade — try “prompt” or “hustle”">
+        <button class="jd-search-clear" id="jd-search-clear" type="button" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <p class="jd-search-count" id="jd-search-count" role="status" aria-live="polite"></p>
+    </div>
+    <p class="jd-search-empty" id="jd-search-empty" hidden>No matches — <button type="button" id="jd-search-empty-clear">Clear search</button></p>
+  </div>
+
   <!-- ================= GAMES ================= -->
-  <section class="arcade-band" id="games" style="padding-top:1.5rem">
+  <section class="arcade-band" id="games" style="padding-top:1.5rem" data-search-group>
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">The games</p>
         <h2>Hustle City</h2>
       </div>
 
-      <article class="game">
+      <article class="game" data-search-item>
         <div class="game-cover"><img src="assets/hc1-cover.webp" alt="Hustle City — chrome lettering over a black Charger on a rainy neon street" width="1920" height="1120"></div>
         <div class="game-info">
           <div class="game-top"><h3>Hustle City</h3><span class="g-price">$1.99<small>one-time</small></span></div>
@@ -218,7 +264,7 @@
         </div>
       </article>
 
-      <article class="game">
+      <article class="game" data-search-item>
         <div class="game-cover"><img src="assets/hc2-cover.webp" alt="Hustle City 2 — chrome Hustle City lettering over the black Charger on a rainy neon street" width="1920" height="1120" loading="lazy" style="object-position:center 12%"></div>
         <div class="game-info">
           <div class="game-top"><h3>Hustle City 2</h3><span class="g-price">$4.99<small>one-time</small></span></div>
@@ -234,7 +280,7 @@
       </article>
 
       <!-- CYBER WEEK BUNDLE CARD — STAGED 2026-11-11. DO NOT PUBLISH until Nov 26, 2026 (Midas publishes). The buy href below is the REAL bundle link from the ledger (set 2026-11-12; an earlier transcription dropped characters — do not retype it). Selling window: Nov 26–30, 2026 only. -->
-      <article class="game">
+      <article class="game" data-search-item>
         <div class="game-cover"><img src="assets/hc2-cover.webp" alt="Hustle City Bundle — Hustle City 1 and Hustle City 2 together" width="1920" height="1120" loading="lazy" style="object-position:center 12%"></div>
         <div class="game-info">
           <div class="game-top"><h3>Hustle City Bundle — HC1 + HC2</h3><span class="g-badge">Cyber Week</span><span class="g-price"><s>$6.98</s> $5.99<small>one-time</small></span></div>
@@ -250,7 +296,7 @@
         </div>
       </article>
 
-      <article class="game">
+      <article class="game" data-search-item>
         <div class="game-cover hc3-cover"><video src="assets/hc3-scotty.mp4" poster="assets/hc3-scotty-poster.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#05080e" aria-label="Hustle City 3 teaser — Big Body Scotty in front of his blacked-out Cadillac"></video></div>
         <div class="game-info">
           <div class="game-top"><h3>Hustle City 3</h3><span class="g-badge">Coming Soon</span></div>
@@ -284,7 +330,7 @@
   </section>
 
   <!-- ================= APPS ================= -->
-  <section class="arcade-band" id="apps">
+  <section class="arcade-band" id="apps" data-search-group>
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">The app shelf</p>
@@ -295,7 +341,7 @@
       <p class="tap-note">Tap to pay with Apple Pay, Google Pay, or Link — whichever your phone offers.</p>
         <div class="apps">
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/studio.png" alt="J-Dawgs Droppin Beats Studio icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Droppin Beats Studio™</h3>
@@ -308,7 +354,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/autotune.png" alt="J-Dawgs Auto Tune Data icon — Joshua's black 2008 Charger" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Auto Tune Data™</h3>
@@ -322,7 +368,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/compass.png" alt="Credential Compass icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>Credential Compass™</h3>
@@ -336,7 +382,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/plain-talk.png" alt="J-Dawgs Plain Talk icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Plain Talk™</h3>
@@ -350,7 +396,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/caption.png" alt="J-Dawgs Caption &amp; Hook Studio icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Caption &amp; Hook Studio™</h3>
@@ -364,7 +410,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/seller-photo.png" alt="J-Dawgs Seller Photo Studio icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Seller Photo Studio™</h3>
@@ -378,7 +424,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/pocket-player.png" alt="J-Dawgs Pocket Player icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Pocket Player™</h3>
@@ -392,7 +438,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/audio-fixer.png" alt="J-Dawgs Audio Fixer icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Audio Fixer™</h3>
@@ -406,7 +452,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/ringtone.png" alt="J-Dawgs Ringtone &amp; Alert Maker icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Ringtone &amp; Alert Maker™</h3>
@@ -420,7 +466,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/speaker-rescue.png" alt="J-Dawgs Speaker Rescue icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Speaker Rescue™</h3>
@@ -434,7 +480,7 @@
           </div>
         </article>
 
-        <article class="app">
+        <article class="app" data-search-item>
           <img src="icons/moving-box.png" alt="J-Dawgs Moving Box &amp; Belongings Finder icon" width="256" height="256" loading="lazy">
           <div class="app-main">
             <h3>J-Dawgs Moving Box &amp; Belongings Finder™</h3>
@@ -472,20 +518,20 @@
   </section>
 
   <!-- ================= TOOLS ================= -->
-  <section class="arcade-band" id="tools">
+  <section class="arcade-band" id="tools" data-search-group>
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:0">
         <p class="eyebrow">Tools</p>
         <h2>The tool shelf.</h2>
       </div>
       <div class="doors2">
-        <div class="door-card">
+        <div class="door-card" data-search-item>
           <h3>AI Tool Store</h3>
           <p><span class="a-price">From $0.50<small>per tool</small></span></p>
           <p>381 working tools built for AIs and the humans who hire them — converters, checkers, auditors and makers, each verified working before it lists.</p>
           <a class="btn btn-ghost" href="https://jdawgsindustries.com/ai-tool-store.html">Enter the AI Tool Store →</a>
         </div>
-        <div class="door-card">
+        <div class="door-card" data-search-item>
           <h3>Hustle City Prompt Generator</h3>
           <p><span class="a-price">$2.99<small>one-time</small></span></p>
           <p>One engine, every AI: state any goal in plain words — realism shots, writing, ads, code, research, agent prompts — and get an expert-grade prompt, ready to paste.</p>
@@ -543,5 +589,42 @@
 </footer>
 
 <script src="../assets/site.js" defer></script>
+<script>
+/* Storefront search — live client-side filter over the Arcade cards. */
+(function(){
+  var input=document.getElementById('jd-search-input');
+  if(!input) return;
+  var clearBtn=document.getElementById('jd-search-clear'),
+      count=document.getElementById('jd-search-count'),
+      empty=document.getElementById('jd-search-empty'),
+      emptyBtn=document.getElementById('jd-search-empty-clear'),
+      items=Array.prototype.slice.call(document.querySelectorAll('[data-search-item]')),
+      groups=Array.prototype.slice.call(document.querySelectorAll('[data-search-group]')),
+      total=items.length;
+  function apply(){
+    var q=input.value.trim().toLowerCase(), shown=0;
+    items.forEach(function(it){
+      var hit=!q||it.textContent.toLowerCase().indexOf(q)>-1;
+      it.style.display=hit?'':'none';
+      if(hit) shown++;
+    });
+    groups.forEach(function(g){
+      var any=false;
+      Array.prototype.forEach.call(g.querySelectorAll('[data-search-item]'),function(k){
+        if(k.style.display!=='none') any=true;
+      });
+      g.style.display=(!q||any)?'':'none';
+    });
+    clearBtn.hidden=!q;
+    count.textContent=q?('Showing '+shown+' of '+total+' items'):('Showing all '+total+' items');
+    empty.hidden=!(q&&shown===0);
+  }
+  function reset(){ input.value=''; apply(); input.focus(); }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',reset);
+  emptyBtn.addEventListener('click',reset);
+  apply();
+})();
+</script>
 </body>
 </html>
