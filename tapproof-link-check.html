@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TapProof Link Check™ — See Where a Link Really Goes | J-Dawgs Industries</title>
+<meta name="description" content="Paste any link and see its real destination, lookalike-brand tricks, and a plain-English risk readout. On-device only — the link is never opened.">
+<link rel="canonical" href="https://jdawgsindustries.com/tapproof-link-check.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+.mini a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.famcard{max-width:100%;overflow:hidden}
+.famcard{background:#0d1420;border:2px dashed var(--line2);border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.famcard h2{margin-top:0}
+.famcard .steps{margin:0 0 6px;padding-left:20px}
+.famcard .steps li{margin:8px 0;overflow-wrap:anywhere}
+.famcard .row{display:block;padding:7px 0;border-bottom:1px dashed #2a3644;font-size:.92rem}
+.famcard .row span{color:var(--ink);display:block;text-align:left;margin-top:2px;overflow-wrap:anywhere}
+.famcard p{overflow-wrap:anywhere}
+
+.famcard .row span{min-width:0;overflow-wrap:anywhere}
+.famcard .row strong{flex:0 0 auto}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+a{color:var(--cyan)}
+.stat{font-family:var(--fd);font-weight:800;font-size:1.55rem;color:var(--cyan)}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],input[type=date],input[type=time],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.qopt{display:block;width:100%;text-align:left;margin:.4rem 0;background:var(--panel2);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:1rem;cursor:pointer;min-height:48px}
+.qopt:hover{border-color:var(--cyan)}
+.score{font-family:var(--fm);color:var(--cyan)}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+
+  <h1 class="chrome">Link Check™</h1>
+  <p class="tagline">TapProofing™ · Flagship tool</p>
+  <p style="margin-top:14px"><a class="btn" href="tapproof-link-check.html">Start with Link Check — paste a link</a></p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Got a link in a text or email? Paste it here first.</strong> This reads the link's structure on your device — it never opens the link, never fetches it, and sends nothing anywhere. You'll see who really owns the destination and every trick the link is using.</p>
+  <label for="url">Paste the link</label>
+  <input type="text" id="url" inputmode="url" autocomplete="off" placeholder="e.g. https://usps-redelivery-fee.top/track">
+  <p><button class="btn" id="go">Check this link</button></p>
+  <div class="verdict" id="out" role="status" aria-live="polite"></div>
+  <p class="mini">Try the sample tricks: <a href="#" data-sample="https://usps.com-track-package.xyz/redeliver">a lookalike</a> · <a href="#" data-sample="https://bit.ly/3xAmPle">a shortener</a> · <a href="#" data-sample="http://192.168.4.21/chase-verify">a raw-number address</a> · <a href="#" data-sample="https://www.usps.com/tracking/">the real thing</a></p>
+</section>
+<section class="panel">
+  <h2>How to read any link yourself</h2>
+  <p>Read the name <strong>right to left</strong>: in <span class="mono">login.usps.com.evil-site.top</span>, the owner is <span class="mono">evil-site.top</span> — everything before it is decoration. The genuine article is short: <span class="mono">usps.com</span>. One changed letter (<span class="mono">usps-track.com</span>, <span class="mono">paypa1.com</span>) means a different owner entirely.</p>
+  <p><strong>The standing rule:</strong> never reach a bank, carrier, or agency through a message link. Open their app, or type the address you already know.</p>
+  <p class="mini">Sister tools: <a href="tapproof-message-check.html">Message Check</a> · <a href="tapproof-qr-check.html">QR Check</a> · <a href="tapproofing.html">All of TapProofing</a></p>
+</section>
+</main>
+
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+const REAL_DOMAINS = {
+ "usps.com":"the U.S. Postal Service","ups.com":"UPS","fedex.com":"FedEx","dhl.com":"DHL",
+ "amazon.com":"Amazon","walmart.com":"Walmart","target.com":"Target","ebay.com":"eBay","paypal.com":"PayPal",
+ "chase.com":"Chase Bank","bankofamerica.com":"Bank of America","wellsfargo.com":"Wells Fargo","citi.com":"Citi",
+ "capitalone.com":"Capital One","americanexpress.com":"American Express","discover.com":"Discover",
+ "irs.gov":"the IRS","ssa.gov":"Social Security","usa.gov":"USA.gov","apple.com":"Apple","google.com":"Google",
+ "microsoft.com":"Microsoft","netflix.com":"Netflix","venmo.com":"Venmo","cash.app":"Cash App",
+ "coinbase.com":"Coinbase","binance.com":"Binance","ezpass.com":"E-ZPass","sunpass.com":"SunPass",
+ "doordash.com":"DoorDash","uber.com":"Uber","lyft.com":"Lyft","indeed.com":"Indeed","linkedin.com":"LinkedIn"
+};
+const SHORTENERS = ["bit.ly","tinyurl.com","t.co","goo.gl","rb.gy","shorturl.at","tiny.cc","is.gd","buff.ly","ow.ly","s.id","rebrand.ly","cutt.ly","short.io","bl.ink"];
+const RISKY_TLDS = ["zip","mov","top","xyz","click","loan","buzz","quest","best","live","online","site","fun","icu","rest","cfd","sbs"];
+function levenshtein(a,b){const m=[];for(let i=0;i<=b.length;i++)m[i]=[i];for(let j=0;j<=a.length;j++)m[0][j]=j;for(let i=1;i<=b.length;i++)for(let j=1;j<=a.length;j++)m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(b[i-1]==a[j-1]?0:1));return m[b.length][a.length];}
+function analyzeLink(raw){
+  const flags=[];let score=0;let urlText=(raw||"").trim();
+  if(!urlText)return null;
+  if(!/^[a-z][a-z0-9+.-]*:\/\//i.test(urlText))urlText="http://"+urlText;
+  let u;try{u=new URL(urlText);}catch(e){return{ok:false,error:"That doesn't parse as a link at all. A real service link should look like https://www.example.com/path — treat this one as unsafe."};}
+  const host=u.hostname.toLowerCase();const parts=host.split(".");
+  const tld=parts[parts.length-1];const regDomain=parts.length>=2?parts.slice(-2).join("."):host;
+  if(u.protocol==="http:"){flags.push(["warn","Not encrypted (http, not https). Real banks, carriers and stores use https on payment and login pages.",8]);score+=8;}
+  if(/^\d{1,3}(\.\d{1,3}){3}$/.test(host)||host.includes(":")){flags.push(["bad","The address is a raw number (IP address), not a company name. Legitimate delivery, bank and toll services don't send links like that.",35]);score+=35;}
+  if(u.username||urlText.includes("@")&&urlText.indexOf("@")<urlText.indexOf(host)){flags.push(["bad","There's an @ trick in this link — everything before the @ is decoration. The real destination is "+host+".",30]);score+=30;}
+  if(host.includes("xn--")){flags.push(["bad","Punycode address (xn--…). That encoding is how lookalike letters from other alphabets are hidden in a domain name.",30]);score+=30;}
+  if(parts.length>=4){flags.push(["warn","Deep subdomain chain ("+host+"). Scam links often bury the real domain at the end of a long name — read it right to left: the true owner is "+regDomain+".",15]);score+=15;}
+  if(SHORTENERS.includes(regDomain)||SHORTENERS.includes(host)){flags.push(["warn","A link shortener ("+regDomain+") hides the real destination. Shortened links in unexpected texts are a top scam vehicle — don't tap; go to the service directly.",18]);score+=18;}
+  if(RISKY_TLDS.includes(tld)){flags.push(["warn","The ending ."+tld+" is a cheap, high-abuse domain ending rarely used by the big services it imitates.",12]);score+=12;}
+  if(urlText.length>110){flags.push(["warn","Very long link ("+urlText.length+" characters). Length is used to bury the real destination.",6]);score+=6;}
+  // lookalike brand check
+  let best=null;
+  for(const d in REAL_DOMAINS){
+    if(regDomain===d){best={d:d,exact:true};break;}
+    const name=d.split(".")[0];
+    const cand=parts.filter(p=>p.length>=4);
+    for(const c of cand){
+      const dist=levenshtein(c,name);
+      if(dist>0&&dist<=2){if(!best||dist<best.dist)best={d:d,dist:dist,piece:c};}
+    }
+    if(host.includes(name)&&regDomain!==d){if(!best||!best.exact)best={d:d,contains:true};}
+  }
+  if(best&&best.exact){flags.push(["good","This is the genuine domain of "+REAL_DOMAINS[best.d]+" ("+best.d+"). The domain itself checks out — still make sure you were expecting the message.",0]);}
+  else if(best&&(best.dist||best.contains)){flags.push(["bad","LOOKALIKE: this link leans on the name of "+REAL_DOMAINS[best.d]+", but the real domain is "+best.d+" — and this link's owner is "+regDomain+". One changed letter or an added word is the oldest trick in the book.",40]);score+=40;}
+  const payWords=/(pay|payment|billing|verify|login|secure|account|update|confirm|redeliver|fee|toll|invoice)/i;
+  if(payWords.test(u.pathname+u.search)&&score>=15){flags.push(["warn","The path asks for a payment, login or verification action — exactly what these links are built to harvest.",10]);score+=10;}
+  let level="good",word="LOOKS CLEAN — still tap carefully";
+  if(score>=35){level="bad";word="HIGH RISK — DO NOT TAP";}
+  else if(score>=12){level="warn";word="SUSPICIOUS — DON'T TAP FROM THE MESSAGE";}
+  return {ok:true,host:host,reg:regDomain,protocol:u.protocol,full:u.href,score:score,level:level,word:word,flags:flags};
+}
+function renderLinkResult(el,r){
+  if(!r){el.className="verdict";el.innerHTML="";return;}
+  if(!r.ok){el.className="verdict bad show";el.innerHTML="<div class='big'>Can't read it — treat as unsafe</div><p>"+r.error+"</p>";return;}
+  let h="<div class='big'>"+r.word+"</div>";
+  h+="<p>The real destination of this link is <span class='mono'><strong>"+r.host+"</strong></span> — owned by whoever controls <span class='mono'>"+r.reg+"</span>. Everything before that name is decoration.</p>";
+  if(r.flags.length){h+="<ul class='flags'>";for(const f of r.flags)h+="<li>"+f[1]+"</li>";h+="</ul>";}
+  h+="<p><strong>The safe move:</strong> don't tap the link in the message. Open the company's own app, or type <span class='mono'>"+r.reg+"</span> yourself — and if this was flagged as a lookalike, type the <em>real</em> domain named above instead.</p>";
+  el.className="verdict "+r.level+" show";el.innerHTML=h;
+}
+</script>
+
+<script>
+document.getElementById("go").addEventListener("click",function(){renderLinkResult(document.getElementById("out"),analyzeLink(document.getElementById("url").value));});
+document.querySelectorAll("[data-sample]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.getElementById("url").value=a.getAttribute("data-sample");document.getElementById("go").click();});});
+</script>
+
+</body>
+</html>

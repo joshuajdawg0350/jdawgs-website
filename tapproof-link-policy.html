@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TapProof Link Policy Builder™ — A One-Page Policy for Small Business | J-Dawgs Industries</title>
+<meta name="description" content="Build a printable one-page Message & Link Payment Policy: no payment from a texted or emailed link alone, verification steps, thresholds, sign-off.">
+<link rel="canonical" href="https://jdawgsindustries.com/tapproof-link-policy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+.mini a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.famcard{max-width:100%;overflow:hidden}
+.famcard{background:#0d1420;border:2px dashed var(--line2);border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.famcard h2{margin-top:0}
+.famcard .steps{margin:0 0 6px;padding-left:20px}
+.famcard .steps li{margin:8px 0;overflow-wrap:anywhere}
+.famcard .row{display:block;padding:7px 0;border-bottom:1px dashed #2a3644;font-size:.92rem}
+.famcard .row span{color:var(--ink);display:block;text-align:left;margin-top:2px;overflow-wrap:anywhere}
+.famcard p{overflow-wrap:anywhere}
+
+.famcard .row span{min-width:0;overflow-wrap:anywhere}
+.famcard .row strong{flex:0 0 auto}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+a{color:var(--cyan)}
+.stat{font-family:var(--fd);font-weight:800;font-size:1.55rem;color:var(--cyan)}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],input[type=date],input[type=time],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.qopt{display:block;width:100%;text-align:left;margin:.4rem 0;background:var(--panel2);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:1rem;cursor:pointer;min-height:48px}
+.qopt:hover{border-color:var(--cyan)}
+.score{font-family:var(--fm);color:var(--cyan)}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+
+  <h1 class="chrome">Link Policy Builder™</h1>
+  <p class="tagline">TapProofing™ · For small business</p>
+</header>
+<main>
+<section class="panel no-print">
+  <p><strong>Answer six questions; get a one-page Message &amp; Link Payment Policy</strong> your whole team can follow — the document that makes "the text looked real" stop being a payment method.</p>
+  <label>Business name</label><input type="text" id="p-biz" placeholder="e.g. Dawson Construction LLC">
+  <label>Payments above this amount always need a voice callback to a known number ($)</label><input type="number" id="p-thresh" value="250" min="0">
+  <label>Who can approve a payment change? (name or role)</label><input type="text" id="p-approver" placeholder="e.g. The owner, or the office manager">
+  <label>Known-good number for payment callbacks</label><input type="text" id="p-callback" placeholder="e.g. Office — 555-010-2233">
+  <label>Bank-detail changes require…</label>
+  <select id="p-bank"><option>Callback to the number already on file, plus a second person's sign-off</option><option>Callback to the number already on file</option><option>In-person confirmation only</option></select>
+  <label>Policy owner (name)</label><input type="text" id="p-owner" placeholder="e.g. J. Dawson">
+  <p><button class="btn" id="gen">Build the policy</button> <button class="btn ghost" onclick="window.print()">Print it</button></p>
+</section>
+<section class="panel" id="policy" style="display:none">
+  <h2 id="pol-title">Message &amp; Link Payment Policy</h2>
+  <div id="pol-body"></div>
+  <p class="mini">Built with TapProof Link Policy Builder™ — J-Dawgs Industries. Free at jdawgsindustries.com/tapproof-link-policy.html</p>
+</section>
+</main>
+
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+document.getElementById("gen").addEventListener("click",function(){
+ const biz=document.getElementById("p-biz").value.trim()||"This business";
+ const th=document.getElementById("p-thresh").value||"250";
+ const ap=document.getElementById("p-approver").value.trim()||"the owner";
+ const cb=document.getElementById("p-callback").value.trim()||"the office number on file";
+ const bank=document.getElementById("p-bank").value;
+ const ow=document.getElementById("p-owner").value.trim()||"__________________";
+ document.getElementById("pol-title").textContent="Message & Link Payment Policy — "+biz;
+ document.getElementById("pol-body").innerHTML=
+ "<p><strong>1. No payment from a message alone.</strong> No employee of "+biz+" will pay an invoice, fee, toll, or delivery charge from a link in a text, DM, or email — at any amount — without completing step 2.</p>"+
+ "<p><strong>2. Verify off the message.</strong> Before paying: open the vendor's known app or site by typing the address, or call the number already on file ("+cb+"). The claim must exist there. A link or number supplied by the message itself proves nothing.</p>"+
+ "<p><strong>3. Callback threshold.</strong> Any payment over $"+th+", and any first-time payee at any amount, requires a voice callback to a known number and approval by "+ap+".</p>"+
+ "<p><strong>4. Bank-detail changes.</strong> Any request to change where money is sent requires: "+bank.toLowerCase()+". Email or text alone never changes bank details.</p>"+
+ "<p><strong>5. Never-pay methods.</strong> This business never pays any business obligation with gift cards, cryptocurrency, wire transfers to new accounts, or cash apps requested by message. A request to pay that way is reported, not paid.</p>"+
+ "<p><strong>6. Check before you tap.</strong> Suspicious links and QR codes are checked at jdawgsindustries.com/tapproofing.html (Link Check / QR Check) and logged in the Scam Log before deletion. Texts are forwarded to 7726.</p>"+
+ "<p><strong>7. No blame for pausing.</strong> Stopping a payment to verify is always the right call here, even when the message turns out to be real. Pressure to skip verification is itself a red flag — report it to the policy owner.</p>"+
+ "<p>Signed, policy owner: <strong>"+ow+"</strong> · Date: __________ · Employee acknowledgment: ______________________________</p>";
+ const p=document.getElementById("policy");p.style.display="block";p.scrollIntoView({behavior:"smooth"});
+});
+</script>
+
+</body>
+</html>

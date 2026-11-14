@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TapProof Message Check™ — Read a Suspicious Text Like a Pro | J-Dawgs Industries</title>
+<meta name="description" content="Paste a suspicious text or email and get every pressure tactic flagged in plain words, with the safe next step. Runs entirely on your device.">
+<link rel="canonical" href="https://jdawgsindustries.com/tapproof-message-check.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+.mini a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.famcard{max-width:100%;overflow:hidden}
+.famcard{background:#0d1420;border:2px dashed var(--line2);border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.famcard h2{margin-top:0}
+.famcard .steps{margin:0 0 6px;padding-left:20px}
+.famcard .steps li{margin:8px 0;overflow-wrap:anywhere}
+.famcard .row{display:block;padding:7px 0;border-bottom:1px dashed #2a3644;font-size:.92rem}
+.famcard .row span{color:var(--ink);display:block;text-align:left;margin-top:2px;overflow-wrap:anywhere}
+.famcard p{overflow-wrap:anywhere}
+
+.famcard .row span{min-width:0;overflow-wrap:anywhere}
+.famcard .row strong{flex:0 0 auto}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+a{color:var(--cyan)}
+.stat{font-family:var(--fd);font-weight:800;font-size:1.55rem;color:var(--cyan)}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],input[type=date],input[type=time],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.qopt{display:block;width:100%;text-align:left;margin:.4rem 0;background:var(--panel2);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:1rem;cursor:pointer;min-height:48px}
+.qopt:hover{border-color:var(--cyan)}
+.score{font-family:var(--fm);color:var(--cyan)}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+
+  <h1 class="chrome">Message Check™</h1>
+  <p class="tagline">TapProofing™</p>
+  <p style="margin-top:14px"><a class="btn" href="tapproof-link-check.html">Start with Link Check — paste a link</a></p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Paste the whole message — text, DM, or email.</strong> This reads it on your device for the pressure tactics scam messages run on, and explains every flag in plain words. Nothing is sent anywhere.</p>
+  <label for="msg">The message</label>
+  <textarea id="msg" placeholder="Paste the suspicious message here…"></textarea>
+  <p><button class="btn" id="go">Check this message</button></p>
+  <div class="verdict" id="out" role="status" aria-live="polite"></div>
+</section>
+<section class="panel">
+  <h2>The four moves every scam message makes</h2>
+  <p><strong>Pretend</strong> to be someone you trust. Invent a <strong>problem or a prize</strong>. <strong>Pressure</strong> you to act now. Demand payment <strong>one specific way</strong> (the FTC's four signs). One sign can be a coincidence. Three together is a script.</p>
+  <p><strong>Whatever the message says:</strong> don't tap its links, don't reply, don't call its number. Forward texts to <strong>7726</strong> (SPAM), then check the claim inside the company's real app or on the number printed on your card.</p>
+  <p class="mini">Got a link inside it? Run it through <a href="tapproof-link-check.html">Link Check</a> too. · <a href="tapproofing.html">All of TapProofing</a></p>
+</section>
+</main>
+
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+const RULES=[
+ {re:/(urgent|immediately|act now|within \d+ (hours|minutes)|expires|final notice|suspended|locked|terminated|last chance|before midnight)/i,w:14,t:"Urgency pressure — a deadline invented to stop you thinking. Real agencies give you days and send letters; scripts give you minutes."},
+ {re:/(gift card|itunes card|google play card|steam card|prepaid card)/i,w:30,t:"Payment by gift card. No legitimate bill, fine, fee, or debt is ever paid in gift cards. This one sign, alone, settles it."},
+ {re:/(bitcoin|cryptocurrency|crypto|bitcoin atm|kiosk|wire transfer|western union|moneygram|zelle|cash app|venmo)/i,w:20,t:"Payment by crypto, wire, or cash app — methods chosen because the money can't be pulled back. The FBI's rule: only scammers demand payment this way."},
+ {re:/(redeliver|redelivery|delivery fee|package (is )?(held|waiting|stuck)|unable to deliver|confirm your address)/i,w:16,t:"The package-delivery lure — the #1 text scam of 2024 (FTC). Carriers don't collect surprise 'redelivery fees' by text link."},
+ {re:/(toll|unpaid toll|toll violation|pay your toll)/i,w:16,t:"The toll-notice lure. Toll agencies bill by mail and in their own apps; surprise toll texts with payment links are a documented national scam (FBI/FTC warnings)."},
+ {re:/(fraud alert|unusual activity|suspicious (charge|activity)|verify your (account|identity)|account (will be|has been) (closed|suspended|locked))/i,w:15,t:"The fake fraud-alert lure — it wears your bank's name and hopes you'll 'verify' on its page instead of in your bank's app."},
+ {re:/(job offer|work from home|per day|daily pay|task(s)? (based|work)|hiring you|no interview)/i,w:13,t:"The too-easy job lure — bogus job offers were a top-five text scam of 2024 (FTC). Real hiring has interviews, paperwork, and no fees from you."},
+ {re:/(wrong number|is this (still )?you|who is this|long time no (see|talk)|remember me)/i,w:10,t:"The 'wrong number' opener — a friendly wrong text that slowly becomes a crypto or romance pitch. Wrong numbers that keep chatting are scripts."},
+ {re:/(click|tap) (the )?(link|here)|visit (https?|www)|scan (the )?(qr|code)/i,w:8,t:"It pushes you to a link or a QR code — the one move that completes the scam. Check the destination in Link Check / QR Check instead of tapping."},
+ {re:/(do not (tell|share)|don't tell|keep this (confidential|secret|between us)|gift for (a|the) (surprise|party))/i,w:14,t:"Secrecy coaching — isolating you from anyone who would spot the script. Real requests survive a second pair of eyes."},
+ {re:/(irs|internal revenue|social security|medicare|fbi|police|sheriff|court|arrest|warrant)/i,w:14,t:"Government impersonation. Agencies mail letters; they do not open with texts demanding instant payment or verification."},
+ {re:/(you('ve| have) (won|been selected)|prize|lottery|sweepstakes|free (iphone|gift|money))/i,w:14,t:"The prize lure. A prize you never entered, that charges a 'fee' or asks for card details, is a collection device, not a prize."},
+ {re:/(password|one-time (code|passcode)|verification code|pin|ssn|social security number|card number|cvv)/i,w:18,t:"It fishes for a code, password, or card number. Codes are for the app on your screen — never for a person or a page a message sent you to."}
+];
+document.getElementById("go").addEventListener("click",function(){
+ const txt=document.getElementById("msg").value;const out=document.getElementById("out");
+ if(!txt.trim()){out.className="verdict warn show";out.innerHTML="<div class='big'>Nothing to check yet</div><p>Paste the message first.</p>";return;}
+ let score=0;const hits=[];
+ for(const r of RULES){if(r.re.test(txt)){score+=r.w;hits.push(r.t);}}
+ const hasLink=/(https?:\/\/|www\.|[a-z0-9-]+\.(com|net|org|top|xyz|click|info|site|online)\b)/i.test(txt);
+ if(hasLink){score+=8;hits.push("It carries a link. Whatever the verdict here, run that link through Link Check before it gets tapped — the destination is the ground truth.");}
+ let level,word;
+ if(score>=30){level="bad";word="THIS IS A SCAM SCRIPT — DO NOT ACT ON IT";}
+ else if(score>=14){level="warn";word="STRONG SCAM SIGNS — STOP AND VERIFY ELSEWHERE";}
+ else if(score>=6){level="warn";word="SOME PRESSURE SIGNS — VERIFY BEFORE ACTING";}
+ else{level="good";word="NO SCAM PATTERNS FOUND — STAY ORDINARY-CAREFUL";}
+ let h="<div class='big'>"+word+"</div><p class='mini'>Pattern score: "+score+" — a reading of the message's language, not a guarantee either way.</p>";
+ if(hits.length){h+="<ul class='flags'>";for(const t of hits)h+="<li>"+t+"</li>";h+="</ul>";}
+ h+="<p><strong>The safe move:</strong> don't tap, don't reply, don't call any number in it. Forward the text to <strong>7726</strong>. Then check the claim in the company's own app or at the number on your card — if it's real, it'll be waiting there.</p>";
+ out.className="verdict "+level+" show";out.innerHTML=h;
+});
+</script>
+
+</body>
+</html>

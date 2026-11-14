@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TapProof Scam Log™ — Log Suspicious Messages in the Fields That Matter | J-Dawgs Industries</title>
+<meta name="description" content="A private on-device log of suspicious texts, emails, and QR codes in the exact fields the FTC, FBI IC3, and 7726 ask for. Exports CSV.">
+<link rel="canonical" href="https://jdawgsindustries.com/tapproof-scam-log.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+.mini a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.famcard{max-width:100%;overflow:hidden}
+.famcard{background:#0d1420;border:2px dashed var(--line2);border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.famcard h2{margin-top:0}
+.famcard .steps{margin:0 0 6px;padding-left:20px}
+.famcard .steps li{margin:8px 0;overflow-wrap:anywhere}
+.famcard .row{display:block;padding:7px 0;border-bottom:1px dashed #2a3644;font-size:.92rem}
+.famcard .row span{color:var(--ink);display:block;text-align:left;margin-top:2px;overflow-wrap:anywhere}
+.famcard p{overflow-wrap:anywhere}
+
+.famcard .row span{min-width:0;overflow-wrap:anywhere}
+.famcard .row strong{flex:0 0 auto}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+a{color:var(--cyan)}
+.stat{font-family:var(--fd);font-weight:800;font-size:1.55rem;color:var(--cyan)}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],input[type=date],input[type=time],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.qopt{display:block;width:100%;text-align:left;margin:.4rem 0;background:var(--panel2);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:1rem;cursor:pointer;min-height:48px}
+.qopt:hover{border-color:var(--cyan)}
+.score{font-family:var(--fm);color:var(--cyan)}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+
+  <h1 class="chrome">Scam Log™</h1>
+  <p class="tagline">TapProofing™</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>A private log of suspicious messages, in the fields the FTC, the FBI IC3, and the 7726 flow actually ask for.</strong> It lives only on this device. Export it as CSV or print the report when you're ready to file.</p>
+  <label>Date</label><input type="date" id="l-date">
+  <label>Time</label><input type="time" id="l-time">
+  <label>How it arrived</label>
+  <select id="l-chan"><option>Text message</option><option>Email</option><option>DM / social</option><option>QR code (package / posted / other)</option><option>Other</option></select>
+  <label>Sender (number, name, or address exactly as shown)</label><input type="text" id="l-sender" placeholder="e.g. +1 888-555-0147 / 'USPS Delivery'">
+  <label>The message (paste it, or describe the QR code)</label><textarea id="l-msg" style="min-height:70px"></textarea>
+  <label>Link or destination it pushed (if any)</label><input type="text" id="l-link" placeholder="e.g. usps-redelivery-fee.top">
+  <label>Did money move?</label>
+  <select id="l-loss"><option>No</option><option>Yes — amount in notes</option><option>Not sure</option></select>
+  <label>Notes (amount, what happened, who you called)</label><input type="text" id="l-notes">
+  <p><button class="btn" id="add">Add to the log</button> <button class="btn ghost" id="csv">Export CSV</button> <button class="btn ghost" onclick="window.print()">Print report</button></p>
+  <p class="mini" id="memwarn"></p>
+  <div id="entries"></div>
+</section>
+<section class="panel">
+  <h2>Where the report goes</h2>
+  <p><strong>Texts:</strong> forward the original to <strong>7726</strong> (SPAM) — your carrier's investigators use it.<br>
+  <strong>Money lost or personal info given:</strong> ReportFraud.ftc.gov and ic3.gov — this log holds exactly their fields.<br>
+  <strong>Card or bank involved:</strong> call the number on the card first, report second.</p>
+  <p class="mini"><a href="tapproofing.html">All of TapProofing</a> · <a href="https://jdawgsindustries.com/voiceproofing.html">Voiceproof Scam Call Log (the voice edition)</a></p>
+</section>
+</main>
+
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+let entries=[];let persistent=true;
+try{const raw=localStorage.getItem("tapproof-log");if(raw)entries=JSON.parse(raw)||[];}catch(e){persistent=false;}
+if(!persistent)document.getElementById("memwarn").textContent="Note: this browser is blocking saved storage (private/restricted mode), so the log lasts for this session only — export the CSV before you close the page.";
+function save(){try{localStorage.setItem("tapproof-log",JSON.stringify(entries));}catch(e){}}
+function esc(s){return (s||"").replace(/</g,"&lt;");}
+function render(){
+ const el=document.getElementById("entries");
+ if(!entries.length){el.innerHTML="<p class='mini'>No entries yet. The next suspicious message gets its 30 seconds — and a line here.</p>";return;}
+ let h="<table><tr><th>When</th><th>Channel</th><th>Sender</th><th>Message</th><th>Link</th><th>Loss?</th><th>Notes</th></tr>";
+ for(const e of entries)h+="<tr><td>"+esc(e.date)+" "+esc(e.time)+"</td><td>"+esc(e.chan)+"</td><td>"+esc(e.sender)+"</td><td>"+esc(e.msg)+"</td><td class='mono'>"+esc(e.link)+"</td><td>"+esc(e.loss)+"</td><td>"+esc(e.notes)+"</td></tr>";
+ el.innerHTML=h+"</table>";
+}
+document.getElementById("add").addEventListener("click",function(){
+ const g=function(id){return document.getElementById(id).value.trim();};
+ const e={date:g("l-date"),time:g("l-time"),chan:g("l-chan"),sender:g("l-sender"),msg:g("l-msg"),link:g("l-link"),loss:g("l-loss"),notes:g("l-notes")};
+ if(!e.sender&&!e.msg){alert("Add at least the sender or the message — a blank line reports nothing.");return;}
+ entries.unshift(e);save();render();
+});
+document.getElementById("csv").addEventListener("click",function(){
+ const rows=[["date","time","channel","sender","message","link","money_moved","notes"]];
+ for(const e of entries)rows.push([e.date,e.time,e.chan,e.sender,e.msg,e.link,e.loss,e.notes]);
+ const csv=rows.map(r=>r.map(c=>'"'+(c||"").replace(/"/g,'""')+'"').join(",")).join("\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="tapproof-scam-log.csv";a.click();URL.revokeObjectURL(a.href);
+});
+const now=new Date();document.getElementById("l-date").value=now.toISOString().slice(0,10);
+render();
+</script>
+
+</body>
+</html>

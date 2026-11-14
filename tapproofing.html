@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TapProofing™ — The New Category for Checking a Message Before You Tap | J-Dawgs Industries</title>
+<meta name="description" content="TapProofing™ is a new category from J-Dawgs Industries: how you check a text, a link, or a QR code before you tap, scan, or pay. Seven free tools, no account, no ads.">
+<link rel="canonical" href="https://jdawgsindustries.com/tapproofing.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+.mini a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.famcard{max-width:100%;overflow:hidden}
+.famcard{background:#0d1420;border:2px dashed var(--line2);border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.famcard h2{margin-top:0}
+.famcard .steps{margin:0 0 6px;padding-left:20px}
+.famcard .steps li{margin:8px 0;overflow-wrap:anywhere}
+.famcard .row{display:block;padding:7px 0;border-bottom:1px dashed #2a3644;font-size:.92rem}
+.famcard .row span{color:var(--ink);display:block;text-align:left;margin-top:2px;overflow-wrap:anywhere}
+.famcard p{overflow-wrap:anywhere}
+
+.famcard .row span{min-width:0;overflow-wrap:anywhere}
+.famcard .row strong{flex:0 0 auto}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+a{color:var(--cyan)}
+.stat{font-family:var(--fd);font-weight:800;font-size:1.55rem;color:var(--cyan)}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],input[type=date],input[type=time],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.qopt{display:block;width:100%;text-align:left;margin:.4rem 0;background:var(--panel2);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:1rem;cursor:pointer;min-height:48px}
+.qopt:hover{border-color:var(--cyan)}
+.score{font-family:var(--fm);color:var(--cyan)}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+
+  <h1 class="chrome">TapProofing™</h1>
+  <p><strong>A new category, from J-Dawgs Industries.</strong> TapProofing is how you check a text message, a link, or a QR code <em>before</em> you tap, scan, or pay — reading the real destination and the message's pressure tactics with tools, instead of trusting how official it looks.</p>
+  <p style="margin-top:14px"><a class="btn" href="tapproof-link-check.html">Start with Link Check — paste a link</a></p>
+</header>
+<main>
+<section class="panel">
+  <h2>Why this category exists now</h2>
+  <p>For decades, a message that <em>looked</em> right probably was right. That ended when scam kits learned to clone any delivery notice, toll bill, bank alert, or job offer — perfectly, for pennies. The platforms check upstream, and browsers warn <em>after</em> the tap. Nothing served the 30 seconds <em>before</em> the tap, on your own phone, with the actual message in your hand. So we built it — the whole shelf, free.</p>
+  <div class="grid two">
+    <div><div class="stat">$470 million</div><p class="mini">Reported losses to scams that <strong>started with a text message in 2024</strong> — more than five times the 2020 figure, even as reports fell (FTC Data Spotlight, April 2025). Fake package delivery was the #1 text scam.</p></div>
+    <div><div class="stat">#1 first contact</div><p class="mini">In 2025 fraud reports, a <strong>text message was the most common way scammers first reached people</strong> (FTC) — the text is now fraud's front door.</p></div>
+    <div><div class="stat">~$389 million</div><p class="mini">Reported 2025 losses to <strong>crypto-kiosk scams</strong> (FBI IC3) — a script that ends with the victim scanning the scammer's QR code. The FBI has also warned (July 2025) about QR codes mailed inside unsolicited packages.</p></div>
+    <div><div class="stat">194,000+</div><p class="mini">Malicious domains tied to <strong>one smishing kit</strong> impersonating toll agencies, postal services, and banks (Palo Alto Unit 42, 2025). The supply is industrial. The household defense was a warning article — until now.</p></div>
+  </div>
+</section>
+<section class="panel">
+  <h2>The 30-second rule</h2>
+  <p><strong>Stop. Don't tap. Check.</strong> Any message that wants a tap, a scan, a reply, or a payment gets 30 seconds of proof first: run the link, read the message, decode the code. Then — if it survives — reach the service through its own app or by typing the address yourself, never through the message.</p>
+</section>
+<section class="panel">
+  <h2>The kit — the whole shelf, free</h2>
+  <div class="grid two">
+    <div class="toolcard"><h3>🔗 <a href="tapproof-link-check.html">TapProof Link Check™</a> — flagship</h3><p>Paste any link and see where it <em>really</em> goes: lookalike-brand detection, shortener and IP-address warnings, the true owner spelled out — all on your device, the link is never even opened.</p></div>
+    <div class="toolcard"><h3>💬 <a href="tapproof-message-check.html">TapProof Message Check™</a></h3><p>Paste a suspicious text or email and get every pressure tactic flagged in plain words — urgency, payment demands, impersonation — with the exact safe next step.</p></div>
+    <div class="toolcard"><h3>▦ <a href="tapproof-qr-check.html">TapProof QR Check™</a></h3><p>Decode a QR code from a photo <em>without opening it</em>. See the hidden destination in plain text and run it through Link Check before you decide anything.</p></div>
+    <div class="toolcard"><h3>🧲 <a href="tapproof-family-card.html">TapProof Family Card™</a></h3><p>A printable fridge &amp; wallet card: the 30-second rule, your household's real numbers, 7726, and the report doors. Nothing to remember under pressure.</p></div>
+    <div class="toolcard"><h3>🎯 <a href="tapproof-scam-drill.html">TapProof Scam Drill™</a></h3><p>Eight real-world message scams — package fee, toll notice, bank alert, job offer, wrong number, mystery QR package, kiosk script, invoice link — with decisions, scoring, and the tell explained.</p></div>
+    <div class="toolcard"><h3>🏢 <a href="tapproof-link-policy.html">TapProof Link Policy Builder™</a></h3><p>For small businesses: a printable one-page Message &amp; Link Payment Policy — no payment from a texted or emailed link alone, verification steps, thresholds, sign-off line.</p></div>
+    <div class="toolcard"><h3>📓 <a href="tapproof-scam-log.html">TapProof Scam Log™</a></h3><p>Log suspicious messages in the exact fields ReportFraud.ftc.gov, the FBI IC3, and the 7726 flow ask for. On-device only; exports CSV and a printable report.</p></div>
+    <div class="toolcard"><h3>📞 Sister category: <a href="https://jdawgsindustries.com/voiceproofing.html">Voiceproofing™</a></h3><p>The text is the knock — the call is often the follow-up. Voiceproofing proves a <em>voice</em> is really them, with shared secrets and rotating spoken codes. Seven more free tools.</p></div>
+  </div>
+</section>
+<section class="panel">
+  <h2>Honest edges</h2>
+  <p>TapProofing reads the <em>structure</em> of a link and the <em>language</em> of a message — a brand-new scam domain with clean structure can score low, and a clumsy real message can score high. The check is a layer of proof, not a guarantee; the 30-second rule is the habit that makes it work. Everything runs in your browser: no accounts, no tracking, nothing you paste is sent anywhere. Free, because the category matters more than the toll booth.</p>
+  <p>More from J-Dawgs: the <a href="https://jdawgsindustries.com/ai-tool-store.html">AI Tool Store</a> · <a href="https://jdawgsindustries.com/human-hands.html">Human Hands</a> · <a href="https://jdawgsindustries.com/">jdawgsindustries.com</a></p>
+</section>
+</main>
+
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+</footer>
+</div>
+
+</body>
+</html>
