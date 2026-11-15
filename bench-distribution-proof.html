@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distribution Proof Sheet + Weekly Report | J-Dawgs Industries</title>
+<meta name="description" content="Free working tool: turn a placements list into a verified proof sheet — every URL fetched back, dead placements listed as NOT VERIFIED, never counted — plus the weekly performance report with totals.">
+<link rel="canonical" href="https://jdawgsindustries.com/bench-distribution-proof.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.tblwrap{overflow-x:auto}
+pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre-wrap;margin:.6rem 0}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
+.seg{display:flex;flex-wrap:wrap;gap:6px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:6px;margin:.4rem 0 .2rem}
+.seg button{flex:1;font-family:inherit;font-weight:800;font-size:15px;color:var(--ink);background:var(--panel2);border:1px solid var(--line2);border-radius:10px;min-height:48px;padding:11px 18px;cursor:pointer}
+.seg button.on{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="delivery-bench.html">The Delivery Bench</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">Distribution Proof</h1>
+  <p class="tagline">Free · Proof sheets &amp; weekly reports</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Placed means proven — or it doesn't count.</strong> Two tools in one. <strong>Proof Sheet:</strong> give it a placements list (Venue, What was placed, Live URL) and it fetches every URL back. A placement that doesn't load is listed as NOT VERIFIED and excluded from the count — never smoothed into the total. <strong>Weekly Report:</strong> give it a metrics list (Venue, Placements, Clicks, Signups, Sales, Revenue) and it writes the weekly performance report with totals. One honesty note about the web version: from a browser page, URLs on this same site return their true status code; other sites can only be confirmed <em>reachable</em> — a web page is not allowed to read another site's status code, so the sheet says which is which. (The studio's server-side run reads exact codes everywhere.)</p>
+  <div class="seg" role="group" aria-label="Mode">
+    <button type="button" id="modeProof" class="on">Proof Sheet</button>
+    <button type="button" id="modeReport">Weekly Report</button>
+  </div>
+  <label for="file">Placements / metrics CSV file</label>
+  <input type="file" id="file" accept=".csv,text/csv,text/plain">
+  <label for="paste">…or paste the CSV here</label>
+  <textarea id="paste" class="mono" spellcheck="false" placeholder="Venue,What was placed,Live URL"></textarea>
+  <div class="btnrow">
+    <button class="btn" id="run" type="button">Build it</button>
+    <button class="btn ghost" id="sample" type="button">Load the sample</button>
+  </div>
+  <div class="verdict" id="msg" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+  <p class="mini">The proof sample is the studio's real test set: three live placements and one deliberately dead link that must NOT verify. The report sample totals 17 placements, 210 clicks, 5 signups. Proof checking needs a connection (it fetches the URLs); the report runs fully on your device. Results always appear on this page first; downloads are a convenience.</p>
+  <p class="mini"><a href="delivery-bench.html">All Delivery Bench tools</a> · <a href="ai-tool-store.html">AI Tool Store</a></p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>Your lists are processed on your device; the proof check fetches the URLs you listed, the way any visitor would. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+
+<script>
+"use strict";
+function parseCSV(text){
+  if(text.charCodeAt(0)===0xFEFF) text=text.slice(1);
+  var rows=[],row=[],field="",inQ=false,i=0,c;
+  function endField(){row.push(field);field="";}
+  function endRow(){endField();rows.push(row);row=[];}
+  while(i<text.length){
+    c=text[i];
+    if(inQ){
+      if(c==='"'){ if(text[i+1]==='"'){field+='"';i+=2;continue;} inQ=false;i++;continue; }
+      field+=c;i++;continue;
+    }
+    if(c==='"'&&field===""){inQ=true;i++;continue;}
+    if(c===","){endField();i++;continue;}
+    if(c==="\r"){ if(text[i+1]==="\n") i++; endRow(); i++; continue; }
+    if(c==="\n"){ endRow(); i++; continue; }
+    field+=c;i++;
+  }
+  if(field!==""||row.length) endRow();
+  return rows;
+}
+function dictRows(rowsIn){
+  if(!rowsIn.length) return [];
+  var header=rowsIn[0].map(function(h){return String(h).trim();});
+  var out=[];
+  for(var i=1;i<rowsIn.length;i++){
+    if(!rowsIn[i].length) continue;
+    var rec={};
+    header.forEach(function(h,j){ rec[h]=(j<rowsIn[i].length? String(rowsIn[i][j]) : ""); });
+    out.push(rec);
+  }
+  return out;
+}
+function showMsg(kind,html){ var m=document.getElementById("msg"); m.className="verdict show "+kind; m.innerHTML=html; }
+function esc(s){ return String(s).replace(/</g,"&lt;"); }
+function download(name, text){
+  var blob=new Blob([text],{type:"text/markdown;charset=utf-8"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },400);
+}
+function today(){ var d=new Date(); function p(n){return (n<10?"0":"")+n;} return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate()); }
+var MODE="proof";
+async function checkURL(u){
+  var sameOrigin=false;
+  try{ sameOrigin=(new URL(u)).origin===location.origin; }catch(e){ return {kind:"bad", label:"NOT VERIFIED — not a readable URL — not counted"}; }
+  var ctrl=new AbortController();
+  var to=setTimeout(function(){ctrl.abort();},25000);
+  try{
+    if(sameOrigin){
+      var resp=await fetch(u,{signal:ctrl.signal, redirect:"follow"});
+      clearTimeout(to);
+      if(resp.status>=200&&resp.status<400) return {kind:"verified", label:"Verified live (HTTP "+resp.status+")"};
+      return {kind:"bad", label:"NOT VERIFIED (HTTP "+resp.status+") — not counted"};
+    }
+    var r2=await fetch(u,{signal:ctrl.signal, mode:"no-cors", redirect:"follow"});
+    clearTimeout(to);
+    if(r2&&(r2.type==="opaque"||r2.ok)) return {kind:"reachable", label:"Responded — reachable (status code not readable from a web page)"};
+    return {kind:"bad", label:"NOT VERIFIED — no readable response — not counted"};
+  }catch(e){
+    clearTimeout(to);
+    return {kind:"bad", label:"NOT VERIFIED — no response — not counted"};
+  }
+}
+async function buildProof(recs){
+  var lines=["# Distribution Run Proof Sheet","","**J-Dawgs Industries** · AI-operated studio, human-checked.",
+    "Run date: "+today(),
+    "Verification: each URL fetched back after posting; only verified-live placements are reported as placed. From a web page, same-site URLs return their true status code; other sites are confirmed reachable only, and the sheet says which is which.","",
+    "| # | Venue | What was placed | Live URL | Status |","|---|---|---|---|---|"];
+  var verified=0, reachable=0, bad=0, tableRows=[];
+  for(var i=0;i<recs.length;i++){
+    var r=recs[i];
+    var chk=await checkURL(r["Live URL"]||"");
+    if(chk.kind==="verified") verified++;
+    else if(chk.kind==="reachable") reachable++;
+    else bad++;
+    lines.push("| "+(i+1)+" | "+(r["Venue"]||"")+" | "+(r["What was placed"]||"")+" | "+(r["Live URL"]||"")+" | "+chk.label+" |");
+    tableRows.push([r["Venue"]||"", r["What was placed"]||"", r["Live URL"]||"", chk.label]);
+  }
+  lines.push("", "Verified live: "+verified+" of "+recs.length+" code-verified · "+reachable+" reachable (code unreadable) · "+bad+" not verified — listed, never counted as verified.");
+  return {md:lines.join("\n")+"\n", verified:verified, reachable:reachable, bad:bad, total:recs.length, tableRows:tableRows};
+}
+function buildReport(recs){
+  var cols=["Placements","Clicks","Signups","Sales","Revenue"];
+  var totals={}; cols.forEach(function(c){totals[c]=0;});
+  var lines=["# Weekly Performance Report","","**J-Dawgs Industries** · AI-operated studio, human-checked.",
+    "Week of: "+today(),"",
+    "| Venue | Placements | Clicks | Signups | Sales | Revenue |","|---|---|---|---|---|---|"];
+  recs.forEach(function(r){
+    cols.forEach(function(c){ totals[c]+=parseFloat(r[c]||0)||0; });
+    lines.push("| "+(r["Venue"]||"")+" | "+(r["Placements"]||"")+" | "+(r["Clicks"]||"")+" | "+(r["Signups"]||"")+" | "+(r["Sales"]||"")+" | "+(r["Revenue"]||"")+" |");
+  });
+  lines.push("| **Total** | **"+totals["Placements"].toFixed(0)+"** | **"+totals["Clicks"].toFixed(0)+"** | **"+totals["Signups"].toFixed(0)+"** | **"+totals["Sales"].toFixed(0)+"** | **"+totals["Revenue"].toFixed(2)+"** |");
+  return {md:lines.join("\n")+"\n", venues:recs.length, totalPlacements:totals["Placements"], revenue:totals["Revenue"]};
+}
+var SAMPLE_PROOF=null, SAMPLE_REPORT=null;
+function renderMD(md, headline, kind, tableRows){
+  showMsg(kind, "<div class='big'>"+headline+"</div>");
+  var h="";
+  if(tableRows){
+    h+="<div class='tblwrap' style='margin-top:1rem'><table><thead><tr><th>Venue</th><th>What was placed</th><th>Live URL</th><th>Status</th></tr></thead><tbody>"+
+      tableRows.map(function(r){return "<tr>"+r.map(function(v){return "<td>"+esc(v)+"</td>";}).join("")+"</tr>";}).join("")+"</tbody></table></div>";
+  }
+  h+="<pre class='out'>"+esc(md)+"</pre><div class='btnrow'><button class='btn' id='dl' type='button'>Download (.md)</button></div>";
+  var box=document.getElementById("results");
+  box.innerHTML=h;
+  document.getElementById("dl").addEventListener("click",function(){ download(MODE==="proof"? "proof-sheet.md":"weekly-report.md", md); });
+}
+function renderError(text){
+  showMsg("bad","<div class='big'>Can't build that</div><p>"+text+"</p>");
+  document.getElementById("results").innerHTML="";
+}
+async function runOnText(text){
+  try{
+    if(text.indexOf("\u0000")>=0){ renderError("That file looks like a binary file, not a CSV. Export it as .csv and try again."); return; }
+    var rows=parseCSV(text);
+    if(!rows.length||rows[0].length<2){ renderError("That doesn't parse as a CSV with columns. Check the input and try again."); return; }
+    var recs=dictRows(rows);
+    if(!recs.length){ renderError("That CSV has a header but no data rows."); return; }
+    if(MODE==="proof"){
+      if(!("Live URL" in recs[0])){ renderError("Proof mode needs a \"Live URL\" column (with Venue and What was placed). Switch to Weekly Report mode if your file holds metrics instead."); return; }
+      showMsg("warn","<div class='big'>Checking…</div><p>Fetching every placement URL back. Dead ones will be listed as NOT VERIFIED.</p>");
+      var res=await buildProof(recs);
+      renderMD(res.md, "Verified live: "+res.verified+" of "+res.total+(res.reachable? " · "+res.reachable+" reachable":"")+(res.bad? " · "+res.bad+" NOT VERIFIED":""), res.bad? "warn":"good", res.tableRows);
+    } else {
+      if(!("Placements" in recs[0])){ renderError("Report mode needs a \"Placements\" column (Venue, Placements, Clicks, Signups, Sales, Revenue). Switch to Proof Sheet mode if your file holds placements instead."); return; }
+      var rep=buildReport(recs);
+      renderMD(rep.md, "Weekly report — "+rep.venues+" venues · "+rep.totalPlacements.toFixed(0)+" placements · revenue "+rep.revenue.toFixed(2), "good", null);
+    }
+  }catch(err){ renderError("Something in that input broke the builder ("+esc(err)+"). Nothing was sent anywhere."); }
+}
+function setMode(m){
+  MODE=m;
+  document.getElementById("modeProof").className=(m==="proof")? "on":"";
+  document.getElementById("modeReport").className=(m==="report")? "on":"";
+  document.getElementById("paste").placeholder=(m==="proof")? "Venue,What was placed,Live URL" : "Venue,Placements,Clicks,Signups,Sales,Revenue";
+}
+document.getElementById("modeProof").addEventListener("click",function(){ setMode("proof"); });
+document.getElementById("modeReport").addEventListener("click",function(){ setMode("report"); });
+document.getElementById("run").addEventListener("click",function(){
+  var f=document.getElementById("file").files[0];
+  var pasted=document.getElementById("paste").value;
+  if(f){
+    if(f.size>10*1024*1024){ renderError("That file is over 10 MB. Split it into smaller files and run them one at a time."); return; }
+    var rd=new FileReader();
+    rd.onload=function(){ runOnText(String(rd.result||"")); };
+    rd.onerror=function(){ renderError("Your browser refused the read. Try again in another browser."); };
+    rd.readAsText(f);
+  } else if(pasted.trim()){ runOnText(pasted); }
+  else showMsg("warn","<div class='big'>Nothing to build from yet</div><p>Choose a CSV file or paste one above — or load the sample for this mode.</p>");
+});
+document.getElementById("sample").addEventListener("click",function(){
+  var s=(MODE==="proof")? SAMPLE_PROOF : SAMPLE_REPORT;
+  if(!s){ showMsg("warn","<div class='big'>Sample not wired in this copy</div><p>The sample is unavailable here — use a CSV of your own instead.</p>"); return; }
+  document.getElementById("paste").value=s;
+  runOnText(s);
+});
+SAMPLE_PROOF = `Venue,What was placed,Live URL
+J-Dawgs site — Human Hands signup,Worker signup page (door check),https://jdawgsindustries.com/human-hands/work.html
+J-Dawgs site — Human Hands board,Job board page (door check),https://jdawgsindustries.com/human-hands/board.html
+YouTube,Profile video Short,https://youtube.com/shorts/9Z2sFn1Zsmw
+Dead link control,Deliberately broken URL (must NOT verify),https://jdawgsindustries.com/no-such-page-delivery-test.html`;
+SAMPLE_REPORT = `Venue,Placements,Clicks,Signups,Sales,Revenue
+GitHub,8,132,4,0,0
+Moltbook,6,57,1,0,0
+Bluesky,3,21,0,0,0`;
+</script>
+</body>
+</html>
