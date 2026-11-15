@@ -76,37 +76,27 @@ Write-Host ''
 Write-Host '  J-DAWGS DESKTOP - putting your icons on the screen...' -ForegroundColor Cyan
 Write-Host ''
 
-# ---- BUSINESS (in this order, top of the screen) ----
-Add-Web 'J-Dawgs Home' 'https://jdawgsindustries.com/' 'jdawgs-home.ico'
+# ---- EVERYTHING, A TO Z BY NAME (Joshua's order, 2026-11-15) ----
+Add-App 'Acer Care' @('Acer Care*', 'Care Center*', 'AcerCare*') 'acer-care.ico'
+Add-Web 'Agent Services' 'https://jdawgsindustries.com/agent-services.html' 'agent-services.ico'
 Add-Web 'AI Tool Store' 'https://jdawgsindustries.com/ai-tool-store.html' 'ai-tool-store.ico'
+Add-Web 'App Store' 'ms-windows-store:' $null
+Add-Web 'Arcade' 'https://jdawgsindustries.com/games/' 'arcade.ico'
+Add-App 'Excel' @('Excel') 'excel.ico'
+Add-Web 'Facebook' 'https://www.facebook.com/' 'facebook.ico'
+Add-Web 'Fiverr' 'https://www.fiverr.com/' 'fiverr.ico'
+Add-Web 'Freelancer' 'https://www.freelancer.com/' 'freelancer.ico'
+Add-Web 'Gmail' 'https://mail.google.com/' 'gmail.ico'
+Add-Web 'Google Drive' 'https://drive.google.com/' 'google-drive.ico'
+Add-Web 'Guru' 'https://www.guru.com/' 'guru.ico'
 Add-Web 'Human Hands - Post a Job' 'https://jdawgsindustries.com/human-hands/board.html' 'human-hands-post.ico'
 Add-Web 'Human Hands - Sign Up' 'https://jdawgsindustries.com/human-hands/work.html' 'human-hands-signup.ico'
-Add-Web 'Arcade' 'https://jdawgsindustries.com/games/' 'arcade.ico'
-Add-Web 'Trading Post' 'https://jdawgsindustries.com/trading-post.html' 'trading-post.ico'
-Add-Web 'Agent Services' 'https://jdawgsindustries.com/agent-services.html' 'agent-services.ico'
-Add-Web 'The Hydrant' 'https://the-hydrant.vercel.app/' 'hydrant.ico'
-Add-Web 'Prompt Generator' 'https://jdawgsindustries.com/realism-generator/' 'prompt-generator.ico'
 Add-Web 'Hustle City' 'https://jdawgsindustries.com/games/hc1-demo/' 'hustle-city.ico'
 Add-Web 'Hustle City 2' 'https://jdawgsindustries.com/games/hc2-demo/' 'hustle-city-2.ico'
+Add-Web 'J-Dawgs Home' 'https://jdawgsindustries.com/' 'jdawgs-home.ico'
 Add-Web 'Master Prompt Generator' 'https://github.com/joshuajdawg0350/master-prompt-generator' 'master-prompt.ico'
-
-# ---- WORK ----
-Add-Web 'Muse' 'https://muse.ai/' 'claude.ico'
-Add-Web 'Gmail' 'https://mail.google.com/' 'gmail.ico'
-Add-Web 'Upwork' 'https://www.upwork.com/' 'upwork.ico'
-Add-Web 'Freelancer' 'https://www.freelancer.com/' 'freelancer.ico'
-Add-Web 'Guru' 'https://www.guru.com/' 'guru.ico'
-Add-Web 'Fiverr' 'https://www.fiverr.com/' 'fiverr.ico'
-Add-Web 'Stripe' 'https://dashboard.stripe.com/' 'stripe.ico'
-Add-Web 'Venmo' 'https://venmo.com/' 'venmo.ico'
-Add-Web 'YouTube' 'https://www.youtube.com' 'youtube.ico'
-Add-Web 'YouTube Studio' 'https://studio.youtube.com/' 'youtube-studio.ico'
-Add-Web 'Facebook' 'https://www.facebook.com/' 'facebook.ico'
 Add-Web 'Messenger' 'https://www.messenger.com/' 'messenger.ico'
-Add-Web 'Google Drive' 'https://drive.google.com/' 'google-drive.ico'
-
-# ---- COMPUTER ----
-Add-Web 'Settings' 'ms-settings:' $null
+Add-Web 'Muse' 'https://muse.ai/' 'claude.ico'
 try {
   $ws = New-Object -ComObject WScript.Shell
   $sc = $ws.CreateShortcut((Join-Path $Desktop 'My Files.lnk'))
@@ -116,12 +106,18 @@ try {
   $sc.Save()
   if ($mfIcon) { $script:done += 'My Files icon' } else { $script:failed += 'My Files (shortcut works, its J-Dawgs picture could not download)' }
 } catch { $script:failed += 'My Files (Windows refused it - tell Midas)' }
-Add-Web 'Security' 'windowsdefender:' $null
-Add-Web 'App Store' 'ms-windows-store:' $null
 Add-App 'Photos' @('Photos', 'Microsoft Photos') 'photos.ico'
+Add-Web 'Prompt Generator' 'https://jdawgsindustries.com/realism-generator/' 'prompt-generator.ico'
+Add-Web 'Security' 'windowsdefender:' $null
+Add-Web 'Settings' 'ms-settings:' $null
+Add-Web 'Stripe' 'https://dashboard.stripe.com/' 'stripe.ico'
+Add-Web 'The Hydrant' 'https://the-hydrant.vercel.app/' 'hydrant.ico'
+Add-Web 'Trading Post' 'https://jdawgsindustries.com/trading-post.html' 'trading-post.ico'
+Add-Web 'Upwork' 'https://www.upwork.com/' 'upwork.ico'
+Add-Web 'Venmo' 'https://venmo.com/' 'venmo.ico'
 Add-App 'Word' @('Word') 'word.ico'
-Add-App 'Excel' @('Excel') 'excel.ico'
-Add-App 'Acer Care' @('Acer Care*', 'Care Center*', 'AcerCare*') 'acer-care.ico'
+Add-Web 'YouTube' 'https://www.youtube.com' 'youtube.ico'
+Add-Web 'YouTube Studio' 'https://studio.youtube.com/' 'youtube-studio.ico'
 
 # Nudge Windows to paint the new icons right away
 try {
