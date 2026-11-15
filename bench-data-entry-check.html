@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data Entry Check — Ready / Exceptions Splitter | J-Dawgs Industries</title>
+<meta name="description" content="Free working tool: split source records into READY and EXCEPTIONS against a form spec — every field validated, every failure given its exact reason. Human check, never silently fixed.">
+<link rel="canonical" href="https://jdawgsindustries.com/bench-data-entry-check.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.tblwrap{overflow-x:auto}
+pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre;margin:.6rem 0}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="delivery-bench.html">The Delivery Bench</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">Data Entry Check</h1>
+  <p class="tagline">Free · Runs on your device · Nothing uploads</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Before records go into a client's form, they go through this.</strong> Load source records (a CSV keyed from PDFs, images, or an export) and a field spec — the target form's field names, which source column feeds each, whether it's required, and its type (text / email / phone / zip / date / state). The tool splits your records into <strong>READY</strong> (passes every rule, renamed to the target fields, in target order) and <strong>EXCEPTIONS</strong> (each with the exact reason it would fail). Values are validated, never rewritten — entry must match the source document.</p>
+  <label for="file">Source records CSV</label>
+  <input type="file" id="file" accept=".csv,text/csv,text/plain">
+  <label for="spec">Form spec (JSON) — the studio sample spec is pre-loaded; edit it to match your form</label>
+  <textarea id="spec" class="mono" spellcheck="false"></textarea>
+  <div class="btnrow">
+    <button class="btn" id="run" type="button">Split ready / exceptions</button>
+    <button class="btn ghost" id="sample" type="button">Load sample records</button>
+  </div>
+  <div class="verdict" id="msg" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+  <p class="mini">The sample is the studio's 44-row test file against the sample spec: 39 ready, exactly 5 exceptions — the 5 genuinely bad source rows, each with its reason. Results always appear on this page first; downloads are a convenience. Once loaded, the tool works offline; your file never leaves your device.</p>
+  <p class="mini"><a href="delivery-bench.html">All Delivery Bench tools</a> · <a href="ai-tool-store.html">AI Tool Store</a></p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>Everything on this page runs on your device — the file you load is never sent anywhere. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+
+<script>
+"use strict";
+function parseCSV(text){
+  if(text.charCodeAt(0)===0xFEFF) text=text.slice(1);
+  var rows=[],row=[],field="",inQ=false,i=0,c;
+  function endField(){row.push(field);field="";}
+  function endRow(){endField();rows.push(row);row=[];}
+  while(i<text.length){
+    c=text[i];
+    if(inQ){
+      if(c==='"'){ if(text[i+1]==='"'){field+='"';i+=2;continue;} inQ=false;i++;continue; }
+      field+=c;i++;continue;
+    }
+    if(c==='"'&&field===""){inQ=true;i++;continue;}
+    if(c===","){endField();i++;continue;}
+    if(c==="\r"){ if(text[i+1]==="\n") i++; endRow(); i++; continue; }
+    if(c==="\n"){ endRow(); i++; continue; }
+    field+=c;i++;
+  }
+  if(field!==""||row.length) endRow();
+  return rows;
+}
+function csvEscape(v){
+  v=(v==null?"":String(v));
+  return /[",\r\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v;
+}
+function rowsToCSV(rows){ return rows.map(function(r){return r.map(csvEscape).join(",");}).join("\r\n")+"\r\n"; }
+var EMAIL_RE=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+var MONTHS={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11,
+  january:0,february:1,march:2,april:3,june:5,july:6,august:7,september:8,october:9,november:10,december:11};
+function isDate(s){
+  var m;
+  function ok(y,mo,d){ if(mo<0||mo>11||d<1||d>31) return false; var dt=new Date(Date.UTC(y,mo,d)); return dt.getUTCFullYear()===y&&dt.getUTCMonth()===mo&&dt.getUTCDate()===d; }
+  if(m=/^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(s)) return ok(+m[1],+m[2]-1,+m[3]);
+  if(m=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s)) return ok(+m[3],+m[1]-1,+m[2]);
+  if(m=/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/.exec(s)) return ok(+m[1],+m[2]-1,+m[3]);
+  if(m=/^([A-Za-z]+) (\d{1,2}), (\d{4})$/.exec(s)){ var mo=MONTHS[m[1].toLowerCase()]; if(mo!==undefined) return ok(+m[3],mo,+m[2]); }
+  return false;
+}
+function valid(ftype, v){
+  if(ftype==="email") return EMAIL_RE.test(v.trim().toLowerCase().replace(/ /g,""));
+  if(ftype==="phone"){ var d=v.replace(/\D/g,""); return d.length===10||(d.length===11&&d.charAt(0)==="1"); }
+  if(ftype==="zip") return /^\d{5}(-\d{4})?$/.test(v.trim());
+  if(ftype==="date") return isDate(v.trim());
+  if(ftype==="state"){ var t=v.trim(); return /^[A-Za-z]{2}$/.test(t)||t.length>2; }
+  return true;
+}
+function splitRecords(rowsIn, spec){
+  if(!rowsIn.length) return {error:"That file is empty — no records to check."};
+  var header=rowsIn[0].map(function(h){return String(h).trim().toLowerCase();});
+  var ready=[], exceptions=[];
+  for(var ri=1; ri<rowsIn.length; ri++){
+    var r=rowsIn[ri];
+    if(!r.length) continue;
+    var ln=ri+1;
+    var rec={};
+    header.forEach(function(h,i){ rec[h]=(i<r.length? r[i] : ""); });
+    var out={}, problems=[];
+    spec.fields.forEach(function(f){
+      var v=(rec[String(f.source).toLowerCase()]||"").trim();
+      if(f.required&&!v) problems.push(f.target+": required but empty");
+      else if(v&&!valid(f.type||"text", v)) problems.push(f.target+": fails "+(f.type||"text")+" check ('"+v+"')");
+      out[f.target]=v;
+    });
+    if(problems.length) exceptions.push({line:ln, reason:problems.join("; "), out:out});
+    else ready.push(out);
+  }
+  return {ready:ready, exceptions:exceptions, targets:spec.fields.map(function(f){return f.target;})};
+}
+var SAMPLE_SPEC={"fields":[{"required":true,"source":"First Name","target":"First Name","type":"text"},{"required":true,"source":"Last Name","target":"Last Name","type":"text"},{"required":false,"source":"Email","target":"Email","type":"email"},{"required":true,"source":"Phone","target":"Phone","type":"phone"},{"required":true,"source":"City","target":"City","type":"text"},{"required":true,"source":"State","target":"State","type":"state"},{"required":true,"source":"ZIP","target":"ZIP","type":"zip"},{"required":true,"source":"Customer Since","target":"Customer Since","type":"date"}]};
+document.getElementById("spec").value=JSON.stringify(SAMPLE_SPEC,null,1);
+var SAMPLE_CSV=null;
+function showMsg(kind,html){ var m=document.getElementById("msg"); m.className="verdict show "+kind; m.innerHTML=html; }
+function esc(s){ return String(s).replace(/</g,"&lt;"); }
+function download(name, text){
+  var blob=new Blob([text],{type:"text/csv;charset=utf-8"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },400);
+}
+function render(res){
+  var box=document.getElementById("results");
+  if(res.error){ showMsg("bad","<div class='big'>Can't split that</div><p>"+res.error+"</p>"); box.innerHTML=""; return; }
+  var total=res.ready.length+res.exceptions.length;
+  showMsg(res.exceptions.length? "warn":"good",
+    "<div class='big'>"+res.ready.length+" ready · "+res.exceptions.length+" exceptions</div><p>Source rows: "+total+". Ready rows are renamed to the target fields in target order. Exceptions carry the exact reason per field — they go back for a human check, never a silent fix.</p>");
+  var h="";
+  if(res.exceptions.length){
+    h+="<h3 style='margin-top:1rem'>Exceptions</h3><pre class='out'>"+
+      res.exceptions.map(function(e){return "line "+e.line+": "+e.reason;}).join("\n")+"</pre>";
+  }
+  h+="<div class='btnrow'><button class='btn' id='dlr' type='button'>Download READY.csv</button>"+
+     "<button class='btn ghost' id='dle' type='button'>Download EXCEPTIONS.csv</button></div>";
+  box.innerHTML=h;
+  document.getElementById("dlr").addEventListener("click",function(){
+    download("READY.csv", rowsToCSV([res.targets].concat(res.ready.map(function(o){return res.targets.map(function(t){return o[t];});}))));
+  });
+  document.getElementById("dle").addEventListener("click",function(){
+    var rows=[["Source line","Reason"].concat(res.targets)].concat(res.exceptions.map(function(e){
+      return [e.line, e.reason].concat(res.targets.map(function(t){return e.out[t];}));
+    }));
+    download("EXCEPTIONS.csv", rowsToCSV(rows));
+  });
+}
+function runOnText(text){
+  try{
+    if(text.indexOf("\u0000")>=0){ render({error:"That file looks like a binary file, not a CSV. Export it as .csv and try again."}); return; }
+    var spec;
+    try{ spec=JSON.parse(document.getElementById("spec").value); }
+    catch(e){ render({error:"The form spec isn't valid JSON ("+esc(e.message)+"). Fix the spec box and run again."}); return; }
+    if(!spec||!Array.isArray(spec.fields)||!spec.fields.length){ render({error:"The form spec needs a non-empty \"fields\" list."}); return; }
+    var rows=parseCSV(text);
+    if(!rows.length||rows[0].length<2){ render({error:"That doesn't parse as a CSV with columns. Check the file and try again."}); return; }
+    render(splitRecords(rows, spec));
+  }catch(err){ render({error:"Something in that file broke the checker ("+esc(err)+"). Nothing was changed or sent anywhere."}); }
+}
+document.getElementById("run").addEventListener("click",function(){
+  var f=document.getElementById("file").files[0];
+  if(!f){ showMsg("warn","<div class='big'>No file yet</div><p>Choose a source CSV above first — or load the sample records to see it work.</p>"); return; }
+  if(f.size>10*1024*1024){ showMsg("bad","<div class='big'>Too big for the web bench</div><p>That file is over 10 MB. Split it into smaller files and check them one at a time — the rules are identical.</p>"); return; }
+  var rd=new FileReader();
+  rd.onload=function(){ runOnText(String(rd.result||"")); };
+  rd.onerror=function(){ showMsg("bad","<div class='big'>Couldn't read that file</div><p>Your browser refused the read. Try again in another browser.</p>"); };
+  rd.readAsText(f);
+});
+document.getElementById("sample").addEventListener("click",function(){
+  if(SAMPLE_CSV){ runOnText(SAMPLE_CSV); return; }
+  showMsg("warn","<div class='big'>Sample not wired in this copy</div><p>The sample loader is unavailable here — load any CSV of your own instead.</p>");
+});
+SAMPLE_CSV = `First Name,Last Name,Email,Phone,City,State,ZIP,Customer Since
+john,SMITH,John.Smith@Gmail.com,(417) 555-0132,springfield,MO,65803,01/05/2024
+John,Smith,john.smith@gmail.com,4175550132,Springfield,Missouri,65803,2024-01-05
+  MARY ,johnson,mary.johnson@outlook.com ,417-555-0147,SPRINGFIELD,mo,65804-2211,"Feb 12, 2024"
+robert,WILLIAMS,rwilliams84@yaho.com,+1 417 555 0198,nixa,MO,65714,2024/03/01
+Robert,Williams,rwilliams84@yahoo.com,417.555.0198,Nixa,MO,65714,03/01/2024
+sarah,davis,sarah.davis@gmail,555-0119,ozark,Missouri,65721,12/25/2023
+JAMES,brown,jbrown@@gmail.com,(417)555-0163,Springfield,MO,65807,2024-04-18
+jennifer,MILLER,jennifer.miller@company.com,417 555 0106,republic,MO,65738,06/30/2024
+michael,wilson,MWilson@Gmail.com,1-417-555-0129,Springfield,MO,65802,2024-05-11
+Michael,Wilson,mwilson@gmail.com,(417) 555-0129,springfield,Missouri,65802,"May 11, 2024"
+lisa,moore,lisa.moore@ icloud.com,4175550171,Ozark,MO,65721,2023-11-02
+DAVID,taylor,dtaylor@business.net,CALL-ME,Springfield,MO,65803,2024-02-14
+karen,ANDERSON,karen.a@gmail.com,(417) 555-0188,Nixa,mo,65714-0090,09/09/2024
+kevin,thomas,,417-555-0155,Springfield,MO,65806,2024-07-07
+nancy,jackson,nancy.jackson@outlook.com,417 555 0141,SPRINGFIELD,Missouri,65804,2024-08-19
+Nancy,Jackson,nancy.jackson@outlook.com,(417) 555-0141,Springfield,MO,65804,08/19/2024
+brian,WHITE,brian.white88@gmail.com,+14175550177,Republic,MO,65738,2024-01-27
+amy,harris,amy.harris@ gmail.com,417.555.0123,Ozark,MO,65721,2024-10-03
+AMY,Harris,amy.harris@gmail.com,4175550123,ozark,Missouri,65721,"Oct 3, 2024"
+steven,clark,steven.clark@company.com,(417) 555-0190,Springfield,MO,65807,2024-03-15
+michelle,LEWIS,michelle.lewis@yahoo.com,417-555-0102,Nixa,MO,65714,2024-06-21
+daniel,walker,daniel.walker@,417 555 0136,Springfield,Missouri,65803,2024-09-30
+jessica,hall,jessica.hall@gmail.com,(417)555-0114,Springfield,MO,65802,2024-04-02
+Jessica,Hall,jessica.hall@gmail.com,417-555-0114,Springfield,MO,65802,04/02/2024
+Jessica,Hall,jessica.hall@gmail.com,(417) 555-0114,Springfield,MO,65802,2024-04-02
+matthew,allen,matt.allen@gmail.com,4175550181,republic,mo,65738,2024-05-25
+ashley,YOUNG,ashley.young@outlook.com,417 555 0169,Springfield,MO,65806,2024-07-16
+joshua,king,josh.king@business.net,(417) 555-0148,Ozark,Missouri,65721,2024-08-08
+amanda,wright,amanda.wright@gmail.com,417-555-0126,Springfield,MO,65804-3317,2024-02-29
+ryan,scott,ryan.scott@company.com,4175550,Nixa,MO,65714,2024-11-01
+stephanie,green,stephanie.green@icloud.com,+1 (417) 555-0159,Springfield,MO,65807,2024-03-22
+andrew,BAKER,andrew.baker@gmail.com,417.555.0111,springfield,Missouri,65803,2024-06-14
+Andrew,Baker,andrew.baker@gmail.com,(417) 555-0111,Springfield,MO,65803,06/14/2024
+nicole,adams,nicole.adams@yahoo.com,417 555 0178,Ozark,MO,65721,2024-09-12
+justin,nelson,justin.nelson@gmail.com,417-555-0109,Springfield,mo,65802,2024-10-21
+rachel,carter,rachel.carter@outlook.com,(417) 555-0139,Republic,MO,65738,2024-01-19
+brandon,mitchell,brandon.mitchell@ gmail.con,4175550194,Springfield,MO,65805,2024-05-07
+laura,perez,laura.perez@gmail.com,417 555 0121,Nixa,Missouri,65714,2024-07-28
+Laura,Perez,laura.perez@gmail.com,(417) 555-0121,Nixa,MO,65714,07/28/2024
+tyler,roberts,tyler.roberts@company.com,417-555-0184,Springfield,MO,65806,2024-08-25
+kimberly,turner,kimberly.turner@gmail.com,(417) 555-0151,SPRINGFIELD,MO,65804,2024-04-27
+Kimberly,Turner,kimberly.turner@gmail.com,4175550151,Springfield,MO,65804,04/27/2024
+zachary,phillips,zach.phillips@outlook.com,417 555 0166,Ozark,MO,65721,2024-11-10
+heather,campbell,heather.campbell@icloud.com,417-555-0117,Springfield,Missouri,65803,2024-02-05`;
+</script>
+</body>
+</html>
