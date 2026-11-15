@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inventory Sheet Builder — Control-Total Gate | J-Dawgs Industries</title>
+<meta name="description" content="Free working tool: turn a handwritten-inventory transcription CSV into a clean Excel workbook, gated against your own control totals. Duplicates merged and flagged, bad quantities flagged — never guessed.">
+<link rel="canonical" href="https://jdawgsindustries.com/bench-inventory-build.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.tblwrap{overflow-x:auto}
+pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre;margin:.6rem 0}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
+.numgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="delivery-bench.html">The Delivery Bench</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">Inventory Sheet Builder</h1>
+  <p class="tagline">Free · Runs on your device · Nothing uploads</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Handwritten count sheets become a workbook — but only if the totals prove out.</strong> Load a transcription CSV (Item Code, Item Name, Size, Colour, Location, Condition, Quantity — one row per size-colour, as keyed from the paper) and enter the control totals from the paper count itself: how many rows the sheets hold and the total units. The builder validates every quantity, merges duplicate size-colour rows <em>with a flag, never silently</em>, and gates the workbook against your control totals. If the gate fails, the workbook says so on its Checks sheet — a failed gate is a failed delivery, reported, not smoothed over.</p>
+  <label for="file">Transcription CSV</label>
+  <input type="file" id="file" accept=".csv,text/csv,text/plain">
+  <div class="numgrid">
+    <div>
+      <label for="expRows">Control: expected rows</label>
+      <input type="number" id="expRows" min="0" step="1" inputmode="numeric" placeholder="e.g. 10">
+    </div>
+    <div>
+      <label for="expQty">Control: expected total quantity</label>
+      <input type="number" id="expQty" min="0" step="1" inputmode="numeric" placeholder="e.g. 276">
+    </div>
+  </div>
+  <div class="btnrow">
+    <button class="btn" id="run" type="button">Build the workbook</button>
+    <button class="btn ghost" id="sample" type="button">Load the sample count</button>
+  </div>
+  <div class="verdict" id="msg" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+  <p class="mini">The sample is the studio's 12-row test count with a planted duplicate and a planted "abc" quantity: against the true control (10 rows / 276 units) the gate passes; change the quantity control to 999 and watch it fail — exactly as a delivery gate must. Results always appear on this page first; the .xlsx download is a convenience. Once loaded, the tool works offline; your file never leaves your device.</p>
+  <p class="mini"><a href="delivery-bench.html">All Delivery Bench tools</a> · <a href="ai-tool-store.html">AI Tool Store</a></p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>Everything on this page runs on your device — the file you load is never sent anywhere. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+
+<script>
+"use strict";
+function parseCSV(text){
+  if(text.charCodeAt(0)===0xFEFF) text=text.slice(1);
+  var rows=[],row=[],field="",inQ=false,i=0,c;
+  function endField(){row.push(field);field="";}
+  function endRow(){endField();rows.push(row);row=[];}
+  while(i<text.length){
+    c=text[i];
+    if(inQ){
+      if(c==='"'){ if(text[i+1]==='"'){field+='"';i+=2;continue;} inQ=false;i++;continue; }
+      field+=c;i++;continue;
+    }
+    if(c==='"'&&field===""){inQ=true;i++;continue;}
+    if(c===","){endField();i++;continue;}
+    if(c==="\r"){ if(text[i+1]==="\n") i++; endRow(); i++; continue; }
+    if(c==="\n"){ endRow(); i++; continue; }
+    field+=c;i++;
+  }
+  if(field!==""||row.length) endRow();
+  return rows;
+}
+var COLS=["Item Code","Item Name","Size","Colour","Location","Condition","Quantity"];
+function parseQty(s){
+  if(!/^[+-]?\d+(_\d+)*$/.test(s)) return null;
+  var n=parseInt(s.replace(/_/g,""),10);
+  if(isNaN(n)||n<0) return null;
+  return n;
+}
+function buildInventory(rowsIn, ctrl){
+  var header=rowsIn[0].map(function(h){return String(h).trim();});
+  var idx={};
+  COLS.forEach(function(c){ idx[c]=header.indexOf(c); });
+  var flags=[], merged={}, order=[];
+  for(var ri=1; ri<rowsIn.length; ri++){
+    var r=rowsIn[ri];
+    if(!r.length) continue;
+    var ln=ri+1;
+    var rec={};
+    COLS.forEach(function(c){ rec[c]=(idx[c]>=0&&idx[c]<r.length? String(r[idx[c]]) : "").trim(); });
+    var q=parseQty(rec["Quantity"]);
+    if(q===null){
+      flags.push("Line "+ln+": quantity '"+rec["Quantity"]+"' is not a whole number — flagged, row excluded, never guessed.");
+      continue;
+    }
+    rec["Quantity"]=q;
+    var key=rec["Item Code"]+"\u0001"+rec["Size"]+"\u0001"+rec["Colour"];
+    if(key in merged){
+      merged[key]["Quantity"]+=q;
+      flags.push("Line "+ln+": duplicate size-colour row for ('"+rec["Item Code"]+"', '"+rec["Size"]+"', '"+rec["Colour"]+"') — merged, quantities summed ("+q+" added).");
+    } else { merged[key]=rec; order.push(key); }
+  }
+  var outRows=order.map(function(k){return merged[k];});
+  var totalQ=outRows.reduce(function(a,r){return a+r["Quantity"];},0);
+  var checks=[
+    ["Row count (delivered)", outRows.length, ctrl.expected_rows, outRows.length===ctrl.expected_rows],
+    ["Quantity total", totalQ, ctrl.expected_quantity, totalQ===ctrl.expected_quantity]
+  ];
+  return {outRows:outRows, checks:checks, flags:flags, pass:checks.every(function(c){return c[3];})};
+}
+/* --- minimal XLSX writer (zip, stored entries, inline strings) --- */
+var CRC_TABLE=(function(){
+  var t=[];
+  for(var n=0;n<256;n++){ var c=n; for(var k=0;k<8;k++) c=(c&1)? (0xEDB88320^(c>>>1)) : (c>>>1); t[n]=c>>>0; }
+  return t;
+})();
+function crc32(bytes){
+  var c=0xFFFFFFFF;
+  for(var i=0;i<bytes.length;i++) c=CRC_TABLE[(c^bytes[i])&0xFF]^(c>>>8);
+  return (c^0xFFFFFFFF)>>>0;
+}
+function zipStore(files){
+  var enc=new TextEncoder();
+  var chunks=[], central=[], offset=0;
+  function u16(n){return [n&0xFF,(n>>>8)&0xFF];}
+  function u32(n){return [n&0xFF,(n>>>8)&0xFF,(n>>>16)&0xFF,(n>>>24)&0xFF];}
+  files.forEach(function(f){
+    var name=enc.encode(f.name), data=(typeof f.data==="string")? enc.encode(f.data) : f.data;
+    var crc=crc32(data);
+    var local=[].concat(u32(0x04034b50),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0));
+    chunks.push(new Uint8Array(local), name, data);
+    var cen=[].concat(u32(0x02014b50),u16(20),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0),u16(0),u16(0),u16(0),u32(0),u32(offset));
+    central.push(new Uint8Array(cen), name);
+    offset+=local.length+name.length+data.length;
+  });
+  var cenSize=central.reduce(function(a,c){return a+c.length;},0);
+  var end=new Uint8Array([].concat(u32(0x06054b50),u16(0),u16(0),u16(files.length),u16(files.length),u32(cenSize),u32(offset),u16(0)));
+  return new Blob(chunks.concat(central,[end]),{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+}
+function xmlEsc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function colName(i){ var s=""; i++; while(i>0){ var m=(i-1)%26; s=String.fromCharCode(65+m)+s; i=Math.floor((i-1)/26); } return s; }
+function sheetXML(rows){
+  var body=rows.map(function(r,ri){
+    var cells=r.map(function(v,ci){
+      var ref=colName(ci)+(ri+1);
+      if(typeof v==="number") return '<c r="'+ref+'"><v>'+v+'</v></c>';
+      return '<c r="'+ref+'" t="inlineStr"><is><t>'+xmlEsc(v)+'</t></is></c>';
+    }).join("");
+    return '<row r="'+(ri+1)+'">'+cells+'</row>';
+  }).join("");
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>'+body+'</sheetData></worksheet>';
+}
+function makeXLSX(invRows, checkRows){
+  var inv=[COLS].concat(invRows.map(function(r){return COLS.map(function(c){return r[c];});}));
+  var files=[
+    {name:"[Content_Types].xml", data:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'},
+    {name:"_rels/.rels", data:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'},
+    {name:"xl/workbook.xml", data:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Inventory" sheetId="1" r:id="rId1"/><sheet name="Checks" sheetId="2" r:id="rId2"/></sheets></workbook>'},
+    {name:"xl/_rels/workbook.xml.rels", data:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/></Relationships>'},
+    {name:"xl/worksheets/sheet1.xml", data:sheetXML(inv)},
+    {name:"xl/worksheets/sheet2.xml", data:sheetXML(checkRows)}
+  ];
+  return zipStore(files);
+}
+/* --- page wiring --- */
+var SAMPLE_CSV=null, SAMPLE_CTRL={expected_rows:10, expected_quantity:276};
+function showMsg(kind,html){ var m=document.getElementById("msg"); m.className="verdict show "+kind; m.innerHTML=html; }
+function esc(s){ return String(s).replace(/</g,"&lt;"); }
+var lastBuild=null;
+function render(res){
+  var box=document.getElementById("results");
+  if(res.error){ showMsg("bad","<div class='big'>Can't build that</div><p>"+res.error+"</p>"); box.innerHTML=""; return; }
+  lastBuild=res;
+  showMsg(res.pass? "good":"bad",
+    "<div class='big'>Delivery gate: "+(res.pass? "PASS":"FAIL")+"</div><p>"+
+    res.checks.map(function(c){return c[0]+": delivered "+c[1]+" vs control "+c[2]+" — "+(c[3]?"PASS":"FAIL");}).join(" · ")+
+    (res.flags.length? "<br>"+res.flags.length+" flag(s) on the Checks sheet — read them before this ships.":"")+"</p>");
+  var checkRows=[["Check","Delivered","Control (client count)","Result"]]
+    .concat(res.checks.map(function(c){return [c[0],c[1],c[2],c[3]?"PASS":"FAIL"];}))
+    .concat(res.flags.map(function(f){return ["FLAG: "+f];}))
+    .concat([["J-Dawgs Industries · AI-operated studio, human-checked."]]);
+  res.checkRows=checkRows;
+  var h="<h3 style='margin-top:1rem'>Inventory (delivered rows)</h3><div class='tblwrap'><table><thead><tr>"+
+    COLS.map(function(c){return "<th>"+c+"</th>";}).join("")+"</tr></thead><tbody>"+
+    res.outRows.map(function(r){return "<tr>"+COLS.map(function(c){return "<td>"+esc(r[c])+"</td>";}).join("")+"</tr>";}).join("")+
+    "</tbody></table></div>";
+  if(res.flags.length) h+="<h3 style='margin-top:1rem'>Flags</h3><pre class='out'>"+res.flags.map(esc).join("\n")+"</pre>";
+  h+="<div class='btnrow'><button class='btn' id='dl' type='button'>Download inventory.xlsx</button></div>";
+  box.innerHTML=h;
+  document.getElementById("dl").addEventListener("click",function(){
+    var blob=makeXLSX(lastBuild.outRows, lastBuild.checkRows);
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob); a.download="inventory.xlsx";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },400);
+  });
+}
+function runOnText(text, ctrl){
+  try{
+    if(text.indexOf("\u0000")>=0){ render({error:"That file looks like a binary file, not a CSV. Export the transcription as .csv and try again."}); return; }
+    var rows=parseCSV(text);
+    if(!rows.length||rows[0].length<2){ render({error:"That doesn't parse as a CSV with columns. Check the file and try again."}); return; }
+    var missing=COLS.filter(function(c){ return rows[0].map(function(h){return String(h).trim();}).indexOf(c)<0; });
+    if(missing.length){ render({error:"The transcription is missing column(s): "+missing.join(", ")+". The builder needs all seven: "+COLS.join(", ")+"."}); return; }
+    render(buildInventory(rows, ctrl));
+  }catch(err){ render({error:"Something in that file broke the builder ("+esc(err)+"). Nothing was changed or sent anywhere."}); }
+}
+function readCtrl(){
+  var er=document.getElementById("expRows").value, eq=document.getElementById("expQty").value;
+  if(er===""||eq==="") return null;
+  return {expected_rows:parseInt(er,10), expected_quantity:parseInt(eq,10)};
+}
+document.getElementById("run").addEventListener("click",function(){
+  var ctrl=readCtrl();
+  if(!ctrl||isNaN(ctrl.expected_rows)||isNaN(ctrl.expected_quantity)){ showMsg("warn","<div class='big'>Control totals needed</div><p>Enter both control numbers from the paper count — the gate has nothing to prove against without them.</p>"); return; }
+  var f=document.getElementById("file").files[0];
+  if(!f){ showMsg("warn","<div class='big'>No file yet</div><p>Choose a transcription CSV above first — or load the sample count to see it work.</p>"); return; }
+  if(f.size>10*1024*1024){ showMsg("bad","<div class='big'>Too big for the web bench</div><p>That file is over 10 MB. Split it and build in parts — the gate works the same on each part.</p>"); return; }
+  var rd=new FileReader();
+  rd.onload=function(){ runOnText(String(rd.result||""), ctrl); };
+  rd.onerror=function(){ showMsg("bad","<div class='big'>Couldn't read that file</div><p>Your browser refused the read. Try again in another browser.</p>"); };
+  rd.readAsText(f);
+});
+document.getElementById("sample").addEventListener("click",function(){
+  if(!SAMPLE_CSV){ showMsg("warn","<div class='big'>Sample not wired in this copy</div><p>The sample loader is unavailable here — load any transcription CSV of your own instead.</p>"); return; }
+  document.getElementById("expRows").value=SAMPLE_CTRL.expected_rows;
+  document.getElementById("expQty").value=SAMPLE_CTRL.expected_quantity;
+  runOnText(SAMPLE_CSV, SAMPLE_CTRL);
+});
+SAMPLE_CSV = `Item Code,Item Name,Size,Colour,Location,Condition,Quantity
+TEE-100,Logo Tee,S,Black,Bin A1,New,24
+TEE-100,Logo Tee,M,Black,Bin A1,New,36
+TEE-100,Logo Tee,L,Black,Bin A2,New,18
+TEE-100,Logo Tee,M,White,Bin A3,New,12
+HOD-200,Pullover Hoodie,M,Navy,Bin B1,New,15
+HOD-200,Pullover Hoodie,L,Navy,Bin B1,New,15
+HOD-200,Pullover Hoodie,L,Navy,Bin B1,New,5
+CAP-300,Baseball Cap,One Size,Red,Bin C1,New,40
+CAP-300,Baseball Cap,One Size,Red,Bin C1,New,abc
+SOK-400,Crew Socks,9-11,White,Bin C2,New,60
+SOK-400,Crew Socks,12-14,White,Bin C2,New,48
+TNK-500,Tank Top,S,White,Bin D1,Damaged,3`;
+</script>
+</body>
+</html>
