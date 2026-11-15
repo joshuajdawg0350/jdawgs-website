@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSV Cleanup &amp; Dedupe — The Delivery Bench | J-Dawgs Industries</title>
+<meta name="description" content="Free working tool: clean and dedupe a contact CSV on your own device — trim, title-case, phone and email checks, state/ZIP fixes, ISO dates, exact and near-duplicate merges. Flag, never guess.">
+<link rel="canonical" href="https://jdawgsindustries.com/bench-csv-cleanup.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.tblwrap{overflow-x:auto}
+pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre;margin:.6rem 0}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:.6rem 0}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.stat b{display:block;font-family:var(--fd);font-size:1.5rem;color:var(--cyan)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="delivery-bench.html">The Delivery Bench</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">CSV Cleanup &amp; Dedupe</h1>
+  <p class="tagline">Free · Runs on your device · Nothing uploads</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>The studio's own cleanup bench, on the shelf.</strong> This is the exact tool J-Dawgs Industries runs on client contact lists — the same 8 rules, in the same order. Load a CSV with First Name, Last Name, Email, Phone, City, State, ZIP and Customer Since columns and it comes back cleaned, deduped, and counted. Anything it can't verify gets <em>flagged and blanked — never guessed</em>.</p>
+  <ol>
+    <li>Trim stray whitespace in every field</li>
+    <li>Title-case first names, last names, and cities</li>
+    <li>Emails: lowercase, strip stray spaces, validate — failures flagged, never fixed by guessing</li>
+    <li>Phones: exactly 10 digits (US country code dropped) formatted as (XXX) XXX-XXXX — anything else flagged</li>
+    <li>States to two-letter codes; ZIP+4 trimmed to ZIP5</li>
+    <li>Dates rewritten to ISO format (YYYY-MM-DD)</li>
+    <li>Exact duplicate rows removed</li>
+    <li>Near-duplicates (same email, or same name + phone) merged, keeping the most complete record</li>
+  </ol>
+  <label for="file">Your CSV file</label>
+  <input type="file" id="file" accept=".csv,text/csv,text/plain">
+  <div class="btnrow">
+    <button class="btn" id="run" type="button">Clean it</button>
+    <button class="btn ghost" id="sample" type="button">Load the sample file</button>
+  </div>
+  <div class="verdict" id="msg" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+  <p class="mini">The sample is our published 44-row test file — the cleaned output matches the studio's reference result row for row. Results always appear on this page first; if a download is blocked by your browser, copy the report from the screen. Once this page has loaded, the tool itself works offline — your file never leaves your device either way.</p>
+  <p class="mini"><a href="delivery-bench.html">All Delivery Bench tools</a> · <a href="ai-tool-store.html">AI Tool Store</a></p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>Everything on this page runs on your device — the file you load is never sent anywhere. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+
+<script>
+"use strict";
+/* CSV parser: quotes, CRLF/LF, BOM. Blank lines yield [] (mirrors the studio tool). */
+function parseCSV(text){
+  if(text.charCodeAt(0)===0xFEFF) text=text.slice(1);
+  var rows=[],row=[],field="",inQ=false,i=0,c;
+  function endField(){row.push(field);field="";}
+  function endRow(){endField();rows.push(row);row=[];}
+  while(i<text.length){
+    c=text[i];
+    if(inQ){
+      if(c==='"'){ if(text[i+1]==='"'){field+='"';i+=2;continue;} inQ=false;i++;continue; }
+      field+=c;i++;continue;
+    }
+    if(c==='"'&&field===""){inQ=true;i++;continue;}
+    if(c===","){endField();i++;continue;}
+    if(c==="\r"){ if(text[i+1]==="\n") i++; endRow(); i++; continue; }
+    if(c==="\n"){ endRow(); i++; continue; }
+    field+=c;i++;
+  }
+  if(field!==""||row.length) endRow();
+  return rows;
+}
+function csvEscape(v){
+  v=(v==null?"":String(v));
+  return /[",\r\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v;
+}
+function toCSV(rows){ return rows.map(function(r){return r.map(csvEscape).join(",");}).join("\r\n")+"\r\n"; }
+
+var STATE_NAMES={"missouri":"MO","kansas":"KS","arkansas":"AR","oklahoma":"OK","illinois":"IL","texas":"TX","iowa":"IA","nebraska":"NE","tennessee":"TN","kentucky":"KY","indiana":"IN","ohio":"OH"};
+var EMAIL_RE=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+function titlecase(s){return s.split(" ").map(function(w){return w? w.charAt(0).toUpperCase()+w.slice(1).toLowerCase() : w;}).join(" ");}
+var MONTHS={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11,
+  january:0,february:1,march:2,april:3,june:5,july:6,august:7,september:8,october:9,november:10,december:11};
+function isoDate(y,m,d){
+  if(m<0||m>11||d<1||d>31) return null;
+  var dt=new Date(Date.UTC(y,m,d));
+  if(dt.getUTCFullYear()!==y||dt.getUTCMonth()!==m||dt.getUTCDate()!==d) return null;
+  function p(n){return (n<10?"0":"")+n;}
+  return y+"-"+p(m+1)+"-"+p(d);
+}
+function parseDate(s){
+  var m;
+  if(m=/^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(s)) return isoDate(+m[1],+m[2]-1,+m[3]);
+  if(m=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s)) return isoDate(+m[3],+m[1]-1,+m[2]);
+  if(m=/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/.exec(s)) return isoDate(+m[1],+m[2]-1,+m[3]);
+  if(m=/^([A-Za-z]+) (\d{1,2}), (\d{4})$/.exec(s)){ var mo=MONTHS[m[1].toLowerCase()]; if(mo!==undefined) return isoDate(+m[3],mo,+m[2]); }
+  return null;
+}
+
+function cleanCSV(rowsIn){
+  if(!rowsIn.length) return {error:"That file is empty — no rows to clean."};
+  var header=rowsIn[0].slice();
+  var data=rowsIn.slice(1).filter(function(r){return r.length;});
+  if(!data.length) return {error:"That file has a header but no data rows."};
+  var col={};
+  header.forEach(function(name,i){ col[String(name).trim().toLowerCase()]=i; });
+  function idx(){ for(var k=0;k<arguments.length;k++){ if(arguments[k] in col) return col[arguments[k]]; } return -1; }
+  var iFn=idx("first name"), iLn=idx("last name"), iEm=idx("email"), iPh=idx("phone"),
+      iCi=idx("city"), iSt=idx("state"), iZip=idx("zip"), iDt=idx("customer since","date","since");
+  var c={titlecased:0,phones_reformatted:0,phones_flagged:0,emails_normalized:0,emails_flagged:0,states_normalized:0,zips_trimmed:0,dates_rewritten:0};
+  var norm=data.map(function(r0){
+    var r=r0.map(function(v){return (v||"").trim();});
+    while(r.length<header.length) r.push("");
+    var rowTc=false;
+    [iFn,iLn,iCi].forEach(function(i){
+      if(i>=0&&r[i]){ var t=titlecase(r[i]); if(t!==r[i]) rowTc=true; r[i]=t; }
+    });
+    if(rowTc) c.titlecased++;
+    if(iEm>=0){
+      var raw=r[iEm], fixed=raw.toLowerCase().replace(/ /g,"");
+      if(fixed&&fixed!==raw) c.emails_normalized++;
+      if(!fixed||!EMAIL_RE.test(fixed)){ c.emails_flagged++; r[iEm]=""; } else r[iEm]=fixed;
+    }
+    if(iPh>=0){
+      var rawp=r[iPh], digits=rawp.replace(/\D/g,"");
+      if(digits.length===11&&digits.charAt(0)==="1") digits=digits.slice(1);
+      if(digits.length===10){
+        var fmt="("+digits.slice(0,3)+") "+digits.slice(3,6)+"-"+digits.slice(6);
+        if(fmt!==rawp) c.phones_reformatted++;
+        r[iPh]=fmt;
+      } else { c.phones_flagged++; r[iPh]=""; }
+    }
+    if(iSt>=0&&r[iSt]){
+      var s=r[iSt], nw=STATE_NAMES[s.toLowerCase()] || (s.length===2? s.toUpperCase() : s);
+      if(nw!==s) c.states_normalized++;
+      r[iSt]=nw;
+    }
+    if(iZip>=0&&r[iZip]&&/^\d{5}-\d{4}$/.test(r[iZip])){ c.zips_trimmed++; r[iZip]=r[iZip].slice(0,5); }
+    if(iDt>=0&&r[iDt]){
+      var iso=parseDate(r[iDt]);
+      if(iso&&iso!==r[iDt]) c.dates_rewritten++;
+      if(iso) r[iDt]=iso;
+    }
+    return r;
+  });
+  var seen={}, deduped=[], exactRemoved=0;
+  norm.forEach(function(r){
+    var k=r.join("\u0001");
+    if(k in seen){ exactRemoved++; } else { seen[k]=true; deduped.push(r); }
+  });
+  function keyEmail(r){ return (iEm>=0&&r[iEm])? "e:"+r[iEm] : null; }
+  function keyNP(r){
+    if(iFn>=0&&iPh>=0&&r[iPh]) return "n:"+r[iFn].toLowerCase()+"|"+r[iLn].toLowerCase()+"|"+r[iPh];
+    return null;
+  }
+  var merged=[], mergedCount=0, pos={};
+  deduped.forEach(function(r){
+    var keys=[keyEmail(r),keyNP(r)].filter(Boolean);
+    var hit=-1;
+    for(var k=0;k<keys.length;k++){ if(keys[k] in pos){ hit=pos[keys[k]]; break; } }
+    if(hit<0){
+      keys.forEach(function(k){ pos[k]=merged.length; });
+      merged.push(r);
+    } else {
+      mergedCount++;
+      var keep=merged[hit];
+      var newFull=r.filter(function(v){return v;}).length, keepFull=keep.filter(function(v){return v;}).length;
+      if(newFull>keepFull) merged[hit]=r;
+      keys.forEach(function(k){ pos[k]=hit; });
+    }
+  });
+  var lines=[
+    "Rows received: "+data.length,
+    "Rows delivered: "+merged.length,
+    "Exact duplicate rows removed: "+exactRemoved,
+    "Near-duplicate records merged: "+mergedCount,
+    "Name/city fields title-cased: "+c.titlecased,
+    "Phones reformatted to (XXX) XXX-XXXX: "+c.phones_reformatted,
+    "Phones invalid/missing — flagged, never guessed: "+c.phones_flagged,
+    "Emails normalized (case/stray spaces): "+c.emails_normalized,
+    "Emails invalid/missing — flagged, never guessed: "+c.emails_flagged,
+    "States normalized to two-letter code: "+c.states_normalized,
+    "ZIP codes trimmed to five digits: "+c.zips_trimmed,
+    "Dates rewritten to ISO format: "+c.dates_rewritten
+  ];
+  return {header:header, rows:merged, lines:lines, counts:c, received:data.length, exactRemoved:exactRemoved, mergedCount:mergedCount};
+}
+
+var SAMPLE_CSV=null;
+function showMsg(kind,html){
+  var m=document.getElementById("msg");
+  m.className="verdict show "+kind; m.innerHTML=html;
+}
+function download(name, text){
+  var blob=new Blob([text],{type:"text/csv;charset=utf-8"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },400);
+}
+var lastResult=null;
+function render(res){
+  var box=document.getElementById("results");
+  if(res.error){ showMsg("bad","<div class='big'>Can't clean that</div><p>"+res.error+"</p>"); box.innerHTML=""; return; }
+  lastResult=res;
+  showMsg("good","<div class='big'>Cleaned — "+res.rows.length+" of "+res.received+" rows delivered</div><p>Exact duplicates removed: "+res.exactRemoved+" · near-duplicates merged: "+res.mergedCount+". The full count sheet and the cleaned file are below.</p>");
+  var h="<h3 style='margin-top:1rem'>Run report</h3><pre class='out'>"+res.lines.join("\n")+"</pre>";
+  h+="<div class='btnrow'><button class='btn' id='dl' type='button'>Download cleaned CSV</button></div>";
+  h+="<h3 style='margin-top:1rem'>Cleaned rows (first 40)</h3><div class='tblwrap'><table><thead><tr>"+
+     res.header.map(function(x){return "<th>"+String(x).replace(/</g,"&lt;")+"</th>";}).join("")+"</tr></thead><tbody>"+
+     res.rows.slice(0,40).map(function(r){return "<tr>"+r.map(function(v){return "<td>"+String(v).replace(/</g,"&lt;")+"</td>";}).join("")+"</tr>";}).join("")+
+     "</tbody></table></div>";
+  box.innerHTML=h;
+  document.getElementById("dl").addEventListener("click",function(){ download("cleaned.csv", toCSV([res.header].concat(res.rows))); });
+}
+function runOnText(text, sourceName){
+  try{
+    if(text.indexOf("\u0000")>=0){ render({error:"That file looks like a binary file, not a CSV. Export it as .csv and try again."}); return; }
+    var rows=parseCSV(text);
+    if(!rows.length||rows[0].length<2){ render({error:"That doesn't parse as a CSV with columns. Check the file and try again."}); return; }
+    render(cleanCSV(rows));
+  }catch(err){ render({error:"Something in that file broke the cleaner ("+String(err).replace(/</g,"&lt;")+"). Nothing was changed or sent anywhere."}); }
+}
+document.getElementById("run").addEventListener("click",function(){
+  var f=document.getElementById("file").files[0];
+  if(!f){ showMsg("warn","<div class='big'>No file yet</div><p>Choose a CSV file above first — or load the sample to see it work.</p>"); return; }
+  if(f.size>10*1024*1024){ showMsg("bad","<div class='big'>Too big for the web bench</div><p>That file is over 10 MB. Split it into smaller files and clean them one at a time — the rules are identical.</p>"); return; }
+  var rd=new FileReader();
+  rd.onload=function(){ runOnText(String(rd.result||""), f.name); };
+  rd.onerror=function(){ showMsg("bad","<div class='big'>Couldn't read that file</div><p>Your browser refused the read. Try again, or paste the file through the sample route on another browser.</p>"); };
+  rd.readAsText(f);
+});
+document.getElementById("sample").addEventListener("click",function(){
+  if(SAMPLE_CSV){ runOnText(SAMPLE_CSV,"sample"); return; }
+  showMsg("warn","<div class='big'>Sample not wired in this copy</div><p>The sample loader is unavailable here — load any CSV of your own instead.</p>");
+});
+SAMPLE_CSV = `First Name,Last Name,Email,Phone,City,State,ZIP,Customer Since
+john,SMITH,John.Smith@Gmail.com,(417) 555-0132,springfield,MO,65803,01/05/2024
+John,Smith,john.smith@gmail.com,4175550132,Springfield,Missouri,65803,2024-01-05
+  MARY ,johnson,mary.johnson@outlook.com ,417-555-0147,SPRINGFIELD,mo,65804-2211,"Feb 12, 2024"
+robert,WILLIAMS,rwilliams84@yaho.com,+1 417 555 0198,nixa,MO,65714,2024/03/01
+Robert,Williams,rwilliams84@yahoo.com,417.555.0198,Nixa,MO,65714,03/01/2024
+sarah,davis,sarah.davis@gmail,555-0119,ozark,Missouri,65721,12/25/2023
+JAMES,brown,jbrown@@gmail.com,(417)555-0163,Springfield,MO,65807,2024-04-18
+jennifer,MILLER,jennifer.miller@company.com,417 555 0106,republic,MO,65738,06/30/2024
+michael,wilson,MWilson@Gmail.com,1-417-555-0129,Springfield,MO,65802,2024-05-11
+Michael,Wilson,mwilson@gmail.com,(417) 555-0129,springfield,Missouri,65802,"May 11, 2024"
+lisa,moore,lisa.moore@ icloud.com,4175550171,Ozark,MO,65721,2023-11-02
+DAVID,taylor,dtaylor@business.net,CALL-ME,Springfield,MO,65803,2024-02-14
+karen,ANDERSON,karen.a@gmail.com,(417) 555-0188,Nixa,mo,65714-0090,09/09/2024
+kevin,thomas,,417-555-0155,Springfield,MO,65806,2024-07-07
+nancy,jackson,nancy.jackson@outlook.com,417 555 0141,SPRINGFIELD,Missouri,65804,2024-08-19
+Nancy,Jackson,nancy.jackson@outlook.com,(417) 555-0141,Springfield,MO,65804,08/19/2024
+brian,WHITE,brian.white88@gmail.com,+14175550177,Republic,MO,65738,2024-01-27
+amy,harris,amy.harris@ gmail.com,417.555.0123,Ozark,MO,65721,2024-10-03
+AMY,Harris,amy.harris@gmail.com,4175550123,ozark,Missouri,65721,"Oct 3, 2024"
+steven,clark,steven.clark@company.com,(417) 555-0190,Springfield,MO,65807,2024-03-15
+michelle,LEWIS,michelle.lewis@yahoo.com,417-555-0102,Nixa,MO,65714,2024-06-21
+daniel,walker,daniel.walker@,417 555 0136,Springfield,Missouri,65803,2024-09-30
+jessica,hall,jessica.hall@gmail.com,(417)555-0114,Springfield,MO,65802,2024-04-02
+Jessica,Hall,jessica.hall@gmail.com,417-555-0114,Springfield,MO,65802,04/02/2024
+Jessica,Hall,jessica.hall@gmail.com,(417) 555-0114,Springfield,MO,65802,2024-04-02
+matthew,allen,matt.allen@gmail.com,4175550181,republic,mo,65738,2024-05-25
+ashley,YOUNG,ashley.young@outlook.com,417 555 0169,Springfield,MO,65806,2024-07-16
+joshua,king,josh.king@business.net,(417) 555-0148,Ozark,Missouri,65721,2024-08-08
+amanda,wright,amanda.wright@gmail.com,417-555-0126,Springfield,MO,65804-3317,2024-02-29
+ryan,scott,ryan.scott@company.com,4175550,Nixa,MO,65714,2024-11-01
+stephanie,green,stephanie.green@icloud.com,+1 (417) 555-0159,Springfield,MO,65807,2024-03-22
+andrew,BAKER,andrew.baker@gmail.com,417.555.0111,springfield,Missouri,65803,2024-06-14
+Andrew,Baker,andrew.baker@gmail.com,(417) 555-0111,Springfield,MO,65803,06/14/2024
+nicole,adams,nicole.adams@yahoo.com,417 555 0178,Ozark,MO,65721,2024-09-12
+justin,nelson,justin.nelson@gmail.com,417-555-0109,Springfield,mo,65802,2024-10-21
+rachel,carter,rachel.carter@outlook.com,(417) 555-0139,Republic,MO,65738,2024-01-19
+brandon,mitchell,brandon.mitchell@ gmail.con,4175550194,Springfield,MO,65805,2024-05-07
+laura,perez,laura.perez@gmail.com,417 555 0121,Nixa,Missouri,65714,2024-07-28
+Laura,Perez,laura.perez@gmail.com,(417) 555-0121,Nixa,MO,65714,07/28/2024
+tyler,roberts,tyler.roberts@company.com,417-555-0184,Springfield,MO,65806,2024-08-25
+kimberly,turner,kimberly.turner@gmail.com,(417) 555-0151,SPRINGFIELD,MO,65804,2024-04-27
+Kimberly,Turner,kimberly.turner@gmail.com,4175550151,Springfield,MO,65804,04/27/2024
+zachary,phillips,zach.phillips@outlook.com,417 555 0166,Ozark,MO,65721,2024-11-10
+heather,campbell,heather.campbell@icloud.com,417-555-0117,Springfield,Missouri,65803,2024-02-05`;
+</script>
+</body>
+</html>
