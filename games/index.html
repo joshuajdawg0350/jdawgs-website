@@ -138,6 +138,33 @@
     .install{flex-direction:row;padding:1.2rem 1.1rem;gap:1rem}
     .install img{width:64px;height:64px;border-radius:14px}
   }
+  /* ---------- desktop fit (2026-11-15) ----------
+     Joshua, on his laptop: "The arcade is too big on a computer screen —
+     make it fit the computer screen better." The storefront was built
+     phone-first: at laptop widths the game cards ran as full-width
+     billboards and the hero type hit its phone-era caps. At 1024px and
+     up the page now lays out like a desktop store: two game cards per
+     row with capped covers, a tighter hero, three app columns.
+     Phone and tablet rendering is untouched. */
+  @media (min-width:1024px){
+    .arcade-hero{padding:4.6rem 0 2.2rem}
+    .chrome-text{font-size:clamp(2.6rem,4.5vw,3.9rem)}
+    .promise-line{font-size:1.25rem;margin-top:.9rem}
+    .arcade-band{padding:2.6rem 0}
+    .arcade-band h2{font-size:2.05rem}
+    #games .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+    #games .wrap>*{min-width:0}
+    #games .sec-head{grid-column:1/-1}
+    #games .game{grid-template-columns:1fr;margin-top:0}
+    #games .game-cover{height:200px;min-height:0}
+    #games .game-cover.hc3-cover{height:200px;aspect-ratio:auto;max-height:none}
+    #games .game-top h3{font-size:1.3rem}
+    #games .g-price{font-size:1.4rem}
+    #games .game-info{padding:1.1rem 1.25rem 1.25rem}
+    .apps{grid-template-columns:repeat(3,1fr)}
+    .app img{width:56px;height:56px}
+    .install h2{font-size:1.6rem}
+  }
 </style>
 <style>
 /* ============================================================
