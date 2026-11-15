@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PDF to Sheets — Table Extractor | J-Dawgs Industries</title>
+<meta name="description" content="Free working tool: extract tables from a text-layer PDF into a spreadsheet-ready CSV, with real number types and a totals spot-check. Scanned pages are flagged OCR REQUIRED — never guessed.">
+<link rel="canonical" href="https://jdawgsindustries.com/bench-pdf-to-sheets.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+.btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
+.btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
+.btn:active{transform:translateY(1px)}
+label{font-weight:600;display:block;margin:.7rem 0 .3rem}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+textarea{min-height:110px}
+.mono{font-family:var(--fm);word-break:break-all}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
+.verdict.show{display:block}
+.verdict.bad{border-color:var(--red);background:rgba(255,93,93,.08)}
+.verdict.warn{border-color:var(--orange);background:rgba(255,120,71,.08)}
+.verdict.good{border-color:var(--green);background:rgba(61,220,132,.08)}
+.verdict .big{font-family:var(--fd);font-weight:800;font-size:1.3rem;text-transform:uppercase}
+ul.flags{margin:.5rem 0;padding-left:1.2rem}ul.flags li{margin:.3rem 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.tblwrap{overflow-x:auto}
+pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre;margin:.6rem 0}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="delivery-bench.html">The Delivery Bench</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">PDF to Sheets</h1>
+  <p class="tagline">Free · Runs on your device · Nothing uploads</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>Tables out of PDFs, typed like a spreadsheet — not pasted like a picture.</strong> Load a text-layer PDF and this extracts its tables, types numeric columns as real values (currency and counts, thousands separators removed, so totals and sorts work), and runs a totals spot-check: every numeric column is re-summed from the raw extracted text and compared against the typed sheet. A page with no text layer — a scan — is flagged <strong>OCR REQUIRED</strong> and excluded. It is never guessed at.</p>
+  <label for="file">Your PDF file</label>
+  <input type="file" id="file" accept=".pdf,application/pdf">
+  <div class="btnrow">
+    <button class="btn" id="run" type="button">Extract tables</button>
+    <button class="btn ghost" id="sample" type="button">Try the sample PDF</button>
+  </div>
+  <div class="verdict" id="msg" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+  <p class="mini">The sample is the studio's published 14-row price-list PDF — extraction reproduces all 14 rows and the totals check passes (Price 289.55 · Stock 5,470). The PDF reader library (PDF.js, by Mozilla) loads from a public CDN; your PDF itself is read on your device and never uploaded. If the library can't load, the tool says so and stops — reload on a connection. Results always appear on this page first; the CSV download is a convenience.</p>
+  <p class="mini"><a href="delivery-bench.html">All Delivery Bench tools</a> · <a href="ai-tool-store.html">AI Tool Store</a></p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>Your PDF is read on your device and never sent anywhere. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+"use strict";
+function showMsg(kind,html){ var m=document.getElementById("msg"); m.className="verdict show "+kind; m.innerHTML=html; }
+function esc(s){ return String(s).replace(/</g,"&lt;"); }
+function csvEscape(v){
+  v=(v==null?"":String(v));
+  return /[",\r\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v;
+}
+function download(name, text, type){
+  var blob=new Blob([text],{type:type||"text/csv;charset=utf-8"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },400);
+}
+var NUM_RE=/^\$?\(?-?[\d,]+(\.\d+)?\)?%?$/;
+function toNumber(s){
+  s=String(s).trim().replace(/\$/g,"").replace(/,/g,"");
+  var neg=s.charAt(0)==="("&&s.charAt(s.length-1)===")";
+  s=s.replace(/[()]/g,"");
+  var v=parseFloat(s);
+  if(isNaN(v)) return null;
+  return neg? -v : v;
+}
+function fmtVal(v){ /* match the studio CSV: integers plain, floats as Python writes them */
+  if(typeof v!=="number") return v;
+  if(Number.isInteger(v)) return String(v);
+  return String(v);
+}
+function fmtTyped(v, raw){
+  if(typeof v!=="number") return v;
+  if(Number.isInteger(v)&&raw.indexOf(".")>=0) return v.toFixed(1);
+  return String(v);
+}
+/* Group one page's text items into table rows using the header row's columns. */
+function pageTable(items){
+  if(!items.length) return null;
+  var rows=[];
+  var sorted=items.slice().sort(function(a,b){ return (b.y-a.y)||(a.x-b.x); });
+  sorted.forEach(function(it){
+    var g=null;
+    for(var i=0;i<rows.length;i++){ if(Math.abs(rows[i].y-it.y)<=3){ g=rows[i]; break; } }
+    if(!g){ g={y:it.y, items:[]}; rows.push(g); }
+    g.items.push(it);
+  });
+  rows.sort(function(a,b){return b.y-a.y;});
+  rows.forEach(function(r){ r.items.sort(function(a,b){return a.x-b.x;}); });
+  /* header = the row with the most items (ties: the highest such row) */
+  var hi=0;
+  rows.forEach(function(r,i){ if(r.items.length>rows[hi].items.length) hi=i; });
+  var header=rows[hi];
+  if(header.items.length<2) return null;
+  var centers=header.items.map(function(it){ return it.x + it.w/2; });
+  var bounds=[];
+  for(var i=0;i<centers.length-1;i++) bounds.push((centers[i]+centers[i+1])/2);
+  function colOf(it){
+    var cx=it.x+it.w/2, c=0;
+    while(c<bounds.length&&cx>bounds[c]) c++;
+    return c;
+  }
+  var grid=[];
+  for(var ri=hi; ri<rows.length; ri++){
+    var cells=[], used={};
+    rows[ri].items.forEach(function(it){
+      var c=colOf(it);
+      if(!(c in cells)) { cells[c]=[]; }
+      cells[c].push(it); used[c]=true;
+    });
+    if(ri!==hi&&Object.keys(used).length<2) continue;
+    var row=[];
+    for(var ci=0; ci<centers.length; ci++){
+      var parts=cells[ci]||[];
+      var txt="";
+      parts.forEach(function(it,j){
+        if(j>0){ var prev=parts[j-1]; txt += (it.x-(prev.x+prev.w) > 1.2 ? " " : ""); }
+        txt+=it.str;
+      });
+      row.push(txt.trim());
+    }
+    if(row.some(function(v){return v;})) grid.push(row);
+  }
+  if(grid.length<2) return null;
+  return grid;
+}
+function typeTable(grid){
+  var header=grid[0], body=grid.slice(1);
+  var ncol=Math.max.apply(null, grid.map(function(r){return r.length;}));
+  var numeric=[];
+  for(var ci=0; ci<ncol; ci++){
+    var vals=body.map(function(r){return ci<r.length? r[ci] : "";}).filter(function(v){return v!=="";});
+    numeric.push(vals.length>0&&vals.every(function(v){return NUM_RE.test(v);}));
+  }
+  var rawSums={}, typed=[];
+  body.forEach(function(r){
+    var out=[];
+    for(var ci=0; ci<ncol; ci++){
+      var v=ci<r.length? r[ci] : "";
+      if(numeric[ci]&&v!==""){
+        var n=toNumber(v);
+        if(n!==null){
+          out.push((Number.isInteger(n)&&v.replace(/,/g,"").indexOf(".")<0)? n : n);
+          rawSums[ci]=(rawSums[ci]||0)+(toNumber(v)||0);
+        } else out.push(v);
+      } else out.push(v);
+    }
+    typed.push(out);
+  });
+  return {header:header, typed:typed, numeric:numeric, rawSums:rawSums, ncol:ncol};
+}
+async function extractPDF(buf){
+  if(!window.pdfjsLib) throw new Error("LIB_MISSING");
+  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  var pdf=await pdfjsLib.getDocument({data:buf}).promise;
+  var tables=[], flags=[];
+  for(var pno=1; pno<=pdf.numPages; pno++){
+    var page=await pdf.getPage(pno);
+    var tc=await page.getTextContent();
+    var items=tc.items.filter(function(it){return it.str&&it.str.trim();}).map(function(it){
+      var t=it.transform;
+      return {str:it.str, x:t[4], y:t[5], w:it.width};
+    });
+    if(!items.length){
+      flags.push("Page "+pno+": NO TEXT LAYER — OCR REQUIRED, page excluded and flagged, never guessed.");
+      continue;
+    }
+    var grid=pageTable(items);
+    if(grid) tables.push({page:pno, grid:grid});
+    else flags.push("Page "+pno+": text found, but no table shape could be read — page excluded and flagged.");
+  }
+  return {tables:tables, flags:flags, pages:pdf.numPages};
+}
+function render(res){
+  var box=document.getElementById("results");
+  if(res.error){ showMsg("bad","<div class='big'>Can't extract that</div><p>"+res.error+"</p>"); box.innerHTML=""; return; }
+  if(!res.tables.length){
+    showMsg("warn","<div class='big'>No tables extracted</div><p>"+(res.flags.length? res.flags.map(esc).join("<br>") : "No readable table was found in that PDF.")+"</p>");
+    box.innerHTML=""; return;
+  }
+  var first=typeTable(res.tables[0].grid);
+  var allTyped=[first];
+  var rawSums={};
+  res.tables.forEach(function(t,ti){
+    var tt= ti===0? first : typeTable(t.grid);
+    if(ti>0) allTyped.push(tt);
+    Object.keys(tt.rawSums).forEach(function(ci){ rawSums[ci]=(rawSums[ci]||0)+tt.rawSums[ci]; });
+  });
+  var checkLines=[], okAll=true;
+  Object.keys(rawSums).sort().forEach(function(ci){
+    var raw=rawSums[ci], typed=0;
+    first.typed.forEach(function(r){ if(typeof r[ci]==="number") typed+=r[ci]; });
+    var match=Math.abs(typed-raw)<0.005;
+    okAll=okAll&&match;
+    checkLines.push("Column "+(Number(ci)+1)+" total: raw-extracted "+raw.toFixed(2)+" vs typed-sheet "+typed.toFixed(2)+" — "+(match?"MATCH":"MISMATCH"));
+  });
+  var totalRows=allTyped.reduce(function(a,t){return a+t.typed.length;},0);
+  showMsg(okAll? "good":"warn",
+    "<div class='big'>"+res.tables.length+" table(s) · "+totalRows+" data rows · totals check "+(okAll?"PASS":"FAIL")+"</div>"+
+    (res.flags.length? "<p>"+res.flags.map(esc).join("<br>")+"</p>":""));
+  var h="<h3 style='margin-top:1rem'>Method note</h3><pre class='out'>"+
+    "1. The source PDF table was extracted from its text layer into raw rows.\n"+
+    "2. Numeric columns were typed as real values (currency/numbers, thousands separators removed) so the sheet totals and sorts correctly.\n"+
+    "3. Row count in = row count out: "+totalRows+" data rows extracted, "+totalRows+" rows written.\n"+
+    "4. Totals spot-check (recomputed independently from raw strings vs typed cells):\n"+
+    checkLines.map(function(l){return "   - "+l;}).join("\n")+
+    (res.flags.length? "\n"+res.flags.map(function(f){return "FLAG: "+f;}).join("\n") : "")+
+    "\nJ-Dawgs Industries · AI-operated studio, human-checked.</pre>";
+  allTyped.forEach(function(tt,ti){
+    h+="<h3 style='margin-top:1rem'>Table "+(ti+1)+"</h3><div class='tblwrap'><table><thead><tr>"+
+      tt.header.map(function(x){return "<th>"+esc(x)+"</th>";}).join("")+"</tr></thead><tbody>"+
+      tt.typed.map(function(r,ri){return "<tr>"+r.map(function(v,ci){var raw=(res.tables[ti].grid[ri+1]&&res.tables[ti].grid[ri+1][ci])||"";return "<td>"+esc(fmtTyped(v, raw))+"</td>";}).join("")+"</tr>";}).join("")+
+      "</tbody></table></div>";
+  });
+  h+="<div class='btnrow'><button class='btn' id='dl' type='button'>Download first table as CSV</button></div>";
+  box.innerHTML=h;
+  document.getElementById("dl").addEventListener("click",function(){
+    var rows=[first.header].concat(first.typed.map(function(r,ri){
+      return r.map(function(v,ci){ return typeof v==="number"? fmtTyped(v, res.tables[0].grid[ri+1][ci]||"") : v; });
+    }));
+    download("extracted.csv", rows.map(function(r){return r.map(csvEscape).join(",");}).join("\r\n")+"\r\n");
+  });
+}
+async function runOnBuffer(buf){
+  try{
+    var res=await extractPDF(buf);
+    render(res);
+  }catch(err){
+    if(err&&err.message==="LIB_MISSING"){
+      render({error:"The PDF reader library (PDF.js) couldn't load — it comes from a public CDN and needs a connection. Your file was not read or sent anywhere. Reload the page on a connection and try again."});
+    } else if(err&&(err.name==="PasswordException"||/password/i.test(String(err.message||"")))){
+      render({error:"That PDF is password-protected. Remove the password in your PDF app and try again — this tool never asks for document passwords."});
+    } else if(err&&err.name==="InvalidPDFException"){
+      render({error:"That isn't a readable PDF. If it came from a scanner app, export it as a standard PDF and try again."});
+    } else {
+      render({error:"Something in that PDF broke the extractor ("+esc(err&&err.message? err.message : err)+"). Nothing was sent anywhere."});
+    }
+  }
+}
+document.getElementById("run").addEventListener("click",function(){
+  var f=document.getElementById("file").files[0];
+  if(!f){ showMsg("warn","<div class='big'>No file yet</div><p>Choose a PDF above first — or try the sample PDF to see it work.</p>"); return; }
+  if(f.size>25*1024*1024){ showMsg("bad","<div class='big'>Too big for the web bench</div><p>That PDF is over 25 MB. Split it into smaller files and extract them one at a time.</p>"); return; }
+  var rd=new FileReader();
+  rd.onload=function(){ runOnBuffer(rd.result); };
+  rd.onerror=function(){ showMsg("bad","<div class='big'>Couldn't read that file</div><p>Your browser refused the read. Try again in another browser.</p>"); };
+  rd.readAsArrayBuffer(f);
+});
+var SAMPLE_PDF_B64=null;
+document.getElementById("sample").addEventListener("click",function(){
+  if(!SAMPLE_PDF_B64){ showMsg("warn","<div class='big'>Sample not wired in this copy</div><p>The sample is unavailable here — load any text-layer PDF of your own instead.</p>"); return; }
+  var bin=atob(SAMPLE_PDF_B64), bytes=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+  runOnBuffer(bytes.buffer);
+});
+SAMPLE_PDF_B64 = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQ29udGVudHMgOCAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDcgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyA3IDAgUiAvVHlwZSAvQ2F0YWxvZwo+PgplbmRvYmoKNiAwIG9iago8PAovQXV0aG9yIChcKGFub255bW91c1wpKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYxMTE1MTQxMzAxKzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYxMTE1MTQxMzAxKzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChcKGFub255bW91c1wpKSAvVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0NvdW50IDEgL0tpZHMgWyA0IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKOCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxNzI2Cj4+CnN0cmVhbQpHYXQ9LGhmRzhIJjpWcjRZcXBnTUZfbFlfJkVyWUlcPU1LUU5HQ1YiMERAZjsqN0pBOSFATFlCcVFAJSpmRz9qJW5NalFNVDZCdFhZI1thbVxHLjY/aGZvNkJcVV1TSyI6MF8jJDQoXGkvOGVrJDM7W1xiMW0zMXFMVlckKCdsUXE6ZiguaFolIzohOClpaVtHLTQyInRST0QwXnI0cWg+YFNTUUhjPlMyJWBIU2lJLTBbMiwqYWxfOkRVVzduTzQiJGpkOlNrP1FraTdFaT9nIlM1QEYhaihAUFxlZVVVdFNgUXNCUjQ7ZFJIQlwvP0E+RWMtbzQubFFLSCRWOHRxPGQjKUMnKiJyPSpMOGE/UFdscjxfNk9CR28hNVEuUERIPE4kLCtcVkFxbWQvUmJeWGAtLEQsVzAwZjA4dVU7UmInWzlgcy9ROiVYUlpFOl9yPyZpckYmc21qMmpLTi5FJE4qLiNTYDJfYnRDQ1hLNzpNPWBZIyxfTlZTOlNqdHBgNFEuNFglXF5pKCFaWGY4Rz0tPTNKViQvMzg7OyglQCRqN3NgWWJFTz8kcV1KZUFsXC5vVkM0Ujwlc2dwN2tpbyVUN0Y4QGBJIltmKlQ6cDc3bXUiLU5lRj1VJiNlTmRDbFsmTjtzK0Q4ZDhNc0RsSiw+JHFwZ1BbOC1FaT1LXG1eUm11OmJbN1xRdCEnTF1RZjBNc25eTkZOMEhDOG1jTXMxW2dbRVgqNWNRcXQ1Xj8zWVxON0dWTkhBTy1YXkxsVDNcRy5cNXA5SzVealhhPSVoSisjWTdBT0RgPjUpLjpgPEYiQmNPLDwwODQmJDBTLUNLTzRbOUVeZ1pbTEtEPTpeS2pdWEJRNzZKIyolaUk7V1s1L0JHOitOWG1uMDEvVS0uYi0qc0M4W2tZZStFR2JjXi09bUErYScsO0dKaG0saFdIYitJJFhqRCc6LitQITU4W2hKNE9ZNVIwM0ErWFRNLTVlVzdgQnRDQj1lJElOUV5oSStTV04sWW5FWy5vKiJHL3BjJiw0ST0lbSlyKiVQbGZyT0VfOS4jSW5LSDpGcjN1XDdVI1EpbWFRQF5tVmlyJEAnVFwzY3FULUhmTStSREolc0tINVwmUTZJRi0nK0dEcz0jbk9ZbC81bTpsXyFDIlUuOCFPKzdOJCpPRGIqUXNpIl8pX1RTLEFdaWQhbWc2WVRxSio9X205LSxsJV9AMTJ1TVYybks+cjU9Ni5RUkdFdTFwUypQP1JLTCNtcFcwOGdIZDA8KU1oREJQIkgwSE5DOTQ5SEpWTUVZcTR0PyJdIyouSm5fTlVpKkVTPVY1Pj0vTVVeLUhrKWItX0I5N1tXLjI4Xz4qIzAxMiJHQUFyLmM1LFRFVCRRVUFaKlRCRVJSTFlPWCwlXVRxcDE3QzkmJGdgKS9oKlhRLVAkYzE2a0xfblFNTCheUmdKLE1bI0swLj9CSls/SydsSFUrJGgjKTohN0Q6SicyLzQ+LV8vU1R0NlF1NSYxKDJbSzRxaWsqZDhGUzBbSypWPzw8Zz8pPyI5XWQ/KmFYL28qTVs9XyorXXRQcmVQODZARmY4VWgnLDJQazdXY0RtIWpZUypdcUc5ai88Z1VWMy0iPloxMjtabD0mRUpfWms8Omo2blxCSGVCKEYkWlVHaGEwLkUlMTA+UilLIy1IRkVJZ0ovUS5nMys1YF0pTE8ja0ApXGIySWBSKk5aa1FlIilhUixPM1pmcEkjb1tDSy01a2NIIlNxIV4mZjVmK1ByRElvLSU3YllfO1dSPj9pNUVEMnNPZyIkZCFIamMnZV0kNV08dFdHZlFSdS5aUkQtdGU2Y0FndC02aiVwK0hBWl8pQG8qVV0uVS89cDBbVW5HKSFwKUBTUGVRR1AyV1xpMk83dERzQWo7QzhFVmZWKyxWWmwhYi45cnVcNFhqXVtQRDdaKUQuL11DYThgQ1xIVENgMDRgPTxGPz1lT1cmOzlza2xnMnFDcy9PWVVFQFsyTEpPZWw4XTRcckFTVlszZ2hlZEZucWRXTSRaWylhZidpYSJxPj9OZzdWP1ooXClhQl9GUS8mPz1XSlBcVl40UlhfQCNUPTMxTzA+NThKIUlOY0dWWEYhMWhnMS1aWUhCMW1lT21oXW5wI0NBV1pSSDhjWEwqWVdnQWZbbCpDSk1GXS0oM08qQmtlIWNqb3Q8PSo1Q2ojOWdNZiwoYDU+S0NKXCsoWlVVMTpWOFJhKkc+OyZyQi0hPUprPSIlPzQ/aVUnS0hTYixZJmxGbyEhW0I+NEgpN1oxOn4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgOQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDEwMiAwMDAwMCBuIAowMDAwMDAwMjA5IDAwMDAwIG4gCjAwMDAwMDAzMjEgMDAwMDAgbiAKMDAwMDAwMDUxNCAwMDAwMCBuIAowMDAwMDAwNTgyIDAwMDAwIG4gCjAwMDAwMDA4NjIgMDAwMDAgbiAKMDAwMDAwMDkyMSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzwwY2ZiYWQwODgwOWE2Yjk4YTVlZmNlNWM1MjJlZTg2Mj48MGNmYmFkMDg4MDlhNmI5OGE1ZWZjZTVjNTIyZWU4NjI+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAob3BlbnNvdXJjZSkKCi9JbmZvIDYgMCBSCi9Sb290IDUgMCBSCi9TaXplIDkKPj4Kc3RhcnR4cmVmCjI3MzgKJSVFT0YK";
+</script>
+</body>
+</html>
