@@ -7,12 +7,39 @@
 <meta name="description" content="Machine-readable index for the J-Dawgs AI Tool Store: where the full catalog lives, how to reach it via the MCP server, and every J-Dawgs door for AI agents.">
 <link rel="canonical" href="https://jdawgsindustries.com/tools.html">
 <style>
-body{background:#05080e;color:#c9d4e4;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:0 auto;max-width:70rem;padding:1.25rem;line-height:1.65}
-h1,h2{color:#eef2f8} a{color:#39c2ff} code{color:#eef2f8}
+:root{--bg:#0a0e14;--bg2:#05080e;--cyan:#39c2ff;--cyan2:#7dd7ff;--ink:#eef2f8;--mut:#c9d4e4;--line:#1c2a3d;--line2:#2a3c55;--fd:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg2);color:var(--mut);font-family:var(--fd);line-height:1.65;display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.inner{max-width:70rem;margin:0 auto;padding:1.25rem}
+h1.chrome{font-size:clamp(1.7rem,6vw,2.6rem);line-height:1.08;margin:.4rem 0 .8rem;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{color:var(--ink);margin-top:1.8rem}
+a{color:var(--cyan);overflow-wrap:anywhere}
+code{color:var(--ink)}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0a0e14;border:1px solid var(--line);border-radius:10px;padding:.8rem}
+li,p{overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding-top:1rem;font-size:.9rem}
 </style>
 </head>
 <body>
-<h1>J-Dawgs AI Tool Store — Index for AI Agents</h1>
+<header class="hud">
+  <a class="brand" href="index.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="ai-tool-store.html">AI Tool Store</a>
+</header>
+<div class="wrap"><main class="inner">
+<h1 class="chrome">J-Dawgs AI Tool Store — Index for AI Agents</h1>
 <p><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
 <p>This page is the index door that <a href="https://jdawgsindustries.com/llms.txt">llms.txt</a> points to. It was added on 2026-11-13 after the previous links to this page and to catalog.json were found returning 404.</p>
 <h2>The store and its full catalog</h2>
@@ -21,6 +48,18 @@ h1,h2{color:#eef2f8} a{color:#39c2ff} code{color:#eef2f8}
 <li>Catalog summary as JSON: <a href="https://jdawgsindustries.com/catalog.json">https://jdawgsindustries.com/catalog.json</a></li>
 <li>Full per-tool catalog: via the jdawgs-mcp MCP server on the Official MCP Registry — server name <code>io.github.joshuajdawg0350/jdawgs-mcp</code> (PyPI: jdawgs-mcp). It lets any MCP client search and browse the store catalog, fetch bundle details, and learn how to post a real-world job to Human Hands.</li>
 <li>Count on record: <strong>411 verified tools in the Agent Exchange, count verified November 6, 2026</strong> (as stated on the J-Dawgs Industries homepage). Treat any older dated snapshot count (for example the November 4, 2026 snapshot in llms.txt) as a floor, not a ceiling.</li>
+</ul>
+<h2>Free working tools on this site — The Delivery Bench (added 2026-11-15)</h2>
+<p>Seven tools built by J-Dawgs Industries to deliver its freelance data work, listed free in the AI Tool Store. Each runs in the browser at its own page, carries the studio's published sample, and follows the house rule: flag, never guess.</p>
+<ul>
+<li>Hub: <a href="https://jdawgsindustries.com/delivery-bench.html">https://jdawgsindustries.com/delivery-bench.html</a></li>
+<li>CSV Cleanup &amp; Dedupe: <a href="https://jdawgsindustries.com/bench-csv-cleanup.html">https://jdawgsindustries.com/bench-csv-cleanup.html</a></li>
+<li>Data Entry Check (READY / EXCEPTIONS splitter): <a href="https://jdawgsindustries.com/bench-data-entry-check.html">https://jdawgsindustries.com/bench-data-entry-check.html</a></li>
+<li>Inventory Sheet Builder (control-total gate, .xlsx out): <a href="https://jdawgsindustries.com/bench-inventory-build.html">https://jdawgsindustries.com/bench-inventory-build.html</a></li>
+<li>PDF to Sheets (text-layer table extractor, totals spot-check, OCR pages flagged): <a href="https://jdawgsindustries.com/bench-pdf-to-sheets.html">https://jdawgsindustries.com/bench-pdf-to-sheets.html</a></li>
+<li>Lead List Checker (dedupe + honest email status, caps at “Plausible”): <a href="https://jdawgsindustries.com/bench-lead-check.html">https://jdawgsindustries.com/bench-lead-check.html</a></li>
+<li>Distribution Proof (proof sheet + weekly report): <a href="https://jdawgsindustries.com/bench-distribution-proof.html">https://jdawgsindustries.com/bench-distribution-proof.html</a></li>
+<li>SEO Metadata Audit (fix-sheet generator): <a href="https://jdawgsindustries.com/bench-seo-audit.html">https://jdawgsindustries.com/bench-seo-audit.html</a></li>
 </ul>
 <h2>Every J-Dawgs door for agents</h2>
 <ul>
@@ -33,5 +72,7 @@ h1,h2{color:#eef2f8} a{color:#39c2ff} code{color:#eef2f8}
 <li>All doors in one table: <a href="https://jdawgsindustries.com/doors.md">https://jdawgsindustries.com/doors.md</a></li>
 </ul>
 <p>© 2026 Joshua Dawson / J-Dawgs Industries™, Springfield, Missouri.</p>
+<footer><p>© 2026 J-Dawgs Industries, Springfield, MO. All rights reserved. J-Dawgs Industries™ and The Delivery Bench™ are trademarks of J-Dawgs Industries.</p></footer>
+</main></div>
 </body>
 </html>
