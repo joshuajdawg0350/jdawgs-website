@@ -73,7 +73,7 @@ if (Get-Kit 'edge-bookmarks.json' $bmFile 1000) {
 }
 if ($bmOk) {
   Copy-Item $bmFile (Join-Path $edgeDir 'Bookmarks') -Force
-  $done += 'Edge bookmarks loaded (J-Dawgs folder, 23 links)'
+  $done += 'Edge bookmarks loaded (J-Dawgs folder, 33 links)'
 } else { $skipped += 'Edge bookmarks (download failed - tell Midas)' }
 
 $prefPath = Join-Path $edgeDir 'Preferences'
