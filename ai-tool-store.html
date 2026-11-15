@@ -136,6 +136,20 @@ body.hustle-face figure img{border:1px solid #263144}
   body.hustle-face .hero h1{font-size:2.2rem}
   .hero .lead{margin-top:.5rem}
 }
+/* ---------- desktop fit (2026-11-15) ----------
+   Same call as the Arcade fix (Joshua: "If it's broke, fix it").
+   The store was tuned phone-first: at laptop widths the hero
+   headline ran to its ~94px cap over 8.5rem of headroom and the
+   bands carried 7.5rem of vertical air. The cards already grid
+   three across, so this layer only trims hero, bands, and type.
+   Phone rendering is untouched. */
+@media (min-width:1024px){
+  .hero .wrap{padding-top:5rem;padding-bottom:2.5rem}
+  .hero h1{font-size:clamp(2.6rem,4.2vw,3.4rem)}
+  .band{padding:4.2rem 0}
+  h2{font-size:2.05rem}
+  .tile{padding:1.6rem}
+}
 </style>
 </head>
 <body class="hustle-face">

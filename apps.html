@@ -144,6 +144,25 @@ body.hustle-face figure img{border:1px solid #263144}
   body.hustle-face .hero .wrap{padding-top:4.5rem}
   .hero .lead{margin-top:.45rem}
 }
+/* ---------- desktop fit (2026-11-15) ----------
+   Same call as the Arcade fix (Joshua: "If it's broke, fix it").
+   Phone-first hero scale trimmed, and the app rows — full-width
+   strips at laptop widths — become two-column cards; the buy
+   block flips to the same left-aligned row the phone layout
+   already uses. Phone rendering is untouched. */
+@media (min-width:1024px){
+  .hero .wrap{padding-top:5rem;padding-bottom:2.5rem}
+  .hero h1{font-size:clamp(2.6rem,4.2vw,3.4rem)}
+  .band{padding:4.2rem 0}
+  h2{font-size:2.05rem}
+  .rows{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:none}
+  .rows .product{grid-template-columns:1fr;gap:.7rem;background:var(--panel);
+    border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.5rem}
+  .rows .product .p-body{max-width:none}
+  .rows .product .p-body h3{font-size:1.25rem}
+  .rows .product .p-buy{flex-direction:row;flex-wrap:wrap;align-items:center;text-align:left}
+  .rows .product .p-price{margin-right:auto}
+}
 </style>
 </head>
 <body class="hustle-face">
