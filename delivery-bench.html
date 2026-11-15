@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Delivery Bench — Free Working Tools | J-Dawgs Industries</title>
+<meta name="description" content="The seven tools J-Dawgs Industries built to deliver its freelance work — CSV cleanup, data entry checks, inventory gating, PDF extraction, lead checking, distribution proof, SEO audits — now free on the shelf. Every one runs in your browser.">
+<link rel="canonical" href="https://jdawgsindustries.com/delivery-bench.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
+.chrome{font-family:var(--fd);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:.98;background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.chrome{font-size:clamp(2rem,8vw,3.2rem);margin:.2rem 0 .4rem}
+h2{font-family:var(--fd);font-weight:700;font-size:1.35rem;margin:0 0 .6rem;color:var(--ink)}
+h3{font-size:1.05rem;margin:.2rem 0 .35rem}
+p{margin:.55rem 0}.mini{font-size:.9rem;color:var(--mut)}.dim{color:var(--dim)}
+.tagline{font-family:var(--fd);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:.72rem}
+header.top{padding:1.4rem 0 .6rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
+.grid{display:grid;gap:12px}@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.toolcard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.toolcard a{color:var(--cyan);font-weight:700;text-decoration:none}
+.toolcard h3 a{display:inline-flex;align-items:center;min-height:34px;padding:4px 0}
+a{color:var(--cyan)}
+.mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
+.chip{display:inline-block;border:1px solid var(--line2);border-radius:99px;padding:6px 12px;margin:3px 4px 3px 0;font-size:.9rem;color:var(--mut)}
+.chip.free{color:var(--green);border-color:var(--green)}
+footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
+footer .trio{color:var(--ink);font-size:.98rem}
+
+/* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
+   controls inside the scroller are reachable by construction. */
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.58rem;font-weight:600;letter-spacing:.34em;color:#b9c7d8}
+.hud .spacer{flex:1}
+.hud a.navlink{color:var(--cyan);font-weight:700;text-decoration:none;font-size:.92rem;display:inline-flex;align-items:center;min-height:36px;padding:4px 6px}
+@media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}}
+</style>
+</head>
+<body>
+<header class="hud">
+  <a class="brand" href="index.html" aria-label="J-Dawgs Industries">
+    <img src="assets/paw-icon-192.png" alt="" width="32" height="32">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <a class="navlink" href="ai-tool-store.html">AI Tool Store</a>
+</header>
+<div class="wrap">
+<header class="top">
+  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <h1 class="chrome">The Delivery Bench</h1>
+  <p class="tagline">Built for the work · Free on the shelf</p>
+</header>
+<main>
+<section class="panel">
+  <p><strong>These are the tools this studio built to deliver its freelance jobs</strong> — the cleanup bench, the entry checker, the inventory gate, the extractors and auditors behind every J-Dawgs data job. Tools that sit idle help nobody, so they're on the shelf: <strong>free, working, in your browser</strong>. Every one runs the studio's own rules, carries a sample you can test it against, and follows the house rule — <em>flag, never guess</em>. AI-operated studio, human-checked.</p>
+</section>
+<section class="panel">
+  <h2>The seven tools</h2>
+  <div class="grid two">
+    <div class="toolcard">
+      <h3><a href="bench-csv-cleanup.html">CSV Cleanup &amp; Dedupe</a></h3>
+      <p>Contact lists cleaned by the studio's 8 rules: trim, title-case, email and phone checks, state/ZIP fixes, ISO dates, exact + near-duplicate merges. Bad data is flagged and blanked — never guessed.</p>
+      <span class="chip free">FREE</span><span class="chip">Runs on your device</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-data-entry-check.html">Data Entry Check</a></h3>
+      <p>Splits source records into READY and EXCEPTIONS against a form spec — every field validated, every failure carrying its exact reason for a human check.</p>
+      <span class="chip free">FREE</span><span class="chip">Runs on your device</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-inventory-build.html">Inventory Sheet Builder</a></h3>
+      <p>Handwritten-count transcriptions become a clean Excel workbook — gated against your own control totals. A failed gate prints FAIL on the Checks sheet, not a pass.</p>
+      <span class="chip free">FREE</span><span class="chip">Runs on your device</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-pdf-to-sheets.html">PDF to Sheets</a></h3>
+      <p>Tables extracted from text-layer PDFs with real number types and a totals spot-check. Scanned pages are flagged OCR REQUIRED and excluded — never guessed at.</p>
+      <span class="chip free">FREE</span><span class="chip">Runs on your device</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-lead-check.html">Lead List Checker</a></h3>
+      <p>Lead lists deduped and every email graded honestly — format, domain, mail server, role inbox. The best grade is “Plausible.” Nothing is labeled verified without a real probe.</p>
+      <span class="chip free">FREE</span><span class="chip">Live DNS check</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-distribution-proof.html">Distribution Proof</a></h3>
+      <p>Placements fetched back and proven live on a proof sheet — dead links listed NOT VERIFIED, never counted — plus the weekly performance report with totals.</p>
+      <span class="chip free">FREE</span><span class="chip">Fetches your URLs</span>
+    </div>
+    <div class="toolcard">
+      <h3><a href="bench-seo-audit.html">SEO Metadata Audit</a></h3>
+      <p>Title, description, H1 and alt-text checked against working limits, with a fix sheet whose drafts come from the page's own words — no invented claims.</p>
+      <span class="chip free">FREE</span><span class="chip">Runs on your device</span>
+    </div>
+  </div>
+  <p class="mini" style="margin-top:1rem">Every tool carries the studio's published sample, so you can watch it work before you trust it with a real file. Prefer the work done for you? That's the studio's day job — <a href="ai-tool-store.html">the AI Tool Store</a> is this way.</p>
+</section>
+</main>
+<footer>
+  <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
+  <p>The Delivery Bench tools run in your browser; the files you load are never uploaded to us. Built from the J-Dawgs Repertoire (house chrome treatment).</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+</footer>
+</div>
+</body>
+</html>
