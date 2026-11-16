@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+  J-DAWGS PYTHON CODE GENERATOR — by J-Dawgs Industries.
+  Single-file interactive generator: plain words in, three copy-ready
+  prompts + a starter Python skeleton out. Built from the J-Dawgs
+  Repertoire starter (palette, chrome type, panels, buttons, footer
+  trio) with electric blue #0096FF per the house color rule.
+  Free demo lives at jdawgsindustries.com/python-generator/ — the full
+  pack (this generator + python_template.py + quick-start guide with
+  worked examples) sells as one zip.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J-Dawgs Python Code Generator</title>
+<meta name="description" content="The J-Dawgs Python Code Generator: describe the program you want in plain words, get three ready-to-paste prompts and a starter Python file skeleton. No coding experience needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#05080e;  --bg2:#0b0f16;
+  --panel:#10151f;  --panel2:#151c29;
+  --line:#263144;  --line2:#33435e;
+  --ink:#eef2f8;  --mut:#9fb0c6;  --dim:#6d7f97;
+  --chrome2:#b9c7d8; --chrome4:#dfe9f4;
+  --blue:#0096FF;  --cyan:#0096FF;
+  --gold:#ffd34d;
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-data:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;
+  background-image:radial-gradient(ellipse 90% 340px at 50% -80px, rgba(0,150,255,.14), transparent 70%);
+  min-height:100dvh;display:flex;flex-direction:column;
+}
+.chrome{
+  font-family:Anton,Impact,sans-serif; letter-spacing:.02em;
+  text-transform:uppercase; line-height:.98;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;flex:none}
+.brand .pawmark{width:34px;height:34px;flex:none}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;white-space:nowrap;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.hud .spacer{flex:1}
+.ledwell{background:#010204;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
+  font-family:var(--font-data);color:var(--blue);
+  text-shadow:0 0 8px rgba(0,150,255,.8),0 0 22px rgba(0,150,255,.35);padding:7px 11px;font-size:13px;letter-spacing:.06em;white-space:nowrap}
+main{flex:1 1 auto;width:100%;max-width:920px;margin:0 auto;padding:18px 14px 26px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-content:start}
+main>*{min-width:0}
+footer{flex:0 0 auto;border-top:1px solid var(--line2);background:var(--bg2);padding:12px 14px;font-size:13px;color:var(--mut);display:grid;gap:3px}
+footer .trio{color:var(--ink);font-size:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+h1.chrome{font-size:38px;margin:0}
+.tagline{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-size:13px;margin-top:6px}
+.lede{font-size:17px;color:var(--chrome4);margin:10px 0 0}
+h2.sec{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:19px;color:var(--chrome4);margin:0 0 6px}
+.field{margin-top:14px}
+.field:first-of-type{margin-top:6px}
+.field label{display:block;font-weight:700;font-size:15px;color:#fff;margin-bottom:6px}
+.field .hint{font-size:13.5px;color:var(--mut);margin:0 0 8px}
+.field textarea,.field input[type="text"]{
+  width:100%;background:var(--bg2);border:1px solid var(--line2);border-radius:10px;color:var(--ink);
+  font-family:inherit;font-size:16px;line-height:1.5;padding:12px 14px;min-height:52px;
+}
+.field textarea{resize:vertical;min-height:76px}
+.field textarea:focus,.field input[type="text"]:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.chips-in{display:flex;gap:8px;flex-wrap:wrap}
+.chipbtn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel2);
+  border-radius:99px;padding:10px 16px;font-size:15px;font-weight:600;color:var(--mut);min-height:48px;cursor:pointer;font-family:inherit}
+.chipbtn.on{color:#0a0f16;background:linear-gradient(180deg,#e8f1fa,#9db4cc);border-color:#d7e5f2}
+.seg{display:flex;flex-wrap:wrap;gap:6px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:6px}
+.seg button{flex:1 1 30%;font-family:inherit;font-weight:800;font-size:15px;color:var(--ink);background:var(--panel2);border:1px solid var(--line2);border-radius:10px;min-height:52px;padding:11px 10px;cursor:pointer}
+.seg button.on{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);
+  border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;letter-spacing:.02em;min-height:52px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;border-color:#d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+.btn.lit{box-shadow:0 0 0 1px rgba(0,150,255,.45), 0 10px 30px rgba(0,150,255,.30); border-color:var(--blue)}
+.btn.big{width:100%;font-size:18px;min-height:58px;margin-top:16px}
+.out{margin-top:16px}
+.out:first-of-type{margin-top:4px}
+.out .ohead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.out .onum{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--blue);color:var(--blue);
+  font-family:var(--font-data);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px}
+.out .oname{font-weight:800;font-size:17px;color:#fff}
+.out .odesc{color:var(--mut);font-size:14.5px;margin:6px 0 0}
+.out textarea{
+  width:100%;margin-top:10px;background:#010204;border:1px solid var(--line);border-radius:10px;color:var(--chrome4);
+  font-family:var(--font-data);font-size:13.5px;line-height:1.55;padding:12px 14px;resize:vertical;
+}
+.out .copyrow{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.out .status{font-size:14px;color:var(--blue);font-weight:600;min-height:1.2em}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step .num{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--blue);color:var(--blue);
+  font-family:var(--font-data);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:17px}
+.step p{margin:4px 0 0;color:var(--mut);font-size:15px}
+.step p strong{color:#fff}
+.fineprint{font-size:12.5px;color:var(--dim)}
+.door-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+@media (min-width:1024px){
+  h1.chrome{font-size:54px}
+  main{padding:26px 20px 34px;gap:20px}
+}
+@media (max-width:520px){
+  .ledwell{font-size:10.5px;padding:6px 8px;letter-spacing:.02em}
+  .brand .brand-name{font-size:.9rem}
+  .hud{gap:8px;padding:8px 10px}
+}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <a class="brand" href="https://jdawgsindustries.com/" aria-label="J-Dawgs Industries — home">
+    <svg class="pawmark" viewBox="0 0 100 100" aria-hidden="true"><g fill="#dfe9f4"><ellipse cx="50" cy="66" rx="21" ry="17"/><ellipse cx="22" cy="44" rx="8.5" ry="11" transform="rotate(-18 22 44)"/><ellipse cx="39" cy="32" rx="8.5" ry="11.5" transform="rotate(-6 39 32)"/><ellipse cx="61" cy="32" rx="8.5" ry="11.5" transform="rotate(6 61 32)"/><ellipse cx="78" cy="44" rx="8.5" ry="11" transform="rotate(18 78 44)"/></g></svg>
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <div class="ledwell">PLAIN WORDS IN · CODE OUT</div>
+</header>
+
+<main>
+  <div>
+    <h1 class="chrome">J-Dawgs Python Code Generator</h1>
+    <div class="tagline">Describe it plain · Get code back</div>
+    <p class="lede"><strong>Python</strong> is a language for telling a computer what to do, written in words close to plain English — that's why beginners start with it. You don't have to write it yourself. Fill in the boxes below in your own words, and this page builds you <strong>three ready-to-paste prompts</strong> plus a <strong>starter Python file</strong>. Paste a prompt into any AI chat (Muse, ChatGPT, any of them) and it writes the program for you.</p>
+  </div>
+
+  <section class="panel" aria-label="Describe your program">
+    <h2 class="sec">1 · Describe your program</h2>
+
+    <div class="field">
+      <label for="fDo">What should the program do?</label>
+      <p class="hint">Say it like you'd say it to a person. One or two sentences is plenty.</p>
+      <textarea id="fDo">Rename all the photos in a folder so each one gets the date and a number, like 2026-11-15-photo-001</textarea>
+    </div>
+
+    <div class="field">
+      <label>What does it work on?</label>
+      <div class="chips-in" id="worksChips" role="group" aria-label="What it works on">
+        <button type="button" class="chipbtn on" data-phrase="files on a computer">Files</button>
+        <button type="button" class="chipbtn" data-phrase="a website">A website</button>
+        <button type="button" class="chipbtn" data-phrase="numbers">Numbers</button>
+        <button type="button" class="chipbtn" data-phrase="text">Text</button>
+        <button type="button" class="chipbtn" data-phrase="pictures">Pictures</button>
+        <button type="button" class="chipbtn" data-phrase="a spreadsheet">A spreadsheet</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="fIn">What goes in?</label>
+      <p class="hint">What the program starts with — a folder, a list, some numbers, a name.</p>
+      <input type="text" id="fIn" value="A folder full of photos with messy camera names like IMG_4021.jpg">
+    </div>
+
+    <div class="field">
+      <label for="fOut">What comes out?</label>
+      <p class="hint">What you want to be holding when it's done.</p>
+      <input type="text" id="fOut" value="The same photos with clean names, plus a list of every old name and its new name">
+    </div>
+
+    <div class="field">
+      <label>Where will it run?</label>
+      <div class="seg" id="runsSeg" role="group" aria-label="Where it will run">
+        <button type="button" class="on" data-phrase="a Windows laptop">Windows laptop</button>
+        <button type="button" data-phrase="a phone">Phone</button>
+        <button type="button" data-phrase="the web">Web</button>
+      </div>
+    </div>
+
+    <button class="btn primary big" id="genBtn" type="button">2 · Build my prompts</button>
+  </section>
+
+  <section class="panel" aria-label="Your prompts">
+    <h2 class="sec">3 · Copy a prompt, paste it to an AI</h2>
+    <p class="lede" style="font-size:15.5px;margin-top:2px">Three versions of the same ask, three different jobs. The Simple Ask is fastest. The Full Spec gets you cleaner code. The Beginner Walkthrough gets you the code <em>and</em> a plain-words guide to running it. If a Copy button ever fails on your device, the words are right there in the box — tap the box, select all, and copy by hand.</p>
+
+    <div class="out">
+      <div class="ohead"><span class="onum">1</span><span class="oname">The Simple Ask</span></div>
+      <p class="odesc">Short and direct. Good for small, simple programs.</p>
+      <textarea id="out1" rows="7" readonly aria-label="Prompt 1 — the Simple Ask"></textarea>
+      <div class="copyrow"><button class="btn lit copybtn" type="button" data-target="out1">Copy prompt 1</button><span class="status" id="status-out1" aria-live="polite"></span></div>
+    </div>
+
+    <div class="out">
+      <div class="ohead"><span class="onum">2</span><span class="oname">The Full Spec</span></div>
+      <p class="odesc">The same ask with quality rules bolted on — one file, plain-English comments, errors in plain words, nothing extra to install.</p>
+      <textarea id="out2" rows="13" readonly aria-label="Prompt 2 — the Full Spec"></textarea>
+      <div class="copyrow"><button class="btn lit copybtn" type="button" data-target="out2">Copy prompt 2</button><span class="status" id="status-out2" aria-live="polite"></span></div>
+    </div>
+
+    <div class="out">
+      <div class="ohead"><span class="onum">3</span><span class="oname">The Beginner Walkthrough</span></div>
+      <p class="odesc">Code plus a step-by-step in plain words: how to save it, run it, and fix the mistakes everybody makes first time.</p>
+      <textarea id="out3" rows="13" readonly aria-label="Prompt 3 — the Beginner Walkthrough"></textarea>
+      <div class="copyrow"><button class="btn lit copybtn" type="button" data-target="out3">Copy prompt 3</button><span class="status" id="status-out3" aria-live="polite"></span></div>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="Starter Python skeleton">
+    <h2 class="sec">4 · Your starter Python file</h2>
+    <p class="lede" style="font-size:15.5px;margin-top:2px">This skeleton is built from your answers. Copy it, save it as <strong>my_program.py</strong>, and hand it to an AI with any prompt above — or fill in the TODO spots yourself as you learn. It runs as-is.</p>
+    <div class="out">
+      <textarea id="out4" rows="26" readonly aria-label="Starter Python skeleton" style="color:var(--chrome4)"></textarea>
+      <div class="copyrow"><button class="btn lit copybtn" type="button" data-target="out4">Copy the skeleton</button><span class="status" id="status-out4" aria-live="polite"></span></div>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="How this works">
+    <h2 class="sec">How this works</h2>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><p><strong>Describe it plain.</strong> No code words, no jargon. If you can explain the job to a person, you can fill in these boxes.</p></div>
+      <div class="step"><span class="num">2</span><p><strong>Pick a prompt and copy it.</strong> All three ask for the same program — they just ask at different depths.</p></div>
+      <div class="step"><span class="num">3</span><p><strong>Paste it to an AI, get code back.</strong> Save the code as a file ending in <strong>.py</strong>, run it, and if it breaks, paste the error message back to the AI and ask what it means in plain words.</p></div>
+    </div>
+    <p class="fineprint" style="margin-top:12px">© 2026 J-Dawgs Industries. This generator is the free demo of the J-Dawgs Python Code Generator — Template Pack — the pack adds the ready-to-run starter template file and a quick-start guide with three full worked examples.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></div>
+  <div>J-Dawgs Python Code Generator · © 2026 J-Dawgs Industries · jdawgsindustries.com</div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+
+  /* single-select chips + segmented toggle (house pattern) */
+  function wireSingle(containerSel){
+    var box = $(containerSel);
+    box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        box.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x === b); });
+        generate();
+      });
+    });
+  }
+  wireSingle('#worksChips');
+  wireSingle('#runsSeg');
+
+  function picked(containerSel){
+    var b = $(containerSel + ' button.on');
+    return b ? b.getAttribute('data-phrase') : '';
+  }
+  function val(id, fallback){
+    var v = document.getElementById(id).value.trim();
+    return v ? v : fallback;
+  }
+  function oneLine(s){ return s.replace(/\s*\n\s*/g, ' ').trim(); }
+
+  function generate(){
+    var doWhat = val('fDo', 'do a small, useful job for me');
+    var works  = picked('#worksChips') || 'files on a computer';
+    var goesIn = val('fIn', 'the information I give it when it starts');
+    var comesOut = val('fOut', 'a clear result I can read');
+    var runsOn = picked('#runsSeg') || 'a Windows laptop';
+
+    var simple =
+      'Write me a Python program.\n\n' +
+      'What it should do: ' + doWhat + '\n' +
+      'It works on: ' + works + '.\n' +
+      'What goes in: ' + goesIn + '\n' +
+      'What comes out: ' + comesOut + '\n' +
+      'It will run on: ' + runsOn + '.\n\n' +
+      'Keep it in one file, and explain any part a beginner would not understand.';
+
+    var spec =
+      'Write me a Python program.\n\n' +
+      'What it should do: ' + doWhat + '\n' +
+      'It works on: ' + works + '.\n' +
+      'What goes in: ' + goesIn + '\n' +
+      'What comes out: ' + comesOut + '\n' +
+      'It will run on: ' + runsOn + '.\n\n' +
+      'Rules it has to follow:\n' +
+      '- One single Python file. Nothing split into pieces.\n' +
+      '- Comments in plain English that explain what each part does.\n' +
+      '- If something goes wrong, the error message says what happened in plain words. No codes, no mystery text.\n' +
+      '- No extra installs or libraries unless the program truly cannot work without one. If one is needed, name it and give the one line that installs it.\n' +
+      '- It must run on ' + runsOn + ' exactly as written.\n' +
+      '- When it finishes, it prints a clear message saying what it did.';
+
+    var walk =
+      'Write me a Python program, and walk me through it like I have never coded before.\n\n' +
+      'The program: ' + doWhat + '\n' +
+      'It works on: ' + works + '.\n' +
+      'What goes in: ' + goesIn + '\n' +
+      'What comes out: ' + comesOut + '\n' +
+      'It will run on: ' + runsOn + '.\n\n' +
+      'Give me three things:\n' +
+      '1. The full code, in one file, with plain-English comments.\n' +
+      '2. Step-by-step instructions in plain words: how to save the file, how to open it, how to run it, and what I should see on screen when it works.\n' +
+      '3. The three mistakes a beginner is most likely to make with this program, and how to fix each one.';
+
+    var skeleton =
+      '# ============================================================\n' +
+      '#  MY PROGRAM — starter skeleton\n' +
+      '#  Built from my answers in the J-Dawgs Python Code Generator\n' +
+      '#  © 2026 J-Dawgs Industries\n' +
+      '#\n' +
+      '#  WHAT THIS PROGRAM SHOULD DO: ' + oneLine(doWhat) + '\n' +
+      '#  IT WORKS ON: ' + works + '\n' +
+      '#  WHAT GOES IN: ' + oneLine(goesIn) + '\n' +
+      '#  WHAT COMES OUT: ' + oneLine(comesOut) + '\n' +
+      '#  IT RUNS ON: ' + runsOn + '\n' +
+      '# ============================================================\n' +
+      '\n\n' +
+      'def main():\n' +
+      '    # TODO — STEP 1, WHAT GOES IN:\n' +
+      '    #   Bring in: ' + oneLine(goesIn) + '\n' +
+      '    something_in = ""  # replace this with the real input\n' +
+      '\n' +
+      '    # TODO — STEP 2, THE REAL WORK:\n' +
+      '    #   ' + oneLine(doWhat) + '\n' +
+      '    result = something_in  # replace this with the real work\n' +
+      '\n' +
+      '    # TODO — STEP 3, WHAT COMES OUT:\n' +
+      '    #   Hand back: ' + oneLine(comesOut) + '\n' +
+      '    print("Done. Here is the result:")\n' +
+      '    print(result)\n' +
+      '\n\n' +
+      'if __name__ == "__main__":\n' +
+      '    main()\n';
+
+    $('#out1').value = simple;
+    $('#out2').value = spec;
+    $('#out3').value = walk;
+    $('#out4').value = skeleton;
+  }
+
+  $('#genBtn').addEventListener('click', function(){
+    generate();
+    document.getElementById('out1').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+  ['fDo','fIn','fOut'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', generate);
+  });
+
+  /* copy with a visible fallback: if the clipboard refuses, the text
+     stays in its box, selected, with instructions in plain words. */
+  document.querySelectorAll('.copybtn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var ta = document.getElementById(btn.getAttribute('data-target'));
+      var status = document.getElementById('status-' + btn.getAttribute('data-target'));
+      function fallback(){
+        ta.focus(); ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        status.textContent = ok
+          ? 'Copied. Paste it into any AI chat.'
+          : 'Copy did not work on this device — the text above is selected, or tap it and choose Select All, then Copy.';
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(ta.value).then(function(){
+          status.textContent = 'Copied. Paste it into any AI chat.';
+        }, fallback);
+      } else { fallback(); }
+    });
+  });
+
+  generate();
+})();
+</script>
+</body>
+</html>
