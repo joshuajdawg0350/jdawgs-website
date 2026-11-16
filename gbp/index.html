@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+  GOOGLE PROFILE SETUP by J-Dawgs Industries — service pitch page.
+  Built from the J-Dawgs Repertoire starter.html (palette, chrome type, buttons,
+  panels, footer trio) per the standing repertoire-first order. Sales page, so
+  the wallet-pattern height lock is replaced with normal page flow.
+  STRIPE_LINK_SLOT: when the $149 Stripe payment link exists, add it as a third
+  door button in the #door section (label: "PAY THE $149 ONLINE") and in the
+  Setup price card. As shipped 2026-11-15 the working door is call/text.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Google Profile Setup by J-Dawgs Industries — Springfield, MO</title>
+<meta name="description" content="We claim, verify, and fully build out your Google Business Profile — $149 one-time. By a Springfield builder who just fought through Google's verification wall himself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#05080e;  --bg2:#0b0f16;
+  --panel:#10151f;  --panel2:#151c29;
+  --line:#263144;  --line2:#33435e;
+  --ink:#eef2f8;  --mut:#9fb0c6;  --dim:#6d7f97;
+  --chrome2:#b9c7d8; --chrome4:#dfe9f4;
+  --blue:#0096FF;  --cyan:#0096FF;
+  --gold:#ffd34d;
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;
+  background-image:radial-gradient(ellipse 90% 340px at 50% -80px, rgba(0,150,255,.14), transparent 70%);
+  min-height:100dvh;display:flex;flex-direction:column;
+}
+.chrome{
+  font-family:Anton,Impact,sans-serif; letter-spacing:.02em;
+  text-transform:uppercase; line-height:.98;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;flex:none}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;white-space:nowrap;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.hud .spacer{flex:1}
+.ledwell{background:#010204;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--blue);
+  text-shadow:0 0 8px rgba(0,150,255,.8),0 0 22px rgba(0,150,255,.35);padding:7px 11px;font-size:13px;letter-spacing:.06em}
+main{flex:1 1 auto;width:100%;max-width:920px;margin:0 auto;padding:18px 14px 26px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-content:start}
+main>*{min-width:0}
+footer{flex:0 0 auto;border-top:1px solid var(--line2);background:var(--bg2);padding:12px 14px;font-size:13px;color:var(--mut);display:grid;gap:3px}
+footer .trio{color:var(--ink);font-size:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+h1.chrome{font-size:40px;margin:0}
+.tagline{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-size:13px;margin-top:6px}
+.lede{font-size:17px;color:var(--chrome4);margin:10px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);
+  border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;letter-spacing:.02em;min-height:52px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;border-color:#d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+.btn.lit{box-shadow:0 0 0 1px rgba(0,150,255,.45), 0 10px 30px rgba(0,150,255,.30); border-color:var(--blue);}
+.btn.ghost{background:transparent}
+.door-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.getlist{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.getlist li{padding-left:28px;position:relative}
+.getlist li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--blue);font-weight:800}
+.price-grid{display:grid;gap:12px}
+.price-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.price-card.hot{border-color:var(--blue);box-shadow:0 0 0 1px rgba(0,150,255,.35), 0 10px 30px rgba(0,150,255,.12)}
+.price-card .pname{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--chrome4);font-size:15px}
+.price-card .price{font-family:var(--font-data);font-size:34px;color:#fff;margin:4px 0 2px}
+.price-card .per{color:var(--mut);font-size:14px}
+.price-card p{color:var(--mut);margin:8px 0 0;font-size:15px}
+.steps{display:grid;gap:12px;counter-reset:step}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step .num{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--blue);color:var(--blue);
+  font-family:var(--font-data);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:17px;background:#010204}
+.step h3{margin:2px 0 3px;font-size:16px}
+.step p{margin:0;color:var(--mut);font-size:15px}
+.persona{display:grid;gap:14px}
+.persona img.photo{width:120px;height:120px;object-fit:cover;border-radius:14px;border:1px solid var(--line2)}
+.persona .pname{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.03em;text-transform:uppercase}
+.persona .prole{color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.persona .pline{font-size:18px;font-weight:600;color:#fff;margin-top:6px}
+.persona p{color:var(--mut);margin:8px 0 0;font-size:15px}
+h2.sec{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:19px;color:var(--chrome4);margin:6px 0 0}
+.fineprint{font-size:12.5px;color:var(--dim)}
+@media (min-width:1024px){
+  h1.chrome{font-size:56px}
+  .price-grid{grid-template-columns:repeat(3,1fr)}
+  .persona{grid-template-columns:120px 1fr;align-items:start}
+  main{padding:26px 20px 34px;gap:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <a class="brand" href="https://jdawgsindustries.com/" aria-label="J-Dawgs Industries — home">
+    <img src="paw.png" alt="" width="38" height="38">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <div class="ledwell">SPRINGFIELD, MO</div>
+</header>
+
+<main>
+  <div>
+    <h1 class="chrome">Get Found<br>On Google</h1>
+    <div class="tagline">Google Profile Setup by J-Dawgs Industries</div>
+    <p class="lede">When a pipe bursts or a roof leaks, nobody opens the phone book. They Google it. If your Google listing is unclaimed, missing your hours, or pointing nowhere, that job goes to the next name on the list — even if you're the better outfit.</p>
+  </div>
+
+  <section class="panel">
+    <h2 class="sec" style="margin-top:0">I know the wall, because I hit it</h2>
+    <p style="color:var(--mut);margin:8px 0 0">Google put my own business through the wringer — proof of the business name, a live video verification, the step where most owners give up and quit. I fought it through and J-Dawgs Industries is verified. Now I do the same job for other trades around Springfield — a builder who fixes other builders' Google listings.</p>
+  </section>
+
+  <section class="panel">
+    <h2 class="sec" style="margin-top:0">What the setup gets you</h2>
+    <ul class="getlist">
+      <li>Your Google Business Profile claimed (or built new) — and the verification handled start to finish</li>
+      <li>The right categories for your trade, plus your full list of services</li>
+      <li>Hours, service area, phone number, and website wired in right</li>
+      <li>Your job photos loaded and looking sharp</li>
+      <li>A review link and a QR card for the truck, so happy customers actually leave reviews</li>
+      <li>Your first Google post written and live</li>
+    </ul>
+  </section>
+
+  <div>
+    <h2 class="sec">Straight prices. No contracts.</h2>
+    <div class="price-grid" style="margin-top:10px">
+      <div class="price-card hot">
+        <div class="pname">Google Profile Setup</div>
+        <div class="price">$149</div>
+        <div class="per">one-time</div>
+        <p>Everything on the list above. Most profiles are built and ready to submit within 48 hours of your verification video.</p>
+      </div>
+      <div class="price-card">
+        <div class="pname">Profile + Website Bundle</div>
+        <div class="price">$399</div>
+        <div class="per">one-time</div>
+        <p>The full setup, plus a one-page website with your services, photos, and tap-to-call — for shops whose listing points nowhere. (Site alone: $299.)</p>
+      </div>
+      <div class="price-card">
+        <div class="pname">Reviews, Handled</div>
+        <div class="price">$99<span style="font-size:18px">/mo</span></div>
+        <div class="per">month to month</div>
+        <p>We send the review ask after every job, watch your profile, and answer reviews with you. First month free when you add it to a setup.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="panel">
+    <h2 class="sec" style="margin-top:0">How it works</h2>
+    <div class="steps" style="margin-top:12px">
+      <div class="step"><div class="num">1</div><div><h3>Call or text me</h3><p>Two minutes. Tell me your trade and your shop's name — I'll pull up your listing and tell you straight what's wrong with it.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>I build it, you shoot one short video</h3><p>Google makes you prove the business is real with a quick phone video. It's the step that stops everybody. I walk you through it, step by step — it won't stop us.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Your listing goes live</h3><p>Verified, complete, and showing up when Springfield searches for what you do.</p></div></div>
+    </div>
+  </section>
+
+  <section class="panel persona">
+    <img class="photo" src="joshua.jpg" alt="Joshua Dawson, founder of J-Dawgs Industries" width="120" height="120">
+    <div>
+      <div class="pname">Joshua Dawson</div>
+      <div class="prole">Founder · J-Dawgs Industries · Springfield, Missouri</div>
+      <div class="pline">"Hardworking construction worker just trying to earn an honest living."</div>
+      <p>I build houses around Springfield. J-Dawgs is my software and services shop — and this service is me helping other trades show up where the work is.</p>
+    </div>
+  </section>
+
+  <section class="panel" id="door">
+    <h2 class="sec" style="margin-top:0">Ready when you are</h2>
+    <p style="color:var(--mut);margin:8px 0 0">One call gets it rolling. Cash, check, or card — we'll sort payment when we talk.</p>
+    <div class="door-row">
+      <a class="btn primary" href="tel:+14173240216">CALL (417) 324-0216</a>
+      <a class="btn lit" href="sms:+14173240216">TEXT ME</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></div>
+  <div>© 2026 J-Dawgs Industries · Springfield, Missouri</div>
+  <div class="fineprint">Google Business Profile is a service of Google. J-Dawgs Industries is not affiliated with Google. Verification timing is Google's call; the build and the walk-through are ours.</div>
+</footer>
+
+</body>
+</html>
