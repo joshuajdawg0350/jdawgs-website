@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+  J-DAWGS VIDEO EDITING — services page
+  Built from the J-Dawgs Repertoire starter (house palette, chrome headline,
+  panels, HC2 buttons, footer brand trio). Prices: $20 / $75 / $149 — the one
+  price list used on every J-Dawgs editing listing.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Video Editing — J-Dawgs Industries</title>
+<meta name="description" content="Video editing for creators and small businesses. Shorts from $20, long-form from $75, weekly shorts pack $149. AI-operated studio, human-checked. Springfield, Missouri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#05080e;  --bg2:#0b0f16;
+  --panel:#10151f;  --panel2:#151c29;
+  --line:#263144;  --line2:#33435e;
+  --ink:#eef2f8;  --mut:#9fb0c6;  --dim:#6d7f97;
+  --chrome2:#b9c7d8; --chrome4:#dfe9f4;
+  --blue:#0096FF; --cyan:#39c2ff; --green:#3ddc84;
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;
+  background-image:radial-gradient(ellipse 90% 340px at 50% -80px, rgba(0,150,255,.14), transparent 70%);
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 14px 30px}
+.chrome{
+  font-family:Anton,Impact,sans-serif; letter-spacing:.02em;
+  text-transform:uppercase; line-height:.95;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hud{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
+.hud .spacer{flex:1}
+.ledwell{background:#010204;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--cyan);
+  text-shadow:0 0 8px rgba(57,194,255,.8),0 0 22px rgba(57,194,255,.35);padding:7px 11px;font-size:13px;letter-spacing:.06em;white-space:nowrap}
+section{margin-top:26px}
+h1.chrome{font-size:44px;margin:0}
+h2.chrome{font-size:27px;margin:0 0 4px}
+.tagline{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);font-size:13px;margin-top:6px}
+.lede{color:var(--mut);font-size:17px;max-width:640px;margin:12px 0 0}
+.studio-line{display:inline-block;margin-top:12px;border:1px solid var(--line2);border-radius:99px;padding:6px 14px;font-size:13.5px;font-weight:700;letter-spacing:.04em;color:var(--chrome4);background:var(--panel)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);
+  border-radius:10px;padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.02em;min-height:48px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;border-color:#d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+.btn.lit{box-shadow:0 0 0 1px rgba(0,150,255,.4), 0 10px 30px rgba(0,150,255,.28); border-color:var(--blue)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+video{display:block;width:100%;height:auto;background:#000;border-radius:10px;border:1px solid var(--line)}
+.vid-vert{max-width:330px;margin:0 auto}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){ .grid2{grid-template-columns:1fr 1fr} .grid3{grid-template-columns:1fr 1fr 1fr} }
+.vid-title{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:16px;color:var(--chrome4);margin:0 0 8px}
+.vid-note{color:var(--mut);font-size:14px;margin:9px 0 0}
+.price{font-family:Anton,Impact,sans-serif;font-size:40px;color:#fff;line-height:1}
+.price small{font-size:15px;color:var(--mut);font-family:var(--font-body);font-weight:600}
+.pkg-name{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-size:15px;margin:0 0 6px}
+.pkg ul{margin:10px 0 0;padding-left:18px;color:var(--mut);font-size:14.5px}
+.pkg ul li{margin:4px 0}
+.turn{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.03em}
+.pkg .btn{margin-top:14px;width:100%}
+.rows{display:grid;gap:6px}
+.row{display:flex;align-items:flex-start;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14.5px}
+.row .n{font-family:Anton,Impact,sans-serif;color:var(--blue);font-size:19px;line-height:1.35;min-width:22px;text-align:center}
+.row .t{color:var(--mut)} .row .t strong{color:var(--ink)}
+.founder{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.founder img{width:132px;height:132px;object-fit:cover;border-radius:14px;border:1px solid var(--line2)}
+.founder .fname{font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:.03em}
+.founder .frole{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.founder .fline{color:var(--mut);font-style:italic;margin-top:8px;max-width:520px}
+label{display:block;font-size:13.5px;font-weight:700;letter-spacing:.04em;color:var(--chrome4);margin:14px 0 6px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line2);border-radius:10px;color:var(--ink);
+  padding:12px;font-size:16px;font-family:inherit;min-height:48px}
+textarea{min-height:84px;resize:vertical}
+.fineprint{color:var(--dim);font-size:13px;margin-top:12px}
+footer{border-top:1px solid var(--line2);background:var(--bg2);padding:16px 14px 22px;font-size:13.5px;color:var(--mut);margin-top:30px}
+footer .trio{color:var(--ink);font-size:14.5px;max-width:1060px;margin:0 auto}
+footer .legal{max-width:1060px;margin:6px auto 0}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <a class="brand" href="https://jdawgsindustries.com/" aria-label="J-Dawgs Industries — home">
+    <img src="assets/paw-192.png" alt="" width="38" height="38">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <div class="ledwell">SHORTS FROM $20</div>
+</header>
+
+<div class="wrap">
+  <section style="margin-top:20px">
+    <h1 class="chrome">Video Editing</h1>
+    <div class="tagline">Shorts · Reels · TikTok · YouTube</div>
+    <p class="lede">Send us your raw footage. We send back a finished video — captions burned in, dead air cut, pacing tight, color and sound cleaned up — ready to post.</p>
+    <span class="studio-line">AI-operated studio, human-checked.</span>
+    <div class="btnrow">
+      <a class="btn primary" href="#order">Order an edit</a>
+      <a class="btn lit" href="#samples">Watch the samples</a>
+      <a class="btn" href="tel:+14173240216">Call (417) 324-0216</a>
+    </div>
+  </section>
+
+  <section id="samples">
+    <h2 class="chrome">The Work</h2>
+    <p class="vid-note" style="margin:0 0 14px">Real edits, made in this studio from our own footage. Press play.</p>
+
+    <div class="panel" style="margin-bottom:14px">
+      <p class="vid-title">Long-form sample — scene work with title cards</p>
+      <video controls preload="metadata" poster="assets/poster-b.png" src="media/sample-b-longform.mp4"></video>
+      <p class="vid-note">Two scenes cut into one story: clean cuts, b-roll sequencing, designed title and end cards. This is the Long-Form Video package at work.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <p class="vid-title">Short-form sample — vertical, captioned</p>
+        <video class="vid-vert" controls preload="metadata" poster="assets/poster-a.png" src="media/sample-a-short-vertical.mp4"></video>
+        <p class="vid-note">A 36-second vertical cut: fast pacing, burned-in captions, made for Shorts, Reels and TikTok. This is the Short-Form Clip package at work.</p>
+      </div>
+      <div class="panel">
+        <p class="vid-title">Before / after — same raw clip</p>
+        <video class="vid-vert" controls preload="metadata" poster="assets/poster-c.png" src="media/sample-c-before-after.mp4"></video>
+        <p class="vid-note">The raw clip first, then our edit of the exact same footage: tighter cuts, richer color, captions, cleaned-up sound.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <h2 class="chrome">Packages</h2>
+    <p class="vid-note" style="margin:0 0 14px">One price list, everywhere we sell. No hourly billing, no surprises.</p>
+    <div class="grid3">
+      <div class="panel pkg">
+        <p class="pkg-name">Short-Form Clip</p>
+        <div class="price">$20</div>
+        <ul>
+          <li>One vertical video, 60 seconds or less</li>
+          <li>Burned-in captions</li>
+          <li>Pacing cuts + b-roll sequencing</li>
+          <li>Color + loudness cleanup</li>
+          <li>Sized for Shorts, Reels or TikTok</li>
+        </ul>
+        <span class="turn">Turnaround: 48 hours</span>
+        <a class="btn primary" href="#order">Order — $20</a>
+      </div>
+      <div class="panel pkg">
+        <p class="pkg-name">Long-Form Video</p>
+        <div class="price">$75</div>
+        <ul>
+          <li>One horizontal video, up to 15 minutes</li>
+          <li>Clean cuts + b-roll sequencing</li>
+          <li>Designed title + end cards</li>
+          <li>Color + loudness cleanup</li>
+          <li>Captions available on request</li>
+        </ul>
+        <span class="turn">Turnaround: 3–5 days</span>
+        <a class="btn primary" href="#order">Order — $75</a>
+      </div>
+      <div class="panel pkg">
+        <p class="pkg-name">Weekly Shorts Pack</p>
+        <div class="price">$149</div>
+        <ul>
+          <li>10 vertical shorts in one week</li>
+          <li>Burned-in captions on every clip</li>
+          <li>Pacing cuts + b-roll sequencing</li>
+          <li>Color + loudness cleanup</li>
+          <li>Delivered in batches as they finish</li>
+        </ul>
+        <span class="turn">Turnaround: one week, batched</span>
+        <a class="btn primary" href="#order">Order — $149</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="chrome">How It Works</h2>
+    <div class="rows">
+      <div class="row"><span class="n">1</span><span class="t"><strong>Send your raw footage.</strong> Text or call us — we give you a simple upload link for your clips.</span></div>
+      <div class="row"><span class="n">2</span><span class="t"><strong>We cut it.</strong> Captions, pacing, b-roll, color and sound — the full edit, human-checked before it leaves.</span></div>
+      <div class="row"><span class="n">3</span><span class="t"><strong>You review it.</strong> One round of small fixes is included with every package.</span></div>
+      <div class="row"><span class="n">4</span><span class="t"><strong>You post it.</strong> Finished file sized for your platform, ready to upload.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="panel founder">
+      <img src="assets/joshua.jpg" alt="Joshua Dawson, founder of J-Dawgs Industries" width="264" height="264">
+      <div>
+        <div class="fname">Joshua Dawson</div>
+        <div class="frole">Founder, J-Dawgs Industries</div>
+        <p class="fline">&ldquo;Hardworking construction worker just trying to earn an honest living.&rdquo;</p>
+        <p class="vid-note" style="margin:0">The studio runs around the clock; every edit is checked by a person before it goes out. Springfield, Missouri.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2 class="chrome">Order an Edit</h2>
+    <div class="panel">
+      <p style="margin:0;color:var(--mut)">Fastest door: call or text. Or fill this in and hit the button — it opens a text message to us with your order already written out.</p>
+      <div class="btnrow">
+        <a class="btn primary" href="tel:+14173240216">Call (417) 324-0216</a>
+        <a class="btn lit" href="sms:+14173240216?&body=Hi%20J-Dawgs%2C%20I%20want%20a%20video%20edit.">Text (417) 324-0216</a>
+      </div>
+      <form id="orderForm">
+        <label for="fName">Your name</label>
+        <input id="fName" name="name" autocomplete="name" required>
+        <label for="fPhone">Your phone or email</label>
+        <input id="fPhone" name="contact" autocomplete="tel" required>
+        <label for="fPkg">Package</label>
+        <select id="fPkg" name="package">
+          <option>Short-Form Clip — $20</option>
+          <option>Long-Form Video — $75</option>
+          <option>Weekly Shorts Pack — $149</option>
+          <option>Not sure yet — talk me through it</option>
+        </select>
+        <label for="fLink">Link to your raw footage (Google Drive, Dropbox — optional)</label>
+        <input id="fLink" name="footage" inputmode="url" placeholder="https://">
+        <label for="fNotes">Anything we should know? (optional)</label>
+        <textarea id="fNotes" name="notes"></textarea>
+        <div class="btnrow">
+          <button class="btn primary" type="submit" style="flex:1">Text my order to J-Dawgs</button>
+        </div>
+      </form>
+      <p class="fineprint">Pay by card, Cash App or Venmo — we arrange it with you when we confirm your order. No payment is taken on this page.</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></div>
+  <div class="legal">© 2026 J-Dawgs Industries. All rights reserved. Hustle City™ footage © J-Dawgs Industries. · AI-operated studio, human-checked.</div>
+</footer>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var v = function(id){ return document.getElementById(id).value.trim(); };
+  var lines = [
+    'Hi J-Dawgs, I want to order a video edit.',
+    'Name: ' + v('fName'),
+    'Contact: ' + v('fPhone'),
+    'Package: ' + v('fPkg')
+  ];
+  if (v('fLink'))  lines.push('Footage: ' + v('fLink'));
+  if (v('fNotes')) lines.push('Notes: ' + v('fNotes'));
+  window.location.href = 'sms:+14173240216?&body=' + encodeURIComponent(lines.join('\n'));
+});
+</script>
+</body>
+</html>
