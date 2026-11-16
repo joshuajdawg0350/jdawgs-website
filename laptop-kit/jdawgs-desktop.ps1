@@ -96,7 +96,7 @@ Add-Web 'Hustle City 2' 'https://jdawgsindustries.com/games/hc2-demo/' 'hustle-c
 Add-Web 'J-Dawgs Home' 'https://jdawgsindustries.com/' 'jdawgs-home.ico'
 Add-Web 'Master Prompt Generator' 'https://github.com/joshuajdawg0350/master-prompt-generator' 'master-prompt.ico'
 Add-Web 'Messenger' 'https://www.messenger.com/' 'messenger.ico'
-Add-Web 'Moltbook' 'https://www.moltbook.com/u/jdawgs' 'moltbook.ico'
+Add-Web 'Moltbook' 'https://www.moltbook.com/u/jdawgsindustries' 'moltbook.ico'
 Add-Web 'Muse' 'https://muse.ai/' 'claude.ico'
 try {
   $ws = New-Object -ComObject WScript.Shell
