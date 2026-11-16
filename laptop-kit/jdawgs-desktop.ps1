@@ -40,6 +40,24 @@ function Add-Web($name, $url, $iconFile) {
   } catch { $script:failed += "$name (Windows refused it - tell Midas)" }
 }
 
+function Add-Run($name, $scriptUrl, $iconFile) {
+  # A RUN tile (2026-11-15): not a web page - one click fetches the live
+  # kit script from jdawgsindustries.com and runs it, the same fetch the
+  # kit's .cmd buttons do, so the tile always runs the newest version.
+  $iconPath = $null
+  if ($iconFile) { $iconPath = Get-Icon $iconFile }
+  try {
+    $ws = New-Object -ComObject WScript.Shell
+    $sc = $ws.CreateShortcut((Join-Path $Desktop ($name + '.lnk')))
+    $sc.TargetPath = Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    $sc.Arguments = "-NoProfile -ExecutionPolicy Bypass -Command `"Invoke-Expression (Invoke-RestMethod -Uri '$scriptUrl' -TimeoutSec 60)`""
+    if ($iconPath) { $sc.IconLocation = "$iconPath,0" }
+    $sc.Save()
+    if ($iconFile -and -not $iconPath) { $script:failed += "$name (shortcut works, its J-Dawgs picture could not download)" }
+    else { $script:done += "$name icon" }
+  } catch { $script:failed += "$name (Windows refused it - tell Midas)" }
+}
+
 function Find-App($patterns) {
   try {
     $shell = New-Object -ComObject Shell.Application
@@ -109,6 +127,7 @@ try {
 } catch { $script:failed += 'My Files (Windows refused it - tell Midas)' }
 Add-App 'Photos' @('Photos', 'Microsoft Photos') 'photos.ico'
 Add-Web 'Prompt Generator' 'https://jdawgsindustries.com/realism-generator/' 'prompt-generator.ico'
+Add-Run 'Screensaver Setup' 'https://jdawgsindustries.com/laptop-kit/jdawgs-screensaver.ps1' 'screensaver.ico'
 Add-Web 'Security' 'windowsdefender:' $null
 Add-Web 'Settings' 'ms-settings:' $null
 Add-Web 'Stripe' 'https://dashboard.stripe.com/' 'stripe.ico'
