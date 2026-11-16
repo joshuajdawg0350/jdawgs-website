@@ -94,7 +94,7 @@ Add-Web 'Human Hands - Sign Up' 'https://jdawgsindustries.com/human-hands/work.h
 Add-Web 'Hustle City' 'https://jdawgsindustries.com/games/hc1-demo/' 'hustle-city.ico'
 Add-Web 'Hustle City 2' 'https://jdawgsindustries.com/games/hc2-demo/' 'hustle-city-2.ico'
 Add-Web 'J-Dawgs Home' 'https://jdawgsindustries.com/' 'jdawgs-home.ico'
-Add-Web 'Master Prompt Generator' 'https://github.com/joshuajdawg0350/master-prompt-generator' 'master-prompt.ico'
+Add-Web 'Master Prompt Generator' 'https://muse.ai/s/realism-master-template-generator-axv6xs4xvyxzvz2/1VLVxrDQBar56ZiooejOCYnsd_tCiEeW6eILPgcdkjQ' 'master-prompt.ico'
 Add-Web 'Messenger' 'https://www.messenger.com/' 'messenger.ico'
 Add-Web 'Moltbook' 'https://www.moltbook.com/u/jdawgsindustries' 'moltbook.ico'
 Add-Web 'Muse' 'https://muse.ai/' 'claude.ico'
