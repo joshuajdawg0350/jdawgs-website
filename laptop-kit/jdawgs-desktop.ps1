@@ -166,6 +166,23 @@ Add-App 'Word' @('Word') 'word.ico'
 Add-Web 'YouTube' 'https://www.youtube.com' 'youtube.ico'
 Add-Web 'YouTube Studio' 'https://studio.youtube.com/' 'youtube-studio.ico'
 
+# Wallpaper: the storefront brand picture (Joshua's order 2026-11-15 - baked into
+# this run too, so any kit button he taps lands it)
+try {
+  $wpDir = Join-Path $env:USERPROFILE 'Pictures\J-Dawgs'
+  New-Item -ItemType Directory -Force -Path $wpDir | Out-Null
+  $wpFile = Join-Path $wpDir 'jdawgs-wallpaper.jpg'
+  Invoke-WebRequest -Uri 'https://jdawgsindustries.com/laptop-kit/jdawgs-brand.jpg' -OutFile $wpFile -UseBasicParsing -TimeoutSec 60
+  if ((Get-Item $wpFile).Length -ge 50000) {
+    Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value $wpFile
+    Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name WallpaperStyle -Value '10'
+    Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name TileWallpaper -Value '0'
+    Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class WP2 { [DllImport("user32.dll", CharSet=CharSet.Auto)] public static extern int SystemParametersInfo(int u, int p, string f, int w); }'
+    [void][WP2]::SystemParametersInfo(20, 0, $wpFile, 3)
+    $script:done += 'Wallpaper set (the storefront picture)'
+  } else { $script:failed += 'Wallpaper (download failed - tell Midas)' }
+} catch { $script:failed += 'Wallpaper (Windows refused it - tell Midas)' }
+
 # Nudge Windows to paint the new icons right away
 try {
   Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class SHN { [DllImport("shell32.dll")] public static extern void SHChangeNotify(int e, uint f, IntPtr a, IntPtr b); }'

@@ -25,12 +25,16 @@ Write-Host '  J-DAWGS SETUP - making this laptop yours...' -ForegroundColor Cyan
 Write-Host ''
 
 # 1. Wallpaper + lock screen picture
+# Joshua's order 2026-11-15: the wallpaper is the STOREFRONT brand picture
+# (picture + J-DAWGS INDUSTRIES under it), not the wordmark banner.
 $wp = Join-Path $PicDir 'jdawgs-wallpaper.jpg'
-if (Get-Kit 'jdawgs-wallpaper-1920x1200.jpg' $wp 50000) {
+if (Get-Kit 'jdawgs-brand.jpg' $wp 50000) {
   Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value $wp
+  Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name WallpaperStyle -Value '10'
+  Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name TileWallpaper -Value '0'
   Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class WP { [DllImport("user32.dll", CharSet=CharSet.Auto)] public static extern int SystemParametersInfo(int u, int p, string f, int w); }'
   $spi = [WP]::SystemParametersInfo(20, 0, $wp, 3)
-  if ($spi -ne 0) { $done += 'Wallpaper set (chrome J-DAWGS INDUSTRIES)' } else { $skipped += 'Wallpaper (Windows refused it - tell Midas)' }
+  if ($spi -ne 0) { $done += 'Wallpaper set (the storefront picture)' } else { $skipped += 'Wallpaper (Windows refused it - tell Midas)' }
   try {
     $null = [Windows.Storage.StorageFile, Windows.Storage, ContentType = WindowsRuntime]
     $null = [Windows.System.UserProfile.LockScreen, Windows.System.UserProfile, ContentType = WindowsRuntime]
