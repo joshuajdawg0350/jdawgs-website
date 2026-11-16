@@ -77,6 +77,9 @@
   .hh-google-block .gg-sub{font-size:.9rem;color:var(--muted);margin:0 0 .9rem;max-width:52ch}
   .hh-google-status{font-size:.92rem;margin:.8rem 0 0;color:var(--body)}
   .hh-google-status:empty{margin:0}
+  .hh-confirm{border:1px solid var(--eb);border-radius:10px;background:linear-gradient(160deg,rgba(57,194,255,.14),var(--panel) 72%);padding:1.4rem 1.6rem;margin:1.6rem 0 .4rem;max-width:560px}
+  .hh-confirm-title{font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:#fff;margin:0 0 .4rem}
+  .hh-confirm-body{margin:0;max-width:52ch}
   @media (max-width:640px){.tiers{grid-template-columns:1fr}.hh-brand span{display:none}.hh-nav{gap:.9rem}}
 </style>
 <style>
@@ -154,15 +157,19 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
   <div class="wrap">
     <p class="eyebrow">Work as a Hand · Founding roster</p>
     <h1>Your hands. Real work. Your pay stays yours.</h1>
-    <p class="lead">People around Springfield post regular jobs — check on a vacant rental, take lockbox photos, run a pickup across town — and Human Hands matches the job to a local person. That person could be you. Signing up is free, takes about two minutes, and joins you to the founding roster for matching.</p>
-    <div class="hh-google-block" data-hh-google-block hidden>
-      <p class="gg-label">Fastest way in — one tap</p>
-      <p class="gg-sub">Continue with Google and your name and email land on the signup form already filled in — no typing, and your contact counts as verified, so your roster spot is solid. Optional, always: the signup button works the same without it.</p>
+    <p class="lead">People around Springfield post regular jobs — check on a vacant rental, take lockbox photos, run a pickup across town — and Human Hands matches the job to a local person. That person could be you. Signing up is free, one tap, and joins you to the founding roster.</p>
+    <div class="hh-google-block" id="hh-signup" data-hh-google-block hidden>
+      <p class="gg-label">One tap and you're signed up</p>
+      <p class="gg-sub">Tap "Continue with Google" and that is the whole signup — no form, no questions. Your Google email is your roster contact. Right after, one short email asks which work you want — just reply to it and your file is complete.</p>
       <div data-hh-google-btn></div>
       <p class="hh-google-status" data-hh-google-status role="status"></p>
     </div>
+    <div class="hh-confirm" id="hh-confirm" hidden>
+      <p class="hh-confirm-title">You're in.</p>
+      <p class="hh-confirm-body" data-hh-confirm-body></p>
+    </div>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://forms.gle/kbYe1Uu8SShwE9kz8">Sign up free — about 2 minutes</a>
+      <a class="btn btn-primary" href="#hh-signup">Sign up free — one tap</a>
       <a class="btn btn-ghost" href="board.html" style="background:transparent;border-color:var(--line-strong)">See the job board</a>
     </div>
     <p class="small muted" style="margin-top:1.1rem">Founding roster: <strong style="color:#fff">12 of 100 workers in — 88 seats open.</strong> Signing up holds your roster spot; it is not a guarantee of jobs or earnings. Jobs are matched as people post them.</p>
@@ -182,10 +189,11 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         <p class="eyebrow" style="margin-bottom:.5rem">Example pay — how a posted price works</p>
         <p class="amt">$25 posted → $25 yours</p>
         <p style="max-width:60ch">Example: a property check posted at $25 — the worker keeps the full $25, plus 100% of any tip. The person who posted the job pays a flat 15% fee on top; it never comes out of your pay. You send photo proof, the poster approves it, and you get paid.</p>
+        <p style="max-width:60ch;margin-top:1rem">After the one-tap signup, one email from us asks which tiers and which kinds of work you want, your area, and how you want to be paid. You answer by replying to that email — nothing else to fill in, ever.</p>
       </div>
       <div class="qr-card">
-        <img src="../assets/qr-signup-form.png" alt="QR code — scan to open the Human Hands worker signup form" width="148" height="148" style="display:block;width:148px;height:148px">
-        <p><strong>Scan to sign up — or tap the button.</strong><br>Point your phone camera at the code and it opens the free signup form. Prefer to type it? <a href="https://forms.gle/kbYe1Uu8SShwE9kz8" style="color:#0A3D91">forms.gle/kbYe1Uu8SShwE9kz8</a></p>
+        <img src="../assets/qr-signup-page.png" alt="QR code — scan to open this signup page" width="148" height="148" style="display:block;width:148px;height:148px">
+        <p><strong>On a computer? Scan to sign up on your phone.</strong><br>Point your phone camera at the code and it opens this page — then one tap on "Continue with Google" and you're signed up.</p>
       </div>
     </div>
   </section>
@@ -199,16 +207,31 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
       <div class="tiers">
         <div class="tier"><span class="n">TIER 1</span><h3>Open</h3><p>Tasks anyone 18+ with a smartphone can claim — property checks with photos, pickups and deliveries, in-person visits and verification.</p></div>
         <div class="tier"><span class="n">TIER 2</span><h3>Skilled</h3><p>Work for people with tools and experience — install and assembly help, hands-on jobs that take know-how.</p></div>
-        <div class="tier"><span class="n">TIER 3</span><h3>Licensed</h3><p>Trade work where a license matters. Licenses are verified before a pro can claim Tier 3 jobs. If you don't have a license, no problem — a basic worker just answers "No" on the form and skips straight to signup.</p></div>
+        <div class="tier"><span class="n">TIER 3</span><h3>Licensed</h3><p>Trade work where a license matters. Licenses are verified before a pro can claim Tier 3 jobs. No license? No problem — just say so in your reply to our welcome email.</p></div>
       </div>
       <div class="dealbox">
         <p class="eyebrow" style="margin-bottom:.5rem">The deal, in plain words</p>
         <h3 style="margin:.2rem 0 .8rem">What you agree to when you sign up</h3>
         <p>Signing up is free. You must be 18 or older and have a smartphone. You keep 100% of the posted pay and 100% of any tips — the poster pays a flat 15% fee on top, and it never comes out of your pay. You send the photo proof the job asks for, the poster approves it, and then you get paid. Signing up holds your roster spot — it is not a guarantee of jobs or earnings; jobs are matched as people post them.</p>
-        <p style="margin-top:1rem">How jobs reach you: When a job posts that matches your tier and the work you signed up for, we email you a job alert with the full details of the job and the pay — everything except the exact address. The address is never in the alert. To take a job, reply YES to the alert — the first yes gets the job, and only then do we send you the exact address. By replying YES you agree to do the job as described and send the proof it asks for (a photo, where the job requires one). You keep 100% of the posted pay and 100% of any tips.</p>
+        <p style="margin-top:1rem">How jobs reach you: When a job posts that matches your tier and the work you told us you want (in your reply to our welcome email), we email you a job alert with the full details of the job and the pay — everything except the exact address. The address is never in the alert. To take a job, reply YES to the alert — the first yes gets the job, and only then do we send you the exact address. By replying YES you agree to do the job as described and send the proof it asks for (a photo, where the job requires one). You keep 100% of the posted pay and 100% of any tips.</p>
       </div>
       <div class="hero-actions" style="margin-top:2.2rem">
-        <a class="btn btn-primary" href="https://forms.gle/kbYe1Uu8SShwE9kz8">Sign up free</a>
+        <a class="btn btn-primary" href="#hh-signup">Sign up free — one tap</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hh-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Worker questions</p>
+        <h2>Plain answers, before you sign up</h2>
+      </div>
+      <div style="margin-top:1.4rem;max-width:65ch;display:grid;gap:1.1rem">
+        <div><h3 style="margin:0 0 .3rem">Does it cost anything to sign up?</h3><p style="margin:0">No. Signing up is free — no registration fee, no background-check fee, no cut taken out of your pay. The poster pays a flat 15% fee on top of the posted price; it never comes out of what you earn.</p></div>
+        <div><h3 style="margin:0 0 .3rem">When do I get paid?</h3><p style="margin:0">You send the photo proof the job asks for, the person who posted the job approves it, and then you get paid — 100% of the posted price, plus 100% of any tip.</p></div>
+        <div><h3 style="margin:0 0 .3rem">Do I have to take every job I'm offered?</h3><p style="margin:0">No. Job alerts come by email with the details and the pay. Reply YES only to the ones you want — the first yes gets the job. There is no schedule and no quota.</p></div>
+        <div><h3 style="margin:0 0 .3rem">Is work guaranteed?</h3><p style="margin:0">No — and we'll say it plainly: signing up holds your spot on the founding roster, it is not a guarantee of jobs or earnings. Jobs are matched as people in the Springfield area post them.</p></div>
       </div>
       <p style="margin-top:1.6rem"><a class="backlink" href="index.html">← Back to Human Hands home</a></p>
     </div>
@@ -227,27 +250,44 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
 <script src="hh-config.js"></script>
 <script src="hh-google.js"></script>
 <script>
-// After a verified Google sign-in, TAKE the worker straight to the signup
-// form — the spot where they fill out their tiers and the work they'll do —
-// with their name (entry.1582642706) and contact email (entry.1607165618)
-// pre-filled — the two fields that decide whether a signup lands on the
-// official roster or sits pending with no contact. (Owner rule, 2026-11-11:
-// sign-in must land you on the tier form, not just arm a button.) The plain
-// signup buttons are repointed too, in case the worker comes back here.
-// Entry IDs read from the live form's own field definitions, 2026-11-11.
+// ONE-TAP SIGNUP (owner order, 2026-11-13): a verified Google sign-in IS
+// the signup. No form, no tier questions on this page — HHGoogle
+// .completeSignup() records the verified name + email with the API, and
+// this page shows the confirmation. The worker then gets ONE welcome
+// email asking tiers / work / city / payout; they answer by replying to
+// it and Midas records the answers on the roster. The confirmation uses
+// plain DOM only — no storage — so it shows even in restricted webviews.
+// (Supersedes the 2026-11-11 redirect-to-the-form rule at the owner's
+// explicit 2026-11-13 order.)
 if (window.HHGoogle) {
   window.HHGoogle.onVerified(function (p) {
-    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSe_gdtsRTKrYf2CTozSRHzeJJqvVKR9etYboY1CmsosSnBSSg/viewform?usp=pp_url' +
-      '&entry.1582642706=' + encodeURIComponent(p.name || '') +
-      '&entry.1607165618=' + encodeURIComponent(p.email || '');
-    var links = document.querySelectorAll('a[href="https://forms.gle/kbYe1Uu8SShwE9kz8"]');
-    for (var i = 0; i < links.length; i++) links[i].href = url;
     var status = document.querySelector('[data-hh-google-status]');
-    if (status) {
-      status.textContent = 'Signed in as ' + (p.name || p.email) + ' (' + p.email + ') — verified by Google. ' +
-        'Taking you to the signup form — your name and email are already filled in.';
-    }
-    window.location.href = url;
+    if (status) status.textContent = 'Signed in as ' + (p.name || p.email) + ' (' + p.email + ') — finishing your signup…';
+    window.HHGoogle.completeSignup().then(function (r) {
+      if (!r.ok) {
+        if (status) {
+          status.textContent = 'Your Google sign-in worked, but we could not record your signup just now. ' +
+            'Please tap the button once more in a moment — if it still fails, email joshuajdawg0350@gmail.com and we will sign you up by hand.';
+        }
+        return;
+      }
+      var block = document.querySelector('[data-hh-google-block]');
+      if (block) block.hidden = true;
+      var confirmBox = document.getElementById('hh-confirm');
+      var body = document.querySelector('[data-hh-confirm-body]');
+      if (body) {
+        body.textContent = (r.duplicate
+          ? 'Good news — ' + (r.email || p.email) + ' is already on the Human Hands founding roster. '
+          : 'Your signup is recorded for ' + (r.email || p.email) + '. ') +
+          'Watch your email: one short message from Human Hands asks which tiers and which work you want, ' +
+          'your area, and how you want to be paid. Just reply to that email — one reply finishes your signup. ' +
+          'No more forms, nothing else to fill in.';
+      }
+      if (confirmBox) {
+        confirmBox.hidden = false;
+        confirmBox.scrollIntoView({ block: 'center' });
+      }
+    });
   });
 }
 </script>
