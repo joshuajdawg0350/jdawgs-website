@@ -61,6 +61,11 @@
   .postrow .btn{flex:1 1 220px;min-height:56px;font-size:1rem}
   .stats{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.92rem;color:var(--body)}
   .stats b{color:#fff}
+  .hh-offer{background:linear-gradient(160deg,rgba(57,194,255,.16),var(--panel) 72%);border:2px solid var(--eb);border-radius:10px;padding:1.4rem 1.6rem}
+  .hh-offer h2{color:#fff;font-size:clamp(1.3rem,4.5vw,1.85rem);margin:0 0 .5rem;line-height:1.15}
+  .hh-offer p{margin:0;font-size:.97rem;color:var(--body);max-width:66ch}
+  .hh-offer .claim{display:inline-flex;align-items:center;min-height:44px;margin-top:.9rem;font-weight:700;color:var(--eb-bright);text-decoration:none;font-size:1.02rem}
+  .hh-offer .claim:hover{text-decoration:underline}
   .hh-band{padding:2.8rem 0;border-top:1px solid var(--line)}
   .jobs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.6rem}
   .job{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.4rem;display:flex;flex-direction:column;gap:.55rem}
@@ -166,6 +171,17 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
     </nav>
   </div>
 </header>
+
+<section aria-label="First job free offer" style="padding:1.4rem 0 0">
+  <div class="wrap">
+    <div class="hh-offer">
+      <p class="eyebrow" style="margin:0 0 .4rem">Limited offer · Springfield, MO metro · Businesses only</p>
+      <h2>First business to post a job gets $50 of task work — FREE</h2>
+      <p>The first Springfield-area business to post a real job on Human Hands gets $50 of task work done free. Pickups &amp; deliveries, yard help, moving help, errands, in-person verification visits, restock runs, lockout handoffs, turnover photos — <b style="color:#fff">tasks only, no trade work</b>. Joshua does the job himself or pays the worker himself — either way, you pay $0 for that first job, and there's no fee on it. One per business. First qualifying post claims it — when it's claimed, the offer closes. After that first job, the regular deal stands: you set the price, the worker keeps 100% of the price plus 100% of tips, and a flat 15% on top is the whole cost.</p>
+      <a class="claim" href="#post">Post your job →</a>
+    </div>
+  </div>
+</section>
 
 <section class="hh-top">
   <div class="wrap">
