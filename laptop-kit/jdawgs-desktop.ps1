@@ -6,6 +6,8 @@
 # Windows will not fetch icon pictures from the internet, which is why
 # v1 showed plain Edge logos. Report lists fixed (v1 lost them).
 # Written by Midas for J-Dawgs Industries, 2026-11-15.
+# v2.1 (2026-11-15): alphabetical-order fix - the kit's old shortcuts are
+# deleted first so Windows lays the new ones out A to Z (block below).
 $ErrorActionPreference = 'Continue'
 $Desktop = [Environment]::GetFolderPath('Desktop')
 $IconDir = Join-Path $env:USERPROFILE 'J-Dawgs Icons'
@@ -93,6 +95,31 @@ function Add-App($label, $patterns, $iconFile) {
 Write-Host ''
 Write-Host '  J-DAWGS DESKTOP - putting your icons on the screen...' -ForegroundColor Cyan
 Write-Host ''
+
+# ---- FIRST: CLEAR THE OLD KIT SHORTCUTS (order fix, 2026-11-15) ----
+# Windows remembers where each desktop icon sits and puts an overwritten
+# shortcut right back in its old slot - so re-running this script in A-Z
+# order never re-sorted the screen (icons added in earlier runs, like
+# Moltbook and Screensaver Setup, stayed parked wherever they first
+# landed). Deleting the kit's own shortcuts first makes Windows hand out
+# fresh grid slots in creation order, so creating them A to Z below
+# fills the screen A to Z. Only the kit's own 35 names are touched -
+# Recycle Bin, Microsoft Edge and anything Joshua put there himself
+# stay exactly where they are.
+$KitNames = @(
+  'Acer Care','Agent Services','AI Tool Store','App Store','Arcade','Excel',
+  'Facebook','Fiverr','Freelancer','Gmail','Google Drive','Guru',
+  'Human Hands - Post a Job','Human Hands - Sign Up','Hustle City','Hustle City 2',
+  'J-Dawgs Home','Master Prompt Generator','Messenger','Moltbook','Muse','My Files',
+  'Photos','Prompt Generator','Screensaver Setup','Security','Settings','Stripe',
+  'The Hydrant','Trading Post','Upwork','Venmo','Word','YouTube','YouTube Studio'
+)
+foreach ($kn in $KitNames) {
+  foreach ($ext in '.url', '.lnk') {
+    $old = Join-Path $Desktop ($kn + $ext)
+    if (Test-Path $old) { try { Remove-Item $old -Force } catch {} }
+  }
+}
 
 # ---- EVERYTHING, A TO Z BY NAME (Joshua's order, 2026-11-15) ----
 Add-App 'Acer Care' @('Acer Care*', 'Care Center*', 'AcerCare*') 'acer-care.ico'
