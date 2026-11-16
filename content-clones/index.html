@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+  THE J-DAWGS CONTENT CLONES — sales page
+  Built 2026-11-16 from the J-Dawgs Repertoire starter (house look: chrome/
+  silver + electric blue on near-black). Studio home: ~/workspace/content-clones-studio/
+  NOTE: the four buy buttons carry placeholder hrefs (STRIPE_LINK_*) until the
+  parent wires the processor-verified Stripe URLs. Do not invent Stripe URLs.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The J-Dawgs Content Clones — Your Face. Your Voice. Your Content. | J-Dawgs Industries</title>
+<meta name="description" content="The J-Dawgs Content Clones builds a content clone of you — your face, your voice, your persona — that makes your commercials, posts, and business videos. Built by J-Dawgs Industries, Springfield, Missouri. Launching now.">
+<link rel="canonical" href="https://jdawgsindustries.com/content-clones/">
+<link rel="icon" href="../assets/paw-icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Palette — Hustle Look Kit §1 (repertoire starter, verbatim) + electric blue ===== */
+:root{
+  color-scheme: dark;
+  --bg:#05080e;  --bg2:#0b0f16;
+  --panel:#10151f;  --panel2:#151c29;
+  --line:#263144;  --line2:#33435e;
+  --ink:#eef2f8;  --mut:#9fb0c6;  --dim:#6d7f97;
+  --chrome1:#f7fafc; --chrome2:#b9c7d8; --chrome3:#5f7189; --chrome4:#dfe9f4;
+  --cyan:#39c2ff;  --neon:#39c2ff;  --blue:#0096FF;
+  --gold:#ffd34d;  --green:#3ddc84;
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;
+  background-image:radial-gradient(ellipse 90% 340px at 50% -80px, rgba(0,150,255,.14), transparent 70%);
+}
+.chrome{
+  font-family:Anton,Impact,sans-serif; letter-spacing:.02em;
+  text-transform:uppercase; line-height:.98;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;flex:none}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;white-space:nowrap;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
+.hud{background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:5}
+.hud .spacer{flex:1}
+.ledwell{background:#010204;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--cyan);
+  text-shadow:0 0 8px rgba(57,194,255,.8),0 0 22px rgba(57,194,255,.35);padding:7px 11px;font-size:12px;letter-spacing:.06em;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:420px){.ledwell{font-size:10.5px;padding:6px 8px}.brand .brand-name{font-size:.92rem}}
+main{max-width:1060px;margin:0 auto;padding:18px 12px 8px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+main>*{min-width:0}
+footer{border-top:1px solid var(--line2);background:var(--bg2);padding:14px 12px;font-size:13px;color:var(--mut);display:grid;gap:2px;max-width:1060px;margin:10px auto 0}
+footer .trio{color:var(--ink);font-size:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+h1.chrome{font-size:clamp(30px,8.5vw,52px);margin:0}
+h2.chrome{font-size:clamp(21px,5.5vw,30px);margin:0 0 6px}
+.tagline{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);font-size:12.5px;margin-top:6px}
+.lede{color:var(--mut);font-size:16px;max-width:62ch}
+.lede strong{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);
+  border-radius:10px;padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.02em;min-height:48px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;border-color:#d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+.btn.blue{background:linear-gradient(180deg,#2ea8ff,#0096FF);color:#fff;border-color:#5db9ff;box-shadow:0 4px 18px rgba(0,150,255,.35)}
+.btn.ghost{background:transparent}
+.rows{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.row{display:flex;align-items:center;gap:10px;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+.row .who{font-weight:800;white-space:nowrap}
+.row .what{color:var(--mut);flex:1;min-width:0}
+.hero{display:grid;gap:14px}
+@media(min-width:760px){.hero{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start}}
+.hero img.proof{width:100%;height:auto;border-radius:14px;border:1px solid var(--line2);display:block}
+.figcap{font-size:12.5px;color:var(--dim);margin-top:6px}
+.persona{font-size:17px;font-weight:700;color:var(--ink);border-left:3px solid var(--blue);padding-left:12px;margin:12px 0 4px}
+.searchbar{display:flex;gap:8px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.searchbar input{flex:1;min-width:0;background:var(--bg2);border:1px solid var(--line);border-radius:9px;color:var(--ink);
+  font-family:inherit;font-size:15px;padding:11px 12px;min-height:48px}
+.searchbar input::placeholder{color:var(--dim)}
+.nomatch{display:none;color:var(--mut);font-size:14px;padding:4px 2px}
+.offers{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+@media(min-width:760px){.offers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.offer{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:8px;align-content:start}
+.offer .price{font-family:var(--font-data);font-size:30px;color:var(--cyan)}
+.offer h3{margin:0;font-size:18px}
+.offer p{margin:0;color:var(--mut);font-size:14px}
+.offer .btn{margin-top:4px}
+.steps{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;counter-reset:step}
+.step{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14px;min-width:0}
+.step .n{font-family:var(--font-data);color:var(--blue);font-weight:800;flex:none}
+.step .t{min-width:0}
+.step .t strong{color:var(--ink)}
+.step .t span{color:var(--mut)}
+.qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.qrbox img{background:#fff;border-radius:10px;padding:6px;width:148px;height:148px}
+.qrbox .u{font-family:var(--font-data);color:var(--cyan);word-break:break-all}
+.small{font-size:13px;color:var(--dim)}
+a{color:var(--cyan)}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <a class="brand" href="../index.html" aria-label="J-Dawgs Industries — home">
+    <img src="../assets/paw-icon-192.png" alt="" width="34" height="34">
+    <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+  </a>
+  <div class="spacer"></div>
+  <div class="ledwell">CONTENT CLONES · LAUNCHING NOW</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1 class="chrome">The J-Dawgs Content Clones</h1>
+      <div class="tagline">Your face · Your voice · Your content</div>
+      <p class="lede">We build a <strong>content clone</strong> of you — your face, your voice,
+      your persona — and it makes your content for you: commercials, social posts, and
+      business videos, in your own voice, without you standing in front of a camera every day.</p>
+      <p class="lede">Built only from <strong>your own photos and your own voice</strong>, with your
+      written consent. You approve the clone's face before anything moves, you hear and approve
+      its voice before anything ships, and you see every finished piece first.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+        <a class="btn blue" href="#prices">See the prices</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <img class="proof" src="founder-clone.jpg" width="1376" height="1824"
+           alt="Joshua Dawson's content clone — the studio's first production — in a dark suit, arms crossed, in front of the J-Dawgs Industries sign">
+      <figcaption class="figcap">Production #1: the founder's own clone, built in this studio from his real photo. That's the proof — the first clone we built is our own.</figcaption>
+    </figure>
+  </section>
+
+  <div class="searchbar" role="search">
+    <label for="q" class="small" style="color:var(--mut);font-weight:700">SEARCH</label>
+    <input id="q" type="search" placeholder="Try: price, voice, agent, weekly, consent…" aria-label="Search this page">
+  </div>
+  <p class="nomatch" id="nomatch">Nothing on this page matches that — clear the search to see everything.</p>
+
+  <section class="panel" data-search="founder joshua dawson proof first clone persona construction springfield">
+    <h2 class="chrome">Meet the first clone</h2>
+    <p style="color:var(--mut);margin:6px 0 0">The studio's first production is the founder himself:
+    <strong style="color:var(--ink)">Joshua Dawson</strong>, founder of J-Dawgs Industries, Springfield, Missouri.
+    His clone was built from his real selfie — one careful step, edits only, no shortcuts — and he
+    personally approved the face before a single frame was animated.</p>
+    <p class="persona">"Hardworking construction worker just trying to earn an honest living."</p>
+    <p class="small" style="margin:2px 0 0">— Joshua's own line, the one his clone carries.</p>
+    <p style="color:var(--mut);margin:10px 0 0"><strong style="color:var(--ink)">Honest status:</strong>
+    we're launching now. The founder's clone is built and approved; the voice engine is in final
+    testing on his own recording. We claim no customers we don't have — the first one could be you.</p>
+  </section>
+
+  <section data-search="who for creators business owners agents presence">
+    <h2 class="chrome">Who it's for</h2>
+    <div class="rows" style="margin-top:8px">
+      <div class="row"><span class="who">Creators</span><span class="what">You need to post every day but can't film every day. Your clone can.</span></div>
+      <div class="row"><span class="who">Business owners</span><span class="what">You're the face of your business and can't be in two places at once. Now you can.</span></div>
+      <div class="row"><span class="who">AI agents &amp; their owners</span><span class="what">You need a real human face and voice fronting your posts, ads, and explainers.</span></div>
+    </div>
+  </section>
+
+  <section id="how" data-search="how it works pipeline photos recording consent approve voice clip qa vault">
+    <h2 class="chrome">How it works</h2>
+    <div class="steps" style="margin-top:8px">
+      <div class="step"><span class="n">1</span><span class="t"><strong>You send the real you.</strong> <span>Your own photos, a 2–3 minute recording of your voice reading our script, and your written consent. No consent, no clone — ever.</span></span></div>
+      <div class="step"><span class="n">2</span><span class="t"><strong>We build your face from your photo.</strong> <span>One step from the real photo, then careful edits only — never a copy of a copy, so it stays you.</span></span></div>
+      <div class="step"><span class="n">3</span><span class="t"><strong>You approve the face.</strong> <span>Nothing is animated until you look at the still and say "that's me."</span></span></div>
+      <div class="step"><span class="n">4</span><span class="t"><strong>We build your voice.</strong> <span>Your recording becomes the master; our own license-clean engines clone it, and you hear a test line and approve the voice before full production.</span></span></div>
+      <div class="step"><span class="n">5</span><span class="t"><strong>Your clone goes to work.</strong> <span>It records your approved scripts and we finish the pieces — edited, polished, ready to post.</span></span></div>
+      <div class="step"><span class="n">6</span><span class="t"><strong>You see it first. Then it's vaulted.</strong> <span>Every finished piece passes a full quality check and goes to you before anyone else. The whole production is stored with a tamper-proof fingerprint (SHA-256) so it can always be proven and rebuilt.</span></span></div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <h2 class="chrome">Prices</h2>
+    <p class="small" style="margin:0 0 10px">Flat prices, stated plain. Every package includes the full build: identity, voice, persona, production, and quality check — with your approval at every gate.</p>
+    <div class="offers">
+      <article class="offer" data-search="studio short price 39 short video reel sixty seconds">
+        <h3>Studio Short</h3>
+        <div class="price">$39</div>
+        <p>One short video (up to 60 seconds) — your clone, your voice, edited and finished. The commercial, the post, the pitch.</p>
+        <a class="btn primary" href="STRIPE_LINK_SHORT">Buy Studio Short — $39</a>
+      </article>
+      <article class="offer" data-search="studio long price 129 long video fifteen minutes">
+        <h3>Studio Long</h3>
+        <div class="price">$129</div>
+        <p>One long video (up to 15 minutes) — your clone presenting, explaining, or selling at full length, edited and voiced.</p>
+        <a class="btn primary" href="STRIPE_LINK_LONG">Buy Studio Long — $129</a>
+      </article>
+      <article class="offer" data-search="studio weekly price 249 ten shorts week pack">
+        <h3>Studio Weekly</h3>
+        <div class="price">$249</div>
+        <p>Ten shorts in one week — a full week of content from your clone while you do the real work.</p>
+        <a class="btn primary" href="STRIPE_LINK_WEEKLY">Buy Studio Weekly — $249</a>
+      </article>
+      <article class="offer" data-search="hosted by joshua price 199 founder clone fronts your spot spokesperson">
+        <h3>Hosted by Joshua</h3>
+        <div class="price">$199</div>
+        <p>Joshua's own clone personally fronts your spot — the founder's face and voice on your commercial. The highest-trust product we own.</p>
+        <a class="btn primary" href="STRIPE_LINK_HOSTED">Buy Hosted by Joshua — $199</a>
+      </article>
+    </div>
+    <p class="small" style="margin-top:10px">Questions before you buy, or a bigger job? Email
+    <a href="mailto:joshuajdawg0350@gmail.com">joshuajdawg0350@gmail.com</a> — a person answers.</p>
+  </section>
+
+  <section class="panel" data-search="consent honest rules own face voice approve never impersonate">
+    <h2 class="chrome">The rules we build by</h2>
+    <div class="rows" style="margin-top:8px">
+      <div class="row"><span class="who">Consent first</span><span class="what">A clone is built only from the owner's own photos and voice, with explicit written consent.</span></div>
+      <div class="row"><span class="who">You approve</span><span class="what">The face, the voice, and every finished piece — your yes at every gate, or it doesn't ship.</span></div>
+      <div class="row"><span class="who">Never impersonation</span><span class="what">Your clone says only scripts you've seen. It's never used to fake a live call or conversation.</span></div>
+      <div class="row"><span class="who">Honest claims</span><span class="what">No fake stats, no fake customers, no promises we can't prove. Our proof is production #1 — our own founder.</span></div>
+    </div>
+  </section>
+
+  <section class="panel" data-search="qr scan share page link">
+    <h2 class="chrome">Share this page</h2>
+    <div class="qrbox" style="margin-top:8px">
+      <img src="qr-content-clones.png" width="148" height="148" alt="QR code linking to this page — jdawgsindustries.com/content-clones/">
+      <div>
+        <p style="margin:0 0 4px;color:var(--mut)">Point a phone camera at the code — it opens this exact page.</p>
+        <span class="u">https://jdawgsindustries.com/content-clones/</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></div>
+  <div>The J-Dawgs Content Clones — a J-Dawgs Industries studio, Springfield, Missouri · Contact: <a href="mailto:joshuajdawg0350@gmail.com">joshuajdawg0350@gmail.com</a></div>
+</footer>
+
+<script>
+/* Page search: filters offers, sections and steps by keyword.
+   No-JS / restricted-webview fallback: everything stays visible. */
+(function(){
+  var q = document.getElementById('q'), nomatch = document.getElementById('nomatch');
+  if (!q) return;
+  var blocks = [].slice.call(document.querySelectorAll('[data-search], .offer'));
+  function norm(s){ return (s || '').toLowerCase(); }
+  q.addEventListener('input', function(){
+    var needle = norm(q.value).trim(), any = false;
+    blocks.forEach(function(b){
+      var hay = norm(b.getAttribute('data-search')) + ' ' + norm(b.textContent);
+      var show = !needle || hay.indexOf(needle) !== -1;
+      b.hidden = !show;
+      if (show) any = true;
+    });
+    nomatch.style.display = any ? 'none' : 'block';
+  });
+})();
+</script>
+</body>
+</html>
