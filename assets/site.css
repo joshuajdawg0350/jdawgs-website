@@ -71,6 +71,7 @@ h3{font-size:1.22rem;font-weight:700;line-height:1.3;letter-spacing:-.005em}
 p{margin:.7rem 0}
 .lead{font-size:clamp(1.06rem,1.6vw,1.25rem);line-height:1.6;font-weight:450;color:var(--body)}
 .small{font-size:.875rem}
+.tap-note{font-size:.85rem;color:var(--muted);margin:.55rem 0 0}
 .muted{color:var(--muted)}
 .price,.num{font-variant-numeric:tabular-nums;font-weight:600;color:#fff}
 code,.mono{font-family:var(--font-data);font-size:.92em}
