@@ -8,19 +8,40 @@
     <title>Realism Master Template Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- The webfont stylesheet is injected by script AFTER first paint, never as a
-         blocking <link>: a slow, blocked, or failed font fetch (weak signal, in-app
-         webview) must never hold the page hostage on a black screen. The tool paints
-         and works immediately on system fonts; Oswald/Barlow swap in when they land. -->
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <!-- Fonts are decoration ONLY and must never block the page. A stylesheet
+         <link> in <head> is render-blocking: while it is pending, the browser
+         paints NOTHING — on a phone webview with a stalled connection that is
+         an indefinite pure-black screen under the app title bar (the exact
+         failure reported on 2026-11-17). So there is deliberately NO font
+         <link> in the head at all — not static, not noscript, not injected by
+         this script while the head is still parsing. The loader below runs
+         only after the document has parsed/painted, and inserts the sheet
+         with media="print" (non-blocking), flipping it to "all" only once it
+         has actually loaded. If the font fetch hangs forever, the page simply
+         stays on system fonts, fully painted and fully working. -->
     <script>
       (function () {
-        try {
-          var l = document.createElement("link");
-          l.rel = "stylesheet";
-          l.href = "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap";
-          document.head.appendChild(l);
-        } catch (e) { /* fonts are decoration — the tool works without them */ }
+        var done = false;
+        function loadFonts() {
+          if (done) return;
+          done = true;
+          try {
+            var l = document.createElement("link");
+            l.rel = "stylesheet";
+            l.href = "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap";
+            l.media = "print";
+            l.onload = function () { l.media = "all"; l.onload = null; };
+            document.head.appendChild(l);
+          } catch (e) { /* fonts are decoration — the tool works without them */ }
+        }
+        if (document.readyState === "complete") {
+          setTimeout(loadFonts, 0);
+        } else {
+          window.addEventListener("load", loadFonts);
+          document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(loadFonts, 1500);
+          });
+        }
       })();
     </script>
     <style>
@@ -404,11 +425,39 @@
       .simple-msg { margin: 14px 0 0; font-size: 16.5px; font-weight: 600; color: #ffc46b; }
       .simple-result { margin-top: 18px; border-top: 1px solid var(--line-soft); padding-top: 14px; }
       .made-as { margin: 0 0 8px; font-size: 15.5px; font-weight: 600; color: var(--muted); }
+
+      /* ---------- Microphone dictation ---------- */
+      .mic-row { display: flex; align-items: center; gap: 10px; margin-top: 9px; flex-wrap: wrap; }
+      .mic-btn {
+        min-height: 48px; padding: 9px 18px;
+        display: inline-flex; align-items: center; gap: 9px;
+        border: 1px solid var(--line); border-radius: 999px; cursor: pointer;
+        background: #0c1119; color: var(--ink);
+        font: inherit; font-size: 15px; font-weight: 700;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .mic-btn svg { width: 18px; height: 18px; flex: none; }
+      .mic-btn:active { transform: translateY(1px); }
+      .mic-btn .mic-dot {
+        display: none; width: 9px; height: 9px; border-radius: 50%; flex: none;
+        background: #fff; box-shadow: 0 0 8px rgba(255,255,255,0.8);
+      }
+      .mic-btn.listening {
+        border-color: var(--blue); color: #fff;
+        background: linear-gradient(180deg, #1d6fc4, var(--blue-deep));
+        box-shadow: 0 0 14px rgba(57, 194, 255, 0.4), inset 0 1px 0 rgba(255,255,255,0.25);
+      }
+      .mic-btn.listening .mic-dot { display: block; animation: micpulse 1.1s ease-in-out infinite; }
+      @keyframes micpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+      .mic-note { font-size: 14px; color: var(--muted); margin: 0; }
+      @media (prefers-reduced-motion: reduce) {
+        .mic-btn.listening .mic-dot { animation: none; }
+        .mic-btn:active { transform: none; }
+      }
       [hidden] { display: none !important; }
 
       /* ---------- More options fold ---------- */
       .more-fold { margin-top: 20px; }
-      .more-fold:not([open]) > section { display: none; }
       .more-summary {
         list-style: none; cursor: pointer;
         min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -455,6 +504,10 @@
       <section class="plate" aria-label="Make a prompt">
         <label class="goal-label" for="simpleGoal">What do you want to make?</label>
         <textarea id="simpleGoal" autocomplete="off" placeholder="Type it in your own words — e.g. a short ad for my weekend boot sale, or a picture of King Balsey rolling dice at the corner store"></textarea>
+        <div class="mic-row">
+          <button type="button" class="mic-btn" data-mic-target="simpleGoal" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 19v3"></path></svg><span class="mic-dot" aria-hidden="true"></span><span class="mic-label">Speak it</span></button>
+          <p class="mic-note" role="status"></p>
+        </div>
         <div class="kind-chips" role="group" aria-label="Pick a kind">
           <button type="button" class="kind-chip" data-chip="picture" aria-pressed="false">Picture</button>
           <button type="button" class="kind-chip" data-chip="video" aria-pressed="false">Video</button>
@@ -473,16 +526,18 @@
             <span class="copy-note" id="simpleCopyAllNote"></span>
           </div>
           <nav class="doors-row" aria-label="Next doors">
-            <a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>
+            <a href="https://buy.stripe.com/00waEX3q1d6A1pH7X73kt0W" target="_blank" rel="noopener">Get the full Master — $4.99</a>
             <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
             <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
           </nav>
         </div>
       </section>
 
-      <!-- ============ MORE OPTIONS (everything below works exactly as before) ============ -->
-      <details class="more-fold" id="moreOptions">
-        <summary class="more-summary">More options</summary>
+      <!-- ============ FULL MASTER — the complete generator, on the page, nothing folded away ============ -->
+      <section class="plate" aria-label="Full Master generator">
+        <div class="plate-head"><h2>The Full Master Generator</h2></div>
+        <p class="target-note" style="margin:0;">The complete Master Edition is right here on this page — <b>all 13 modes</b> including the Python Code Generator, the <b>Master Workbench with all 30 engines</b>, the translator, chains and Library 2.0 below. Every mode builds <b>three separate prompts</b>, each with its own Copy button, plus Copy all three.</p>
+      </section>
 
       <!-- ============ MODE ============ -->
       <section class="plate" aria-label="What are you making">
@@ -517,6 +572,10 @@
         <div class="field">
           <label class="field-label" for="subject" id="labelSubject">Core idea</label>
           <textarea id="subject" autocomplete="off" placeholder="e.g. a construction worker in a hard hat, wiping sweat">a construction worker in a hard hat, wiping sweat from his forehead</textarea>
+          <div class="mic-row">
+            <button type="button" class="mic-btn" data-mic-target="subject" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 19v3"></path></svg><span class="mic-dot" aria-hidden="true"></span><span class="mic-label">Speak it</span></button>
+            <p class="mic-note" role="status"></p>
+          </div>
           <p class="hint" id="hintSubject">Anything at all — a person, a product, a scene, a story. The engine builds the prompt around it.</p>
         </div>
 
@@ -740,7 +799,7 @@
         <p class="target-note" id="targetNote"></p>
         <div id="outputs"></div>
         <nav class="doors-row" aria-label="Next doors">
-          <a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>
+          <a href="https://buy.stripe.com/00waEX3q1d6A1pH7X73kt0W" target="_blank" rel="noopener">Get the full Master — $4.99</a>
           <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
           <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
         </nav>
@@ -830,7 +889,7 @@
             <span class="copy-note" id="masterCopyNote"></span>
           </div>
           <nav class="doors-row" aria-label="Next doors">
-            <a href="https://buy.stripe.com/cNi9AT8Kl0jO2tL5OZ3kt0N" target="_blank" rel="noopener">Get the full Master — $2.99</a>
+            <a href="https://buy.stripe.com/00waEX3q1d6A1pH7X73kt0W" target="_blank" rel="noopener">Get the full Master — $4.99</a>
             <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
             <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
           </nav>
@@ -958,7 +1017,6 @@
         <p class="history-empty" id="libEmpty">Nothing in the Library yet. Render something in the Master Workbench and tap <b>Save to Library 2.0</b>.</p>
         <p class="credits-line">Master Edition — by J-Dawgs Industries.</p>
       </section>
-      </details>
 
       <footer>
         <div class="foot-brand">J-Dawgs Industries</div>
@@ -2061,18 +2119,33 @@
               setTimeout(function () { btn.textContent = old; }, 2400);
             }
           }
+          /* In-app webviews often expose the async clipboard API but reject
+             it. Fall back to copying the FULL text through a temporary
+             selected textarea; only if that fails too, select the visible
+             output so the user can long-press copy. */
+          function fallbackCopy() {
+            var ok = false;
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = text;
+              ta.setAttribute("readonly", "");
+              ta.style.position = "fixed";
+              ta.style.top = "0";
+              ta.style.opacity = "0";
+              document.body.appendChild(ta);
+              ta.focus();
+              ta.select();
+              ta.setSelectionRange(0, ta.value.length);
+              ok = document.execCommand("copy");
+              ta.remove();
+            } catch (e) { ok = false; }
+            if (!ok && textEl) selectText(textEl);
+            done(ok);
+          }
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(function () { done(true); }, function () {
-              if (textEl) selectText(textEl);
-              var ok = false;
-              try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
-              done(ok);
-            });
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () { fallbackCopy(); });
           } else {
-            if (textEl) selectText(textEl);
-            var ok2 = false;
-            try { ok2 = document.execCommand("copy"); } catch (e) { ok2 = false; }
-            done(ok2);
+            fallbackCopy();
           }
         }
 
@@ -2590,7 +2663,7 @@
           simpleText = simpleVariantsData.length ? simpleVariantsData[0].text : "";
           applySnapshot(prev);
 
-          $("simpleHeader").textContent = "Made as: " + CHIP_NOUN[chip] + "." + (inferred ? " — change it under More options" : "");
+          $("simpleHeader").textContent = "Made as: " + CHIP_NOUN[chip] + "." + (inferred ? " — the full Master controls are right below" : "");
           var container = $("simpleVariants");
           container.innerHTML = "";
           simpleVariantsData.forEach(function (v) {
@@ -2999,9 +3072,29 @@
             if (noteEl) { noteEl.textContent = ok ? "Copied." : "Copy blocked — select the text above and copy it manually."; noteEl.className = "copy-note " + (ok ? "ok" : "warn"); }
             if (btn) { var old = btn.textContent; btn.textContent = ok ? "Copied ✓" : "Select text above"; setTimeout(function () { btn.textContent = old; }, 2400); }
           }
+          /* Fallback for in-app webviews where the async clipboard API exists
+             but rejects: copy through a temporary selected textarea instead. */
+          function fallbackCopy() {
+            var ok = false;
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = text;
+              ta.setAttribute("readonly", "");
+              ta.style.position = "fixed";
+              ta.style.top = "0";
+              ta.style.opacity = "0";
+              document.body.appendChild(ta);
+              ta.focus();
+              ta.select();
+              ta.setSelectionRange(0, ta.value.length);
+              ok = document.execCommand("copy");
+              ta.remove();
+            } catch (e) { ok = false; }
+            done(ok);
+          }
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
-          } else done(false);
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () { fallbackCopy(); });
+          } else fallbackCopy();
         }
         function download(name, text) {
           var blob = new Blob([text], { type: "application/json" });
@@ -3504,6 +3597,109 @@
         $("critCopyBtn").addEventListener("click", function () {
           if (lastCritique) mCopy(lastCritique, $("critCopyNote"), $("critCopyBtn"));
         });
+      })();
+    </script>
+    <script>
+      /* Microphone dictation (Web Speech API). Fully self-contained and
+         defensive: if speech recognition is missing, blocked, or throws,
+         the buttons explain that in plain words and typing works exactly
+         as before. Nothing here loads anything or blocks the page. */
+      (function () {
+        "use strict";
+        var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        var active = null;
+
+        function noteFor(btn) {
+          return btn.parentNode ? btn.parentNode.querySelector(".mic-note") : null;
+        }
+        function setIdle(btn) {
+          btn.classList.remove("listening");
+          btn.setAttribute("aria-pressed", "false");
+          var label = btn.querySelector(".mic-label");
+          if (label) label.textContent = "Speak it";
+        }
+        function setListening(btn) {
+          btn.classList.add("listening");
+          btn.setAttribute("aria-pressed", "true");
+          var label = btn.querySelector(".mic-label");
+          if (label) label.textContent = "Listening… tap to stop";
+        }
+        function stopActive() {
+          if (!active) return;
+          var session = active;
+          active = null;
+          try { session.rec.stop(); } catch (e) { /* already stopped */ }
+          setIdle(session.btn);
+        }
+        function unavailable(btn) {
+          var note = noteFor(btn);
+          if (note) note.textContent = "Voice isn't available in this browser — typing works as always.";
+        }
+
+        function toggle(btn) {
+          var field = document.getElementById(btn.getAttribute("data-mic-target"));
+          if (!field) return;
+          if (!SR) { unavailable(btn); return; }
+          if (active && active.btn === btn) { stopActive(); return; }
+          stopActive();
+
+          var rec;
+          try { rec = new SR(); } catch (e) { unavailable(btn); return; }
+          try { rec.lang = navigator.language || "en-US"; } catch (e) { /* default lang */ }
+          rec.interimResults = true;
+          rec.continuous = true;
+
+          var base = field.value || "";
+          var finalText = "";
+          var session = { rec: rec, btn: btn };
+          active = session;
+
+          rec.onresult = function (ev) {
+            var interim = "";
+            for (var i = ev.resultIndex; i < ev.results.length; i++) {
+              var r = ev.results[i];
+              if (r.isFinal) { finalText += r[0].transcript; }
+              else { interim += r[0].transcript; }
+            }
+            var spoken = (finalText + interim).replace(/^\s+/, "");
+            var prefix = base;
+            if (prefix && spoken && !/\s$/.test(prefix)) prefix += " ";
+            field.value = prefix + spoken;
+            try { field.dispatchEvent(new Event("input", { bubbles: true })); } catch (e) { /* older webview */ }
+          };
+          rec.onerror = function (ev) {
+            if (active === session) active = null;
+            setIdle(btn);
+            var note = noteFor(btn);
+            if (!note || !ev) return;
+            if (ev.error === "not-allowed" || ev.error === "service-not-allowed") {
+              note.textContent = "The microphone is blocked in this browser — typing works as always.";
+            } else if (ev.error !== "aborted" && ev.error !== "no-speech") {
+              note.textContent = "Voice stopped — typing works as always.";
+            }
+          };
+          rec.onend = function () {
+            if (active === session) active = null;
+            setIdle(btn);
+          };
+
+          var note = noteFor(btn);
+          if (note) note.textContent = "";
+          try {
+            rec.start();
+            setListening(btn);
+          } catch (e) {
+            active = null;
+            unavailable(btn);
+          }
+        }
+
+        var btns = document.querySelectorAll(".mic-btn");
+        for (var i = 0; i < btns.length; i++) {
+          (function (btn) {
+            btn.addEventListener("click", function () { toggle(btn); });
+          })(btns[i]);
+        }
       })();
     </script>
   </body>
