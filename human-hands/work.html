@@ -80,6 +80,16 @@
   .hh-confirm{border:1px solid var(--eb);border-radius:10px;background:linear-gradient(160deg,rgba(57,194,255,.14),var(--panel) 72%);padding:1.4rem 1.6rem;margin:1.6rem 0 .4rem;max-width:560px}
   .hh-confirm-title{font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:#fff;margin:0 0 .4rem}
   .hh-confirm-body{margin:0;max-width:52ch}
+  .hh-manual-block{border:1px solid var(--line-strong);border-radius:10px;background:var(--panel);padding:1.2rem 1.4rem;margin:.9rem 0 .4rem;max-width:560px}
+  .hh-manual-block .mf-label{font-weight:700;color:#fff;margin:0 0 .3rem;font-size:1.02rem}
+  .hh-manual-block .mf-sub{font-size:.9rem;color:var(--muted);margin:0 0 .9rem;max-width:52ch}
+  .hh-manual-form{display:grid;gap:.7rem}
+  .hh-manual-form label{font-size:.85rem;font-weight:600;color:var(--body);display:grid;gap:.3rem}
+  .hh-manual-form label .opt{font-weight:400;color:var(--muted)}
+  .hh-manual-form input{background:var(--bg-2);border:1px solid var(--line-strong);border-radius:8px;color:#fff;padding:.7rem .8rem;font:inherit;font-size:1rem;min-height:48px;width:100%}
+  .hh-manual-form input:focus{outline:2px solid var(--eb);outline-offset:1px;border-color:var(--eb)}
+  .hh-manual-status{font-size:.92rem;margin:.2rem 0 0;color:var(--body)}
+  .hh-manual-status:empty{margin:0}
   @media (max-width:640px){.tiers{grid-template-columns:1fr}.hh-brand span{display:none}.hh-nav{gap:.9rem}}
 </style>
 <style>
@@ -163,6 +173,29 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
       <p class="gg-sub">Tap "Continue with Google" and that is the whole signup — no form, no questions. Your Google email is your roster contact. Right after, one short email asks which work you want — just reply to it and your file is complete.</p>
       <div data-hh-google-btn></div>
       <p class="hh-google-status" data-hh-google-status role="status"></p>
+    </div>
+    <div class="hh-manual-block" id="hh-signup-manual">
+      <p class="mf-label">Google sign-in not working? Sign up with your email instead</p>
+      <p class="mf-sub">Some phones and in-app browsers block the Google button. This form signs you up the same way — your email is your roster contact, and one short email after asks which work you want.</p>
+      <form class="hh-manual-form" id="hh-manual-form" novalidate>
+        <label>Your name
+          <input type="text" name="name" autocomplete="name" required maxlength="120" placeholder="Full name">
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+        </label>
+        <label>City
+          <input type="text" name="city" autocomplete="address-level2" required maxlength="120" placeholder="Springfield, MO">
+        </label>
+        <label>Phone <span class="opt">(optional — job texts reach you faster)</span>
+          <input type="tel" name="phone" autocomplete="tel" maxlength="40" placeholder="(417) 555-0100">
+        </label>
+        <label>What work do you want?
+          <input type="text" name="work_wanted" maxlength="300" placeholder="Property checks, pickups, yard work…">
+        </label>
+        <button type="submit" class="btn btn-primary" id="hh-manual-submit">Sign up with email</button>
+        <p class="hh-manual-status" data-hh-manual-status role="status"></p>
+      </form>
     </div>
     <div class="hh-confirm" id="hh-confirm" hidden>
       <p class="hh-confirm-title">You're in.</p>
@@ -290,6 +323,79 @@ if (window.HHGoogle) {
     });
   });
 }
+</script>
+<script>
+// MANUAL FALLBACK SIGNUP (funnel fix, 2026-11-17): the form above is the
+// second door for browsers where Google sign-in is blocked — Facebook /
+// Instagram in-app browsers and QR-scanner browsers, which is where the
+// recruiting links get tapped. It POSTs to /api/signup-manual; the record
+// lands in the same signup store as the one-tap Google path and the same
+// welcome email follows. Plain DOM only — no storage — so it works in
+// restricted webviews.
+(function () {
+  var form = document.getElementById('hh-manual-form');
+  if (!form) return;
+  var status = document.querySelector('[data-hh-manual-status]');
+  var apiBase = (window.HH_API_BASE || 'https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app').replace(/\/+$/, '');
+  function field(n) {
+    var el = form.elements.namedItem(n);
+    return el ? el.value : '';
+  }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var btn = document.getElementById('hh-manual-submit');
+    var data = {
+      name: field('name'),
+      email: field('email'),
+      city: field('city'),
+      phone: field('phone'),
+      work_wanted: field('work_wanted')
+    };
+    if (btn) btn.disabled = true;
+    if (status) status.textContent = 'Signing you up…';
+    fetch(apiBase + '/api/signup-manual', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (body) {
+        return { ok: r.ok, body: body };
+      });
+    }).then(function (out) {
+      if (btn) btn.disabled = false;
+      if (!out.ok) {
+        if (status) {
+          status.textContent = (out.body && out.body.message) ||
+            'That did not go through — check the form and try once more. If it still fails, email joshuajdawg0350@gmail.com and we will sign you up by hand.';
+        }
+        return;
+      }
+      var block = document.getElementById('hh-signup-manual');
+      if (block) block.hidden = true;
+      var gblock = document.querySelector('[data-hh-google-block]');
+      if (gblock) gblock.hidden = true;
+      var confirmBox = document.getElementById('hh-confirm');
+      var body = document.querySelector('[data-hh-confirm-body]');
+      if (body) {
+        body.textContent = (out.body.duplicate
+          ? 'Good news — ' + (out.body.email || data.email) + ' is already on the Human Hands founding roster. '
+          : 'Your signup is recorded for ' + (out.body.email || data.email) + '. ') +
+          'Watch your email: one short message from Human Hands asks which tiers and which work you want, ' +
+          'your area, and how you want to be paid. Just reply to that email — one reply finishes your signup. ' +
+          'No more forms, nothing else to fill in.';
+      }
+      if (confirmBox) {
+        confirmBox.hidden = false;
+        confirmBox.scrollIntoView({ block: 'center' });
+      }
+    }).catch(function () {
+      if (btn) btn.disabled = false;
+      if (status) {
+        status.textContent = 'That did not go through — please try once more. If it still fails, email joshuajdawg0350@gmail.com and we will sign you up by hand.';
+      }
+    });
+  });
+})();
 </script>
 <script>
 if ('serviceWorker' in navigator) {
