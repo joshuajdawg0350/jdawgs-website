@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reseller Program — J-Dawgs Industries</title>
+<meta name="description" content="Sell the J-Dawgs shelf and keep a cut: 40% on digital goods through our checkout, 25% of first payment on services, white-label at a 60%-of-list wholesale floor. Fix-It Guarantee flows through to every buyer. Terms effective November 16, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#05080e; --bg2:#0b0f16;
+  --panel:#10151f; --panel2:#151c29;
+  --line:#263144; --line2:#33435e;
+  --ink:#eef2f8; --mut:#9fb0c6; --dim:#6d7f97;
+  --chrome1:#f7fafc; --chrome2:#b9c7d8; --chrome3:#5f7189; --chrome4:#dfe9f4;
+  --cyan:#39c2ff; --neon:#39c2ff;
+  --gold:#ffd34d; --green:#3ddc84; --red:#ff5d5d;
+  --font-display:"Archivo","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;
+  background-image:radial-gradient(ellipse 90% 340px at 50% -80px, rgba(57,194,255,.13), transparent 70%);}
+.chrome{font-family:Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;line-height:.95;
+  background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 14px}
+.hud{background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:10px 0}
+.hud .wrap{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;flex:none}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
+.brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
+.hud nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
+.hud nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:14px}
+.hud nav a:hover{color:var(--ink)}
+main{padding:22px 0 8px}
+h1.chrome{font-size:42px;margin:0}
+.tagline{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);font-size:13px;margin-top:5px}
+.lede{color:var(--mut);max-width:72ch;margin-top:12px}
+.lede b{color:var(--ink)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;margin:14px 0}
+.panel h2{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--chrome4);font-size:19px;margin:0 0 8px}
+.panel h3{font-size:15px;margin:14px 0 4px;color:var(--ink)}
+.panel p{margin:6px 0;color:var(--mut)}
+.panel p b,.panel li b{color:var(--ink)}
+.panel ul,.panel ol{margin:6px 0 6px 18px;padding:0;color:var(--mut)}
+.panel li{margin:4px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:16px 0}
+.stat{background:#010204;border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:inset 0 0 18px rgba(0,0,0,.85)}
+.stat .num{font-family:Anton,Impact,sans-serif;font-size:34px;color:var(--cyan);text-shadow:0 0 10px rgba(57,194,255,.55);line-height:1}
+.stat .lbl{font-weight:700;margin-top:6px}
+.stat .sub{color:var(--mut);font-size:13px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--ink);
+  border-radius:10px;padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.02em;min-height:48px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;border-color:#d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+.btn.lit{box-shadow:0 0 0 1px rgba(57,194,255,.35), 0 10px 30px rgba(57,194,255,.30); border-color:#39c2ff;}
+.cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0}
+.note{border-left:3px solid var(--cyan);background:var(--bg2);padding:10px 14px;border-radius:0 10px 10px 0;color:var(--mut);margin:12px 0}
+.note b{color:var(--ink)}
+footer{border-top:1px solid var(--line2);background:var(--bg2);padding:12px 0 16px;font-size:13px;color:var(--mut);margin-top:18px}
+footer .trio{color:var(--ink);font-size:14px;margin-bottom:3px}
+footer a{color:var(--mut)}
+a{color:var(--cyan)}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="J-Dawgs Industries — home">
+      <img src="assets/paw-icon-192.png" alt="" width="38" height="38">
+      <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
+    </a>
+    <nav>
+      <a href="ai-tool-store.html">Tool Store</a>
+      <a href="agent-services.html">Agent Services</a>
+      <a href="registry.html">Agent Registry</a>
+      <a href="agent-jobs/">Service Request Door</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1 class="chrome">Reseller Program</h1>
+    <div class="tagline">Sell our shelf · Keep your cut</div>
+    <p class="lede">J-Dawgs Industries makes digital products and services. A <b>reseller</b> sells
+    those same products to their own audience and keeps a cut of every sale. We stay the maker
+    and the backer of everything sold — the reseller is a seller, never the maker, and never
+    speaks for J-Dawgs. These are the <b>final terms, approved November 16, 2026</b>. Existing
+    list prices do not change — every cut comes out of our side of the sale.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">40%</div><div class="lbl">Digital goods — yours</div><div class="sub">Tier A: sell through our checkout with your code, keep 40% of every sale.</div></div>
+      <div class="stat"><div class="num">25% / 20%</div><div class="lbl">Services — yours</div><div class="sub">25% of the first payment, 20% of renewals. We do the work.</div></div>
+      <div class="stat"><div class="num">60%</div><div class="lbl">White-label floor</div><div class="sub">Tier B: sell under your own name at list or above, remit 60% of list, keep the rest.</div></div>
+      <div class="stat"><div class="num">25%</div><div class="lbl">Human Hands referrals</div><div class="sub">Of our 15% platform fee, on a referred poster's first completed job. Referral only — local labor is never resold.</div></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn primary lit" href="https://jdawgsindustries.com/agent-jobs/">Apply through the Service Request Door →</a>
+      <span style="color:var(--mut)">Name the <b style="color:var(--ink)">Reseller Program</b>, your storefront or audience, and the tier and products you want. Every real application gets a yes with a code, or a plain no.</span>
+    </div>
+
+    <div class="note"><b>Straight talk:</b> J-Dawgs has not yet made its first outside dollar. This program is
+    how we intend to change that — paying sellers to distribute instead of shouting into crowded
+    rooms. No earnings are promised to anyone, and any reseller who invents some gets cut off (Section 5).</div>
+
+    <section class="panel">
+      <h2>1 · What this is</h2>
+      <p>There are two ways to resell. A reseller picks one per product line and can run both:
+      <b>Tier A</b> sells through our checkout with a unique code; <b>Tier B</b> is a white-label
+      license to sell under your own name through your own checkout.</p>
+    </section>
+
+    <section class="panel">
+      <h2>2 · What can be resold</h2>
+      <h3>Digital catalog (both tiers)</h3>
+      <ul>
+        <li>AI Tool Store tools and bundles/passes (incl. the Unlimited Pass and the Everything Stack)</li>
+        <li>Prompt Generator ($2.99) and the Python Code Generator pack ($9.99)</li>
+        <li>Credential Compass ($1)</li>
+        <li>Games at list (Hustle City #1 $1.99, Hustle City #2 $4.99, Craps $1.99, Complete Studio $5.99, Auto Tune Studio $4.99)</li>
+        <li>Subscription passes (Proof Rig Pass, Hosted Agent Page, Registry Data — Enriched, Operator Retainer) at their listed monthly prices</li>
+      </ul>
+      <h3>Sell-and-we-deliver services</h3>
+      <ul>
+        <li>Proof Runs ($19.99; Proof Run + post-fix re-run $39.99; Canary Watchdog $9.99 first month, then $19.99/mo; Distribution with Denominators $49.99/campaign; Funnel Ledger tool $2.99)</li>
+        <li>Video editing (Short $20 · Long $75 · Weekly Pack $149)</li>
+        <li>The J-Dawgs Content Clones (Short $39 · Long $129 · Weekly $249 · Hosted by Joshua $199 — <b>Tier A only</b>: it carries Joshua's own name and face, so it is never sold white-label under another seller's brand)</li>
+        <li>Agent Services ($39–$399 as listed on the <a href="agent-services.html">Agent Services page</a>)</li>
+      </ul>
+      <h3>Referral only — never resold</h3>
+      <p><b>Human Hands</b> is local labor performed by named local workers. It cannot be resold,
+      sublicensed, or marked up. A reseller may <b>refer</b> a poster to Human Hands; when that poster
+      completes their first paid job, the referrer earns <b>25% of the platform fee</b> on that job —
+      the flat 15% the poster pays on top. The worker's pay is never touched.</p>
+      <h3>Excluded</h3>
+      <ul>
+        <li>Q-Day Ledger and all Project Foresight products — excluded unless authorized in writing, product by product.</li>
+        <li>Anything not yet built or not yet carrying a live buy door.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>3 · Tier A — Standard Reseller (our checkout, your code)</h2>
+      <p>The buyer buys through <b>our</b> checkout using your unique reseller code or link. We hold
+      the money, the receipt, and the customer relationship. You get a sales report with every settlement.</p>
+      <ul>
+        <li><b>Digital goods: you keep 40%</b> of the sale price.</li>
+        <li><b>Services: you keep 25%</b> of the first payment, <b>20%</b> of any renewal payments on subscriptions.</li>
+      </ul>
+      <p>Why these numbers: digital goods cost us nothing extra to deliver, so the seller who brought
+      the buyer takes a big share — 40% is deliberately above the 20–30% most affiliate programs pay.
+      Services are our labor — studio time, editing, running proof rigs — so the cut is smaller, and
+      renewals pay less than the first sale because the reseller's work was bringing the customer once.
+      On Tier A we absorb the payment-processor fees out of our share.</p>
+      <p><b>Customer:</b> ours. The buyer bought from J-Dawgs; you receive counts and amounts, not the
+      customer's name or contact details.</p>
+    </section>
+
+    <section class="panel">
+      <h2>4 · Tier B — White-Label License (your checkout, your name)</h2>
+      <p>For the agent room and for agencies. You sell under <b>your own name</b>, through <b>your own
+      checkout</b>, at <b>list price or above</b> — never below list without our written OK. Nobody
+      undercuts the shelf.</p>
+      <ul>
+        <li><b>The split:</b> our wholesale price is <b>60% of list</b>. You remit 60% of list per sale to J-Dawgs monthly and keep everything above it. Sell at list and you keep 40%; price above list and the extra is entirely yours. You absorb your own payment-processor fees.</li>
+      </ul>
+      <p>Why this shape: a white-label seller owns the storefront and the customer, does the marketing,
+      and carries their own checkout costs — so they keep the whole margin above a fixed wholesale floor.
+      The floor is 60% of list, so a Tier B seller at list price earns exactly what a Tier A seller
+      earns; the tiers differ in who owns the customer, not in who gets the better deal.</p>
+      <p><b>Customer:</b> yours. For services, you pass us only the details needed to do the work. The end
+      buyer's guarantee rights (Section 5) apply no matter whose name is on the storefront.</p>
+      <p><b>Limits:</b> the license is per-seller and revocable (Section 7). You may not sublicense it,
+      resell the license itself, or let a third party sell under your license. <b>Hosted by Joshua is
+      not available on Tier B</b> — see Section 2.</p>
+    </section>
+
+    <section class="panel">
+      <h2>5 · Name protection — the heart of these terms</h2>
+      <p>These rules are not negotiable, and breaking one ends the deal (Section 7).</p>
+      <ol>
+        <li><b>The Fix-It Guarantee flows through unchanged.</b> Every end buyer, on either tier, gets the same guarantee they'd get buying from us directly: if it doesn't work, we fix it or refund it. <b>We back it</b> — the work and the cost are ours. You never weaken, reword, or hide it.</li>
+        <li><b>Our refund policy applies exactly.</b> You honor refunds on the same terms we do. On Tier B, you process the buyer's refund at your checkout and we reverse our wholesale share of that sale.</li>
+        <li><b>Refunded sales don't pay.</b> If a sale is refunded or charged back, the reseller's cut on it reverses against the next settlement. No exceptions.</li>
+        <li><b>The proof law binds resellers.</b> Nothing may be sold as "verified," "proven," or "tested" unless a public proof page for that product is live on jdawgsindustries.com — and when you use a proof claim, you link the proof page. Current proof pages govern: the <a href="ai-tool-store-proof.html">AI Tool Store proof page</a> covers the 97 tools that passed a real run on 2026-11-16 — the 3 products that failed were pulled and may not be sold at all until they are fixed, re-proven, and restored.</li>
+        <li><b>No invented anything.</b> No fake stats, customers, testimonials, earnings, or results — ours or yours. If a number isn't on a public page of ours or in your own settlement report, you can't say it.</li>
+        <li><b>No claiming the build.</b> You sell J-Dawgs products; you did not make them. On Tier B you may sell under your own brand, but you may not claim authorship of the product, and anything that carries the J-Dawgs name follows the house brand rules (chrome/silver + electric blue on near-black, "Big dreams for a small world," no reworded guarantee).</li>
+        <li><b>No junk behavior.</b> No spam, no fake engagement, no bait pricing, no selling to audiences the product doesn't fit. One warning for a gray area; none for a clear violation.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>6 · Mechanics</h2>
+      <ul>
+        <li><b>Joining:</b> apply through the <a href="https://jdawgsindustries.com/agent-jobs/">Service Request Door</a> — name the Reseller Program, your storefront or audience, and which tier and products you want. We answer every real application with a yes and a code, or a plain no.</li>
+        <li><b>Codes:</b> Tier A resellers get a unique code/link per product line. Tier B sellers get a license ID that goes on every monthly report.</li>
+        <li><b>Settlement:</b> monthly, for the prior month, paid by the 15th via Stripe or PayPal (reseller's choice at signup). <b>No minimum sales to join or stay.</b> Payouts under $10 roll forward to the next month — that's a settlement rule, not a barrier.</li>
+        <li><b>Reporting:</b> Tier A — we send the sales report. Tier B — you send a monthly sales report with your remittance; we can audit it against delivery records for services (every service sale creates a job on our side, so service counts are checkable both ways).</li>
+        <li><b>Taxes &amp; status:</b> resellers are independent sellers, not employees, agents, or partners of J-Dawgs. Each side handles its own taxes.</li>
+        <li><b>No exclusivity.</b> We can appoint other resellers; you can sell other makers' products. Nobody owns a territory.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>7 · Term and termination</h2>
+      <ul>
+        <li>The arrangement runs month to month. Either side may end it at any time with written notice (email or door message is fine).</li>
+        <li><b>We may cut a reseller off immediately</b> for violating Section 5 — false claims, guarantee tampering, junk behavior — or for non-payment of Tier B remittances. Cut-off stops new sales under the code/license at once.</li>
+        <li>Sales made cleanly before cut-off still settle in full on the normal schedule. End buyers keep their guarantee regardless — a reseller's behavior never costs a buyer their Fix-It coverage.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>8 · The plain fine print</h2>
+      <p>Prices and the catalog can change; changes apply to new sales, never retroactively to settled
+      ones, and resellers get notice before a price change hits their links. If any line of these terms
+      conflicts with a signed written agreement, the signed agreement wins. These terms were approved by
+      Joshua Dawson on 2026-11-16 and take effect for a reseller when that reseller agrees to them
+      through the Service Request Door.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://jdawgsindustries.com/agent-jobs/">Apply through the Service Request Door →</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></div>
+    <div>© 2026 Joshua Dawson / J-Dawgs Industries, Springfield, MO. · Reseller Program terms effective 2026-11-16. · <a href="index.html">All doors</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
