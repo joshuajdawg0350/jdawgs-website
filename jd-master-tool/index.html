@@ -483,6 +483,102 @@
         .chip:active, .btn-chrome:active, .btn-blue:active, .mode-btn:active, .kind-chip:active, .btn-make:active { transform: none; }
         .more-summary::after { transition: none; }
       }
+
+      /* ---------- Desktop fit pass (1024px and up) ----------
+         Laptop screens only: right-size everything a notch — wider centered
+         container, slightly smaller base type, tighter padding, denser grids.
+         Everything below 1024px is untouched and keeps the phone layout. */
+      @media (min-width: 1024px) {
+        body { font-size: 15.5px; line-height: 1.42; }
+        .wrap { max-width: 1080px; padding: 10px 22px 30px; }
+
+        /* Header — compact so the front door fits a 1366x768 viewport */
+        header.brand { padding: 2px 0 2px; }
+        .brand-mark { font-size: 11px; padding: 5px 13px 5px 16px; }
+        h1 { font-size: 44px; margin: 8px 0 4px; }
+        .tagline { font-size: 19px; margin: 1px 0 8px; }
+        .engine-line { font-size: 14.5px; line-height: 1.45; max-width: 780px; margin-bottom: 10px; }
+        .pledges { gap: 6px; }
+        .pledges span { font-size: 12.5px; padding: 5px 10px; }
+
+        /* Panels & cards */
+        .plate { padding: 14px 16px; margin-top: 14px; border-radius: 12px; }
+        .plate-head { margin-bottom: 10px; }
+        .plate-head h2 { font-size: 14px; }
+        .variant { padding: 12px 14px; margin-top: 10px; border-radius: 12px; }
+        .variant-head { margin-bottom: 7px; }
+        .variant-name { font-size: 17px; }
+        .variant-tag { font-size: 13px; }
+        .history-item { padding: 11px 12px; margin-top: 9px; }
+        .history-title { font-size: 15px; }
+        .history-meta { font-size: 12.5px; }
+        .history-actions { margin-top: 7px; gap: 6px; }
+        .history-empty { font-size: 14px; }
+        footer { margin-top: 18px; font-size: 13px; }
+
+        /* Mode grid — denser */
+        .mode-grid { gap: 7px; }
+        .mode-btn { min-height: 48px; padding: 7px 6px; border-radius: 9px; }
+        .mode-btn b { font-size: 13px; }
+        .mode-btn span { font-size: 11.5px; margin-top: 1px; line-height: 1.25; }
+
+        /* Forms — tighter fields, dials and engine lists */
+        .field { margin-bottom: 12px; }
+        label.field-label { font-size: 12.5px; margin-bottom: 5px; }
+        input[type="text"], select, textarea { min-height: 42px; font-size: 15px; padding: 8px 11px; border-radius: 9px; }
+        textarea { min-height: 68px; }
+        select { padding-right: 36px; background-position: right 12px center; }
+        .hint { font-size: 12.5px; margin-top: 4px; }
+        .chips { gap: 6px; margin-top: 7px; }
+        .chip { min-height: 36px; padding: 6px 12px; font-size: 13.5px; }
+        .chips-label { font-size: 12.5px; margin-top: 12px; }
+        .dial-grid { gap: 10px 10px; }
+        .dial-wide { margin-top: 10px; }
+        input[type="range"] { min-height: 36px; }
+        .intensity-val { font-size: 14px; }
+        .master-grid { gap: 10px 10px; }
+
+        /* Locks, buttons, output */
+        .lock-block { margin-top: 12px; padding-top: 10px; }
+        .lock-block p { font-size: 13.5px; }
+        .lock-row { gap: 2px 16px; }
+        .lock { min-height: 36px; font-size: 14px; gap: 7px; }
+        .btn-chrome, .btn-blue { min-height: 42px; padding: 7px 16px; font-size: 14px; border-radius: 9px; }
+        .btn-ghost { min-height: 42px; padding: 7px 13px; font-size: 14px; border-radius: 9px; }
+        .btn-small { min-height: 36px; padding: 6px 11px; font-size: 13px; }
+        .head-buttons { gap: 6px; }
+        .out-block + .out-block { margin-top: 9px; }
+        .out-label { font-size: 11.5px; margin-bottom: 4px; }
+        .out-text { font-size: 14.5px; line-height: 1.5; padding: 9px 11px; }
+        .out-actions { margin-top: 8px; gap: 6px; }
+        .copy-note { font-size: 12.5px; }
+        .target-note { font-size: 13.5px; }
+        .check-list li { padding: 6px 9px; margin-top: 5px; font-size: 14px; }
+        .score-line { font-size: 18px; margin-top: 8px; }
+        .slot-row { margin-top: 6px; }
+        .slot-row label { flex-basis: 130px; font-size: 13.5px; }
+        .slot-row input { min-width: 140px; }
+        .storage-warn { padding: 8px 11px; font-size: 13.5px; }
+        .credits-line { margin-top: 10px; font-size: 13.5px; }
+        .doors-row { gap: 4px 16px; margin-top: 10px; padding-top: 9px; }
+        .doors-row a { font-size: 13.5px; }
+        .toast { font-size: 14px; padding: 10px 18px; bottom: 14px; }
+        .more-fold { margin-top: 14px; }
+        .more-summary { min-height: 50px; padding: 10px 14px; font-size: 14px; }
+
+        /* Front door — goal box, mic, kind chips and Make button, all compact */
+        .goal-label { font-size: 22px; margin-bottom: 8px; }
+        #simpleGoal { min-height: 84px; font-size: 16px; }
+        .mic-row { margin-top: 7px; gap: 8px; }
+        .mic-btn { min-height: 42px; padding: 7px 14px; font-size: 14px; }
+        .mic-note { font-size: 13px; }
+        .kind-chips { gap: 7px; margin-top: 14px; }
+        .kind-chip { min-height: 46px; padding: 9px 16px; font-size: 15.5px; }
+        .btn-make { min-height: 52px; margin-top: 12px; padding: 10px 16px; font-size: 18px; }
+        .simple-msg { margin-top: 10px; font-size: 15px; }
+        .simple-result { margin-top: 12px; padding-top: 10px; }
+        .made-as { font-size: 14px; }
+      }
     </style>
   </head>
   <body>
