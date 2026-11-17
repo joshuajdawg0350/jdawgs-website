@@ -342,11 +342,35 @@
     </div>
     <p class="guarantee"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="support.html">Report a problem</a></p>
     <p class="guarantee"><strong>Refunds:</strong> If it doesn't work and we can't fix it, you get your money back — and 14 days to change your mind on anything digital. Full policy: <a href="refunds.html">https://jdawgsindustries.com/refunds.html</a></p>
+    <div class="jd-list-capture" style="border:1px solid #263144;background:#05080e;padding:16px;margin:18px 0;border-radius:10px">
+      <h3 style="margin:0 0 6px;color:#e8eef7">The J-Dawgs Drop List</h3>
+      <p style="margin:0 0 10px">New tools, price drops, and our published proof results — hits and misses both — straight to your inbox. No spam. No ads. We never sell your information.</p>
+      <form class="jd-list-form" data-source="homepage">
+        <input type="email" name="email" required placeholder="you@example.com" style="padding:10px;width:min(320px,90%);margin:0 8px 8px 0;background:#0b1220;color:#e8eef7;border:1px solid #263144;border-radius:6px">
+        <button type="submit" style="padding:10px 18px;background:#0096FF;color:#fff;border:0;border-radius:6px;cursor:pointer;font-weight:600">Join the list</button>
+        <span class="jd-list-msg" role="status" style="margin-left:8px"></span>
+      </form>
+    </div>
     <p class="tagline"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
     <p class="foot-note">No ads. Nothing on this site tracks you. © 2026 Joshua Dawson · J-Dawgs Industries, Springfield, MO.</p>
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.jd-list-form').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var msg=f.querySelector('.jd-list-msg');
+    var email=f.querySelector('input[type=email]').value.trim();
+    var src=new URLSearchParams(location.search).get('utm_source')||f.getAttribute('data-source')||'direct';
+    msg.textContent='Joining…';
+    fetch('https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:src,page:location.pathname})})
+    .then(function(r){return r.json()})
+    .then(function(d){ if(d.subscribed){ msg.textContent=d.duplicate?"You're already on the list.":"You're in. Watch your inbox."; f.querySelector('input').value=''; } else { msg.textContent='That email did not go through — check it and try again.'; } })
+    .catch(function(){ msg.textContent='Something hiccuped — try again in a minute.'; });
+  });
+});
+</script>
 <script src="assets/site.js" defer></script>
 
 <script>
