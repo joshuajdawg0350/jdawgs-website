@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- Q-Day Ledger™ — public proof page. Built 2026-11-16 from a real run of the
+     shipped buyer package (q-day-ledger-v1.zip, v1.0.1) executed by the seller.
+     Every number on this page comes from that run's captured outputs; the run's
+     artifacts are published under assets/q-day/proof/ for independent inspection.
+     J-Dawgs proof law: hits and misses both, no invented stats. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proof — Q-Day Ledger™ v1.0.1, run end to end | J-Dawgs Industries</title>
+<meta name="description" content="The complete public proof run of Q-Day Ledger v1.0.1: the shipped package, run end to end on its bundled sample target — every output, every miss, published.">
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#05080e; --bg2:#0b0f16;
+    --panel:#10151f; --panel2:#151c29;
+    --line:#263144; --line2:#33435e;
+    --ink:#eef2f8; --mut:#9fb0c6; --dim:#6d7f97;
+    --cyan:#39c2ff;
+    --gold:#ffd34d;
+    --text:#eef2f8; --muted:#9fb0c6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       line-height:1.65;font-size:16.5px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px}
+  header{padding:56px 0 8px}
+  .kicker{color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;
+          font-size:.78rem;font-weight:700;margin:0 0 12px}
+  h1{font-size:2.6rem;line-height:1.12;margin:0 0 8px;color:#fff;font-weight:800}
+  h1 .chrome{
+    font-family:Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;line-height:.95;
+    font-size:clamp(2.6rem,9vw,4.2rem);font-weight:400;
+    background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.15rem;color:var(--mut);margin:0 0 18px}
+  .promises{font-weight:700;color:var(--ink);border-top:1px solid var(--line2);
+            border-bottom:1px solid var(--line2);padding:10px 0;margin:24px 0 8px}
+  .promises span{margin-right:16px;white-space:nowrap}
+  h2{font-size:1.45rem;margin:44px 0 12px;color:var(--ink);
+     font-family:Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;font-weight:400}
+  h3{font-size:1.05rem;margin:22px 0 6px;color:var(--ink)}
+  p,li{color:var(--ink)}
+  .muted{color:var(--mut)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+        padding:16px 18px;margin:14px 0}
+  .card b{color:var(--ink)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+         gap:12px;margin:16px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+        padding:14px 16px;text-align:center}
+  .stat .n{font-size:1.8rem;font-weight:800;color:var(--cyan)}
+  .stat .l{color:var(--mut);font-size:.85rem}
+  .tablewrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+  table.plan{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
+  table.plan th,table.plan td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  table.plan th{background:var(--panel2);color:var(--ink)}
+  .crit{color:#ff7a7a;font-weight:700}.high{color:#ffb35c;font-weight:700}
+  .med{color:#ffd34d;font-weight:700}.low{color:#9fb0c6;font-weight:700}
+  .miss{border:1px solid #6e4a2f;background:#171208;border-radius:14px;padding:16px 18px;margin:14px 0}
+  .miss b{color:#ffb35c}
+  .buy{display:inline-block;text-align:center;text-decoration:none;font-weight:800;
+       border-radius:10px;padding:11px 18px;margin-top:10px;min-height:48px;font-size:15px;letter-spacing:.02em}
+  .buy.primary{background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;
+    border:1px solid #d7e5f2;box-shadow:0 4px 18px rgba(160,195,235,.25)}
+  .buy.secondary{border:1px solid var(--line2);background:var(--panel2);color:var(--cyan)}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;
+         color:var(--mut);font-size:.9rem}
+  a{color:var(--cyan)}
+  code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:.9em}
+  pre.cbom{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+           padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.5;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">J-Dawgs Industries · Proof Page</p>
+    <h1><span class="chrome">Q-Day Ledger™</span></h1>
+    <p class="sub">Proof of work: the shipped product, run end to end — hits and misses published.</p>
+    <div class="promises">
+      <span>No fancy logos. Just quality products.</span>
+      <span>No ads.</span>
+      <span>We never sell your information.</span>
+    </div>
+  </header>
+
+  <h2>What was run, and when</h2>
+  <p>On <b>November 16, 2026</b>, we took the exact file a buyer receives —
+     <code>q-day-ledger-v1.zip</code> (Q-Day Ledger™ <b>v1.0.1</b>, 112,741 bytes,
+     SHA-256 <code>57042e1bb13895e15b24b5b684227da05dfc3e663704bed7b40d00c9b74933c9</code>) —
+     extracted it fresh, and ran it the way the included Quickstart tells a buyer to run it.
+     Nothing was installed: the product is pure Python 3 standard library, zero dependencies.
+     The run machine used Python 3.12.3.</p>
+  <div class="card">
+    <p style="margin:0"><b>Seal check:</b> <code>sha256sum -c MANIFEST.sha256</code> → <b>50 of 50 files OK</b>.<br>
+    <b>Included test suite:</b> <code>python3 -m unittest discover -s tests</code> → <b>26 of 26 tests pass</b>.<br>
+    <b>Demo run:</b> <code>./demo.sh</code> → <b>exit code 0</b>, full pipeline in about 2.5 seconds.</p>
+  </div>
+  <p class="muted">The target is the package's bundled <b>sample target</b> — a synthetic fixture tree
+     (openssl-generated certificates and keys, planted source-code patterns, a sample SBOM) built to
+     exercise all four scanners. This is a real run of the shipped code on a demonstration target.
+     It is <b>not</b> a real company's inventory, and no number on this page comes from a customer —
+     Q-Day Ledger has not yet made its first sale, and we say so plainly.</p>
+
+  <h2>What the run produced</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">37</div><div class="l">cryptographic assets inventoried</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">CRITICAL</div></div>
+    <div class="stat"><div class="n">14</div><div class="l">HIGH</div></div>
+    <div class="stat"><div class="n">12</div><div class="l">MEDIUM</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">LOW</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">harvest-now HIGH exposure</div></div>
+  </div>
+  <p>Nearest governing deadline found: <b>2030-12-31</b>. Planning-estimate effort for the full
+     migration: <b>231 engineer-days</b> (the plan labels these as planning estimates, not quotes).
+     The run wrote all five promised outputs:</p>
+  <ul>
+    <li><b>The CBOM</b> — <code>cbom.cdx.json</code> (58,323 bytes): valid CycloneDX <b>specVersion 1.6</b>,
+        37 components, every one typed <code>cryptographic-asset</code> with full
+        <code>cryptoProperties</code> and per-asset location, scanner, and risk-score properties.
+        <a href="assets/q-day/proof/cbom.cdx.json">Download this run's actual CBOM</a> and open it in any CycloneDX tool.</li>
+    <li><b>The migration plan</b> — every asset mapped to its governing mandate (CNSA 2.0, EO 14412,
+        NIST IR 8547 final, NSM-10), its NIST replacement (ML-KEM / ML-DSA / SLH-DSA), and its deadline,
+        sequenced into four phases. <a href="assets/q-day/proof/migration-plan.md">Read this run's full plan</a>.</li>
+    <li><b>The auditor evidence pack</b> — a ZIP of 8 files: the CBOM, inventory CSV, risk register CSV,
+        migration plan, a procurement questionnaire answered from the inventory itself, a summary, a README,
+        and a SHA-256 manifest. <a href="assets/q-day/proof/evidence-pack.zip">Download this run's evidence pack</a>.</li>
+    <li><b>The visual report</b> — a self-contained HTML report.
+        <a href="assets/q-day/proof/report.html">Open this run's report</a>.</li>
+    <li><b>The inventory store</b> — <code>qday-store.json</code>, the database the other outputs were built from.</li>
+  </ul>
+
+  <h2>The full inventory from this run</h2>
+  <p>Every asset the demo found, with its score (0–100), harvest-now-decrypt-later (HNDL) class,
+     mandated replacement, and deadline — exactly as the migration plan printed it.</p>
+  <div class="tablewrap"><table class="plan">
+    <tr><th>Asset</th><th>Algorithm</th><th>Location</th><th>Risk</th><th>HNDL</th><th>Replacement</th><th>Mandate</th><th>Deadline</th></tr>
+    <tr><td>Signature container firmware-v3.p7s</td><td>RSA</td><td>firmware/firmware-v3.p7s</td><td class="crit">100 CRITICAL</td><td>HIGH</td><td>ML-KEM-768 / ML-DSA-65 (FIPS 203/204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>Certificate legacy.example.internal</td><td>RSA</td><td>certs/server-rsa.pem</td><td class="crit">91 CRITICAL</td><td>HIGH</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>Certificate ec.example.internal</td><td>ECDSA</td><td>certs/server-ec.pem</td><td class="crit">86 CRITICAL</td><td>HIGH</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>Certificate Sample Root CA</td><td>RSA</td><td>certs/root-ca.der</td><td class="crit">86 CRITICAL</td><td>HIGH</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/Service.java:12</td><td class="crit">85 CRITICAL</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/web.js:9</td><td class="crit">80 CRITICAL</td><td>LOW</td><td>ML-KEM-768 (FIPS 203)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>DES in source</td><td>DES</td><td>src/Service.java:16</td><td class="crit">75 CRITICAL</td><td>LOW</td><td>AES-256-GCM</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>SBOM crypto asset</td><td>RSA</td><td>sbom/bom.cdx.json</td><td class="crit">75 CRITICAL</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/app.py:18</td><td class="crit">75 CRITICAL</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/main.go:14</td><td class="crit">75 CRITICAL</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/Service.java:11</td><td class="high">72 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/app.py:5</td><td class="high">72 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>RSA in source</td><td>RSA</td><td>src/web.js:6</td><td class="high">72 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204)</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>ECDH in source</td><td>ECDH</td><td>src/Service.java:19</td><td class="high">70 HIGH</td><td>LOW</td><td>ML-KEM-768 (FIPS 203), hybrid X25519+ML-KEM-768 in transition</td><td>CNSA2-NETWORKING</td><td>2030-12-31</td></tr>
+    <tr><td>Library ecdsa@0.19.0</td><td>ECDSA</td><td>requirements.txt</td><td class="high">70 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>ECDSA in source</td><td>ECDSA</td><td>src/main.go:15</td><td class="high">70 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>ECDSA in source</td><td>ECDSA</td><td>src/web.js:8</td><td class="high">70 HIGH</td><td>LOW</td><td>ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots</td><td>CNSA2-SIGNING</td><td>2030-12-31</td></tr>
+    <tr><td>Library jsencrypt@^3.3.2</td><td>RSA</td><td>package.json</td><td class="high">70 HIGH</td><td>LOW</td><td>ML-KEM-768 (FIPS 203)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>DES in source</td><td>DES</td><td>src/app.py:20</td><td class="high">65 HIGH</td><td>LOW</td><td>AES-256-GCM</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>MD5 in source</td><td>MD5</td><td>src/Service.java:7</td><td class="high">55 HIGH</td><td>LOW</td><td>SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>MD5 in source</td><td>MD5</td><td>src/app.py:10</td><td class="high">55 HIGH</td><td>LOW</td><td>SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>MD5 in source</td><td>MD5</td><td>src/main.go:7</td><td class="high">55 HIGH</td><td>LOW</td><td>SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>SHA-1 in source</td><td>SHA-1</td><td>src/app.py:13</td><td class="high">55 HIGH</td><td>LOW</td><td>SHA-384 or SHA-512 (FIPS 180-4)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>SHA-1 in source</td><td>SHA-1</td><td>src/web.js:5</td><td class="high">55 HIGH</td><td>LOW</td><td>SHA-384 or SHA-512 (FIPS 180-4)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>Firmware image bootloader.bin</td><td>UNKNOWN</td><td>firmware/bootloader.bin</td><td class="med">48 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Firmware image firmware-v3.bin</td><td>UNKNOWN</td><td>firmware/firmware-v3.bin</td><td class="med">48 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Unidentified crypto in source</td><td>UNKNOWN</td><td>src/app.py:23</td><td class="med">43 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Private key (type/size only)</td><td>UNKNOWN</td><td>keys/root-ca.key</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Private key (type/size only)</td><td>UNKNOWN</td><td>keys/server-ec.key</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Private key (type/size only)</td><td>UNKNOWN</td><td>keys/server-rsa.key</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Library crypto-js@^4.2.0</td><td>UNKNOWN</td><td>package.json</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Library pycrypto@2.6.1</td><td>UNKNOWN</td><td>requirements.txt</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>Library openssl@1.1.1w (from SBOM)</td><td>UNKNOWN</td><td>sbom/bom.cdx.json</td><td class="med">35 MEDIUM</td><td>LOW</td><td>Identify the algorithm, then re-score</td><td>—</td><td>—</td></tr>
+    <tr><td>AES-128 in source</td><td>AES-128</td><td>src/app.py:21</td><td class="med">30 MEDIUM</td><td>LOW</td><td>AES-256 (CNSA 2.0 symmetric baseline)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>AES-128 in source</td><td>AES-128</td><td>src/web.js:7</td><td class="med">30 MEDIUM</td><td>LOW</td><td>AES-256 (CNSA 2.0 symmetric baseline)</td><td>IR8547-DEPRECATE</td><td>2030-12-31</td></tr>
+    <tr><td>AES (mode unspecified) in source</td><td>AES</td><td>src/app.py:19</td><td class="med">30 MEDIUM</td><td>LOW</td><td>AES-256</td><td>—</td><td>—</td></tr>
+    <tr><td>SHA-256 in source</td><td>SHA-256</td><td>src/app.py:16</td><td class="low">15 LOW</td><td>LOW</td><td>SHA-384 preferred for new designs (FIPS 180-4)</td><td>—</td><td>—</td></tr>
+  </table></div>
+  <p class="muted">The plan file itself — linked above — is the unedited output of this run;
+     compare any row.</p>
+
+  <h2>Second run: the live TLS scanner, against a real endpoint</h2>
+  <p>The demo exercises the source, certificate, and dependency scanners. To prove the fourth
+     scanner — the live TLS prober — we pointed it at a live TLS endpoint we control
+     (a local <code>openssl s_server</code> presenting a fresh self-signed RSA-2048 certificate).
+     It found <b>2 assets</b>, both scored CRITICAL, and reported the endpoint correctly:</p>
+  <div class="card">
+    <p style="margin:0"><b>TLS key establishment</b> — ECDH, score <b>78</b>: "negotiated TLSv1.3 /
+    TLS_AES_256_GCM_SHA384 (256-bit bulk); versions accepted: TLSv1.2, TLSv1.3" — both correct.<br>
+    <b>Certificate</b> — RSA 2048-bit, score <b>87</b>: signature algorithm sha256WithRSAEncryption and
+    the certificate's validity dates parsed correctly from the DER.</p>
+  </div>
+
+  <h2>The misses — published, not buried</h2>
+  <div class="miss">
+    <p style="margin-top:0"><b>9 of the 37 assets came back "UNKNOWN — identify the algorithm, then re-score."</b>
+    The tool flags what it cannot identify instead of guessing. In this run that was: 2 opaque firmware
+    images (it reports signed vs. unsigned but does not identify the algorithm inside an opaque binary),
+    3 private keys (inventoried by type and size only — key material is never read beyond the header,
+    by design), 3 libraries whose cryptography cannot be determined from a manifest alone
+    (crypto-js, pycrypto, and the sample SBOM's OpenSSL 1.1.1w entry), and 1 unidentified source pattern.</p>
+    <p><b>Our first public-internet TLS probe failed.</b> Probing jdawgsindustries.com:443 from our test
+    sandbox returned a non-TLS response (SSL "wrong version number") — the sandbox's network path, not the
+    endpoint. The tool recorded the failure as an asset — "TLS endpoint unreachable," with the probe error
+    as its evidence — instead of silently passing. The controlled local-endpoint run above is the TLS
+    scanner's verified behavior.</p>
+    <p><b>Phase 3 of the sample plan (the 2031 signature wave) is empty.</b> Correct for this target —
+    no sample asset lands there — and shown as-is rather than padded.</p>
+    <p style="margin-bottom:0"><b>Stated limits of the product itself:</b> the source scanner covers Python,
+    JavaScript/TypeScript, Java, Go, C/C++, and configuration files — other languages are not scanned.
+    The TLS prober sees only endpoints reachable from where it runs. Source and dependency scans list
+    assets in filesystem-walk order (a documented v1.1 cleanup item; scores and deadlines do not depend
+    on listing order). Engineer-day figures are planning estimates. Mandate rules are data files in the
+    package — when a mandate changes, the rules update by editing JSON, and the dates on this page are
+    the ones the shipped v1.0.1 rules carry.</p>
+  </div>
+
+  <h2>Check it yourself, free</h2>
+  <p>The cheapest verification is your own hands. The <a href="q-day-ledger.html">sales page</a> offers the
+     free sample CBOM pack and a <b>free external TLS scan</b> of your company's public endpoints —
+     run by this same prober, reported against the 2030/2035 deadlines, no obligation.
+     If you buy, the <b>Fix-It Guarantee</b> applies: any problem you report gets fixed, and v1.0.0
+     buyers already received v1.0.1 free under it.</p>
+  <p>
+    <a class="buy primary" href="https://buy.stripe.com/dRmeVdgcNaYsectelv3kt0A">Single-Organization — $1,499 one-time</a>
+    <a class="buy secondary" href="q-day-ledger.html">Full product page &amp; all editions</a>
+  </p>
+
+  <footer>
+    <p>Proof run performed 2026-11-16 by J-Dawgs Industries on the shipped v1.0.1 package.
+       Run artifacts: <a href="assets/q-day/proof/cbom.cdx.json">CBOM</a> ·
+       <a href="assets/q-day/proof/migration-plan.md">migration plan</a> ·
+       <a href="assets/q-day/proof/evidence-pack.zip">evidence pack</a> ·
+       <a href="assets/q-day/proof/report.html">report</a>.
+       Product: <a href="q-day-ledger.html">Q-Day Ledger™</a> · Support: <a href="support.html">jdawgsindustries.com/support.html</a><br>
+       © 2026 Joshua Dawson / J-Dawgs Industries, Springfield, Missouri. No fancy logos. Just quality products.</p>
+  </footer>
+</div>
+</body>
+</html>

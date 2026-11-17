@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q-Day Ledger™ — CBOM &amp; Post-Quantum Migration Report</title>
+<style>
+:root{--ink:#101418;--dim:#5a6672;--line:#d8dee5;--bg:#f4f6f8;--card:#ffffff;
+--crit:#b3261e;--high:#c2570b;--med:#8a6d00;--low:#2e7d32;--accent:#0b5394}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,
+'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;background:#101418;color:#fff;padding:14px 20px;z-index:5}
+header h1{font-size:20px;margin:0;letter-spacing:.2px}
+header .sub{color:#aeb9c4;font-size:12px;margin-top:2px}
+.wrap{max-width:1060px;margin:0 auto;padding:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .n{font-size:26px;font-weight:700}.card .l{font-size:11px;color:var(--dim);
+text-transform:uppercase;letter-spacing:.6px}
+h2{font-size:15px;margin:22px 0 8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:10px;overflow:hidden;font-size:13px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--dim);
+padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:7px 10px;border-bottom:1px solid #edf0f3;vertical-align:top}
+tr.asset{cursor:pointer}tr.asset:hover{background:#f0f5fa}
+tr.detail td{background:#fafcfe;color:#33404c;font-size:12px;white-space:pre-wrap}
+.band{font-weight:700;font-size:11px;padding:2px 7px;border-radius:8px;color:#fff;white-space:nowrap}
+.CRITICAL{background:var(--crit)}.HIGH{background:var(--high)}.MEDIUM{background:var(--med)}.LOW{background:var(--low)}
+.phase{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.phase h3{margin:0 0 4px;font-size:14px}.phase p{margin:2px 0;color:var(--dim);font-size:12px}
+footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 12px 34px}
+footer .brand{color:var(--ink);font-weight:700}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+</style></head><body>
+<header><h1>Q-Day Ledger™</h1>
+<div class="sub">Cryptographic Bill of Materials · Post-Quantum Migration Engine · v1.0.1-vault2 · static report</div></header>
+<div class="wrap">
+<div class="cards"><div class="card"><div class="n">37</div><div class="l">crypto assets</div></div><div class="card"><div class="n">10</div><div class="l">critical</div></div><div class="card"><div class="n">14</div><div class="l">high</div></div><div class="card"><div class="n">4</div><div class="l">harvest-now HIGH</div></div><div class="card"><div class="n">2030-12-31</div><div class="l">nearest deadline</div></div><div class="card"><div class="n">231</div><div class="l">est. engineer-days</div></div></div>
+<h2>Asset inventory — tap a row for evidence &amp; replacement</h2>
+<table><tr><th>Risk</th><th>Algorithm</th><th>Context</th><th>Location</th><th>HNDL</th><th>Deadline</th></tr>
+<tr class="asset" onclick="tog('d0')"><td><span class="band CRITICAL">100</span></td><td>RSA</td><td>firmware-signing</td><td class="mono">firmware/firmware-v3.p7s</td><td>HIGH</td><td>2030-12-31</td></tr><tr class="detail" id="d0" style="display:none"><td colspan="6">Asset: Signature container firmware/firmware-v3.p7s
+Type: signature · Scanner: certs · Exposure: embedded · Data lifetime: 10 yr
+Evidence: PKCS#7/CMS signedData=True; algorithms found: sha256WithRSAEncryption; 3600 bytes
+Replacement: ML-KEM-768 / ML-DSA-65 (FIPS 203/204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d1')"><td><span class="band CRITICAL">91</span></td><td>RSA</td><td>certificate</td><td class="mono">certs/server-rsa.pem</td><td>HIGH</td><td>2030-12-31</td></tr><tr class="detail" id="d1" style="display:none"><td colspan="6">Asset: Certificate legacy.example.internal
+Type: certificate · Scanner: certs · Exposure: internal · Data lifetime: 5 yr
+Evidence: subject=legacy.example.internal; issuer=legacy.example.internal; sig=sha256WithRSAEncryption; key=rsaEncryption 2048-bit; valid 2026-11-17 → 2028-11-16
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-KEX, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d2')"><td><span class="band CRITICAL">86</span></td><td>ECDSA</td><td>certificate</td><td class="mono">certs/server-ec.pem</td><td>HIGH</td><td>2030-12-31</td></tr><tr class="detail" id="d2" style="display:none"><td colspan="6">Asset: Certificate ec.example.internal
+Type: certificate · Scanner: certs · Exposure: internal · Data lifetime: 5 yr
+Evidence: subject=ec.example.internal; issuer=ec.example.internal; sig=ecdsa-with-SHA256; key=ecPublicKey P-256; valid 2026-11-17 → 2028-11-16
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-KEX, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d3')"><td><span class="band CRITICAL">86</span></td><td>RSA</td><td>certificate</td><td class="mono">certs/root-ca.der</td><td>HIGH</td><td>2030-12-31</td></tr><tr class="detail" id="d3" style="display:none"><td colspan="6">Asset: Certificate Sample Root CA
+Type: certificate · Scanner: certs · Exposure: internal · Data lifetime: 5 yr
+Evidence: subject=Sample Root CA; issuer=Sample Root CA; sig=sha256WithRSAEncryption; key=rsaEncryption 4096-bit; valid 2026-11-17 → 2036-11-14
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-KEX, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d4')"><td><span class="band CRITICAL">85</span></td><td>RSA</td><td>signature</td><td class="mono">src/Service.java:12</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d4" style="display:none"><td colspan="6">Asset: RSA in src/Service.java
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: kpg.initialize(1024);                                       // RSA-1024 — weak
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d5')"><td><span class="band CRITICAL">80</span></td><td>RSA</td><td>encryption</td><td class="mono">src/web.js:9</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d5" style="display:none"><td colspan="6">Asset: RSA in src/web.js
+Type: algorithm · Scanner: source · Exposure: public · Data lifetime: 0 yr
+Evidence: const enc = new JSEncrypt();                               // browser RSA
+Replacement: ML-KEM-768 (FIPS 203)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d6')"><td><span class="band CRITICAL">75</span></td><td>DES</td><td>encryption</td><td class="mono">src/Service.java:16</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d6" style="display:none"><td colspan="6">Asset: DES in src/Service.java
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: return Cipher.getInstance(&quot;DES/ECB/PKCS5Padding&quot;);         // DES ECB
+Replacement: AES-256-GCM
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d7')"><td><span class="band CRITICAL">75</span></td><td>RSA</td><td>signature</td><td class="mono">sbom/bom.cdx.json</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d7" style="display:none"><td colspan="6">Asset: SBOM crypto asset RSA
+Type: algorithm · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: imported from CycloneDX cryptographic-asset component in sbom/bom.cdx.json
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d8')"><td><span class="band CRITICAL">75</span></td><td>RSA</td><td>signature</td><td class="mono">src/app.py:18</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d8" style="display:none"><td colspan="6">Asset: RSA in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: key = RSA.generate(2048)                           # RSA-2048 keypair
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d9')"><td><span class="band CRITICAL">75</span></td><td>RSA</td><td>signature</td><td class="mono">src/main.go:14</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d9" style="display:none"><td colspan="6">Asset: RSA in src/main.go
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: _, _ = rsa.GenerateKey(rand.Reader, 2048)                // RSA-2048
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d10')"><td><span class="band HIGH">72</span></td><td>RSA</td><td>signature</td><td class="mono">src/Service.java:11</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d10" style="display:none"><td colspan="6">Asset: RSA in src/Service.java
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: KeyPairGenerator kpg = KeyPairGenerator.getInstance(&quot;RSA&quot;);
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d11')"><td><span class="band HIGH">72</span></td><td>RSA</td><td>signature</td><td class="mono">src/app.py:5</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d11" style="display:none"><td colspan="6">Asset: RSA in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: from Crypto.PublicKey import RSA
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d12')"><td><span class="band HIGH">72</span></td><td>RSA</td><td>signature</td><td class="mono">src/web.js:6</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d12" style="display:none"><td colspan="6">Asset: RSA in src/web.js
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: const sign = crypto.createSign(&#x27;RSA-SHA256&#x27;);              // RSA signing
+Replacement: ML-DSA-65 (FIPS 204)
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d13')"><td><span class="band HIGH">70</span></td><td>ECDH</td><td>key-establishment</td><td class="mono">src/Service.java:19</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d13" style="display:none"><td colspan="6">Asset: ECDH in src/Service.java
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: return KeyAgreement.getInstance(&quot;ECDH&quot;);                   // ECDH
+Replacement: ML-KEM-768 (FIPS 203), hybrid X25519+ML-KEM-768 in transition
+Governing mandate: CNSA2-NETWORKING (all: CNSA2-NETWORKING, CNSA2-WEB-CLOUD-OS, EO14412-KEX, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d14')"><td><span class="band HIGH">70</span></td><td>ECDSA</td><td>signature</td><td class="mono">requirements.txt</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d14" style="display:none"><td colspan="6">Asset: Library ecdsa@0.19.0 in requirements.txt
+Type: library · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: Manifest dependency: ecdsa 0.19.0 — Pure-Python ECDSA — Shor-broken; the package itself warns it is not side-channel hardened
+Replacement: ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d15')"><td><span class="band HIGH">70</span></td><td>ECDSA</td><td>signature</td><td class="mono">src/main.go:15</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d15" style="display:none"><td colspan="6">Asset: ECDSA in src/main.go
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: _, _ = ecdsa.GenerateKey(elliptic.P256(), rand.Reader)   // ECDSA P-256
+Replacement: ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d16')"><td><span class="band HIGH">70</span></td><td>ECDSA</td><td>signature</td><td class="mono">src/web.js:8</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d16" style="display:none"><td colspan="6">Asset: ECDSA in src/web.js
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: const { publicKey } = crypto.generateKeyPairSync(&#x27;ec&#x27;, { namedCurve: &#x27;P-256&#x27; }); // ECDSA P-256
+Replacement: ML-DSA-65 (FIPS 204); SLH-DSA (FIPS 205) for long-lived roots
+Governing mandate: CNSA2-SIGNING (all: CNSA2-SIGNING, CNSA2-WEB-CLOUD-OS, EO14412-SIG, IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d17')"><td><span class="band HIGH">70</span></td><td>RSA</td><td>encryption</td><td class="mono">package.json</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d17" style="display:none"><td colspan="6">Asset: Library jsencrypt@^3.3.2 in package.json
+Type: library · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: Manifest dependency: node-rsa ^1.1.1 — Pure-JS RSA implementation — all RSA is Shor-broken; plan ML-KEM/ML-DSA replacement
+Replacement: ML-KEM-768 (FIPS 203)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d18')"><td><span class="band HIGH">65</span></td><td>DES</td><td>encryption</td><td class="mono">src/app.py:20</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d18" style="display:none"><td colspan="6">Asset: DES in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: old_cipher = DES.new(b&quot;12345678&quot;, DES.MODE_ECB)    # DES — broken
+Replacement: AES-256-GCM
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 1</td></tr><tr class="asset" onclick="tog('d19')"><td><span class="band HIGH">55</span></td><td>MD5</td><td>hashing</td><td class="mono">src/Service.java:7</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d19" style="display:none"><td colspan="6">Asset: MD5 in src/Service.java
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: MessageDigest md = MessageDigest.getInstance(&quot;MD5&quot;);       // MD5
+Replacement: SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW) · Phase 1</td></tr><tr class="asset" onclick="tog('d20')"><td><span class="band HIGH">55</span></td><td>MD5</td><td>hashing</td><td class="mono">src/app.py:10</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d20" style="display:none"><td colspan="6">Asset: MD5 in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: return hashlib.md5(data).hexdigest()          # MD5 — broken
+Replacement: SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW) · Phase 1</td></tr><tr class="asset" onclick="tog('d21')"><td><span class="band HIGH">55</span></td><td>MD5</td><td>hashing</td><td class="mono">src/main.go:7</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d21" style="display:none"><td colspan="6">Asset: MD5 in src/main.go
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: &quot;crypto/md5&quot;
+Replacement: SHA-384 or SHA-512 (FIPS 180-4); SHA-3 where required
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW) · Phase 1</td></tr><tr class="asset" onclick="tog('d22')"><td><span class="band HIGH">55</span></td><td>SHA-1</td><td>hashing</td><td class="mono">src/app.py:13</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d22" style="display:none"><td colspan="6">Asset: SHA-1 in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: return hashlib.sha1(data).hexdigest()          # SHA-1 — broken
+Replacement: SHA-384 or SHA-512 (FIPS 180-4)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW) · Phase 1</td></tr><tr class="asset" onclick="tog('d23')"><td><span class="band HIGH">55</span></td><td>SHA-1</td><td>hashing</td><td class="mono">src/web.js:5</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d23" style="display:none"><td colspan="6">Asset: SHA-1 in src/web.js
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: const h = crypto.createHash(&#x27;sha1&#x27;);                       // SHA-1
+Replacement: SHA-384 or SHA-512 (FIPS 180-4)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW) · Phase 1</td></tr><tr class="asset" onclick="tog('d24')"><td><span class="band MEDIUM">48</span></td><td>UNKNOWN</td><td>firmware-signing</td><td class="mono">firmware/bootloader.bin</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d24" style="display:none"><td colspan="6">Asset: Firmware image firmware/bootloader.bin
+Type: related-crypto-material · Scanner: certs · Exposure: embedded · Data lifetime: 10 yr
+Evidence: 1047 bytes; detached signature NOT FOUND — unsigned or embedded signature
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d25')"><td><span class="band MEDIUM">48</span></td><td>UNKNOWN</td><td>firmware-signing</td><td class="mono">firmware/firmware-v3.bin</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d25" style="display:none"><td colspan="6">Asset: Firmware image firmware/firmware-v3.bin
+Type: related-crypto-material · Scanner: certs · Exposure: embedded · Data lifetime: 10 yr
+Evidence: 2069 bytes; detached signature FOUND (sibling file)
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d26')"><td><span class="band MEDIUM">43</span></td><td>UNKNOWN</td><td>tls</td><td class="mono">src/app.py:23</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d26" style="display:none"><td colspan="6">Asset: UNKNOWN in src/app.py
+Type: algorithm · Scanner: source · Exposure: public · Data lifetime: 0 yr
+Evidence: ctx = ssl.SSLContext(ssl.PROTOCOL_TLSv1)           # legacy TLS config
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d27')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>signature</td><td class="mono">keys/root-ca.key</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d27" style="display:none"><td colspan="6">Asset: Private key (PRIVATE KEY) at keys/root-ca.key
+Type: key · Scanner: certs · Exposure: internal · Data lifetime: 0 yr
+Evidence: PEM PRIVATE KEY, RSA 4096-bit — key material NOT read beyond type/size
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d28')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>signature</td><td class="mono">keys/server-ec.key</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d28" style="display:none"><td colspan="6">Asset: Private key (PRIVATE KEY) at keys/server-ec.key
+Type: key · Scanner: certs · Exposure: internal · Data lifetime: 0 yr
+Evidence: PEM PRIVATE KEY, RSA 256-bit — key material NOT read beyond type/size
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d29')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>signature</td><td class="mono">keys/server-rsa.key</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d29" style="display:none"><td colspan="6">Asset: Private key (PRIVATE KEY) at keys/server-rsa.key
+Type: key · Scanner: certs · Exposure: internal · Data lifetime: 0 yr
+Evidence: PEM PRIVATE KEY, RSA 2048-bit — key material NOT read beyond type/size
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d30')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>unknown</td><td class="mono">package.json</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d30" style="display:none"><td colspan="6">Asset: Library crypto-js@^4.2.0 in package.json
+Type: library · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: Manifest dependency: crypto-js ^4.2.0 — CryptoJS exposes MD5/SHA-1/DES/RC4 alongside AES — audit which primitives are actually called
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d31')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>unknown</td><td class="mono">requirements.txt</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d31" style="display:none"><td colspan="6">Asset: Library pycrypto@2.6.1 in requirements.txt
+Type: library · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: Manifest dependency: pycrypto 2.6.1 — PyCrypto is UNMAINTAINED (last release 2013) and exposes DES/RC4/RSA — replace outright
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d32')"><td><span class="band MEDIUM">35</span></td><td>UNKNOWN</td><td>unknown</td><td class="mono">sbom/bom.cdx.json</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d32" style="display:none"><td colspan="6">Asset: Library openssl@1.1.1w in sbom/bom.cdx.json
+Type: library · Scanner: deps · Exposure: internal · Data lifetime: 0 yr
+Evidence: SBOM dependency: openssl 1.1.1w — OpenSSL — versions before 3.5 carry NO FIPS 203/204/205 algorithms; 1.1.1 is end-of-life AND pre-PQC | Pre-3.5 OpenSSL: no ML-KEM/ML-DSA/SLH-DSA available — upgrade is step zero of any migration plan
+Replacement: Identify the algorithm, then re-score
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d33')"><td><span class="band MEDIUM">30</span></td><td>AES</td><td>encryption</td><td class="mono">src/app.py:19</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d33" style="display:none"><td colspan="6">Asset: AES in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: cipher = AES.new(b&quot;0&quot; * 16, AES.MODE_CBC)          # AES, CBC mode
+Replacement: AES-256
+Governing mandate: — (all: —) · Phase 4</td></tr><tr class="asset" onclick="tog('d34')"><td><span class="band MEDIUM">30</span></td><td>AES-128</td><td>encryption</td><td class="mono">src/app.py:21</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d34" style="display:none"><td colspan="6">Asset: AES-128 in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: token_box = Fernet(Fernet.generate_key())          # Fernet (AES-128-CBC + HMAC)
+Replacement: AES-256 (CNSA 2.0 symmetric baseline)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d35')"><td><span class="band MEDIUM">30</span></td><td>AES-128</td><td>encryption</td><td class="mono">src/web.js:7</td><td>LOW</td><td>2030-12-31</td></tr><tr class="detail" id="d35" style="display:none"><td colspan="6">Asset: AES-128 in src/web.js
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: const c = crypto.createCipheriv(&#x27;aes-128-cbc&#x27;, key, iv);   // AES-128 CBC
+Replacement: AES-256 (CNSA 2.0 symmetric baseline)
+Governing mandate: IR8547-DEPRECATE (all: IR8547-DEPRECATE, IR8547-DISALLOW, NSM10-COMPLETE) · Phase 2</td></tr><tr class="asset" onclick="tog('d36')"><td><span class="band LOW">15</span></td><td>SHA-256</td><td>hashing</td><td class="mono">src/app.py:16</td><td>LOW</td><td>—</td></tr><tr class="detail" id="d36" style="display:none"><td colspan="6">Asset: SHA-256 in src/app.py
+Type: algorithm · Scanner: source · Exposure: internal · Data lifetime: 0 yr
+Evidence: return hashlib.sha256(data).hexdigest()        # SHA-256 — acceptable
+Replacement: SHA-384 preferred for new designs (FIPS 180-4)
+Governing mandate: — (all: —) · Phase 4</td></tr>
+</table>
+<h2>Migration plan</h2>
+<div class="phase"><h3>Phase 1 — Fix first — broken &amp; harvest-now-critical · 16 items · ~84 days</h3><p>Start now; complete within 12 months</p><p>Classically broken primitives and HIGH harvest-now-decrypt-later exposure are already late — no mandate date required.</p></div><div class="phase"><h3>Phase 2 — The 2030 wall · 10 items · ~56 days</h3><p>Complete by 2030-12-31</p><p>CNSA 2.0 exclusive-use (signing, networking) · EO 14412 key establishment · NIST IR 8547 deprecation of classical public-key crypto at every approved strength.</p></div><div class="phase"><h3>Phase 3 — The 2031 signature wave · 0 items · ~0 days</h3><p>Complete by 2031-12-31</p><p>EO 14412 digital-signature migration; remaining HIGH-risk items.</p></div><div class="phase"><h3>Phase 4 — Completion &amp; standardization (2033–2035) · 11 items · ~91 days</h3><p>Complete by 2035-12-31</p><p>CNSA 2.0 web/cloud/OS exclusive-use (2033) · IR 8547 disallowance &amp; NSM-10 completion (2035) · AES-256 / SHA-384 standardization.</p></div>
+</div>
+<footer>
+<div class="brand">No fancy logos. Just quality products.</div>
+No ads.<br>
+Q-Day Ledger™ · A Project Foresight™ build · © 2026 Joshua Dawson / J-Dawgs Industries<br>
+Local-first: this report was generated on the operator's own machine. No data left it.
+</footer>
+<script>
+function tog(id){var r=document.getElementById(id);r.style.display=(r.style.display=='none')?'':'none';}
+</script>
+</body></html>

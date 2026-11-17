@@ -1,0 +1,2285 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e30c9e23-6f05-44b9-b0ee-91e4e20bab9d",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "J-Dawgs Industries",
+        "name": "Q-Day Ledger",
+        "version": "1.0.1-vault2"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "operations"
+      }
+    ],
+    "properties": [
+      {
+        "name": "qday:copyright",
+        "value": "\u00a9 2026 Joshua Dawson / J-Dawgs Industries"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-31500f0c6e484808",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "mode": "cbc",
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:19"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "30"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:19"
+        }
+      },
+      "description": "cipher = AES.new(b\"0\" * 16, AES.MODE_CBC)          # AES, CBC mode"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-aa09ff5e15cb4c1a",
+      "name": "AES-128",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:21"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "30"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:21"
+        }
+      },
+      "description": "token_box = Fernet(Fernet.generate_key())          # Fernet (AES-128-CBC + HMAC)"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-6f4538ce1c1447f0",
+      "name": "AES-128",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "parameterSetIdentifier": "128",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "mode": "cbc",
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/web.js:7"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "30"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/web.js:7"
+        }
+      },
+      "description": "const c = crypto.createCipheriv('aes-128-cbc', key, iv);   // AES-128 CBC"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-3e3b6f064b114b44",
+      "name": "Certificate Sample Root CA",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "4096",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "certificate"
+          ]
+        },
+        "certificateProperties": {
+          "subjectName": "Sample Root CA",
+          "issuerName": "Sample Root CA",
+          "notValidBefore": "2026-11-17T00:00:00Z",
+          "notValidAfter": "2036-11-14T00:00:00Z",
+          "signatureAlgorithmRef": "crypto-asset-8e8effe086eb40d1",
+          "certificateFormat": "X.509",
+          "certificateExtension": "der/pem"
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "certs/root-ca.der"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "86"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "5.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "certs/root-ca.der"
+        }
+      },
+      "description": "subject=Sample Root CA; issuer=Sample Root CA; sig=sha256WithRSAEncryption; key=rsaEncryption 4096-bit; valid 2026-11-17 \u2192 2036-11-14"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-79196afb8e7a4f00",
+      "name": "Certificate ec.example.internal",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "P-256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "certificate"
+          ]
+        },
+        "certificateProperties": {
+          "subjectName": "ec.example.internal",
+          "issuerName": "ec.example.internal",
+          "notValidBefore": "2026-11-17T00:00:00Z",
+          "notValidAfter": "2028-11-16T00:00:00Z",
+          "signatureAlgorithmRef": "crypto-asset-cb09cde233984665",
+          "certificateFormat": "X.509",
+          "certificateExtension": "der/pem"
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "certs/server-ec.pem"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "86"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "5.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "certs/server-ec.pem"
+        }
+      },
+      "description": "subject=ec.example.internal; issuer=ec.example.internal; sig=ecdsa-with-SHA256; key=ecPublicKey P-256; valid 2026-11-17 \u2192 2028-11-16"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-1ab25ed528df4da3",
+      "name": "Certificate legacy.example.internal",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "2048",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "certificate"
+          ]
+        },
+        "certificateProperties": {
+          "subjectName": "legacy.example.internal",
+          "issuerName": "legacy.example.internal",
+          "notValidBefore": "2026-11-17T00:00:00Z",
+          "notValidAfter": "2028-11-16T00:00:00Z",
+          "signatureAlgorithmRef": "crypto-asset-8e8effe086eb40d1",
+          "certificateFormat": "X.509",
+          "certificateExtension": "der/pem"
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "certs/server-rsa.pem"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "91"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "5.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "certs/server-rsa.pem"
+        }
+      },
+      "description": "subject=legacy.example.internal; issuer=legacy.example.internal; sig=sha256WithRSAEncryption; key=rsaEncryption 2048-bit; valid 2026-11-17 \u2192 2028-11-16"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-a6ba404593f34c5f",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "mode": "ecb",
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/Service.java:16"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "75"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/Service.java:16"
+        }
+      },
+      "description": "return Cipher.getInstance(\"DES/ECB/PKCS5Padding\");         // DES ECB"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-a389f14cd7394935",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:20"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "65"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:20"
+        }
+      },
+      "description": "old_cipher = DES.new(b\"12345678\", DES.MODE_ECB)    # DES \u2014 broken"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-6ff570e968e34ddd",
+      "name": "ECDH",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-exchange",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "key-establishment"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/Service.java:19"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "70"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-NETWORKING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/Service.java:19"
+        }
+      },
+      "description": "return KeyAgreement.getInstance(\"ECDH\");                   // ECDH"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-3311558829164872",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "P-256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/main.go:15"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "70"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/main.go:15"
+        }
+      },
+      "description": "_, _ = ecdsa.GenerateKey(elliptic.P256(), rand.Reader)   // ECDSA P-256"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-cb09cde233984665",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "P-256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/web.js:8"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "70"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/web.js:8"
+        }
+      },
+      "description": "const { publicKey } = crypto.generateKeyPairSync('ec', { namedCurve: 'P-256' }); // ECDSA P-256"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-439049dfe6ae4649",
+      "name": "Firmware image firmware/bootloader.bin",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "firmware-signing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "firmware/bootloader.bin"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "48"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "10.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "firmware/bootloader.bin"
+        }
+      },
+      "description": "1047 bytes; detached signature NOT FOUND \u2014 unsigned or embedded signature"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-dc44082c7e5a47ad",
+      "name": "Firmware image firmware/firmware-v3.bin",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "firmware-signing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "firmware/firmware-v3.bin"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "48"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "10.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "firmware/firmware-v3.bin"
+        }
+      },
+      "description": "2069 bytes; detached signature FOUND (sibling file)"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-5ac7d60e9cb54baf",
+      "name": "Library crypto-js@^4.2.0 in package.json",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "other",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": []
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "package.json"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "package.json"
+        }
+      },
+      "description": "Manifest dependency: crypto-js ^4.2.0 \u2014 CryptoJS exposes MD5/SHA-1/DES/RC4 alongside AES \u2014 audit which primitives are actually called"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-aebfd9399c704cbf",
+      "name": "Library ecdsa@0.19.0 in requirements.txt",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "requirements.txt"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "70"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "requirements.txt"
+        }
+      },
+      "description": "Manifest dependency: ecdsa 0.19.0 \u2014 Pure-Python ECDSA \u2014 Shor-broken; the package itself warns it is not side-channel hardened"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-b2d4111ff35249b6",
+      "name": "Library jsencrypt@^3.3.2 in package.json",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "package.json"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "70"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "package.json"
+        }
+      },
+      "description": "Manifest dependency: node-rsa ^1.1.1 \u2014 Pure-JS RSA implementation \u2014 all RSA is Shor-broken; plan ML-KEM/ML-DSA replacement"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-d9e3de59f74c4551",
+      "name": "Library openssl@1.1.1w in sbom/bom.cdx.json",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "other",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": []
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "sbom/bom.cdx.json"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "sbom/bom.cdx.json"
+        }
+      },
+      "description": "SBOM dependency: openssl 1.1.1w \u2014 OpenSSL \u2014 versions before 3.5 carry NO FIPS 203/204/205 algorithms; 1.1.1 is end-of-life AND pre-PQC | Pre-3.5 OpenSSL: no ML-KEM/ML-DSA/SLH-DSA available \u2014 upgrade is step zero of any migration plan"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-874f9784a0af4472",
+      "name": "Library pycrypto@2.6.1 in requirements.txt",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "other",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": []
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "requirements.txt"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "requirements.txt"
+        }
+      },
+      "description": "Manifest dependency: pycrypto 2.6.1 \u2014 PyCrypto is UNMAINTAINED (last release 2013) and exposes DES/RC4/RSA \u2014 replace outright"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-3b02fc8472774378",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/Service.java:7"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "55"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/Service.java:7"
+        }
+      },
+      "description": "MessageDigest md = MessageDigest.getInstance(\"MD5\");       // MD5"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-5fec933809eb407e",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:10"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "55"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:10"
+        }
+      },
+      "description": "return hashlib.md5(data).hexdigest()          # MD5 \u2014 broken"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-9927fbb29b1c4986",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/main.go:7"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "55"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/main.go:7"
+        }
+      },
+      "description": "\"crypto/md5\""
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-bdbfa26baede44c4",
+      "name": "Private key (PRIVATE KEY) at keys/root-ca.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "4096",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "keys/root-ca.key"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "keys/root-ca.key"
+        }
+      },
+      "description": "PEM PRIVATE KEY, RSA 4096-bit \u2014 key material NOT read beyond type/size"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-5f3f0871dd604e11",
+      "name": "Private key (PRIVATE KEY) at keys/server-ec.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "keys/server-ec.key"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "keys/server-ec.key"
+        }
+      },
+      "description": "PEM PRIVATE KEY, RSA 256-bit \u2014 key material NOT read beyond type/size"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-337b677a081e43fd",
+      "name": "Private key (PRIVATE KEY) at keys/server-rsa.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "2048",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "keys/server-rsa.key"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "35"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "keys/server-rsa.key"
+        }
+      },
+      "description": "PEM PRIVATE KEY, RSA 2048-bit \u2014 key material NOT read beyond type/size"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-d146abd230c44fef",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/Service.java:11"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "72"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/Service.java:11"
+        }
+      },
+      "description": "KeyPairGenerator kpg = KeyPairGenerator.getInstance(\"RSA\");"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-6a512a5ecd4341e5",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "1024",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/Service.java:12"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "85"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/Service.java:12"
+        }
+      },
+      "description": "kpg.initialize(1024);                                       // RSA-1024 \u2014 weak"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-8e8effe086eb40d1",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:5"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "72"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:5"
+        }
+      },
+      "description": "from Crypto.PublicKey import RSA"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-e960473ee30e4cae",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "2048",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:18"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "75"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:18"
+        }
+      },
+      "description": "key = RSA.generate(2048)                           # RSA-2048 keypair"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-ed73306dfe594838",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "2048",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/main.go:14"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "75"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/main.go:14"
+        }
+      },
+      "description": "_, _ = rsa.GenerateKey(rand.Reader, 2048)                // RSA-2048"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-4e35ebb076e043c4",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/web.js:6"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "72"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/web.js:6"
+        }
+      },
+      "description": "const sign = crypto.createSign('RSA-SHA256');              // RSA signing"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-df6dfa43ffca4269",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "encryption",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "encryption"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/web.js:9"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "80"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/web.js:9"
+        }
+      },
+      "description": "const enc = new JSEncrypt();                               // browser RSA"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-1875c19c76fc49c0",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "2048",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "signature"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "sbom/bom.cdx.json"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "deps"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "75"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "sbom/bom.cdx.json"
+        }
+      },
+      "description": "imported from CycloneDX cryptographic-asset component in sbom/bom.cdx.json"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-9a9bfbf2f8564734",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:13"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "55"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:13"
+        }
+      },
+      "description": "return hashlib.sha1(data).hexdigest()          # SHA-1 \u2014 broken"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-c5ddba31e3ec4c39",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/web.js:5"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "55"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "IR8547-DEPRECATE"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/web.js:5"
+        }
+      },
+      "description": "const h = crypto.createHash('sha1');                       // SHA-1"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-1263e634b12f44ae",
+      "name": "SHA-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "hashing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:16"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "15"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:16"
+        }
+      },
+      "description": "return hashlib.sha256(data).hexdigest()        # SHA-256 \u2014 acceptable"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-d4e18f391df24528",
+      "name": "Signature container firmware/firmware-v3.p7s",
+      "cryptoProperties": {
+        "assetType": "signature",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "firmware-signing"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "firmware/firmware-v3.p7s"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "certs"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "100"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "CRITICAL"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "HIGH"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": "CNSA2-SIGNING"
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": "2030-12-31"
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "10.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "firmware/firmware-v3.p7s"
+        }
+      },
+      "description": "PKCS#7/CMS signedData=True; algorithms found: sha256WithRSAEncryption; 3600 bytes"
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-bad7582f7f1b4a13",
+      "name": "UNKNOWN",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "other",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "tls"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "qday:location",
+          "value": "src/app.py:23"
+        },
+        {
+          "name": "qday:scanner",
+          "value": "source"
+        },
+        {
+          "name": "qday:risk-score",
+          "value": "43"
+        },
+        {
+          "name": "qday:risk-band",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "qday:hndl-class",
+          "value": "LOW"
+        },
+        {
+          "name": "qday:governing-mandate",
+          "value": ""
+        },
+        {
+          "name": "qday:governing-deadline",
+          "value": ""
+        },
+        {
+          "name": "qday:data-lifetime-years",
+          "value": "0.0"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "location",
+          "concludedValue": "src/app.py:23"
+        }
+      },
+      "description": "ctx = ssl.SSLContext(ssl.PROTOCOL_TLSv1)           # legacy TLS config"
+    }
+  ]
+}
