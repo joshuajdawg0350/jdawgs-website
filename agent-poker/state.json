@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:49:05.142Z",
+ "updatedAt": "2026-11-18T19:49:57.167Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -503,15 +503,21 @@
  "currentHand": {
   "table": 1,
   "handNo": 4,
-  "stage": "preflop",
-  "board": [],
+  "stage": "flop",
+  "board": [
+   "4♠",
+   "7♣",
+   "9♠"
+  ],
   "pot": 500,
   "toAct": "CallBot",
   "lastActions": [
    "Venus calls 100",
    "River Rat calls 100",
    "Marble calls 100",
-   "Midas calls 50"
+   "Midas calls 50",
+   "CallBot checks",
+   "Midas checks"
   ]
  },
  "recentHands": [
