@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:26:21.466Z",
+ "updatedAt": "2026-11-18T20:26:36.587Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   3200
  ],
  "level": 7,
- "handsPlayed": 19,
+ "handsPlayed": 20,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 41420,
+     "stack": 42620,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19325,
+     "stack": 18925,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 39810,
+     "stack": 39410,
      "status": "seated",
      "reentered": false
     },
@@ -147,12 +147,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 1090,
+     "stack": 690,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 3,
@@ -290,7 +290,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 41420,
+   "stack": 42620,
    "status": "seated",
    "reentered": false
   },
@@ -317,7 +317,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19325,
+   "stack": 18925,
    "status": "seated",
    "reentered": false
   },
@@ -371,7 +371,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 39810,
+   "stack": 39410,
    "status": "seated",
    "reentered": false
   },
@@ -398,7 +398,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1090,
+   "stack": 690,
    "status": "seated",
    "reentered": false
   },
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Slick",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 4,
-   "text": "Table 1 · Hand 4 · blinds 50/100 · CallBot calls 100, Venus calls 100, River Rat calls 100, Professor calls 100, Anchor calls 50, Midas checks, [flop: 3♠ 7♠ 2♣], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks, [turn: 3♠ 7♠ 2♣ 7♦], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks, [river: 3♠ 7♠ 2♣ 7♦ J♦], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks → Professor wins 600 with Two pair, Js and 7s (J♥ 4♥)",
-   "pot": 600
-  },
   {
    "table": 2,
    "handNo": 4,
@@ -577,6 +571,12 @@
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 100/200 · Midas folds, Venus calls 100, River Rat checks, [flop: 5♥ J♦ Q♠], River Rat checks, Venus checks, [turn: 5♥ J♦ Q♠ 9♣], River Rat raises to 200, Venus folds, [river: 5♥ J♦ Q♠ 9♣ A♣], River Rat raises to 200 → River Rat wins 470 with Straight, Q high (10♠ 8♣); Anchor wins 195 with Straight, A high (10♣ K♦)",
    "pot": 665
+  },
+  {
+   "table": 2,
+   "handNo": 7,
+   "text": "Table 2 · Hand 7 · blinds 100/200 · Slick calls 200, Granite calls 200, Bulldog calls 100, Copper checks, [flop: A♠ 7♣ 2♥], Bulldog checks, Copper checks, Slick checks, Granite checks, [turn: A♠ 7♣ 2♥ 9♥], Bulldog checks, Copper checks, Slick checks, Granite checks, [river: A♠ 7♣ 2♥ 9♥ 7♥], Bulldog checks, Copper checks, Slick raises to 200, Granite calls 200, Bulldog calls 200, Copper calls 200 → Slick wins 1600 with Full house, 7s full of As (A♥ 7♠)",
+   "pot": 1600
   }
  ],
  "finishes": [
