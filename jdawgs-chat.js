@@ -1,4 +1,6 @@
 /* J-Dawgs live chat widget — one file, every page.
+   Face of the chat: Little Bot, the chrome robot from our own
+   Free Wallpapers page. Face only — plumbing is unchanged.
    House look (Repertoire starter palette): near-black panels, chrome
    button, electric blue #0096FF accent. No libraries, no framework.
    Storage is sessionStorage behind try/catch with an in-memory fallback
@@ -12,6 +14,23 @@
 
   var API = 'https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/chat';
   var POLL_MS = 5000;
+
+  /* Little Bot face assets live next to this script (site root assets/).
+     Resolve from the script's own URL so subdirectory pages work too. */
+  var SCRIPT_BASE = '/';
+  try {
+    var cs = document.currentScript;
+    if (cs && cs.src) SCRIPT_BASE = cs.src.replace(/[^/]*(\?.*)?$/, '');
+  } catch (e) { /* keep root fallback */ }
+  var AVATAR = SCRIPT_BASE + 'assets/little-bot-avatar.webp';
+  var WELCOME = SCRIPT_BASE + 'assets/little-bot-welcome.webp';
+  var IS_STORE = /(^|\.)digitaldollarstore\.org$/i.test(window.location.hostname);
+  var GREETING = IS_STORE
+    ? "Hi! I'm Little Bot \u{1F916} — ask me anything about the store. A human (well, Midas) reads everything I can't handle, right away."
+    : "Hi! I'm Little Bot \u{1F916} — ask me anything about J-Dawgs, our products, or Human Hands jobs. A human (well, Midas) reads everything I can't handle, right away.";
+  var SUBTITLE = IS_STORE
+    ? 'Digital Dollar Store help — answers right here'
+    : 'J-Dawgs help — answers right here';
 
   var mem = {};
   function storeGet(k) {
@@ -36,7 +55,9 @@
     'min-height:48px;padding:11px 18px;border-radius:99px;border:1px solid #d7e5f2;cursor:pointer;',
     'background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font:800 15px/1.2 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;',
     'box-shadow:0 6px 24px rgba(0,0,0,.5),0 0 0 1px rgba(0,150,255,.25)}',
-    '#jdchat-btn .jdchat-dot{width:9px;height:9px;border-radius:50%;background:#0096FF;box-shadow:0 0 8px rgba(0,150,255,.9)}',
+    '#jdchat-btn .jdchat-face{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid #0096FF;box-shadow:0 0 8px rgba(0,150,255,.55);flex:0 0 auto}',
+    '#jdchat-head .jdchat-face{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #0096FF;flex:0 0 auto}',
+    '#jdchat-welcome{display:block;width:100%;height:132px;object-fit:cover;border-radius:12px;border:1px solid #263144}',
     '#jdchat-panel{position:fixed;right:10px;bottom:74px;z-index:99991;width:min(360px,calc(100vw - 20px));',
     'height:min(520px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;',
     'background:#0b0f16;border:1px solid #33435e;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.65);',
@@ -84,21 +105,29 @@
     btn.id = 'jdchat-btn';
     btn.type = 'button';
     btn.setAttribute('aria-label', 'Chat with us');
-    var dot = el('span', 'jdchat-dot');
-    btn.appendChild(dot);
+    var btnFace = el('img', 'jdchat-face');
+    btnFace.src = AVATAR;
+    btnFace.alt = '';
+    btnFace.onerror = function () { this.style.display = 'none'; };
+    btn.appendChild(btnFace);
     btn.appendChild(document.createTextNode('Chat with us'));
     document.body.appendChild(btn);
 
     var panel = el('section');
     panel.id = 'jdchat-panel';
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Chat with J-Dawgs support');
+    panel.setAttribute('aria-label', 'Chat with Little Bot');
 
     var head = el('div');
     head.id = 'jdchat-head';
+    var headFace = el('img', 'jdchat-face');
+    headFace.src = AVATAR;
+    headFace.alt = '';
+    headFace.onerror = function () { this.style.display = 'none'; };
+    head.appendChild(headFace);
     var titleWrap = el('div');
-    var title = el('span', 'jdchat-title', 'J-Dawgs Support');
-    var sub = el('span', 'jdchat-sub', 'Real answers from the J-Dawgs team');
+    var title = el('span', 'jdchat-title', 'Little Bot');
+    var sub = el('span', 'jdchat-sub', SUBTITLE);
     titleWrap.appendChild(title);
     titleWrap.appendChild(sub);
     var close = el('button', null, '×');
@@ -113,7 +142,9 @@
     msgs.id = 'jdchat-msgs';
     panel.appendChild(msgs);
 
-    var note = el('div', null, 'Ask us anything — a product question, a problem, or help posting a job.');
+    var note = el('div', null, IS_STORE
+      ? 'Ask me anything about the store — prices, products, or a problem you hit.'
+      : 'Ask me anything — a product question, a problem, or help posting a job.');
     note.id = 'jdchat-note';
     panel.appendChild(note);
 
@@ -190,13 +221,20 @@
     if (!box) return;
     box.textContent = '';
     if (state.messages.length === 0) {
-      box.appendChild(el('div', 'jdchat-row jdchat-them',
-        '')).appendChild(el('div', 'jdchat-bub',
-        'Hey — this is J-Dawgs support. Ask us about any product, a Human Hands job, or a problem you hit. We answer right here.'));
+      var wimg = el('img');
+      wimg.id = 'jdchat-welcome';
+      wimg.src = WELCOME;
+      wimg.alt = 'Little Bot waving hello';
+      wimg.onerror = function () { this.style.display = 'none'; };
+      box.appendChild(wimg);
+      var grow = el('div', 'jdchat-row jdchat-them');
+      grow.appendChild(el('div', 'jdchat-who', 'Little Bot'));
+      grow.appendChild(el('div', 'jdchat-bub', GREETING));
+      box.appendChild(grow);
     }
     state.messages.forEach(function (m) {
       var row = el('div', 'jdchat-row ' + (m.from === 'visitor' ? 'jdchat-me' : 'jdchat-them'));
-      row.appendChild(el('div', 'jdchat-who', m.from === 'visitor' ? 'You' : 'J-Dawgs'));
+      row.appendChild(el('div', 'jdchat-who', m.from === 'visitor' ? 'You' : 'Little Bot'));
       row.appendChild(el('div', 'jdchat-bub', m.text));
       box.appendChild(row);
     });
@@ -268,7 +306,7 @@
           storeSet('jdchat_id', state.id);
           storeSet('jdchat_key', state.key);
           if (nameInput) nameInput.style.display = 'none';
-          setNote('Got it — we usually answer within a few minutes. Keep this page open or come back to this box; our reply will be right here.', false);
+          setNote('Got it — I passed that to Midas, who usually answers within a few minutes. Keep this page open or come back to this box; the reply will be right here.', false);
         }
         state.messages = out.data.chat.messages;
         input.value = '';
