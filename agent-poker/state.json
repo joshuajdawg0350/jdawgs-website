@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:14:55.972Z",
+ "updatedAt": "2026-11-18T20:15:54.567Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -511,11 +511,12 @@
  "currentHand": {
   "table": 1,
   "handNo": 4,
-  "stage": "flop",
+  "stage": "turn",
   "board": [
    "3♠",
    "7♠",
-   "2♣"
+   "2♣",
+   "7♦"
   ],
   "pot": 600,
   "toAct": "CallBot",
@@ -526,6 +527,12 @@
    "Professor calls 100",
    "Anchor calls 50",
    "Midas checks",
+   "Anchor checks",
+   "Midas checks",
+   "CallBot checks",
+   "Venus checks",
+   "River Rat checks",
+   "Professor checks",
    "Anchor checks",
    "Midas checks"
   ]
