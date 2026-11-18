@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:45:53.462Z",
+ "updatedAt": "2026-11-18T19:46:14.644Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 2,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121500,
+     "stack": 121660,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121500,
+   "stack": 121660,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -527,6 +527,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Sixgun calls 50, Quarry folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 7♠ 10♣ K♦], Wildfire checks, Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Sixgun checks, Deuce checks, [turn: 7♠ 10♣ K♦ 10♦], Wildfire raises to 240, Millstone calls 240, Icebox calls 240, Velvet calls 240, Tally calls 240, Pickpocket calls 240, Sixgun raises to 1345, Deuce calls 1345, Wildfire raises to 4065, Millstone calls 3825, Icebox calls 3825, Velvet calls 3825, Tally calls 3825, Pickpocket calls 3825, Sixgun goes ALL-IN to 19950, Deuce calls 18605, Wildfire calls 15885, Millstone calls 15885, Icebox calls 15885, Velvet calls 15885, Tally calls 15885, Pickpocket calls 15885, [river: 7♠ 10♣ K♦ 10♦ 3♣] → Velvet wins 160000 with Three of a kind, 10s (6♦ 10♠)",
    "pot": 160000
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Midas folds, Venus calls 50, River Rat calls 25, Marble checks, [flop: Q♠ 2♥ 6♣], River Rat checks, Marble checks, Venus raises to 60, River Rat calls 60, Marble folds, [turn: Q♠ 2♥ 6♣ Q♣], River Rat checks, Venus checks, [river: Q♠ 2♥ 6♣ Q♣ K♦], River Rat checks, Venus checks → River Rat wins 270 with Two pair, Qs and 6s (6♥ A♣)",
+   "pot": 270
   }
  ],
  "finishes": [
