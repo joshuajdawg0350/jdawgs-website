@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:25:27.958Z",
+ "updatedAt": "2026-11-18T20:25:44.779Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  800,
-  1600
+  1600,
+  3200
  ],
- "level": 6,
- "handsPlayed": 17,
+ "level": 7,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -161,7 +161,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 63710,
+     "stack": 63660,
      "status": "seated",
      "reentered": false
     },
@@ -169,7 +169,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 50695,
+     "stack": 50375,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 70645,
+     "stack": 71215,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 19750,
      "status": "seated",
      "reentered": false
     },
@@ -249,12 +249,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19540,
+     "stack": 19440,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -299,7 +299,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 63710,
+   "stack": 63660,
    "status": "seated",
    "reentered": false
   },
@@ -326,7 +326,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50695,
+   "stack": 50375,
    "status": "seated",
    "reentered": false
   },
@@ -407,7 +407,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 70645,
+   "stack": 71215,
    "status": "seated",
    "reentered": false
   },
@@ -425,7 +425,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19540,
+   "stack": 19440,
    "status": "seated",
    "reentered": false
   },
@@ -452,7 +452,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19850,
+   "stack": 19750,
    "status": "seated",
    "reentered": false
   },
@@ -508,22 +508,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: 5♥ 3♣ A♠], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [turn: 5♥ 3♣ A♠ K♠], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [river: 5♥ 3♣ A♠ K♠ J♠], Bulldog checks, Copper checks, Compass checks, Slick raises to 50, Dice calls 50, Bulldog folds, Copper folds, Compass calls 50 → Slick wins 400 with Straight, A high (10♦ Q♠)",
-   "pot": 400
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -577,6 +563,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 50/100 · Copper folds, Slick calls 100, Granite folds, Bulldog checks, [flop: 9♦ 2♦ 9♥], Bulldog checks, Slick raises to 100, Bulldog calls 100, [turn: 9♦ 2♦ 9♥ 5♣], Bulldog checks, Slick raises to 100, Bulldog calls 100, [river: 9♦ 2♦ 9♥ 5♣ 3♥], Bulldog raises to 390, Slick raises to 1015, Bulldog raises to 2250, Slick raises to 4600, Bulldog raises to 9100, Slick raises to 17710, Bulldog raises to 34185, Slick calls 2675 → Slick wins 41420 with Full house, 9s full of 5s (5♠ 9♠); Bulldog wins 13800 with Two pair, 9s and 5s (5♥ A♥)",
    "pot": 55220
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 50/100 · Velvet calls 100, Marble calls 100, Compass calls 100, Deuce folds, Wildfire checks, [flop: 4♣ 10♥ 2♠], Wildfire checks, Velvet checks, Marble checks, Compass checks, [turn: 4♣ 10♥ 2♠ 5♣], Wildfire raises to 120, Velvet calls 120, Marble folds, Compass folds, [river: 4♣ 10♥ 2♠ 5♣ 10♦], Wildfire checks, Velvet raises to 100, Wildfire calls 100 → Velvet wins 890 with Full house, 4s full of 10s (4♠ 4♥)",
+   "pot": 890
   }
  ],
  "finishes": [
