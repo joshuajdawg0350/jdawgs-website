@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:02:22.159Z",
+ "updatedAt": "2026-11-18T20:04:30.881Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  800,
-  1600
+  25,
+  50
  ],
- "level": 6,
- "handsPlayed": 15,
+ "level": 1,
+ "handsPlayed": 0,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20025,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -29,31 +29,31 @@
      "name": "CallBot",
      "kind": "test",
      "house": false,
-     "stack": 4800,
+     "stack": 600,
      "status": "seated",
-     "reentered": true
+     "reentered": false
     },
     {
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #27",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #26",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20040,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -61,15 +61,15 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #25",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121410,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -77,28 +77,20 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #24",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #23",
-     "reentered": false
-    },
-    {
-     "name": "Marble",
-     "kind": "house",
-     "house": true,
-     "stack": 20110,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 0
   },
   {
    "id": 2,
@@ -107,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 21350,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 77830,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 245,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -131,20 +123,52 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #15",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 920,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Compass",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Marble",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Professor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 0
   },
   {
    "id": 3,
@@ -153,39 +177,39 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #21",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #20",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #19",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #18",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 167730,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -193,60 +217,36 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #17",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #16",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out #15",
+     "stack": 20000,
+     "status": "seated",
      "reentered": false
     },
     {
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 18155,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Professor",
-     "kind": "house",
-     "house": true,
-     "stack": 17955,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 18090,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Compass",
-     "kind": "house",
-     "house": true,
-     "stack": 17840,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 0
   }
  ],
  "seats": [
@@ -255,16 +255,16 @@
    "kind": "test",
    "house": false,
    "table": 1,
-   "stack": 4800,
+   "stack": 600,
    "status": "seated",
-   "reentered": true
+   "reentered": false
   },
   {
    "name": "Midas",
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20025,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -273,8 +273,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 0,
-   "status": "out #27",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21350,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -291,8 +291,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #21",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -300,8 +300,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 0,
-   "status": "out #26",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 77830,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -318,8 +318,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #20",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20040,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 245,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -345,8 +345,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #19",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -354,8 +354,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 0,
-   "status": "out #25",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -363,8 +363,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 0,
-   "status": "out #15",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -372,8 +372,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #18",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121410,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 920,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 167730,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -408,16 +408,16 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 0,
-   "status": "out #24",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
    "name": "Compass",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 17840,
+   "table": 2,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -426,8 +426,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #17",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
@@ -435,16 +435,16 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 0,
-   "status": "out #23",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
    "name": "Marble",
    "kind": "house",
    "house": true,
-   "table": 1,
-   "stack": 20110,
+   "table": 2,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -453,16 +453,16 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #16",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 18090,
+   "table": 2,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -471,16 +471,16 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 0,
-   "status": "out #15",
+   "stack": 20000,
+   "status": "seated",
    "reentered": false
   },
   {
    "name": "Professor",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 17955,
+   "table": 2,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -489,7 +489,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18155,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   }
@@ -500,186 +500,9 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 6,
-  "stage": "turn",
-  "board": [
-   "6♥",
-   "A♣",
-   "Q♦",
-   "5♣"
-  ],
-  "pot": 650,
-  "toAct": "CallBot",
-  "lastActions": [
-   "Marble raises to 200",
-   "Midas folds",
-   "CallBot calls 200",
-   "Venus folds",
-   "River Rat calls 100",
-   "River Rat checks",
-   "Marble checks",
-   "CallBot checks",
-   "River Rat checks",
-   "Marble checks"
-  ]
- },
- "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Anchor calls 50, Compass calls 50, Velvet calls 50, Quarry calls 25, Professor checks, [flop: A♠ J♦ 3♣], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks, [turn: A♠ J♦ 3♣ 2♥], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks, [river: A♠ J♦ 3♣ 2♥ Q♣], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks → Velvet wins 250 with Two pair, As and Qs (A♣ Q♠)",
-   "pot": 250
-  },
-  {
-   "table": 1,
-   "handNo": 3,
-   "text": "Table 1 · Hand 3 · blinds 25/50 · Venus calls 50, River Rat calls 50, Marble folds, Midas checks, [flop: 5♣ J♠ 5♠], Midas checks, Venus checks, River Rat checks, [turn: 5♣ J♠ 5♠ Q♠], Midas checks, Venus checks, River Rat checks, [river: 5♣ J♠ 5♠ Q♠ 6♠], Midas checks, Venus checks, River Rat checks → Midas wins 175 with Pair of 5s (A♥ 9♣)",
-   "pot": 175
-  },
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: A♣ 4♦ K♦], Bulldog checks, Copper checks, Slick checks, Dice checks, [turn: A♣ 4♦ K♦ 7♠], Bulldog checks, Copper checks, Slick checks, Dice checks, [river: A♣ 4♦ K♦ 7♠ 7♥], Bulldog checks, Copper checks, Slick raises to 50, Dice calls 50, Bulldog calls 50, Copper calls 50 → Slick wins 400 with Three of a kind, 7s (Q♦ 7♣)",
-   "pot": 400
-  },
-  {
-   "table": 3,
-   "handNo": 3,
-   "text": "Table 3 · Hand 3 · blinds 25/50 · Compass calls 50, Velvet calls 50, Quarry calls 50, Professor calls 25, Anchor checks, [flop: J♥ 5♣ J♠], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks, [turn: J♥ 5♣ J♠ 6♥], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks, [river: J♥ 5♣ J♠ 6♥ 7♥], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks → Anchor wins 250 with Straight, 7 high (4♣ 3♠)",
-   "pot": 250
-  },
-  {
-   "table": 1,
-   "handNo": 4,
-   "text": "Table 1 · Hand 4 · blinds 50/100 · Venus calls 100, River Rat calls 100, Marble calls 100, Midas calls 50, CallBot checks, [flop: 4♠ 7♣ 9♠], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks, [turn: 4♠ 7♣ 9♠ Q♥], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks, [river: 4♠ 7♣ 9♠ Q♥ 6♥], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks → Marble wins 500 with Pair of Qs (A♥ Q♠)",
-   "pot": 500
-  },
-  {
-   "table": 2,
-   "handNo": 4,
-   "text": "Table 2 · Hand 4 · blinds 50/100 · Granite calls 100, Dice raises to 250, Bulldog calls 250, Copper folds, Slick calls 150, Granite calls 150, [flop: 3♦ 8♠ 6♣], Slick checks, Granite checks, Dice checks, Bulldog checks, [turn: 3♦ 8♠ 6♣ 9♠], Slick checks, Granite checks, Dice checks, Bulldog checks, [river: 3♦ 8♠ 6♣ 9♠ 8♥], Slick raises to 100, Granite calls 100, Dice calls 100, Bulldog calls 100 → Slick wins 1450 with Three of a kind, 8s (8♦ K♣)",
-   "pot": 1450
-  },
-  {
-   "table": 3,
-   "handNo": 4,
-   "text": "Table 3 · Hand 4 · blinds 50/100 · Velvet calls 100, Quarry folds, Professor calls 100, Anchor calls 50, Compass checks, [flop: 10♥ 6♦ 7♣], Anchor checks, Compass checks, Velvet checks, Professor checks, [turn: 10♥ 6♦ 7♣ A♥], Anchor checks, Compass checks, Velvet checks, Professor checks, [river: 10♥ 6♦ 7♣ A♥ Q♣], Anchor checks, Compass checks, Velvet checks, Professor checks → Velvet wins 400 with Pair of As (A♣ 3♥)",
-   "pot": 400
-  },
-  {
-   "table": 1,
-   "handNo": 5,
-   "text": "Table 1 · Hand 5 · blinds 50/100 · River Rat calls 100, Marble calls 100, Midas folds, CallBot calls 50, Venus checks, [flop: K♦ 6♥ 4♥], CallBot checks, Venus checks, River Rat checks, Marble checks, [turn: K♦ 6♥ 4♥ A♠], CallBot checks, Venus checks, River Rat checks, Marble checks, [river: K♦ 6♥ 4♥ A♠ K♠], CallBot checks, Venus checks, River Rat checks, Marble checks → Venus wins 400 with Two pair, As and Ks (A♥ 7♥)",
-   "pot": 400
-  },
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 50/100 · Dice calls 100, Bulldog calls 100, Copper calls 100, Slick folds, Granite checks, [flop: 4♠ 4♦ 7♠], Granite checks, Dice checks, Bulldog checks, Copper checks, [turn: 4♠ 4♦ 7♠ 5♣], Granite checks, Dice checks, Bulldog checks, Copper checks, [river: 4♠ 4♦ 7♠ 5♣ 3♣], Granite raises to 100, Dice raises to 430, Bulldog calls 430, Copper raises to 1275, Granite raises to 2885, Dice raises to 6165, Bulldog calls 5735, Copper raises to 9445, Granite raises to 12725, Dice calls 6560, Bulldog calls 6560, Copper goes ALL-IN to 19845, Granite calls 6660, Dice calls 7120, Bulldog calls 6500 → Granite wins 77830 with Straight, 7 high (9♥ 6♣); Copper wins 920 with Straight, 5 high (A♣ 2♥)",
-   "pot": 78750
-  },
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 50/100 · Quarry calls 100, Professor raises to 275, Anchor calls 275, Compass raises to 505, Velvet calls 405, Quarry calls 405, Professor raises to 1745, Anchor calls 1470, Compass calls 1240, Velvet calls 1240, Quarry calls 1240, [flop: 5♥ 6♠ 10♦], Compass checks, Velvet checks, Quarry checks, Professor checks, Anchor checks, [turn: 5♥ 6♠ 10♦ 9♠], Compass checks, Velvet checks, Quarry checks, Professor checks, Anchor checks, [river: 5♥ 6♠ 10♦ 9♠ 8♦], Compass checks, Velvet raises to 100, Quarry folds, Professor calls 100, Anchor calls 100, Compass calls 100 → Velvet wins 9125 with Straight, 10 high (7♠ Q♦)",
-   "pot": 9125
-  }
- ],
- "finishes": [
-  {
-   "name": "Baseline",
-   "place": 27,
-   "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "Pearl",
-   "place": 26,
-   "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "Shadow",
-   "place": 25,
-   "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "Hammer",
-   "place": 24,
-   "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "Ozone",
-   "place": 23,
-   "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "Deuce",
-   "place": 21,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Wildfire",
-   "place": 20,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Millstone",
-   "place": 19,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Icebox",
-   "place": 18,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Tally",
-   "place": 17,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Pickpocket",
-   "place": 16,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Sixgun",
-   "place": 15,
-   "kind": "house",
-   "table": 3,
-   "handNo": 1
-  },
-  {
-   "name": "Bulldog",
-   "place": 15,
-   "kind": "house",
-   "table": 2,
-   "handNo": 5
-  }
- ],
+ "currentHand": null,
+ "recentHands": [],
+ "finishes": [],
  "champion": null,
  "tableWinner": null,
  "defended": false,
