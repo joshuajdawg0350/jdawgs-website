@@ -24,7 +24,7 @@
     --line:#2a323f; --line2:#39434f;
     --text:#f2f5f9; --dim:#aeb9c6; --faint:#7d8896;
     --silver:#d7dee9; --gold:#f0b73e; --green:#3ecf6f; --red:#ff5147; --amber:#ffb02e;
-    --neon:#7fd4ff; --lime:#b6ff2e; --pink:#ff2e88; --cyan:#29e6ff; --yellow:#ffd21f;
+    --neon:#0096FF; --lime:#b6ff2e; --pink:#ff2e88; --cyan:#0096FF; --yellow:#ffd21f;
     --ink:#05070a;
     --spring:cubic-bezier(.34,1.56,.64,1); --spring-soft:cubic-bezier(.22,1.28,.36,1);
     --sat: env(safe-area-inset-top, 0px); --sab: env(safe-area-inset-bottom, 0px);
@@ -122,7 +122,7 @@
     transition:transform .16s var(--spring), background .16s ease; box-shadow:0 3px 0 rgba(0,0,0,.55);
     animation:fadeUp .38s var(--spring-soft) both;
   }
-  .goodrow.sel{ border-color:var(--neon); outline-color:var(--neon); box-shadow:0 0 0 1px var(--neon), 0 3px 0 rgba(0,0,0,.55), 0 0 18px rgba(57,194,255,.22); }
+  .goodrow.sel{ border-color:var(--neon); outline-color:var(--neon); box-shadow:0 0 0 1px var(--neon), 0 3px 0 rgba(0,0,0,.55), 0 0 18px rgba(0,150,255,.22); }
   .goodrow .good-top{
     display:flex; align-items:center; gap:10px; flex:1 1 230px; min-width:0;
     background:none; border:none; outline:none; color:inherit; font:inherit; text-align:left;
@@ -145,7 +145,7 @@
      ================================================================ */
   .mcard{ background:#151a24; border:1px solid #2a3347; border-radius:8px; padding:8px; margin-top:8px; animation:fadeUp .38s var(--spring-soft) both; }
   .mcard:first-child{ margin-top:0; }
-  .mcard.sel{ border-color:var(--neon); box-shadow:0 0 0 1px var(--neon), 0 0 14px rgba(57,194,255,.18); }
+  .mcard.sel{ border-color:var(--neon); box-shadow:0 0 0 1px var(--neon), 0 0 14px rgba(0,150,255,.18); }
   .mcard .mc-top{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; width:100%; background:none; border:none; outline:none; color:inherit; font:inherit; text-align:left; padding:0; margin:0; cursor:pointer; -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
   .mcard .mc-price.np{ flex:1 1 100%; text-align:left; margin-top:1px; }
   .mcard .mc-top:active{ opacity:.75; }
@@ -249,7 +249,7 @@
   .spray-sell{ color:#ffd21f; text-shadow:2px 2px 0 #8a5a00, -1px -1px 0 #05070a; }
   .spray-hot{ color:#ff2e88; text-shadow:2px 2px 0 #5c0a2e, -1px -1px 0 #05070a; }
   .spray-bad{ color:#ff5147; text-shadow:2px 2px 0 #5c0f0a, -1px -1px 0 #05070a; }
-  .spray-cool{ color:#29e6ff; text-shadow:2px 2px 0 #0a4a5c, -1px -1px 0 #05070a; }
+  .spray-cool{ color:#0096FF; text-shadow:2px 2px 0 #0a4a5c, -1px -1px 0 #05070a; }
   .modal .scene-panel{ margin:0 0 14px; }
   /* graffiti travel board */
   .mapboard{ border:3px solid #05070a; border-radius:16px; overflow:hidden; background:#171310; box-shadow:0 0 0 2px var(--line2), 0 12px 28px rgba(0,0,0,.45); margin-bottom:6px; animation:sceneIn .5s var(--spring) both; }
@@ -262,7 +262,7 @@
   #screen-title{ background:radial-gradient(130% 70% at 50% 0%, #241a33 0%, #12141f 42%, var(--bg) 72%); }
   .graf-title{ transform:rotate(-2.5deg); line-height:.9; text-transform:uppercase; font-family:"Arial Black","Avenir Next",sans-serif; animation:sceneIn .65s var(--spring) both; filter:drop-shadow(0 10px 22px rgba(0,0,0,.55)); }
   .graf-title .l1{ display:block; font-size:clamp(48px,14vw,88px); color:#ffd21f; text-shadow:0 0 0 #ffd21f, 4px 4px 0 #ff2e88, 8px 8px 0 #0a4a5c, -2.5px -2.5px 0 #05070a, 2.5px -2.5px 0 #05070a, -2.5px 2.5px 0 #05070a, 0 6px 0 #05070a; letter-spacing:-.02em; }
-  .graf-title .l2{ display:block; font-size:clamp(60px,17.5vw,110px); color:#29e6ff; text-shadow:4px 4px 0 #b6ff2e, 8px 8px 0 #5c0a2e, -2.5px -2.5px 0 #05070a, 2.5px -2.5px 0 #05070a, -2.5px 2.5px 0 #05070a, 0 6px 0 #05070a; letter-spacing:-.02em; }
+  .graf-title .l2{ display:block; font-size:clamp(60px,17.5vw,110px); color:#0096FF; text-shadow:4px 4px 0 #b6ff2e, 8px 8px 0 #5c0a2e, -2.5px -2.5px 0 #05070a, 2.5px -2.5px 0 #05070a, -2.5px 2.5px 0 #05070a, 0 6px 0 #05070a; letter-spacing:-.02em; }
   .graf-title .tm{ font-size:.22em; color:var(--silver); text-shadow:none; vertical-align:super; font-family:"Avenir Next",sans-serif; font-weight:800; }
   .title-art{ width:min(420px,90vw); margin:8px auto 4px; animation:fadeUp .55s .12s var(--spring-soft) both; filter:drop-shadow(0 8px 18px rgba(0,0,0,.45)); }
   .title-art svg{ display:block; width:100%; height:auto; }
@@ -432,13 +432,13 @@
      is compacted, and the market keeps a guaranteed floor.
      ================================================================ */
   .hero{ position:relative; width:min(600px,94vw); margin:4px auto 2px; }
-  .hero-img{ display:block; width:100%; height:auto; border-radius:16px; border:2px solid #05070a; outline:1px solid #46536a; box-shadow:0 18px 44px rgba(0,0,0,.62), 0 0 34px rgba(127,212,255,.13); }
+  .hero-img{ display:block; width:100%; height:auto; border-radius:16px; border:2px solid #05070a; outline:1px solid #46536a; box-shadow:0 18px 44px rgba(0,0,0,.62), 0 0 34px rgba(0,150,255,.13); }
   .hero .graf-title{ position:absolute; top:5%; left:0; right:0; pointer-events:none; }
   .hero .graf-title .l1{ font-size:clamp(38px,10.5vw,68px); }
   .hero .graf-title .l2{ font-size:clamp(48px,13vw,84px); }
   .pawmark{ position:absolute; right:10px; bottom:10px; width:26px; height:26px; opacity:.85; pointer-events:none; }
   .over-hero{ position:relative; width:min(440px,92vw); margin:10px auto 2px; }
-  .over-art{ display:block; width:100%; height:auto; border-radius:14px; border:2px solid #05070a; outline:1px solid #46536a; box-shadow:0 14px 34px rgba(0,0,0,.55), 0 0 26px rgba(127,212,255,.10); }
+  .over-art{ display:block; width:100%; height:auto; border-radius:14px; border:2px solid #05070a; outline:1px solid #46536a; box-shadow:0 14px 34px rgba(0,0,0,.55), 0 0 26px rgba(0,150,255,.10); }
   /* chrome trim on the pinned HUD strip + primary actions */
   #hud{ box-shadow:0 1px 0 rgba(201,209,216,.35), 0 10px 24px rgba(0,0,0,.35); }
   .btn.primary{ background:linear-gradient(180deg,#ffffff,#d7dee9 52%,#aebdd0); }
@@ -514,23 +514,23 @@
   .gpanel{
     background:linear-gradient(165deg,rgba(255,255,255,.10),rgba(255,255,255,.02) 40%,rgba(0,0,0,.28)),linear-gradient(180deg,#161e2a,#0d1119);
     border:1px solid #4b5a70; border-radius:14px; padding:10px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 0 1px rgba(0,0,0,.35), 0 10px 26px rgba(0,0,0,.45), 0 0 22px rgba(127,212,255,.07);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 0 1px rgba(0,0,0,.35), 0 10px 26px rgba(0,0,0,.45), 0 0 22px rgba(0,150,255,.07);
   }
-  .market-panel{ border-color:#54677f; box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 26px rgba(0,0,0,.45), 0 0 26px rgba(127,212,255,.12); }
+  .market-panel{ border-color:#54677f; box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 26px rgba(0,0,0,.45), 0 0 26px rgba(0,150,255,.12); }
   .city-panel{ border-color:#4f6350; box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 26px rgba(0,0,0,.45), 0 0 26px rgba(182,255,46,.08); }
   .money-panel{ border-color:#6d5a2e; box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 26px rgba(0,0,0,.45), 0 0 26px rgba(240,183,62,.12); }
   .gpanel-head{ font-size:12.5px; color:#eaf2fb; align-items:center; margin-bottom:7px; }
   .gpanel-head .ph-t{ display:inline-flex; align-items:center; gap:7px; }
-  .gpanel-head .ph-t svg{ color:var(--neon); filter:drop-shadow(0 0 5px rgba(127,212,255,.55)); }
+  .gpanel-head .ph-t svg{ color:var(--neon); filter:drop-shadow(0 0 5px rgba(0,150,255,.55)); }
   .city-panel .gpanel-head .ph-t svg{ color:var(--lime); filter:drop-shadow(0 0 5px rgba(182,255,46,.5)); }
 
   /* --- HUD: chrome strip --- */
   body.in-game #hud{
     background:linear-gradient(180deg,#232f42 0%,#131a26 55%,#0a0e15 100%);
     border-bottom:2px solid #0a0d12;
-    box-shadow:0 1px 0 rgba(215,222,233,.4), 0 12px 28px rgba(0,0,0,.5), 0 0 24px rgba(127,212,255,.08);
+    box-shadow:0 1px 0 rgba(215,222,233,.4), 0 12px 28px rgba(0,0,0,.5), 0 0 24px rgba(0,150,255,.08);
   }
-  body.in-game #hud .hoodname{ color:#f4f8fc; text-shadow:0 2px 0 #05070a, 0 0 14px rgba(127,212,255,.25); }
+  body.in-game #hud .hoodname{ color:#f4f8fc; text-shadow:0 2px 0 #05070a, 0 0 14px rgba(0,150,255,.25); }
   body.in-game #hud .hbar{ background:#0a0d12; border:1px solid #39434f; box-shadow:inset 0 1px 3px rgba(0,0,0,.7); }
   body.in-game #hud .hbar i{ background:linear-gradient(180deg,#8df5ae,#3ecf6f 60%,#1f9d4d); box-shadow:inset 0 1px 0 rgba(255,255,255,.5); }
   body.in-game #hud .hbar i.mid{ background:linear-gradient(180deg,#ffd98a,#ffb02e 60%,#c07f14); }
@@ -551,7 +551,7 @@
     box-shadow:0 3px 0 rgba(0,0,0,.6), 0 6px 14px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.14);
     padding:6px 7px; min-height:52px; margin-top:6px;
   }
-  .goodrow.sel{ outline:2px solid var(--neon); border-color:#0a3548; box-shadow:0 3px 0 rgba(0,0,0,.6), 0 0 20px rgba(41,230,255,.35), inset 0 1px 0 rgba(255,255,255,.16); }
+  .goodrow.sel{ outline:2px solid var(--neon); border-color:#0a3548; box-shadow:0 3px 0 rgba(0,0,0,.6), 0 0 20px rgba(0,150,255,.35), inset 0 1px 0 rgba(255,255,255,.16); }
   .gicon{
     flex:none; width:36px; height:36px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center;
     background:linear-gradient(180deg,#39485e,#1a2230 60%,#232f42); border:1px solid #5a6c85; color:#dfe9f5;
@@ -565,9 +565,9 @@
 
   /* --- bulk trade bar: framed chrome console --- */
   .tradebar{
-    background:linear-gradient(180deg,rgba(127,212,255,.08),rgba(0,0,0,.18)),linear-gradient(180deg,#182130,#0d1219);
+    background:linear-gradient(180deg,rgba(0,150,255,.08),rgba(0,0,0,.18)),linear-gradient(180deg,#182130,#0d1219);
     border:1px solid #54677f; border-radius:12px; padding:9px; margin-top:9px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 18px rgba(127,212,255,.10);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 18px rgba(0,150,255,.10);
   }
   .tradebar .qtybox{ background:linear-gradient(180deg,#232f42,#0a0d12); border-color:#54677f; box-shadow:inset 0 2px 6px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.12); color:#fff; }
   .tradebar .trade-actions .btn{ min-height:46px; font-size:15.5px; }
@@ -588,9 +588,9 @@
   }
   .destrow .dtag{ font-size:14px; }
   .waitbtn{
-    background:linear-gradient(180deg,#bfe9ff 0%,#7fd4ff 35%,#2f9fd8 70%,#1c6f9e 100%); color:#06222f; border-color:#0a2c3d;
+    background:linear-gradient(180deg,#bfe9ff 0%,#0096FF 35%,#2f9fd8 70%,#1c6f9e 100%); color:#06222f; border-color:#0a2c3d;
     min-height:48px; font-size:16px; letter-spacing:.04em;
-    box-shadow:0 3px 0 #0a2c3d, 0 8px 18px rgba(127,212,255,.25), inset 0 1px 0 rgba(255,255,255,.85), inset 0 -2px 4px rgba(6,60,90,.4);
+    box-shadow:0 3px 0 #0a2c3d, 0 8px 18px rgba(0,150,255,.25), inset 0 1px 0 rgba(255,255,255,.85), inset 0 -2px 4px rgba(6,60,90,.4);
     text-shadow:0 1px 0 rgba(255,255,255,.55);
   }
   .waitbtn:active{ box-shadow:0 1px 0 #0a2c3d, inset 0 1px 0 rgba(255,255,255,.7); }
@@ -665,7 +665,7 @@
     position:relative; display:block; flex:1; width:13px; border-radius:7px;
     background:linear-gradient(180deg,#05070a,#0d1219);
     border:1.5px solid #46536a;
-    box-shadow:inset 0 2px 5px rgba(0,0,0,.85), 0 0 10px rgba(127,212,255,.12);
+    box-shadow:inset 0 2px 5px rgba(0,0,0,.85), 0 0 10px rgba(0,150,255,.12);
   }
   .city-panel .rail-track{ box-shadow:inset 0 2px 5px rgba(0,0,0,.85), 0 0 10px rgba(182,255,46,.12); }
   .scroll-rail .rail-thumb{
@@ -705,7 +705,7 @@
     border-radius:14px; padding:11px 13px 14px;
     background:linear-gradient(165deg,rgba(255,255,255,.10),rgba(255,255,255,.02) 42%,rgba(0,0,0,.26)),linear-gradient(180deg,#182130,#0b0f16);
     border:2px solid #05070a; outline:1px solid #54677f;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 24px rgba(0,0,0,.45), 0 0 22px rgba(127,212,255,.13);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 24px rgba(0,0,0,.45), 0 0 22px rgba(0,150,255,.13);
     animation:dealIn .38s var(--spring) both;
     transition:opacity .35s ease, transform .35s ease;
   }
@@ -730,14 +730,14 @@
   .deal-sub{ color:var(--silver); font-size:12.5px; line-height:1.35; }
   .deal-money{
     flex:none; font-size:25px; font-weight:900; letter-spacing:-.02em; font-variant-numeric:tabular-nums;
-    color:#7fd4ff; text-shadow:0 2px 0 #05070a, 0 0 16px rgba(127,212,255,.35);
+    color:#0096FF; text-shadow:0 2px 0 #05070a, 0 0 16px rgba(0,150,255,.35);
   }
   .deal-card.sell .deal-money{ color:var(--gold); text-shadow:0 2px 0 #05070a, 0 0 16px rgba(240,183,62,.40); }
   .deal-paw{ position:absolute; right:8px; bottom:5px; width:26px; height:26px; opacity:.16; pointer-events:none; }
   .deal-timer{
     position:absolute; left:0; bottom:0; height:3px; width:100%; z-index:4;
     transform-origin:left center;
-    background:linear-gradient(90deg,#7fd4ff,#29e6ff);
+    background:linear-gradient(90deg,#0096FF,#0096FF);
     animation:dealDrain 10s linear forwards;
   }
   .deal-card.sell .deal-timer{ background:linear-gradient(90deg,#f0b73e,#ffd873); }
@@ -781,7 +781,7 @@
   .deal-stage .ds-money{
     position:absolute; top:5px; right:10px; z-index:5;
     font-size:19px; font-weight:900; letter-spacing:-.02em; font-variant-numeric:tabular-nums;
-    color:#7fd4ff; text-shadow:0 2px 0 #05070a, 0 0 14px rgba(127,212,255,.4);
+    color:#0096FF; text-shadow:0 2px 0 #05070a, 0 0 14px rgba(0,150,255,.4);
   }
   .deal-card.sell .deal-stage .ds-money{ color:var(--gold); text-shadow:0 2px 0 #05070a, 0 0 14px rgba(240,183,62,.45); }
 
@@ -1181,7 +1181,7 @@
   .tbtn:disabled{ opacity:.35; cursor:not-allowed; }
   .tbtn:active{ transform:translateY(1px); }
   table.market tr.notstocked td{ opacity:.48; }
-  table.market tr.sel td{ background:rgba(127,212,255,.07); }
+  table.market tr.sel td{ background:rgba(0,150,255,.07); }
   @media (max-width:899px){
     .market-wrap{ overflow-x:hidden; }
     table.market th, table.market td{ padding:5px 4px; }
@@ -1254,7 +1254,7 @@
   #waitOverlay{ position:fixed; inset:0; z-index:95; background:rgba(2,4,7,.95); display:flex; align-items:center; justify-content:center; transition:opacity .32s ease; animation:fadeUp .25s ease both; }
   #waitOverlay.out{ opacity:0; }
   #waitOverlay .wd-inner{ position:relative; width:min(96vw,540px); line-height:0; }
-  #waitOverlay video{ display:block; width:100%; height:auto; border-radius:14px; border:2px solid #05070a; outline:1px solid #54677f; box-shadow:0 24px 60px rgba(0,0,0,.7), 0 0 34px rgba(127,212,255,.16); background:#04060a; }
+  #waitOverlay video{ display:block; width:100%; height:auto; border-radius:14px; border:2px solid #05070a; outline:1px solid #54677f; box-shadow:0 24px 60px rgba(0,0,0,.7), 0 0 34px rgba(0,150,255,.16); background:#04060a; }
   #waitOverlay .wd-cap{ position:absolute; left:12px; bottom:10px; z-index:3; line-height:1.2; font-size:12px; font-weight:900; letter-spacing:.16em; color:#ffd98a; text-shadow:0 2px 0 #05070a; text-transform:uppercase; }
 
   /* ================================================================
@@ -1496,16 +1496,16 @@
     box-shadow:0 0 14px rgba(255,107,91,.48), inset 0 1px 0 rgba(255,255,255,.8), 0 2px 0 rgba(43,6,3,.5);
     text-shadow:0 1px 0 rgba(255,255,255,.3);
   }
-  .hood{ border-color:#3d4c61; box-shadow:0 0 14px rgba(127,212,255,.13), inset 0 1px 0 rgba(255,255,255,.07); }
+  .hood{ border-color:#3d4c61; box-shadow:0 0 14px rgba(0,150,255,.13), inset 0 1px 0 rgba(255,255,255,.07); }
   .hood .fee{
-    background:linear-gradient(180deg,#dff4ff 0%,#7fd4ff 60%,#3aa7dd 100%); color:#06222f;
+    background:linear-gradient(180deg,#dff4ff 0%,#0096FF 60%,#3aa7dd 100%); color:#06222f;
     border-radius:99px; padding:2px 9px;
-    box-shadow:0 0 12px rgba(127,212,255,.55), inset 0 1px 0 rgba(255,255,255,.85);
+    box-shadow:0 0 12px rgba(0,150,255,.55), inset 0 1px 0 rgba(255,255,255,.85);
     text-shadow:0 1px 0 rgba(255,255,255,.5);
   }
   .hood.here{ box-shadow:0 0 14px rgba(240,183,62,.22), inset 0 1px 0 rgba(255,255,255,.07); }
   .here-badge{ text-shadow:0 0 9px rgba(240,183,62,.65); }
-  .waitbtn{ box-shadow:0 3px 0 #0a2c3d, 0 0 18px rgba(127,212,255,.5), inset 0 1px 0 rgba(255,255,255,.85), inset 0 -2px 4px rgba(6,60,90,.4); }
+  .waitbtn{ box-shadow:0 3px 0 #0a2c3d, 0 0 18px rgba(0,150,255,.5), inset 0 1px 0 rgba(255,255,255,.85), inset 0 -2px 4px rgba(6,60,90,.4); }
   .btn{ box-shadow:0 3px 0 var(--ink), 0 8px 18px rgba(0,0,0,.28), 0 0 12px rgba(195,201,209,.16), inset 0 1px 0 rgba(255,255,255,.14); }
   .btn.primary{ box-shadow:0 3px 0 var(--ink), 0 0 20px rgba(210,217,226,.45), inset 0 1px 0 #fff; }
   .btn.gold{ box-shadow:0 3px 0 var(--ink), 0 0 20px rgba(240,183,62,.5), inset 0 1px 0 rgba(255,255,255,.7); }
@@ -1537,6 +1537,17 @@
   #scrollbtn-left{ left:calc(25% - 22px); }
   #scrollbtn-right{ right:calc(25% - 22px); }
   .game-main .market-panel .market-wrap{ padding-bottom:16px; }
+
+  /* ===== HOUSE STANDARD PASS 2026-11-18 — chrome/silver + electric blue (#0096FF) on near-black.
+     Polish only: gold/flat-grey button surfaces retired to the house chrome treatment
+     (same treatment HC2's action buttons already wear); graffiti title recolored to
+     chrome + electric blue; one focus ring for every button. Gameplay, layout and the
+     functional spray color-coding inside scene art are unchanged. ===== */
+  :focus-visible{ outline:2px solid #0096FF; outline-offset:2px; }
+  .btn.gold{ background:linear-gradient(180deg,#eef5fd,#a9c2dc 55%,#7e9cbd); color:#0a0f16; border-color:var(--ink); box-shadow:0 3px 0 var(--ink), 0 0 0 1px rgba(0,150,255,.45), 0 8px 18px rgba(0,0,0,.28); }
+  .btn.ghost{ background:linear-gradient(180deg,#1c2531,#10141b); box-shadow:0 3px 0 var(--ink), 0 8px 18px rgba(0,0,0,.28); }
+  .graf-title .l1{ color:#e8eef6; text-shadow:0 0 0 #e8eef6, 4px 4px 0 #0096FF, 8px 8px 0 #0a2c3d, -2.5px -2.5px 0 #05070a, 2.5px -2.5px 0 #05070a, -2.5px 2.5px 0 #05070a, 0 6px 0 #05070a; }
+  .graf-title .l2{ color:#0096FF; text-shadow:4px 4px 0 #d7dee9, 8px 8px 0 #0a2c3d, -2.5px -2.5px 0 #05070a, 2.5px -2.5px 0 #05070a, -2.5px 2.5px 0 #05070a, 0 6px 0 #05070a; }
 </style>
 </head>
 <body>
