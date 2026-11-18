@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:26:02.882Z",
+ "updatedAt": "2026-11-18T20:26:21.466Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   3200
  ],
  "level": 7,
- "handsPlayed": 18,
+ "handsPlayed": 19,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 250,
+     "stack": 150,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 101150,
+     "stack": 101120,
      "status": "seated",
      "reentered": false
     },
@@ -101,12 +101,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 65,
+     "stack": 195,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 2,
@@ -335,7 +335,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 250,
+   "stack": 150,
    "status": "seated",
    "reentered": false
   },
@@ -389,7 +389,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 101150,
+   "stack": 101120,
    "status": "seated",
    "reentered": false
   },
@@ -470,7 +470,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 65,
+   "stack": 195,
    "status": "seated",
    "reentered": false
   },
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
-  "pot": 165,
-  "toAct": "Midas",
+  "pot": 300,
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 3,
-   "text": "Table 3 · Hand 3 · blinds 25/50 · Sixgun raises to 180, Deuce calls 180, Wildfire folds, Millstone calls 180, Velvet calls 155, Tally calls 130, [flop: 8♣ 9♦ 10♣], Velvet checks, Tally checks, Sixgun checks, Deuce checks, Millstone checks, [turn: 8♣ 9♦ 10♣ 9♣], Velvet checks, Tally checks, Sixgun raises to 540, Deuce calls 540, Millstone calls 540, Velvet calls 540, Tally calls 540, [river: 8♣ 9♦ 10♣ 9♣ 8♠], Velvet raises to 50, Tally raises to 100, Sixgun raises to 2350, Deuce calls 2350, Millstone calls 2350, Velvet raises to 4870, Tally raises to 7390, Sixgun goes ALL-IN to 18390, Deuce calls 16040, Millstone calls 16040, Velvet calls 12005, Tally goes ALL-IN to 18440, Deuce calls 50 → Deuce wins 100 with Two pair, 10s and 9s (3♦ 10♥); Velvet wins 87975 with Full house, 8s full of 9s (4♣ 8♦); Sixgun wins 6060 with Two pair, Qs and 9s (Q♣ Q♦)",
-   "pot": 94135
-  },
   {
    "table": 1,
    "handNo": 4,
@@ -577,6 +571,12 @@
    "handNo": 6,
    "text": "Table 3 · Hand 6 · blinds 50/100 · Velvet calls 100, Marble calls 100, Compass calls 100, Deuce folds, Wildfire checks, [flop: 4♣ 10♥ 2♠], Wildfire checks, Velvet checks, Marble checks, Compass checks, [turn: 4♣ 10♥ 2♠ 5♣], Wildfire raises to 120, Velvet calls 120, Marble folds, Compass folds, [river: 4♣ 10♥ 2♠ 5♣ 10♦], Wildfire checks, Velvet raises to 100, Wildfire calls 100 → Velvet wins 890 with Full house, 4s full of 10s (4♠ 4♥)",
    "pot": 890
+  },
+  {
+   "table": 1,
+   "handNo": 7,
+   "text": "Table 1 · Hand 7 · blinds 100/200 · Midas folds, Venus calls 100, River Rat checks, [flop: 5♥ J♦ Q♠], River Rat checks, Venus checks, [turn: 5♥ J♦ Q♠ 9♣], River Rat raises to 200, Venus folds, [river: 5♥ J♦ Q♠ 9♣ A♣], River Rat raises to 200 → River Rat wins 470 with Straight, Q high (10♠ 8♣); Anchor wins 195 with Straight, A high (10♣ K♦)",
+   "pot": 665
   }
  ],
  "finishes": [
