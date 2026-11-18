@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:53:26.183Z",
+ "updatedAt": "2026-11-18T19:53:54.588Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  200,
-  400
+  400,
+  800
  ],
- "level": 4,
- "handsPlayed": 11,
+ "level": 5,
+ "handsPlayed": 12,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 160150,
+     "stack": 160450,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19800,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20035,
+     "stack": 19935,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19785,
+     "stack": 19685,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   }
  ],
  "seats": [
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 160150,
+   "stack": 160450,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19785,
+   "stack": 19685,
    "status": "seated",
    "reentered": false
   },
@@ -462,7 +462,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20035,
+   "stack": 19935,
    "status": "seated",
    "reentered": false
   },
@@ -480,7 +480,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19800,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 4,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 1,
-   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass raises to 115, Marble calls 115, Anchor calls 115, Professor folds, Slick folds, Granite calls 90, Dice calls 65, Bulldog calls 65, Copper calls 65, [flop: 4♦ 5♠ 2♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [turn: 4♦ 5♠ 2♣ J♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [river: 4♦ 5♠ 2♣ J♣ K♦], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks → Dice wins 805 with Pair of Ks (7♠ K♥)",
-   "pot": 805
-  },
   {
    "table": 3,
    "handNo": 1,
@@ -569,6 +555,12 @@
    "handNo": 4,
    "text": "Table 2 · Hand 4 · blinds 50/100 · Granite calls 100, Dice raises to 250, Bulldog calls 250, Copper folds, Slick calls 150, Granite calls 150, [flop: 3♦ 8♠ 6♣], Slick checks, Granite checks, Dice checks, Bulldog checks, [turn: 3♦ 8♠ 6♣ 9♠], Slick checks, Granite checks, Dice checks, Bulldog checks, [river: 3♦ 8♠ 6♣ 9♠ 8♥], Slick raises to 100, Granite calls 100, Dice calls 100, Bulldog calls 100 → Slick wins 1450 with Three of a kind, 8s (8♦ K♣)",
    "pot": 1450
+  },
+  {
+   "table": 3,
+   "handNo": 4,
+   "text": "Table 3 · Hand 4 · blinds 50/100 · Velvet calls 100, Quarry folds, Professor calls 100, Anchor calls 50, Compass checks, [flop: 10♥ 6♦ 7♣], Anchor checks, Compass checks, Velvet checks, Professor checks, [turn: 10♥ 6♦ 7♣ A♥], Anchor checks, Compass checks, Velvet checks, Professor checks, [river: 10♥ 6♦ 7♣ A♥ Q♣], Anchor checks, Compass checks, Velvet checks, Professor checks → Velvet wins 400 with Pair of As (A♣ 3♥)",
+   "pot": 400
   }
  ],
  "finishes": [
