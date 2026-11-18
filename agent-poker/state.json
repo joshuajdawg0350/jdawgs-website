@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:13:12.402Z",
+ "updatedAt": "2026-11-18T20:13:32.574Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  100,
-  200
+  200,
+  400
  ],
- "level": 3,
- "handsPlayed": 8,
+ "level": 4,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -104,14 +104,6 @@
      "stack": 19715,
      "status": "seated",
      "reentered": false
-    },
-    {
-     "name": "Marble",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
-     "status": "seated",
-     "reentered": false
     }
    ],
    "handsPlayed": 3
@@ -177,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 82430,
+     "stack": 63370,
      "status": "seated",
      "reentered": false
     },
@@ -193,8 +185,8 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19110,
-     "status": "seated",
+     "stack": 0,
+     "status": "out #17",
      "reentered": false
     },
     {
@@ -209,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17595,
+     "stack": 87975,
      "status": "seated",
      "reentered": false
     },
@@ -217,8 +209,8 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19160,
-     "status": "seated",
+     "stack": 0,
+     "status": "out #18",
      "reentered": false
     },
     {
@@ -233,7 +225,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 19110,
+     "stack": 6060,
      "status": "seated",
      "reentered": false
     },
@@ -244,9 +236,17 @@
      "stack": 0,
      "status": "out #19",
      "reentered": false
+    },
+    {
+     "name": "Marble",
+     "kind": "house",
+     "house": true,
+     "stack": 19950,
+     "status": "seated",
+     "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 82430,
+   "stack": 63370,
    "status": "seated",
    "reentered": false
   },
@@ -345,8 +345,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19110,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #17",
    "reentered": false
   },
   {
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17595,
+   "stack": 87975,
    "status": "seated",
    "reentered": false
   },
@@ -426,8 +426,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19160,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #18",
    "reentered": false
   },
   {
@@ -443,7 +443,7 @@
    "name": "Marble",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19950,
    "status": "seated",
    "reentered": false
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19110,
+   "stack": 6060,
    "status": "seated",
    "reentered": false
   },
@@ -500,15 +500,7 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Sixgun",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -557,6 +549,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: 5♥ 3♣ A♠], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [turn: 5♥ 3♣ A♠ K♠], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [river: 5♥ 3♣ A♠ K♠ J♠], Bulldog checks, Copper checks, Compass checks, Slick raises to 50, Dice calls 50, Bulldog folds, Copper folds, Compass calls 50 → Slick wins 400 with Straight, A high (10♦ Q♠)",
    "pot": 400
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Sixgun raises to 180, Deuce calls 180, Wildfire folds, Millstone calls 180, Velvet calls 155, Tally calls 130, [flop: 8♣ 9♦ 10♣], Velvet checks, Tally checks, Sixgun checks, Deuce checks, Millstone checks, [turn: 8♣ 9♦ 10♣ 9♣], Velvet checks, Tally checks, Sixgun raises to 540, Deuce calls 540, Millstone calls 540, Velvet calls 540, Tally calls 540, [river: 8♣ 9♦ 10♣ 9♣ 8♠], Velvet raises to 50, Tally raises to 100, Sixgun raises to 2350, Deuce calls 2350, Millstone calls 2350, Velvet raises to 4870, Tally raises to 7390, Sixgun goes ALL-IN to 18390, Deuce calls 16040, Millstone calls 16040, Velvet calls 12005, Tally goes ALL-IN to 18440, Deuce calls 50 → Deuce wins 100 with Two pair, 10s and 9s (3♦ 10♥); Velvet wins 87975 with Full house, 8s full of 9s (4♣ 8♦); Sixgun wins 6060 with Two pair, Qs and 9s (Q♣ Q♦)",
+   "pot": 94135
   }
  ],
  "finishes": [
@@ -622,6 +620,20 @@
    "kind": "house",
    "table": 3,
    "handNo": 1
+  },
+  {
+   "name": "Tally",
+   "place": 18,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3
+  },
+  {
+   "name": "Millstone",
+   "place": 17,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3
   }
  ],
  "champion": null,
