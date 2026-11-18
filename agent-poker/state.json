@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:54:20.245Z",
+ "updatedAt": "2026-11-18T19:54:44.100Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -505,9 +505,13 @@
   "handNo": 5,
   "stage": "preflop",
   "board": [],
-  "pot": 150,
-  "toAct": "River Rat",
-  "lastActions": []
+  "pot": 350,
+  "toAct": "CallBot",
+  "lastActions": [
+   "River Rat calls 100",
+   "Marble calls 100",
+   "Midas folds"
+  ]
  },
  "recentHands": [
   {
