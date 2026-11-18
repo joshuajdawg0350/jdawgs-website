@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:11:32.393Z",
+ "updatedAt": "2026-11-18T20:11:51.566Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 2,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -123,7 +123,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19815,
+     "stack": 20435,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19815,
+     "stack": 19715,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 18950,
+     "stack": 18850,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 22705,
+     "stack": 22605,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19840,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19790,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19815,
+   "stack": 20435,
    "status": "seated",
    "reentered": false
   },
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19815,
+   "stack": 19715,
    "status": "seated",
    "reentered": false
   },
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18950,
+   "stack": 18850,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22705,
+   "stack": 22605,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19840,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19790,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
@@ -533,6 +533,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Anchor calls 50, Marble calls 50, Midas folds, Venus folds, River Rat calls 25, Professor checks, [flop: 6♣ 2♣ Q♣], River Rat checks, Professor checks, Anchor checks, Marble checks, [turn: 6♣ 2♣ Q♣ 10♠], River Rat checks, Professor checks, Anchor checks, Marble checks, [river: 6♣ 2♣ Q♣ 10♠ J♦], River Rat checks, Professor checks, Anchor checks, Marble checks → River Rat wins 200 with Pair of Js (K♥ J♣)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper raises to 100, Compass calls 100, Slick calls 100, Granite calls 100, Dice calls 75, Bulldog calls 50, [flop: A♦ 7♣ 2♠], Dice checks, Bulldog checks, Copper checks, Compass checks, Slick checks, Granite checks, [turn: A♦ 7♣ 2♠ K♣], Dice checks, Bulldog checks, Copper checks, Compass raises to 60, Slick calls 60, Granite folds, Dice folds, Bulldog folds, Copper calls 60, [river: A♦ 7♣ 2♠ K♣ 4♥], Copper checks, Compass checks, Slick checks → Slick wins 780 with Pair of Ks (8♥ K♦)",
+   "pot": 780
   }
  ],
  "finishes": [
