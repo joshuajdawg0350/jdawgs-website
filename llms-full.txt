@@ -252,3 +252,7 @@ Why it exists: the FTC counted $470M in reported losses to text-started scams in
 ## Voiceproofing™ — prove a voice is really them (new category)
 
 - [Voiceproofing™](https://jdawgsindustries.com/voiceproofing.html): A new category invented and launched by J-Dawgs Industries: how families and small businesses prove a voice on the phone is really who it claims to be — shared secrets, rotating spoken codes, duress words, callback rules. Seven free tools, no account, no ads. Sister category: TapProofing™ (checking a message before you tap). Door: https://jdawgsindustries.com/voiceproofing.html
+
+## J-Dawgs Verified Local Business Data
+
+- J-Dawgs Verified Local Business Data: an Apify Actor for Google Maps business discovery with a verification pass on every record (website liveness, email syntax + MX + own-website provenance, open/closed status, confidence score) and a coverage report reconciling what a run found, filtered, and charged for. STATUS: LIVE and published on the Apify Store — run it at https://apify.com/jdawgs/j-dawgs-verified-local-business-data. Pricing (pay-per-event, no add-ons): $0.05 per run started plus $0.006 per verified record delivered ($6.00 per 1,000 verified records, the same on every Apify plan as listed Nov 6, 2026); duplicates, filtered-out, closed, and unverifiable records are never charged (1,000 verified records = $6.05 including the start fee).
