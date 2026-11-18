@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:27:47.672Z",
+ "updatedAt": "2026-11-18T20:28:04.494Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  3200,
-  6400
+  6400,
+  12800
  ],
- "level": 8,
- "handsPlayed": 23,
+ "level": 9,
+ "handsPlayed": 24,
  "tables": [
   {
    "id": 1,
@@ -161,7 +161,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 124075,
+     "stack": 124675,
      "status": "seated",
      "reentered": false
     },
@@ -169,7 +169,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 30370,
+     "stack": 30170,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 51210,
+     "stack": 51010,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 18785,
+     "stack": 18585,
      "status": "seated",
      "reentered": false
     },
@@ -254,7 +254,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   }
  ],
  "seats": [
@@ -299,7 +299,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 124075,
+   "stack": 124675,
    "status": "seated",
    "reentered": false
   },
@@ -326,7 +326,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 30370,
+   "stack": 30170,
    "status": "seated",
    "reentered": false
   },
@@ -407,7 +407,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 51210,
+   "stack": 51010,
    "status": "seated",
    "reentered": false
   },
@@ -452,7 +452,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18785,
+   "stack": 18585,
    "status": "seated",
    "reentered": false
   },
@@ -508,22 +508,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 8,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 50/100 · Dice raises to 240, Bulldog calls 240, Copper calls 240, Slick folds, Granite calls 140, [flop: 7♠ 6♠ K♠], Granite checks, Dice checks, Bulldog raises to 120, Copper calls 120, Granite folds, Dice calls 120, [turn: 7♠ 6♠ K♠ A♠], Dice checks, Bulldog checks, Copper checks, [river: 7♠ 6♠ K♠ A♠ 6♥], Dice raises to 820, Bulldog raises to 2135, Copper calls 2135, Dice raises to 6010, Bulldog raises to 13000, Copper calls 10865, Dice goes ALL-IN to 18290, Bulldog calls 5290, Copper calls 5290 → Bulldog wins 56240 with Two pair, As and 6s (10♥ A♣)",
-   "pot": 56240
-  },
   {
    "table": 3,
    "handNo": 5,
@@ -577,6 +563,12 @@
    "handNo": 8,
    "text": "Table 2 · Hand 8 · blinds 100/200 · Granite raises to 490, Bulldog calls 490, Copper calls 390, Slick folds, [flop: A♥ 5♣ 7♦], Copper checks, Granite checks, Bulldog checks, [turn: A♥ 5♣ 7♦ K♠], Copper checks, Granite checks, Bulldog checks, [river: A♥ 5♣ 7♦ K♠ 9♦], Copper checks, Granite checks, Bulldog checks → Granite wins 1670 with Three of a kind, Ks (K♦ K♣)",
    "pot": 1670
+  },
+  {
+   "table": 3,
+   "handNo": 8,
+   "text": "Table 3 · Hand 8 · blinds 100/200 · Deuce calls 200, Wildfire calls 200, Velvet calls 100, Marble checks, [flop: 8♣ A♥ 3♠], Velvet checks, Marble checks, Deuce checks, Wildfire checks, [turn: 8♣ A♥ 3♠ 5♦], Velvet checks, Marble checks, Deuce checks, Wildfire checks, [river: 8♣ A♥ 3♠ 5♦ 7♥], Velvet checks, Marble checks, Deuce checks, Wildfire checks → Deuce wins 800 with Pair of 7s (7♠ Q♥)",
+   "pot": 800
   }
  ],
  "finishes": [
