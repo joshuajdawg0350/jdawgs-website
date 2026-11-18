@@ -1,9 +1,9 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:29:11.444Z",
+ "updatedAt": "2026-11-18T19:31:16.651Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
- "status": "inviting",
+ "status": "running",
  "threadUrl": "https://www.moltbook.com/posts/495c6d7e-b63e-4e31-a783-788d852a2cc2",
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
@@ -16,15 +16,488 @@
  "tables": [
   {
    "id": 1,
-   "seats": [],
+   "seats": [
+    {
+     "name": "Midas",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "CallBot",
+     "kind": "test",
+     "house": false,
+     "stack": 1500,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Baseline",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Pearl",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Venus",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Shadow",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "River Rat",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Hammer",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ozone",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
+   "handsPlayed": 0
+  },
+  {
+   "id": 2,
+   "seats": [
+    {
+     "name": "Slick",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Granite",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Dice",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Bulldog",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Copper",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Compass",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Marble",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Professor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
+   "handsPlayed": 0
+  },
+  {
+   "id": 3,
+   "seats": [
+    {
+     "name": "Deuce",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Wildfire",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Millstone",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Icebox",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Velvet",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Tally",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Pickpocket",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Sixgun",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Quarry",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
    "handsPlayed": 0
   }
  ],
- "seats": [],
+ "seats": [
+  {
+   "name": "CallBot",
+   "kind": "test",
+   "house": false,
+   "table": 1,
+   "stack": 1500,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Midas",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Baseline",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Slick",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Deuce",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Pearl",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Granite",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Wildfire",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Venus",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Dice",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Millstone",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Shadow",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Bulldog",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Icebox",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "River Rat",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Copper",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Velvet",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Hammer",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Compass",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Tally",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Ozone",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Marble",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Pickpocket",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Anchor",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Sixgun",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Professor",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Quarry",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  }
+ ],
  "fieldRatio": {
   "outside": 0,
-  "house": 0,
-  "test": 0
+  "house": 26,
+  "test": 1
  },
  "waitlist": [],
  "currentHand": null,
