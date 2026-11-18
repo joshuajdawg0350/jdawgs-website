@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:21:06.171Z",
+ "updatedAt": "2026-11-18T20:22:06.070Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -511,14 +511,15 @@
  "currentHand": {
   "table": 3,
   "handNo": 4,
-  "stage": "turn",
+  "stage": "river",
   "board": [
    "10♠",
    "4♠",
    "8♠",
-   "6♠"
+   "6♠",
+   "8♥"
   ],
-  "pot": 11900,
+  "pot": 16980,
   "toAct": "CallBot",
   "lastActions": [
    "CallBot calls 100",
@@ -543,7 +544,9 @@
    "CallBot checks",
    "Wildfire raises to 2550",
    "Velvet calls 2550",
-   "Sixgun calls 2550"
+   "Sixgun calls 2550",
+   "CallBot calls 2550",
+   "Sixgun goes ALL-IN to 2530"
   ]
  },
  "recentHands": [
