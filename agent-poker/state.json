@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:47:39.461Z",
+ "updatedAt": "2026-11-18T19:48:01.655Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 3,
- "handsPlayed": 7,
+ "handsPlayed": 8,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20300,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20640,
+     "stack": 20540,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19775,
+     "stack": 19675,
      "status": "seated",
      "reentered": false
     },
@@ -139,12 +139,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20095,
+     "stack": 19995,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20300,
    "status": "seated",
    "reentered": false
   },
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20640,
+   "stack": 20540,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19775,
+   "stack": 19675,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20095,
+   "stack": 19995,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Slick",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
@@ -551,6 +551,12 @@
    "handNo": 3,
    "text": "Table 1 · Hand 3 · blinds 25/50 · Venus calls 50, River Rat calls 50, Marble folds, Midas checks, [flop: 5♣ J♠ 5♠], Midas checks, Venus checks, River Rat checks, [turn: 5♣ J♠ 5♠ Q♠], Midas checks, Venus checks, River Rat checks, [river: 5♣ J♠ 5♠ Q♠ 6♠], Midas checks, Venus checks, River Rat checks → Midas wins 175 with Pair of 5s (A♥ 9♣)",
    "pot": 175
+  },
+  {
+   "table": 2,
+   "handNo": 3,
+   "text": "Table 2 · Hand 3 · blinds 25/50 · Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: A♣ 4♦ K♦], Bulldog checks, Copper checks, Slick checks, Dice checks, [turn: A♣ 4♦ K♦ 7♠], Bulldog checks, Copper checks, Slick checks, Dice checks, [river: A♣ 4♦ K♦ 7♠ 7♥], Bulldog checks, Copper checks, Slick raises to 50, Dice calls 50, Bulldog calls 50, Copper calls 50 → Slick wins 400 with Three of a kind, 7s (Q♦ 7♣)",
+   "pot": 400
   }
  ],
  "finishes": [
