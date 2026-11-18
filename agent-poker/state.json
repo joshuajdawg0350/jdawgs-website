@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:27:13.374Z",
+ "updatedAt": "2026-11-18T20:27:31.761Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   6400
  ],
  "level": 8,
- "handsPlayed": 21,
+ "handsPlayed": 22,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 98050,
+     "stack": 97850,
      "status": "seated",
      "reentered": false
     },
@@ -53,8 +53,8 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 150,
-     "status": "seated",
+     "stack": 0,
+     "status": "out #12",
      "reentered": false
     },
     {
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 101120,
+     "stack": 101570,
      "status": "seated",
      "reentered": false
     },
@@ -101,12 +101,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 195,
+     "stack": 95,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 2,
@@ -272,7 +272,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 98050,
+   "stack": 97850,
    "status": "seated",
    "reentered": false
   },
@@ -335,8 +335,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 150,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #12",
    "reentered": false
   },
   {
@@ -389,7 +389,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 101120,
+   "stack": 101570,
    "status": "seated",
    "reentered": false
   },
@@ -470,7 +470,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 195,
+   "stack": 95,
    "status": "seated",
    "reentered": false
   },
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Venus",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 4,
-   "text": "Table 3 · Hand 4 · blinds 50/100 · CallBot calls 100, Deuce calls 100, Wildfire calls 100, Velvet calls 100, Sixgun raises to 230, Marble folds, CallBot calls 130, Deuce calls 130, Wildfire calls 130, Velvet calls 130, [flop: 10♠ 4♠ 8♠], Sixgun checks, CallBot checks, Deuce checks, Wildfire raises to 750, Velvet calls 750, Sixgun calls 750, CallBot calls 750, Deuce folds, [turn: 10♠ 4♠ 8♠ 6♠], Sixgun checks, CallBot checks, Wildfire raises to 2550, Velvet calls 2550, Sixgun calls 2550, CallBot calls 2550, [river: 10♠ 4♠ 8♠ 6♠ 8♥], Sixgun goes ALL-IN to 2530, CallBot calls 1370, Wildfire raises to 13540, Velvet calls 13540 → Wildfire wins 45430 with Flush, Q high (Q♠ 7♠)",
-   "pot": 45430
-  },
   {
    "table": 1,
    "handNo": 5,
@@ -577,6 +571,12 @@
    "handNo": 7,
    "text": "Table 3 · Hand 7 · blinds 100/200 · Marble calls 200, Compass calls 200, Deuce calls 200, Wildfire calls 100, Velvet checks, [flop: 10♥ 10♦ J♠], Wildfire checks, Velvet checks, Marble checks, Compass checks, Deuce checks, [turn: 10♥ 10♦ J♠ K♥], Wildfire checks, Velvet checks, Marble checks, Compass checks, Deuce raises to 260, Wildfire calls 260, Velvet calls 260, Marble calls 260, Compass calls 260, [river: 10♥ 10♦ J♠ K♥ 8♦], Wildfire checks, Velvet checks, Marble checks, Compass raises to 220, Deuce raises to 505, Wildfire calls 505, Velvet calls 505, Marble calls 505, Compass raises to 820, Deuce raises to 1230, Wildfire calls 725, Velvet calls 725, Marble folds, Compass raises to 1680, Deuce raises to 2265, Wildfire calls 1035, Velvet calls 1035, Compass raises to 2910, Deuce raises to 3750, Wildfire calls 1485, Velvet calls 1485, Compass raises to 4675, Deuce raises to 5880, Wildfire calls 2130, Velvet calls 2130, Compass raises to 7205, Deuce raises to 8930, Wildfire calls 3050, Velvet calls 3050, Compass raises to 10830, Deuce raises to 13300, Wildfire calls 4370, Velvet calls 4370, Compass raises to 16015, Deuce raises to 19545, Wildfire calls 6245, Velvet calls 6245, Compass calls 2965 → Deuce wins 80420 with Two pair, Ks and 10s (K♠ Q♠)",
    "pot": 80420
+  },
+  {
+   "table": 1,
+   "handNo": 8,
+   "text": "Table 1 · Hand 8 · blinds 100/200 · Venus calls 150, River Rat calls 200, Anchor folds, Midas checks, [flop: J♥ A♠ K♥], Midas checks, River Rat checks, [turn: J♥ A♠ K♥ 5♥], Midas checks, River Rat checks, [river: J♥ A♠ K♥ 5♥ 5♠], Midas checks, River Rat checks → River Rat wins 650 with Three of a kind, 5s (Q♠ 5♦)",
+   "pot": 650
   }
  ],
  "finishes": [
@@ -684,6 +684,13 @@
    "kind": "house",
    "table": 3,
    "handNo": 7
+  },
+  {
+   "name": "Venus",
+   "place": 12,
+   "kind": "house",
+   "table": 1,
+   "handNo": 8
   }
  ],
  "champion": null,
