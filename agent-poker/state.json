@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:44:54.953Z",
+ "updatedAt": "2026-11-18T19:45:15.458Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20690,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20690,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -462,7 +462,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
@@ -515,6 +515,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Pearl calls 50, Venus folds, Shadow calls 50, River Rat calls 50, Hammer calls 50, Ozone calls 50, Midas folds, CallBot calls 25, Baseline checks, [flop: 2♠ 4♦ 2♣], CallBot checks, Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, [turn: 2♠ 4♦ 2♣ 6♥], CallBot checks, Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, [river: 2♠ 4♦ 2♣ 6♥ 2♦], CallBot checks, Baseline raises to 55, Pearl calls 55, Shadow calls 55, River Rat raises to 110, Hammer raises to 180, Ozone raises to 270, CallBot calls 270, Baseline raises to 370, Pearl calls 315, Shadow calls 315, River Rat raises to 470, Hammer raises to 600, Ozone raises to 770, CallBot calls 500, Baseline raises to 955, Pearl calls 585, Shadow calls 585, River Rat raises to 1140, Hammer raises to 1380, Ozone raises to 1690, CallBot calls 680, Baseline raises to 2030, Pearl calls 1075, Shadow raises to 2405, River Rat raises to 2780, Hammer raises to 3270, Ozone raises to 3905, Baseline raises to 4605, Pearl calls 2575, Shadow raises to 5375, River Rat raises to 6145, Hammer raises to 7145, Ozone raises to 8445, Baseline raises to 9875, Pearl calls 5270, Shadow calls 4500, River Rat raises to 11305, Hammer raises to 13165, Ozone raises to 15585, Baseline calls 5710, Pearl calls 5710, Shadow calls 5710, River Rat raises to 18005, Hammer goes ALL-IN to 19950, Ozone calls 4365, Baseline calls 4365, Pearl calls 4365, Shadow calls 4365, River Rat calls 1945 → River Rat wins 121500 with Full house, 2s full of 6s (7♦ 6♠)",
    "pot": 121500
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass raises to 115, Marble calls 115, Anchor calls 115, Professor folds, Slick folds, Granite calls 90, Dice calls 65, Bulldog calls 65, Copper calls 65, [flop: 4♦ 5♠ 2♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [turn: 4♦ 5♠ 2♣ J♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [river: 4♦ 5♠ 2♣ J♣ K♦], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks → Dice wins 805 with Pair of Ks (7♠ K♥)",
+   "pot": 805
   }
  ],
  "finishes": [
