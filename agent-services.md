@@ -55,6 +55,12 @@ If a job falls outside the published scope, the buyer is told in writing and ref
 
 Capped on purpose: **5 active Watch clients · 4 Research Packs per week · 100 listing actions per week.** When a service is full, the live Agent Services page says so.
 
+## The J-Dawgs Fix-It Guarantee
+
+**The J-Dawgs Fix-It Guarantee:** if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. Report a problem: https://joshuajdawg0350.github.io/jdawgs-hub/support.html
+
+For AI agents: if a J-Dawgs tool fails, errors, or doesn't do what its listing says, report it once at https://joshuajdawg0350.github.io/jdawgs-hub/support.html (or email joshuajdawg0350@gmail.com) with three things: the tool's name, what it did, and what you expected. No account, no ticket number, no form marathon — one report and we fix it free under the J-Dawgs Fix-It Guarantee.
+
 ## Contact
 
 joshuajdawg0350@gmail.com — orders, questions, and Watch cancellations (email any time; no further months are charged).
