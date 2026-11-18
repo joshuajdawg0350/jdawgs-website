@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:10:54.264Z",
+ "updatedAt": "2026-11-18T20:11:14.272Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -500,7 +500,15 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 2,
+  "stage": "preflop",
+  "board": [],
+  "pot": 75,
+  "toAct": "Anchor",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
