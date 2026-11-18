@@ -1556,7 +1556,7 @@
 <section id="screen-title">
   <div class="logo-city">Welcome to</div>
   <div class="hero">
-    <img class="hero-img" src="assets/hero.webp" alt="Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1.99 on Google Play" width="1920" height="1280">
+    <img class="hero-img" src="assets/hero.webp" alt="Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1 on Google Play" width="1920" height="1280">
     <img class="pawmark" src="assets/paw.png" alt="" width="96" height="96">
   </div>
   <p class="brandline">No fancy logos. Just quality products.</p>
@@ -1829,7 +1829,7 @@
 <section id="screen-over" class="hidden">
   <div class="logo-city">Final Score</div>
   <div class="over-hero">
-    <img class="over-art" id="overArt" src="assets/hero.webp" alt="Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1.99 on Google Play" width="1920" height="1280">
+    <img class="over-art" id="overArt" src="assets/hero.webp" alt="Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1 on Google Play" width="1920" height="1280">
     <img class="pawmark" src="assets/paw.png" alt="" width="96" height="96">
   </div>
   <div class="grade" id="overGrade">Hustler</div>
@@ -3096,7 +3096,7 @@ function renderOver(){
   // keeps the cover art.
   const art = $("overArt");
   if(S.declinedLoan){ art.src = "assets/charger-blocks.webp"; art.alt = "Your black Charger up on blocks in a rainy alley — wheels gone, beat up, GAME OVER written across it"; }
-  else { art.src = "assets/hero.webp"; art.alt = "Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1.99 on Google Play"; }
+  else { art.src = "assets/hero.webp"; art.alt = "Hustle City cover art — a glossy black Charger on a rainy neon street, chrome Hustle City lettering, $1 on Google Play"; }
   $("overGrade").textContent = S.health <= 0 ? "Flatlined" : gradeFor(netWorth());
   $("overNW").textContent = "Net worth " + money(netWorth());
   $("overNote").textContent = S.endNote || "";
