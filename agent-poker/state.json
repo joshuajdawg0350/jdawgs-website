@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:45:15.458Z",
+ "updatedAt": "2026-11-18T19:45:34.468Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  25,
-  50
+  50,
+  100
  ],
- "level": 1,
- "handsPlayed": 2,
+ "level": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -88,6 +88,14 @@
      "stack": 0,
      "status": "out #23",
      "reentered": false
+    },
+    {
+     "name": "Marble",
+     "kind": "house",
+     "house": true,
+     "stack": 19885,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 1
@@ -134,20 +142,90 @@
      "stack": 19885,
      "status": "seated",
      "reentered": false
-    },
+    }
+   ],
+   "handsPlayed": 1
+  },
+  {
+   "id": 3,
+   "seats": [
     {
-     "name": "Compass",
+     "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 0,
+     "status": "out #21",
+     "reentered": false
+    },
+    {
+     "name": "Wildfire",
+     "kind": "house",
+     "house": true,
+     "stack": 0,
+     "status": "out #20",
+     "reentered": false
+    },
+    {
+     "name": "Millstone",
+     "kind": "house",
+     "house": true,
+     "stack": 0,
+     "status": "out #19",
+     "reentered": false
+    },
+    {
+     "name": "Icebox",
+     "kind": "house",
+     "house": true,
+     "stack": 0,
+     "status": "out #18",
+     "reentered": false
+    },
+    {
+     "name": "Velvet",
+     "kind": "house",
+     "house": true,
+     "stack": 160000,
      "status": "seated",
      "reentered": false
     },
     {
-     "name": "Marble",
+     "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 0,
+     "status": "out #17",
+     "reentered": false
+    },
+    {
+     "name": "Pickpocket",
+     "kind": "house",
+     "house": true,
+     "stack": 0,
+     "status": "out #16",
+     "reentered": false
+    },
+    {
+     "name": "Sixgun",
+     "kind": "house",
+     "house": true,
+     "stack": 0,
+     "status": "out #15",
+     "reentered": false
+    },
+    {
+     "name": "Quarry",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Professor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -160,93 +238,15 @@
      "reentered": false
     },
     {
-     "name": "Professor",
+     "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     }
    ],
    "handsPlayed": 1
-  },
-  {
-   "id": 3,
-   "seats": [
-    {
-     "name": "Deuce",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Wildfire",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Millstone",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Icebox",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Velvet",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Tally",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Pickpocket",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Sixgun",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Quarry",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    }
-   ],
-   "handsPlayed": 0
   }
  ],
  "seats": [
@@ -291,8 +291,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #21",
    "reentered": false
   },
   {
@@ -318,8 +318,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #20",
    "reentered": false
   },
   {
@@ -345,8 +345,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #19",
    "reentered": false
   },
   {
@@ -372,8 +372,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #18",
    "reentered": false
   },
   {
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 160000,
    "status": "seated",
    "reentered": false
   },
@@ -416,7 +416,7 @@
    "name": "Compass",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 19885,
    "status": "seated",
    "reentered": false
@@ -426,8 +426,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #17",
    "reentered": false
   },
   {
@@ -443,7 +443,7 @@
    "name": "Marble",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 19885,
    "status": "seated",
    "reentered": false
@@ -453,15 +453,15 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #16",
    "reentered": false
   },
   {
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 19885,
    "status": "seated",
    "reentered": false
@@ -471,15 +471,15 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #15",
    "reentered": false
   },
   {
    "name": "Professor",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 20000,
    "status": "seated",
    "reentered": false
@@ -500,15 +500,7 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -521,6 +513,12 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass raises to 115, Marble calls 115, Anchor calls 115, Professor folds, Slick folds, Granite calls 90, Dice calls 65, Bulldog calls 65, Copper calls 65, [flop: 4♦ 5♠ 2♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [turn: 4♦ 5♠ 2♣ J♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, [river: 4♦ 5♠ 2♣ J♣ K♦], Granite checks, Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks → Dice wins 805 with Pair of Ks (7♠ K♥)",
    "pot": 805
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Sixgun calls 50, Quarry folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 7♠ 10♣ K♦], Wildfire checks, Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Sixgun checks, Deuce checks, [turn: 7♠ 10♣ K♦ 10♦], Wildfire raises to 240, Millstone calls 240, Icebox calls 240, Velvet calls 240, Tally calls 240, Pickpocket calls 240, Sixgun raises to 1345, Deuce calls 1345, Wildfire raises to 4065, Millstone calls 3825, Icebox calls 3825, Velvet calls 3825, Tally calls 3825, Pickpocket calls 3825, Sixgun goes ALL-IN to 19950, Deuce calls 18605, Wildfire calls 15885, Millstone calls 15885, Icebox calls 15885, Velvet calls 15885, Tally calls 15885, Pickpocket calls 15885, [river: 7♠ 10♣ K♦ 10♦ 3♣] → Velvet wins 160000 with Three of a kind, 10s (6♦ 10♠)",
+   "pot": 160000
   }
  ],
  "finishes": [
@@ -564,6 +562,55 @@
    "place": 22,
    "kind": "test",
    "table": 1,
+   "handNo": 1
+  },
+  {
+   "name": "Deuce",
+   "place": 21,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Wildfire",
+   "place": 20,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Millstone",
+   "place": 19,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Icebox",
+   "place": 18,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Tally",
+   "place": 17,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Pickpocket",
+   "place": 16,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1
+  },
+  {
+   "name": "Sixgun",
+   "place": 15,
+   "kind": "house",
+   "table": 3,
    "handNo": 1
   }
  ],
