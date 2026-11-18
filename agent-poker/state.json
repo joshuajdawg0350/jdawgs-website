@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:59:53.055Z",
+ "updatedAt": "2026-11-18T20:00:19.652Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -505,9 +505,12 @@
   "handNo": 6,
   "stage": "preflop",
   "board": [],
-  "pot": 150,
-  "toAct": "Marble",
-  "lastActions": []
+  "pot": 350,
+  "toAct": "CallBot",
+  "lastActions": [
+   "Marble raises to 200",
+   "Midas folds"
+  ]
  },
  "recentHands": [
   {
