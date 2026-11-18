@@ -3,15 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Arcade Moved — J-Dawgs Digital Dollar Store | J-Dawgs Industries</title>
-<meta name="description" content="The J-Dawgs games &amp; apps moved to the J-Dawgs Digital Dollar Store — everything 99&cent; unless marked, one payment each, yours forever. No ads. Ever. We never sell your information.">
+<title>The Developer's Arcade — Sell Your Games, Apps &amp; Movies | J-Dawgs Industries</title>
+<meta name="description" content="Sell your games, apps, movies — anything you make — at the Developer's Arcade. AI-generated content is welcome here, and honestly labeled. Apply free; we test everything and post a public proof run; you pay the one-time $19.99 only after you pass — then just 3% of sales. No ads, ever. You keep 97%. We never sell your information.">
 <link rel="canonical" href="https://jdawgsindustries.com/arcade/">
+<meta property="og:title" content="The Developer's Arcade — $19.99 one-time, just 3% of sales. AI-made welcome.">
+<meta property="og:description" content="Games, apps, movies — anything you make, sold on our ad-free store. We test everything first and post a public proof run — the one-time $19.99 fee is due only after you pass, then just 3% of sales. You keep 97%.">
+<meta property="og:image" content="https://jdawgsindustries.com/games/assets/hero-street.webp">
+<meta property="og:url" content="https://jdawgsindustries.com/arcade/">
+<script>document.documentElement.className+=" js"</script>
 <link rel="stylesheet" href="../assets/site.css">
 <link rel="icon" href="../assets/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/paw-icon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../assets/paw-icon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/paw-icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../games/icons/arcade-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../games/icons/arcade-180.png">
 <meta name="theme-color" content="#05080E">
+<style>
+  :root{--eb:#3FA9F5;--eb-bright:#6FC3FF;--eb-deep:#2B7FD4}
+  /* ---------- hero (same street as the original Arcade) ---------- */
+  .arcade-hero{position:relative;padding:7.2rem 0 2.6rem;background:#05080E url("../games/assets/hero-street.webp") center 22%/cover no-repeat;overflow:hidden}
+  .arcade-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.72) 0%,rgba(5,8,14,.55) 45%,rgba(5,8,14,.88) 78%,var(--bg) 100%)}
+  .arcade-hero .wrap{position:relative}
+  .arcade-hero .eyebrow{color:var(--eb-bright)}
+  .arcade-hero .eyebrow::before{background:var(--eb-bright)}
+  .chrome-text{font-family:var(--font-display);font-weight:800;font-stretch:118%;letter-spacing:-.01em;line-height:.98;
+    font-size:clamp(2.4rem,10.5vw,4.8rem);margin:.2rem 0 0;text-transform:uppercase;
+    background:linear-gradient(180deg,#FFFFFF 0%,#D7DEE9 34%,#79869B 49%,#EDF1F7 60%,#9AA7BB 82%,#E6EBF3 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 14px rgba(63,169,245,.28))}
+  .promise-line{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem;margin-top:1.15rem;font-family:var(--font-display);
+    font-weight:800;font-size:clamp(1.05rem,4.6vw,1.5rem);color:#fff;letter-spacing:.01em}
+  .promise-line .eb{color:var(--eb-bright)}
+  .arcade-hero .lead{max-width:56ch;margin-top:.9rem;color:#D9E2EF;text-shadow:0 1px 10px rgba(0,0,0,.65)}
+  .arcade-hero .lead b{color:#fff}
+  /* ---------- bands ---------- */
+  .arcade-band{padding:3.4rem 0;border-top:1px solid var(--line)}
+  /* ---------- buttons ---------- */
+  .btn-buy{background:linear-gradient(180deg,var(--eb-bright),var(--eb-deep));color:#04101F;font-weight:800;border:1px solid rgba(111,195,255,.65)}
+  .btn-buy:hover{background:linear-gradient(180deg,#8ACBFF,#3A8EDB);color:#04101F;transform:translateY(-1px)}
+  /* ---------- the shelf ---------- */
+  .shelf-empty{background:linear-gradient(165deg,rgba(63,169,245,.10),var(--panel) 70%);border:1px dashed var(--line-strong);border-radius:12px;padding:2rem 1.8rem;margin-top:1.6rem;text-align:center}
+  .shelf-empty h3{font-size:1.35rem;font-weight:800;color:#fff}
+  .shelf-empty p{max-width:60ch;margin:.7rem auto 0;line-height:1.55}
+  /* ---------- the math: us vs them ---------- */
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .vs-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.6rem}
+  .vs-card.ours{background:linear-gradient(165deg,rgba(63,169,245,.14),var(--panel) 70%);border-color:var(--eb)}
+  .vs-card h3{font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+  .vs-card .vs-price{font-family:var(--font-display);font-weight:800;font-size:2rem;color:#fff;margin:.55rem 0 .2rem;line-height:1.05}
+  .vs-card .vs-price small{display:block;font-family:var(--font-body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.3rem}
+  .vs-card ul{margin:.9rem 0 0;padding-left:1.15rem}
+  .vs-card li{margin:.42rem 0;font-size:.95rem;line-height:1.5}
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.6rem}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.5rem}
+  .step .num{font-family:var(--font-display);font-weight:800;font-size:1.9rem;color:var(--eb-bright);line-height:1}
+  .step h3{font-size:1.12rem;font-weight:800;margin-top:.55rem}
+  .step p{margin:.4rem 0 0;font-size:.94rem;line-height:1.55}
+  /* ---------- rules ---------- */
+  .rules{margin:1.4rem 0 0;padding-left:1.2rem;max-width:68ch}
+  .rules li{margin:.55rem 0;font-size:.97rem;line-height:1.55}
+  .rules b{color:#fff}
+  /* ---------- application form ---------- */
+  .apply-form{background:linear-gradient(165deg,var(--panel-2),var(--panel) 65%);border:1px solid var(--line-strong);border-radius:12px;padding:1.6rem 1.7rem;margin-top:1.6rem;max-width:760px}
+  .apply-form .frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.35rem}
+  .field label .opt{font-weight:500;color:var(--muted);font-size:.8rem}
+  .field input,.field textarea,.field select{width:100%;background:#05080E;border:1px solid var(--line-strong);border-radius:8px;color:#fff;
+    font:inherit;font-size:16px;padding:.65rem .8rem;min-height:48px}
+  .field textarea{min-height:96px;resize:vertical}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--eb);box-shadow:0 0 0 3px rgba(63,169,245,.25)}
+  .field-error{display:none;color:#FF9D9D;font-size:.83rem;margin-top:.3rem}
+  .field-error.show{display:block}
+  .apply-form .btn{min-height:52px}
+  .apply-note{font-size:.86rem;color:var(--muted);margin-top:.9rem;line-height:1.55}
+  .composed-wrap{margin-top:1.2rem}
+  .composed-wrap textarea{width:100%;background:#05080E;border:1px solid var(--line-strong);border-radius:8px;color:var(--body);
+    font:inherit;font-size:.88rem;padding:.7rem .8rem;min-height:150px}
+  .copy-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:.6rem}
+  .copy-ok{color:var(--eb-bright);font-weight:700;font-size:.9rem}
+  /* ---------- qr ---------- */
+  .qr-band{display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;margin-top:1.6rem}
+  .qr-band img{background:#fff;border-radius:10px;padding:6px;display:block}
+  .qr-band p{max-width:44ch;line-height:1.55;margin:0}
+  /* ---------- footer ---------- */
+  .arcade-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+  .arcade-foot .guarantee{color:var(--body);max-width:62ch}
+  .arcade-foot .tagline{font-size:1.02rem;margin-top:1.2rem}
+  .arcade-foot nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.1rem}
+  .arcade-foot nav a{font-weight:600}
+  .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+  @media (max-width:700px){
+    .arcade-hero{padding:4.9rem 0 1.3rem;background-position:center 18%}
+    .chrome-text{font-size:clamp(2.1rem,11vw,2.8rem)}
+    .promise-line{gap:.25rem 1.1rem;margin-top:.7rem}
+    .arcade-hero .lead{font-size:.95rem;line-height:1.5;margin-top:.6rem}
+    .arcade-band{padding:2rem 0}
+    .vs-grid,.steps{grid-template-columns:1fr}
+    .vs-card,.step{padding:1.15rem 1.2rem}
+    .apply-form{padding:1.15rem 1.1rem}
+    .apply-form .frow{grid-template-columns:1fr}
+  }
+</style>
 </head>
 <body>
 
@@ -36,26 +128,394 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="arcade-hero">
   <div class="wrap">
-    <p class="eyebrow">We&rsquo;ve moved</p>
-    <h1>The Arcade has a new home.</h1>
-    <p class="lead">Hustle City, Hustle City 2 and every J-Dawgs game &amp; app now live at their own store — the <strong>J-Dawgs Digital Dollar Store</strong>. Everything 99&cent; unless marked, one payment each, yours forever. <strong>No ads. Ever.</strong> <strong>We never sell your information.</strong></p>
+    <p class="eyebrow">For developers &amp; creators — all of them</p>
+    <h1 class="chrome-text">The Developer's Arcade</h1>
+    <p class="promise-line"><span class="eb">No ads. Ever.</span><span>We never sell your information — or your customers'.</span></p>
+    <p class="lead">Made something? Sell it here. <b>Games, apps, movies — anything you make.</b> And if AI made it, or helped you make it, <b>you are welcome here</b> — proudly, out loud, with an honest label on it. Other stores make AI builders hide. We put it on the sign. List with us for a <b>one-time fee of $19.99</b> — one payment per developer, covering everything you ever list here, and due only after your work passes our test. After that, we take just <b>3% of sales</b>. You set your price; you keep 97% of every sale.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="http://digitaldollarstore.org/">Shop the Digital Dollar Store</a>
-      <a class="btn btn-ghost" href="../index.html">Back to J-Dawgs Industries</a>
+      <a class="btn btn-buy" href="#apply">Apply to sell →</a>
+      <a class="btn btn-ghost" href="#how">How it works</a>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<main>
+
+  <!-- ================= THE SHELF ================= -->
+  <section class="arcade-band" style="border-top:none;padding-top:1.5rem" id="shelf">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">The shelf</p>
+        <h2>First developers are being onboarded now</h2>
+      </div>
+      <div class="shelf-empty">
+        <h3>The shelf opens with its first passed products</h3>
+        <p>Nothing lists here until it passes <a href="#screen">the screen</a> and its public proof run is posted — hits and misses both. No bought placements, no fake listings, no filler. When the first developers clear the gate, their games, apps and movies land on this shelf with real prices and working buy buttons.</p>
+        <p style="margin-top:1.1rem"><a class="btn btn-buy" href="#apply">Be one of the first — apply free →</a></p>
+      </div>
+      <p style="max-width:68ch;margin:1.4rem auto 0;line-height:1.55;text-align:center">Looking for J-Dawgs' own games &amp; apps? They live at their own store — <a href="http://digitaldollarstore.org/">the Digital Dollar Store</a>. This shelf is for everybody else's work.</p>
+    </div>
+  </section>
+
+  <!-- ================= THE MATH ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Us vs. them</p>
+        <h2>The math</h2>
+        <p class="lead">The big store charges you to walk in, then takes 15% of every sale you ever make. We charge $19.99 once — after your work passes our test — then just 3%.</p>
+      </div>
+
+      <div class="vs-grid">
+        <div class="vs-card">
+          <h3>Google Play</h3>
+          <p class="vs-price">$25 + 15%<small>to open the account — then 15% of every sale, forever</small></p>
+          <ul>
+            <li><b>$25</b> developer fee before you sell a single copy.</li>
+            <li><b>15% of every sale</b> goes to Google — this month, next year, forever.</li>
+            <li>Your work sits in an ad-supported store, next to ad-supported everything.</li>
+          </ul>
+        </div>
+        <div class="vs-card ours">
+          <h3>The Developer's Arcade</h3>
+          <p class="vs-price">$19.99 once + 3%<small>one-time fee per developer — then just 3% of sales</small></p>
+          <ul>
+            <li><b>You keep 97% of every sale.</b> Standard card processing, about 3%, is the bank's fee — separate, and the only other deduction.</li>
+            <li><b>No ads</b> in the store, and listed products run <b>no ads</b> either.</li>
+            <li>We never sell your information — or your customers'.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="max-width:68ch;margin:1.6rem auto 0;line-height:1.55;text-align:center"><b>The math at real numbers:</b> sell $1,000 worth of your work and the Arcade keeps <b>$30</b> — you keep <b>$970</b> before standard card processing. At the big store's 15%, that same $1,000 costs you <b>$150</b>. Sell $10,000 and it's <b>$300</b> here against <b>$1,500</b> there — a $1,200 difference that stays in your pocket, every time, forever.</p>
+      <p class="lead" style="text-align:center;margin-top:1.5rem"><b>3%. We're not greedy.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="arcade-band" id="how">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps to the shelf</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <p class="num">1</p>
+          <h3>Apply — send us your work</h3>
+          <p>Send us what you made with the form below, starting with a copy we can open right in the browser — play the game, run the app, watch the movie. That web copy is your free demo and our screening copy. Pass the screen, and you supply the real listing: a signed Android app package (APK) for games and apps — that's what buyers install — or the full video for a movie. Web builds are demos only; the shelf sells the real thing. Applying costs nothing.</p>
+        </div>
+        <div class="step">
+          <p class="num">2</p>
+          <h3>We test it — the screen, then the proof run</h3>
+          <p>Everything goes through <a href="#screen">the screen</a> below: we use it end to end, on phones too, against the same gates as our own products. Then comes the proof run — the real product, run for real, with the results posted on a public proof page, hits and misses both. No proof page, no buy button. If something fixable is broken, you get specific notes and a free re-test.</p>
+        </div>
+        <div class="step">
+          <p class="num">3</p>
+          <h3>It passes — you pay $19.99</h3>
+          <p>The fee comes after the pass, never before — you don't pay a cent to be tested. Once your work passes, you pay the one-time fee: <b>$19.99</b>. One payment, per developer, covering everything you list with us — then just 3% of sales. No renewal, no surprise charges later.</p>
+        </div>
+        <div class="step">
+          <p class="num">4</p>
+          <h3>Listed</h3>
+          <p>Your work gets its own Arcade page with a buy button and its public proof page linked right on it. Buyers get the real product right after checkout, right here in the store — apps install, movies arrive in full. From there we collect 3% and pay out the other 97% on a regular schedule.</p>
+          <p><strong>Refunds:</strong> products from outside developers carry the same refund policy as our own — if a sale is refunded, the developer isn't paid out on it. Full policy: <a href="https://jdawgsindustries.com/refunds.html">https://jdawgsindustries.com/refunds.html</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE SCREEN ================= -->
+  <section class="arcade-band" id="screen">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">The screen</p>
+        <h2>Everything gets tested before it lists</h2>
+        <p class="lead">No pay-to-skip, no friends-and-family lane. Your work goes through the same screen as ours:</p>
+      </div>
+      <ul class="rules">
+        <li><b>Works, start to finish.</b> Games get played end to end. Apps get run through. Movies get watched all the way through — the whole video, no sampling, no skimming. If it breaks, stalls, or dead-ends, it doesn't list.</li>
+        <li><b>Works where buyers are.</b> Apps and games are checked on real phone sizes, not just a desktop window. Movies are checked on phone and desktop players.</li>
+        <li><b>The proof run is public.</b> A real run of the real product, posted where anyone can read it — hits and misses both — before any buy link goes live.</li>
+        <li><b>No ads inside the product.</b> None. That's the whole point of this store.</li>
+        <li><b>No selling customer data.</b> Your customers' information is never sold — by you or by us.</li>
+        <li><b>You own the rights.</b> You made it, or you hold the rights to sell it.</li>
+        <li><b>Not stolen or cloned.</b> No lifted work, no copies wearing a new name.</li>
+        <li><b>No scams.</b> If it promises one thing and does another, it's out.</li>
+        <li><b>AI-made is welcome — and labeled.</b> If AI generated your work or helped you make it, say so when you apply. It gets an honest "Made with AI" note on its listing — the same label our own AI-built products carry. Hiding it is the only way AI becomes a problem here.</li>
+      </ul>
+      <p style="max-width:68ch;margin-top:1.4rem;line-height:1.55">This is not a taste test. We don't reject work for being weird, dark, or rough around the edges — <b style="color:#fff">Weird is welcome. Broken is not.</b></p>
+      <p style="max-width:68ch;margin-top:.8rem;line-height:1.55">Fail on something fixable and you get specific notes — what broke, where, on what screen — plus a free re-test once you've fixed it. And the screen doesn't end at listing: buyer complaints trigger a re-test, and a product that breaks and stays broken comes off the shelf.</p>
+      <p class="lead" style="text-align:center;margin-top:1.5rem"><b>That's why there's no junk on this shelf.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= AI WELCOME ================= -->
+  <section class="arcade-band" id="ai-welcome">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">AI-generated content</p>
+        <h2>Built with AI? You're welcome here.</h2>
+        <p class="lead">Most stores treat AI-made work like something to hide, throttle, or ban outright. We treat it like work.</p>
+      </div>
+      <p style="max-width:68ch;margin-top:1.4rem;line-height:1.55">This company builds with AI every day — our own tools, games and videos are AI-built, and they carry the label in the open. So the door here is wide: if an AI generated your game, your app, your movie — or you built it side by side with one — <b style="color:#fff">bring it.</b> It gets tested like everything else, labeled honestly like everything else, and judged on the only question that matters: does it work, and is it any good?</p>
+      <p style="max-width:68ch;margin-top:.8rem;line-height:1.55">The screen doesn't care who — or what — held the tools. It cares whether the thing works. Labeled, tested, proven: that's the whole deal.</p>
+      <p class="lead" style="text-align:center;margin-top:1.5rem"><b>AI-made is a label here, not a disqualification.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= CONFIDENTIALITY ================= -->
+  <section class="arcade-band" id="confidential">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Confidential</p>
+        <h2>Your work stays yours</h2>
+        <p class="lead">Everything you share with us is <b>confidential</b> — your product, your files, your builds, your ideas. All of it.</p>
+      </div>
+      <p style="max-width:68ch;margin-top:1.4rem;line-height:1.55">We use a submission for one thing only: to test it and list it. We will <b style="color:#fff">never steal, copy, clone, or shop around</b> anything you send us — not your work, not your idea, from anybody. That's not a policy we bend; that's a promise we keep.</p>
+      <p style="max-width:68ch;margin-top:.8rem;line-height:1.55">And if your work doesn't pass the screen, we keep nothing and use nothing. It goes back to you, and it's like it was never here.</p>
+      <p class="lead" style="text-align:center;margin-top:1.5rem"><b>Your work is yours. Our job is to sell it, not take it.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= RULES ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">House rules</p>
+        <h2>The rules, up front</h2>
+      </div>
+      <ul class="rules">
+        <li><b>Confidential.</b> What you submit is used only to test and list it — never copied, never stolen, never shared.</li>
+        <li><b>You own the rights.</b> You must own your work, or hold the rights to sell it. No exceptions.</li>
+        <li><b>No ads in your product.</b> Listed products run no ads — that's the whole point of this store.</li>
+        <li><b>No selling customer data.</b> Your customers' information is theirs. We never sell it, and neither do you.</li>
+        <li><b>Honest AI label.</b> If AI made your work or helped you make it, the listing says so. No hiding, no exceptions — the same rule our own products live under.</li>
+        <li><b>Proof before the buy button.</b> Nothing sells until its public proof run is posted — hits and misses both.</li>
+        <li><b>For buyers: the guarantees apply.</b> Every product on this shelf carries the Fix-It Guarantee and the Money-Back Guarantee, same as our own — see the refund policy linked in step 4.</li>
+        <li><b>The Fix-It Guarantee covers the store side.</b> If our store breaks your sale — a bad link, a broken page — we fix it free. Your product's bugs stay yours to fix.</li>
+        <li><b>Broken or dishonest gets delisted.</b> If a listed product stops working or wasn't what it claimed to be, we can take it down.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS FOR DEVELOPERS ================= -->
+  <section class="arcade-band">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Tools for developers</p>
+        <h2>Tools for developers</h2>
+        <p class="lead"><strong>No ads. Ever.</strong> <strong>We never sell your information.</strong> <strong>No fancy logos. Just quality products.</strong></p>
+      </div>
+      <p style="max-width:68ch;margin-top:1.4rem;line-height:1.55">Listing is only half the job. The AI Tool Store has a shelf built for developers who build with AI — store listing checkups, patch-note writers, icon &amp; screenshot sizing, trailer caption tools, launch distribution and release-note auditors — so the work you list is also the work that sells.</p>
+      <p style="margin-top:1.2rem"><a class="btn btn-buy" href="https://jdawgsindustries.com/ai-tool-store.html">See the For Game &amp; App Developers collection in the AI Tool Store →</a></p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="arcade-band" id="faq">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Straight answers</p>
+        <h2>Developer questions, answered plain</h2>
+      </div>
+      <ul class="rules">
+        <li><b>What can I sell here?</b> Games, apps, movies — anything you make. If people can buy it and use it, it belongs on this shelf. You bring the work; we take our cut and handle the store.</li>
+        <li><b>My work was made with AI. Is that really okay?</b> Yes — really. AI-generated and AI-assisted work is welcome here, full stop. You declare it when you apply, the listing carries an honest "Made with AI" label, and the work is judged on whether it works — the same as ours.</li>
+        <li><b>Does it cost anything to apply or get tested?</b> No. Applying is free, the test is free, and a re-test after a fixable fail is free. The one-time $19.99 is due only after your work passes — never before.</li>
+        <li><b>Does the $19.99 cover more than one product?</b> Yes. It's one payment per developer, and it covers everything you list with us. No renewal, no per-product fee, no surprise charges later.</li>
+        <li><b>What exactly do I send?</b> Two things: a copy we can open in the browser (that's our screening copy and your free demo — a playable build, a runnable app demo, a watchable video) and, once you pass, the real product — a signed Android app package (APK) for games and apps, the full video file for a movie. Web builds are demos only; no real product, no listing.</li>
+        <li><b>What does the proof run mean for a movie?</b> We watch the whole thing, end to end — no sampling — and post what we found on a public proof page, the parts that worked and the parts that didn't. Only then does the buy button go live.</li>
+        <li><b>What if my work fails the screen?</b> If the fail is fixable, you get specific notes — what broke, where, on what screen — and a free re-test once you've fixed it. Weird is welcome. Broken is not.</li>
+        <li><b>Who sets my price?</b> You do. You set your price; the Arcade takes 3% of sales and you keep 97%. Standard card processing (about 3%) is the bank's fee, separate from ours.</li>
+        <li><b>When do I get paid?</b> We collect the 3% and pay out your 97% on a regular schedule. If a sale is refunded, that sale isn't paid out — outside products carry the same refund policy as our own.</li>
+        <li><b>Do you own my work if I submit it?</b> No. Your submission is confidential and is used for one thing only: to test it and list it. If it doesn't pass, we keep nothing and use nothing.</li>
+        <li><b>Can my product have ads or sell customer data?</b> No — neither. No ads in the store, no ads in listed products, and nobody's information gets sold. That's the whole point of this store.</li>
+        <li><b>What happens if my product breaks after it lists?</b> Buyer complaints trigger a re-test. A product that breaks and stays broken comes off the shelf — the screen doesn't end at listing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= APPLY ================= -->
+  <section class="arcade-band" id="apply">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Apply</p>
+        <h2>Apply with your work</h2>
+        <p class="lead">Fill this in and your email app opens with the application ready to send — that's the whole intake. We test everything by hand, so give us a link we can open right in the browser.</p>
+        <p style="max-width:68ch;margin-top:1rem;line-height:1.55"><b>Before you hit send, check:</b> ☐ your link opens in a browser — we can play it, run it, or watch it, start to finish &nbsp;·&nbsp; ☐ your price is set, in USD &nbsp;·&nbsp; ☐ your pitch says what it is and why it's good, in two or three sentences &nbsp;·&nbsp; ☐ you own the rights to sell it &nbsp;·&nbsp; ☐ no ads in the product, no selling customer data &nbsp;·&nbsp; ☐ if AI made it or helped, you've said so in the form. All six? You're ready.</p>
+      </div>
+
+      <form class="apply-form" id="sellForm" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="sfName">Your name or studio name</label>
+            <input id="sfName" type="text" autocomplete="name">
+            <p class="field-error" id="err-sfName"></p>
+          </div>
+          <div class="field">
+            <label for="sfEmail">Your email</label>
+            <input id="sfEmail" type="email" autocomplete="email">
+            <p class="field-error" id="err-sfEmail"></p>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="sfKind">What are you selling?</label>
+            <select id="sfKind">
+              <option value="Game">Game</option>
+              <option value="App">App</option>
+              <option value="Movie / video">Movie / video</option>
+              <option value="Other content">Other content</option>
+            </select>
+            <p class="field-error" id="err-sfKind"></p>
+          </div>
+          <div class="field">
+            <label for="sfTitle">Title of your work</label>
+            <input id="sfTitle" type="text">
+            <p class="field-error" id="err-sfTitle"></p>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="sfPrice">Your price, in USD</label>
+            <input id="sfPrice" type="text" inputmode="decimal" placeholder="4.99">
+            <p class="field-error" id="err-sfPrice"></p>
+          </div>
+          <div class="field">
+            <label for="sfAi">Made with AI?</label>
+            <select id="sfAi">
+              <option value="No — made without AI">No — made without AI</option>
+              <option value="Partly — AI helped">Partly — AI helped</option>
+              <option value="Yes — AI-generated">Yes — AI-generated</option>
+            </select>
+            <p class="field-error" id="err-sfAi"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="sfUrl">Link to your work <span class="opt">— must open in a browser: playable, runnable, or watchable</span></label>
+          <input id="sfUrl" type="url" inputmode="url" placeholder="https://…">
+          <p class="field-error" id="err-sfUrl"></p>
+        </div>
+        <div class="field">
+          <label for="sfPitch">Pitch it <span class="opt">— two or three sentences: what it is, why it's good</span></label>
+          <textarea id="sfPitch"></textarea>
+          <p class="field-error" id="err-sfPitch"></p>
+        </div>
+        <button class="btn btn-buy" type="submit" id="sfSubmit">Send my application →</button>
+        <p class="apply-note">Pressing send opens your email app with everything filled in, addressed to us — just press send there too. No email app? Copy the application below and email it to <a href="mailto:joshuajdawg0350@gmail.com">joshuajdawg0350@gmail.com</a>. We reply after we've tested your work.</p>
+        <div class="composed-wrap" id="sfComposedWrap" hidden>
+          <label for="sfComposed" style="font-weight:700;font-size:.9rem;color:#fff;display:block;margin-bottom:.35rem">Your application, ready to copy:</label>
+          <textarea id="sfComposed" readonly></textarea>
+          <div class="copy-row">
+            <button class="btn btn-ghost" type="button" id="sfCopyBtn">Copy the application</button>
+            <span class="copy-ok" id="sfCopyOk" hidden>Copied ✓</span>
+            <span class="copy-ok" id="sfCopyMsg" hidden style="color:#FF9D9D">Copy didn't work — select the text above and copy it by hand.</span>
+          </div>
+        </div>
+      </form>
+
+      <div class="qr-band">
+        <img src="qr-arcade.png" alt="QR code for this page — jdawgsindustries.com/arcade/" width="148" height="148">
+        <p><b style="color:#fff">Take the Arcade with you.</b> Scan this code to open this page on your phone — send it to a developer you know. The address is <b style="color:#fff">jdawgsindustries.com/arcade/</b></p>
+      </div>
+
+      <p style="margin-top:1.6rem"><a class="backlink" href="../index.html">← Back to J-Dawgs Industries</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="arcade-foot">
   <div class="wrap">
+    <p class="guarantee"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://jdawgsindustries.com/support.html">Report a problem</a></p>
+    <p class="guarantee" style="margin-top:.8rem"><strong>Refunds:</strong> If it doesn't work and we can't fix it, you get your money back — and 14 days to change your mind on anything digital. Full policy: <a href="https://jdawgsindustries.com/refunds.html">https://jdawgsindustries.com/refunds.html</a></p>
     <p class="tagline"><strong>No fancy logos. Just quality products.</strong> <strong>No ads.</strong> <strong>We never sell your information.</strong></p>
-    <p class="foot-note">No ads. Nothing on this site tracks you. &copy; 2026 Joshua Dawson &middot; J-Dawgs Industries, Springfield, MO.</p>
+    <nav aria-label="Footer">
+      <a href="../index.html">J-Dawgs Industries</a>
+      <a href="index.html">The Developer's Arcade</a>
+      <a href="http://digitaldollarstore.org/">Digital Dollar Store</a>
+      <a href="../ai-tool-store.html">AI Tool Store</a>
+      <a href="../support.html">Support</a>
+    </nav>
+    <p class="foot-note" style="margin-top:1.2rem">No ads. Nothing on this page tracks you. © 2026 Joshua Dawson · J-Dawgs Industries, Springfield, MO.</p>
   </div>
 </footer>
 
 <script src="../assets/site.js" defer></script>
 <script src="../jdawgs-chat.js" defer></script>
+<script>
+(function(){
+  function val(id){ var el=document.getElementById(id); return el ? el.value.trim() : ""; }
+  function setErr(id,msg){
+    var el=document.getElementById("err-"+id);
+    if(el){ el.textContent=msg||""; el.classList.toggle("show", !!msg); }
+    return !msg;
+  }
+  var form=document.getElementById("sellForm");
+  if(!form) return;
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var name=val("sfName"), email=val("sfEmail"), kind=val("sfKind"), title=val("sfTitle"),
+        priceRaw=val("sfPrice"), ai=val("sfAi"), url=val("sfUrl"), pitch=val("sfPitch");
+    var ok=true;
+    if(!setErr("sfName", name?"":"Your name or studio name is required.")) ok=false;
+    if(!setErr("sfEmail", !email?"Your email is required.":(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)?"Enter a valid email address.":""))) ok=false;
+    if(!setErr("sfTitle", title?"":"A title is required.")) ok=false;
+    var price=parseFloat(priceRaw); var priceErr="";
+    if(!priceRaw) priceErr="Your price is required.";
+    else if(isNaN(price)) priceErr="Enter a valid price.";
+    else if(price<=0) priceErr="Price must be more than $0.";
+    else if(price>10000) priceErr="Price must be $10,000 or less.";
+    else if(!/^\d+(\.\d{1,2})?$/.test(priceRaw)) priceErr="Price can have at most 2 decimals.";
+    if(!setErr("sfPrice", priceErr)) ok=false;
+    if(!setErr("sfUrl", !url?"A link to your work is required — we test everything in the browser.":(!/^https?:\/\//i.test(url)?"Link must start with http:// or https://":""))) ok=false;
+    if(!setErr("sfPitch", pitch?"":"A short pitch is required.")) ok=false;
+    if(!ok){
+      var firstErr=form.querySelector(".field-error.show");
+      if(firstErr) firstErr.scrollIntoView({behavior:"smooth", block:"center"});
+      return;
+    }
+    var lines=[
+      "ARCADE SELLER APPLICATION",
+      "",
+      "Name / studio: "+name,
+      "Email: "+email,
+      "What are you selling: "+kind,
+      "Title: "+title,
+      "Link to your work: "+url,
+      "Your price in USD: $"+price.toFixed(2),
+      "Made with AI: "+ai,
+      "Pitch: "+pitch,
+      "",
+      "I understand: my work must be screenable in the browser (web copies are demos/screening copies only), run no ads, be honestly labeled if AI-made, and I own the rights to sell it."
+    ];
+    var body=lines.join("\n");
+    var composed=document.getElementById("sfComposed"); if(composed) composed.value=body;
+    var wrap=document.getElementById("sfComposedWrap"); if(wrap) wrap.hidden=false;
+    var okEl=document.getElementById("sfCopyOk"); if(okEl) okEl.hidden=true;
+    var msgEl=document.getElementById("sfCopyMsg"); if(msgEl) msgEl.hidden=true;
+    var subject="ARCADE SELLER APPLICATION — "+title;
+    var mailto="mailto:joshuajdawg0350@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    setTimeout(function(){ try{ var a=document.createElement("a"); a.href=mailto; a.style.display="none"; document.body.appendChild(a); a.click(); setTimeout(function(){ if(a.parentNode) a.parentNode.removeChild(a); }, 500); }catch(err){} }, 350);
+  });
+  var copyBtn=document.getElementById("sfCopyBtn");
+  if(copyBtn){ copyBtn.addEventListener("click", function(){
+    var box=document.getElementById("sfComposed"); var okEl=document.getElementById("sfCopyOk"); var msgEl=document.getElementById("sfCopyMsg");
+    function fail(){ if(msgEl) msgEl.hidden=false; if(okEl) okEl.hidden=true; if(box){ box.focus(); box.select(); } }
+    function done(){ if(okEl) okEl.hidden=false; if(msgEl) msgEl.hidden=true; }
+    if(!box || !box.value){ fail(); return; }
+    box.focus(); box.select();
+    var copied=false;
+    try{ copied=document.execCommand && document.execCommand("copy"); }catch(e){ copied=false; }
+    if(copied){ done(); return; }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(box.value).then(done).catch(fail);
+    } else { fail(); }
+  }); }
+})();
+</script>
 </body>
 </html>
