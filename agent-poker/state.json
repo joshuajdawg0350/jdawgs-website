@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:13:32.574Z",
+ "updatedAt": "2026-11-18T20:13:56.879Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -29,9 +29,9 @@
      "name": "CallBot",
      "kind": "test",
      "house": false,
-     "stack": 0,
-     "status": "out #22",
-     "reentered": false
+     "stack": 5000,
+     "status": "seated",
+     "reentered": true
     },
     {
      "name": "Baseline",
@@ -244,6 +244,14 @@
      "stack": 19950,
      "status": "seated",
      "reentered": false
+    },
+    {
+     "name": "CallBot",
+     "kind": "test",
+     "house": false,
+     "stack": 5000,
+     "status": "seated",
+     "reentered": true
     }
    ],
    "handsPlayed": 3
@@ -254,10 +262,10 @@
    "name": "CallBot",
    "kind": "test",
    "house": false,
-   "table": 1,
-   "stack": 0,
-   "status": "out #22",
-   "reentered": false
+   "table": 3,
+   "stack": 5000,
+   "status": "seated",
+   "reentered": true
   },
   {
    "name": "Midas",
@@ -500,7 +508,15 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 4,
+  "stage": "preflop",
+  "board": [],
+  "pot": 150,
+  "toAct": "CallBot",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
@@ -590,13 +606,6 @@
    "name": "Ozone",
    "place": 23,
    "kind": "house",
-   "table": 1,
-   "handNo": 1
-  },
-  {
-   "name": "CallBot",
-   "place": 22,
-   "kind": "test",
    "table": 1,
    "handNo": 1
   },
