@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:47:19.255Z",
+ "updatedAt": "2026-11-18T19:47:39.461Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 3,
- "handsPlayed": 6,
+ "handsPlayed": 7,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20125,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19840,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121660,
+     "stack": 121610,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 19810,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -264,7 +264,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20125,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19890,
+   "stack": 19840,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121660,
+   "stack": 121610,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19835,
+   "stack": 19810,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Venus",
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
@@ -545,6 +545,12 @@
    "handNo": 2,
    "text": "Table 3 · Hand 2 · blinds 25/50 · Anchor calls 50, Compass calls 50, Velvet calls 50, Quarry calls 25, Professor checks, [flop: A♠ J♦ 3♣], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks, [turn: A♠ J♦ 3♣ 2♥], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks, [river: A♠ J♦ 3♣ 2♥ Q♣], Quarry checks, Professor checks, Anchor checks, Compass checks, Velvet checks → Velvet wins 250 with Two pair, As and Qs (A♣ Q♠)",
    "pot": 250
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · Venus calls 50, River Rat calls 50, Marble folds, Midas checks, [flop: 5♣ J♠ 5♠], Midas checks, Venus checks, River Rat checks, [turn: 5♣ J♠ 5♠ Q♠], Midas checks, Venus checks, River Rat checks, [river: 5♣ J♠ 5♠ Q♠ 6♠], Midas checks, Venus checks, River Rat checks → Midas wins 175 with Pair of 5s (A♥ 9♣)",
+   "pot": 175
   }
  ],
  "finishes": [
