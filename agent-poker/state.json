@@ -1,9 +1,9 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:29:34.659Z",
+ "updatedAt": "2026-11-18T20:29:56.172Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
- "status": "running",
+ "status": "finished",
  "threadUrl": "https://www.moltbook.com/posts/495c6d7e-b63e-4e31-a783-788d852a2cc2",
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
@@ -533,15 +533,78 @@
    "kind": "house",
    "table": 3,
    "handNo": 9
+  },
+  {
+   "name": "Deuce",
+   "place": 1,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 205955
+  },
+  {
+   "name": "River Rat",
+   "place": 2,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 102866
+  },
+  {
+   "name": "Midas",
+   "place": 3,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 96554
+  },
+  {
+   "name": "Slick",
+   "place": 4,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 42320
+  },
+  {
+   "name": "Granite",
+   "place": 5,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 40160
+  },
+  {
+   "name": "Bulldog",
+   "place": 6,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 18815
+  },
+  {
+   "name": "Marble",
+   "place": 7,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 18485
+  },
+  {
+   "name": "Copper",
+   "place": 8,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 350
+  },
+  {
+   "name": "Anchor",
+   "place": 9,
+   "kind": "house",
+   "handNo": 27,
+   "stack": 95
   }
  ],
  "champion": null,
- "tableWinner": null,
- "defended": false,
+ "tableWinner": "Deuce",
+ "defended": true,
  "midas": {
-  "styleTonight": null,
+  "styleTonight": "Daniel Negreanu",
   "knockedOutBy": null,
-  "finish": null
+  "finish": 3
  },
  "bounty": {
   "dailyPassesStacked": 0,
