@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:19:44.873Z",
+ "updatedAt": "2026-11-18T20:20:38.889Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -511,13 +511,14 @@
  "currentHand": {
   "table": 3,
   "handNo": 4,
-  "stage": "flop",
+  "stage": "turn",
   "board": [
    "10♠",
    "4♠",
-   "8♠"
+   "8♠",
+   "6♠"
   ],
-  "pot": 3500,
+  "pot": 4250,
   "toAct": "CallBot",
   "lastActions": [
    "CallBot calls 100",
@@ -535,7 +536,10 @@
    "Deuce checks",
    "Wildfire raises to 750",
    "Velvet calls 750",
-   "Sixgun calls 750"
+   "Sixgun calls 750",
+   "CallBot calls 750",
+   "Deuce folds",
+   "Sixgun checks"
   ]
  },
  "recentHands": [
