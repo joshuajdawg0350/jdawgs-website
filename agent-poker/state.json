@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:17:14.685Z",
+ "updatedAt": "2026-11-18T20:17:31.183Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 4,
- "handsPlayed": 10,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -123,7 +123,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19715,
+     "stack": 19615,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 18750,
+     "stack": 18650,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 22555,
+     "stack": 22905,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19690,
+     "stack": 19590,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -317,7 +317,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19715,
+   "stack": 19615,
    "status": "seated",
    "reentered": false
   },
@@ -344,7 +344,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18750,
+   "stack": 18650,
    "status": "seated",
    "reentered": false
   },
@@ -371,7 +371,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22555,
+   "stack": 22905,
    "status": "seated",
    "reentered": false
   },
@@ -398,7 +398,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19790,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -425,7 +425,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19690,
+   "stack": 19590,
    "status": "seated",
    "reentered": false
   },
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Slick",
+  "toAct": "CallBot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Pearl calls 50, Venus folds, Shadow calls 50, River Rat calls 50, Hammer calls 50, Ozone calls 50, Midas calls 50, CallBot calls 25, Baseline checks, [flop: 2♠ 4♦ 2♣], CallBot checks, Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, Midas checks, [turn: 2♠ 4♦ 2♣ 6♥], CallBot checks, Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, Midas checks, [river: 2♠ 4♦ 2♣ 6♥ 2♦], CallBot checks, Baseline raises to 55, Pearl calls 55, Shadow raises to 115, River Rat raises to 175, Hammer raises to 255, Ozone raises to 360, Midas folds, CallBot calls 360, Baseline calls 305, Pearl calls 305, Shadow calls 245, River Rat raises to 465, Hammer raises to 600, Ozone raises to 775, CallBot calls 190, Baseline raises to 970, Pearl calls 610, Shadow calls 610, River Rat raises to 1165, Hammer raises to 1420, Ozone raises to 1750, Baseline calls 780, Pearl calls 780, Shadow calls 780, River Rat raises to 2080, Hammer raises to 2510, Ozone raises to 3070, Baseline raises to 3685, Pearl calls 1935, Shadow calls 1935, River Rat raises to 4300, Hammer raises to 5100, Ozone raises to 6140, Baseline raises to 7285, Pearl calls 3600, Shadow calls 3600, River Rat raises to 8430, Hammer raises to 9920, Ozone raises to 11855, Baseline raises to 13985, Pearl calls 6700, Shadow raises to 16330, River Rat raises to 18675, Hammer goes ALL-IN to 19950, Ozone calls 8095, Baseline calls 5965, Pearl calls 5965, Shadow calls 3620, River Rat calls 1275 → River Rat wins 120650 with Full house, 2s full of 6s (7♦ 6♠)",
-   "pot": 120650
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -577,6 +571,12 @@
    "handNo": 4,
    "text": "Table 1 · Hand 4 · blinds 50/100 · CallBot calls 100, Venus calls 100, River Rat calls 100, Professor calls 100, Anchor calls 50, Midas checks, [flop: 3♠ 7♠ 2♣], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks, [turn: 3♠ 7♠ 2♣ 7♦], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks, [river: 3♠ 7♠ 2♣ 7♦ J♦], Anchor checks, Midas checks, CallBot checks, Venus checks, River Rat checks, Professor checks → Professor wins 600 with Two pair, Js and 7s (J♥ 4♥)",
    "pot": 600
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 50/100 · Slick folds, Granite calls 100, Dice calls 100, Bulldog calls 100, Copper folds, Compass checks, [flop: 2♣ 4♠ 9♦], Compass checks, Granite checks, Dice checks, Bulldog raises to 120, Compass folds, Granite folds, Dice folds → Bulldog takes 570 (everyone else folded)",
+   "pot": 570
   }
  ],
  "finishes": [
