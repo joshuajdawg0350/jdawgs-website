@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:56:46.983Z",
+ "updatedAt": "2026-11-18T19:57:45.955Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -503,12 +503,13 @@
  "currentHand": {
   "table": 1,
   "handNo": 5,
-  "stage": "turn",
+  "stage": "river",
   "board": [
    "K♦",
    "6♥",
    "4♥",
-   "A♠"
+   "A♠",
+   "K♠"
   ],
   "pot": 400,
   "toAct": "CallBot",
@@ -518,6 +519,10 @@
    "Midas folds",
    "CallBot calls 50",
    "Venus checks",
+   "CallBot checks",
+   "Venus checks",
+   "River Rat checks",
+   "Marble checks",
    "CallBot checks",
    "Venus checks",
    "River Rat checks",
