@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:11:51.566Z",
+ "updatedAt": "2026-11-18T20:12:10.180Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  50,
-  100
+  100,
+  200
  ],
- "level": 2,
- "handsPlayed": 5,
+ "level": 3,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 82480,
+     "stack": 82430,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 22595,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19110,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17645,
+     "stack": 17595,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19160,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19110,
      "status": "seated",
      "reentered": false
     },
@@ -246,7 +246,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 82480,
+   "stack": 82430,
    "status": "seated",
    "reentered": false
   },
@@ -318,7 +318,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19975,
+   "stack": 22595,
    "status": "seated",
    "reentered": false
   },
@@ -345,7 +345,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19110,
    "status": "seated",
    "reentered": false
   },
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17645,
+   "stack": 17595,
    "status": "seated",
    "reentered": false
   },
@@ -426,7 +426,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19160,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19110,
    "status": "seated",
    "reentered": false
   },
@@ -500,15 +500,7 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -539,6 +531,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Copper raises to 100, Compass calls 100, Slick calls 100, Granite calls 100, Dice calls 75, Bulldog calls 50, [flop: A♦ 7♣ 2♠], Dice checks, Bulldog checks, Copper checks, Compass checks, Slick checks, Granite checks, [turn: A♦ 7♣ 2♠ K♣], Dice checks, Bulldog checks, Copper checks, Compass raises to 60, Slick calls 60, Granite folds, Dice folds, Bulldog folds, Copper calls 60, [river: A♦ 7♣ 2♠ K♣ 4♥], Copper checks, Compass checks, Slick checks → Slick wins 780 with Pair of Ks (8♥ K♦)",
    "pot": 780
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Tally calls 50, Sixgun calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Velvet checks, [flop: 5♥ 2♥ J♣], Millstone checks, Velvet checks, Tally checks, Sixgun checks, Deuce checks, Wildfire checks, [turn: 5♥ 2♥ J♣ 4♦], Millstone checks, Velvet checks, Tally checks, Sixgun checks, Deuce checks, Wildfire raises to 180, Millstone calls 180, Velvet folds, Tally calls 180, Sixgun calls 180, Deuce folds, [river: 5♥ 2♥ J♣ 4♦ Q♥], Millstone checks, Tally checks, Sixgun checks, Wildfire raises to 610, Millstone calls 610, Tally calls 610, Sixgun calls 610 → Wildfire wins 3460 with Two pair, Js and 4s (J♥ 4♣)",
+   "pot": 3460
   }
  ],
  "finishes": [
