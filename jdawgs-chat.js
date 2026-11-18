@@ -123,8 +123,9 @@
     try {
       synth.cancel();
       var u = new SpeechSynthesisUtterance(clean);
-      u.rate = 1.03;
-      u.pitch = 1.15;
+      /* Little Bot's voice: sample #4 "Bright & Cheerful" — Joshua's pick, 2026-11-18 (pitch 1.3 / rate 1.1; same settings in the tour speaker below). */
+      u.rate = 1.1;
+      u.pitch = 1.3;
       try {
         var vs = synth.getVoices() || [];
         for (var i = 0; i < vs.length; i++) {
@@ -146,8 +147,8 @@
     var token = state.speechToken;
     try {
       var u = new SpeechSynthesisUtterance(clean);
-      u.rate = 1.03;
-      u.pitch = 1.15;
+      u.rate = 1.1;
+      u.pitch = 1.3;
       try {
         var vs = synth.getVoices() || [];
         for (var i = 0; i < vs.length; i++) {
