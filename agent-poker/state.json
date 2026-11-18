@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:28:21.473Z",
+ "updatedAt": "2026-11-18T20:28:37.884Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   12800
  ],
  "level": 9,
- "handsPlayed": 24,
+ "handsPlayed": 25,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 97850,
+     "stack": 96554,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 101570,
+     "stack": 102866,
      "status": "seated",
      "reentered": false
     },
@@ -106,7 +106,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 2,
@@ -272,7 +272,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97850,
+   "stack": 96554,
    "status": "seated",
    "reentered": false
   },
@@ -389,7 +389,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 101570,
+   "stack": 102866,
    "status": "seated",
    "reentered": false
   },
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Anchor",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 50/100 · Wildfire raises to 260, Velvet calls 260, Marble folds, Compass folds, Deuce calls 160, [flop: 6♥ K♣ 7♣], Deuce checks, Wildfire checks, Velvet checks, [turn: 6♥ K♣ 7♣ 4♦], Deuce checks, Wildfire checks, Velvet checks, [river: 6♥ K♣ 7♣ 4♦ 9♥], Deuce checks, Wildfire checks, Velvet checks → Deuce wins 830 with Pair of Ks (Q♠ K♥)",
-   "pot": 830
-  },
   {
    "table": 1,
    "handNo": 6,
@@ -577,6 +571,12 @@
    "handNo": 8,
    "text": "Table 3 · Hand 8 · blinds 100/200 · Deuce calls 200, Wildfire calls 200, Velvet calls 100, Marble checks, [flop: 8♣ A♥ 3♠], Velvet checks, Marble checks, Deuce checks, Wildfire checks, [turn: 8♣ A♥ 3♠ 5♦], Velvet checks, Marble checks, Deuce checks, Wildfire checks, [river: 8♣ A♥ 3♠ 5♦ 7♥], Velvet checks, Marble checks, Deuce checks, Wildfire checks → Deuce wins 800 with Pair of 7s (7♠ Q♥)",
    "pot": 800
+  },
+  {
+   "table": 1,
+   "handNo": 9,
+   "text": "Table 1 · Hand 9 · blinds 100/200 · Anchor folds, Midas calls 100, River Rat checks, [flop: 5♦ 6♥ 6♣], Midas raises to 200, River Rat calls 200, [turn: 5♦ 6♥ 6♣ Q♠], Midas raises to 320, River Rat calls 320, [river: 5♦ 6♥ 6♣ Q♠ 2♣], Midas raises to 576, River Rat calls 576 → River Rat wins 2592 with Two pair, Qs and 6s (Q♣ A♦)",
+   "pot": 2592
   }
  ],
  "finishes": [
