@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T19:51:57.048Z",
+ "updatedAt": "2026-11-18T19:53:00.069Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 4,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20125,
+     "stack": 20025,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "CallBot",
      "kind": "test",
      "house": false,
-     "stack": 5000,
+     "stack": 4900,
      "status": "seated",
      "reentered": true
     },
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19840,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121610,
+     "stack": 121510,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19810,
+     "stack": 20210,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -255,7 +255,7 @@
    "kind": "test",
    "house": false,
    "table": 1,
-   "stack": 5000,
+   "stack": 4900,
    "status": "seated",
    "reentered": true
   },
@@ -264,7 +264,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20125,
+   "stack": 20025,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19840,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121610,
+   "stack": 121510,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19810,
+   "stack": 20210,
    "status": "seated",
    "reentered": false
   },
@@ -501,36 +501,13 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
-  "stage": "river",
-  "board": [
-   "4♠",
-   "7♣",
-   "9♠",
-   "Q♥",
-   "6♥"
-  ],
-  "pot": 500,
-  "toAct": "CallBot",
-  "lastActions": [
-   "Venus calls 100",
-   "River Rat calls 100",
-   "Marble calls 100",
-   "Midas calls 50",
-   "CallBot checks",
-   "Midas checks",
-   "CallBot checks",
-   "Venus checks",
-   "River Rat checks",
-   "Marble checks",
-   "Midas checks",
-   "CallBot checks",
-   "Venus checks",
-   "River Rat checks",
-   "Marble checks",
-   "Midas checks"
-  ]
+  "stage": "preflop",
+  "board": [],
+  "pot": 150,
+  "toAct": "Granite",
+  "lastActions": []
  },
  "recentHands": [
   {
@@ -586,6 +563,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Compass calls 50, Velvet calls 50, Quarry calls 50, Professor calls 25, Anchor checks, [flop: J♥ 5♣ J♠], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks, [turn: J♥ 5♣ J♠ 6♥], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks, [river: J♥ 5♣ J♠ 6♥ 7♥], Professor checks, Anchor checks, Compass checks, Velvet checks, Quarry checks → Anchor wins 250 with Straight, 7 high (4♣ 3♠)",
    "pot": 250
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 50/100 · Venus calls 100, River Rat calls 100, Marble calls 100, Midas calls 50, CallBot checks, [flop: 4♠ 7♣ 9♠], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks, [turn: 4♠ 7♣ 9♠ Q♥], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks, [river: 4♠ 7♣ 9♠ Q♥ 6♥], Midas checks, CallBot checks, Venus checks, River Rat checks, Marble checks → Marble wins 500 with Pair of Qs (A♥ Q♠)",
+   "pot": 500
   }
  ],
  "finishes": [
