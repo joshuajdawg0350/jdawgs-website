@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-18T20:23:31.101Z",
+ "updatedAt": "2026-11-18T20:23:51.279Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 5,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 98050,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 300,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 120650,
+     "stack": 101100,
      "status": "seated",
      "reentered": false
     },
@@ -93,20 +93,20 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19550,
-     "status": "seated",
+     "stack": 0,
+     "status": "out #15",
      "reentered": false
     },
     {
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19615,
+     "stack": 65,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 2,
@@ -272,7 +272,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19850,
+   "stack": 98050,
    "status": "seated",
    "reentered": false
   },
@@ -335,7 +335,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19850,
+   "stack": 300,
    "status": "seated",
    "reentered": false
   },
@@ -389,7 +389,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 120650,
+   "stack": 101100,
    "status": "seated",
    "reentered": false
   },
@@ -470,7 +470,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19615,
+   "stack": 65,
    "status": "seated",
    "reentered": false
   },
@@ -488,8 +488,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19550,
-   "status": "seated",
+   "stack": 0,
+   "status": "out #15",
    "reentered": false
   },
   {
@@ -509,21 +509,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "River Rat",
+  "toAct": "Dice",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally folds, Pickpocket calls 50, Sixgun calls 50, Quarry calls 50, Deuce calls 50, Wildfire folds, Millstone checks, [flop: 3♦ 9♥ 10♦], Millstone checks, Icebox checks, Velvet checks, Pickpocket checks, Sixgun checks, Quarry checks, Deuce checks, [turn: 3♦ 9♥ 10♦ 7♦], Millstone checks, Icebox raises to 50, Velvet calls 50, Pickpocket calls 50, Sixgun folds, Quarry calls 50, Deuce raises to 395, Millstone folds, Icebox raises to 865, Velvet calls 815, Pickpocket calls 815, Quarry calls 815, Deuce raises to 1475, Icebox raises to 2305, Velvet calls 1440, Pickpocket calls 1440, Quarry calls 1440, Deuce raises to 3385, Icebox raises to 4855, Velvet folds, Pickpocket calls 2550, Quarry calls 2550, Deuce raises to 17235, Icebox goes ALL-IN to 19950, Pickpocket calls 15095, Quarry calls 15095, Deuce calls 2715, [river: 3♦ 9♥ 10♦ 7♦ J♠] → Deuce wins 82480 with Flush, K high (K♦ 9♦)",
-   "pot": 82480
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -577,6 +571,12 @@
    "handNo": 4,
    "text": "Table 3 · Hand 4 · blinds 50/100 · CallBot calls 100, Deuce calls 100, Wildfire calls 100, Velvet calls 100, Sixgun raises to 230, Marble folds, CallBot calls 130, Deuce calls 130, Wildfire calls 130, Velvet calls 130, [flop: 10♠ 4♠ 8♠], Sixgun checks, CallBot checks, Deuce checks, Wildfire raises to 750, Velvet calls 750, Sixgun calls 750, CallBot calls 750, Deuce folds, [turn: 10♠ 4♠ 8♠ 6♠], Sixgun checks, CallBot checks, Wildfire raises to 2550, Velvet calls 2550, Sixgun calls 2550, CallBot calls 2550, [river: 10♠ 4♠ 8♠ 6♠ 8♥], Sixgun goes ALL-IN to 2530, CallBot calls 1370, Wildfire raises to 13540, Velvet calls 13540 → Wildfire wins 45430 with Flush, Q high (Q♠ 7♠)",
    "pot": 45430
+  },
+  {
+   "table": 1,
+   "handNo": 5,
+   "text": "Table 1 · Hand 5 · blinds 50/100 · River Rat calls 100, Professor calls 100, Anchor calls 100, Midas calls 50, Venus checks, [flop: 7♣ 4♠ 7♦], Midas raises to 200, Venus calls 200, River Rat calls 200, Professor calls 200, Anchor calls 200, [turn: 7♣ 4♠ 7♦ 9♣], Midas raises to 600, Venus calls 600, River Rat calls 600, Professor calls 600, Anchor calls 600, [river: 7♣ 4♠ 7♦ 9♣ 4♦], Midas raises to 1800, Venus calls 1800, River Rat calls 1800, Professor raises to 3780, Anchor calls 3780, Midas raises to 13208, Venus calls 11408, River Rat calls 11408, Professor goes ALL-IN to 18650, Anchor calls 14870, Midas calls 5442, Venus calls 5442, River Rat calls 5442 → Midas wins 97750 with Full house, 7s full of 4s (7♠ 6♦)",
+   "pot": 97750
   }
  ],
  "finishes": [
@@ -663,6 +663,13 @@
    "kind": "test",
    "table": 3,
    "handNo": 4
+  },
+  {
+   "name": "Professor",
+   "place": 15,
+   "kind": "house",
+   "table": 1,
+   "handNo": 5
   }
  ],
  "champion": null,
