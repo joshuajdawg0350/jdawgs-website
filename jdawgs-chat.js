@@ -4,6 +4,10 @@
    gentle bob — layered from his own artwork), can talk out loud with
    the visitor's device speech when they flip his voice on, and gives
    instant answers to the common questions. Plumbing is unchanged.
+   VOICE RULE (Joshua, 2026-11-18): the voice starts OFF on every page
+   load and nothing turns it on except the visitor pressing the
+   speaker button — no auto-greeting speech, tour and page reading
+   run as text captions while it is off.
    House look (Repertoire starter palette): near-black panels, chrome
    button, electric blue #0096FF accent. No libraries, no framework.
    Storage is sessionStorage behind try/catch with an in-memory fallback
@@ -70,8 +74,10 @@
     mem[k] = v;
     try { window.sessionStorage.setItem(k, v); } catch (e) { /* memory fallback already set */ }
   }
-  /* Voice preference is remembered per visitor (localStorage, separate
-     from the conversation storage above, which is untouched). */
+  /* Small display prefs are remembered per visitor (localStorage,
+     separate from the conversation storage above, which is
+     untouched). The voice is NOT one of them: it always starts off
+     and is never persisted (Joshua's order, 2026-11-18). */
   function prefGet(k) {
     try { return window.localStorage.getItem(k); } catch (e) { return mem['pref_' + k] || null; }
   }
@@ -88,7 +94,11 @@
     localMsgs: [],
     pollTimer: null,
     sending: false,
-    voiceOn: prefGet('jdchat_voice') === '1',
+    /* Voice starts OFF on every page load, no exceptions (Joshua's
+       order, 2026-11-18): Little Bot never talks unless the visitor
+       presses the speaker button themselves on THIS visit. The old
+       jdchat_voice localStorage pref is deliberately never read. */
+    voiceOn: false,
     spokenIdx: null,
     greetedSpeak: false,
     bigText: prefGet('jdchat_big') === '1',
@@ -97,7 +107,7 @@
     dataBusy: false,
     dataCbs: [],
     tour: { active: false, stops: [], idx: 0, miss: 0 },
-    reading: { active: false, items: [], idx: 0, token: 0 },
+    reading: { active: false, items: [], idx: 0, token: 0, timer: null },
     speechToken: 0,
     recog: null,
     listening: false,
@@ -176,6 +186,23 @@
   function stopSpeech() {
     state.speechToken++;
     if (synth) { try { synth.cancel(); } catch (e) { /* nothing playing */ } }
+  }
+
+  /* Text captions: with the voice OFF (the default on every visit),
+     anything Little Bot would have said out loud is typed into the
+     chat as a message instead — the tour and page reading run fully
+     in text. He only ever talks after the visitor presses the
+     speaker button themselves. */
+  function postCaption(text, who) {
+    if (!text) return;
+    state.localMsgs.push({ after: state.messages.length, text: text, who: who || 'Little Bot' });
+    render();
+  }
+  /* Narration for the tour and page reading: spoken when the visitor
+     turned the voice on, typed as a caption when they didn't. */
+  function narrate(text) {
+    if (state.voiceOn) { say(text); return; }
+    postCaption(text);
   }
 
   var CSS = [
@@ -376,13 +403,13 @@
     var tourBtn = el('button', null, 'Take the ' + SITE_NOUN + ' tour');
     tourBtn.id = 'jdchat-tourbtn';
     tourBtn.type = 'button';
-    tourBtn.setAttribute('aria-label', 'Take the ' + SITE_NOUN + ' tour — Little Bot walks you through everything out loud');
+    tourBtn.setAttribute('aria-label', 'Take the ' + SITE_NOUN + ' tour — Little Bot walks you through everything in text, or out loud if you turn his voice on');
     tools.appendChild(tourBtn);
     var pills = el('div', 'jdchat-tpills');
     var readPill = el('button', 'jdchat-tpill', 'Read this page');
     readPill.type = 'button';
     readPill.id = 'jdchat-readpill';
-    readPill.setAttribute('aria-label', 'Read this page out loud');
+    readPill.setAttribute('aria-label', 'Read this page — as text, or out loud if you turn the voice on');
     var bigPill = el('button', 'jdchat-tpill' + (state.bigText ? ' jdchat-on' : ''), 'Bigger text');
     bigPill.type = 'button';
     bigPill.id = 'jdchat-bigpill';
@@ -521,7 +548,8 @@
       return;
     }
     state.voiceOn = !state.voiceOn;
-    prefSet('jdchat_voice', state.voiceOn ? '1' : '0');
+    /* Not persisted on purpose: the voice never carries over to the
+       next page load — it starts off every time (Joshua's order). */
     if (voiceBtn) {
       voiceBtn.className = state.voiceOn ? 'jdchat-von' : 'jdchat-voff';
       voiceBtn.setAttribute('aria-pressed', state.voiceOn ? 'true' : 'false');
@@ -599,6 +627,14 @@
       grow.appendChild(el('div', 'jdchat-bub', GREETING));
       box.appendChild(grow);
     }
+    state.localMsgs.forEach(function (lm) {
+      if (lm.after === 0) {
+        var erow = el('div', 'jdchat-row jdchat-them');
+        erow.appendChild(el('div', 'jdchat-who', lm.who || 'Little Bot · instant answer'));
+        erow.appendChild(el('div', 'jdchat-bub', lm.text));
+        box.appendChild(erow);
+      }
+    });
     state.messages.forEach(function (m, idx) {
       var row = el('div', 'jdchat-row ' + (m.from === 'visitor' ? 'jdchat-me' : 'jdchat-them'));
       row.appendChild(el('div', 'jdchat-who', m.from === 'visitor' ? 'You' : 'Little Bot'));
@@ -607,7 +643,7 @@
       state.localMsgs.forEach(function (lm) {
         if (lm.after === idx + 1) {
           var lrow = el('div', 'jdchat-row jdchat-them');
-          lrow.appendChild(el('div', 'jdchat-who', 'Little Bot · instant answer'));
+          lrow.appendChild(el('div', 'jdchat-who', lm.who || 'Little Bot · instant answer'));
           lrow.appendChild(el('div', 'jdchat-bub', lm.text));
           box.appendChild(lrow);
         }
@@ -1002,46 +1038,38 @@
     return stops;
   }
 
-  /* ================= THE AUDIO TOUR ================= */
-  function setVoiceOn(on) {
-    state.voiceOn = on;
-    prefSet('jdchat_voice', on ? '1' : '0');
-    if (voiceBtn) {
-      voiceBtn.className = on ? 'jdchat-von' : 'jdchat-voff';
-      voiceBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    }
-  }
+  /* ================= THE TOUR (text by default; spoken only
+     when the visitor turned the voice on themselves) ================= */
   function showTourbar(show) {
     var bar = document.getElementById('jdchat-tourbar');
     if (bar) bar.classList.toggle('jdchat-show', !!show);
   }
   function startTour() {
-    if (!synth) {
-      setNote('Your device cannot talk out loud, so the audio tour cannot run here — everything is on the page above instead.', false);
-      return;
-    }
+    /* The tour NEVER turns the voice on (Joshua's order, 2026-11-18):
+       with the voice off — the default — every stop is typed into the
+       chat as a caption, and the tour runs the same with no speech
+       support on the device at all. */
     if (state.tour.active) { tourSay(); return; }
-    setVoiceOn(true);
     if (state.reading.active) stopReading();
     stopSpeech();
-    say("Okay — let's take the " + SITE_NOUN + " tour. One moment while I get everything ready.");
+    narrate("Okay — let's take the " + SITE_NOUN + " tour. One moment while I get everything ready.");
     ensureData(function (ok) {
-      if (!ok || !state.data) { say("Sorry — I could not load the " + SITE_NOUN + " just now. Try again in a moment."); return; }
+      if (!ok || !state.data) { narrate("Sorry — I could not load the " + SITE_NOUN + " just now. Try again in a moment."); return; }
       var stops = IS_STORE ? buildDdsStops() : buildJdStops();
-      if (!stops.length) { say("Sorry — I could not find the " + SITE_NOUN + " content just now."); return; }
+      if (!stops.length) { narrate("Sorry — I could not find the " + SITE_NOUN + " content just now."); return; }
       state.tour.stops = stops;
       state.tour.idx = 0;
       state.tour.active = true;
       state.tour.miss = 0;
       showTourbar(true);
-      if (RecogCtor) state.tourListen = true;
+      if (RecogCtor && state.voiceOn) state.tourListen = true;
       tourSay();
-      if (RecogCtor) {
+      if (RecogCtor && state.voiceOn) {
         window.setTimeout(function () {
           if (state.tour.active && state.tourListen && state.open) startRecog(true);
         }, 600);
       }
-      if (!RecogCtor) {
+      if (!RecogCtor && state.voiceOn) {
         window.setTimeout(function () {
           if (state.tour.active) say("This device cannot hear you, so use the big Next button at the bottom of the chat to move through the tour.");
         }, 400);
@@ -1059,7 +1087,7 @@
     if (buy) buy.style.display = s.buy ? '' : 'none';
     var there = document.getElementById('jdchat-tthere');
     if (there) there.style.display = (s.el || s.thereUrl) ? '' : 'none';
-    say(s.say);
+    narrate(s.say);
   }
   function tourNext() {
     if (!state.tour.active) return;
@@ -1070,7 +1098,7 @@
       tourSay();
     } else {
       endTour(false);
-      say("That's the end of the tour. Say 'tour' to hear it again, or ask me anything at all.");
+      narrate("That's the end of the tour. Say 'tour' to go again, or ask me anything at all.");
     }
   }
   function tourBack() {
@@ -1085,7 +1113,7 @@
     state.tour.miss = 0;
     var s = state.tour.stops[state.tour.idx];
     stopSpeech();
-    say(s && s.more ? s.more : "That's everything I have on this one. Say next to keep going.");
+    narrate(s && s.more ? s.more : "That's everything I have on this one. Say next to keep going.");
   }
   function tourRepeat() {
     if (!state.tour.active) return;
@@ -1103,22 +1131,22 @@
       var old = s.el.style.outline;
       s.el.style.outline = '3px solid #0096FF';
       window.setTimeout(function () { s.el.style.outline = old; }, 2600);
-      say("Here's " + (s.name || 'it') + ', right on the page in front of you.' + (s.kind === 'product' ? " Say 'buy it' to check out, or 'next' to keep touring." : " Say 'next' to keep touring."));
+      narrate("Here's " + (s.name || 'it') + ', right on the page in front of you.' + (s.kind === 'product' ? " Say 'buy it' to check out, or 'next' to keep touring." : " Say 'next' to keep touring."));
     } else if (s.thereUrl) {
       var url = s.thereUrl;
-      say('Taking you there now.');
+      narrate('Taking you there now.');
       window.setTimeout(function () { window.location.href = url; }, 1100);
     } else {
-      say("There's no page jump for this stop. Say next to keep going.");
+      narrate("There's no page jump for this stop. Say next to keep going.");
     }
   }
   function tourBuy() {
     if (!state.tour.active) return;
     var s = state.tour.stops[state.tour.idx];
-    if (!s || !s.buy) { say("There's nothing to buy at this stop. Say next to keep touring."); return; }
+    if (!s || !s.buy) { narrate("There's nothing to buy at this stop. Say next to keep touring."); return; }
     stopSpeech();
     var url = s.buy;
-    say('Opening checkout for ' + s.name + (s.price ? ', ' + s.price : '') + '.');
+    narrate('Opening checkout for ' + s.name + (s.price ? ', ' + s.price : '') + '.');
     state.tour.active = false;
     state.tourListen = false;
     showTourbar(false);
@@ -1132,13 +1160,13 @@
     showTourbar(false);
     stopListening();
     stopSpeech();
-    if (speakBye) say("Tour stopped. I'm right here if you want anything else.");
+    if (speakBye) narrate("Tour stopped. I'm right here if you want anything else.");
   }
   function optionsPrompt() {
     state.tour.miss++;
     if (state.tour.miss % 2 === 1) {
       stopSpeech();
-      say("You can say: next, back, tell me more, take me there, buy it, or stop.");
+      narrate("You can say: next, back, tell me more, take me there, buy it, or stop.");
     }
   }
 
@@ -1170,11 +1198,9 @@
   }
   function toggleRead() {
     if (state.reading.active) { stopReading(); return; }
-    if (!synth) {
-      setNote('Your device cannot talk out loud, so I cannot read the page here.', false);
-      return;
-    }
-    setVoiceOn(true);
+    /* Reading NEVER turns the voice on (Joshua's order, 2026-11-18):
+       with the voice off — the default — the page is typed into the
+       chat a piece at a time instead of spoken. */
     if (state.tour.active) endTour(false);
     var items = collectReadable();
     if (!items.length) { setNote('I could not find readable content on this page.', false); return; }
@@ -1183,22 +1209,31 @@
     state.reading.idx = 0;
     var pill = document.getElementById('jdchat-readpill');
     if (pill) { pill.textContent = 'Stop reading'; pill.classList.add('jdchat-on'); }
-    setNote('Reading this page out loud — tap Stop reading or say "stop" to end it.', false);
+    setNote(state.voiceOn
+      ? 'Reading this page out loud — tap Stop reading or say "stop" to end it.'
+      : 'Reading this page as text — tap Stop reading to end it.', false);
     readStep();
   }
   function readStep() {
     if (!state.reading.active) return;
     if (state.reading.idx >= state.reading.items.length) { stopReading(); return; }
     var text = state.reading.items[state.reading.idx];
-    say(text, function () {
-      if (!state.reading.active) return;
+    if (state.voiceOn) {
+      say(text, function () {
+        if (!state.reading.active) return;
+        state.reading.idx++;
+        readStep();
+      });
+    } else {
+      postCaption(text, 'Little Bot · reading this page');
       state.reading.idx++;
-      readStep();
-    });
+      state.reading.timer = window.setTimeout(function () { readStep(); }, 1600);
+    }
   }
   function stopReading() {
     if (!state.reading.active) return;
     state.reading.active = false;
+    if (state.reading.timer) { window.clearTimeout(state.reading.timer); state.reading.timer = null; }
     stopSpeech();
     var pill = document.getElementById('jdchat-readpill');
     if (pill) { pill.textContent = 'Read this page'; pill.classList.remove('jdchat-on'); }
