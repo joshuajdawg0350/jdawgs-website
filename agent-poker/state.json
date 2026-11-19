@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:40:58.482Z",
+ "updatedAt": "2026-11-19T12:41:09.367Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 46,
+ "handsPlayed": 47,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 18905,
+     "stack": 20505,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 22325,
+     "stack": 20725,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   },
   {
    "id": 3,
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18905,
+   "stack": 20505,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22325,
+   "stack": 20725,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 16,
   "stage": "preflop",
   "board": [],
   "pot": 2400,
-  "toAct": "Slick",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 13,
-   "text": "Table 1 · Hand 13 · blinds 400/800 · River Rat calls 800, Professor calls 800, Midas calls 400, Venus checks, [flop: A♥ K♠ K♣], Midas checks, Venus checks, River Rat checks, Professor checks, [turn: A♥ K♠ K♣ 10♠], Midas checks, Venus checks, River Rat checks, Professor checks, [river: A♥ K♠ K♣ 10♠ 3♣], Midas checks, Venus checks, River Rat checks, Professor checks → Midas wins 3200 with Two pair, Ks and 10s (9♥ 10♣)",
-   "pot": 3200
-  },
   {
    "table": 2,
    "handNo": 13,
@@ -569,6 +563,12 @@
    "handNo": 16,
    "text": "Table 1 · Hand 16 · blinds 800/1600 · Venus calls 599, River Rat calls 1600, Professor calls 800, Midas checks, [flop: 2♠ Q♠ A♥], Professor checks, Midas checks, River Rat checks, [turn: 2♠ Q♠ A♥ K♦], Professor checks, Midas checks, River Rat checks, [river: 2♠ Q♠ A♥ K♦ 5♣], Professor checks, Midas checks, River Rat checks → Professor wins 5399 with Two pair, Ks and 5s (K♣ 5♦)",
    "pot": 5399
+  },
+  {
+   "table": 2,
+   "handNo": 16,
+   "text": "Table 2 · Hand 16 · blinds 800/1600 · Slick folds, Granite calls 800, Bulldog checks, [flop: 7♥ 6♠ 3♥], Granite checks, Bulldog checks, [turn: 7♥ 6♠ 3♥ 8♦], Granite checks, Bulldog checks, [river: 7♥ 6♠ 3♥ 8♦ 9♣], Granite checks, Bulldog checks → Granite wins 3200 with A high (A♥ J♥)",
+   "pot": 3200
   }
  ],
  "finishes": [
