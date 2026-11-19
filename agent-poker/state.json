@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:17:23.801Z",
+ "updatedAt": "2026-11-19T01:17:46.789Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 24,
+ "handsPlayed": 25,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 130935,
+     "stack": 132615,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16690,
+     "stack": 16270,
      "status": "seated",
      "reentered": false
     },
@@ -85,7 +85,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 12425,
+     "stack": 12005,
      "status": "seated",
      "reentered": false
     },
@@ -93,7 +93,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19320,
+     "stack": 18900,
      "status": "seated",
      "reentered": false
     },
@@ -101,12 +101,12 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 35200,
+     "stack": 34780,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 130935,
+   "stack": 132615,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16690,
+   "stack": 16270,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35200,
+   "stack": 34780,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12425,
+   "stack": 12005,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19320,
+   "stack": 18900,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone raises to 100, Icebox folds, Velvet calls 100, Tally calls 75, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, [flop: 4♥ 8♥ 9♥], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [turn: 4♥ 8♥ 9♥ A♦], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [river: 4♥ 8♥ 9♥ A♦ J♦], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks → Tally wins 700 with Two pair, Js and 9s (9♠ J♠)",
-   "pot": 700
-  },
   {
    "table": 1,
    "handNo": 6,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 3 · Hand 8 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally folds, Pickpocket calls 50, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 4♥ K♥ K♦], Wildfire checks, Millstone checks, Velvet checks, Pickpocket raises to 150, Deuce calls 150, Wildfire calls 150, Millstone calls 150, Velvet calls 150, [turn: 4♥ K♥ K♦ Q♣], Wildfire checks, Millstone checks, Velvet checks, Pickpocket raises to 600, Deuce calls 600, Wildfire calls 600, Millstone calls 600, Velvet calls 600, [river: 4♥ K♥ K♦ Q♣ A♣], Wildfire checks, Millstone checks, Velvet checks, Pickpocket raises to 2400, Deuce calls 2400, Wildfire calls 2400, Millstone calls 2400, Velvet calls 2400 → Pickpocket wins 16000 with Three of a kind, Ks (K♣ 7♠)",
    "pot": 16000
+  },
+  {
+   "table": 1,
+   "handNo": 9,
+   "text": "Table 1 · Hand 9 · blinds 25/50 · Midas folds, Pearl calls 50, Shadow calls 50, Anchor calls 50, Professor raises to 105, Pickpocket calls 55, Pearl calls 55, Shadow calls 55, Anchor calls 55, [flop: 4♠ 8♥ 4♦], Professor checks, Pickpocket checks, Pearl checks, Shadow checks, Anchor checks, [turn: 4♠ 8♥ 4♦ 2♦], Professor checks, Pickpocket checks, Pearl checks, Shadow checks, Anchor checks, [river: 4♠ 8♥ 4♦ 2♦ 3♦], Professor checks, Pickpocket raises to 315, Pearl calls 315, Shadow calls 315, Anchor calls 315, Professor calls 315 → Pearl wins 2100 with Three of a kind, 4s (4♥ A♥)",
+   "pot": 2100
   }
  ],
  "finishes": [
