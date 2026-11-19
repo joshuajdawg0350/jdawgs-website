@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:23:02.155Z",
+ "updatedAt": "2026-11-19T01:23:28.373Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 30,
+ "handsPlayed": 31,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 132510,
+     "stack": 113715,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16270,
+     "stack": 30525,
      "status": "seated",
      "reentered": false
     },
@@ -85,20 +85,20 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 12240,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 18795,
+     "stack": 35575,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 132510,
+   "stack": 113715,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16270,
+   "stack": 30525,
    "status": "seated",
    "reentered": false
   },
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12240,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18795,
+   "stack": 35575,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Anchor",
+  "toAct": "Quarry",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 7,
-   "text": "Table 3 · Hand 7 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Icebox calls 50, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 25, Deuce checks, [flop: 7♠ 2♣ 9♦], Professor checks, Deuce checks, Wildfire checks, Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, [turn: 7♠ 2♣ 9♦ 3♥], Professor checks, Deuce checks, Wildfire raises to 60, Millstone folds, Icebox folds, Velvet calls 60, Tally folds, Pickpocket calls 60, Professor folds, Deuce calls 60, [river: 7♠ 2♣ 9♦ 3♥ J♠], Deuce checks, Wildfire checks, Velvet checks, Pickpocket checks → Pickpocket wins 640 with Pair of 4s (4♦ 4♥)",
-   "pot": 640
-  },
   {
    "table": 1,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 10,
    "text": "Table 3 · Hand 10 · blinds 25/50 · Pickpocket calls 50, Deuce calls 50, Millstone raises to 100, Icebox folds, Tally calls 50, Pickpocket calls 50, Deuce calls 50, [flop: 4♥ J♦ 7♣], Tally checks, Pickpocket raises to 255, Deuce folds, Millstone calls 255, Tally folds, [turn: 4♥ J♦ 7♣ 10♣], Pickpocket raises to 560, Millstone calls 560, [river: 4♥ J♦ 7♣ 10♣ 10♠], Pickpocket raises to 1235, Millstone calls 1235 → Millstone wins 4525 with Two pair, 10s and 8s (8♦ 8♠)",
    "pot": 4525
+  },
+  {
+   "table": 1,
+   "handNo": 11,
+   "text": "Table 1 · Hand 11 · blinds 25/50 · Anchor calls 50, Professor calls 50, Midas folds, Pearl calls 25, Shadow checks, [flop: 8♥ 9♠ 7♦], Pearl checks, Shadow checks, Anchor checks, Professor checks, [turn: 8♥ 9♠ 7♦ 7♥], Pearl checks, Shadow checks, Anchor checks, Professor checks, [river: 8♥ 9♠ 7♦ 7♥ 10♦], Pearl checks, Shadow raises to 55, Anchor calls 55, Professor raises to 240, Pearl calls 240, Shadow raises to 715, Anchor calls 660, Professor raises to 1980, Pearl calls 1740, Shadow raises to 5335, Anchor calls 4620, Professor raises to 14235, Pearl calls 12255, Shadow goes ALL-IN to 16220, Anchor calls 6855, Professor goes ALL-IN to 18745, Pearl calls 4510 → Shadow wins 30525 with Straight, J high (J♥ 3♦); Professor wins 35575 with Straight, J high (2♦ J♠)",
+   "pot": 66100
   }
  ],
  "finishes": [
@@ -633,6 +633,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 9,
+   "provisional": true
+  },
+  {
+   "name": "Anchor",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 11,
    "provisional": true
   }
  ],
