@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:23:54.967Z",
+ "updatedAt": "2026-11-19T01:24:18.757Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 32,
+ "handsPlayed": 33,
  "tables": [
   {
    "id": 1,
@@ -96,6 +96,14 @@
      "stack": 35575,
      "status": "seated",
      "reentered": false
+    },
+    {
+     "name": "Quarry",
+     "kind": "house",
+     "house": true,
+     "stack": 20060,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 11
@@ -166,14 +174,6 @@
      "stack": 0,
      "status": "out",
      "reentered": false
-    },
-    {
-     "name": "Quarry",
-     "kind": "house",
-     "house": true,
-     "stack": 20060,
-     "status": "seated",
-     "reentered": false
     }
    ],
    "handsPlayed": 11
@@ -201,7 +201,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 49920,
+     "stack": 49870,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 6570,
+     "stack": 6755,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 4070,
+     "stack": 4045,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 32630,
+     "stack": 32520,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 49920,
+   "stack": 49870,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 6570,
+   "stack": 6755,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 4070,
+   "stack": 4045,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 32630,
+   "stack": 32520,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "name": "Quarry",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 20060,
    "status": "seated",
    "reentered": false
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 11,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 8,
-   "text": "Table 2 · Hand 8 · blinds 25/50 · Granite calls 50, Bulldog raises to 125, Copper folds, Marble calls 125, Quarry calls 125, Professor calls 100, Slick folds, Granite folds, [flop: J♣ Q♦ 7♠], Professor checks, Bulldog checks, Marble checks, Quarry checks, [turn: J♣ Q♦ 7♠ A♣], Professor checks, Bulldog checks, Marble checks, Quarry checks, [river: J♣ Q♦ 7♠ A♣ K♥], Professor checks, Bulldog checks, Marble raises to 50, Quarry calls 50, Professor calls 50, Bulldog calls 50 → Marble wins 800 with Straight, A high (J♥ 10♠)",
-   "pot": 800
-  },
   {
    "table": 3,
    "handNo": 8,
@@ -552,6 +538,12 @@
    "handNo": 11,
    "text": "Table 2 · Hand 11 · blinds 25/50 · Quarry calls 50, Slick calls 50, Granite folds, Bulldog folds, Copper folds, Marble checks, [flop: Q♥ 6♣ 9♠], Marble checks, Quarry checks, Slick checks, [turn: Q♥ 6♣ 9♠ 5♦], Marble checks, Quarry checks, Slick checks, [river: Q♥ 6♣ 9♠ 5♦ 6♦], Marble checks, Quarry checks, Slick checks → Quarry wins 175 with Two pair, Qs and 6s (Q♦ 8♦)",
    "pot": 175
+  },
+  {
+   "table": 3,
+   "handNo": 11,
+   "text": "Table 3 · Hand 11 · blinds 25/50 · Deuce folds, Millstone calls 50, Icebox calls 50, Tally folds, Pickpocket checks, [flop: J♥ 2♠ 3♠], Pickpocket raises to 60, Millstone folds, Icebox calls 60, [turn: J♥ 2♠ 3♠ 4♣], Pickpocket checks, Icebox checks, [river: J♥ 2♠ 3♠ 4♣ 6♦], Pickpocket checks, Icebox checks → Icebox wins 295 with Pair of Js (8♥ J♣)",
+   "pot": 295
   }
  ],
  "finishes": [
