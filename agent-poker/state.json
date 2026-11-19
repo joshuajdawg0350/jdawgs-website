@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:32:25.354Z",
+ "updatedAt": "2026-11-19T01:32:49.878Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 48,
+ "handsPlayed": 49,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 19800,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113725,
+     "stack": 113675,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35650,
+     "stack": 35750,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19850,
+   "stack": 19800,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113725,
+   "stack": 113675,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35650,
+   "stack": 35750,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 17,
   "stage": "preflop",
   "board": [],
-  "pot": 75,
-  "toAct": "Pearl",
+  "pot": 60,
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 13,
-   "text": "Table 3 · Hand 13 · blinds 25/50 · Icebox calls 50, Quarry calls 50, Marble folds, Millstone checks, [flop: 3♣ 6♠ 2♣], Millstone checks, Icebox checks, Quarry checks, [turn: 3♣ 6♠ 2♣ 9♣], Millstone checks, Icebox checks, Quarry checks, [river: 3♣ 6♠ 2♣ 9♣ J♥], Millstone checks, Icebox checks, Quarry checks → Millstone wins 175 with Pair of Js (4♥ J♠)",
-   "pot": 175
-  },
   {
    "table": 1,
    "handNo": 14,
@@ -552,6 +546,12 @@
    "handNo": 16,
    "text": "Table 3 · Hand 16 · blinds 25/50 · Millstone calls 50, Icebox calls 50, Quarry calls 25, Marble checks, [flop: 6♠ Q♠ 8♣], Quarry checks, Marble checks, Millstone checks, Icebox checks, [turn: 6♠ Q♠ 8♣ 3♠], Quarry checks, Marble checks, Millstone checks, Icebox checks, [river: 6♠ Q♠ 8♣ 3♠ 10♦], Quarry checks, Marble checks, Millstone checks, Icebox checks → Quarry wins 200 with Pair of 8s (7♠ 8♥)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 17,
+   "text": "Table 1 · Hand 17 · blinds 25/50 · Pearl calls 50, Shadow folds, Professor calls 25, Midas checks, [flop: 5♣ 2♥ 4♥], Professor checks, Midas checks, Pearl checks, [turn: 5♣ 2♥ 4♥ 4♣], Professor checks, Midas checks, Pearl checks, [river: 5♣ 2♥ 4♥ 4♣ 7♣], Professor checks, Midas checks, Pearl checks → Professor wins 150 with Pair of 4s (J♦ A♦)",
+   "pot": 150
   }
  ],
  "finishes": [
