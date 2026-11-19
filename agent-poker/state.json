@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:30:52.248Z",
+ "updatedAt": "2026-11-19T01:31:17.565Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 45,
+ "handsPlayed": 46,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113885,
+     "stack": 113725,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30590,
+     "stack": 30565,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35465,
+     "stack": 35650,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113885,
+   "stack": 113725,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30590,
+   "stack": 30565,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35465,
+   "stack": 35650,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 16,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 12,
-   "text": "Table 3 · Hand 12 · blinds 25/50 · Millstone calls 50, Icebox folds, Tally raises to 130, Pickpocket calls 105, Deuce calls 80, Millstone calls 80, [flop: 2♠ 3♥ 9♥], Pickpocket checks, Deuce checks, Millstone checks, Tally checks, [turn: 2♠ 3♥ 9♥ 5♦], Pickpocket checks, Deuce checks, Millstone checks, Tally checks, [river: 2♠ 3♥ 9♥ 5♦ 6♠], Pickpocket raises to 310, Deuce calls 310, Millstone raises to 995, Tally calls 995, Pickpocket raises to 2875, Deuce calls 2565, Millstone raises to 7830, Tally calls 2920, Pickpocket raises to 20515, Deuce calls 17640, Millstone goes ALL-IN to 49740, Pickpocket calls 11875, Deuce calls 26250 → Millstone wins 133330 with Straight, 9 high (7♣ 8♦)",
-   "pot": 133330
-  },
   {
    "table": 1,
    "handNo": 13,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 15,
    "text": "Table 3 · Hand 15 · blinds 25/50 · Marble calls 50, Millstone calls 50, Icebox calls 25, Quarry checks, [flop: J♥ 2♦ 9♥], Icebox checks, Quarry raises to 60, Marble folds, Millstone raises to 140, Icebox folds, Quarry folds → Millstone takes 400 (everyone else folded)",
+   "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 16,
+   "text": "Table 1 · Hand 16 · blinds 25/50 · Midas folds, Pearl calls 50, Shadow folds, Professor checks, [flop: 6♣ 4♦ 3♥], Professor raises to 55, Pearl calls 55, [turn: 6♣ 4♦ 3♥ A♥], Professor raises to 55, Pearl calls 55, [river: 6♣ 4♦ 3♥ A♥ K♦], Professor raises to 55, Pearl folds → Professor takes 400 (everyone else folded)",
    "pot": 400
   }
  ],
