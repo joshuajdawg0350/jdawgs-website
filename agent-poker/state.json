@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:40:37.552Z",
+ "updatedAt": "2026-11-19T01:41:01.168Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 63,
+ "handsPlayed": 64,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19648,
+     "stack": 19618,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113419,
+     "stack": 113509,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35888,
+     "stack": 35828,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19648,
+   "stack": 19618,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113419,
+   "stack": 113509,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35888,
+   "stack": 35828,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 22,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Shadow",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 18,
-   "text": "Table 3 · Hand 18 · blinds 25/50 · Quarry calls 50, Marble folds, Millstone calls 25, Icebox checks, [flop: 2♣ 8♥ 6♠], Millstone checks, Icebox checks, Quarry checks, [turn: 2♣ 8♥ 6♠ 5♦], Millstone raises to 50, Icebox folds, Quarry folds → Millstone takes 200 (everyone else folded)",
-   "pot": 200
-  },
   {
    "table": 1,
    "handNo": 19,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 21,
    "text": "Table 3 · Hand 21 · blinds 30/60 · Icebox folds, Quarry calls 60, Marble folds, Millstone checks, [flop: 3♥ 9♥ J♦], Millstone checks, Quarry checks, [turn: 3♥ 9♥ J♦ Q♠], Millstone checks, Quarry checks, [river: 3♥ 9♥ J♦ Q♠ 9♠], Millstone checks, Quarry checks → Millstone wins 150 with Two pair, Js and 9s (J♥ 3♣)",
+   "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 22,
+   "text": "Table 1 · Hand 22 · blinds 30/60 · Shadow folds, Professor calls 60, Midas folds, Pearl checks, [flop: 6♦ 4♥ Q♣], Pearl checks, Professor checks, [turn: 6♦ 4♥ Q♣ 10♥], Pearl checks, Professor checks, [river: 6♦ 4♥ Q♣ 10♥ K♠], Pearl checks, Professor checks → Pearl wins 150 with Pair of Qs (Q♦ A♣)",
    "pot": 150
   }
  ],
