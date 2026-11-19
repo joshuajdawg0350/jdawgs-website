@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:11:40.596Z",
+ "updatedAt": "2026-11-19T01:12:09.496Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 14,
+ "handsPlayed": 15,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19320,
+     "stack": 19220,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 20770,
+     "stack": 20670,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19430,
+     "stack": 19330,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19530,
+     "stack": 19430,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20980,
+     "stack": 21580,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20380,
+     "stack": 20280,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19320,
+   "stack": 19220,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20770,
+   "stack": 20670,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19430,
+   "stack": 19330,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19530,
+   "stack": 19430,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20980,
+   "stack": 21580,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20380,
+   "stack": 20280,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry folds, Slick folds, Granite calls 50, Dice calls 25, Bulldog checks, [flop: 7♠ K♣ Q♣], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks, [turn: 7♠ K♣ Q♣ 3♣], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks, [river: 7♠ K♣ Q♣ 3♣ 5♦], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks → Dice wins 300 with Pair of Ks (K♥ 10♦)",
-   "pot": 300
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -552,6 +538,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Sixgun raises to 130, Quarry calls 130, Slick calls 130, Granite raises to 410, Dice calls 410, Bulldog folds, Copper calls 410, Compass calls 385, Marble folds, Sixgun raises to 1660, Quarry folds, Slick calls 1530, Granite raises to 4745, Dice calls 4335, Copper calls 4335, Compass calls 4335, Sixgun raises to 18235, Slick calls 16575, Granite goes ALL-IN to 19925, Dice calls 15180, Copper calls 15020, Compass calls 14995, Sixgun goes ALL-IN to 20110, Slick folds, Dice folds, [flop: A♦ 9♣ Q♠], [turn: A♦ 9♣ Q♠ 7♠], [river: A♦ 9♣ Q♠ 7♠ 5♣] → Granite wins 480 with Pair of Ks (K♥ K♠); Copper wins 117215 with Pair of As (6♥ A♠); Sixgun wins 185 with Pair of 8s (8♦ 8♣)",
    "pot": 117880
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone raises to 100, Icebox folds, Velvet calls 100, Tally calls 75, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, [flop: 4♥ 8♥ 9♥], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [turn: 4♥ 8♥ 9♥ A♦], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [river: 4♥ 8♥ 9♥ A♦ J♦], Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks → Tally wins 700 with Two pair, Js and 9s (9♠ J♠)",
+   "pot": 700
   }
  ],
  "finishes": [
