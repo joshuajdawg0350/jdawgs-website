@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:39:30.542Z",
+ "updatedAt": "2026-11-19T12:39:41.521Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 41,
+ "handsPlayed": 42,
  "tables": [
   {
    "id": 1,
@@ -246,7 +246,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   }
  ],
  "seats": [
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 14,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1200,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 11,
-   "text": "Table 2 · Hand 11 · blinds 200/400 · Granite calls 400, Bulldog calls 200, Slick checks, [flop: 2♥ 10♠ Q♠], Bulldog checks, Slick checks, Granite checks, [turn: 2♥ 10♠ Q♠ 4♥], Bulldog checks, Slick checks, Granite checks, [river: 2♥ 10♠ Q♠ 4♥ Q♥], Bulldog checks, Slick checks, Granite checks → Granite wins 1200 with Pair of Qs (7♠ K♦)",
-   "pot": 1200
-  },
   {
    "table": 3,
    "handNo": 11,
@@ -569,6 +555,12 @@
    "handNo": 14,
    "text": "Table 2 · Hand 14 · blinds 400/800 · Granite raises to 1600, Bulldog calls 1200, Slick folds, [flop: K♦ 6♠ 10♠], Bulldog checks, Granite checks, [turn: K♦ 6♠ 10♠ A♣], Bulldog checks, Granite checks, [river: K♦ 6♠ 10♠ A♣ 9♦], Bulldog checks, Granite raises to 800, Bulldog calls 800 → Granite wins 5600 with Three of a kind, 10s (10♦ 10♣)",
    "pot": 5600
+  },
+  {
+   "table": 3,
+   "handNo": 14,
+   "text": "Table 3 · Hand 14 · blinds 400/800 · Marble folds, Sixgun calls 400, Compass checks, [flop: 9♣ Q♠ 5♣], Sixgun checks, Compass checks, [turn: 9♣ Q♠ 5♣ A♠], Sixgun checks, Compass checks, [river: 9♣ Q♠ 5♣ A♠ 9♠], Sixgun checks, Compass checks → Sixgun wins 800 with Pair of 9s (7♣ K♥); Compass wins 800 with Pair of 9s (K♦ 10♦)",
+   "pot": 1600
   }
  ],
  "finishes": [
