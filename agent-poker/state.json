@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:42:23.027Z",
+ "updatedAt": "2026-11-19T12:42:35.067Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 50,
+ "handsPlayed": 51,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 138013,
+     "stack": 134813,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 47030,
+     "stack": 43830,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 30159,
+     "stack": 23119,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 15925,
+     "stack": 12725,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20505,
+     "stack": 40345,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 30405,
+     "stack": 27205,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 18
+   "handsPlayed": 19
   }
  ],
  "seats": [
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 47030,
+   "stack": 43830,
    "status": "seated",
    "reentered": false
   },
@@ -145,7 +145,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20505,
+   "stack": 40345,
    "status": "seated",
    "reentered": false
   },
@@ -199,7 +199,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 15925,
+   "stack": 12725,
    "status": "seated",
    "reentered": false
   },
@@ -217,7 +217,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 138013,
+   "stack": 134813,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30405,
+   "stack": 27205,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30159,
+   "stack": 23119,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 19,
-  "stage": "preflop",
-  "board": [],
-  "pot": 4800,
-  "toAct": "Granite",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 14,
-   "text": "Table 2 · Hand 14 · blinds 400/800 · Granite raises to 1600, Bulldog calls 1200, Slick folds, [flop: K♦ 6♠ 10♠], Bulldog checks, Granite checks, [turn: K♦ 6♠ 10♠ A♣], Bulldog checks, Granite checks, [river: K♦ 6♠ 10♠ A♣ 9♦], Bulldog checks, Granite raises to 800, Bulldog calls 800 → Granite wins 5600 with Three of a kind, 10s (10♦ 10♣)",
-   "pot": 5600
-  },
   {
    "table": 3,
    "handNo": 14,
@@ -405,6 +391,12 @@
    "handNo": 18,
    "text": "Table 1 · Hand 18 · blinds 800/1600 · Bulldog calls 1600, Granite folds, Marble calls 1600, Midas folds, Compass calls 1600, River Rat folds, Slick calls 800, Professor checks, [flop: Q♣ 6♦ Q♥], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [turn: Q♣ 6♦ Q♥ 10♠], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [river: Q♣ 6♦ Q♥ 10♠ 7♥], Slick checks, Professor checks, Bulldog checks, Marble raises to 1600, Compass calls 1600, Slick calls 1600, Professor calls 1600, Bulldog calls 1600 → Marble wins 16000 with Three of a kind, Qs (Q♠ 3♠)",
    "pot": 16000
+  },
+  {
+   "table": 1,
+   "handNo": 19,
+   "text": "Table 1 · Hand 19 · blinds 1600/3200 · Granite calls 3200, Marble calls 3200, Midas folds, Compass folds, River Rat calls 3200, Slick calls 3200, Professor calls 1600, Bulldog checks, [flop: J♦ 8♥ K♣], Professor raises to 3840, Bulldog folds, Granite calls 3840, Marble folds, River Rat folds, Slick folds, [turn: J♦ 8♥ K♣ 2♣], Professor checks, Granite checks, [river: J♦ 8♥ K♣ 2♣ 10♠], Professor checks, Granite checks → Granite wins 26880 with Pair of Js (J♠ 9♠)",
+   "pot": 26880
   }
  ],
  "finishes": [
