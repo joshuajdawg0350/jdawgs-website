@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:30:33.735Z",
+ "updatedAt": "2026-11-19T12:30:45.567Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 4,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20636,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19607,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121800,
+     "stack": 121507,
      "status": "seated",
      "reentered": false
     },
@@ -101,12 +101,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19775,
+     "stack": 19725,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -264,7 +264,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20636,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19900,
+   "stack": 19607,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121800,
+   "stack": 121507,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19775,
+   "stack": 19725,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Venus",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
@@ -563,6 +563,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Deuce calls 50, Millstone calls 50, Icebox calls 50, Sixgun calls 25, Anchor checks, [flop: 6♠ K♦ 5♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [turn: 6♠ K♦ 5♣ Q♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [river: 6♠ K♦ 5♣ Q♣ 10♥], Sixgun raises to 150, Anchor calls 150, Deuce folds, Millstone calls 150, Icebox raises to 355, Sixgun raises to 990, Anchor calls 840, Millstone calls 840, Icebox raises to 1855, Sixgun raises to 4900, Anchor folds, Millstone calls 3910, Icebox raises to 9040, Sixgun raises to 21090, Millstone calls 15000, Icebox calls 10805 → Sixgun wins 62075 with Straight, A high (A♠ J♠)",
    "pot": 62075
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 50/100 · Venus calls 100, River Rat calls 100, Professor folds, Marble folds, Midas checks, [flop: 2♣ 3♥ 6♠], Midas checks, Venus checks, River Rat checks, [turn: 2♣ 3♥ 6♠ 10♦], Midas checks, Venus checks, River Rat checks, [river: 2♣ 3♥ 6♠ 10♦ 6♥], Midas raises to 193, Venus calls 193, River Rat calls 193 → Midas wins 929 with Two pair, 10s and 6s (Q♥ 10♠)",
+   "pot": 929
   }
  ],
  "finishes": [
