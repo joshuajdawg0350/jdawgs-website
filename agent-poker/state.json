@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:44:45.190Z",
+ "updatedAt": "2026-11-19T12:44:56.818Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 56,
+ "handsPlayed": 57,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 202960,
+     "stack": 190160,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 59058,
+     "stack": 46258,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 112134,
+     "stack": 163334,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 39140,
+     "stack": 26340,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 106830,
+     "stack": 94030,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 24
+   "handsPlayed": 25
   }
  ],
  "seats": [
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 112134,
+   "stack": 163334,
    "status": "seated",
    "reentered": false
   },
@@ -145,7 +145,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39140,
+   "stack": 26340,
    "status": "seated",
    "reentered": false
   },
@@ -217,7 +217,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59058,
+   "stack": 46258,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 202960,
+   "stack": 190160,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 106830,
+   "stack": 94030,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 25,
-  "stage": "preflop",
-  "board": [],
-  "pot": 19200,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 16,
-   "text": "Table 2 · Hand 16 · blinds 800/1600 · Slick folds, Granite calls 800, Bulldog checks, [flop: 7♥ 6♠ 3♥], Granite checks, Bulldog checks, [turn: 7♥ 6♠ 3♥ 8♦], Granite checks, Bulldog checks, [river: 7♥ 6♠ 3♥ 8♦ 9♣], Granite checks, Bulldog checks → Granite wins 3200 with A high (A♥ J♥)",
-   "pot": 3200
-  },
   {
    "table": 3,
    "handNo": 16,
@@ -405,6 +391,12 @@
    "handNo": 24,
    "text": "Table 1 · Hand 24 · blinds 3200/6400 · Granite calls 6400, Marble folds, Midas folds, Compass folds, River Rat calls 3200, Slick checks, [flop: A♦ 2♦ 6♦], River Rat checks, Slick checks, Granite checks, [turn: A♦ 2♦ 6♦ 8♦], River Rat checks, Slick checks, Granite checks, [river: A♦ 2♦ 6♦ 8♦ A♣], River Rat checks, Slick checks, Granite raises to 6400, River Rat calls 6400, Slick calls 6400 → Granite wins 38400 with Three of a kind, As (A♠ 9♣)",
    "pot": 38400
+  },
+  {
+   "table": 1,
+   "handNo": 25,
+   "text": "Table 1 · Hand 25 · blinds 6400/12800 · Marble calls 12800, Midas folds, Compass calls 12800, River Rat calls 12800, Slick calls 6400, Granite checks, [flop: 10♦ 2♦ 7♠], Slick checks, Granite checks, Marble checks, Compass checks, River Rat checks, [turn: 10♦ 2♦ 7♠ 7♥], Slick checks, Granite checks, Marble checks, Compass checks, River Rat checks, [river: 10♦ 2♦ 7♠ 7♥ 4♥], Slick checks, Granite checks, Marble checks, Compass checks, River Rat checks → Slick wins 64000 with Two pair, 7s and 5s (5♥ 5♣)",
+   "pot": 64000
   }
  ],
  "finishes": [
