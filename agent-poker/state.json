@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T02:00:28.052Z",
+ "updatedAt": "2026-11-19T02:00:54.062Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 93,
+ "handsPlayed": 94,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 477224,
+     "stack": 506830,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 6260,
+     "stack": 6200,
      "status": "seated",
      "reentered": false
     },
@@ -61,8 +61,8 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 29546,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   }
  ],
  "seats": [
@@ -99,8 +99,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 29546,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 477224,
+   "stack": 506830,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6260,
+   "stack": 6200,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 40,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 30,
-   "text": "Table 1 · Hand 30 · blinds 30/60 · Icebox folds, Slick calls 60, Pearl calls 60, Millstone calls 60, Copper calls 60, Marble calls 30, Midas checks, [flop: 8♣ Q♣ 9♦], Marble checks, Midas checks, Slick checks, Pearl checks, Millstone checks, Copper checks, [turn: 8♣ Q♣ 9♦ Q♥], Marble checks, Midas checks, Slick checks, Pearl checks, Millstone raises to 60, Copper calls 60, Marble folds, Midas calls 60, Slick calls 60, Pearl calls 60, [river: 8♣ Q♣ 9♦ Q♥ J♣], Midas checks, Slick raises to 60, Pearl calls 60, Millstone raises to 530, Copper calls 530, Midas folds, Slick goes ALL-IN to 960, Pearl calls 900, Millstone raises to 3145, Copper calls 2615, Pearl calls 2185 → Millstone wins 11055 with Full house, Qs full of Js (J♥ Q♠)",
-   "pot": 11055
-  },
   {
    "table": 1,
    "handNo": 31,
@@ -404,6 +390,12 @@
    "handNo": 39,
    "text": "Table 1 · Hand 39 · blinds 30/60 · Copper calls 60, Marble calls 60, Midas folds, Icebox calls 60, Pearl calls 30, Millstone checks, [flop: J♠ 8♣ 9♠], Pearl checks, Millstone checks, Copper checks, Marble checks, Icebox checks, [turn: J♠ 8♣ 9♠ 9♣], Pearl raises to 60, Millstone calls 60, Copper calls 60, Marble calls 60, Icebox folds, [river: J♠ 8♣ 9♠ 9♣ 10♣], Pearl raises to 60, Millstone calls 60, Copper raises to 120, Marble raises to 590, Pearl raises to 1115, Millstone calls 1055, Copper calls 995, Marble raises to 3800, Pearl raises to 6805, Millstone calls 5690, Copper calls 5690, Marble raises to 21660, Pearl raises to 38300, Millstone calls 31495, Copper calls 31495, Marble goes ALL-IN to 119448, Pearl goes ALL-IN to 135475, Millstone calls 97175, Copper calls 47986 → Pearl wins 477224 with Full house, 9s full of 8s (9♦ 8♦)",
    "pot": 477224
+  },
+  {
+   "table": 1,
+   "handNo": 40,
+   "text": "Table 1 · Hand 40 · blinds 30/60 · Icebox folds, Pearl calls 60, Millstone calls 30, Midas checks, [flop: 8♥ 10♠ J♦], Millstone checks, Midas checks, Pearl raises to 60, Millstone folds, Midas raises to 288, Pearl raises to 543, Midas raises to 1503, Pearl raises to 2578, Midas raises to 6626, Pearl raises to 11161, Midas calls 4535, [turn: 8♥ 10♠ J♦ A♥], Midas goes ALL-IN to 18325, Pearl raises to 38850, [river: 8♥ 10♠ J♦ A♥ 4♦], Pearl raises to 60 → Pearl wins 79737 with Straight, Q high (Q♠ 9♥)",
+   "pot": 79737
   }
  ],
  "finishes": [
@@ -582,6 +574,14 @@
    "table": 1,
    "handNo": 39,
    "provisional": true
+  },
+  {
+   "name": "Midas",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 40,
+   "provisional": true
   }
  ],
  "champion": null,
@@ -589,7 +589,7 @@
  "defended": false,
  "midas": {
   "styleTonight": null,
-  "knockedOutBy": null,
+  "knockedOutBy": "Pearl",
   "finish": null
  },
  "bounty": {
