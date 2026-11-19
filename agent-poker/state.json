@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:45:38.878Z",
+ "updatedAt": "2026-11-19T12:45:50.676Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 58,
+ "handsPlayed": 59,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 177360,
+     "stack": 191538,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 33458,
+     "stack": 27058,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 126030,
+     "stack": 119630,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 1378,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 26
+   "handsPlayed": 27
   }
  ],
  "seats": [
@@ -100,8 +100,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1378,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -217,7 +217,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 33458,
+   "stack": 27058,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 177360,
+   "stack": 191538,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 126030,
+   "stack": 119630,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 27,
-  "stage": "preflop",
-  "board": [],
-  "pot": 7778,
-  "toAct": "Compass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 17,
-   "text": "Table 1 · Hand 17 · blinds 800/1600 · Professor calls 1600, Bulldog calls 1600, Granite folds, Marble folds, Midas folds, Compass calls 1600, River Rat calls 800, Slick checks, [flop: 8♣ K♥ 7♦], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks, [turn: 8♣ K♥ 7♦ Q♣], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks, [river: 8♣ K♥ 7♦ Q♣ 4♠], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks → Slick wins 8000 with Two pair, Ks and 7s (7♠ K♣)",
-   "pot": 8000
-  },
   {
    "table": 1,
    "handNo": 18,
@@ -405,6 +391,12 @@
    "handNo": 26,
    "text": "Table 1 · Hand 26 · blinds 6400/12800 · Midas folds, Compass calls 12800, River Rat calls 12800, Slick folds, Granite folds, Marble checks, [flop: A♣ 10♥ J♣], Marble checks, Compass checks, River Rat checks, [turn: A♣ 10♥ J♣ J♥], Marble checks, Compass checks, River Rat checks, [river: A♣ 10♥ J♣ J♥ 5♠], Marble checks, Compass checks, River Rat checks → Marble wins 44800 with Two pair, As and Js (A♠ 3♠)",
    "pot": 44800
+  },
+  {
+   "table": 1,
+   "handNo": 27,
+   "text": "Table 1 · Hand 27 · blinds 6400/12800 · Compass calls 6400, River Rat calls 6400, Slick folds, Granite folds, Marble checks, [flop: Q♣ 7♣ 5♦], Marble checks, Compass checks, River Rat checks, [turn: Q♣ 7♣ 5♦ 9♥], Marble checks, Compass checks, River Rat checks, [river: Q♣ 7♣ 5♦ 9♥ A♥], Marble checks, Compass checks, River Rat checks → Compass wins 20578 with Two pair, As and 7s (A♣ 7♠)",
+   "pot": 20578
   }
  ],
  "finishes": [
@@ -575,6 +567,14 @@
    "table": 1,
    "handNo": 22,
    "provisional": true
+  },
+  {
+   "name": "Midas",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 27,
+   "provisional": true
   }
  ],
  "champion": null,
@@ -582,7 +582,7 @@
  "defended": false,
  "midas": {
   "styleTonight": null,
-  "knockedOutBy": null,
+  "knockedOutBy": "Compass",
   "finish": null
  },
  "bounty": {
