@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:28:53.742Z",
+ "updatedAt": "2026-11-19T12:29:05.245Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 2,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121500,
+     "stack": 121650,
      "status": "seated",
      "reentered": false
     },
@@ -93,7 +93,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 20700,
+     "stack": 20650,
      "status": "seated",
      "reentered": false
     },
@@ -101,12 +101,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121500,
+   "stack": 121650,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19875,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -480,7 +480,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20700,
+   "stack": 20650,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Marble",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -527,6 +527,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket raises to 180, Sixgun calls 180, Quarry calls 180, Deuce folds, Wildfire calls 155, Millstone folds, Velvet calls 130, Tally calls 130, [flop: 7♣ 4♥ 4♣], Wildfire checks, Velvet checks, Tally checks, Pickpocket raises to 680, Sixgun calls 680, Quarry calls 680, Wildfire calls 680, Velvet calls 680, Tally calls 680, [turn: 7♣ 4♥ 4♣ J♥], Wildfire checks, Velvet checks, Tally checks, Pickpocket raises to 3125, Sixgun calls 3125, Quarry calls 3125, Wildfire calls 3125, Velvet calls 3125, Tally calls 3125, [river: 7♣ 4♥ 4♣ J♥ 9♦], Wildfire checks, Velvet checks, Tally checks, Pickpocket raises to 14375, Sixgun goes ALL-IN to 16015, Quarry calls 16015, Wildfire calls 16015, Velvet calls 16015, Tally calls 16015, Pickpocket calls 1640 → Sixgun wins 120050 with Straight, J high (10♣ 8♥)",
    "pot": 120050
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Marble calls 50, Midas folds, Venus calls 50, River Rat calls 25, Professor checks, [flop: 3♠ A♥ 9♥], River Rat checks, Professor checks, Marble checks, Venus checks, [turn: 3♠ A♥ 9♥ J♦], River Rat checks, Professor checks, Marble checks, Venus checks, [river: 3♠ A♥ 9♥ J♦ 2♦], River Rat checks, Professor checks, Marble checks, Venus checks → River Rat wins 200 with Pair of 9s (9♣ 5♠)",
+   "pot": 200
   }
  ],
  "finishes": [
