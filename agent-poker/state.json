@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:34:35.526Z",
+ "updatedAt": "2026-11-19T12:34:47.179Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  3200,
-  6400
+  6400,
+  12800
  ],
- "level": 8,
- "handsPlayed": 23,
+ "level": 9,
+ "handsPlayed": 24,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 141015,
+     "stack": 140495,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 78655,
+     "stack": 77655,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19705,
+     "stack": 19505,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 14715,
+     "stack": 16435,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   }
  ],
  "seats": [
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 14715,
+   "stack": 16435,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 78655,
+   "stack": 77655,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19705,
+   "stack": 19505,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 141015,
+   "stack": 140495,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 8,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 50/100 · Dice calls 100, Bulldog raises to 250, Copper calls 250, Slick folds, Granite folds, Dice calls 150, [flop: Q♦ 6♣ 10♦], Dice checks, Bulldog checks, Copper checks, [turn: Q♦ 6♣ 10♦ 3♣], Dice checks, Bulldog checks, Copper checks, [river: Q♦ 6♣ 10♦ 3♣ 4♦], Dice checks, Bulldog checks, Copper checks → Dice wins 900 with Pair of Qs (Q♣ 9♠)",
-   "pot": 900
-  },
   {
    "table": 3,
    "handNo": 5,
@@ -569,6 +555,12 @@
    "handNo": 8,
    "text": "Table 2 · Hand 8 · blinds 100/200 · Granite calls 200, Dice calls 200, Bulldog folds, Slick checks, [flop: 3♠ 7♠ Q♣], Slick checks, Granite checks, Dice checks, [turn: 3♠ 7♠ Q♣ J♥], Slick checks, Granite checks, Dice checks, [river: 3♠ 7♠ Q♣ J♥ 8♣], Slick checks, Granite checks, Dice checks → Dice wins 700 with Pair of 3s (K♣ 3♣)",
    "pot": 700
+  },
+  {
+   "table": 3,
+   "handNo": 8,
+   "text": "Table 3 · Hand 8 · blinds 100/200 · Marble calls 200, Copper raises to 520, Sixgun calls 420, Compass calls 320, Marble folds, [flop: 3♣ Q♣ 4♦], Sixgun checks, Compass raises to 240, Copper calls 240, Sixgun folds, [turn: 3♣ Q♣ 4♦ A♣], Compass checks, Copper checks, [river: 3♣ Q♣ 4♦ A♣ J♥], Compass raises to 240, Copper calls 240 → Copper wins 2720 with Pair of Ks (K♥ K♣)",
+   "pot": 2720
   }
  ],
  "finishes": [
