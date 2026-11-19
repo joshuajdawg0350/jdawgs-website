@@ -478,19 +478,17 @@
 
         <div class="field">
           <label class="field-label" for="subject">Subject</label>
-          <input type="text" id="subject" autocomplete="off" placeholder="e.g. a construction worker in a hard hat, wiping sweat"
-            value="a construction worker in a hard hat, wiping sweat from his forehead" />
+          <input type="text" id="subject" autocomplete="off" placeholder="e.g. a red fox in fresh snow" />
         </div>
 
         <div class="field">
           <label class="field-label" for="setting">Setting</label>
-          <input type="text" id="setting" autocomplete="off" placeholder="e.g. a downtown job site at sunrise"
-            value="a downtown job site at sunrise, steel beams and dust in the air" />
+          <input type="text" id="setting" autocomplete="off" placeholder="e.g. a quiet forest clearing in morning fog" />
         </div>
 
         <div class="field">
           <label class="field-label" for="mood">Mood</label>
-          <input type="text" id="mood" autocomplete="off" placeholder="e.g. proud, tired, and real" value="proud, tired, and real" />
+          <input type="text" id="mood" autocomplete="off" placeholder="e.g. calm and dreamy" />
           <div class="chips" id="moodChips" role="group" aria-label="Mood quick picks">
             <button type="button" class="chip" data-mood="cinematic and dramatic">Cinematic</button>
             <button type="button" class="chip" data-mood="gritty and honest">Gritty</button>
@@ -875,6 +873,20 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
+      /* Fields start EMPTY on every open — no prefilled text and no
+         browser-restored leftovers from an earlier visit (owner's order,
+         2026-11-18). Runs before every generator script below. */
+      (function () {
+        function clearFields() {
+          var fields = document.querySelectorAll('input[type="text"], input[type="search"], input:not([type]), textarea');
+          for (var i = 0; i < fields.length; i++) fields[i].value = "";
+        }
+        clearFields();
+        window.addEventListener("pageshow", clearFields);
+      })();
+    </script>
+
+    <script>
       (function () {
         "use strict";
 
@@ -1226,7 +1238,7 @@
             "a dusty rodeo arena just before the gates open",
             "a crowded night market strung with bare bulbs",
             "a quiet farmhouse kitchen, morning light through lace curtains",
-            "a downtown job site, steel beams and dust in the air",
+            "a windswept hilltop lighthouse at dusk",
             "a neon-lit subway platform late at night",
             "a desert gas station at dusk, one pump still working",
             "a mountain cabin porch above a sea of fog"
@@ -1361,10 +1373,10 @@
               "Build the whole piece around one small, vivid, true detail and let everything else orbit it."
             ],
             defaults: {
-              goal: "write a post about why hand-done work still matters",
-              subject: "small local services vs big apps",
-              audience: "neighbors in Springfield, MO",
-              details: "Open on a specific moment, not a slogan. Mention Springfield, MO once, naturally."
+              goal: "",
+              subject: "",
+              audience: "",
+              details: ""
             },
             surprise: [
               { goal: "write a post about a small-town crew that still does house calls", subject: "human work vs automation", audience: "local homeowners", details: "Open on a specific moment, not a slogan." },
@@ -1386,7 +1398,7 @@
             detailsLabel: "Facts — treat as fact (the only source of claims)",
             detailsPh: "Prices, terms, guarantees, deadlines — only what's true…",
             limitsPh: "e.g. never quote a price that isn't in the facts…",
-            limitsDefault: "Never invent prices, stats, guarantees, or testimonials. Hype words are banned unless the proof is in the copy.",
+            limitsDefault: "",
             formatLabel: "Output format",
             formats: ["Ad copy", "Sales pitch (one-pager)", "Product description", "Cold email", "Social media ad", "Flyer / sign copy", "Landing page section"],
             roleBare: "a senior direct-response copywriter",
@@ -1405,10 +1417,10 @@
               "Write the shop-window version: so clear and short it could be painted on glass, every word earning its space."
             ],
             defaults: {
-              goal: "write an ad for a consignment trading post",
-              subject: "J-Dawgs Trading Post — consignment sales for local sellers",
-              audience: "local collectors and people clearing out a garage",
-              details: "No listing fee, no sale no fee. Sellers keep 65% under $100 and 75% at $100+. Payout within 3 business days."
+              goal: "",
+              subject: "",
+              audience: "",
+              details: ""
             },
             surprise: [
               { goal: "write a one-pager pitching a local task service to property managers", subject: "Human Hands — local people for house checks, deliveries, and yard work", audience: "property managers with 200+ units", details: "Posters set the price and pay +15% — that's the whole cost. Photo proof on every job." },
@@ -1430,7 +1442,7 @@
             detailsLabel: "Facts, stack & constraints — treat as fact",
             detailsPh: "e.g. single HTML file, must work on a phone, no build step…",
             limitsPh: "e.g. no external dependencies; must run offline…",
-            limitsDefault: "No placeholders or half-finished code. Never silently break a stated constraint.",
+            limitsDefault: "",
             formatLabel: "Output format",
             formats: ["Build it — full code", "Write a script", "Debug / fix my code", "Plan the build (architecture first)", "Explain this code", "Game feature / mechanic"],
             roleBare: "a senior software engineer",
@@ -1449,10 +1461,10 @@
               "Optimize for the beginner reading it at midnight: generous comments, zero clever tricks, everything named plainly."
             ],
             defaults: {
-              goal: "build a tip calculator",
-              subject: "a one-page web app",
-              audience: "anyone splitting a restaurant check",
-              details: "Single HTML file, no build step. Must work on a phone screen. Round the total up to the nearest dollar as an option."
+              goal: "",
+              subject: "",
+              audience: "",
+              details: ""
             },
             surprise: [
               { goal: "build a one-page dice roller for a street-craps mini game", subject: "a browser dice game helper", audience: "players on phones", details: "Two dice, a roll button with real physics-feel animation, and a running win/loss tally. Single file." },
@@ -1474,7 +1486,7 @@
             detailsLabel: "Focus & confusions (facts here are treated as fact)",
             detailsPh: "e.g. I keep mixing up APR and APY; use dollar examples…",
             limitsPh: "e.g. cite nothing you can't back; flag speculation as speculation…",
-            limitsDefault: "Never state an uncertain or contested fact as settled.",
+            limitsDefault: "",
             formatLabel: "Output format",
             formats: ["Explainer", "Comparison / versus", "Deep-dive report", "Study guide", "Pros & cons breakdown", "Timeline / how it developed"],
             roleBare: "an expert researcher and teacher",
@@ -1492,10 +1504,10 @@
               "End with a 3-question self-quiz (answers included) that locks the idea in."
             ],
             defaults: {
-              goal: "explain how compound interest actually works",
-              subject: "compound interest",
-              audience: "a smart beginner",
-              details: "Use one concrete $100 example throughout. Flag the difference between APR and APY."
+              goal: "",
+              subject: "",
+              audience: "",
+              details: ""
             },
             surprise: [
               { goal: "explain why the sky is blue — first like I'm a curious kid, then like a physicist", subject: "Rayleigh scattering", audience: "a curious beginner who wants both levels", details: "Keep the kid version honest — no 'because it reflects the ocean'." },
@@ -1517,7 +1529,7 @@
             detailsLabel: "Facts, tools & limits — treat as fact",
             detailsPh: "e.g. agent name + motto (optional); the tools it can use; who it serves…",
             limitsPh: "e.g. never send email — drafts only; escalate disputes to the owner…",
-            limitsDefault: "Never invent facts, prices, or capabilities. When a needed fact is missing, ask one short question — never guess.",
+            limitsDefault: "",
             formatLabel: "Output format",
             formats: ["Full system prompt", "Agent instruction set", "Chatbot persona + rules", "Workflow prompt (step-by-step)", "Single-task prompt"],
             roleBare: "an expert AI systems designer",
@@ -1538,10 +1550,10 @@
               "Add a self-check section: before answering, the agent re-reads its instructions and verifies its output against them."
             ],
             defaults: {
-              goal: "an agent that answers my shop's customer messages",
-              subject: "customer support for a consignment trading post",
-              audience: "buyers asking about listings, prices, and shipping",
-              details: "Never promise a refund or a discount. If an item's status is unknown, say so and offer to check. Escalate anything about a dispute to the owner."
+              goal: "",
+              subject: "",
+              audience: "",
+              details: ""
             },
             surprise: [
               { goal: "an agent that triages my email and drafts replies", subject: "email triage assistant for a small business owner", audience: "the owner, reviewing drafts each morning", details: "Never send anything — drafts only. Flag anything involving money, contracts, or an unhappy customer as urgent." },
