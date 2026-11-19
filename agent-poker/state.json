@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T02:13:40.541Z",
+ "updatedAt": "2026-11-19T02:14:04.460Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 110,
+ "handsPlayed": 111,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 506700,
+     "stack": 520000,
      "status": "seated",
      "reentered": false
     },
@@ -29,8 +29,8 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 5970,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -77,8 +77,8 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 7330,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 56
+   "handsPlayed": 57
   }
  ],
  "seats": [
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 506700,
+   "stack": 520000,
    "status": "seated",
    "reentered": false
   },
@@ -180,8 +180,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5970,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -207,8 +207,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7330,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 57,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 47,
-   "text": "Table 1 · Hand 47 · blinds 40/80 · Millstone calls 80, Icebox folds, Pearl checks, [flop: 7♥ 3♥ 4♣], Pearl checks, Millstone checks, [turn: 7♥ 3♥ 4♣ K♣], Pearl checks, Millstone checks, [river: 7♥ 3♥ 4♣ K♣ J♦], Pearl checks, Millstone checks → Pearl wins 200 with Pair of 7s (A♦ 7♠)",
-   "pot": 200
-  },
   {
    "table": 1,
    "handNo": 48,
@@ -404,6 +390,12 @@
    "handNo": 56,
    "text": "Table 1 · Hand 56 · blinds 40/80 · Millstone folds, Icebox folds → Pearl takes 120 (everyone else folded)",
    "pot": 120
+  },
+  {
+   "table": 1,
+   "handNo": 57,
+   "text": "Table 1 · Hand 57 · blinds 40/80 · Icebox calls 80, Pearl calls 40, Millstone checks, [flop: 6♣ J♠ 7♣], Pearl checks, Millstone checks, Icebox checks, [turn: 6♣ J♠ 7♣ 5♣], Pearl checks, Millstone checks, Icebox checks, [river: 6♣ J♠ 7♣ 5♣ J♣], Pearl raises to 80, Millstone raises to 160, Icebox raises to 240, Pearl raises to 330, Millstone raises to 420, Icebox raises to 510, Pearl raises to 610, Millstone raises to 710, Icebox raises to 845, Pearl calls 235, Millstone raises to 980, Icebox raises to 1165, Pearl raises to 1370, Millstone raises to 1575, Icebox raises to 1780, Pearl calls 410, Millstone raises to 1985, Icebox raises to 2265, Pearl raises to 2580, Millstone raises to 2895, Icebox raises to 3325, Pearl raises to 3805, Millstone raises to 4285, Icebox raises to 4940, Pearl calls 1135, Millstone raises to 5595, Icebox raises to 6485, Pearl raises to 7480, Millstone calls 295, Icebox calls 765 → Pearl wins 20860 with Flush, A high (A♣ 10♦)",
+   "pot": 20860
   }
  ],
  "finishes": [
@@ -589,6 +581,22 @@
    "kind": "house",
    "table": 1,
    "handNo": 40,
+   "provisional": true
+  },
+  {
+   "name": "Icebox",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 57,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 57,
    "provisional": true
   }
  ],
