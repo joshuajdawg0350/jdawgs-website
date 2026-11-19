@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:41:59.903Z",
+ "updatedAt": "2026-11-19T12:42:11.163Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 49,
+ "handsPlayed": 50,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 234885,
+     "stack": 231685,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 50230,
+     "stack": 47030,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 33359,
+     "stack": 30159,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19125,
+     "stack": 15925,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 17605,
+     "stack": 30405,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 17
+   "handsPlayed": 18
   }
  ],
  "seats": [
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 50230,
+   "stack": 47030,
    "status": "seated",
    "reentered": false
   },
@@ -199,7 +199,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19125,
+   "stack": 15925,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 234885,
+   "stack": 231685,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17605,
+   "stack": 30405,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 33359,
+   "stack": 30159,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 18,
-  "stage": "preflop",
-  "board": [],
-  "pot": 2400,
-  "toAct": "Bulldog",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 14,
-   "text": "Table 1 · Hand 14 · blinds 400/800 · Professor calls 800, Midas folds, Venus raises to 1600, River Rat calls 800, Professor calls 800, [flop: 7♠ Q♠ 2♠], Venus checks, River Rat checks, Professor checks, [turn: 7♠ Q♠ 2♠ J♦], Venus checks, River Rat checks, Professor checks, [river: 7♠ Q♠ 2♠ J♦ 4♠], Venus checks, River Rat checks, Professor raises to 880, Venus calls 880, River Rat calls 880 → Professor wins 7440 with Flush, Q high (5♣ 5♠)",
-   "pot": 7440
-  },
   {
    "table": 2,
    "handNo": 14,
@@ -405,6 +391,12 @@
    "handNo": 17,
    "text": "Table 1 · Hand 17 · blinds 800/1600 · Professor calls 1600, Bulldog calls 1600, Granite folds, Marble folds, Midas folds, Compass calls 1600, River Rat calls 800, Slick checks, [flop: 8♣ K♥ 7♦], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks, [turn: 8♣ K♥ 7♦ Q♣], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks, [river: 8♣ K♥ 7♦ Q♣ 4♠], River Rat checks, Slick checks, Professor checks, Bulldog checks, Compass checks → Slick wins 8000 with Two pair, Ks and 7s (7♠ K♣)",
    "pot": 8000
+  },
+  {
+   "table": 1,
+   "handNo": 18,
+   "text": "Table 1 · Hand 18 · blinds 800/1600 · Bulldog calls 1600, Granite folds, Marble calls 1600, Midas folds, Compass calls 1600, River Rat folds, Slick calls 800, Professor checks, [flop: Q♣ 6♦ Q♥], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [turn: Q♣ 6♦ Q♥ 10♠], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [river: Q♣ 6♦ Q♥ 10♠ 7♥], Slick checks, Professor checks, Bulldog checks, Marble raises to 1600, Compass calls 1600, Slick calls 1600, Professor calls 1600, Bulldog calls 1600 → Marble wins 16000 with Three of a kind, Qs (Q♠ 3♠)",
+   "pot": 16000
   }
  ],
  "finishes": [
