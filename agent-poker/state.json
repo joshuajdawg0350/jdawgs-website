@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:43:33.616Z",
+ "updatedAt": "2026-11-19T12:43:44.806Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 53,
+ "handsPlayed": 54,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 215760,
+     "stack": 209360,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 118888,
+     "stack": 78258,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 40630,
+     "stack": 124934,
      "status": "seated",
      "reentered": false
     },
@@ -45,8 +45,8 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 10394,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 43620,
+     "stack": 19940,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 4578,
+     "stack": 1378,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   }
  ],
  "seats": [
@@ -100,7 +100,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 4578,
+   "stack": 1378,
    "status": "seated",
    "reentered": false
   },
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 40630,
+   "stack": 124934,
    "status": "seated",
    "reentered": false
   },
@@ -145,7 +145,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 43620,
+   "stack": 19940,
    "status": "seated",
    "reentered": false
   },
@@ -217,7 +217,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 118888,
+   "stack": 78258,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 215760,
+   "stack": 209360,
    "status": "seated",
    "reentered": false
   },
@@ -316,8 +316,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10394,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 22,
-  "stage": "preflop",
-  "board": [],
-  "pot": 9600,
-  "toAct": "River Rat",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 15,
-   "text": "Table 2 · Hand 15 · blinds 400/800 · Bulldog calls 800, Slick folds, Granite checks, [flop: 9♣ Q♥ K♦], Granite checks, Bulldog raises to 1200, Granite folds → Bulldog takes 3200 (everyone else folded)",
-   "pot": 3200
-  },
   {
    "table": 3,
    "handNo": 15,
@@ -405,6 +391,12 @@
    "handNo": 21,
    "text": "Table 1 · Hand 21 · blinds 1600/3200 · Compass calls 3200, River Rat calls 3200, Slick calls 3200, Professor folds, Granite calls 3200, Marble calls 1600, Midas checks, [flop: 9♦ 2♣ 6♦], Marble checks, Midas checks, Compass checks, River Rat checks, Slick checks, Granite checks, [turn: 9♦ 2♣ 6♦ 9♥], Marble checks, Midas checks, Compass checks, River Rat checks, Slick checks, Granite checks, [river: 9♦ 2♣ 6♦ 9♥ 3♣], Marble checks, Midas checks, Compass checks, River Rat checks, Slick checks, Granite checks → Granite wins 19200 with Two pair, 9s and 7s (7♣ 7♠)",
    "pot": 19200
+  },
+  {
+   "table": 1,
+   "handNo": 22,
+   "text": "Table 1 · Hand 22 · blinds 3200/6400 · River Rat calls 6400, Slick calls 6400, Professor calls 6400, Granite raises to 23680, Marble folds, Midas folds, Compass folds, River Rat calls 17280, Slick calls 17280, Professor calls 3994, [flop: Q♠ 4♠ 3♠], River Rat checks, Slick raises to 6400, Granite folds, River Rat calls 6400, [turn: Q♠ 4♠ 3♠ 10♥], River Rat checks, Slick raises to 6400, River Rat calls 6400, [river: Q♠ 4♠ 3♠ 10♥ 6♥], River Rat checks, Slick goes ALL-IN to 4150, River Rat calls 4150 → Slick wins 124934 with Flush, Q high (7♠ 10♠)",
+   "pot": 124934
   }
  ],
  "finishes": [
@@ -566,6 +558,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 20,
+   "provisional": true
+  },
+  {
+   "name": "Professor",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 22,
    "provisional": true
   }
  ],
