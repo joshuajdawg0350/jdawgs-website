@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:38:34.666Z",
+ "updatedAt": "2026-11-19T12:38:45.842Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 37,
+ "handsPlayed": 38,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 43430,
+     "stack": 45030,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 17305,
+     "stack": 16505,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 24325,
+     "stack": 23525,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 12
+   "handsPlayed": 13
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 43430,
+   "stack": 45030,
    "status": "seated",
    "reentered": false
   },
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 17305,
+   "stack": 16505,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 24325,
+   "stack": 23525,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 13,
   "stage": "preflop",
   "board": [],
   "pot": 1200,
-  "toAct": "Slick",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 10,
-   "text": "Table 1 · Hand 10 · blinds 200/400 · Professor calls 400, Midas folds, Venus folds, River Rat checks, [flop: J♠ 8♥ 2♥], River Rat checks, Professor checks, [turn: J♠ 8♥ 2♥ 2♣], River Rat checks, Professor checks, [river: J♠ 8♥ 2♥ 2♣ 10♠], River Rat checks, Professor checks → River Rat wins 1000 with Two pair, 8s and 2s (A♣ 8♠)",
-   "pot": 1000
-  },
   {
    "table": 2,
    "handNo": 10,
@@ -569,6 +563,12 @@
    "handNo": 13,
    "text": "Table 1 · Hand 13 · blinds 400/800 · River Rat calls 800, Professor calls 800, Midas calls 400, Venus checks, [flop: A♥ K♠ K♣], Midas checks, Venus checks, River Rat checks, Professor checks, [turn: A♥ K♠ K♣ 10♠], Midas checks, Venus checks, River Rat checks, Professor checks, [river: A♥ K♠ K♣ 10♠ 3♣], Midas checks, Venus checks, River Rat checks, Professor checks → Midas wins 3200 with Two pair, Ks and 10s (9♥ 10♣)",
    "pot": 3200
+  },
+  {
+   "table": 2,
+   "handNo": 13,
+   "text": "Table 2 · Hand 13 · blinds 400/800 · Slick calls 800, Granite calls 400, Bulldog checks, [flop: J♥ 9♣ 3♠], Granite checks, Bulldog checks, Slick checks, [turn: J♥ 9♣ 3♠ A♥], Granite checks, Bulldog checks, Slick checks, [river: J♥ 9♣ 3♠ A♥ 7♣], Granite checks, Bulldog checks, Slick checks → Slick wins 2400 with Two pair, Js and 9s (J♠ 9♥)",
+   "pot": 2400
   }
  ],
  "finishes": [
