@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:29:05.245Z",
+ "updatedAt": "2026-11-19T12:29:16.835Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 2,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -131,7 +131,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 20025,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19875,
+   "stack": 20025,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19875,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19875,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Anchor",
   "lastActions": []
  },
  "recentHands": [
@@ -532,6 +532,12 @@
    "table": 1,
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Marble calls 50, Midas folds, Venus calls 50, River Rat calls 25, Professor checks, [flop: 3♠ A♥ 9♥], River Rat checks, Professor checks, Marble checks, Venus checks, [turn: 3♠ A♥ 9♥ J♦], River Rat checks, Professor checks, Marble checks, Venus checks, [river: 3♠ A♥ 9♥ J♦ 2♦], River Rat checks, Professor checks, Marble checks, Venus checks → River Rat wins 200 with Pair of 9s (9♣ 5♠)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Slick folds, Granite folds, Dice calls 25, Bulldog checks, [flop: J♥ A♣ 7♣], Dice checks, Bulldog checks, Copper checks, Compass checks, [turn: J♥ A♣ 7♣ 9♠], Dice checks, Bulldog checks, Copper checks, Compass checks, [river: J♥ A♣ 7♣ 9♠ 3♠], Dice checks, Bulldog checks, Copper checks, Compass checks → Bulldog wins 200 with Pair of As (A♥ 8♣)",
    "pot": 200
   }
  ],
