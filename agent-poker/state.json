@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:53:22.286Z",
+ "updatedAt": "2026-11-19T01:53:46.255Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 83,
+ "handsPlayed": 84,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 144404,
+     "stack": 141139,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 133705,
+     "stack": 141495,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 94615,
+     "stack": 91350,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 119758,
+     "stack": 119698,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19498,
+     "stack": 19378,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1080,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 29
+   "handsPlayed": 30
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19498,
+   "stack": 19378,
    "status": "seated",
    "reentered": false
   },
@@ -117,8 +117,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1080,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 144404,
+   "stack": 141139,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 133705,
+   "stack": 141495,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 94615,
+   "stack": 91350,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 119758,
+   "stack": 119698,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 30,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 25,
-   "text": "Table 2 · Hand 25 · blinds 30/60 · Copper calls 60, Slick folds, Bulldog checks, [flop: 3♣ 2♦ 5♦], Bulldog checks, Copper checks, [turn: 3♣ 2♦ 5♦ 7♦], Bulldog checks, Copper checks, [river: 3♣ 2♦ 5♦ 7♦ K♠], Bulldog checks, Copper checks → Copper wins 150 with K high (10♦ 8♣)",
-   "pot": 150
-  },
   {
    "table": 3,
    "handNo": 25,
@@ -404,6 +390,12 @@
    "handNo": 29,
    "text": "Table 1 · Hand 29 · blinds 30/60 · Bulldog calls 60, Midas folds, Quarry calls 60, Icebox folds, Slick folds, Pearl calls 60, Millstone folds, Copper folds, Marble checks, [flop: 5♥ 6♦ 6♥], Marble checks, Bulldog checks, Quarry checks, Pearl checks, [turn: 5♥ 6♦ 6♥ 4♦], Marble checks, Bulldog checks, Quarry checks, Pearl checks, [river: 5♥ 6♦ 6♥ 4♦ 6♣], Marble raises to 60, Bulldog raises to 260, Quarry calls 260, Pearl calls 260, Marble raises to 925, Bulldog raises to 2110, Quarry raises to 3295, Pearl calls 3035, Marble raises to 9230, Bulldog raises to 20150, Quarry calls 15785, Pearl calls 16855, Marble goes ALL-IN to 35128, Bulldog calls 10002, Pearl calls 14978 → Marble wins 119758 with Full house, 6s full of 5s (5♣ 8♠)",
    "pot": 119758
+  },
+  {
+   "table": 1,
+   "handNo": 30,
+   "text": "Table 1 · Hand 30 · blinds 30/60 · Icebox folds, Slick calls 60, Pearl calls 60, Millstone calls 60, Copper calls 60, Marble calls 30, Midas checks, [flop: 8♣ Q♣ 9♦], Marble checks, Midas checks, Slick checks, Pearl checks, Millstone checks, Copper checks, [turn: 8♣ Q♣ 9♦ Q♥], Marble checks, Midas checks, Slick checks, Pearl checks, Millstone raises to 60, Copper calls 60, Marble folds, Midas calls 60, Slick calls 60, Pearl calls 60, [river: 8♣ Q♣ 9♦ Q♥ J♣], Midas checks, Slick raises to 60, Pearl calls 60, Millstone raises to 530, Copper calls 530, Midas folds, Slick goes ALL-IN to 960, Pearl calls 900, Millstone raises to 3145, Copper calls 2615, Pearl calls 2185 → Millstone wins 11055 with Full house, Qs full of Js (J♥ Q♠)",
+   "pot": 11055
   }
  ],
  "finishes": [
@@ -557,6 +549,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 29,
+   "provisional": true
+  },
+  {
+   "name": "Slick",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 30,
    "provisional": true
   }
  ],
