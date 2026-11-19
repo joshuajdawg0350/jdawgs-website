@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:52:31.183Z",
+ "updatedAt": "2026-11-19T12:52:42.357Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 76,
+ "handsPlayed": 77,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 165908,
+     "stack": 178708,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 355592,
+     "stack": 342792,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 44
+   "handsPlayed": 45
   }
  ],
  "seats": [
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 165908,
+   "stack": 178708,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 355592,
+   "stack": 342792,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 45,
-  "stage": "preflop",
-  "board": [],
-  "pot": 38400,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 35,
-   "text": "Table 1 · Hand 35 · blinds 12800/25600 · Compass calls 25600, Slick folds, Marble checks, [flop: 9♥ 3♣ J♠], Marble checks, Compass checks, [turn: 9♥ 3♣ J♠ 4♥], Marble checks, Compass checks, [river: 9♥ 3♣ J♠ 4♥ 10♣], Marble checks, Compass checks → Compass wins 64000 with Pair of 10s (K♣ 10♥)",
-   "pot": 64000
-  },
   {
    "table": 1,
    "handNo": 36,
@@ -405,6 +391,12 @@
    "handNo": 44,
    "text": "Table 1 · Hand 44 · blinds 12800/25600 · Compass calls 12800, Marble checks, [flop: 5♣ 3♣ 4♠], Marble checks, Compass checks, [turn: 5♣ 3♣ 4♠ 8♥], Marble checks, Compass checks, [river: 5♣ 3♣ 4♠ 8♥ 4♦], Marble raises to 25600, Compass calls 25600 → Marble wins 102400 with Three of a kind, 4s (4♣ J♣)",
    "pot": 102400
+  },
+  {
+   "table": 1,
+   "handNo": 45,
+   "text": "Table 1 · Hand 45 · blinds 12800/25600 · Marble folds → Compass takes 38400 (everyone else folded)",
+   "pot": 38400
   }
  ],
  "finishes": [
