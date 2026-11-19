@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:29:16.835Z",
+ "updatedAt": "2026-11-19T12:29:30.126Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  50,
-  100
+  100,
+  200
  ],
- "level": 2,
- "handsPlayed": 5,
+ "level": 3,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20315,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19895,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 120050,
+     "stack": 119945,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19770,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20315,
    "status": "seated",
    "reentered": false
   },
@@ -372,7 +372,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19895,
    "status": "seated",
    "reentered": false
   },
@@ -462,7 +462,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19875,
+   "stack": 19770,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 120050,
+   "stack": 119945,
    "status": "seated",
    "reentered": false
   },
@@ -500,15 +500,7 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Anchor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -539,6 +531,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Slick folds, Granite folds, Dice calls 25, Bulldog checks, [flop: J♥ A♣ 7♣], Dice checks, Bulldog checks, Copper checks, Compass checks, [turn: J♥ A♣ 7♣ 9♠], Dice checks, Bulldog checks, Copper checks, Compass checks, [river: J♥ A♣ 7♣ 9♠ 3♠], Dice checks, Bulldog checks, Copper checks, Compass checks → Bulldog wins 200 with Pair of As (A♥ 8♣)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Anchor raises to 105, Deuce calls 105, Millstone folds, Icebox calls 80, Sixgun calls 55, [flop: 3♣ K♦ 5♠], Icebox checks, Sixgun checks, Anchor checks, Deuce checks, [turn: 3♣ K♦ 5♠ A♣], Icebox checks, Sixgun checks, Anchor checks, Deuce checks, [river: 3♣ K♦ 5♠ A♣ 8♥], Icebox checks, Sixgun checks, Anchor checks, Deuce checks → Deuce wins 420 with Two pair, As and 5s (A♥ 5♥)",
+   "pot": 420
   }
  ],
  "finishes": [
