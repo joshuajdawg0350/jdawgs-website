@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:36:17.246Z",
+ "updatedAt": "2026-11-19T12:36:29.789Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 29,
+ "handsPlayed": 30,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 140095,
+     "stack": 139695,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 77555,
+     "stack": 78555,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20205,
+     "stack": 20005,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 16235,
+     "stack": 15835,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   }
  ],
  "seats": [
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16235,
+   "stack": 15835,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 77555,
+   "stack": 78555,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20205,
+   "stack": 20005,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 140095,
+   "stack": 139695,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 10,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Sixgun",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 7,
-   "text": "Table 2 · Hand 7 · blinds 100/200 · Copper calls 200, Slick calls 200, Granite folds, Dice calls 100, Bulldog checks, [flop: 5♠ 8♦ 10♠], Dice checks, Bulldog checks, Copper checks, Slick checks, [turn: 5♠ 8♦ 10♠ K♥], Dice checks, Bulldog checks, Copper checks, Slick checks, [river: 5♠ 8♦ 10♠ K♥ K♣], Dice raises to 480, Bulldog raises to 1250, Copper calls 1250, Slick calls 1250, Dice raises to 4270, Bulldog calls 3020, Copper calls 3020, Slick calls 3020 → Bulldog wins 17880 with Two pair, Ks and 10s (6♦ 10♦)",
-   "pot": 17880
-  },
   {
    "table": 3,
    "handNo": 7,
@@ -569,6 +555,12 @@
    "handNo": 10,
    "text": "Table 2 · Hand 10 · blinds 200/400 · Bulldog calls 400, Slick calls 400, Granite folds, Dice checks, [flop: 10♠ 3♣ 10♣], Dice checks, Bulldog checks, Slick checks, [turn: 10♠ 3♣ 10♣ 2♣], Dice checks, Bulldog checks, Slick checks, [river: 10♠ 3♣ 10♣ 2♣ 4♣], Dice checks, Bulldog raises to 840, Slick raises to 2185, Dice calls 2185, Bulldog raises to 6150, Slick raises to 10115, Dice calls 7930, Bulldog raises to 26785, Slick calls 4095, Dice calls 6515 → Slick wins 44030 with Flush, K high (8♥ K♣); Bulldog wins 14995 with Flush, Q high (Q♣ 5♥)",
    "pot": 59025
+  },
+  {
+   "table": 3,
+   "handNo": 10,
+   "text": "Table 3 · Hand 10 · blinds 200/400 · Sixgun calls 400, Compass calls 400, Marble folds, Copper checks, [flop: J♠ 10♣ Q♠], Copper checks, Sixgun checks, Compass checks, [turn: J♠ 10♣ Q♠ 8♣], Copper checks, Sixgun checks, Compass checks, [river: J♠ 10♣ Q♠ 8♣ 6♠], Copper checks, Sixgun checks, Compass checks → Compass wins 1400 with Pair of 10s (10♥ 7♣)",
+   "pot": 1400
   }
  ],
  "finishes": [
