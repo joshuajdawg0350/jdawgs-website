@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:33:20.461Z",
+ "updatedAt": "2026-11-19T12:33:35.265Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   3200
  ],
  "level": 7,
- "handsPlayed": 18,
+ "handsPlayed": 19,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19597,
+     "stack": 19397,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121197,
+     "stack": 121097,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 21020,
+     "stack": 21320,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 2,
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19597,
+   "stack": 19397,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121197,
+   "stack": 121097,
    "status": "seated",
    "reentered": false
   },
@@ -480,7 +480,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21020,
+   "stack": 21320,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Midas",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 3,
-   "text": "Table 3 · Hand 3 · blinds 25/50 · Deuce calls 50, Millstone calls 50, Icebox calls 50, Sixgun calls 25, Anchor checks, [flop: 6♠ K♦ 5♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [turn: 6♠ K♦ 5♣ Q♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [river: 6♠ K♦ 5♣ Q♣ 10♥], Sixgun raises to 150, Anchor calls 150, Deuce folds, Millstone calls 150, Icebox raises to 355, Sixgun raises to 990, Anchor calls 840, Millstone calls 840, Icebox raises to 1855, Sixgun raises to 4900, Anchor folds, Millstone calls 3910, Icebox raises to 9040, Sixgun raises to 21090, Millstone calls 15000, Icebox calls 10805 → Sixgun wins 62075 with Straight, A high (A♠ J♠)",
-   "pot": 62075
-  },
   {
    "table": 1,
    "handNo": 4,
@@ -569,6 +563,12 @@
    "handNo": 6,
    "text": "Table 3 · Hand 6 · blinds 50/100 · Sixgun calls 100, Compass folds, Marble raises to 200, Deuce folds, Sixgun calls 100, [flop: 6♥ Q♦ K♠], Marble checks, Sixgun checks, [turn: 6♥ Q♦ K♠ K♣], Marble checks, Sixgun checks, [river: 6♥ Q♦ K♠ K♣ J♦], Marble checks, Sixgun raises to 300, Marble calls 300 → Sixgun wins 1100 with Straight, K high (10♥ 9♣)",
    "pot": 1100
+  },
+  {
+   "table": 1,
+   "handNo": 7,
+   "text": "Table 1 · Hand 7 · blinds 100/200 · Midas folds, Venus calls 200, River Rat folds, Professor checks, [flop: 4♠ 2♠ K♠], Professor raises to 240, Venus folds → Professor takes 740 (everyone else folded)",
+   "pot": 740
   }
  ],
  "finishes": [
