@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:34:10.802Z",
+ "updatedAt": "2026-11-19T12:34:23.116Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   6400
  ],
  "level": 8,
- "handsPlayed": 21,
+ "handsPlayed": 22,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20536,
+     "stack": 7478,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19397,
+     "stack": 6339,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121097,
+     "stack": 147653,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 21320,
+     "stack": 20880,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 2,
@@ -264,7 +264,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20536,
+   "stack": 7478,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19397,
+   "stack": 6339,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121097,
+   "stack": 147653,
    "status": "seated",
    "reentered": false
   },
@@ -480,7 +480,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21320,
+   "stack": 20880,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Venus",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 4,
-   "text": "Table 3 · Hand 4 · blinds 50/100 · Deuce calls 100, Sixgun calls 100, Anchor calls 50, Compass checks, [flop: Q♦ 5♥ 10♦], Anchor checks, Compass checks, Deuce checks, Sixgun checks, [turn: Q♦ 5♥ 10♦ J♠], Anchor checks, Compass checks, Deuce checks, Sixgun checks, [river: Q♦ 5♥ 10♦ J♠ 6♠], Anchor checks, Compass checks, Deuce checks, Sixgun checks → Compass wins 400 with Pair of Js (2♥ J♣)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 5,
@@ -569,6 +563,12 @@
    "handNo": 7,
    "text": "Table 3 · Hand 7 · blinds 100/200 · Compass calls 200, Marble calls 200, Sixgun checks, [flop: 2♣ 8♥ 2♥], Sixgun checks, Compass checks, Marble checks, [turn: 2♣ 8♥ 2♥ J♦], Sixgun checks, Compass checks, Marble checks, [river: 2♣ 8♥ 2♥ J♦ K♦], Sixgun checks, Compass checks, Marble checks → Marble wins 680 with Two pair, Ks and 2s (K♠ A♠)",
    "pot": 680
+  },
+  {
+   "table": 1,
+   "handNo": 8,
+   "text": "Table 1 · Hand 8 · blinds 100/200 · Venus calls 200, River Rat calls 200, Professor calls 100, Midas checks, [flop: 9♥ 5♦ 7♠], Professor raises to 240, Midas raises to 812, Venus calls 812, River Rat calls 812, Professor folds, [turn: 9♥ 5♦ 7♠ 10♦], Midas raises to 1912, Venus calls 1912, River Rat calls 1912, [river: 9♥ 5♦ 7♠ 10♦ 10♣], Midas raises to 5067, Venus calls 5067, River Rat raises to 10134, Midas calls 5067, Venus calls 5067 → River Rat wins 39614 with Full house, 9s full of 10s (9♦ 9♠)",
+   "pot": 39614
   }
  ],
  "finishes": [
