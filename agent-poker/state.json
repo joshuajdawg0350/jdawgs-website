@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:41:09.367Z",
+ "updatedAt": "2026-11-19T12:41:25.076Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,57 +12,17 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 47,
+ "handsPlayed": 48,
  "tables": [
   {
    "id": 1,
    "seats": [
     {
-     "name": "Midas",
+     "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 7778,
+     "stack": 236485,
      "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "CallBot",
-     "kind": "test",
-     "house": false,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Baseline",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Pearl",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Venus",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Shadow",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
      "reentered": false
     },
     {
@@ -74,19 +34,11 @@
      "reentered": false
     },
     {
-     "name": "Hammer",
+     "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
+     "stack": 43830,
+     "status": "seated",
      "reentered": false
     },
     {
@@ -96,18 +48,12 @@
      "stack": 34959,
      "status": "seated",
      "reentered": false
-    }
-   ],
-   "handsPlayed": 16
-  },
-  {
-   "id": 2,
-   "seats": [
+    },
     {
-     "name": "Slick",
+     "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 43830,
+     "stack": 20725,
      "status": "seated",
      "reentered": false
     },
@@ -120,133 +66,23 @@
      "reentered": false
     },
     {
-     "name": "Dice",
+     "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
+     "stack": 17605,
+     "status": "seated",
      "reentered": false
     },
     {
-     "name": "Bulldog",
+     "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20725,
+     "stack": 7778,
      "status": "seated",
      "reentered": false
     }
    ],
    "handsPlayed": 16
-  },
-  {
-   "id": 3,
-   "seats": [
-    {
-     "name": "Deuce",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Wildfire",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Millstone",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Icebox",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Velvet",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Tally",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Pickpocket",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Sixgun",
-     "kind": "house",
-     "house": true,
-     "stack": 71175,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Quarry",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Compass",
-     "kind": "house",
-     "house": true,
-     "stack": 164510,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Marble",
-     "kind": "house",
-     "house": true,
-     "stack": 18405,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Copper",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    }
-   ],
-   "handsPlayed": 15
   }
  ],
  "seats": [
@@ -281,7 +117,7 @@
    "name": "Slick",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 43830,
    "status": "seated",
    "reentered": false
@@ -308,7 +144,7 @@
    "name": "Granite",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 20505,
    "status": "seated",
    "reentered": false
@@ -362,7 +198,7 @@
    "name": "Bulldog",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 20725,
    "status": "seated",
    "reentered": false
@@ -416,8 +252,8 @@
    "name": "Compass",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 164510,
+   "table": 1,
+   "stack": 236485,
    "status": "seated",
    "reentered": false
   },
@@ -443,8 +279,8 @@
    "name": "Marble",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 18405,
+   "table": 1,
+   "stack": 17605,
    "status": "seated",
    "reentered": false
   },
@@ -471,8 +307,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 71175,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -500,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 16,
-  "stage": "preflop",
-  "board": [],
-  "pot": 2400,
-  "toAct": "Compass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 13,
-   "text": "Table 2 · Hand 13 · blinds 400/800 · Slick calls 800, Granite calls 400, Bulldog checks, [flop: J♥ 9♣ 3♠], Granite checks, Bulldog checks, Slick checks, [turn: J♥ 9♣ 3♠ A♥], Granite checks, Bulldog checks, Slick checks, [river: J♥ 9♣ 3♠ A♥ 7♣], Granite checks, Bulldog checks, Slick checks → Slick wins 2400 with Two pair, Js and 9s (J♠ 9♥)",
-   "pot": 2400
-  },
   {
    "table": 3,
    "handNo": 13,
@@ -569,6 +391,12 @@
    "handNo": 16,
    "text": "Table 2 · Hand 16 · blinds 800/1600 · Slick folds, Granite calls 800, Bulldog checks, [flop: 7♥ 6♠ 3♥], Granite checks, Bulldog checks, [turn: 7♥ 6♠ 3♥ 8♦], Granite checks, Bulldog checks, [river: 7♥ 6♠ 3♥ 8♦ 9♣], Granite checks, Bulldog checks → Granite wins 3200 with A high (A♥ J♥)",
    "pot": 3200
+  },
+  {
+   "table": 3,
+   "handNo": 16,
+   "text": "Table 3 · Hand 16 · blinds 800/1600 · Compass raises to 4415, Marble folds, Sixgun calls 2815, [flop: 2♦ J♥ 9♠], Sixgun checks, Compass raises to 1760, Sixgun calls 1760, [turn: 2♦ J♥ 9♠ A♣], Sixgun raises to 7890, Compass raises to 16570, Sixgun raises to 39135, Compass raises to 63955, Sixgun goes ALL-IN to 65000, Compass raises to 92300, [river: 2♦ J♥ 9♠ A♣ 5♠], Compass raises to 1760 → Compass wins 172210 with Three of a kind, Js (J♦ J♣)",
+   "pot": 172210
   }
  ],
  "finishes": [
@@ -713,6 +541,14 @@
    "place": null,
    "kind": "house",
    "table": 1,
+   "handNo": 16,
+   "provisional": true
+  },
+  {
+   "name": "Sixgun",
+   "place": null,
+   "kind": "house",
+   "table": 3,
    "handNo": 16,
    "provisional": true
   }
