@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:27:49.176Z",
+ "updatedAt": "2026-11-19T01:28:12.180Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  30,
-  60
+  40,
+  80
  ],
- "level": 2,
- "handsPlayed": 39,
+ "level": 3,
+ "handsPlayed": 40,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113615,
+     "stack": 113565,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30625,
+     "stack": 30750,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35675,
+     "stack": 35625,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19875,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113615,
+   "stack": 113565,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30625,
+   "stack": 30750,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35675,
+   "stack": 35625,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 14,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 10,
-   "text": "Table 3 · Hand 10 · blinds 25/50 · Pickpocket calls 50, Deuce calls 50, Millstone raises to 100, Icebox folds, Tally calls 50, Pickpocket calls 50, Deuce calls 50, [flop: 4♥ J♦ 7♣], Tally checks, Pickpocket raises to 255, Deuce folds, Millstone calls 255, Tally folds, [turn: 4♥ J♦ 7♣ 10♣], Pickpocket raises to 560, Millstone calls 560, [river: 4♥ J♦ 7♣ 10♣ 10♠], Pickpocket raises to 1235, Millstone calls 1235 → Millstone wins 4525 with Two pair, 10s and 8s (8♦ 8♠)",
-   "pot": 4525
-  },
   {
    "table": 1,
    "handNo": 11,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 13,
    "text": "Table 3 · Hand 13 · blinds 25/50 · Icebox calls 50, Quarry calls 50, Marble folds, Millstone checks, [flop: 3♣ 6♠ 2♣], Millstone checks, Icebox checks, Quarry checks, [turn: 3♣ 6♠ 2♣ 9♣], Millstone checks, Icebox checks, Quarry checks, [river: 3♣ 6♠ 2♣ 9♣ J♥], Millstone checks, Icebox checks, Quarry checks → Millstone wins 175 with Pair of Js (4♥ J♠)",
+   "pot": 175
+  },
+  {
+   "table": 1,
+   "handNo": 14,
+   "text": "Table 1 · Hand 14 · blinds 25/50 · Shadow calls 50, Professor calls 50, Midas folds, Pearl checks, [flop: 4♣ 9♠ 8♦], Pearl checks, Shadow checks, Professor checks, [turn: 4♣ 9♠ 8♦ 10♥], Pearl checks, Shadow checks, Professor checks, [river: 4♣ 9♠ 8♦ 10♥ A♦], Pearl checks, Shadow checks, Professor checks → Shadow wins 175 with Pair of 10s (10♣ 2♦)",
    "pot": 175
   }
  ],
