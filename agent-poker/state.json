@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:46:32.081Z",
+ "updatedAt": "2026-11-19T01:47:06.081Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 74,
+ "handsPlayed": 75,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 134765,
+     "stack": 134645,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 6370,
+     "stack": 6610,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 32358,
+     "stack": 32238,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 24
+   "handsPlayed": 25
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 134765,
+   "stack": 134645,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 6370,
+   "stack": 6610,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 32358,
+   "stack": 32238,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 25,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 22,
-   "text": "Table 2 · Hand 22 · blinds 30/60 · Copper calls 60, Slick folds, Bulldog checks, [flop: 9♣ J♠ 3♦], Bulldog checks, Copper checks, [turn: 9♣ J♠ 3♦ 4♥], Bulldog checks, Copper checks, [river: 9♣ J♠ 3♦ 4♥ Q♦], Bulldog checks, Copper checks → Copper wins 150 with Pair of 9s (9♠ 5♠)",
-   "pot": 150
-  },
   {
    "table": 3,
    "handNo": 22,
@@ -552,6 +538,12 @@
    "handNo": 25,
    "text": "Table 2 · Hand 25 · blinds 30/60 · Copper calls 60, Slick folds, Bulldog checks, [flop: 3♣ 2♦ 5♦], Bulldog checks, Copper checks, [turn: 3♣ 2♦ 5♦ 7♦], Bulldog checks, Copper checks, [river: 3♣ 2♦ 5♦ 7♦ K♠], Bulldog checks, Copper checks → Copper wins 150 with K high (10♦ 8♣)",
    "pot": 150
+  },
+  {
+   "table": 3,
+   "handNo": 25,
+   "text": "Table 3 · Hand 25 · blinds 30/60 · Icebox calls 60, Quarry folds, Marble calls 30, Millstone checks, [flop: A♠ K♥ 2♥], Marble checks, Millstone checks, Icebox checks, [turn: A♠ K♥ 2♥ 10♠], Marble checks, Millstone checks, Icebox checks, [river: A♠ K♥ 2♥ 10♠ J♦], Marble checks, Millstone checks, Icebox raises to 60, Marble calls 60, Millstone calls 60 → Icebox wins 360 with Straight, A high (8♠ Q♠)",
+   "pot": 360
   }
  ],
  "finishes": [
