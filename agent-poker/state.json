@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:39:26.852Z",
+ "updatedAt": "2026-11-19T01:39:49.559Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 61,
+ "handsPlayed": 62,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1220,
+     "stack": 1250,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 95305,
+     "stack": 95275,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 20
+   "handsPlayed": 21
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1220,
+   "stack": 1250,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 95305,
+   "stack": 95275,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 21,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 18,
-   "text": "Table 1 · Hand 18 · blinds 25/50 · Shadow calls 50, Professor calls 50, Midas calls 25, Pearl raises to 100, Shadow calls 50, Professor folds, Midas calls 50, [flop: 9♠ 3♠ 7♥], Midas checks, Pearl checks, Shadow checks, [turn: 9♠ 3♠ 7♥ 2♥], Midas checks, Pearl checks, Shadow checks, [river: 9♠ 3♠ 7♥ 2♥ 5♠], Midas checks, Pearl checks, Shadow raises to 55, Midas folds, Pearl calls 55 → Shadow wins 460 with Three of a kind, 2s (2♣ 2♦)",
-   "pot": 460
-  },
   {
    "table": 2,
    "handNo": 18,
@@ -552,6 +546,12 @@
    "handNo": 21,
    "text": "Table 1 · Hand 21 · blinds 30/60 · Pearl calls 60, Shadow calls 60, Professor calls 30, Midas checks, [flop: 5♠ 7♣ Q♥], Professor checks, Midas checks, Pearl checks, Shadow checks, [turn: 5♠ 7♣ Q♥ A♥], Professor checks, Midas checks, Pearl checks, Shadow checks, [river: 5♠ 7♣ Q♥ A♥ 3♠], Professor checks, Midas checks, Pearl checks, Shadow checks → Professor wins 240 with Pair of Qs (6♥ Q♣)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 21,
+   "text": "Table 2 · Hand 21 · blinds 30/60 · Bulldog folds, Copper folds → Slick takes 90 (everyone else folded)",
+   "pot": 90
   }
  ],
  "finishes": [
