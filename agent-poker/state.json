@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:23:28.373Z",
+ "updatedAt": "2026-11-19T01:23:54.967Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 31,
+ "handsPlayed": 32,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1350,
+     "stack": 1300,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 117115,
+     "stack": 117090,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 21480,
+     "stack": 21430,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19935,
+     "stack": 20060,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1350,
+   "stack": 1300,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 117115,
+   "stack": 117090,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21480,
+   "stack": 21430,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19935,
+   "stack": 20060,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Quarry",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 8,
-   "text": "Table 1 · Hand 8 · blinds 25/50 · Pearl calls 50, Shadow calls 50, Hammer calls 50, Ozone calls 50, Anchor calls 25, Midas checks, [flop: 5♠ 8♠ 9♦], Anchor checks, Midas checks, Pearl checks, Shadow checks, Hammer checks, Ozone checks, [turn: 5♠ 8♠ 9♦ 8♣], Anchor checks, Midas checks, Pearl checks, Shadow checks, Hammer checks, Ozone checks, [river: 5♠ 8♠ 9♦ 8♣ 8♥], Anchor checks, Midas checks, Pearl raises to 50, Shadow calls 50, Hammer raises to 115, Ozone raises to 200, Anchor calls 200, Midas folds, Pearl raises to 295, Shadow raises to 400, Hammer raises to 535, Ozone raises to 710, Anchor calls 510, Pearl raises to 905, Shadow raises to 1120, Hammer raises to 1400, Ozone calls 470, Anchor calls 690, Pearl raises to 1715, Shadow raises to 2060, Hammer raises to 2510, Anchor calls 1110, Pearl raises to 3015, Shadow calls 955, Hammer calls 410, Anchor calls 505 → Pearl wins 13445 with Full house, 8s full of 9s (10♠ 9♣)",
-   "pot": 13445
-  },
   {
    "table": 2,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 11,
    "text": "Table 1 · Hand 11 · blinds 25/50 · Anchor calls 50, Professor calls 50, Midas folds, Pearl calls 25, Shadow checks, [flop: 8♥ 9♠ 7♦], Pearl checks, Shadow checks, Anchor checks, Professor checks, [turn: 8♥ 9♠ 7♦ 7♥], Pearl checks, Shadow checks, Anchor checks, Professor checks, [river: 8♥ 9♠ 7♦ 7♥ 10♦], Pearl checks, Shadow raises to 55, Anchor calls 55, Professor raises to 240, Pearl calls 240, Shadow raises to 715, Anchor calls 660, Professor raises to 1980, Pearl calls 1740, Shadow raises to 5335, Anchor calls 4620, Professor raises to 14235, Pearl calls 12255, Shadow goes ALL-IN to 16220, Anchor calls 6855, Professor goes ALL-IN to 18745, Pearl calls 4510 → Shadow wins 30525 with Straight, J high (J♥ 3♦); Professor wins 35575 with Straight, J high (2♦ J♠)",
    "pot": 66100
+  },
+  {
+   "table": 2,
+   "handNo": 11,
+   "text": "Table 2 · Hand 11 · blinds 25/50 · Quarry calls 50, Slick calls 50, Granite folds, Bulldog folds, Copper folds, Marble checks, [flop: Q♥ 6♣ 9♠], Marble checks, Quarry checks, Slick checks, [turn: Q♥ 6♣ 9♠ 5♦], Marble checks, Quarry checks, Slick checks, [river: Q♥ 6♣ 9♠ 5♦ 6♦], Marble checks, Quarry checks, Slick checks → Quarry wins 175 with Two pair, Qs and 6s (Q♦ 8♦)",
+   "pot": 175
   }
  ],
  "finishes": [
