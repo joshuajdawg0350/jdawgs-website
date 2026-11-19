@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:37:25.753Z",
+ "updatedAt": "2026-11-19T01:37:49.942Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 57,
+ "handsPlayed": 58,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19700,
+     "stack": 19708,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113470,
+     "stack": 113479,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30920,
+     "stack": 30895,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35700,
+     "stack": 35708,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 19
+   "handsPlayed": 20
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19700,
+   "stack": 19708,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113470,
+   "stack": 113479,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30920,
+   "stack": 30895,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35700,
+   "stack": 35708,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 20,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 16,
-   "text": "Table 3 · Hand 16 · blinds 25/50 · Millstone calls 50, Icebox calls 50, Quarry calls 25, Marble checks, [flop: 6♠ Q♠ 8♣], Quarry checks, Marble checks, Millstone checks, Icebox checks, [turn: 6♠ Q♠ 8♣ 3♠], Quarry checks, Marble checks, Millstone checks, Icebox checks, [river: 6♠ Q♠ 8♣ 3♠ 10♦], Quarry checks, Marble checks, Millstone checks, Icebox checks → Quarry wins 200 with Pair of 8s (7♠ 8♥)",
-   "pot": 200
-  },
   {
    "table": 1,
    "handNo": 17,
@@ -552,6 +546,12 @@
    "handNo": 19,
    "text": "Table 3 · Hand 19 · blinds 25/50 · Marble calls 50, Millstone calls 50, Icebox calls 25, Quarry checks, [flop: K♥ A♣ J♦], Icebox checks, Quarry raises to 60, Marble folds, Millstone calls 60, Icebox calls 60, [turn: K♥ A♣ J♦ 5♣], Icebox checks, Quarry checks, Millstone raises to 50, Icebox folds, Quarry folds → Millstone takes 430 (everyone else folded)",
    "pot": 430
+  },
+  {
+   "table": 1,
+   "handNo": 20,
+   "text": "Table 1 · Hand 20 · blinds 25/50 · Midas calls 50, Pearl calls 50, Shadow folds, Professor checks, [flop: 2♠ 5♦ A♠], Professor raises to 55, Midas calls 55, Pearl calls 55, [turn: 2♠ 5♦ A♠ 3♠], Professor raises to 55, Midas calls 55, Pearl raises to 115, Professor raises to 180, Midas calls 125, Pearl raises to 255, Professor raises to 340, Midas calls 160, Pearl raises to 435, Professor raises to 540, Midas calls 200, Pearl raises to 660, Professor raises to 790, Midas calls 250, Pearl raises to 935, Professor raises to 1095, Midas calls 305, Pearl raises to 1275, Professor raises to 1475, Midas calls 380, Pearl raises to 1700, Professor raises to 1950, Midas calls 475, Pearl raises to 2230, Professor raises to 2540, Midas calls 590, Pearl raises to 2885, Professor raises to 3265, Midas calls 725, Pearl raises to 3690, Professor raises to 4160, Midas calls 895, Pearl raises to 4685, Professor raises to 5265, Midas calls 1105, Pearl raises to 5915, Professor raises to 6630, Midas calls 1365, Pearl raises to 7430, Professor raises to 8310, Midas calls 1680, Pearl raises to 9295, Professor raises to 10380, Midas calls 2070, Pearl raises to 11595, Professor raises to 12930, Midas calls 2550, Pearl raises to 14425, Professor raises to 16070, Midas calls 3140, Pearl raises to 17910, Professor raises to 19935, Midas calls 3525, Pearl raises to 22205, Professor raises to 24700, Pearl raises to 27495, Professor raises to 30570, Pearl raises to 34015, Professor goes ALL-IN to 35595, Pearl raises to 39455, [river: 2♠ 5♦ A♠ 3♠ 4♥], Pearl raises to 50 → Midas wins 19708 with Straight, 5 high (Q♦ Q♥); Pearl wins 39619 with Straight, 5 high (4♠ 4♣); Professor wins 35708 with Straight, 5 high (5♠ 5♥)",
+   "pot": 95035
   }
  ],
  "finishes": [
