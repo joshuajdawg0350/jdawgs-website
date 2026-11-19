@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:04:12.302Z",
+ "updatedAt": "2026-11-19T01:04:38.686Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20225,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20225,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
@@ -498,6 +498,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow folds, River Rat calls 50, Hammer raises to 115, Ozone calls 115, Anchor calls 115, Midas folds, Baseline calls 90, Pearl calls 65, Venus folds, River Rat calls 65, [flop: 6♦ 8♦ Q♥], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [turn: 6♦ 8♦ Q♥ K♥], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [river: 6♦ 8♦ Q♥ K♥ 4♠], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks → Ozone wins 740 with Pair of Ks (10♦ K♦)",
    "pot": 740
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry folds, Slick folds, Granite folds, Dice checks, [flop: 5♥ 7♠ A♥], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, [turn: 5♥ 7♠ A♥ K♠], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, [river: 5♥ 7♠ A♥ K♠ 5♦], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks → Bulldog wins 275 with Two pair, As and 5s (10♦ A♣)",
+   "pot": 275
   }
  ],
  "finishes": [],
