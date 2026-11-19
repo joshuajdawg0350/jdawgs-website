@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:52:35.749Z",
+ "updatedAt": "2026-11-19T01:53:01.048Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 82,
+ "handsPlayed": 83,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 179592,
+     "stack": 144404,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 94645,
+     "stack": 94615,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 35188,
+     "stack": 119758,
      "status": "seated",
      "reentered": false
     },
@@ -53,8 +53,8 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 30212,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -69,8 +69,8 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19140,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 28
+   "handsPlayed": 29
   }
  ],
  "seats": [
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 179592,
+   "stack": 144404,
    "status": "seated",
    "reentered": false
   },
@@ -198,8 +198,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30212,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 94645,
+   "stack": 94615,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35188,
+   "stack": 119758,
    "status": "seated",
    "reentered": false
   },
@@ -324,8 +324,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19140,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   }
  ],
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 29,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Bulldog",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 25,
-   "text": "Table 1 · Hand 25 · blinds 30/60 · Pearl calls 60, Shadow calls 60, Professor folds, Midas checks, [flop: 2♦ J♠ A♥], Midas checks, Pearl checks, Shadow checks, [turn: 2♦ J♠ A♥ 8♦], Midas checks, Pearl checks, Shadow checks, [river: 2♦ J♠ A♥ 8♦ 7♥], Midas checks, Pearl checks, Shadow checks → Pearl wins 210 with Pair of Js (J♦ K♥)",
-   "pot": 210
-  },
   {
    "table": 2,
    "handNo": 25,
@@ -404,6 +390,12 @@
    "handNo": 28,
    "text": "Table 1 · Hand 28 · blinds 30/60 · Marble calls 60, Bulldog calls 60, Midas folds, Quarry folds, Icebox folds, Slick folds, Pearl calls 60, Millstone calls 30, Copper checks, [flop: 6♠ 2♥ Q♥], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [turn: 6♠ 2♥ Q♥ 10♣], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [river: 6♠ 2♥ Q♥ 10♣ 2♣], Millstone raises to 60, Copper calls 60, Marble calls 60, Bulldog raises to 350, Pearl calls 350, Millstone raises to 640, Copper calls 580, Marble calls 580, Bulldog calls 290, Pearl calls 290 → Marble wins 3500 with Three of a kind, 2s (2♠ A♦)",
    "pot": 3500
+  },
+  {
+   "table": 1,
+   "handNo": 29,
+   "text": "Table 1 · Hand 29 · blinds 30/60 · Bulldog calls 60, Midas folds, Quarry calls 60, Icebox folds, Slick folds, Pearl calls 60, Millstone folds, Copper folds, Marble checks, [flop: 5♥ 6♦ 6♥], Marble checks, Bulldog checks, Quarry checks, Pearl checks, [turn: 5♥ 6♦ 6♥ 4♦], Marble checks, Bulldog checks, Quarry checks, Pearl checks, [river: 5♥ 6♦ 6♥ 4♦ 6♣], Marble raises to 60, Bulldog raises to 260, Quarry calls 260, Pearl calls 260, Marble raises to 925, Bulldog raises to 2110, Quarry raises to 3295, Pearl calls 3035, Marble raises to 9230, Bulldog raises to 20150, Quarry calls 15785, Pearl calls 16855, Marble goes ALL-IN to 35128, Bulldog calls 10002, Pearl calls 14978 → Marble wins 119758 with Full house, 6s full of 5s (5♣ 8♠)",
+   "pot": 119758
   }
  ],
  "finishes": [
@@ -541,6 +533,22 @@
    "kind": "house",
    "table": 1,
    "handNo": 27,
+   "provisional": true
+  },
+  {
+   "name": "Bulldog",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 29,
+   "provisional": true
+  },
+  {
+   "name": "Quarry",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 29,
    "provisional": true
   }
  ],
