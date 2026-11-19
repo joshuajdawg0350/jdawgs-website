@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:22:48.743Z",
+ "updatedAt": "2026-11-19T12:24:14.807Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -503,14 +503,15 @@
  "currentHand": {
   "table": 1,
   "handNo": 1,
-  "stage": "turn",
+  "stage": "river",
   "board": [
    "2♠",
    "4♦",
    "2♣",
-   "6♥"
+   "6♥",
+   "2♦"
   ],
-  "pot": 350,
+  "pot": 1365,
   "toAct": "CallBot",
   "lastActions": [
    "Venus folds",
@@ -534,7 +535,14 @@
    "Shadow checks",
    "River Rat checks",
    "Hammer checks",
-   "Ozone checks"
+   "Ozone checks",
+   "CallBot checks",
+   "Baseline raises to 55",
+   "Pearl calls 55",
+   "Shadow raises to 115",
+   "River Rat raises to 175",
+   "Hammer raises to 255",
+   "Ozone raises to 360"
   ]
  },
  "recentHands": [],
