@@ -873,16 +873,42 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
-      /* Fields start EMPTY on every open — no prefilled text and no
-         browser-restored leftovers from an earlier visit (owner's order,
-         2026-11-18). Runs before every generator script below. */
+      /* COMPLETELY CLEAN SLATE on every open — no prefilled text and no
+         browser-restored leftovers from an earlier visit, ever (owner's
+         order, 2026-11-18; hardened 2026-11-19 after restored values kept
+         surviving on his phone). Some browsers re-inject saved form values
+         AFTER the page's own load handlers run (tab/session restore,
+         home-screen app resume), so the sweep repeats on a short timer.
+         The first genuine interaction — a tap, a key, a paste — ends the
+         sweeps for good, so the page can never erase something the user
+         just typed. Runs before every generator script below. */
       (function () {
-        function clearFields() {
+        var done = false;
+        function sweep() {
+          if (done) return;
           var fields = document.querySelectorAll('input[type="text"], input[type="search"], input:not([type]), textarea');
           for (var i = 0; i < fields.length; i++) fields[i].value = "";
+          /* leftover results from a restored earlier session go too */
+          var blocks = document.getElementById("sOutBlocks");
+          if (blocks) blocks.innerHTML = "";
+          var infer = document.getElementById("sInfer");
+          if (infer) infer.textContent = "";
+          var note = document.getElementById("sNote");
+          if (note) note.textContent = "";
+          var wrap = document.getElementById("sOutWrap");
+          if (wrap) wrap.hidden = true;
+          var res = document.getElementById("sResult");
+          if (res) res.hidden = true;
         }
-        clearFields();
-        window.addEventListener("pageshow", clearFields);
+        function stop() { done = true; }
+        ["pointerdown", "keydown", "paste", "input"].forEach(function (ev) {
+          document.addEventListener(ev, stop, true);
+        });
+        sweep();
+        document.addEventListener("DOMContentLoaded", sweep);
+        window.addEventListener("load", sweep);
+        window.addEventListener("pageshow", sweep);
+        [250, 750, 1500, 3000].forEach(function (ms) { setTimeout(sweep, ms); });
       })();
     </script>
 
