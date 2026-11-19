@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:26:41.042Z",
+ "updatedAt": "2026-11-19T01:27:03.867Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 37,
+ "handsPlayed": 38,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1250,
+     "stack": 1200,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 80,
+     "stack": 55,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 30347,
+     "stack": 30422,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 12
+   "handsPlayed": 13
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1250,
+   "stack": 1200,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 80,
+   "stack": 55,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 30347,
+   "stack": 30422,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 13,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 10,
-   "text": "Table 1 · Hand 10 · blinds 25/50 · Shadow folds, Anchor calls 50, Professor raises to 105, Midas folds, Pearl calls 55, Anchor calls 55, [flop: J♥ 9♥ 7♣], Pearl checks, Anchor checks, Professor checks, [turn: J♥ 9♥ 7♣ 5♣], Pearl checks, Anchor checks, Professor checks, [river: J♥ 9♥ 7♣ 5♣ 2♦], Pearl checks, Anchor checks, Professor checks → Anchor wins 340 with Two pair, Js and 7s (7♠ J♠)",
-   "pot": 340
-  },
   {
    "table": 2,
    "handNo": 10,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 13,
    "text": "Table 1 · Hand 13 · blinds 25/50 · Pearl calls 50, Shadow calls 50, Professor calls 25, Midas checks, [flop: 9♥ K♠ Q♠], Professor checks, Midas checks, Pearl checks, Shadow checks, [turn: 9♥ K♠ Q♠ 5♠], Professor checks, Midas checks, Pearl checks, Shadow checks, [river: 9♥ K♠ Q♠ 5♠ 8♥], Professor checks, Midas checks, Pearl checks, Shadow checks → Professor wins 200 with Pair of Qs (Q♦ J♣)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 13,
+   "text": "Table 2 · Hand 13 · blinds 25/50 · Copper folds, Slick calls 50, Granite folds, Bulldog checks, [flop: 7♦ 5♠ A♦], Bulldog checks, Slick checks, [turn: 7♦ 5♠ A♦ Q♥], Bulldog raises to 75, Slick folds → Bulldog takes 200 (everyone else folded)",
    "pot": 200
   }
  ],
