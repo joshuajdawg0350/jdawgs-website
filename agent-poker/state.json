@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:49:19.872Z",
+ "updatedAt": "2026-11-19T01:49:48.944Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 78,
+ "handsPlayed": 79,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113479,
+     "stack": 180292,
      "status": "seated",
      "reentered": false
     },
@@ -53,8 +53,8 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30835,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 35978,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 26
+   "handsPlayed": 27
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113479,
+   "stack": 180292,
    "status": "seated",
    "reentered": false
   },
@@ -337,8 +337,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30835,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -463,8 +463,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 35978,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 27,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Professor",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 23,
-   "text": "Table 3 · Hand 23 · blinds 30/60 · Marble calls 60, Millstone calls 60, Icebox folds, Quarry checks, [flop: A♣ J♠ 4♥], Quarry checks, Marble checks, Millstone checks, [turn: A♣ J♠ 4♥ J♥], Quarry checks, Marble checks, Millstone checks, [river: A♣ J♠ 4♥ J♥ 3♣], Quarry checks, Marble checks, Millstone checks → Marble wins 210 with Two pair, As and Js (A♠ 7♦)",
-   "pot": 210
-  },
   {
    "table": 1,
    "handNo": 24,
@@ -552,6 +546,12 @@
    "handNo": 26,
    "text": "Table 3 · Hand 26 · blinds 30/60 · Quarry calls 60, Marble calls 60, Millstone calls 30, Icebox checks, [flop: 10♦ Q♥ 3♦], Millstone checks, Icebox checks, Quarry checks, Marble checks, [turn: 10♦ Q♥ 3♦ 4♦], Millstone checks, Icebox checks, Quarry checks, Marble checks, [river: 10♦ Q♥ 3♦ 4♦ 2♦], Millstone checks, Icebox raises to 60, Quarry calls 60, Marble calls 60, Millstone calls 60 → Icebox wins 480 with Flush, 10 high (6♦ 10♣)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 27,
+   "text": "Table 1 · Hand 27 · blinds 30/60 · Professor raises to 125, Midas folds, Pearl calls 95, Shadow raises to 195, Professor raises to 460, Pearl calls 335, Shadow raises to 750, Professor raises to 1750, Pearl calls 1290, Shadow raises to 2850, Professor raises to 6660, Pearl calls 4910, Shadow raises to 10850, Professor raises to 25350, Pearl calls 18690, Shadow goes ALL-IN to 30835, Professor goes ALL-IN to 35978, Pearl calls 10628, [flop: 8♣ 2♦ K♠], Pearl checks, [turn: 8♣ 2♦ K♠ 4♦], Pearl checks, [river: 8♣ 2♦ K♠ 4♦ 7♣], Pearl checks → Pearl wins 102791 with Pair of Ks (K♦ Q♣)",
+   "pot": 102791
   }
  ],
  "finishes": [
@@ -673,6 +673,22 @@
    "kind": "house",
    "table": 2,
    "handNo": 17,
+   "provisional": true
+  },
+  {
+   "name": "Professor",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 27,
+   "provisional": true
+  },
+  {
+   "name": "Shadow",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 27,
    "provisional": true
   }
  ],
