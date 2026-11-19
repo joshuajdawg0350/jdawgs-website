@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:19:55.151Z",
+ "updatedAt": "2026-11-19T12:20:06.887Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -505,9 +505,16 @@
   "handNo": 1,
   "stage": "preflop",
   "board": [],
-  "pot": 75,
-  "toAct": "Venus",
-  "lastActions": []
+  "pot": 275,
+  "toAct": "CallBot",
+  "lastActions": [
+   "Venus folds",
+   "Shadow calls 50",
+   "River Rat calls 50",
+   "Hammer calls 50",
+   "Ozone calls 50",
+   "Midas folds"
+  ]
  },
  "recentHands": [],
  "finishes": [],
