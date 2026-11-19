@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:32:22.510Z",
+ "updatedAt": "2026-11-19T12:32:41.895Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 6,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19807,
+     "stack": 19597,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121407,
+     "stack": 121197,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 20600,
+     "stack": 21020,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19807,
+   "stack": 19597,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121407,
+   "stack": 121197,
    "status": "seated",
    "reentered": false
   },
@@ -480,7 +480,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20600,
+   "stack": 21020,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Professor",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Anchor raises to 105, Deuce calls 105, Millstone folds, Icebox calls 80, Sixgun calls 55, [flop: 3♣ K♦ 5♠], Icebox checks, Sixgun checks, Anchor checks, Deuce checks, [turn: 3♣ K♦ 5♠ A♣], Icebox checks, Sixgun checks, Anchor checks, Deuce checks, [river: 3♣ K♦ 5♠ A♣ 8♥], Icebox checks, Sixgun checks, Anchor checks, Deuce checks → Deuce wins 420 with Two pair, As and 5s (A♥ 5♥)",
-   "pot": 420
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -569,6 +563,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 50/100 · Sixgun calls 100, Anchor calls 100, Compass calls 50, Deuce checks, [flop: 5♦ K♠ Q♠], Compass checks, Deuce checks, Sixgun checks, Anchor checks, [turn: 5♦ K♠ Q♠ J♠], Compass raises to 110, Deuce calls 110, Sixgun calls 110, Anchor calls 110, [river: 5♦ K♠ Q♠ J♠ K♣], Compass raises to 110, Deuce raises to 255, Sixgun raises to 980, Anchor calls 980, Compass raises to 2880, Deuce raises to 5350, Sixgun raises to 11970, Anchor calls 10990, Compass goes ALL-IN to 19865, Deuce goes ALL-IN to 19955, Sixgun raises to 58715, Anchor calls 6450 → Deuce wins 180 with Three of a kind, Ks (A♠ K♦); Sixgun wins 38760 with Two pair, Ks and Qs (Q♦ 3♦); Compass wins 78855 with Straight, A high (A♣ 10♥)",
    "pot": 117795
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 50/100 · Professor calls 100, Midas folds, Venus calls 50, River Rat checks, [flop: 10♥ 10♦ 4♦], Venus checks, River Rat checks, Professor checks, [turn: 10♥ 10♦ 4♦ 5♥], Venus checks, River Rat checks, Professor checks, [river: 10♥ 10♦ 4♦ 5♥ 8♦], Venus checks, River Rat checks, Professor raises to 110, Venus calls 110, River Rat calls 110 → Professor wins 630 with Two pair, 10s and 5s (Q♦ 5♠)",
+   "pot": 630
   }
  ],
  "finishes": [
