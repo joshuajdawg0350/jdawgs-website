@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:38:11.013Z",
+ "updatedAt": "2026-11-19T12:38:22.628Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -500,7 +500,15 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 13,
+  "stage": "preflop",
+  "board": [],
+  "pot": 1200,
+  "toAct": "River Rat",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 3,
