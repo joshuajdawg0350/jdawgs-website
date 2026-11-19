@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:05:31.808Z",
+ "updatedAt": "2026-11-19T01:05:58.522Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19770,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19755,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19640,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 20785,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19640,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19770,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19755,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19640,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 20785,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19640,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -510,6 +510,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 7♥ 10♦ 9♥], Wildfire raises to 60, Millstone calls 60, Velvet calls 60, Tally calls 60, Pickpocket folds, Deuce calls 60, [turn: 7♥ 10♦ 9♥ 2♠], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Deuce checks, [river: 7♥ 10♦ 9♥ 2♠ 3♠], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Deuce checks → Tally wins 600 with Two pair, 10s and 2s (2♥ 10♣)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, River Rat calls 50, Hammer raises to 115, Ozone folds, Anchor calls 115, Midas folds, Baseline folds, Pearl calls 90, Venus folds, Shadow calls 65, River Rat calls 65, [flop: 10♥ K♣ 9♣], Pearl checks, Shadow checks, River Rat checks, Hammer checks, Anchor checks, [turn: 10♥ K♣ 9♣ 7♥], Pearl checks, Shadow checks, River Rat checks, Hammer raises to 65, Anchor calls 65, Pearl folds, Shadow calls 65, River Rat calls 65, [river: 10♥ K♣ 9♣ 7♥ 5♠], Shadow checks, River Rat checks, Hammer raises to 65, Anchor calls 65, Shadow calls 65, River Rat calls 65 → Hammer wins 1145 with Three of a kind, 7s (7♦ 7♣)",
+   "pot": 1145
   }
  ],
  "finishes": [],
