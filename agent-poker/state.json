@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:46:02.679Z",
+ "updatedAt": "2026-11-19T12:46:14.050Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 59,
+ "handsPlayed": 60,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 191538,
+     "stack": 165938,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 27058,
+     "stack": 1458,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 163334,
+     "stack": 137734,
      "status": "seated",
      "reentered": false
     },
@@ -61,15 +61,15 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19940,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 119630,
+     "stack": 216370,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 27
+   "handsPlayed": 28
   }
  ],
  "seats": [
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 163334,
+   "stack": 137734,
    "status": "seated",
    "reentered": false
   },
@@ -145,8 +145,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19940,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -217,7 +217,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 27058,
+   "stack": 1458,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 191538,
+   "stack": 165938,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 119630,
+   "stack": 216370,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 28,
-  "stage": "preflop",
-  "board": [],
-  "pot": 38400,
-  "toAct": "Slick",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 18,
-   "text": "Table 1 · Hand 18 · blinds 800/1600 · Bulldog calls 1600, Granite folds, Marble calls 1600, Midas folds, Compass calls 1600, River Rat folds, Slick calls 800, Professor checks, [flop: Q♣ 6♦ Q♥], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [turn: Q♣ 6♦ Q♥ 10♠], Slick checks, Professor checks, Bulldog checks, Marble checks, Compass checks, [river: Q♣ 6♦ Q♥ 10♠ 7♥], Slick checks, Professor checks, Bulldog checks, Marble raises to 1600, Compass calls 1600, Slick calls 1600, Professor calls 1600, Bulldog calls 1600 → Marble wins 16000 with Three of a kind, Qs (Q♠ 3♠)",
-   "pot": 16000
-  },
   {
    "table": 1,
    "handNo": 19,
@@ -405,6 +391,12 @@
    "handNo": 27,
    "text": "Table 1 · Hand 27 · blinds 6400/12800 · Compass calls 6400, River Rat calls 6400, Slick folds, Granite folds, Marble checks, [flop: Q♣ 7♣ 5♦], Marble checks, Compass checks, River Rat checks, [turn: Q♣ 7♣ 5♦ 9♥], Marble checks, Compass checks, River Rat checks, [river: Q♣ 7♣ 5♦ 9♥ A♥], Marble checks, Compass checks, River Rat checks → Compass wins 20578 with Two pair, As and 7s (A♣ 7♠)",
    "pot": 20578
+  },
+  {
+   "table": 1,
+   "handNo": 28,
+   "text": "Table 1 · Hand 28 · blinds 12800/25600 · Slick calls 25600, Granite calls 19940, Marble calls 25600, Compass calls 12800, River Rat checks, [flop: 7♦ Q♣ 9♦], Compass checks, River Rat checks, Slick checks, Marble checks, [turn: 7♦ Q♣ 9♦ 2♥], Compass checks, River Rat checks, Slick checks, Marble checks, [river: 7♦ Q♣ 9♦ 2♥ Q♥], Compass checks, River Rat checks, Slick checks, Marble checks → Marble wins 122340 with Two pair, Qs and 3s (3♠ 3♥)",
+   "pot": 122340
   }
  ],
  "finishes": [
@@ -582,6 +574,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 27,
+   "provisional": true
+  },
+  {
+   "name": "Granite",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 28,
    "provisional": true
   }
  ],
