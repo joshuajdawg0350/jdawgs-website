@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:35:50.861Z",
+ "updatedAt": "2026-11-19T01:36:13.870Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 54,
+ "handsPlayed": 55,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113520,
+     "stack": 113470,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30870,
+     "stack": 30920,
      "status": "seated",
      "reentered": false
     },
@@ -98,7 +98,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 18
+   "handsPlayed": 19
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113520,
+   "stack": 113470,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30870,
+   "stack": 30920,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 19,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Professor",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 15,
-   "text": "Table 3 · Hand 15 · blinds 25/50 · Marble calls 50, Millstone calls 50, Icebox calls 25, Quarry checks, [flop: J♥ 2♦ 9♥], Icebox checks, Quarry raises to 60, Marble folds, Millstone raises to 140, Icebox folds, Quarry folds → Millstone takes 400 (everyone else folded)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 16,
@@ -552,6 +546,12 @@
    "handNo": 18,
    "text": "Table 3 · Hand 18 · blinds 25/50 · Quarry calls 50, Marble folds, Millstone calls 25, Icebox checks, [flop: 2♣ 8♥ 6♠], Millstone checks, Icebox checks, Quarry checks, [turn: 2♣ 8♥ 6♠ 5♦], Millstone raises to 50, Icebox folds, Quarry folds → Millstone takes 200 (everyone else folded)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 19,
+   "text": "Table 1 · Hand 19 · blinds 25/50 · Professor folds, Midas folds, Pearl calls 25, Shadow checks, [flop: 10♥ 8♦ 2♠], Pearl checks, Shadow checks, [turn: 10♥ 8♦ 2♠ Q♥], Pearl checks, Shadow checks, [river: 10♥ 8♦ 2♠ Q♥ 10♣], Pearl checks, Shadow checks → Shadow wins 100 with Pair of 10s (K♠ 9♥)",
+   "pot": 100
   }
  ],
  "finishes": [
