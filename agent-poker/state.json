@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:59:09.469Z",
+ "updatedAt": "2026-11-19T01:59:29.061Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 91,
+ "handsPlayed": 92,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 140709,
+     "stack": 135595,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 91520,
+     "stack": 86406,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 119628,
+     "stack": 119568,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19228,
+     "stack": 29546,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 7060,
+     "stack": 7030,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 37
+   "handsPlayed": 38
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19228,
+   "stack": 29546,
    "status": "seated",
    "reentered": false
   },
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 140709,
+   "stack": 135595,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7060,
+   "stack": 7030,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 91520,
+   "stack": 86406,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 119628,
+   "stack": 119568,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 38,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 28,
-   "text": "Table 1 · Hand 28 · blinds 30/60 · Marble calls 60, Bulldog calls 60, Midas folds, Quarry folds, Icebox folds, Slick folds, Pearl calls 60, Millstone calls 30, Copper checks, [flop: 6♠ 2♥ Q♥], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [turn: 6♠ 2♥ Q♥ 10♣], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [river: 6♠ 2♥ Q♥ 10♣ 2♣], Millstone raises to 60, Copper calls 60, Marble calls 60, Bulldog raises to 350, Pearl calls 350, Millstone raises to 640, Copper calls 580, Marble calls 580, Bulldog calls 290, Pearl calls 290 → Marble wins 3500 with Three of a kind, 2s (2♠ A♦)",
-   "pot": 3500
-  },
   {
    "table": 1,
    "handNo": 29,
@@ -404,6 +390,12 @@
    "handNo": 37,
    "text": "Table 1 · Hand 37 · blinds 30/60 · Pearl calls 60, Millstone calls 60, Copper calls 60, Marble calls 60, Midas folds, Icebox checks, [flop: K♦ 3♠ 8♠], Icebox checks, Pearl checks, Millstone checks, Copper checks, Marble checks, [turn: K♦ 3♠ 8♠ 6♦], Icebox checks, Pearl checks, Millstone checks, Copper checks, Marble checks, [river: K♦ 3♠ 8♠ 6♦ 2♠], Icebox checks, Pearl checks, Millstone checks, Copper raises to 70, Marble calls 70, Icebox calls 70, Pearl calls 70, Millstone folds → Icebox wins 610 with Pair of 8s (8♣ 10♥)",
    "pot": 610
+  },
+  {
+   "table": 1,
+   "handNo": 38,
+   "text": "Table 1 · Hand 38 · blinds 30/60 · Millstone folds, Copper calls 60, Marble calls 60, Midas calls 60, Icebox folds, Pearl checks, [flop: J♠ 7♣ 4♦], Pearl checks, Copper checks, Marble checks, Midas raises to 257, Pearl calls 257, Copper calls 257, Marble folds, [turn: J♠ 7♣ 4♦ 6♣], Pearl checks, Copper checks, Midas raises to 989, Pearl calls 989, Copper calls 989, [river: J♠ 7♣ 4♦ 6♣ 2♠], Pearl checks, Copper checks, Midas raises to 3808, Pearl calls 3808, Copper calls 3808 → Midas wins 15432 with Pair of Qs (Q♦ Q♥)",
+   "pot": 15432
   }
  ],
  "finishes": [
