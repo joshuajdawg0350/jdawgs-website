@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:14:11.099Z",
+ "updatedAt": "2026-11-19T01:14:36.799Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 18,
+ "handsPlayed": 19,
  "tables": [
   {
    "id": 1,
@@ -29,15 +29,15 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19720,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19455,
+     "stack": 120555,
      "status": "seated",
      "reentered": false
     },
@@ -45,15 +45,15 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19690,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19805,
+     "stack": 19755,
      "status": "seated",
      "reentered": false
     },
@@ -61,15 +61,15 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19665,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20585,
+     "stack": 2970,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 21815,
+     "stack": 1230,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19265,
+     "stack": 15490,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 2,
@@ -256,8 +256,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19720,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19455,
+   "stack": 120555,
    "status": "seated",
    "reentered": false
   },
@@ -310,8 +310,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19690,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19805,
+   "stack": 19755,
    "status": "seated",
    "reentered": false
   },
@@ -364,8 +364,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19665,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20585,
+   "stack": 2970,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21815,
+   "stack": 1230,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19265,
+   "stack": 15490,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 3,
-   "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone folds, Icebox calls 25, Velvet checks, [flop: 3♥ 8♠ 7♣], Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 60, Professor folds, Deuce calls 60, Wildfire folds, Icebox folds, Velvet calls 60, Tally calls 60, [turn: 3♥ 8♠ 7♣ 4♠], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, [river: 3♥ 8♠ 7♣ 4♠ Q♦], Velvet checks, Tally checks, Pickpocket checks, Deuce checks → Pickpocket wins 590 with Pair of Qs (10♦ Q♣)",
-   "pot": 590
-  },
   {
    "table": 1,
    "handNo": 4,
@@ -552,6 +546,12 @@
    "handNo": 6,
    "text": "Table 3 · Hand 6 · blinds 25/50 · Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket raises to 245, Professor calls 195, Deuce calls 195, Wildfire calls 195, Millstone calls 195, Velvet calls 195, Tally calls 195, [flop: 9♠ A♦ 3♥], Pickpocket checks, Professor raises to 60, Deuce folds, Wildfire folds, Millstone calls 60, Velvet folds, Tally folds, Pickpocket calls 60, [turn: 9♠ A♦ 3♥ 5♠], Pickpocket checks, Professor checks, Millstone checks, [river: 9♠ A♦ 3♥ 5♠ 10♥], Pickpocket checks, Professor checks, Millstone checks → Pickpocket wins 1895 with Pair of As (Q♠ A♠)",
    "pot": 1895
+  },
+  {
+   "table": 1,
+   "handNo": 7,
+   "text": "Table 1 · Hand 7 · blinds 25/50 · Midas folds, Baseline calls 50, Pearl calls 50, Venus calls 50, Shadow calls 50, River Rat calls 50, Hammer calls 50, Ozone calls 25, Anchor checks, [flop: 3♣ 3♠ K♦], Ozone checks, Anchor checks, Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, Hammer checks, [turn: 3♣ 3♠ K♦ Q♦], Ozone checks, Anchor checks, Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, Hammer checks, [river: 3♣ 3♠ K♦ Q♦ J♠], Ozone raises to 65, Anchor calls 65, Baseline calls 65, Pearl calls 65, Venus calls 65, Shadow folds, River Rat calls 65, Hammer raises to 150, Ozone raises to 260, Anchor calls 195, Baseline calls 195, Pearl calls 195, Venus calls 195, River Rat calls 195, Hammer raises to 405, Ozone raises to 595, Anchor calls 335, Baseline calls 335, Pearl calls 335, Venus calls 335, River Rat calls 335, Hammer raises to 840, Ozone raises to 1160, Anchor calls 565, Baseline calls 565, Pearl calls 565, Venus calls 565, River Rat calls 565, Hammer raises to 1575, Ozone raises to 2115, Anchor calls 955, Baseline calls 955, Pearl calls 955, Venus calls 955, River Rat calls 955, Hammer raises to 2815, Ozone raises to 3725, Anchor calls 1610, Baseline calls 1610, Pearl calls 1610, Venus calls 1610, River Rat calls 1610, Hammer raises to 4910, Ozone raises to 6450, Anchor folds, Baseline calls 2725, Pearl calls 2725, Venus calls 2725, River Rat calls 2725, Hammer raises to 8450, Ozone raises to 11050, Baseline calls 4600, Pearl calls 4600, Venus calls 4600, River Rat calls 4600, Hammer raises to 14430, Ozone raises to 18825, Baseline calls 7775, Pearl calls 7775, Venus calls 7775, River Rat calls 7775, Hammer goes ALL-IN to 20535, Ozone goes ALL-IN to 21765, Baseline calls 845, Pearl calls 580, Venus calls 815, River Rat calls 790 → Pearl wins 120555 with Two pair, Ks and 3s (K♥ A♥); Hammer wins 2970 with Two pair, Qs and 3s (Q♠ A♠); Ozone wins 1230 with Two pair, Js and 3s (J♥ 10♣)",
+   "pot": 124755
   }
  ],
  "finishes": [
@@ -561,6 +561,30 @@
    "kind": "house",
    "table": 2,
    "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Baseline",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Venus",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "River Rat",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 7,
    "provisional": true
   }
  ],
