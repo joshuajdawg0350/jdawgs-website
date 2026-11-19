@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:04:38.686Z",
+ "updatedAt": "2026-11-19T01:05:04.313Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20490,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20490,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -504,6 +496,12 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry folds, Slick folds, Granite folds, Dice checks, [flop: 5♥ 7♠ A♥], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, [turn: 5♥ 7♠ A♥ K♠], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, [river: 5♥ 7♠ A♥ K♠ 5♦], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks → Bulldog wins 275 with Two pair, As and 5s (10♦ A♣)",
    "pot": 275
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 7♥ 10♦ 9♥], Wildfire raises to 60, Millstone calls 60, Velvet calls 60, Tally calls 60, Pickpocket folds, Deuce calls 60, [turn: 7♥ 10♦ 9♥ 2♠], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Deuce checks, [river: 7♥ 10♦ 9♥ 2♠ 3♠], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Deuce checks → Tally wins 600 with Two pair, 10s and 2s (2♥ 10♣)",
+   "pot": 600
   }
  ],
  "finishes": [],
