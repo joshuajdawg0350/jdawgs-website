@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:32:49.878Z",
+ "updatedAt": "2026-11-19T01:33:18.076Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 49,
+ "handsPlayed": 50,
  "tables": [
   {
    "id": 1,
@@ -115,8 +115,8 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 10,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -131,7 +131,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 30777,
+     "stack": 30837,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 95430,
+     "stack": 95380,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   },
   {
    "id": 3,
@@ -292,8 +292,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 30777,
+   "stack": 30837,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 95430,
+   "stack": 95380,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 17,
   "stage": "preflop",
   "board": [],
-  "pot": 60,
-  "toAct": "Copper",
+  "pot": 75,
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 14,
-   "text": "Table 1 · Hand 14 · blinds 25/50 · Shadow calls 50, Professor calls 50, Midas folds, Pearl checks, [flop: 4♣ 9♠ 8♦], Pearl checks, Shadow checks, Professor checks, [turn: 4♣ 9♠ 8♦ 10♥], Pearl checks, Shadow checks, Professor checks, [river: 4♣ 9♠ 8♦ 10♥ A♦], Pearl checks, Shadow checks, Professor checks → Shadow wins 175 with Pair of 10s (10♣ 2♦)",
-   "pot": 175
-  },
   {
    "table": 2,
    "handNo": 14,
@@ -552,6 +546,12 @@
    "handNo": 17,
    "text": "Table 1 · Hand 17 · blinds 25/50 · Pearl calls 50, Shadow folds, Professor calls 25, Midas checks, [flop: 5♣ 2♥ 4♥], Professor checks, Midas checks, Pearl checks, [turn: 5♣ 2♥ 4♥ 4♣], Professor checks, Midas checks, Pearl checks, [river: 5♣ 2♥ 4♥ 4♣ 7♣], Professor checks, Midas checks, Pearl checks → Professor wins 150 with Pair of 4s (J♦ A♦)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 17,
+   "text": "Table 2 · Hand 17 · blinds 25/50 · Copper calls 50, Slick folds, Bulldog checks, [flop: Q♣ 8♦ 2♣], Bulldog checks, Copper checks, [turn: Q♣ 8♦ 2♣ 2♥], Bulldog checks, Copper checks, [river: Q♣ 8♦ 2♣ 2♥ 3♣], Bulldog checks, Copper checks → Bulldog wins 110 with Two pair, 8s and 2s (8♠ A♥)",
+   "pot": 110
   }
  ],
  "finishes": [
@@ -665,6 +665,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 12,
+   "provisional": true
+  },
+  {
+   "name": "Granite",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 17,
    "provisional": true
   }
  ],
