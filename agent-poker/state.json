@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:30:45.567Z",
+ "updatedAt": "2026-11-19T12:30:57.227Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 4,
- "handsPlayed": 10,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19470,
+     "stack": 19130,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20580,
+     "stack": 21600,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19635,
      "status": "seated",
      "reentered": false
     },
@@ -147,12 +147,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19775,
+     "stack": 19435,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19470,
+   "stack": 19130,
    "status": "seated",
    "reentered": false
   },
@@ -336,7 +336,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20580,
+   "stack": 21600,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 19635,
    "status": "seated",
    "reentered": false
   },
@@ -390,7 +390,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19775,
+   "stack": 19435,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Granite",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Venus folds, Shadow calls 50, River Rat calls 50, Hammer calls 50, Ozone calls 50, Midas folds, CallBot calls 50, Baseline calls 25, Pearl checks, [flop: 2♠ 4♦ 2♣], Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, CallBot checks, [turn: 2♠ 4♦ 2♣ 6♥], Baseline checks, Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, CallBot checks, [river: 2♠ 4♦ 2♣ 6♥ 2♦], Baseline raises to 55, Pearl calls 55, Shadow raises to 115, River Rat raises to 175, Hammer raises to 255, Ozone raises to 360, CallBot calls 360, Baseline raises to 475, Pearl calls 420, Shadow calls 360, River Rat raises to 590, Hammer raises to 740, Ozone raises to 935, CallBot calls 575, Baseline raises to 1150, Pearl calls 675, Shadow calls 675, River Rat raises to 1365, Hammer raises to 1645, Ozone raises to 2010, CallBot calls 515, Baseline raises to 2410, Pearl calls 1260, Shadow raises to 2850, River Rat raises to 3290, Hammer raises to 3860, Ozone raises to 4600, Baseline raises to 5415, Pearl calls 3005, Shadow calls 2565, River Rat raises to 6230, Hammer raises to 7290, Ozone raises to 8670, Baseline raises to 10190, Pearl calls 4775, Shadow calls 4775, River Rat raises to 11710, Hammer raises to 13685, Ozone raises to 16255, Baseline raises to 19080, Pearl calls 8890, Shadow goes ALL-IN to 19950, River Rat calls 8240, Hammer calls 6265, Ozone calls 3695, Baseline calls 870, Pearl calls 870 → River Rat wins 121500 with Full house, 2s full of 6s (7♦ 6♠)",
-   "pot": 121500
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -569,6 +563,12 @@
    "handNo": 4,
    "text": "Table 1 · Hand 4 · blinds 50/100 · Venus calls 100, River Rat calls 100, Professor folds, Marble folds, Midas checks, [flop: 2♣ 3♥ 6♠], Midas checks, Venus checks, River Rat checks, [turn: 2♣ 3♥ 6♠ 10♦], Midas checks, Venus checks, River Rat checks, [river: 2♣ 3♥ 6♠ 10♦ 6♥], Midas raises to 193, Venus calls 193, River Rat calls 193 → Midas wins 929 with Two pair, 10s and 6s (Q♥ 10♠)",
    "pot": 929
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 50/100 · Granite folds, Dice calls 100, Bulldog calls 100, Copper calls 50, Slick checks, [flop: 2♦ K♥ K♦], Copper checks, Slick checks, Dice checks, Bulldog checks, [turn: 2♦ K♥ K♦ 10♣], Copper checks, Slick checks, Dice checks, Bulldog checks, [river: 2♦ K♥ K♦ 10♣ 6♠], Copper checks, Slick checks, Dice raises to 240, Bulldog calls 240, Copper calls 240, Slick calls 240 → Dice wins 1360 with Two pair, Ks and 10s (10♠ 6♦)",
+   "pot": 1360
   }
  ],
  "finishes": [
