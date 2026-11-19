@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:37:59.855Z",
+ "updatedAt": "2026-11-19T12:38:11.013Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 35,
+ "handsPlayed": 36,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 61140,
+     "stack": 60740,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 172945,
+     "stack": 173745,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20005,
+     "stack": 19605,
      "status": "seated",
      "reentered": false
     },
@@ -246,7 +246,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   }
  ],
  "seats": [
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 172945,
+   "stack": 173745,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20005,
+   "stack": 19605,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 61140,
+   "stack": 60740,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 12,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Sixgun",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 9,
-   "text": "Table 2 · Hand 9 · blinds 100/200 · Dice calls 200, Bulldog calls 200, Slick calls 100, Granite checks, [flop: 4♣ 3♣ 3♦], Slick raises to 200, Granite calls 200, Dice calls 200, Bulldog calls 200, [turn: 4♣ 3♣ 3♦ 7♠], Slick raises to 200, Granite calls 200, Dice calls 200, Bulldog calls 200, [river: 4♣ 3♣ 3♦ 7♠ 10♠], Slick checks, Granite checks, Dice checks, Bulldog checks → Slick wins 2400 with Three of a kind, 3s (3♠ A♣)",
-   "pot": 2400
-  },
   {
    "table": 3,
    "handNo": 9,
@@ -569,6 +555,12 @@
    "handNo": 12,
    "text": "Table 2 · Hand 12 · blinds 200/400 · Bulldog calls 400, Slick folds, Granite checks, [flop: K♦ Q♦ K♠], Granite checks, Bulldog raises to 600, Granite calls 600, [turn: K♦ Q♦ K♠ 2♠], Granite checks, Bulldog raises to 1320, Granite calls 1320, [river: K♦ Q♦ K♠ 2♠ 9♠], Granite checks, Bulldog checks → Bulldog wins 4840 with Two pair, Ks and Qs (A♥ Q♣)",
    "pot": 4840
+  },
+  {
+   "table": 3,
+   "handNo": 12,
+   "text": "Table 3 · Hand 12 · blinds 200/400 · Sixgun calls 400, Compass calls 200, Marble checks, [flop: 9♦ 6♥ 10♥], Compass checks, Marble checks, Sixgun checks, [turn: 9♦ 6♥ 10♥ Q♠], Compass checks, Marble checks, Sixgun checks, [river: 9♦ 6♥ 10♥ Q♠ A♦], Compass checks, Marble checks, Sixgun checks → Compass wins 1200 with Two pair, Qs and 10s (Q♦ 10♠)",
+   "pot": 1200
   }
  ],
  "finishes": [
