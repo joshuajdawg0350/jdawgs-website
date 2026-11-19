@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T02:03:04.684Z",
+ "updatedAt": "2026-11-19T02:03:47.269Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 97,
+ "handsPlayed": 98,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 506750,
+     "stack": 506430,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 6040,
+     "stack": 6520,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 7210,
+     "stack": 7050,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   }
  ],
  "seats": [
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 506750,
+   "stack": 506430,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6040,
+   "stack": 6520,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7210,
+   "stack": 7050,
    "status": "seated",
    "reentered": false
   },
@@ -339,12 +339,6 @@
  "recentHands": [
   {
    "table": 1,
-   "handNo": 34,
-   "text": "Table 1 · Hand 34 · blinds 30/60 · Marble folds, Midas folds, Icebox calls 60, Pearl calls 60, Millstone calls 30, Copper checks, [flop: 2♦ Q♠ 9♠], Millstone checks, Copper checks, Icebox checks, Pearl checks, [turn: 2♦ Q♠ 9♠ 8♠], Millstone checks, Copper checks, Icebox checks, Pearl checks, [river: 2♦ Q♠ 9♠ 8♠ 7♠], Millstone checks, Copper checks, Icebox checks, Pearl checks → Millstone wins 240 with Two pair, 9s and 8s (8♣ 9♣)",
-   "pot": 240
-  },
-  {
-   "table": 1,
    "handNo": 35,
    "text": "Table 1 · Hand 35 · blinds 30/60 · Midas folds, Icebox folds, Pearl calls 60, Millstone calls 60, Copper calls 30, Marble checks, [flop: 2♥ J♥ 4♦], Copper checks, Marble checks, Pearl checks, Millstone checks, [turn: 2♥ J♥ 4♦ 3♣], Copper checks, Marble checks, Pearl checks, Millstone checks, [river: 2♥ J♥ 4♦ 3♣ 6♠], Copper checks, Marble raises to 60, Pearl calls 60, Millstone folds, Copper calls 60 → Marble wins 420 with Straight, 6 high (5♠ 9♣)",
    "pot": 420
@@ -396,6 +390,12 @@
    "handNo": 43,
    "text": "Table 1 · Hand 43 · blinds 40/80 · Pearl calls 80, Millstone calls 40, Icebox checks, [flop: J♣ 5♥ 7♠], Millstone checks, Icebox checks, Pearl checks, [turn: J♣ 5♥ 7♠ 5♣], Millstone checks, Icebox checks, Pearl checks, [river: J♣ 5♥ 7♠ 5♣ 6♥], Millstone checks, Icebox raises to 80, Pearl calls 80, Millstone calls 80 → Icebox wins 480 with Full house, 5s full of 6s (5♠ 6♦)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 44,
+   "text": "Table 1 · Hand 44 · blinds 40/80 · Millstone calls 80, Icebox calls 40, Pearl checks, [flop: Q♣ Q♥ 2♣], Icebox checks, Pearl checks, Millstone raises to 80, Icebox calls 80, Pearl calls 80, [turn: Q♣ Q♥ 2♣ 10♣], Icebox checks, Pearl checks, Millstone raises to 80, Icebox folds, Pearl calls 80, [river: Q♣ Q♥ 2♣ 10♣ A♦], Pearl checks, Millstone raises to 80, Pearl calls 80 → Millstone wins 800 with Three of a kind, Qs (K♠ Q♠)",
+   "pot": 800
   }
  ],
  "finishes": [
