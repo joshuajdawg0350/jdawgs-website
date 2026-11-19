@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:39:18.730Z",
+ "updatedAt": "2026-11-19T12:39:30.542Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 40,
+ "handsPlayed": 41,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 45030,
+     "stack": 44230,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 16505,
+     "stack": 19705,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 23525,
+     "stack": 21125,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 45030,
+   "stack": 44230,
    "status": "seated",
    "reentered": false
   },
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 16505,
+   "stack": 19705,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23525,
+   "stack": 21125,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 14,
   "stage": "preflop",
   "board": [],
   "pot": 1200,
-  "toAct": "Granite",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 11,
-   "text": "Table 1 · Hand 11 · blinds 200/400 · Midas folds, Venus calls 400, River Rat calls 200, Professor checks, [flop: 4♠ 5♥ 2♥], River Rat checks, Professor checks, Venus checks, [turn: 4♠ 5♥ 2♥ A♠], River Rat checks, Professor raises to 440, Venus folds, River Rat folds → Professor takes 1640 (everyone else folded)",
-   "pot": 1640
-  },
   {
    "table": 2,
    "handNo": 11,
@@ -569,6 +563,12 @@
    "handNo": 14,
    "text": "Table 1 · Hand 14 · blinds 400/800 · Professor calls 800, Midas folds, Venus raises to 1600, River Rat calls 800, Professor calls 800, [flop: 7♠ Q♠ 2♠], Venus checks, River Rat checks, Professor checks, [turn: 7♠ Q♠ 2♠ J♦], Venus checks, River Rat checks, Professor checks, [river: 7♠ Q♠ 2♠ J♦ 4♠], Venus checks, River Rat checks, Professor raises to 880, Venus calls 880, River Rat calls 880 → Professor wins 7440 with Flush, Q high (5♣ 5♠)",
    "pot": 7440
+  },
+  {
+   "table": 2,
+   "handNo": 14,
+   "text": "Table 2 · Hand 14 · blinds 400/800 · Granite raises to 1600, Bulldog calls 1200, Slick folds, [flop: K♦ 6♠ 10♠], Bulldog checks, Granite checks, [turn: K♦ 6♠ 10♠ A♣], Bulldog checks, Granite checks, [river: K♦ 6♠ 10♠ A♣ 9♦], Bulldog checks, Granite raises to 800, Bulldog calls 800 → Granite wins 5600 with Three of a kind, 10s (10♦ 10♣)",
+   "pot": 5600
   }
  ],
  "finishes": [
