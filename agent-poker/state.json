@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:19:01.214Z",
+ "updatedAt": "2026-11-19T01:19:25.495Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 27,
+ "handsPlayed": 28,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 132615,
+     "stack": 132510,
      "status": "seated",
      "reentered": false
     },
@@ -85,7 +85,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 12005,
+     "stack": 12240,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 18900,
+     "stack": 18795,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 132615,
+   "stack": 132510,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12005,
+   "stack": 12240,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18900,
+   "stack": 18795,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 10,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 6,
-   "text": "Table 3 · Hand 6 · blinds 25/50 · Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket raises to 245, Professor calls 195, Deuce calls 195, Wildfire calls 195, Millstone calls 195, Velvet calls 195, Tally calls 195, [flop: 9♠ A♦ 3♥], Pickpocket checks, Professor raises to 60, Deuce folds, Wildfire folds, Millstone calls 60, Velvet folds, Tally folds, Pickpocket calls 60, [turn: 9♠ A♦ 3♥ 5♠], Pickpocket checks, Professor checks, Millstone checks, [river: 9♠ A♦ 3♥ 5♠ 10♥], Pickpocket checks, Professor checks, Millstone checks → Pickpocket wins 1895 with Pair of As (Q♠ A♠)",
-   "pot": 1895
-  },
   {
    "table": 1,
    "handNo": 7,
@@ -552,6 +546,12 @@
    "handNo": 9,
    "text": "Table 3 · Hand 9 · blinds 25/50 · Velvet calls 50, Tally calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: K♠ 10♠ 10♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Deuce checks, Wildfire checks, [turn: K♠ 10♠ 10♣ K♦], Millstone checks, Icebox checks, Velvet checks, Tally checks, Deuce raises to 65, Wildfire raises to 285, Millstone calls 285, Icebox calls 285, Velvet calls 285, Tally calls 285, Deuce raises to 570, Wildfire raises to 1945, Millstone calls 1660, Icebox calls 1660, Velvet calls 1660, Tally calls 1660, Deuce raises to 3735, Wildfire raises to 11990, Millstone calls 10045, Icebox calls 10045, Velvet calls 10045, Tally calls 10045, Deuce goes ALL-IN to 15615, Wildfire goes ALL-IN to 17065, Millstone calls 3735, Icebox calls 5075, Velvet calls 3835, Tally calls 5075, [river: K♠ 10♠ 10♣ K♦ 8♣], Icebox checks, Tally checks → Deuce wins 46995 with Two pair, Ks and 10s (A♠ 2♠); Millstone wins 47545 with Two pair, Ks and 10s (A♣ 8♠); Icebox wins 4120 with Two pair, Ks and 10s (5♣ Q♥)",
    "pot": 98660
+  },
+  {
+   "table": 1,
+   "handNo": 10,
+   "text": "Table 1 · Hand 10 · blinds 25/50 · Shadow folds, Anchor calls 50, Professor raises to 105, Midas folds, Pearl calls 55, Anchor calls 55, [flop: J♥ 9♥ 7♣], Pearl checks, Anchor checks, Professor checks, [turn: J♥ 9♥ 7♣ 5♣], Pearl checks, Anchor checks, Professor checks, [river: J♥ 9♥ 7♣ 5♣ 2♦], Pearl checks, Anchor checks, Professor checks → Anchor wins 340 with Two pair, Js and 7s (7♠ J♠)",
+   "pot": 340
   }
  ],
  "finishes": [
