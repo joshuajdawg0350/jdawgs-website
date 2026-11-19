@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:30:57.227Z",
+ "updatedAt": "2026-11-19T12:31:09.135Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  200,
-  400
+  400,
+  800
  ],
- "level": 4,
- "handsPlayed": 11,
+ "level": 5,
+ "handsPlayed": 12,
  "tables": [
   {
    "id": 1,
@@ -161,7 +161,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20265,
+     "stack": 20165,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 160880,
+     "stack": 160780,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 18730,
+     "stack": 18630,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19775,
+     "stack": 20075,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20265,
+   "stack": 20165,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19775,
+   "stack": 20075,
    "status": "seated",
    "reentered": false
   },
@@ -462,7 +462,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18730,
+   "stack": 18630,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 160880,
+   "stack": 160780,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 4,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 1,
-   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog raises to 125, Copper calls 125, Compass calls 125, Marble calls 125, Anchor calls 125, Professor calls 125, Slick folds, Granite folds, Dice folds, [flop: 3♣ 10♦ Q♦], Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, Professor checks, [turn: 3♣ 10♦ Q♦ 5♦], Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, Professor checks, [river: 3♣ 10♦ Q♦ 5♦ K♣], Bulldog checks, Copper checks, Compass checks, Marble checks, Anchor checks, Professor checks → Professor wins 825 with Pair of Ks (4♦ K♥)",
-   "pot": 825
-  },
   {
    "table": 3,
    "handNo": 1,
@@ -569,6 +555,12 @@
    "handNo": 4,
    "text": "Table 2 · Hand 4 · blinds 50/100 · Granite folds, Dice calls 100, Bulldog calls 100, Copper calls 50, Slick checks, [flop: 2♦ K♥ K♦], Copper checks, Slick checks, Dice checks, Bulldog checks, [turn: 2♦ K♥ K♦ 10♣], Copper checks, Slick checks, Dice checks, Bulldog checks, [river: 2♦ K♥ K♦ 10♣ 6♠], Copper checks, Slick checks, Dice raises to 240, Bulldog calls 240, Copper calls 240, Slick calls 240 → Dice wins 1360 with Two pair, Ks and 10s (10♠ 6♦)",
    "pot": 1360
+  },
+  {
+   "table": 3,
+   "handNo": 4,
+   "text": "Table 3 · Hand 4 · blinds 50/100 · Deuce calls 100, Sixgun calls 100, Anchor calls 50, Compass checks, [flop: Q♦ 5♥ 10♦], Anchor checks, Compass checks, Deuce checks, Sixgun checks, [turn: Q♦ 5♥ 10♦ J♠], Anchor checks, Compass checks, Deuce checks, Sixgun checks, [river: Q♦ 5♥ 10♦ J♠ 6♠], Anchor checks, Compass checks, Deuce checks, Sixgun checks → Compass wins 400 with Pair of Js (2♥ J♣)",
+   "pot": 400
   }
  ],
  "finishes": [
