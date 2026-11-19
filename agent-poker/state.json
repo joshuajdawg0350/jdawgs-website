@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:08:59.700Z",
+ "updatedAt": "2026-11-19T01:09:50.812Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 9,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19720,
+     "stack": 19670,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20105,
+     "stack": 20080,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19590,
+     "stack": 19815,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20735,
+     "stack": 20685,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20575,
+     "stack": 20525,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19590,
+     "stack": 19540,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20200,
+     "stack": 20090,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20065,
+     "stack": 20015,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19765,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20405,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20220,
+     "stack": 20110,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19720,
+   "stack": 19670,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20200,
+   "stack": 20090,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20105,
+   "stack": 20080,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20065,
+   "stack": 20015,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19590,
+   "stack": 19815,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19790,
+   "stack": 19765,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20735,
+   "stack": 20685,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19850,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20575,
+   "stack": 20525,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 20405,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19590,
+   "stack": 19540,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20220,
+   "stack": 20110,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Pickpocket",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow folds, River Rat calls 50, Hammer raises to 115, Ozone calls 115, Anchor calls 115, Midas folds, Baseline calls 90, Pearl calls 65, Venus folds, River Rat calls 65, [flop: 6♦ 8♦ Q♥], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [turn: 6♦ 8♦ Q♥ K♥], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [river: 6♦ 8♦ Q♥ K♥ 4♠], Baseline checks, Pearl checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks → Ozone wins 740 with Pair of Ks (10♦ K♦)",
-   "pot": 740
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -546,6 +540,18 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone folds, Icebox calls 25, Velvet checks, [flop: 3♥ 8♠ 7♣], Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 60, Professor folds, Deuce calls 60, Wildfire folds, Icebox folds, Velvet calls 60, Tally calls 60, [turn: 3♥ 8♠ 7♣ 4♠], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, [river: 3♥ 8♠ 7♣ 4♠ Q♦], Velvet checks, Tally checks, Pickpocket checks, Deuce checks → Pickpocket wins 590 with Pair of Qs (10♦ Q♣)",
    "pot": 590
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 25/50 · Hammer calls 50, Ozone calls 50, Anchor calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus folds, Shadow folds, River Rat checks, [flop: 7♠ Q♥ 4♦], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks, [turn: 7♠ Q♥ 4♦ 10♠], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks, [river: 7♠ Q♥ 4♦ 10♠ J♣], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks → River Rat wins 275 with Two pair, Qs and 4s (4♠ Q♣)",
+   "pot": 275
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 25/50 · Marble calls 50, Sixgun calls 50, Quarry calls 50, Slick folds, Granite folds, Dice calls 50, Bulldog calls 50, Copper folds, Compass checks, [flop: 8♣ A♣ 10♠], Compass raises to 60, Marble calls 60, Sixgun calls 60, Quarry folds, Dice calls 60, Bulldog folds, [turn: 8♣ A♣ 10♠ 3♦], Compass checks, Marble checks, Sixgun checks, Dice checks, [river: 8♣ A♣ 10♠ 3♦ 7♥], Compass checks, Marble checks, Sixgun checks, Dice checks → Marble wins 565 with Two pair, As and 10s (A♠ 10♦)",
+   "pot": 565
   }
  ],
  "finishes": [],
