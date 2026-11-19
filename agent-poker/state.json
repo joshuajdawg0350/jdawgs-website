@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:37:08.038Z",
+ "updatedAt": "2026-11-19T12:37:23.573Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 32,
+ "handsPlayed": 33,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 139695,
+     "stack": 61140,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 78555,
+     "stack": 172945,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 15835,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   }
  ],
  "seats": [
@@ -390,8 +390,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 15835,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 78555,
+   "stack": 172945,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 139695,
+   "stack": 61140,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 11,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Compass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 8,
-   "text": "Table 2 · Hand 8 · blinds 100/200 · Granite calls 200, Dice calls 200, Bulldog folds, Slick checks, [flop: 3♠ 7♠ Q♣], Slick checks, Granite checks, Dice checks, [turn: 3♠ 7♠ Q♣ J♥], Slick checks, Granite checks, Dice checks, [river: 3♠ 7♠ Q♣ J♥ 8♣], Slick checks, Granite checks, Dice checks → Dice wins 700 with Pair of 3s (K♣ 3♣)",
-   "pot": 700
-  },
   {
    "table": 3,
    "handNo": 8,
@@ -569,6 +555,12 @@
    "handNo": 11,
    "text": "Table 2 · Hand 11 · blinds 200/400 · Granite calls 400, Bulldog calls 200, Slick checks, [flop: 2♥ 10♠ Q♠], Bulldog checks, Slick checks, Granite checks, [turn: 2♥ 10♠ Q♠ 4♥], Bulldog checks, Slick checks, Granite checks, [river: 2♥ 10♠ Q♠ 4♥ Q♥], Bulldog checks, Slick checks, Granite checks → Granite wins 1200 with Pair of Qs (7♠ K♦)",
    "pot": 1200
+  },
+  {
+   "table": 3,
+   "handNo": 11,
+   "text": "Table 3 · Hand 11 · blinds 200/400 · Compass calls 400, Marble folds, Copper calls 200, Sixgun checks, [flop: J♥ 4♦ 3♦], Copper checks, Sixgun checks, Compass checks, [turn: J♥ 4♦ 3♦ 10♦], Copper checks, Sixgun checks, Compass checks, [river: J♥ 4♦ 3♦ 10♦ 3♣], Copper checks, Sixgun raises to 720, Compass raises to 1510, Copper calls 1510, Sixgun raises to 4475, Compass raises to 7735, Copper calls 6225, Sixgun raises to 20420, Compass raises to 34375, Copper calls 7700, Sixgun raises to 77235, Compass goes ALL-IN to 78155, Sixgun calls 920 → Compass wins 172945 with Two pair, 10s and 3s (8♦ 10♥)",
+   "pot": 172945
   }
  ],
  "finishes": [
@@ -698,6 +690,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 10,
+   "provisional": true
+  },
+  {
+   "name": "Copper",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 11,
    "provisional": true
   }
  ],
