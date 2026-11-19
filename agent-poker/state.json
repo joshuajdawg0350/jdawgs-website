@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T02:11:20.353Z",
+ "updatedAt": "2026-11-19T02:11:42.241Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 107,
+ "handsPlayed": 108,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 506900,
+     "stack": 506820,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 6050,
+     "stack": 6130,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   }
  ],
  "seats": [
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 506900,
+   "stack": 506820,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6050,
+   "stack": 6130,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 54,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 44,
-   "text": "Table 1 · Hand 44 · blinds 40/80 · Millstone calls 80, Icebox calls 40, Pearl checks, [flop: Q♣ Q♥ 2♣], Icebox checks, Pearl checks, Millstone raises to 80, Icebox calls 80, Pearl calls 80, [turn: Q♣ Q♥ 2♣ 10♣], Icebox checks, Pearl checks, Millstone raises to 80, Icebox folds, Pearl calls 80, [river: Q♣ Q♥ 2♣ 10♣ A♦], Pearl checks, Millstone raises to 80, Pearl calls 80 → Millstone wins 800 with Three of a kind, Qs (K♠ Q♠)",
-   "pot": 800
-  },
   {
    "table": 1,
    "handNo": 45,
@@ -404,6 +390,12 @@
    "handNo": 53,
    "text": "Table 1 · Hand 53 · blinds 40/80 · Millstone calls 80, Icebox folds, Pearl checks, [flop: 6♦ Q♠ 5♣], Pearl checks, Millstone checks, [turn: 6♦ Q♠ 5♣ 9♣], Pearl checks, Millstone checks, [river: 6♦ Q♠ 5♣ 9♣ 2♠], Pearl checks, Millstone checks → Millstone wins 200 with Pair of Qs (4♣ Q♣)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 54,
+   "text": "Table 1 · Hand 54 · blinds 40/80 · Icebox folds, Pearl calls 40, Millstone checks, [flop: 5♦ 6♣ Q♥], Pearl checks, Millstone checks, [turn: 5♦ 6♣ Q♥ 2♥], Pearl checks, Millstone checks, [river: 5♦ 6♣ Q♥ 2♥ J♥], Pearl checks, Millstone checks → Millstone wins 160 with Pair of Qs (8♠ Q♣)",
+   "pot": 160
   }
  ],
  "finishes": [
