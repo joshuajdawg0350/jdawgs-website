@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:47:30.857Z",
+ "updatedAt": "2026-11-19T01:47:56.773Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 75,
+ "handsPlayed": 76,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19558,
+     "stack": 19498,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 113539,
+     "stack": 113479,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 30655,
+     "stack": 30835,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 36038,
+     "stack": 35978,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 25
+   "handsPlayed": 26
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19558,
+   "stack": 19498,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 113539,
+   "stack": 113479,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30655,
+   "stack": 30835,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 36038,
+   "stack": 35978,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 26,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Shadow",
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 22,
-   "text": "Table 3 · Hand 22 · blinds 30/60 · Quarry calls 60, Marble calls 60, Millstone raises to 185, Icebox calls 125, Quarry calls 125, Marble calls 125, [flop: A♠ 8♠ 4♦], Millstone raises to 60, Icebox folds, Quarry calls 60, Marble folds, [turn: A♠ 8♠ 4♦ J♣], Millstone raises to 60, Quarry calls 60, [river: A♠ 8♠ 4♦ J♣ 7♣], Millstone raises to 60, Quarry calls 60 → Millstone wins 1100 with Three of a kind, As (A♣ A♥)",
-   "pot": 1100
-  },
   {
    "table": 1,
    "handNo": 23,
@@ -552,6 +546,12 @@
    "handNo": 25,
    "text": "Table 3 · Hand 25 · blinds 30/60 · Icebox calls 60, Quarry folds, Marble calls 30, Millstone checks, [flop: A♠ K♥ 2♥], Marble checks, Millstone checks, Icebox checks, [turn: A♠ K♥ 2♥ 10♠], Marble checks, Millstone checks, Icebox checks, [river: A♠ K♥ 2♥ 10♠ J♦], Marble checks, Millstone checks, Icebox raises to 60, Marble calls 60, Millstone calls 60 → Icebox wins 360 with Straight, A high (8♠ Q♠)",
    "pot": 360
+  },
+  {
+   "table": 1,
+   "handNo": 26,
+   "text": "Table 1 · Hand 26 · blinds 30/60 · Shadow calls 60, Professor calls 60, Midas calls 30, Pearl checks, [flop: 5♦ 9♥ 4♠], Midas checks, Pearl checks, Shadow raises to 70, Professor folds, Midas folds, Pearl folds → Shadow takes 310 (everyone else folded)",
+   "pot": 310
   }
  ],
  "finishes": [
