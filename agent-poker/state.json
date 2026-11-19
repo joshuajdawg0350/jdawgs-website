@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:16:12.215Z",
+ "updatedAt": "2026-11-19T01:16:34.624Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 22,
+ "handsPlayed": 23,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1500,
+     "stack": 1450,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 155,
+     "stack": 105,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20490,
+     "stack": 20315,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20955,
+     "stack": 21580,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19685,
+     "stack": 19510,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19495,
+     "stack": 19320,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1500,
+   "stack": 1450,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 155,
+   "stack": 105,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20490,
+   "stack": 20315,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20955,
+   "stack": 21580,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19495,
+   "stack": 19320,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19685,
+   "stack": 19510,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 5,
-   "text": "Table 1 · Hand 5 · blinds 25/50 · Ozone calls 50, Anchor calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus raises to 100, Shadow calls 100, River Rat calls 75, Hammer folds, Ozone calls 50, Anchor calls 50, Pearl calls 50, [flop: 10♦ 3♦ A♥], River Rat checks, Ozone checks, Anchor checks, Pearl checks, Venus checks, Shadow raises to 60, River Rat folds, Ozone calls 60, Anchor calls 60, Pearl folds, Venus calls 60, [turn: 10♦ 3♦ A♥ 9♦], Ozone checks, Anchor checks, Venus checks, Shadow checks, [river: 10♦ 3♦ A♥ 9♦ 4♥], Ozone checks, Anchor checks, Venus checks, Shadow checks → Ozone wins 890 with Pair of As (5♥ A♠)",
-   "pot": 890
-  },
   {
    "table": 2,
    "handNo": 5,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 1 · Hand 8 · blinds 25/50 · Pearl calls 50, Shadow calls 50, Hammer calls 50, Ozone calls 50, Anchor calls 25, Midas checks, [flop: 5♠ 8♠ 9♦], Anchor checks, Midas checks, Pearl checks, Shadow checks, Hammer checks, Ozone checks, [turn: 5♠ 8♠ 9♦ 8♣], Anchor checks, Midas checks, Pearl checks, Shadow checks, Hammer checks, Ozone checks, [river: 5♠ 8♠ 9♦ 8♣ 8♥], Anchor checks, Midas checks, Pearl raises to 50, Shadow calls 50, Hammer raises to 115, Ozone raises to 200, Anchor calls 200, Midas folds, Pearl raises to 295, Shadow raises to 400, Hammer raises to 535, Ozone raises to 710, Anchor calls 510, Pearl raises to 905, Shadow raises to 1120, Hammer raises to 1400, Ozone calls 470, Anchor calls 690, Pearl raises to 1715, Shadow raises to 2060, Hammer raises to 2510, Anchor calls 1110, Pearl raises to 3015, Shadow calls 955, Hammer calls 410, Anchor calls 505 → Pearl wins 13445 with Full house, 8s full of 9s (10♠ 9♣)",
    "pot": 13445
+  },
+  {
+   "table": 2,
+   "handNo": 8,
+   "text": "Table 2 · Hand 8 · blinds 25/50 · Granite calls 50, Bulldog raises to 125, Copper folds, Marble calls 125, Quarry calls 125, Professor calls 100, Slick folds, Granite folds, [flop: J♣ Q♦ 7♠], Professor checks, Bulldog checks, Marble checks, Quarry checks, [turn: J♣ Q♦ 7♠ A♣], Professor checks, Bulldog checks, Marble checks, Quarry checks, [river: J♣ Q♦ 7♠ A♣ K♥], Professor checks, Bulldog checks, Marble raises to 50, Quarry calls 50, Professor calls 50, Bulldog calls 50 → Marble wins 800 with Straight, A high (J♥ 10♠)",
+   "pot": 800
   }
  ],
  "finishes": [
