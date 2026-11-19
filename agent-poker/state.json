@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:05:58.522Z",
+ "updatedAt": "2026-11-19T01:06:24.506Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20200,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20225,
+     "stack": 20175,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 20200,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20225,
+   "stack": 20175,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Velvet",
   "lastActions": []
  },
  "recentHands": [
@@ -516,6 +516,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, River Rat calls 50, Hammer raises to 115, Ozone folds, Anchor calls 115, Midas folds, Baseline folds, Pearl calls 90, Venus folds, Shadow calls 65, River Rat calls 65, [flop: 10♥ K♣ 9♣], Pearl checks, Shadow checks, River Rat checks, Hammer checks, Anchor checks, [turn: 10♥ K♣ 9♣ 7♥], Pearl checks, Shadow checks, River Rat checks, Hammer raises to 65, Anchor calls 65, Pearl folds, Shadow calls 65, River Rat calls 65, [river: 10♥ K♣ 9♣ 7♥ 5♠], Shadow checks, River Rat checks, Hammer raises to 65, Anchor calls 65, Shadow calls 65, River Rat calls 65 → Hammer wins 1145 with Three of a kind, 7s (7♦ 7♣)",
    "pot": 1145
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry folds, Slick folds, Granite calls 50, Dice calls 25, Bulldog checks, [flop: 7♠ K♣ Q♣], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks, [turn: 7♠ K♣ Q♣ 3♣], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks, [river: 7♠ K♣ Q♣ 3♣ 5♦], Dice checks, Bulldog checks, Copper checks, Compass checks, Sixgun checks, Granite checks → Dice wins 300 with Pair of Ks (K♥ 10♦)",
+   "pot": 300
   }
  ],
  "finishes": [],
