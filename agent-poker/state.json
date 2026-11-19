@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:28:12.180Z",
+ "updatedAt": "2026-11-19T01:28:33.058Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 40,
+ "handsPlayed": 41,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 1200,
+     "stack": 1020,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 55,
+     "stack": 215,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 30422,
+     "stack": 30492,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 95660,
+     "stack": 95610,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 1200,
+   "stack": 1020,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 55,
+   "stack": 215,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 30422,
+   "stack": 30492,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 95660,
+   "stack": 95610,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 14,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Slick",
+  "toAct": "Quarry",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 11,
-   "text": "Table 1 · Hand 11 · blinds 25/50 · Anchor calls 50, Professor calls 50, Midas folds, Pearl calls 25, Shadow checks, [flop: 8♥ 9♠ 7♦], Pearl checks, Shadow checks, Anchor checks, Professor checks, [turn: 8♥ 9♠ 7♦ 7♥], Pearl checks, Shadow checks, Anchor checks, Professor checks, [river: 8♥ 9♠ 7♦ 7♥ 10♦], Pearl checks, Shadow raises to 55, Anchor calls 55, Professor raises to 240, Pearl calls 240, Shadow raises to 715, Anchor calls 660, Professor raises to 1980, Pearl calls 1740, Shadow raises to 5335, Anchor calls 4620, Professor raises to 14235, Pearl calls 12255, Shadow goes ALL-IN to 16220, Anchor calls 6855, Professor goes ALL-IN to 18745, Pearl calls 4510 → Shadow wins 30525 with Straight, J high (J♥ 3♦); Professor wins 35575 with Straight, J high (2♦ J♠)",
-   "pot": 66100
-  },
   {
    "table": 2,
    "handNo": 11,
@@ -552,6 +546,12 @@
    "handNo": 14,
    "text": "Table 1 · Hand 14 · blinds 25/50 · Shadow calls 50, Professor calls 50, Midas folds, Pearl checks, [flop: 4♣ 9♠ 8♦], Pearl checks, Shadow checks, Professor checks, [turn: 4♣ 9♠ 8♦ 10♥], Pearl checks, Shadow checks, Professor checks, [river: 4♣ 9♠ 8♦ 10♥ A♦], Pearl checks, Shadow checks, Professor checks → Shadow wins 175 with Pair of 10s (10♣ 2♦)",
    "pot": 175
+  },
+  {
+   "table": 2,
+   "handNo": 14,
+   "text": "Table 2 · Hand 14 · blinds 25/50 · Slick calls 50, Granite calls 50, Bulldog calls 25, Copper checks, [flop: 5♦ 8♦ 6♥], Bulldog checks, Copper checks, Slick checks, Granite checks, [turn: 5♦ 8♦ 6♥ 3♦], Bulldog checks, Copper checks, Slick checks, Granite checks, [river: 5♦ 8♦ 6♥ 3♦ 4♣], Bulldog checks, Copper checks, Slick checks, Granite goes ALL-IN to 5, Bulldog raises to 130, Copper folds, Slick calls 130 → Granite wins 215 with Straight, 8 high (7♠ K♣); Bulldog wins 250 with Pair of 6s (6♦ 10♥)",
+   "pot": 465
   }
  ],
  "finishes": [
