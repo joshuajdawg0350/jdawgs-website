@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:50:20.552Z",
+ "updatedAt": "2026-11-19T12:50:30.699Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 70,
+ "handsPlayed": 71,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 140308,
+     "stack": 165908,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 381192,
+     "stack": 355592,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 38
+   "handsPlayed": 39
   }
  ],
  "seats": [
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 140308,
+   "stack": 165908,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 381192,
+   "stack": 355592,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 39,
-  "stage": "preflop",
-  "board": [],
-  "pot": 38400,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 29,
-   "text": "Table 1 · Hand 29 · blinds 12800/25600 · Marble calls 25600, Compass calls 25600, Slick checks, [flop: 8♠ 3♣ 10♠], Slick checks, Marble checks, Compass checks, [turn: 8♠ 3♣ 10♠ K♦], Slick checks, Marble checks, Compass checks, [river: 8♠ 3♣ 10♠ K♦ 7♠], Slick checks, Marble checks, Compass checks → Marble wins 78258 with Pair of 10s (A♣ 10♥)",
-   "pot": 78258
-  },
   {
    "table": 1,
    "handNo": 30,
@@ -404,6 +390,12 @@
    "table": 1,
    "handNo": 38,
    "text": "Table 1 · Hand 38 · blinds 12800/25600 · Compass calls 12800, Marble checks, [flop: Q♣ A♦ 7♠], Marble checks, Compass checks, [turn: Q♣ A♦ 7♠ A♠], Marble checks, Compass checks, [river: Q♣ A♦ 7♠ A♠ K♣], Marble checks, Compass checks → Marble wins 51200 with Two pair, As and Qs (8♥ Q♠)",
+   "pot": 51200
+  },
+  {
+   "table": 1,
+   "handNo": 39,
+   "text": "Table 1 · Hand 39 · blinds 12800/25600 · Marble calls 12800, Compass checks, [flop: 5♦ 2♥ J♦], Compass checks, Marble checks, [turn: 5♦ 2♥ J♦ 9♣], Compass checks, Marble checks, [river: 5♦ 2♥ J♦ 9♣ 7♣], Compass checks, Marble checks → Compass wins 51200 with Pair of 9s (K♣ 9♥)",
    "pot": 51200
   }
  ],
