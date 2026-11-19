@@ -1,13 +1,12 @@
 /* J-Dawgs Industries service worker — makes jdawgsindustries.com installable.
    Network-first for pages (content is never stale), cache-first for icons. */
-const CACHE = 'jdawgs-v3';
+const CACHE = 'jdawgs-v4';
 const PRECACHE = [
   '/',
   '/manifest.webmanifest',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/icon-maskable-512.png',
-  '/icons/apple-touch-icon.png'
+  '/assets/j-icon-192.png',
+  '/assets/j-icon-512.png',
+  '/assets/j-icon-180.png'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(
