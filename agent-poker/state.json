@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:32:53.479Z",
+ "updatedAt": "2026-11-19T12:33:06.102Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  800,
-  1600
+  1600,
+  3200
  ],
- "level": 6,
- "handsPlayed": 17,
+ "level": 7,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 180,
+     "stack": 80,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 140615,
+     "stack": 141215,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19725,
+     "stack": 19225,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 180,
+   "stack": 80,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19725,
+   "stack": 19225,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 140615,
+   "stack": 141215,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Sixgun",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: K♠ J♦ 4♦], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [turn: K♠ J♦ 4♦ 2♥], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice raises to 150, Bulldog folds, Copper folds, Compass folds, Slick calls 150, [river: K♠ J♦ 4♦ 2♥ 7♣], Slick checks, Dice raises to 330, Slick calls 330 → Dice wins 1210 with Two pair, Js and 2s (2♣ J♣)",
-   "pot": 1210
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -569,6 +555,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 50/100 · Bulldog raises to 340, Copper folds, Slick calls 340, Granite folds, Dice raises to 650, Bulldog raises to 1480, Slick calls 1140, Dice folds, [flop: J♠ 10♣ 7♦], Bulldog checks, Slick checks, [turn: J♠ 10♣ 7♦ 3♣], Bulldog checks, Slick checks, [river: J♠ 10♣ 7♦ 3♣ 9♠], Bulldog checks, Slick raises to 120, Bulldog calls 120 → Bulldog wins 3900 with Pair of As (A♣ A♥)",
    "pot": 3900
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 50/100 · Sixgun calls 100, Compass folds, Marble raises to 200, Deuce folds, Sixgun calls 100, [flop: 6♥ Q♦ K♠], Marble checks, Sixgun checks, [turn: 6♥ Q♦ K♠ K♣], Marble checks, Sixgun checks, [river: 6♥ Q♦ K♠ K♣ J♦], Marble checks, Sixgun raises to 300, Marble calls 300 → Sixgun wins 1100 with Straight, K high (10♥ 9♣)",
+   "pot": 1100
   }
  ],
  "finishes": [
