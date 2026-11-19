@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:31:39.659Z",
+ "updatedAt": "2026-11-19T01:32:02.373Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 47,
+ "handsPlayed": 48,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 133640,
+     "stack": 133590,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 6605,
+     "stack": 6555,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20025,
+     "stack": 20175,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 32603,
+     "stack": 32553,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 133640,
+   "stack": 133590,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 6605,
+   "stack": 6555,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 32603,
+   "stack": 32553,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20025,
+   "stack": 20175,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 16,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 13,
-   "text": "Table 2 · Hand 13 · blinds 25/50 · Copper folds, Slick calls 50, Granite folds, Bulldog checks, [flop: 7♦ 5♠ A♦], Bulldog checks, Slick checks, [turn: 7♦ 5♠ A♦ Q♥], Bulldog raises to 75, Slick folds → Bulldog takes 200 (everyone else folded)",
-   "pot": 200
-  },
   {
    "table": 3,
    "handNo": 13,
@@ -552,6 +538,12 @@
    "handNo": 16,
    "text": "Table 2 · Hand 16 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Slick folds, Granite checks, [flop: 8♥ 5♠ 3♦], Granite checks, Bulldog checks, Copper checks, [turn: 8♥ 5♠ 3♦ A♦], Granite checks, Bulldog checks, Copper checks, [river: 8♥ 5♠ 3♦ A♦ 5♦], Granite checks, Bulldog raises to 105, Copper calls 105, Granite calls 105 → Bulldog wins 490 with Two pair, 8s and 5s (8♠ 6♦)",
    "pot": 490
+  },
+  {
+   "table": 3,
+   "handNo": 16,
+   "text": "Table 3 · Hand 16 · blinds 25/50 · Millstone calls 50, Icebox calls 50, Quarry calls 25, Marble checks, [flop: 6♠ Q♠ 8♣], Quarry checks, Marble checks, Millstone checks, Icebox checks, [turn: 6♠ Q♠ 8♣ 3♠], Quarry checks, Marble checks, Millstone checks, Icebox checks, [river: 6♠ Q♠ 8♣ 3♠ 10♦], Quarry checks, Marble checks, Millstone checks, Icebox checks → Quarry wins 200 with Pair of 8s (7♠ 8♥)",
+   "pot": 200
   }
  ],
  "finishes": [
