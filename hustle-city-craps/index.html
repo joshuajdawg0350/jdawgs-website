@@ -260,6 +260,60 @@ h1.title{margin:6px 0 2px;font-size:clamp(44px,13.5vw,64px)}
 .scorelines .sl{display:flex;justify-content:space-between;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:15.5px}
 .scorelines .sl b{font-variant-numeric:tabular-nums}
 .scorelines .sl .neg{color:var(--red)} .scorelines .sl .pos{color:var(--green)}
+/* ===== SPADES PHONE-SIZE PASS — 2026-11-18 (owner's real-phone verdict on his
+   Galaxy A26: "The spades game is too little for the phone. Can't see the cards.")
+   Root cause: the hand fan was sized to squeeze 13 cards into one row (47px
+   cards, 44px under the <=374px query), the trick cards were 52px, the oval
+   table flexed to whatever height was left, and the Rex/Slim seat rows crushed
+   their bid chips. Fix is presentation only — zero game logic touched:
+   the hand becomes a two-row fan of 72px cards with corner indices (visible
+   tap strip 48px), trick cards grow to 64x88, the table gets a real minimum
+   height, and the side seats stack name-over-chip so nothing clips. All rules
+   are #screen-spades-scoped so they beat the generic max-height/max-width
+   shrink queries above. ===== */
+#screen-spades .tablewrap{min-height:208px}
+#screen-spades .slot{width:64px;height:88px;border-radius:9px}
+#screen-spades .slot.s-bottom{bottom:12px}
+#screen-spades .slot.s-top{top:12px}
+#screen-spades .slot.s-left{left:12px}
+#screen-spades .slot.s-right{right:12px}
+#screen-spades .mcard{width:64px;height:88px;border-radius:9px}
+#screen-spades .mcard .rk{font-size:26px}
+#screen-spades .mcard .st{font-size:26px}
+#screen-spades .myhand{flex-wrap:wrap;row-gap:5px;min-height:0;max-width:372px;margin-inline:auto;padding-top:4px}
+#screen-spades .hcard{width:72px;height:100px;margin-left:-24px;border-radius:9px;
+  justify-content:flex-start;align-items:flex-start;padding:6px 0 0 7px}
+#screen-spades .hcard:first-child{margin-left:-24px}
+#screen-spades .hcard .rk{font-size:25px}
+#screen-spades .hcard .st{font-size:23px}
+#screen-spades .hcard.legal{transform:translateY(-6px)}
+#seat-1,#seat-3{flex-direction:column;gap:2px}
+#seat-1{align-items:flex-start}
+#seat-3{flex-direction:column!important;align-items:flex-end}
+#seat-1 .pchip,#seat-3 .pchip{margin-left:0}
+#screen-spades:has(#score-panel:not(.hidden)) .tablewrap{min-height:150px}
+#screen-spades:has(#bid-panel:not(.hidden)) .tablewrap{min-height:108px}
+#screen-spades:has(#bid-panel:not(.hidden)) .gamefoot{display:none}
+#screen-spades:has(#bid-panel:not(.hidden)) .sp-main{gap:4px}
+#screen-spades:has(#bid-panel:not(.hidden)) .panelbox{padding-top:8px;padding-bottom:8px}
+@media (max-width:374px){
+  #screen-spades .myhand{max-width:330px}
+  #screen-spades .hcard{width:66px;height:94px;margin-left:-22px}
+  #screen-spades .hcard:first-child{margin-left:-22px}
+  #screen-spades .hcard .rk{font-size:23px}
+  #screen-spades .hcard .st{font-size:21px}
+  #screen-spades .slot,#screen-spades .mcard{width:60px;height:84px}
+  #screen-spades .mcard .rk,#screen-spades .mcard .st{font-size:24px}
+  #screen-spades .seat .who{letter-spacing:.06em}
+  #screen-spades .seat .backs{letter-spacing:1px;font-size:12px}
+}
+@media (max-height:800px){
+  #screen-spades .gamefoot{display:none}
+}
+@media (max-height:500px){
+  #screen-spades .tablewrap{min-height:150px}
+  #screen-spades .hcard{height:84px}
+}
 /* ===== FIT STAGE + BRAND PASS — 2026-11-11 (owner's brand order: the Hustle City
    world inside the Hustle City games — the street, the cars, the boss; premium,
    never sloppy). Imagery is house art only: the street is the game's own hero
