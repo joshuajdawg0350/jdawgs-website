@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:55:30.624Z",
+ "updatedAt": "2026-11-19T12:55:41.068Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 84,
+ "handsPlayed": 85,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 462376,
+     "stack": 475176,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 59124,
+     "stack": 46324,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 52
+   "handsPlayed": 53
   }
  ],
  "seats": [
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 462376,
+   "stack": 475176,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59124,
+   "stack": 46324,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 53,
-  "stage": "preflop",
-  "board": [],
-  "pot": 38400,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 43,
-   "text": "Table 1 · Hand 43 · blinds 12800/25600 · Marble folds → Compass takes 38400 (everyone else folded)",
-   "pot": 38400
-  },
   {
    "table": 1,
    "handNo": 44,
@@ -405,6 +391,12 @@
    "handNo": 52,
    "text": "Table 1 · Hand 52 · blinds 12800/25600 · Compass calls 12800, Marble checks, [flop: 10♥ A♠ K♦], Marble checks, Compass checks, [turn: 10♥ A♠ K♦ Q♣], Marble checks, Compass checks, [river: 10♥ A♠ K♦ Q♣ 3♣], Marble checks, Compass raises to 28160, Marble calls 28160 → Compass wins 107520 with Three of a kind, 3s (3♦ 3♥)",
    "pot": 107520
+  },
+  {
+   "table": 1,
+   "handNo": 53,
+   "text": "Table 1 · Hand 53 · blinds 12800/25600 · Marble folds → Compass takes 38400 (everyone else folded)",
+   "pot": 38400
   }
  ],
  "finishes": [
