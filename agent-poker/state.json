@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T01:51:53.286Z",
+ "updatedAt": "2026-11-19T01:52:14.750Z",
  "mode": "real",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 81,
+ "handsPlayed": 82,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 180292,
+     "stack": 179592,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 134405,
+     "stack": 133705,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 95345,
+     "stack": 94645,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 32388,
+     "stack": 35188,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 30912,
+     "stack": 30212,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 27
+   "handsPlayed": 28
   }
  ],
  "seats": [
@@ -135,7 +135,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 180292,
+   "stack": 179592,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 134405,
+   "stack": 133705,
    "status": "seated",
    "reentered": false
   },
@@ -198,7 +198,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30912,
+   "stack": 30212,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 95345,
+   "stack": 94645,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32388,
+   "stack": 35188,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 28,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 24,
-   "text": "Table 3 · Hand 24 · blinds 30/60 · Millstone calls 60, Icebox folds, Quarry folds, Marble checks, [flop: 5♣ Q♣ 4♥], Marble checks, Millstone checks, [turn: 5♣ Q♣ 4♥ 9♠], Marble checks, Millstone checks, [river: 5♣ Q♣ 4♥ 9♠ K♠], Marble checks, Millstone checks → Millstone wins 150 with Pair of 9s (9♥ J♦)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 25,
@@ -404,6 +390,12 @@
    "handNo": 27,
    "text": "Table 3 · Hand 27 · blinds 30/60 · Marble calls 60, Millstone calls 60, Icebox folds, Quarry checks, [flop: A♣ A♠ 4♥], Quarry checks, Marble checks, Millstone checks, [turn: A♣ A♠ 4♥ 9♠], Quarry checks, Marble checks, Millstone checks, [river: A♣ A♠ 4♥ 9♠ 9♣], Quarry checks, Marble checks, Millstone raises to 60, Quarry calls 60, Marble calls 60 → Marble wins 390 with Two pair, As and 9s (Q♥ 8♣)",
    "pot": 390
+  },
+  {
+   "table": 1,
+   "handNo": 28,
+   "text": "Table 1 · Hand 28 · blinds 30/60 · Marble calls 60, Bulldog calls 60, Midas folds, Quarry folds, Icebox folds, Slick folds, Pearl calls 60, Millstone calls 30, Copper checks, [flop: 6♠ 2♥ Q♥], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [turn: 6♠ 2♥ Q♥ 10♣], Millstone checks, Copper checks, Marble checks, Bulldog checks, Pearl checks, [river: 6♠ 2♥ Q♥ 10♣ 2♣], Millstone raises to 60, Copper calls 60, Marble calls 60, Bulldog raises to 350, Pearl calls 350, Millstone raises to 640, Copper calls 580, Marble calls 580, Bulldog calls 290, Pearl calls 290 → Marble wins 3500 with Three of a kind, 2s (2♠ A♦)",
+   "pot": 3500
   }
  ],
  "finishes": [
