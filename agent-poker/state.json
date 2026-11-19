@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:30:06.033Z",
+ "updatedAt": "2026-11-19T12:30:18.734Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  100,
-  200
+  200,
+  400
  ],
- "level": 3,
- "handsPlayed": 8,
+ "level": 4,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -150,14 +150,6 @@
      "stack": 19775,
      "status": "seated",
      "reentered": false
-    },
-    {
-     "name": "Compass",
-     "kind": "house",
-     "house": true,
-     "stack": 19775,
-     "status": "seated",
-     "reentered": false
     }
    ],
    "handsPlayed": 3
@@ -169,7 +161,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20315,
+     "stack": 20265,
      "status": "seated",
      "reentered": false
     },
@@ -185,16 +177,16 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19950,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19895,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -225,7 +217,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 119945,
+     "stack": 160880,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +233,20 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19770,
+     "stack": 18730,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Compass",
+     "kind": "house",
+     "house": true,
+     "stack": 19775,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20315,
+   "stack": 20265,
    "status": "seated",
    "reentered": false
   },
@@ -345,8 +345,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -372,8 +372,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19895,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -416,7 +416,7 @@
    "name": "Compass",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 19775,
    "status": "seated",
    "reentered": false
@@ -462,7 +462,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19770,
+   "stack": 18730,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 119945,
+   "stack": 160880,
    "status": "seated",
    "reentered": false
   },
@@ -500,15 +500,7 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -557,6 +549,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: K♠ J♦ 4♦], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice checks, [turn: K♠ J♦ 4♦ 2♥], Bulldog checks, Copper checks, Compass checks, Slick checks, Dice raises to 150, Bulldog folds, Copper folds, Compass folds, Slick calls 150, [river: K♠ J♦ 4♦ 2♥ 7♣], Slick checks, Dice raises to 330, Slick calls 330 → Dice wins 1210 with Two pair, Js and 2s (2♣ J♣)",
    "pot": 1210
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Deuce calls 50, Millstone calls 50, Icebox calls 50, Sixgun calls 25, Anchor checks, [flop: 6♠ K♦ 5♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [turn: 6♠ K♦ 5♣ Q♣], Sixgun checks, Anchor checks, Deuce checks, Millstone checks, Icebox checks, [river: 6♠ K♦ 5♣ Q♣ 10♥], Sixgun raises to 150, Anchor calls 150, Deuce folds, Millstone calls 150, Icebox raises to 355, Sixgun raises to 990, Anchor calls 840, Millstone calls 840, Icebox raises to 1855, Sixgun raises to 4900, Anchor folds, Millstone calls 3910, Icebox raises to 9040, Sixgun raises to 21090, Millstone calls 15000, Icebox calls 10805 → Sixgun wins 62075 with Straight, A high (A♠ J♠)",
+   "pot": 62075
   }
  ],
  "finishes": [
@@ -646,6 +644,22 @@
    "kind": "house",
    "table": 3,
    "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3,
+   "provisional": true
+  },
+  {
+   "name": "Icebox",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3,
    "provisional": true
   }
  ],
