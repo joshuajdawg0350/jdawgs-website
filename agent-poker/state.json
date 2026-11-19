@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-19T12:48:22.619Z",
+ "updatedAt": "2026-11-19T12:48:34.978Z",
  "mode": "rehearsal",
  "date": "2026-11-18",
  "status": "running",
@@ -12,7 +12,7 @@
   25600
  ],
  "level": 10,
- "handsPlayed": 65,
+ "handsPlayed": 66,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 206898,
+     "stack": 150578,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 45574,
+     "stack": 19974,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 269028,
+     "stack": 350948,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 33
+   "handsPlayed": 34
   }
  ],
  "seats": [
@@ -118,7 +118,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 45574,
+   "stack": 19974,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 206898,
+   "stack": 150578,
    "status": "seated",
    "reentered": false
   },
@@ -280,7 +280,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 269028,
+   "stack": 350948,
    "status": "seated",
    "reentered": false
   },
@@ -336,22 +336,8 @@
   "test": 1
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 34,
-  "stage": "preflop",
-  "board": [],
-  "pot": 38400,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 24,
-   "text": "Table 1 · Hand 24 · blinds 3200/6400 · Granite calls 6400, Marble folds, Midas folds, Compass folds, River Rat calls 3200, Slick checks, [flop: A♦ 2♦ 6♦], River Rat checks, Slick checks, Granite checks, [turn: A♦ 2♦ 6♦ 8♦], River Rat checks, Slick checks, Granite checks, [river: A♦ 2♦ 6♦ 8♦ A♣], River Rat checks, Slick checks, Granite raises to 6400, River Rat calls 6400, Slick calls 6400 → Granite wins 38400 with Three of a kind, As (A♠ 9♣)",
-   "pot": 38400
-  },
   {
    "table": 1,
    "handNo": 25,
@@ -405,6 +391,12 @@
    "handNo": 33,
    "text": "Table 1 · Hand 33 · blinds 12800/25600 · Slick calls 25600, Marble folds, Compass checks, [flop: 3♣ 5♣ 7♣], Compass checks, Slick checks, [turn: 3♣ 5♣ 7♣ K♦], Compass checks, Slick checks, [river: 3♣ 5♣ 7♣ K♦ K♣], Compass raises to 28160, Slick calls 28160 → Compass wins 120320 with Three of a kind, Ks (2♦ K♥)",
    "pot": 120320
+  },
+  {
+   "table": 1,
+   "handNo": 34,
+   "text": "Table 1 · Hand 34 · blinds 12800/25600 · Marble calls 25600, Compass calls 12800, Slick checks, [flop: 10♦ 4♣ 7♥], Compass raises to 30720, Slick folds, Marble calls 30720, [turn: 10♦ 4♣ 7♥ A♥], Compass checks, Marble checks, [river: 10♦ 4♣ 7♥ A♥ 8♦], Compass checks, Marble checks → Marble wins 138240 with Pair of 10s (10♥ 3♣)",
+   "pot": 138240
   }
  ],
  "finishes": [
