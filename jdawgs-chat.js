@@ -211,6 +211,16 @@
     'background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font:800 15px/1.2 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;',
     'box-shadow:0 6px 24px rgba(0,0,0,.5),0 0 0 1px rgba(0,150,255,.25)}',
     '#jdchat-btn .jdchat-face{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid #0096FF;box-shadow:0 0 8px rgba(0,150,255,.55);flex:0 0 auto}',
+    /* Compact dock (2026-11-19 repertoire audit): on pages where the
+       full-width pill covered primary content, the button docks
+       icon-only and the page gains bottom safe-area padding so no
+       primary button or text can sit under it. The .jdchat-dock
+       class is added by build() on those pages only. */
+    'body.jdchat-dock{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}',
+    'body.jdchat-dock #jdchat-btn{width:56px;height:56px;min-height:56px;padding:0;gap:0;font-size:0;line-height:0;border-radius:50%;justify-content:center;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}',
+    'body.jdchat-dock #jdchat-btn .jdchat-botwrap{width:40px;height:40px}',
+    'body.jdchat-dock #jdchat-btn .jdchat-face{width:40px;height:40px}',
+    'body.jdchat-dock #jdchat-panel{bottom:calc(84px + env(safe-area-inset-bottom,0px))}',
     '#jdchat-head .jdchat-face{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #0096FF;flex:0 0 auto}',
     '#jdchat-welcome{display:block;width:100%;height:132px;object-fit:cover;border-radius:12px;border:1px solid #263144}',
     '#jdchat-panel{position:fixed;right:10px;bottom:74px;z-index:99991;width:min(360px,calc(100vw - 20px));',
@@ -357,6 +367,20 @@
   var voiceBtn = null;
 
   function build() {
+    /* Compact dock scope (2026-11-19 repertoire audit): the pages
+       where the full-width pill covered primary content — Human
+       Hands landing / board / work, Games, Apps, AI Tool Store and
+       the J-Dawgs home page. This site only: the Digital Dollar
+       Store keeps its full pill (separate pass). */
+    if (!IS_STORE) {
+      var path = window.location.pathname;
+      if (/\/human-hands\/(index\.html|board\.html|work\.html)?$/.test(path) ||
+          /\/games\/(index\.html)?$/.test(path) ||
+          /\/(apps|ai-tool-store)\.html$/.test(path) ||
+          /^\/(index\.html)?$/.test(path)) {
+        document.body.classList.add('jdchat-dock');
+      }
+    }
     var style = document.createElement('style');
     style.textContent = CSS;
     document.head.appendChild(style);

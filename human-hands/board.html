@@ -66,6 +66,12 @@
   .hh-offer p{margin:0;font-size:.97rem;color:var(--body);max-width:66ch}
   .hh-offer .claim{display:inline-flex;align-items:center;min-height:44px;margin-top:.9rem;font-weight:700;color:var(--eb-bright);text-decoration:none;font-size:1.02rem}
   .hh-offer .claim:hover{text-decoration:underline}
+  .hh-offer-slim{padding:1rem 1.2rem}
+  .hh-offer-slim h2{font-size:clamp(1.15rem,4.2vw,1.5rem);margin:0 0 .3rem}
+  .hh-offer-terms{margin-top:.5rem}
+  .hh-offer-terms summary{cursor:pointer;font-weight:600;color:var(--eb-bright);min-height:44px;display:flex;align-items:center}
+  .hh-offer-terms p{margin-top:.4rem}
+  .postrow .btn.btn-primary{flex:1 1 100%}
   .hh-band{padding:2.8rem 0;border-top:1px solid var(--line)}
   .jobs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.6rem}
   .job{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.4rem;display:flex;flex-direction:column;gap:.55rem}
@@ -172,17 +178,6 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
   </div>
 </header>
 
-<section aria-label="First job free offer" style="padding:1.4rem 0 0">
-  <div class="wrap">
-    <div class="hh-offer">
-      <p class="eyebrow" style="margin:0 0 .4rem">Limited offer · Springfield, MO metro · Businesses only</p>
-      <h2>First business to post a job gets $50 of task work — FREE</h2>
-      <p>The first Springfield-area business to post a real job on Human Hands gets $50 of task work done free. Pickups &amp; deliveries, yard help, moving help, errands, in-person verification visits, restock runs, lockout handoffs, turnover photos — <b style="color:#fff">tasks only, no trade work</b>. Joshua does the job himself or pays the worker himself — either way, you pay $0 for that first job, and there's no fee on it. One per business. First qualifying post claims it — when it's claimed, the offer closes. After that first job, the regular deal stands: you set the price, the worker keeps 100% of the price plus 100% of tips, and a flat 15% on top is the whole cost.</p>
-      <a class="claim" href="#post">Post your job →</a>
-    </div>
-  </div>
-</section>
-
 <section class="hh-top">
   <div class="wrap">
     <p class="eyebrow">The Human Hands board · Live now</p>
@@ -205,6 +200,17 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
       <span><b>13 of 100</b> Founding Hands seats claimed — 87 left</span>
       <span><b>100% + tips</b> of the posted price goes to the worker</span>
       <span><b>+15%</b> platform fee, paid by the poster — never the worker</span>
+    </div>
+  </div>
+</section>
+
+<section aria-label="First job free offer" style="padding:1.4rem 0 0">
+  <div class="wrap">
+    <div class="hh-offer hh-offer-slim">
+      <p class="eyebrow" style="margin:0 0 .4rem">Limited offer · Springfield, MO metro · Businesses only</p>
+      <h2>First business to post a job gets $50 of task work — FREE</h2>
+      <details class="hh-offer-terms"><summary>Offer terms</summary><p>The first Springfield-area business to post a real job on Human Hands gets $50 of task work done free. Pickups &amp; deliveries, yard help, moving help, errands, in-person verification visits, restock runs, lockout handoffs, turnover photos — <b style="color:#fff">tasks only, no trade work</b>. Joshua does the job himself or pays the worker himself — either way, you pay $0 for that first job, and there's no fee on it. One per business. First qualifying post claims it — when it's claimed, the offer closes. After that first job, the regular deal stands: you set the price, the worker keeps 100% of the price plus 100% of tips, and a flat 15% on top is the whole cost.</p></details>
+      <a class="claim" href="#post">Post your job →</a>
     </div>
   </div>
 </section>
