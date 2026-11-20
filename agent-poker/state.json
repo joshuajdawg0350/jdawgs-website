@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:20:19.712Z",
+ "updatedAt": "2026-11-20T01:20:38.302Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 44,
+ "handsPlayed": 45,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 40662,
+     "stack": 41242,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 18965,
+     "stack": 18940,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 81898,
+     "stack": 81713,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 1855,
+     "stack": 1670,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 75830,
+     "stack": 75645,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 14
+   "handsPlayed": 15
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 40662,
+   "stack": 41242,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18965,
+   "stack": 18940,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 75830,
+   "stack": 75645,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1855,
+   "stack": 1670,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 81898,
+   "stack": 81713,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 15,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Hammer",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 12,
-   "text": "Table 2 · Hand 12 · blinds 25/50 · Marble calls 50, Shadow folds, Granite folds, Compass checks, [flop: 6♣ 5♣ A♣], Compass checks, Marble checks, [turn: 6♣ 5♣ A♣ Q♠], Compass checks, Marble checks, [river: 6♣ 5♣ A♣ Q♠ K♠], Compass checks, Marble checks → Marble wins 125 with Two pair, Ks and 6s (K♦ 6♠)",
-   "pot": 125
-  },
   {
    "table": 3,
    "handNo": 12,
@@ -552,6 +538,12 @@
    "handNo": 15,
    "text": "Table 2 · Hand 15 · blinds 25/50 · Compass calls 50, Marble calls 50, Shadow folds, Granite raises to 100, Compass calls 50, Marble calls 50, [flop: 8♣ 5♥ A♣], Granite checks, Compass checks, Marble checks, [turn: 8♣ 5♥ A♣ 2♦], Granite checks, Compass checks, Marble checks, [river: 8♣ 5♥ A♣ 2♦ 10♣], Granite checks, Compass checks, Marble checks → Compass wins 325 with Pair of As (A♠ K♦)",
    "pot": 325
+  },
+  {
+   "table": 3,
+   "handNo": 15,
+   "text": "Table 3 · Hand 15 · blinds 25/50 · Hammer calls 50, River Rat calls 50, Deuce calls 50, Icebox folds, Pickpocket checks, [flop: 10♠ 4♣ 4♠], Pickpocket checks, Hammer checks, River Rat checks, Deuce checks, [turn: 10♠ 4♣ 4♠ K♣], Pickpocket checks, Hammer checks, River Rat checks, Deuce checks, [river: 10♠ 4♣ 4♠ K♣ 7♦], Pickpocket raises to 135, Hammer calls 135, River Rat calls 135, Deuce calls 135 → Deuce wins 765 with Two pair, 10s and 7s (10♥ 7♣)",
+   "pot": 765
   }
  ],
  "finishes": [
