@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:12:23.005Z",
+ "updatedAt": "2026-11-20T01:12:41.851Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 27,
+ "handsPlayed": 28,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19075,
+     "stack": 18975,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 21375,
+     "stack": 21525,
      "status": "seated",
      "reentered": false
     },
@@ -50,7 +50,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19900,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19075,
+   "stack": 18975,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21375,
+   "stack": 21525,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 10,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Pearl",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 6,
-   "text": "Table 3 · Hand 6 · blinds 25/50 · Deuce raises to 155, Millstone calls 155, Icebox calls 155, Tally calls 155, Pickpocket calls 130, Anchor calls 105, [flop: A♥ 2♠ A♣], Pickpocket raises to 560, Anchor calls 560, Deuce calls 560, Millstone calls 560, Icebox folds, Tally calls 560, [turn: A♥ 2♠ A♣ 7♥], Pickpocket raises to 2240, Anchor calls 2240, Deuce calls 2240, Millstone calls 2240, Tally calls 2240, [river: A♥ 2♠ A♣ 7♥ 10♦], Pickpocket raises to 8960, Anchor calls 8960, Deuce goes ALL-IN to 17788, Millstone calls 16710, Tally calls 15670, Pickpocket raises to 67598, Anchor calls 8405 → Deuce wins 100251 with Two pair, As and Ks (K♥ K♦); Pickpocket wins 49810 with Two pair, As and 2s (9♦ 2♥)",
-   "pot": 150061
-  },
   {
    "table": 1,
    "handNo": 7,
@@ -552,6 +546,12 @@
    "handNo": 9,
    "text": "Table 3 · Hand 9 · blinds 25/50 · Pickpocket calls 50, Hammer folds, River Rat calls 50, Deuce calls 25, Icebox checks, [flop: A♣ 9♠ J♠], Deuce checks, Icebox checks, Pickpocket checks, River Rat checks, [turn: A♣ 9♠ J♠ 5♣], Deuce checks, Icebox checks, Pickpocket checks, River Rat checks, [river: A♣ 9♠ J♠ 5♣ 6♦], Deuce checks, Icebox checks, Pickpocket checks, River Rat checks → Deuce wins 200 with Pair of As (A♠ 8♠)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 10,
+   "text": "Table 1 · Hand 10 · blinds 25/50 · Pearl calls 50, Venus folds, Midas calls 25, Baseline checks, [flop: Q♣ 7♥ 6♠], Midas checks, Baseline checks, Pearl checks, [turn: Q♣ 7♥ 6♠ K♠], Midas checks, Baseline checks, Pearl checks, [river: Q♣ 7♥ 6♠ K♠ Q♠], Midas checks, Baseline checks, Pearl raises to 50, Midas folds, Baseline calls 50 → Pearl wins 250 with Three of a kind, Qs (A♠ Q♦)",
+   "pot": 250
   }
  ],
  "finishes": [
