@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:04:17.994Z",
+ "updatedAt": "2026-11-20T02:04:41.718Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 146,
+ "handsPlayed": 147,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22334,
+     "stack": 22254,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55373,
+     "stack": 55533,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 977,
+     "stack": 897,
      "status": "seated",
      "reentered": false
     },
@@ -50,7 +50,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22334,
+   "stack": 22254,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55373,
+   "stack": 55533,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 977,
+   "stack": 897,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 50,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Pearl",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 45,
-   "text": "Table 3 · Hand 45 · blinds 40/80 · Icebox raises to 160, River Rat calls 120, Deuce folds, [flop: 8♣ J♣ 4♦], River Rat checks, Icebox checks, [turn: 8♣ J♣ 4♦ 9♣], River Rat checks, Icebox checks, [river: 8♣ J♣ 4♦ 9♣ 3♥], River Rat checks, Icebox checks → Icebox wins 400 with Three of a kind, 9s (9♠ 9♥)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 47,
@@ -552,6 +546,12 @@
    "handNo": 48,
    "text": "Table 3 · Hand 48 · blinds 40/80 · Icebox folds, River Rat calls 40, Deuce checks, [flop: 2♦ 3♥ 7♣], River Rat checks, Deuce checks, [turn: 2♦ 3♥ 7♣ 4♥], River Rat checks, Deuce checks, [river: 2♦ 3♥ 7♣ 4♥ 8♣], River Rat checks, Deuce checks → Deuce wins 160 with Pair of 4s (4♠ J♣)",
    "pot": 160
+  },
+  {
+   "table": 1,
+   "handNo": 50,
+   "text": "Table 1 · Hand 50 · blinds 40/80 · Pearl calls 80, Venus folds, Midas calls 40, Baseline checks, [flop: J♠ K♥ K♠], Midas checks, Baseline checks, Pearl checks, [turn: J♠ K♥ K♠ 7♣], Midas checks, Baseline checks, Pearl checks, [river: J♠ K♥ K♠ 7♣ 4♣], Midas checks, Baseline checks, Pearl checks → Baseline wins 240 with Two pair, Ks and 7s (A♠ 7♦)",
+   "pot": 240
   }
  ],
  "finishes": [
