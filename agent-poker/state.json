@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:02:10.262Z",
+ "updatedAt": "2026-11-20T02:02:23.638Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 140,
+ "handsPlayed": 141,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55163,
+     "stack": 55083,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 1227,
+     "stack": 1147,
      "status": "seated",
      "reentered": false
     },
@@ -45,12 +45,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 2026,
+     "stack": 2186,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 47
+   "handsPlayed": 48
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55163,
+   "stack": 55083,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1227,
+   "stack": 1147,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2026,
+   "stack": 2186,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 48,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Midas",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 43,
-   "text": "Table 3 · Hand 43 · blinds 40/80 · River Rat calls 80, Deuce calls 40, Icebox checks, [flop: 6♥ 8♦ 9♥], Deuce checks, Icebox checks, River Rat checks, [turn: 6♥ 8♦ 9♥ 2♦], Deuce checks, Icebox checks, River Rat checks, [river: 6♥ 8♦ 9♥ 2♦ 4♦], Deuce checks, Icebox checks, River Rat checks → Icebox wins 240 with Pair of 8s (10♥ 8♠)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 45,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 46,
    "text": "Table 3 · Hand 46 · blinds 40/80 · River Rat calls 80, Deuce calls 40, Icebox checks, [flop: 2♥ 7♠ 8♦], Deuce checks, Icebox checks, River Rat checks, [turn: 2♥ 7♠ 8♦ K♥], Deuce checks, Icebox checks, River Rat checks, [river: 2♥ 7♠ 8♦ K♥ 2♦], Deuce checks, Icebox checks, River Rat checks → Deuce wins 240 with Two pair, Ks and 2s (9♠ K♣)",
+   "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 48,
+   "text": "Table 1 · Hand 48 · blinds 40/80 · Midas folds, Baseline calls 80, Pearl calls 40, Venus checks, [flop: 3♣ 3♥ 2♦], Pearl checks, Venus checks, Baseline checks, [turn: 3♣ 3♥ 2♦ A♦], Pearl checks, Venus checks, Baseline checks, [river: 3♣ 3♥ 2♦ A♦ Q♦], Pearl checks, Venus checks, Baseline checks → Venus wins 240 with Two pair, Qs and 3s (9♣ Q♠)",
    "pot": 240
   }
  ],
