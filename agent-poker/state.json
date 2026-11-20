@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:04:54.345Z",
+ "updatedAt": "2026-11-20T01:05:11.803Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 8,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20743,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 20692,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20625,
+     "stack": 20105,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19380,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19380,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 20743,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 20692,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20625,
+   "stack": 20105,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19380,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19380,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -540,6 +532,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Marble calls 50, Sixgun calls 50, Quarry calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: 9♣ K♣ 4♠], Bulldog checks, Copper checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Dice checks, [turn: 9♣ K♣ 4♠ 7♥], Bulldog checks, Copper checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Dice checks, [river: 9♣ K♣ 4♠ 7♥ 5♣], Bulldog checks, Copper checks, Compass checks, Marble raises to 50, Sixgun calls 50, Quarry calls 50, Slick calls 50, Dice raises to 410, Bulldog folds, Copper folds, Compass folds, Marble raises to 1015, Sixgun calls 965, Quarry calls 965, Slick calls 965, Dice raises to 3935, Marble raises to 8970, Sixgun calls 7955, Quarry calls 7955, Slick calls 7955, Dice calls 5035 → Marble wins 45250 with Flush, A high (Q♣ A♣)",
    "pot": 45250
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Tally raises to 100, Pickpocket calls 100, Professor folds, Deuce calls 100, Wildfire calls 100, Millstone folds, Icebox folds, Velvet calls 50, [flop: 4♥ K♥ K♣], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, [turn: 4♥ K♥ K♣ 10♠], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, [river: 4♥ K♥ K♣ 10♠ Q♠], Velvet checks, Tally checks, Pickpocket checks, Deuce raises to 65, Wildfire raises to 420, Velvet calls 420, Tally calls 420, Pickpocket calls 420, Deuce calls 355 → Deuce wins 1313 with Two pair, Ks and Qs (9♦ Q♦); Wildfire wins 1312 with Two pair, Ks and Qs (Q♥ 6♦)",
+   "pot": 2625
   }
  ],
  "finishes": [],
