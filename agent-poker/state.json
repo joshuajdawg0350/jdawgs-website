@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:10:25.929Z",
+ "updatedAt": "2026-11-20T01:10:43.418Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 22,
+ "handsPlayed": 23,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 88590,
+     "stack": 88565,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 25973,
+     "stack": 26048,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85822,
+     "stack": 85772,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 88590,
+   "stack": 88565,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25973,
+   "stack": 26048,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85822,
+   "stack": 85772,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Marble",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 5,
-   "text": "Table 1 · Hand 5 · blinds 25/50 · Ozone calls 50, Anchor calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus calls 50, Shadow calls 50, River Rat calls 25, Hammer checks, [flop: 10♥ 6♠ 5♠], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks, Venus checks, Shadow checks, [turn: 10♥ 6♠ 5♠ 3♠], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks, Venus checks, Shadow checks, [river: 10♥ 6♠ 5♠ 3♠ 7♦], River Rat checks, Hammer checks, Ozone checks, Anchor checks, Pearl checks, Venus raises to 50, Shadow folds, River Rat calls 50, Hammer folds, Ozone calls 50, Anchor calls 50, Pearl calls 50 → Venus wins 600 with Straight, 10 high (8♣ 9♠)",
-   "pot": 600
-  },
   {
    "table": 2,
    "handNo": 5,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 1 · Hand 8 · blinds 25/50 · Midas folds, Baseline calls 50, Pearl calls 25, Venus checks, [flop: A♣ 7♣ 6♥], Pearl checks, Venus checks, Baseline checks, [turn: A♣ 7♣ 6♥ 5♣], Pearl raises to 50, Venus calls 50, Baseline calls 50, [river: A♣ 7♣ 6♥ 5♣ 8♥], Pearl raises to 50, Venus raises to 100, Baseline calls 100, Pearl raises to 155, Venus raises to 210, Baseline calls 110, Pearl raises to 270, Venus calls 60, Baseline calls 60 → Pearl wins 1110 with Flush, A high (2♣ 4♣)",
    "pot": 1110
+  },
+  {
+   "table": 2,
+   "handNo": 8,
+   "text": "Table 2 · Hand 8 · blinds 25/50 · Marble calls 50, Shadow folds, Granite folds, Compass checks, [flop: 4♣ 2♦ 3♣], Compass checks, Marble checks, [turn: 4♣ 2♦ 3♣ 3♠], Compass checks, Marble checks, [river: 4♣ 2♦ 3♣ 3♠ 9♥], Compass checks, Marble checks → Compass wins 125 with Pair of 3s (5♥ K♠)",
+   "pot": 125
   }
  ],
  "finishes": [
