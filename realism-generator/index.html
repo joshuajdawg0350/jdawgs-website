@@ -12,8 +12,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Prompt Engine" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Hustle City Prompt Generator — Universal Autoprompt Engine | J-Dawgs Industries</title>
-    <meta name="description" content="The Hustle City Prompt Generator is now a universal autoprompt engine: state any goal in plain words — realism image & video, writing, business, coding, research, or agent instructions — and get an expert-grade prompt formatted for the AI that does the work. No ads. We never sell your information." />
+    <title>J-Dog's Prompt Generator — Universal Autoprompt Engine | J-Dawgs Industries</title>
+    <meta name="description" content="The J-Dog's Prompt Generator is now a universal autoprompt engine: state any goal in plain words — realism image & video, writing, business, coding, research, or agent instructions — and get an expert-grade prompt formatted for the AI that does the work. No ads. We never sell your information." />
     <link rel="canonical" href="https://jdawgsindustries.com/realism-generator/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -407,7 +407,7 @@
     <div class="wrap">
       <header class="brand">
         <span class="brand-mark">J-Dawgs Industries</span>
-        <h1>Hustle City<br />Prompt Generator<span class="tm">™</span></h1>
+        <h1>J-Dog's<br />Prompt Generator<span class="tm">™</span></h1>
         <p class="tagline">No fancy logos. Just quality products.</p>
         <div class="pledges">
           <span><b>No ads.</b></span>
@@ -864,9 +864,9 @@
         <div class="foot-brand">J-Dawgs Industries</div>
         <div style="margin-bottom:6px"><a href="../games/">← Back to the Hustle City Arcade</a></div>
         <div style="margin-bottom:6px"><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="../support.html">Report a problem</a></div>
-        <div>Hustle City Prompt Generator™ — the Hustle City edition of the Realism Master Template Generator™.</div>
+        <div>J-Dog's Prompt Generator™ — the Hustle City edition of the Realism Master Template Generator™.</div>
         <div class="master-credits">Master Edition — by J-Dawgs Industries<span id="creditNames"></span>.</div>
-        <div>© 2026 Joshua Dawson / J-Dawgs Industries · Hustle City Prompt Generator™</div>
+        <div>© 2026 Joshua Dawson / J-Dawgs Industries · J-Dog's Prompt Generator™</div>
       </footer>
     </div>
 
@@ -2722,7 +2722,7 @@
         /* ============================================================
            THE FUNNEL — every output is a door (owner amendment).
            ============================================================ */
-        var CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries · https://jdawgsindustries.com/realism-generator/";
+        var CREDIT_LINE = "— Made with the J-Dog's Prompt Generator (Master Edition) by J-Dawgs Industries · https://jdawgsindustries.com/realism-generator/";
         var TOOL_URL = "https://jdawgsindustries.com/realism-generator/";
         var HYDRANT_URL = "https://the-hydrant.vercel.app";
         var creditOn = true;
@@ -2734,7 +2734,7 @@
           if (!creditOn || typeof text !== "string") return text;
           var t = text.replace(/\s+$/, "");
           if (t.length < 40) return text;
-          if (t.indexOf("Made with the Hustle City Prompt Generator") !== -1) return text;
+          if (t.indexOf("Made with the J-Dog's Prompt Generator") !== -1) return text;
           var first = t.charAt(0);
           if (first === "{" || first === "[") return text; /* never corrupt JSON handoffs */
           return t + "\n\n" + CREDIT_LINE;
@@ -2761,7 +2761,7 @@
         /* ---- agent handoff JSON (feature I + funnel fields) ---- */
         function specJSON(spec, engineId, text, negative) {
           return JSON.stringify({
-            product: "Hustle City Prompt Generator",
+            product: "J-Dog's Prompt Generator",
             edition: "Master Edition",
             family: FAMILY_LABEL[spec.family] || spec.family,
             engine: ENGINE_BY_ID[engineId] ? ENGINE_BY_ID[engineId].name : engineId,
@@ -3320,7 +3320,7 @@
           renderLib();
         });
         $("libExportBtn").addEventListener("click", function () {
-          var payload = JSON.stringify({ product: "Hustle City Prompt Generator", edition: "Master Edition", exported_at: new Date().toISOString(), tool_url: TOOL_URL, maker: "J-Dawgs Industries", items: lib.items }, null, 2);
+          var payload = JSON.stringify({ product: "J-Dog's Prompt Generator", edition: "Master Edition", exported_at: new Date().toISOString(), tool_url: TOOL_URL, maker: "J-Dawgs Industries", items: lib.items }, null, 2);
           try {
             var blob = new Blob([payload], { type: "application/json" });
             var url = URL.createObjectURL(blob);
