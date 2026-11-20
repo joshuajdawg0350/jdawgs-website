@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:12:41.851Z",
+ "updatedAt": "2026-11-20T01:12:58.517Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 28,
+ "handsPlayed": 29,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 88460,
+     "stack": 88410,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 25943,
+     "stack": 25893,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85722,
+     "stack": 85872,
      "status": "seated",
      "reentered": false
     },
@@ -139,12 +139,12 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 19785,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 88460,
+   "stack": 88410,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 19785,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25943,
+   "stack": 25893,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85722,
+   "stack": 85872,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 10,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Hammer",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 7,
-   "text": "Table 1 · Hand 7 · blinds 25/50 · Venus calls 50, Shadow folds, Midas folds, Baseline calls 25, Pearl checks, [flop: A♦ 3♦ K♥], Baseline checks, Pearl checks, Venus checks, [turn: A♦ 3♦ K♥ K♣], Baseline checks, Pearl checks, Venus checks, [river: A♦ 3♦ K♥ K♣ 6♣], Baseline checks, Pearl checks, Venus checks → Pearl wins 150 with Three of a kind, Ks (2♣ K♠)",
-   "pot": 150
-  },
   {
    "table": 2,
    "handNo": 7,
@@ -552,6 +546,12 @@
    "handNo": 10,
    "text": "Table 1 · Hand 10 · blinds 25/50 · Pearl calls 50, Venus folds, Midas calls 25, Baseline checks, [flop: Q♣ 7♥ 6♠], Midas checks, Baseline checks, Pearl checks, [turn: Q♣ 7♥ 6♠ K♠], Midas checks, Baseline checks, Pearl checks, [river: Q♣ 7♥ 6♠ K♠ Q♠], Midas checks, Baseline checks, Pearl raises to 50, Midas folds, Baseline calls 50 → Pearl wins 250 with Three of a kind, Qs (A♠ Q♦)",
    "pot": 250
+  },
+  {
+   "table": 2,
+   "handNo": 10,
+   "text": "Table 2 · Hand 10 · blinds 25/50 · Granite calls 50, Compass calls 50, Marble calls 25, Shadow checks, [flop: 5♥ 8♥ 7♠], Marble checks, Shadow checks, Granite checks, Compass checks, [turn: 5♥ 8♥ 7♠ K♦], Marble checks, Shadow checks, Granite checks, Compass checks, [river: 5♥ 8♥ 7♠ K♦ 7♣], Marble checks, Shadow checks, Granite checks, Compass checks → Marble wins 200 with Pair of 7s (10♦ Q♥)",
+   "pot": 200
   }
  ],
  "finishes": [
