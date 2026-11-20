@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js"</script>
 <title>AI Tool Store Proof — 97 of 100 Tools Passed a Real Run | J-Dawgs Industries</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Tool Store Proof — 97 of 100 Tools Passed a Real Run | J-Dawgs Industries">
@@ -45,6 +46,46 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 44px;font
 .btn.ghost{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
 .bigprice{color:var(--ink);font-size:1.5rem;font-weight:800}
 @media (max-width:640px){.tname{white-space:normal}h1{font-size:1.6rem}}
+.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#39c2ff;--dsInk:#93a1b5;--dsChev:#7dd7ff}
+/* ============================================================
+   DRAG SHEET KIT — the Funny Maps pattern for document pages
+   (Joshua's order, 2026-11-20). Mobile only (<900px): the long
+   content lives in a fixed bottom sheet with a chrome drag
+   handle and three snap stops — full 72% / half 42% / collapsed
+   (handle only). Drag, flick, or tap the handle. Desktop and
+   no-JS: the sheet is plain document flow, identical to before.
+   Per-surface colors come from CSS vars set in the page:
+     --dsBar  handle bar background      --dsBg   sheet body background
+     --dsLine top border / accent color  --dsInk  hint text color
+     --dsChev chevron color
+   ============================================================ */
+.dsheet-handle{display:none}
+@media (max-width:899px){
+  html.js .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:900;
+    height:var(--dsH,38px);max-height:100dvh;display:flex;flex-direction:column;
+    background:var(--dsBg,#0a0f16);border-top:2px solid var(--dsLine,#0096ff);
+    border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.55);
+    transition:height .3s ease;overflow:hidden}
+  html.js .dsheet.dragging{transition:none}
+  html.js .dsheet-handle{flex:0 0 auto;height:36px;display:flex;align-items:center;justify-content:center;
+    position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
+    background:var(--dsBar,#05080e)}
+  html.js .dsheet-handle:active{cursor:grabbing}
+  html.js .dsheet-grip{width:58px;height:6px;border-radius:3px;
+    background:linear-gradient(180deg,#fdfefe,#a9c4de 50%,#63798f);
+    box-shadow:0 0 9px rgba(0,150,255,.55),0 1px 2px rgba(0,0,0,.6)}
+  html.js .dsheet-hint{position:absolute;left:14px;top:50%;margin-top:-8px;font-size:10.5px;
+    letter-spacing:1.6px;color:var(--dsInk,#8fa3ba);font-weight:800}
+  html.js .dsheet-chev{position:absolute;right:14px;top:50%;margin-top:-11px;font-size:15px;line-height:1;
+    color:var(--dsChev,#6fc3ff);transition:transform .3s ease}
+  html.js .dsheet.collapsed .dsheet-chev{transform:rotate(180deg)}
+  html.js .dsheet-body{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain}
+  html.js body{padding-bottom:38px}
+}
+@media (min-width:900px){
+  .dsheet-handle{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -56,6 +97,11 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 44px;font
 <p><span class="bigprice">$99.99</span> one-time — Unlimited Pass, every tool included. Individual tools $0.50–$1.00 per use in the store.</p>
 <p style="margin-bottom:0"><a class="btn" href="https://buy.stripe.com/eVq8wP4u58Qkd8p4KV3ks1s">Unlimited Pass — $99.99 one-time</a><a class="btn ghost" href="https://jdawgsindustries.com/ai-tool-store.html">Browse the AI Tool Store</a></p>
 </div>
+</header>
+<div class="dsheet" id="dsheet" data-default="collapsed">
+  <div class="dsheet-handle" id="dsheetHandle" role="button" tabindex="0" aria-label="Drag up to see the full proof record, drag down to put it away. Tap to open or close."><span class="dsheet-hint">PROOF</span><span class="dsheet-grip"></span><span class="dsheet-chev" id="dsheetChev">▾</span></div>
+  <div class="dsheet-body" id="dsheetBody">
+<div class="wrap">
 <h2 style="margin-top:22px">First five real runs — hits and misses</h2>
 <table><thead><tr><th>Tool</th><th>Price</th><th>Result</th><th>Basis</th></tr></thead><tbody>
 <tr><td class="tname">J-Dawgs Agent Config Checker™</td><td class="tprice">$0.75 per use</td><td><span class="chip pass">PASS</span></td><td class="tbasis">Ran on real sample input and produced output (6664 new chars vs load).</td></tr>
@@ -75,7 +121,7 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 44px;font
 <div class="count"><b>3</b><span>failed — pulled from sale</span></div>
 <div class="count"><b>0</b><span>untestable-and-still-selling</span></div>
 </div>
-</div></header>
+</div>
 <main><div class="wrap">
 <h2>How the run worked</h2>
 <p>Each tool&rsquo;s own page was loaded in a real browser, fed real sample input, and put through its main action; the output was then checked against what the tool says it produces. Tools that ship with a sample already analyzed were run a second time with changed input, so a &ldquo;pass&rdquo; means the tool actually responded to new input — not that a pre-baked answer was sitting on the page. Four results were re-checked by hand in a follow-up pass before this page was published. A tool counted as failed if it produced no output, threw errors instead of results, or — worst case — did not exist at all.</p>
@@ -196,6 +242,159 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 44px;font
 <p><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
 <p>Run record: November 16, 2026 · J-Dawgs Industries, Springfield, Missouri · <a href="https://jdawgsindustries.com/ai-tool-store.html">Back to the AI Tool Store</a> · <a href="support.html">Report a problem</a></p>
 </div></footer>
+</div>
+</div>
 <script src="jdawgs-chat.js" defer></script>
+<script>
+/* ============================================================
+   DRAG SHEET KIT — behavior (the Funny Maps pattern, Joshua
+   2026-11-20). Pointer drag on the handle with velocity flick
+   detection; tap toggles collapsed/open; stops full 72% /
+   half 42% / collapsed (handle only). Default stop comes from
+   the sheet's data-default attribute ("collapsed" unless the
+   surface sets otherwise). Anchor links into the sheet open it
+   and scroll its body. The JDawgs chat button/panel, when
+   present, rides on top of the sheet's top edge.
+   Exposes window.__dsheet = { open(name), snap() }.
+   ============================================================ */
+(function () {
+  'use strict';
+  var sheet = document.getElementById('dsheet');
+  var handle = document.getElementById('dsheetHandle');
+  var body = document.getElementById('dsheetBody');
+  if (!sheet || !handle || !body) return;
+  var narrow = window.matchMedia('(max-width: 899px)');
+  var FRAC = { full: 0.72, half: 0.42 };
+  var ORDER = ['collapsed', 'half', 'full'];
+  var snap = sheet.getAttribute('data-default') || 'collapsed';
+  if (ORDER.indexOf(snap) === -1) snap = 'collapsed';
+  var lastOpen = snap === 'collapsed' ? 'half' : snap, drag = null;
+
+  function vh() { return window.innerHeight || document.documentElement.clientHeight; }
+  function collapsedH() { return handle.offsetHeight + 2; }
+  function snapPx(name) { return name === 'collapsed' ? collapsedH() : Math.round(FRAC[name] * vh()); }
+  function curH() { return sheet.getBoundingClientRect().height; }
+
+  var chatBtn = null, chatPanel = null;
+  function rideChat(h) {
+    if (!chatBtn) chatBtn = document.getElementById('jdchat-btn');
+    if (!chatPanel) chatPanel = document.getElementById('jdchat-panel');
+    if (chatBtn) chatBtn.style.bottom = (h + 10) + 'px';
+    if (chatPanel) chatPanel.style.bottom = (h + 66) + 'px';
+  }
+  function unrideChat() {
+    if (chatBtn) { chatBtn.style.bottom = ''; chatBtn = null; }
+    if (chatPanel) { chatPanel.style.bottom = ''; chatPanel = null; }
+  }
+
+  function applySnap(name) {
+    snap = name;
+    if (name !== 'collapsed') lastOpen = name;
+    sheet.classList.toggle('collapsed', name === 'collapsed');
+    sheet.style.setProperty('--dsH', snapPx(name) + 'px');
+    if (narrow.matches) rideChat(snapPx(name)); else unrideChat();
+  }
+  function nearest(h) {
+    var best = ORDER[0], bd = Infinity;
+    for (var i = 0; i < ORDER.length; i++) {
+      var d = Math.abs(snapPx(ORDER[i]) - h);
+      if (d < bd) { bd = d; best = ORDER[i]; }
+    }
+    return best;
+  }
+  function stepped(name, dir) {
+    var i = ORDER.indexOf(name) + dir;
+    return ORDER[Math.max(0, Math.min(ORDER.length - 1, i))];
+  }
+
+  handle.addEventListener('pointerdown', function (e) {
+    if (!narrow.matches) return;
+    drag = { id: e.pointerId, startY: e.clientY, startH: curH(),
+             lastY: e.clientY, lastT: performance.now(), vel: 0, moved: 0 };
+    try { handle.setPointerCapture(e.pointerId); } catch (err) {}
+    sheet.classList.add('dragging');
+    e.preventDefault();
+  });
+  handle.addEventListener('pointermove', function (e) {
+    if (!drag || e.pointerId !== drag.id) return;
+    var now = performance.now(), dt = now - drag.lastT;
+    if (dt > 0) drag.vel = 0.7 * drag.vel + 0.3 * ((e.clientY - drag.lastY) / dt);
+    drag.lastY = e.clientY; drag.lastT = now;
+    drag.moved = Math.max(drag.moved, Math.abs(e.clientY - drag.startY));
+    var h = drag.startH - (e.clientY - drag.startY);
+    h = Math.max(collapsedH(), Math.min(snapPx('full'), h));
+    sheet.style.setProperty('--dsH', h + 'px');
+    rideChat(h);
+  });
+  function endDrag(e) {
+    if (!drag || (e && e.pointerId !== drag.id)) return;
+    var wasTap = drag.moved < 9, vel = drag.vel;
+    drag = null;
+    sheet.classList.remove('dragging');
+    if (wasTap) { applySnap(snap === 'collapsed' ? lastOpen : 'collapsed'); return; }
+    var target = nearest(curH());
+    if (vel > 0.45) target = stepped(target, -1);
+    else if (vel < -0.45) target = stepped(target, 1);
+    applySnap(target);
+  }
+  handle.addEventListener('pointerup', endDrag);
+  handle.addEventListener('pointercancel', endDrag);
+  handle.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      applySnap(snap === 'collapsed' ? lastOpen : 'collapsed');
+    }
+  });
+
+  /* Anchor links whose target lives inside the sheet: open the
+     sheet and scroll its body to the target. */
+  function scrollBodyTo(el) {
+    var y = el.getBoundingClientRect().top - body.getBoundingClientRect().top + body.scrollTop - 8;
+    body.scrollTo({ top: Math.max(0, y), behavior: 'instant' });
+  }
+  document.addEventListener('click', function (e) {
+    if (!narrow.matches) return;
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute('href');
+    if (!id || id.length < 2) return;
+    var el = null;
+    try { el = document.querySelector(id); } catch (err) {}
+    if (el && body.contains(el)) {
+      applySnap('full');
+      setTimeout(function () { scrollBodyTo(el); }, 340);
+    }
+  }, true);
+  if (window.location.hash && window.location.hash.length > 1) {
+    var hel = null;
+    try { hel = document.querySelector(window.location.hash); } catch (err) {}
+    if (hel && body.contains(hel) && narrow.matches) {
+      applySnap('full');
+      setTimeout(function () { scrollBodyTo(hel); }, 350);
+    }
+  }
+
+  function onResize() {
+    if (drag) return;
+    if (!narrow.matches) { sheet.style.removeProperty('--dsH'); sheet.classList.remove('dragging'); unrideChat(); }
+    else applySnap(snap);
+  }
+  window.addEventListener('resize', onResize);
+  if (narrow.addEventListener) narrow.addEventListener('change', onResize);
+  onResize();
+  /* The chat widget loads deferred — catch it a few times early. */
+  var tries = 0, iv = setInterval(function () {
+    tries++;
+    if (narrow.matches) rideChat(snapPx(snap));
+    if (chatBtn || tries > 10) clearInterval(iv);
+  }, 700);
+
+  window.__dsheet = {
+    open: function (name) { if (ORDER.indexOf(name) !== -1) applySnap(name); },
+    snap: function () { return snap; }
+  };
+})();
+
+</script>
 </body>
 </html>
