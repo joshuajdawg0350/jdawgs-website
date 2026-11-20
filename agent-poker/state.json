@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:12:58.517Z",
+ "updatedAt": "2026-11-20T01:13:14.820Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 29,
+ "handsPlayed": 30,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 100611,
+     "stack": 100561,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19620,
+     "stack": 19595,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 60374,
+     "stack": 60199,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 19320,
+     "stack": 19745,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19285,
+     "stack": 19110,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 100611,
+   "stack": 100561,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19620,
+   "stack": 19595,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19285,
+   "stack": 19110,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19320,
+   "stack": 19745,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 60374,
+   "stack": 60199,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 10,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Hammer",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 7,
-   "text": "Table 2 · Hand 7 · blinds 25/50 · Granite calls 50, Bulldog calls 50, Compass calls 50, Marble folds, Quarry calls 25, Ozone checks, [flop: Q♣ A♦ K♦], Quarry checks, Ozone checks, Granite checks, Bulldog checks, Compass checks, [turn: Q♣ A♦ K♦ K♥], Quarry checks, Ozone checks, Granite checks, Bulldog checks, Compass checks, [river: Q♣ A♦ K♦ K♥ J♣], Quarry checks, Ozone checks, Granite raises to 50, Bulldog calls 50, Compass raises to 260, Quarry calls 260, Ozone calls 260, Granite raises to 940, Bulldog calls 890, Compass raises to 2685, Quarry calls 2425, Ozone calls 2425, Granite raises to 8795, Bulldog calls 7855, Compass raises to 24330, Quarry calls 6605, Ozone calls 17600, Granite calls 11105, Bulldog calls 10555 → Granite wins 88590 with Full house, Ks full of Js (K♠ J♠); Compass wins 4815 with Straight, A high (10♥ Q♠)",
-   "pot": 93405
-  },
   {
    "table": 3,
    "handNo": 7,
@@ -552,6 +538,12 @@
    "handNo": 10,
    "text": "Table 2 · Hand 10 · blinds 25/50 · Granite calls 50, Compass calls 50, Marble calls 25, Shadow checks, [flop: 5♥ 8♥ 7♠], Marble checks, Shadow checks, Granite checks, Compass checks, [turn: 5♥ 8♥ 7♠ K♦], Marble checks, Shadow checks, Granite checks, Compass checks, [river: 5♥ 8♥ 7♠ K♦ 7♣], Marble checks, Shadow checks, Granite checks, Compass checks → Marble wins 200 with Pair of 7s (10♦ Q♥)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 10,
+   "text": "Table 3 · Hand 10 · blinds 25/50 · Hammer calls 50, River Rat calls 50, Deuce calls 50, Icebox folds, Pickpocket checks, [flop: J♠ 9♣ 4♠], Pickpocket checks, Hammer checks, River Rat checks, Deuce checks, [turn: J♠ 9♣ 4♠ 2♦], Pickpocket raises to 60, Hammer calls 60, River Rat calls 60, Deuce folds, [river: J♠ 9♣ 4♠ 2♦ 7♠], Pickpocket checks, Hammer raises to 65, River Rat calls 65, Pickpocket calls 65 → Hammer wins 600 with Two pair, 9s and 2s (9♥ 2♠)",
+   "pot": 600
   }
  ],
  "finishes": [
