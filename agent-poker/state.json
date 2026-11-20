@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:47:03.823Z",
+ "updatedAt": "2026-11-20T01:47:19.601Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 109,
+ "handsPlayed": 110,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 62445,
+     "stack": 62505,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85427,
+     "stack": 85367,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 36
+   "handsPlayed": 37
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 62445,
+   "stack": 62505,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85427,
+   "stack": 85367,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 37,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Compass",
+  "toAct": "River Rat",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 34,
-   "text": "Table 1 · Hand 34 · blinds 30/60 · Pearl calls 60, Venus calls 60, Midas folds, Baseline checks, [flop: Q♦ A♦ 3♠], Baseline checks, Pearl checks, Venus checks, [turn: Q♦ A♦ 3♠ 8♥], Baseline checks, Pearl checks, Venus checks, [river: Q♦ A♦ 3♠ 8♥ 3♣], Baseline checks, Pearl checks, Venus checks → Pearl wins 210 with Two pair, Qs and 3s (J♠ Q♥)",
-   "pot": 210
-  },
   {
    "table": 2,
    "handNo": 34,
@@ -552,6 +546,12 @@
    "handNo": 37,
    "text": "Table 1 · Hand 37 · blinds 30/60 · Baseline calls 60, Pearl calls 60, Venus calls 30, Midas checks, [flop: 8♣ 4♦ A♣], Venus checks, Midas checks, Baseline checks, Pearl checks, [turn: 8♣ 4♦ A♣ 5♥], Venus checks, Midas checks, Baseline checks, Pearl checks, [river: 8♣ 4♦ A♣ 5♥ A♦], Venus checks, Midas checks, Baseline checks, Pearl checks → Midas wins 240 with Two pair, As and 5s (J♥ 5♣)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 37,
+   "text": "Table 2 · Hand 37 · blinds 30/60 · Compass folds, Marble calls 30, Granite checks, [flop: Q♥ 7♦ 6♣], Marble checks, Granite checks, [turn: Q♥ 7♦ 6♣ 3♣], Marble checks, Granite checks, [river: Q♥ 7♦ 6♣ 3♣ 2♠], Marble checks, Granite checks → Granite wins 120 with A high (K♦ A♠)",
+   "pot": 120
   }
  ],
  "finishes": [
