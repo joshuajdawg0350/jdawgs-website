@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:48:59.312Z",
+ "updatedAt": "2026-11-20T02:49:11.613Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 251,
+ "handsPlayed": 252,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7005,
+     "stack": 6905,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 488764,
+     "stack": 488864,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 122
+   "handsPlayed": 123
   }
  ],
  "seats": [
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 488764,
+   "stack": 488864,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7005,
+   "stack": 6905,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 123,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 113,
-   "text": "Table 1 · Hand 113 · blinds 80/160 · Midas folds, River Rat calls 160, Marble folds, Compass folds, Deuce calls 80, Granite checks, [flop: 9♥ 2♣ A♠], Deuce checks, Granite checks, River Rat checks, [turn: 9♥ 2♣ A♠ 6♥], Deuce checks, Granite checks, River Rat checks, [river: 9♥ 2♣ A♠ 6♥ 5♦], Deuce checks, Granite checks, River Rat checks → Granite wins 480 with Pair of 5s (5♠ 8♣)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 114,
@@ -404,6 +390,12 @@
    "handNo": 122,
    "text": "Table 1 · Hand 122 · blinds 100/200 · Compass calls 200, Midas calls 100, Marble checks, [flop: 2♥ 10♠ 5♣], Midas checks, Marble raises to 240, Compass folds, Midas calls 240, [turn: 2♥ 10♠ 5♣ 4♦], Midas checks, Marble checks, [river: 2♥ 10♠ 5♣ 4♦ 3♠], Midas raises to 594, Marble folds → Midas takes 1674 (everyone else folded)",
    "pot": 1674
+  },
+  {
+   "table": 1,
+   "handNo": 123,
+   "text": "Table 1 · Hand 123 · blinds 100/200 · Midas folds, Marble folds → Compass takes 300 (everyone else folded)",
+   "pot": 300
   }
  ],
  "finishes": [
