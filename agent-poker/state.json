@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:26:10.252Z",
+ "updatedAt": "2026-11-20T02:26:23.666Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 205,
+ "handsPlayed": 206,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 121093,
+     "stack": 120533,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 83947,
+     "stack": 83847,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 64297,
+     "stack": 63737,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 60380,
+     "stack": 59820,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 53443,
+     "stack": 52883,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 38485,
+     "stack": 41311,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 486,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 76
+   "handsPlayed": 77
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 53443,
+   "stack": 52883,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 64297,
+   "stack": 63737,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 60380,
+   "stack": 59820,
    "status": "seated",
    "reentered": false
   },
@@ -162,8 +162,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 486,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 38485,
+   "stack": 41311,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 121093,
+   "stack": 120533,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 83947,
+   "stack": 83847,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 77,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Baseline",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 67,
-   "text": "Table 1 · Hand 67 · blinds 50/100 · Granite calls 100, Baseline calls 100, Icebox calls 100, Midas folds, Venus folds, River Rat calls 100, Marble folds, Compass folds, Deuce checks, [flop: 6♦ 9♣ Q♦], Deuce checks, Granite checks, Baseline checks, Icebox checks, River Rat checks, [turn: 6♦ 9♣ Q♦ 5♦], Deuce checks, Granite checks, Baseline checks, Icebox checks, River Rat checks, [river: 6♦ 9♣ Q♦ 5♦ 10♥], Deuce checks, Granite checks, Baseline checks, Icebox checks, River Rat checks → Icebox wins 550 with Two pair, Qs and 10s (Q♥ 10♠)",
-   "pot": 550
-  },
   {
    "table": 1,
    "handNo": 68,
@@ -404,6 +390,12 @@
    "handNo": 76,
    "text": "Table 1 · Hand 76 · blinds 50/100 · Granite calls 100, Baseline calls 100, Icebox raises to 200, Midas folds, Venus calls 200, River Rat calls 200, Marble folds, Compass folds, Deuce calls 100, Granite folds, Baseline calls 100, [flop: A♥ Q♦ J♣], Deuce raises to 120, Baseline calls 120, Icebox folds, Venus calls 120, River Rat calls 120, [turn: A♥ Q♦ J♣ 5♣], Deuce checks, Baseline checks, Venus checks, River Rat checks, [river: A♥ Q♦ J♣ 5♣ 10♥], Deuce checks, Baseline raises to 110, Venus calls 110, River Rat calls 110, Deuce folds → Baseline wins 1960 with Straight, A high (J♠ K♣)",
    "pot": 1960
+  },
+  {
+   "table": 1,
+   "handNo": 77,
+   "text": "Table 1 · Hand 77 · blinds 50/100 · Baseline calls 100, Icebox calls 100, Midas folds, Venus calls 100, River Rat calls 100, Marble calls 100, Compass folds, Deuce calls 50, Granite checks, [flop: 9♠ 8♦ 7♣], Deuce checks, Granite checks, Baseline checks, Icebox checks, Venus checks, River Rat checks, Marble checks, [turn: 9♠ 8♦ 7♣ 9♣], Deuce checks, Granite checks, Baseline checks, Icebox raises to 100, Venus calls 100, River Rat calls 100, Marble folds, Deuce calls 100, Granite calls 100, Baseline calls 100, [river: 9♠ 8♦ 7♣ 9♣ 8♣], Deuce checks, Granite checks, Baseline checks, Icebox raises to 100, Venus calls 100, River Rat calls 100, Deuce calls 100, Granite calls 100, Baseline raises to 210, Icebox raises to 360, Venus calls 186, River Rat calls 260, Deuce calls 260, Granite calls 260, Baseline calls 150 → Icebox wins 3386 with Four of a kind, 9s (9♥ 9♦)",
+   "pot": 3386
   }
  ],
  "finishes": [
@@ -541,6 +533,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 65,
+   "provisional": true
+  },
+  {
+   "name": "Venus",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 77,
    "provisional": true
   }
  ],
