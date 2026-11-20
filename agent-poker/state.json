@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:05:29.138Z",
+ "updatedAt": "2026-11-20T01:05:48.241Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19590,
+     "stack": 19485,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20905,
+     "stack": 20800,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19730,
+     "stack": 19625,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 19785,
+     "stack": 19555,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20650,
+     "stack": 20485,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 19605,
+     "stack": 20420,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19590,
+   "stack": 19485,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20905,
+   "stack": 20800,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19845,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19730,
+   "stack": 19625,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19785,
+   "stack": 19555,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20650,
+   "stack": 20485,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19605,
+   "stack": 20420,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
@@ -546,6 +546,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Tally raises to 100, Pickpocket calls 100, Professor folds, Deuce calls 100, Wildfire calls 100, Millstone folds, Icebox folds, Velvet calls 50, [flop: 4♥ K♥ K♣], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, [turn: 4♥ K♥ K♣ 10♠], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, [river: 4♥ K♥ K♣ 10♠ Q♠], Velvet checks, Tally checks, Pickpocket checks, Deuce raises to 65, Wildfire raises to 420, Velvet calls 420, Tally calls 420, Pickpocket calls 420, Deuce calls 355 → Deuce wins 1313 with Two pair, Ks and Qs (9♦ Q♦); Wildfire wins 1312 with Two pair, Ks and Qs (Q♥ 6♦)",
    "pot": 2625
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 25/50 · Hammer calls 50, Ozone calls 50, Anchor raises to 105, Midas folds, Baseline calls 105, Pearl calls 105, Venus folds, Shadow calls 80, River Rat calls 55, Hammer calls 55, Ozone calls 55, [flop: 2♠ K♣ 7♣], Shadow checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, Baseline checks, Pearl checks, [turn: 2♠ K♣ 7♣ 9♦], Shadow checks, River Rat checks, Hammer checks, Ozone raises to 60, Anchor calls 60, Baseline folds, Pearl folds, Shadow folds, River Rat folds, Hammer calls 60, [river: 2♠ K♣ 7♣ 9♦ 4♠], Hammer raises to 65, Ozone folds, Anchor calls 65 → Anchor wins 1045 with Three of a kind, Ks (K♦ K♥)",
+   "pot": 1045
   }
  ],
  "finishes": [],
