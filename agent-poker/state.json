@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:15:57.812Z",
+ "updatedAt": "2026-11-20T02:16:11.557Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  150,
-  300
+  200,
+  400
  ],
- "level": 9,
- "handsPlayed": 179,
+ "level": 10,
+ "handsPlayed": 180,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22164,
+     "stack": 22414,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55323,
+     "stack": 55223,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 627,
+     "stack": 527,
      "status": "seated",
      "reentered": false
     },
@@ -45,12 +45,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 2716,
+     "stack": 2666,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 60
+   "handsPlayed": 61
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22164,
+   "stack": 22414,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55323,
+   "stack": 55223,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 627,
+   "stack": 527,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2716,
+   "stack": 2666,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 61,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Baseline",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 56,
-   "text": "Table 3 · Hand 56 · blinds 40/80 · Deuce calls 80, Icebox folds, River Rat checks, [flop: K♦ 9♠ 7♠], River Rat checks, Deuce checks, [turn: K♦ 9♠ 7♠ Q♣], River Rat checks, Deuce raises to 95, River Rat calls 95, [river: K♦ 9♠ 7♠ Q♣ 8♠], River Rat checks, Deuce checks → River Rat wins 390 with Pair of 7s (7♣ 10♥)",
-   "pot": 390
-  },
   {
    "table": 1,
    "handNo": 58,
@@ -552,6 +546,12 @@
    "handNo": 59,
    "text": "Table 3 · Hand 59 · blinds 40/80 · Deuce calls 80, Icebox folds, River Rat checks, [flop: 10♠ 2♣ K♣], River Rat checks, Deuce checks, [turn: 10♠ 2♣ K♣ 2♦], River Rat checks, Deuce checks, [river: 10♠ 2♣ K♣ 2♦ 3♠], River Rat checks, Deuce checks → River Rat wins 200 with Pair of 2s (Q♥ 6♦)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 61,
+   "text": "Table 1 · Hand 61 · blinds 50/100 · Baseline calls 100, Pearl calls 100, Venus folds, Midas checks, [flop: 6♦ 9♥ 4♦], Midas checks, Baseline checks, Pearl checks, [turn: 6♦ 9♥ 4♦ J♣], Midas checks, Baseline checks, Pearl checks, [river: 6♦ 9♥ 4♦ J♣ 8♥], Midas checks, Baseline checks, Pearl checks → Midas wins 350 with Pair of Js (7♠ J♥)",
+   "pot": 350
   }
  ],
  "finishes": [
