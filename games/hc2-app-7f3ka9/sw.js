@@ -38,7 +38,6 @@ var PRECACHE = [
  "assets/lm-sixfig-poster.webp",
  "assets/lm-sixfig.webm",
  "assets/music-all-apple-no-pie.mp3",
- "assets/paw.png",
  "assets/roll-catch-poster.webp",
  "assets/roll-catch.mp4",
  "assets/roll-opponent-poster.webp",

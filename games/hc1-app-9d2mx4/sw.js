@@ -28,7 +28,6 @@ var PRECACHE = [
  "assets/lm-quarter-poster.webp",
  "assets/lm-rack-poster.webp",
  "assets/lm-sixfig-poster.webp",
- "assets/paw.png",
  "assets/police-raid-poster.webp",
  "assets/shark-arrival-poster.webp",
  "assets/shark.webp",
