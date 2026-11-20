@@ -203,15 +203,22 @@
     .stackart.pot{ width:33px; height:27px; }
   }
 
-  /* ================= NO-SCROLL PASS (2026-11-19) =================
-     Owner rule: every working control reachable on ONE screen — never
-     buried under a scroll. Layout only; no game logic touched.
-     1) The bet row + action buttons become a fixed bottom dock.
-     2) The header/table are compacted so cards + status stay on screen.
-     3) Short screens compact further instead of pushing controls down.
-     4) End state: the finished table steps aside, the Read gets its own
-        screen with its text in a bounded region, doors right below it. */
-  .wrap{ padding-top:6px; padding-bottom:215px; }
+  /* ================= ONE-SCREEN UNIT PASS (2026-11-19, owner order) ====
+     Owner: "Make the table bigger and bring those buttons up — these fit
+     on the screen together better." The earlier dock pass pinned the bet
+     row + actions to the bottom of the viewport, which split the game
+     into two islands with a stretch of empty backdrop between them.
+     This pass undoes the dock. Layout only; no game logic touched.
+     1) Bet row + action buttons return to the flow, inside the table,
+        directly under the status line — table + status + controls read
+        as ONE unit.
+     2) The table gets BIGGER: wider wrap, larger cards, avatars and
+        chip stacks, taller felt.
+     3) The header compacts instead, so the whole unit still fits one
+        screen with no scrolling at 390x844 and 360x740.
+     4) End state unchanged: the finished table steps aside, the Read
+        gets its own screen with its text in a bounded region. */
+  .wrap{ max-width:600px; padding:6px 8px 20px; }
   .hud .handno{ white-space:nowrap; }
   .hud .rules{ font-size:.82rem; }
   .topbar{ padding:2px 0 5px; }
@@ -219,49 +226,75 @@
   .gamename{ font-size:.92rem; margin:.05em 0 .1em; }
   .sub{ font-size:.95rem; margin:.15em 0 .45em; }
   .howto{ padding:7px 11px; margin-bottom:8px; }
-  .table{ padding:16px 15px 20px; }
-  .table::before{ inset:10px; }
-  .hud{ margin-bottom:6px; padding-bottom:5px; }
-  .midrow{ margin:6px 0 2px; }
-  .phands{ gap:6px; margin-top:6px; }
-  .phand{ padding:5px 8px 6px; }
-  .status{ min-height:1.5em; padding-top:4px; }
+  footer{ margin-top:16px; }
 
-  .betrow{ position:fixed; left:50%; transform:translateX(-50%); width:min(536px, calc(100% - 20px));
-    bottom:92px; z-index:40; margin-top:0; padding:8px;
-    background:rgba(7,11,17,.94); border:1px solid var(--line); border-radius:14px;
-    box-shadow:0 12px 32px rgba(0,0,0,.65); }
-  .actions{ position:fixed; left:50%; transform:translateX(-50%); width:min(536px, calc(100% - 20px));
-    bottom:10px; z-index:40; margin-top:0; padding:8px; grid-template-columns:repeat(4,1fr);
-    background:rgba(7,11,17,.94); border:1px solid var(--line); border-radius:14px;
-    box-shadow:0 12px 32px rgba(0,0,0,.65); }
+  /* the bigger table */
+  .table{ padding:20px 16px 14px; }
+  .table::before{ inset:11px; }
+  .hud{ margin-bottom:8px; padding-bottom:6px; }
+  .card{ width:64px; height:90px; }
+  .cards.over .card{ margin-left:-28px; }
+  .avatar{ width:60px; height:60px; flex-basis:60px; }
+  .stackart.tall{ width:52px; height:74px; }
+  .stackart.mid{ width:46px; height:50px; }
+  .stackart.pot{ width:42px; height:34px; }
+  /* dealer row on phones: the tall stack is decoration — the cards get
+     the room, the DEALER tag stays clear, and long dealer hands overlap
+     instead of running off the felt. */
+  @media (max-width:480px){
+    .hud + .seat .stackart{ display:none; }
+    #dealerCards .card:nth-child(n+3){ margin-left:-34px; }
+    .phand .card:nth-child(n+5){ margin-left:-24px; }
+  }
+  .midrow{ margin:8px 0 3px; }
+  .phands{ gap:6px; margin-top:6px; }
+  .phand{ padding:6px 8px 7px; }
+  .status{ min-height:1.5em; padding-top:4px; font-size:1rem; }
+
+  /* controls back in the flow, directly under the status line */
+  .betrow{ position:relative; left:auto; bottom:auto; transform:none; width:auto; margin-top:8px; padding:0;
+    background:none; border:none; border-radius:0; box-shadow:none; }
+  .betrow button{ min-height:52px; }
+  .actions{ position:relative; left:auto; bottom:auto; transform:none; width:auto; margin-top:8px; padding:0;
+    background:none; border:none; border-radius:0; box-shadow:none;
+    grid-template-columns:repeat(4,1fr); }
   .actions button.act{ font-size:1rem; padding-left:2px; padding-right:2px; }
   .actions:not(:has(> button:not([hidden]))){ display:none; }
-  .status{ font-size:.95rem; }
   @media (max-height:860px){
     .sub{ display:none; }
+  }
+
+  /* short-screen tier (360x740): a step down on the felt — cards stay big */
+  @media (max-height:840px){
+    .card{ width:58px; height:82px; }
+    .cards.over .card{ margin-left:-26px; }
+    .avatar{ width:52px; height:52px; flex-basis:52px; }
+    .stackart.tall{ width:46px; height:66px; }
+    .stackart.mid{ width:40px; height:44px; }
+    .stackart.pot{ width:38px; height:31px; }
+    .table{ padding:14px 14px 18px; }
+    .table::before{ inset:10px; }
+    h1{ font-size:1.4rem; }
+    .howto{ margin-bottom:6px; }
+    .status{ font-size:.96rem; }
+  }
+  @media (max-width:380px){
+    .card{ width:56px; height:79px; }
+    .cards.over .card{ margin-left:-25px; }
+    .seat .who{ min-width:78px; }
   }
   @media (max-height:780px){
     .gamename{ display:none; }
     .brand small{ display:none; }
-    h1{ font-size:1.3rem; }
+    h1{ font-size:1.28rem; }
     .backlink{ padding-top:7px; padding-bottom:7px; }
     .betrow button{ min-height:46px; }
-    .phand:has(.card.empty) .card{ width:42px; height:50px; }
-  }
-
-  @media (max-height:840px){
-    .sub{ display:none; }
-    .card{ width:48px; height:68px; }
-    .cards.over .card{ margin-left:-24px; }
-    .avatar{ width:44px; height:44px; flex-basis:44px; }
-    .stackart.tall{ width:38px; height:54px; }
-    .stackart.mid{ width:33px; height:36px; }
-    .stackart.pot{ width:33px; height:27px; }
-    .table{ padding:12px 13px 16px; }
-    h1{ font-size:1.4rem; }
-    .howto{ margin-bottom:6px; }
-    .status{ font-size:.98rem; }
+    button.act{ min-height:54px; }
+    .phand:has(.card.empty) .card{ height:60px; }
+    .status{ font-size:.92rem; line-height:1.35; padding-top:2px; }
+    .phands{ margin-top:2px; }
+    .phand{ padding-bottom:3px; }
+    .midrow{ margin-bottom:0; }
   }
 
   /* end state: Read becomes its own screen */
@@ -269,14 +302,6 @@
   .wrap:has(#read) .sub, .wrap:has(#read) .howto{ display:none; }
   #read{ max-height:48vh; overflow-y:auto; margin-top:10px; }
   #readSlot .invite{ margin-top:12px; }
-
-  /* short-screen micro-trims: keep the status line clear of the dock */
-  @media (max-height:780px){
-    .status{ font-size:.92rem; line-height:1.35; padding-top:2px; }
-    .phands{ margin-top:2px; }
-    .phand{ padding-bottom:3px; }
-    .midrow{ margin-bottom:0; }
-  }
 </style>
 </head>
 <body>
