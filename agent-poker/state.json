@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:40:56.819Z",
+ "updatedAt": "2026-11-20T02:41:11.039Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 233,
+ "handsPlayed": 234,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 69637,
+     "stack": 69477,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 37425,
+     "stack": 28690,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 72738,
+     "stack": 64003,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 256764,
+     "stack": 274554,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 59965,
+     "stack": 59805,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 104
+   "handsPlayed": 105
   }
  ],
  "seats": [
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 256764,
+   "stack": 274554,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59965,
+   "stack": 59805,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 69637,
+   "stack": 69477,
    "status": "seated",
    "reentered": false
   },
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 72738,
+   "stack": 64003,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 37425,
+   "stack": 28690,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 105,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 95,
-   "text": "Table 1 · Hand 95 · blinds 60/120 · Midas folds, River Rat calls 120, Marble raises to 240, Compass folds, Deuce calls 180, Granite calls 120, River Rat calls 120, [flop: A♥ 8♥ 8♦], Deuce checks, Granite checks, River Rat checks, Marble checks, [turn: A♥ 8♥ 8♦ 4♠], Deuce checks, Granite checks, River Rat checks, Marble checks, [river: A♥ 8♥ 8♦ 4♠ 2♣], Deuce checks, Granite checks, River Rat checks, Marble checks → Granite wins 960 with Two pair, As and 8s (3♦ A♦)",
-   "pot": 960
-  },
   {
    "table": 1,
    "handNo": 96,
@@ -404,6 +390,12 @@
    "handNo": 104,
    "text": "Table 1 · Hand 104 · blinds 80/160 · Compass calls 160, Deuce calls 160, Granite calls 160, Midas folds, River Rat calls 80, Marble checks, [flop: 9♦ J♥ J♦], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks, [turn: 9♦ J♥ J♦ 5♦], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks, [river: 9♦ J♥ J♦ 5♦ 8♣], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks → River Rat wins 800 with Two pair, Js and 9s (9♥ 2♦)",
    "pot": 800
+  },
+  {
+   "table": 1,
+   "handNo": 105,
+   "text": "Table 1 · Hand 105 · blinds 80/160 · Deuce calls 160, Granite calls 160, Midas folds, River Rat calls 160, Marble calls 80, Compass checks, [flop: 10♦ 9♦ 7♠], Marble checks, Compass checks, Deuce checks, Granite checks, River Rat checks, [turn: 10♦ 9♦ 7♠ 8♥], Marble checks, Compass checks, Deuce raises to 210, Granite folds, River Rat folds, Marble calls 210, Compass calls 210, [river: 10♦ 9♦ 7♠ 8♥ 7♣], Marble checks, Compass checks, Deuce raises to 210, Marble calls 210, Compass raises to 440, Deuce raises to 1815, Marble calls 1605, Compass raises to 3330, Deuce raises to 8365, Marble calls 6550, Compass calls 5035 → Deuce wins 26525 with Straight, J high (7♦ J♦)",
+   "pot": 26525
   }
  ],
  "finishes": [
