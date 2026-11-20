@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:39:30.614Z",
+ "updatedAt": "2026-11-20T01:39:52.606Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 90,
+ "handsPlayed": 91,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55683,
+     "stack": 55623,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 1487,
+     "stack": 1607,
      "status": "seated",
      "reentered": false
     },
@@ -45,12 +45,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 1756,
+     "stack": 1696,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 30
+   "handsPlayed": 31
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55683,
+   "stack": 55623,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1487,
+   "stack": 1607,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1756,
+   "stack": 1696,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 31,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Venus",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 27,
-   "text": "Table 3 · Hand 27 · blinds 30/60 · Icebox calls 60, River Rat calls 30, Deuce checks, [flop: Q♣ 2♥ 7♣], River Rat checks, Deuce checks, Icebox checks, [turn: Q♣ 2♥ 7♣ 6♥], River Rat checks, Deuce checks, Icebox checks, [river: Q♣ 2♥ 7♣ 6♥ J♠], River Rat checks, Deuce checks, Icebox checks → River Rat wins 180 with Pair of 6s (6♣ 4♥)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 28,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 30,
    "text": "Table 3 · Hand 30 · blinds 30/60 · Icebox calls 60, River Rat calls 30, Deuce checks, [flop: 2♠ 5♣ 4♥], River Rat checks, Deuce checks, Icebox checks, [turn: 2♠ 5♣ 4♥ K♣], River Rat checks, Deuce checks, Icebox checks, [river: 2♠ 5♣ 4♥ K♣ 2♦], River Rat checks, Deuce checks, Icebox checks → Icebox wins 180 with Two pair, 3s and 2s (3♣ 3♠)",
+   "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 31,
+   "text": "Table 1 · Hand 31 · blinds 30/60 · Venus calls 60, Midas folds, Baseline calls 30, Pearl checks, [flop: 8♥ J♠ 2♠], Baseline checks, Pearl checks, Venus checks, [turn: 8♥ J♠ 2♠ Q♥], Baseline checks, Pearl checks, Venus checks, [river: 8♥ J♠ 2♠ Q♥ Q♦], Baseline checks, Pearl checks, Venus checks → Pearl wins 180 with Two pair, Qs and Js (J♥ 6♠)",
    "pot": 180
   }
  ],
