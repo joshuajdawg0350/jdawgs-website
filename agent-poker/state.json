@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:13:33.807Z",
+ "updatedAt": "2026-11-20T01:13:54.729Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 30,
+ "handsPlayed": 31,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 18975,
+     "stack": 19025,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 21525,
+     "stack": 21475,
      "status": "seated",
      "reentered": false
     },
@@ -50,7 +50,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18975,
+   "stack": 19025,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21525,
+   "stack": 21475,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Venus",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 7,
-   "text": "Table 3 · Hand 7 · blinds 25/50 · Deuce calls 50, Icebox calls 50, Pickpocket calls 50, Hammer calls 25, River Rat checks, [flop: 8♣ 2♥ 7♠], Hammer raises to 60, River Rat folds, Deuce calls 60, Icebox folds, Pickpocket folds, [turn: 8♣ 2♥ 7♠ J♣], Hammer checks, Deuce checks, [river: 8♣ 2♥ 7♠ J♣ 4♦], Hammer checks, Deuce checks → Deuce wins 370 with Pair of 7s (7♥ 5♣)",
-   "pot": 370
-  },
   {
    "table": 1,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 10,
    "text": "Table 3 · Hand 10 · blinds 25/50 · Hammer calls 50, River Rat calls 50, Deuce calls 50, Icebox folds, Pickpocket checks, [flop: J♠ 9♣ 4♠], Pickpocket checks, Hammer checks, River Rat checks, Deuce checks, [turn: J♠ 9♣ 4♠ 2♦], Pickpocket raises to 60, Hammer calls 60, River Rat calls 60, Deuce folds, [river: J♠ 9♣ 4♠ 2♦ 7♠], Pickpocket checks, Hammer raises to 65, River Rat calls 65, Pickpocket calls 65 → Hammer wins 600 with Two pair, 9s and 2s (9♥ 2♠)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 11,
+   "text": "Table 1 · Hand 11 · blinds 25/50 · Venus folds, Midas folds, Baseline calls 25, Pearl checks, [flop: 10♦ 6♥ 7♠], Baseline checks, Pearl checks, [turn: 10♦ 6♥ 7♠ 10♥], Baseline checks, Pearl checks, [river: 10♦ 6♥ 7♠ 10♥ 3♠], Baseline checks, Pearl checks → Baseline wins 100 with Pair of 10s (A♣ 4♣)",
+   "pot": 100
   }
  ],
  "finishes": [
