@@ -17,6 +17,22 @@ try { New-Item -ItemType Directory -Force -Path $IconDir | Out-Null } catch {}
 
 function Get-Icon($file) {
   $local = Join-Path $IconDir $file
+  # jdawgs-home.ico was replaced on the server (paw -> the J, 2026-11-20),
+  # so that one file is always re-downloaded: a stale cached copy can never
+  # win. The fresh file lands under a temp name first and only replaces the
+  # cached copy once it checks out - if the download fails, the old cached
+  # copy is used, so the shortcut still works. All other icons keep the
+  # original cache-first behavior below.
+  if ($file -eq 'jdawgs-home.ico') {
+    $tmp = $local + '.new'
+    try {
+      Invoke-WebRequest -Uri ($IconBase + $file) -OutFile $tmp -UseBasicParsing -TimeoutSec 60
+      if ((Get-Item $tmp).Length -gt 2000) { Move-Item $tmp $local -Force; return $local }
+    } catch {}
+    try { if (Test-Path $tmp) { Remove-Item $tmp -Force } } catch {}
+    try { if ((Test-Path $local) -and (Get-Item $local).Length -gt 2000) { return $local } } catch {}
+    return $null
+  }
   try {
     if ((Test-Path $local) -and (Get-Item $local).Length -gt 2000) { return $local }
     Invoke-WebRequest -Uri ($IconBase + $file) -OutFile $local -UseBasicParsing -TimeoutSec 60
