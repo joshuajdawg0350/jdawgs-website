@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:19:12.854Z",
+ "updatedAt": "2026-11-20T02:19:26.012Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 189,
+ "handsPlayed": 190,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 61765,
+     "stack": 61665,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 73048,
+     "stack": 73198,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85147,
+     "stack": 85097,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 63
+   "handsPlayed": 64
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 61765,
+   "stack": 61665,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 73048,
+   "stack": 73198,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85147,
+   "stack": 85097,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 64,
+  "table": 3,
+  "handNo": 63,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Compass",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 61,
-   "text": "Table 1 · Hand 61 · blinds 50/100 · Baseline calls 100, Pearl calls 100, Venus folds, Midas checks, [flop: 6♦ 9♥ 4♦], Midas checks, Baseline checks, Pearl checks, [turn: 6♦ 9♥ 4♦ J♣], Midas checks, Baseline checks, Pearl checks, [river: 6♦ 9♥ 4♦ J♣ 8♥], Midas checks, Baseline checks, Pearl checks → Midas wins 350 with Pair of Js (7♠ J♥)",
-   "pot": 350
-  },
   {
    "table": 2,
    "handNo": 61,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 64,
    "text": "Table 1 · Hand 64 · blinds 50/100 · Midas folds, Baseline calls 100, Pearl folds, Venus checks, [flop: Q♥ J♠ 2♥], Venus checks, Baseline checks, [turn: Q♥ J♠ 2♥ K♦], Venus checks, Baseline checks, [river: Q♥ J♠ 2♥ K♦ Q♦], Venus checks, Baseline checks → Venus wins 250 with Pair of Qs (6♠ 8♣)",
+   "pot": 250
+  },
+  {
+   "table": 2,
+   "handNo": 64,
+   "text": "Table 2 · Hand 64 · blinds 50/100 · Compass calls 100, Marble folds, Granite checks, [flop: 4♥ 7♥ 2♣], Granite checks, Compass checks, [turn: 4♥ 7♥ 2♣ 6♦], Granite checks, Compass checks, [river: 4♥ 7♥ 2♣ 6♦ 3♠], Granite checks, Compass checks → Compass wins 250 with A high (A♦ 10♦)",
    "pot": 250
   }
  ],
