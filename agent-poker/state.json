@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:06:45.271Z",
+ "updatedAt": "2026-11-20T02:07:00.228Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 154,
+ "handsPlayed": 155,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 65120,
+     "stack": 65200,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 115270,
+     "stack": 115190,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 50
+   "handsPlayed": 51
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 65120,
+   "stack": 65200,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 115270,
+   "stack": 115190,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 51,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 49,
-   "text": "Table 2 · Hand 49 · blinds 40/80 · Compass calls 80, Marble folds, Granite raises to 160, Compass calls 80, [flop: 2♥ 4♠ 10♥], Granite checks, Compass checks, [turn: 2♥ 4♠ 10♥ K♦], Granite checks, Compass checks, [river: 2♥ 4♠ 10♥ K♦ 8♠], Granite checks, Compass checks → Granite wins 360 with Pair of As (A♦ A♣)",
-   "pot": 360
-  },
   {
    "table": 3,
    "handNo": 48,
@@ -552,6 +538,12 @@
    "handNo": 52,
    "text": "Table 2 · Hand 52 · blinds 40/80 · Compass calls 80, Marble raises to 160, Granite calls 80, Compass calls 80, [flop: 2♠ 4♠ K♠], Marble checks, Granite checks, Compass checks, [turn: 2♠ 4♠ K♠ J♣], Marble checks, Granite checks, Compass checks, [river: 2♠ 4♠ K♠ J♣ 9♣], Marble checks, Granite checks, Compass checks → Marble wins 480 with Pair of 8s (8♠ 8♣)",
    "pot": 480
+  },
+  {
+   "table": 3,
+   "handNo": 51,
+   "text": "Table 3 · Hand 51 · blinds 40/80 · Icebox folds, River Rat calls 40, Deuce checks, [flop: 7♠ 8♠ 10♥], River Rat checks, Deuce checks, [turn: 7♠ 8♠ 10♥ J♣], River Rat checks, Deuce checks, [river: 7♠ 8♠ 10♥ J♣ Q♠], River Rat checks, Deuce checks → Deuce wins 160 with Two pair, 10s and 7s (7♦ 10♦)",
+   "pot": 160
   }
  ],
  "finishes": [
