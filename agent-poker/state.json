@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:39:03.419Z",
+ "updatedAt": "2026-11-20T02:39:14.817Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 229,
+ "handsPlayed": 230,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 71847,
+     "stack": 71687,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 39085,
+     "stack": 38925,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 75028,
+     "stack": 75588,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 247434,
+     "stack": 247354,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 62895,
+     "stack": 62735,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 100
+   "handsPlayed": 101
   }
  ],
  "seats": [
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 247434,
+   "stack": 247354,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 62895,
+   "stack": 62735,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 71847,
+   "stack": 71687,
    "status": "seated",
    "reentered": false
   },
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 75028,
+   "stack": 75588,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39085,
+   "stack": 38925,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 101,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 91,
-   "text": "Table 1 · Hand 91 · blinds 60/120 · Marble calls 120, Compass calls 120, Deuce calls 120, Granite calls 120, Midas folds, River Rat checks, [flop: K♠ 10♦ 3♣], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks, [turn: K♠ 10♦ 3♣ 2♦], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks, [river: K♠ 10♦ 3♣ 2♦ 9♠], River Rat checks, Marble checks, Compass checks, Deuce checks, Granite checks → Compass wins 660 with Two pair, 10s and 3s (10♣ 3♠)",
-   "pot": 660
-  },
   {
    "table": 1,
    "handNo": 92,
@@ -404,6 +390,12 @@
    "handNo": 100,
    "text": "Table 1 · Hand 100 · blinds 60/120 · Granite calls 120, Midas folds, River Rat calls 120, Marble folds, Compass calls 60, Deuce checks, [flop: 9♦ 10♦ 2♦], Compass checks, Deuce checks, Granite checks, River Rat checks, [turn: 9♦ 10♦ 2♦ Q♣], Compass checks, Deuce checks, Granite checks, River Rat checks, [river: 9♦ 10♦ 2♦ Q♣ J♥], Compass checks, Deuce raises to 155, Granite raises to 535, River Rat calls 535, Compass calls 535, Deuce calls 380 → Granite wins 2620 with Straight, A high (A♥ K♣)",
    "pot": 2620
+  },
+  {
+   "table": 1,
+   "handNo": 101,
+   "text": "Table 1 · Hand 101 · blinds 80/160 · Midas folds, River Rat calls 160, Marble calls 160, Compass calls 160, Deuce folds, Granite checks, [flop: 10♥ J♦ A♠], Granite checks, River Rat checks, Marble checks, Compass checks, [turn: 10♥ J♦ A♠ 4♣], Granite checks, River Rat checks, Marble checks, Compass checks, [river: 10♥ J♦ A♠ 4♣ 3♥], Granite checks, River Rat checks, Marble checks, Compass checks → Compass wins 720 with Two pair, 10s and 4s (10♠ 4♦)",
+   "pot": 720
   }
  ],
  "finishes": [
