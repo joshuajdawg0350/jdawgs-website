@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:02:22.606Z",
+ "updatedAt": "2026-11-20T01:02:41.021Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20350,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20350,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   }
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
@@ -498,6 +498,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow folds, River Rat calls 50, Hammer calls 50, Ozone raises to 115, Anchor calls 115, Midas folds, Baseline calls 90, Pearl calls 65, Venus calls 65, River Rat folds, Hammer calls 65, [flop: 10♠ 6♦ Q♦], Baseline raises to 60, Pearl calls 60, Venus calls 60, Hammer folds, Ozone calls 60, Anchor calls 60, [turn: 10♠ 6♦ Q♦ J♣], Baseline checks, Pearl checks, Venus checks, Ozone checks, Anchor checks, [river: 10♠ 6♦ Q♦ J♣ J♥], Baseline checks, Pearl checks, Venus checks, Ozone raises to 65, Anchor calls 65, Baseline calls 65, Pearl calls 65, Venus calls 65 → Pearl wins 1365 with Two pair, Qs and Js (Q♥ K♥)",
    "pot": 1365
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass folds, Marble calls 50, Sixgun calls 50, Quarry calls 50, Slick calls 50, Granite calls 25, Dice checks, [flop: 3♥ J♠ 9♦], Granite checks, Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, [turn: 3♥ J♠ 9♦ 2♦], Granite checks, Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, [river: 3♥ J♠ 9♦ 2♦ 4♣], Granite checks, Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun checks, Quarry checks, Slick checks → Sixgun wins 400 with Pair of Js (5♣ J♦)",
+   "pot": 400
   }
  ],
  "finishes": [],
