@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:28:06.603Z",
+ "updatedAt": "2026-11-20T01:28:23.211Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 62,
+ "handsPlayed": 63,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 104681,
+     "stack": 65205,
      "status": "seated",
      "reentered": false
     },
@@ -201,8 +201,8 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 36583,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 39476,
+     "stack": 115535,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 20
+   "handsPlayed": 21
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 104681,
+   "stack": 65205,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 39476,
+   "stack": 115535,
    "status": "seated",
    "reentered": false
   },
@@ -436,8 +436,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 36583,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 21,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 18,
-   "text": "Table 2 · Hand 18 · blinds 25/50 · Granite calls 50, Compass raises to 115, Marble calls 90, Shadow folds, Granite calls 65, [flop: 8♣ Q♦ 6♠], Marble checks, Granite checks, Compass checks, [turn: 8♣ Q♦ 6♠ 4♥], Marble checks, Granite checks, Compass checks, [river: 8♣ Q♦ 6♠ 4♥ K♠], Marble checks, Granite checks, Compass checks → Marble wins 395 with A high (A♠ J♣)",
-   "pot": 395
-  },
   {
    "table": 3,
    "handNo": 18,
@@ -552,6 +538,12 @@
    "handNo": 21,
    "text": "Table 2 · Hand 21 · blinds 30/60 · Granite calls 60, Compass calls 30, Marble checks, [flop: A♦ 10♠ 9♠], Compass checks, Marble checks, Granite checks, [turn: A♦ 10♠ 9♠ J♥], Compass checks, Marble raises to 60, Granite calls 60, Compass folds, [river: A♦ 10♠ 9♠ J♥ K♥], Marble raises to 60, Granite calls 60 → Marble wins 420 with Straight, A high (K♣ Q♦)",
    "pot": 420
+  },
+  {
+   "table": 3,
+   "handNo": 21,
+   "text": "Table 3 · Hand 21 · blinds 30/60 · Icebox folds, Pickpocket calls 60, River Rat calls 30, Deuce checks, [flop: 5♠ K♠ 8♠], River Rat checks, Deuce checks, Pickpocket checks, [turn: 5♠ K♠ 8♠ K♥], River Rat checks, Deuce checks, Pickpocket raises to 110, River Rat calls 110, Deuce calls 110, [river: 5♠ K♠ 8♠ K♥ 9♠], River Rat raises to 60, Deuce raises to 400, Pickpocket raises to 980, River Rat raises to 1560, Deuce raises to 3630, Pickpocket raises to 7640, River Rat raises to 11650, Deuce raises to 16865, Pickpocket goes ALL-IN to 36413, River Rat goes ALL-IN to 39306, Deuce raises to 64716 → Deuce wins 25410 with Flush, K high (6♠ 2♦); River Rat wins 115535 with Flush, K high (3♣ 7♠)",
+   "pot": 140945
   }
  ],
  "finishes": [
@@ -673,6 +665,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 20,
+   "provisional": true
+  },
+  {
+   "name": "Pickpocket",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 21,
    "provisional": true
   }
  ],
