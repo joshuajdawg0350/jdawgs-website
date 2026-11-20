@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:31:29.404Z",
+ "updatedAt": "2026-11-20T01:31:49.302Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 71,
+ "handsPlayed": 72,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 65155,
+     "stack": 65025,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 38380,
+     "stack": 38640,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 115675,
+     "stack": 115545,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 23
+   "handsPlayed": 24
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 65155,
+   "stack": 65025,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 38380,
+   "stack": 38640,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 115675,
+   "stack": 115545,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 24,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 21,
-   "text": "Table 2 · Hand 21 · blinds 30/60 · Granite calls 60, Compass calls 30, Marble checks, [flop: A♦ 10♠ 9♠], Compass checks, Marble checks, Granite checks, [turn: A♦ 10♠ 9♠ J♥], Compass checks, Marble raises to 60, Granite calls 60, Compass folds, [river: A♦ 10♠ 9♠ J♥ K♥], Marble raises to 60, Granite calls 60 → Marble wins 420 with Straight, A high (K♣ Q♦)",
-   "pot": 420
-  },
   {
    "table": 3,
    "handNo": 21,
@@ -552,6 +538,12 @@
    "handNo": 24,
    "text": "Table 2 · Hand 24 · blinds 30/60 · Granite folds, Compass folds → Marble takes 90 (everyone else folded)",
    "pot": 90
+  },
+  {
+   "table": 3,
+   "handNo": 24,
+   "text": "Table 3 · Hand 24 · blinds 30/60 · Icebox calls 60, River Rat calls 30, Deuce raises to 130, Icebox calls 70, River Rat calls 70, [flop: 3♦ 8♦ 7♠], River Rat checks, Deuce checks, Icebox checks, [turn: 3♦ 8♦ 7♠ 6♥], River Rat checks, Deuce checks, Icebox checks, [river: 3♦ 8♦ 7♠ 6♥ 2♠], River Rat checks, Deuce checks, Icebox checks → Icebox wins 390 with Pair of 8s (8♥ 10♠)",
+   "pot": 390
   }
  ],
  "finishes": [
