@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:06:19.562Z",
+ "updatedAt": "2026-11-20T02:06:30.942Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 152,
+ "handsPlayed": 153,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55493,
+     "stack": 55533,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 817,
+     "stack": 857,
      "status": "seated",
      "reentered": false
     },
@@ -45,12 +45,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 2266,
+     "stack": 2186,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 51
+   "handsPlayed": 52
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55493,
+   "stack": 55533,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 817,
+   "stack": 857,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2266,
+   "stack": 2186,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 52,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Midas",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 47,
-   "text": "Table 3 · Hand 47 · blinds 40/80 · Deuce calls 80, Icebox folds, River Rat checks, [flop: 2♠ 4♦ J♠], River Rat checks, Deuce raises to 95, River Rat folds → Deuce takes 295 (everyone else folded)",
-   "pot": 295
-  },
   {
    "table": 1,
    "handNo": 49,
@@ -552,6 +546,12 @@
    "handNo": 50,
    "text": "Table 3 · Hand 50 · blinds 40/80 · Deuce calls 80, Icebox folds, River Rat checks, [flop: A♠ 5♣ 6♠], River Rat checks, Deuce checks, [turn: A♠ 5♣ 6♠ Q♦], River Rat checks, Deuce checks, [river: A♠ 5♣ 6♠ Q♦ 8♦], River Rat checks, Deuce raises to 105, River Rat folds → Deuce takes 305 (everyone else folded)",
    "pot": 305
+  },
+  {
+   "table": 1,
+   "handNo": 52,
+   "text": "Table 1 · Hand 52 · blinds 40/80 · Midas folds, Baseline calls 80, Pearl calls 40, Venus checks, [flop: 7♦ 5♠ K♦], Pearl checks, Venus checks, Baseline checks, [turn: 7♦ 5♠ K♦ J♠], Pearl checks, Venus checks, Baseline checks, [river: 7♦ 5♠ K♦ J♠ 10♠], Pearl checks, Venus checks, Baseline checks → Baseline wins 120 with Pair of Ks (4♥ K♣); Pearl wins 120 with Pair of Ks (K♥ 2♣)",
+   "pot": 240
   }
  ],
  "finishes": [
