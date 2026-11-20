@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:55:40.838Z",
+ "updatedAt": "2026-11-20T02:55:54.411Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 266,
+ "handsPlayed": 267,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 5702,
+     "stack": 5502,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 489726,
+     "stack": 489926,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 137
+   "handsPlayed": 138
   }
  ],
  "seats": [
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 489726,
+   "stack": 489926,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5702,
+   "stack": 5502,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 138,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 128,
-   "text": "Table 1 · Hand 128 · blinds 100/200 · Compass folds, Midas calls 100, Marble checks, [flop: 5♦ K♦ J♠], Midas checks, Marble checks, [turn: 5♦ K♦ J♠ 7♠], Midas checks, Marble checks, [river: 5♦ K♦ J♠ 7♠ 5♣], Midas checks, Marble checks → Marble wins 400 with Two pair, 7s and 5s (7♦ 6♥)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 129,
@@ -404,6 +390,12 @@
    "handNo": 137,
    "text": "Table 1 · Hand 137 · blinds 100/200 · Compass calls 200, Midas calls 100, Marble checks, [flop: K♦ 8♦ 6♦], Midas checks, Marble checks, Compass checks, [turn: K♦ 8♦ 6♦ 9♣], Midas checks, Marble checks, Compass checks, [river: K♦ 8♦ 6♦ 9♣ Q♦], Midas checks, Marble checks, Compass checks → Marble wins 600 with Pair of Ks (K♣ 5♣)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 138,
+   "text": "Table 1 · Hand 138 · blinds 100/200 · Midas folds, Marble calls 100, Compass checks, [flop: 10♣ 8♠ 6♥], Marble checks, Compass checks, [turn: 10♣ 8♠ 6♥ 8♦], Marble checks, Compass checks, [river: 10♣ 8♠ 6♥ 8♦ A♣], Marble checks, Compass checks → Compass wins 400 with Two pair, 8s and 6s (4♠ 6♦)",
+   "pot": 400
   }
  ],
  "finishes": [
