@@ -488,7 +488,7 @@ function spotDesc(cards){
   if(isBJ(cards)) return 'blackjack';
   if(cards.length===2 && cards[0].r===cards[1].r){
     if(cards[0].r===14) return 'a pair of aces';
-    return 'a pair of ' + rankFile(cards[0]) + 's';
+    return 'a pair of ' + rankFile(cards[0].r) + 's';
   }
   if(v.soft) return 'soft ' + v.total;
   return String(v.total);
