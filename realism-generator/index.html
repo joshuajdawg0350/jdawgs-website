@@ -3378,5 +3378,153 @@
       })();
     </script>
 
+    <style>
+      .mic-btn {
+        min-height: 44px; padding: 8px 16px; margin-top: 8px;
+        border-radius: 999px; border: 1px solid var(--line);
+        background: #0c1119; color: var(--ink);
+        font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+      }
+      .mic-btn:active { transform: translateY(1px); }
+      .mic-btn.listening { border-color: var(--blue); color: #fff; }
+      .mic-status {
+        margin-top: 6px; font-size: 14px; line-height: 1.45;
+        color: var(--ink); opacity: 0.85; max-width: 62ch;
+      }
+    </style>
+    <script>
+      /* ===== Voice typing (added 2026-11-19) =====
+         Every text box on this page gets a "Talk" button. Tapping it runs
+         the browser's own speech recognition (in Edge that is Microsoft's
+         online speech service) and types what it hears into the box,
+         firing the same input/change events typing does, so every
+         generator on the page reacts exactly as if it was typed.
+         Every failure says what happened in plain words and points at
+         the exact switch — nothing fails silently. */
+      (function () {
+        "use strict";
+        var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        var active = null;
+
+        function say(status, text) {
+          status.textContent = text || "";
+          status.hidden = !text;
+        }
+        function fire(field) {
+          ["input", "change"].forEach(function (t) {
+            field.dispatchEvent(new Event(t, { bubbles: true }));
+          });
+        }
+        function errText(code) {
+          switch (code) {
+            case "not-allowed":
+            case "service-not-allowed":
+              return "The mic is blocked. Two switches can cause this \u2014 check both: (1) In Edge, click the lock icon next to the web address, choose Site permissions, then Microphone, and pick Allow. (2) In Windows, open Settings, then Privacy & security, then Speech, and turn ON \u201cOnline speech recognition\u201d. Then tap the mic again. Or just type in the box \u2014 that works too.";
+            case "network":
+              return "The voice service didn\u2019t answer. Edge sends your voice to Microsoft\u2019s online speech service, so check your internet connection \u2014 and make sure Windows \u201cOnline speech recognition\u201d is ON (Settings, then Privacy & security, then Speech). Or just type in the box instead.";
+            case "audio-capture":
+              return "No microphone could be found. Check that your mic is plugged in and turned on, then tap the mic again \u2014 or just type in the box.";
+            case "no-speech":
+              return "I didn\u2019t hear anything that time. Tap the mic and talk.";
+            case "aborted":
+              return "";
+            default:
+              return "Voice typing hit a snag (" + code + "). Typing in the box works just the same.";
+          }
+        }
+        function resetBtn(btn) {
+          btn.textContent = "\uD83C\uDFA4 Talk";
+          btn.classList.remove("listening");
+        }
+        function stopActive() {
+          if (!active) return;
+          var a = active; active = null;
+          resetBtn(a.btn);
+          try { a.rec.stop(); } catch (e) {}
+        }
+        function start(field, btn, status) {
+          if (!SR) {
+            say(status, "Voice typing isn\u2019t built into this browser, so it can\u2019t listen here. Typing in the box works exactly the same.");
+            return;
+          }
+          var rec;
+          try { rec = new SR(); } catch (e) {
+            say(status, "Voice typing couldn\u2019t start in this browser. Typing in the box works exactly the same.");
+            return;
+          }
+          rec.lang = "en-US";
+          rec.interimResults = true;
+          rec.continuous = false;
+          rec.maxAlternatives = 1;
+          var heard = false, errShown = false;
+          rec.onresult = function (ev) {
+            var interim = "";
+            for (var i = ev.resultIndex; i < ev.results.length; i++) {
+              var r = ev.results[i];
+              var txt = (r[0] && r[0].transcript) ? r[0].transcript : "";
+              if (r.isFinal) {
+                if (txt) {
+                  var cur = field.value;
+                  field.value = (cur && !/\s$/.test(cur) ? cur + " " : cur) + txt;
+                  fire(field);
+                  heard = true;
+                }
+              } else {
+                interim += txt;
+              }
+            }
+            if (interim) say(status, "Listening\u2026 " + interim);
+            else if (heard) say(status, "Listening\u2026");
+          };
+          rec.onerror = function (ev) {
+            var t = errText(ev && ev.error ? String(ev.error) : "unknown");
+            if (t) { say(status, t); errShown = true; }
+          };
+          rec.onend = function () {
+            if (active && active.rec === rec) active = null;
+            resetBtn(btn);
+            if (!heard && !errShown) say(status, "I didn\u2019t hear anything that time. Tap the mic and talk.");
+            else if (heard) say(status, "");
+          };
+          active = { rec: rec, btn: btn };
+          btn.textContent = "\uD83D\uDD34 Listening\u2026 tap to stop";
+          btn.classList.add("listening");
+          say(status, "Listening \u2014 talk now.");
+          try {
+            rec.start();
+          } catch (e) {
+            active = null;
+            resetBtn(btn);
+            say(status, "Voice typing couldn\u2019t start. Typing in the box works exactly the same.");
+          }
+        }
+        function attach(field) {
+          if (field.getAttribute("data-mic")) return;
+          field.setAttribute("data-mic", "1");
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "mic-btn";
+          btn.textContent = "\uD83C\uDFA4 Talk";
+          btn.setAttribute("aria-label", "Talk instead of typing");
+          var status = document.createElement("div");
+          status.className = "mic-status";
+          status.hidden = true;
+          status.setAttribute("role", "status");
+          field.parentNode.insertBefore(btn, field.nextSibling);
+          field.parentNode.insertBefore(status, btn.nextSibling);
+          btn.addEventListener("click", function () {
+            if (active) { stopActive(); return; }
+            start(field, btn, status);
+          });
+        }
+        function init() {
+          var fields = document.querySelectorAll('input[type="text"], input[type="search"], input:not([type]), textarea');
+          for (var i = 0; i < fields.length; i++) attach(fields[i]);
+        }
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+        else init();
+      })();
+    </script>
+
   </body>
 </html>
