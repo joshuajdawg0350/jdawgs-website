@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:47:54.544Z",
+ "updatedAt": "2026-11-20T01:48:11.822Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 111,
+ "handsPlayed": 112,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22204,
+     "stack": 22174,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55233,
+     "stack": 55323,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 1547,
+     "stack": 1487,
      "status": "seated",
      "reentered": false
     },
@@ -50,7 +50,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 37
+   "handsPlayed": 38
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22204,
+   "stack": 22174,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55233,
+   "stack": 55323,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1547,
+   "stack": 1487,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 38,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Pearl",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 34,
-   "text": "Table 3 · Hand 34 · blinds 30/60 · River Rat calls 60, Deuce folds, Icebox checks, [flop: 7♦ 5♦ K♣], Icebox checks, River Rat checks, [turn: 7♦ 5♦ K♣ 8♣], Icebox checks, River Rat checks, [river: 7♦ 5♦ K♣ 8♣ 4♦], Icebox checks, River Rat checks → River Rat wins 150 with Two pair, 8s and 5s (5♠ 8♥)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 35,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 37,
    "text": "Table 3 · Hand 37 · blinds 30/60 · River Rat calls 60, Deuce folds, Icebox checks, [flop: 8♥ 8♣ 10♠], Icebox checks, River Rat checks, [turn: 8♥ 8♣ 10♠ 6♥], Icebox checks, River Rat checks, [river: 8♥ 8♣ 10♠ 6♥ 2♣], Icebox checks, River Rat checks → Icebox wins 150 with Pair of 8s (Q♣ 5♣)",
+   "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 38,
+   "text": "Table 1 · Hand 38 · blinds 30/60 · Pearl calls 60, Venus folds, Midas folds, Baseline checks, [flop: 8♥ K♥ 10♣], Baseline checks, Pearl checks, [turn: 8♥ K♥ 10♣ 6♣], Baseline checks, Pearl checks, [river: 8♥ K♥ 10♣ 6♣ J♦], Baseline checks, Pearl checks → Baseline wins 150 with Pair of 6s (A♥ 6♥)",
    "pot": 150
   }
  ],
