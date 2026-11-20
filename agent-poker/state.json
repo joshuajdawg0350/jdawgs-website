@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:09:17.299Z",
+ "updatedAt": "2026-11-20T01:09:36.011Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  25,
-  50
+  30,
+  60
  ],
- "level": 1,
- "handsPlayed": 19,
+ "level": 2,
+ "handsPlayed": 20,
  "tables": [
   {
    "id": 1,
@@ -75,7 +75,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 88590,
      "status": "seated",
      "reentered": false
     },
@@ -91,8 +91,8 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19400,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -107,7 +107,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 45538,
+     "stack": 25973,
      "status": "seated",
      "reentered": false
     },
@@ -131,20 +131,20 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 9340,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20335,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 88590,
    "status": "seated",
    "reentered": false
   },
@@ -346,8 +346,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19400,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 45538,
+   "stack": 25973,
    "status": "seated",
    "reentered": false
   },
@@ -418,8 +418,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20335,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -472,8 +472,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 9340,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   }
  ],
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 4,
-   "text": "Table 1 · Hand 4 · blinds 25/50 · Hammer calls 50, Ozone calls 50, Anchor raises to 105, Midas folds, Baseline calls 105, Pearl calls 105, Venus folds, Shadow calls 80, River Rat calls 55, Hammer calls 55, Ozone calls 55, [flop: 2♠ K♣ 7♣], Shadow checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, Baseline checks, Pearl checks, [turn: 2♠ K♣ 7♣ 9♦], Shadow checks, River Rat checks, Hammer checks, Ozone raises to 60, Anchor calls 60, Baseline folds, Pearl folds, Shadow folds, River Rat folds, Hammer calls 60, [river: 2♠ K♣ 7♣ 9♦ 4♠], Hammer raises to 65, Ozone folds, Anchor calls 65 → Anchor wins 1045 with Three of a kind, Ks (K♦ K♥)",
-   "pot": 1045
-  },
   {
    "table": 2,
    "handNo": 4,
@@ -552,6 +546,12 @@
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 25/50 · Venus calls 50, Shadow folds, Midas folds, Baseline calls 25, Pearl checks, [flop: A♦ 3♦ K♥], Baseline checks, Pearl checks, Venus checks, [turn: A♦ 3♦ K♥ K♣], Baseline checks, Pearl checks, Venus checks, [river: A♦ 3♦ K♥ K♣ 6♣], Baseline checks, Pearl checks, Venus checks → Pearl wins 150 with Three of a kind, Ks (2♣ K♠)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 7,
+   "text": "Table 2 · Hand 7 · blinds 25/50 · Granite calls 50, Bulldog calls 50, Compass calls 50, Marble folds, Quarry calls 25, Ozone checks, [flop: Q♣ A♦ K♦], Quarry checks, Ozone checks, Granite checks, Bulldog checks, Compass checks, [turn: Q♣ A♦ K♦ K♥], Quarry checks, Ozone checks, Granite checks, Bulldog checks, Compass checks, [river: Q♣ A♦ K♦ K♥ J♣], Quarry checks, Ozone checks, Granite raises to 50, Bulldog calls 50, Compass raises to 260, Quarry calls 260, Ozone calls 260, Granite raises to 940, Bulldog calls 890, Compass raises to 2685, Quarry calls 2425, Ozone calls 2425, Granite raises to 8795, Bulldog calls 7855, Compass raises to 24330, Quarry calls 6605, Ozone calls 17600, Granite calls 11105, Bulldog calls 10555 → Granite wins 88590 with Full house, Ks full of Js (K♠ J♠); Compass wins 4815 with Straight, A high (10♥ Q♠)",
+   "pot": 93405
   }
  ],
  "finishes": [
@@ -633,6 +633,30 @@
    "kind": "house",
    "table": 3,
    "handNo": 6,
+   "provisional": true
+  },
+  {
+   "name": "Ozone",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Bulldog",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Quarry",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 7,
    "provisional": true
   }
  ],
