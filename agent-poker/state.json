@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:37:55.541Z",
+ "updatedAt": "2026-11-20T02:38:16.213Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 227,
+ "handsPlayed": 228,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 72482,
+     "stack": 72502,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 39145,
+     "stack": 39085,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 75663,
+     "stack": 75683,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 248069,
+     "stack": 248089,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 98
+   "handsPlayed": 99
   }
  ],
  "seats": [
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 248069,
+   "stack": 248089,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 72482,
+   "stack": 72502,
    "status": "seated",
    "reentered": false
   },
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 75663,
+   "stack": 75683,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39145,
+   "stack": 39085,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 99,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 89,
-   "text": "Table 1 · Hand 89 · blinds 60/120 · Midas folds, River Rat calls 120, Marble calls 120, Compass calls 120, Deuce calls 60, Granite checks, [flop: 2♥ 3♠ J♦], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks, [turn: 2♥ 3♠ J♦ A♣], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks, [river: 2♥ 3♠ J♦ A♣ 9♣], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks → Marble wins 600 with Pair of 3s (K♠ 3♣)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 90,
@@ -404,6 +390,12 @@
    "handNo": 98,
    "text": "Table 1 · Hand 98 · blinds 60/120 · Compass calls 120, Deuce folds, Granite folds, Midas folds, River Rat calls 60, Marble checks, [flop: J♠ 6♣ K♣], River Rat checks, Marble checks, Compass checks, [turn: J♠ 6♣ K♣ 7♥], River Rat checks, Marble checks, Compass checks, [river: J♠ 6♣ K♣ 7♥ 9♥], River Rat checks, Marble checks, Compass checks → River Rat wins 360 with Two pair, Js and 7s (7♣ J♥)",
    "pot": 360
+  },
+  {
+   "table": 1,
+   "handNo": 99,
+   "text": "Table 1 · Hand 99 · blinds 60/120 · Deuce calls 120, Granite folds, Midas folds, River Rat calls 120, Marble folds, Compass checks, [flop: 6♥ 10♠ A♠], Compass checks, Deuce checks, River Rat checks, [turn: 6♥ 10♠ A♠ 6♣], Compass checks, Deuce checks, River Rat checks, [river: 6♥ 10♠ A♠ 6♣ 10♣], Compass checks, Deuce checks, River Rat checks → River Rat wins 140 with Two pair, 10s and 6s (8♣ 4♦); Compass wins 140 with Two pair, 10s and 6s (3♠ K♥); Deuce wins 140 with Two pair, 10s and 6s (3♥ 7♦)",
+   "pot": 420
   }
  ],
  "finishes": [
