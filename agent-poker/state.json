@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:04:41.718Z",
+ "updatedAt": "2026-11-20T02:04:59.165Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 147,
+ "handsPlayed": 148,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 62530,
+     "stack": 62490,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 72193,
+     "stack": 72233,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 62530,
+   "stack": 62490,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 72193,
+   "stack": 72233,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 50,
+  "table": 3,
+  "handNo": 49,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Marble",
+  "toAct": "River Rat",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 47,
-   "text": "Table 1 · Hand 47 · blinds 40/80 · Venus calls 80, Midas folds, Baseline calls 40, Pearl checks, [flop: 9♠ 3♠ A♦], Baseline checks, Pearl checks, Venus checks, [turn: 9♠ 3♠ A♦ 6♦], Baseline checks, Pearl checks, Venus checks, [river: 9♠ 3♠ A♦ 6♦ 2♥], Baseline checks, Pearl checks, Venus checks → Venus wins 240 with Two pair, As and 2s (2♣ A♣)",
-   "pot": 240
-  },
   {
    "table": 2,
    "handNo": 47,
@@ -552,6 +546,12 @@
    "handNo": 50,
    "text": "Table 1 · Hand 50 · blinds 40/80 · Pearl calls 80, Venus folds, Midas calls 40, Baseline checks, [flop: J♠ K♥ K♠], Midas checks, Baseline checks, Pearl checks, [turn: J♠ K♥ K♠ 7♣], Midas checks, Baseline checks, Pearl checks, [river: J♠ K♥ K♠ 7♣ 4♣], Midas checks, Baseline checks, Pearl checks → Baseline wins 240 with Two pair, Ks and 7s (A♠ 7♦)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 50,
+   "text": "Table 2 · Hand 50 · blinds 40/80 · Marble folds, Granite folds → Compass takes 120 (everyone else folded)",
+   "pot": 120
   }
  ],
  "finishes": [
