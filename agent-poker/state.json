@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:08:27.236Z",
+ "updatedAt": "2026-11-20T01:08:44.640Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 17,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -54,22 +54,6 @@
      "kind": "house",
      "house": true,
      "stack": 19575,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "River Rat",
-     "kind": "house",
-     "house": true,
-     "stack": 19410,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Hammer",
-     "kind": "house",
-     "house": true,
-     "stack": 19480,
      "status": "seated",
      "reentered": false
     }
@@ -169,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20743,
+     "stack": 100251,
      "status": "seated",
      "reentered": false
     },
@@ -185,15 +169,15 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19665,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19720,
      "status": "seated",
      "reentered": false
     },
@@ -209,15 +193,15 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 18625,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 81092,
+     "stack": 60349,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +217,28 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20320,
+     "stack": 0,
+     "status": "out",
+     "reentered": false
+    },
+    {
+     "name": "Hammer",
+     "kind": "house",
+     "house": true,
+     "stack": 19480,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "River Rat",
+     "kind": "house",
+     "house": true,
+     "stack": 19410,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20743,
+   "stack": 100251,
    "status": "seated",
    "reentered": false
   },
@@ -328,8 +328,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19665,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19875,
+   "stack": 19720,
    "status": "seated",
    "reentered": false
   },
@@ -363,7 +363,7 @@
    "name": "River Rat",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19410,
    "status": "seated",
    "reentered": false
@@ -390,7 +390,7 @@
    "name": "Hammer",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19480,
    "status": "seated",
    "reentered": false
@@ -409,8 +409,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18625,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 81092,
+   "stack": 60349,
    "status": "seated",
    "reentered": false
   },
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20320,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Marble calls 50, Sixgun calls 50, Quarry calls 50, Slick calls 50, Granite folds, Dice calls 50, Bulldog calls 25, Copper checks, [flop: 9♣ K♣ 4♠], Bulldog checks, Copper checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Dice checks, [turn: 9♣ K♣ 4♠ 7♥], Bulldog checks, Copper checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Dice checks, [river: 9♣ K♣ 4♠ 7♥ 5♣], Bulldog checks, Copper checks, Compass checks, Marble raises to 50, Sixgun calls 50, Quarry calls 50, Slick calls 50, Dice raises to 410, Bulldog folds, Copper folds, Compass folds, Marble raises to 1015, Sixgun calls 965, Quarry calls 965, Slick calls 965, Dice raises to 3935, Marble raises to 8970, Sixgun calls 7955, Quarry calls 7955, Slick calls 7955, Dice calls 5035 → Marble wins 45250 with Flush, A high (Q♣ A♣)",
-   "pot": 45250
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -552,6 +538,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 25/50 · Ozone calls 50, Granite folds, Bulldog calls 50, Compass calls 50, Marble folds, Quarry checks, [flop: Q♣ 3♠ 8♥], Quarry checks, Ozone checks, Bulldog checks, Compass checks, [turn: Q♣ 3♠ 8♥ 4♠], Quarry checks, Ozone checks, Bulldog checks, Compass checks, [river: Q♣ 3♠ 8♥ 4♠ 2♠], Quarry checks, Ozone checks, Bulldog checks, Compass checks → Quarry wins 225 with Pair of Qs (Q♦ 10♥)",
    "pot": 225
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 25/50 · Deuce raises to 155, Millstone calls 155, Icebox calls 155, Tally calls 155, Pickpocket calls 130, Anchor calls 105, [flop: A♥ 2♠ A♣], Pickpocket raises to 560, Anchor calls 560, Deuce calls 560, Millstone calls 560, Icebox folds, Tally calls 560, [turn: A♥ 2♠ A♣ 7♥], Pickpocket raises to 2240, Anchor calls 2240, Deuce calls 2240, Millstone calls 2240, Tally calls 2240, [river: A♥ 2♠ A♣ 7♥ 10♦], Pickpocket raises to 8960, Anchor calls 8960, Deuce goes ALL-IN to 17788, Millstone calls 16710, Tally calls 15670, Pickpocket raises to 67598, Anchor calls 8405 → Deuce wins 100251 with Two pair, As and Ks (K♥ K♦); Pickpocket wins 49810 with Two pair, As and 2s (9♦ 2♥)",
+   "pot": 150061
   }
  ],
  "finishes": [
@@ -609,6 +601,30 @@
    "kind": "house",
    "table": 3,
    "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Anchor",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 6,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 6,
+   "provisional": true
+  },
+  {
+   "name": "Tally",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 6,
    "provisional": true
   }
  ],
