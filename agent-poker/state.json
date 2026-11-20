@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:58:46.974Z",
+ "updatedAt": "2026-11-20T02:59:06.158Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 272,
+ "handsPlayed": 273,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 143
+   "handsPlayed": 144
   }
  ],
  "seats": [
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 144,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 134,
-   "text": "Table 1 · Hand 134 · blinds 100/200 · Compass calls 200, Midas calls 100, Marble checks, [flop: 10♣ 7♥ 2♣], Midas checks, Marble checks, Compass checks, [turn: 10♣ 7♥ 2♣ Q♠], Midas checks, Marble checks, Compass checks, [river: 10♣ 7♥ 2♣ Q♠ A♠], Midas checks, Marble checks, Compass checks → Compass wins 600 with Pair of 10s (3♣ 10♠)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 135,
@@ -404,6 +390,12 @@
    "handNo": 143,
    "text": "Table 1 · Hand 143 · blinds 120/240 · Compass calls 240, Midas calls 120, Marble checks, [flop: 6♦ 8♠ K♠], Midas checks, Marble checks, Compass checks, [turn: 6♦ 8♠ K♠ K♣], Midas raises to 396, Marble calls 396, Compass calls 396, [river: 6♦ 8♠ K♠ K♣ 10♥], Midas raises to 1049, Marble calls 1049, Compass calls 1049 → Midas wins 5055 with Three of a kind, Ks (K♥ J♥)",
    "pot": 5055
+  },
+  {
+   "table": 1,
+   "handNo": 144,
+   "text": "Table 1 · Hand 144 · blinds 120/240 · Midas folds, Marble calls 120, Compass checks, [flop: K♠ A♦ 2♥], Marble checks, Compass checks, [turn: K♠ A♦ 2♥ K♥], Marble checks, Compass checks, [river: K♠ A♦ 2♥ K♥ 2♣], Marble checks, Compass checks → Marble wins 240 with Two pair, Ks and 2s (8♦ Q♣); Compass wins 240 with Two pair, Ks and 2s (10♠ 6♥)",
+   "pot": 480
   }
  ],
  "finishes": [
