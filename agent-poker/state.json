@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:07:57.108Z",
+ "updatedAt": "2026-11-20T01:08:12.633Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19485,
+     "stack": 19370,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20700,
+     "stack": 20585,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20390,
+     "stack": 20925,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19690,
+     "stack": 19575,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19525,
+     "stack": 19410,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 19505,
+     "stack": 19480,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19485,
+   "stack": 19370,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20700,
+   "stack": 20585,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20390,
+   "stack": 20925,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19690,
+   "stack": 19575,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19525,
+   "stack": 19410,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19505,
+   "stack": 19480,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone folds, Icebox checks, [flop: 6♠ A♣ Q♥], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [turn: 6♠ A♣ Q♥ 4♦], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [river: 6♠ A♣ Q♥ 4♦ 10♥], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks → Velvet wins 375 with Pair of As (A♦ 9♦)",
-   "pot": 375
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce folds, Wildfire raises to 130, Millstone calls 130, Icebox folds, Velvet calls 130, Tally folds, Pickpocket calls 80, Professor calls 80, [flop: 9♠ 7♦ 6♥], Pickpocket raises to 405, Professor calls 405, Wildfire calls 405, Millstone folds, Velvet calls 405, [turn: 9♠ 7♦ 6♥ 4♥], Pickpocket raises to 1375, Professor calls 1375, Wildfire calls 1375, Velvet calls 1375, [river: 9♠ 7♦ 6♥ 4♥ K♥], Pickpocket raises to 4675, Professor calls 4675, Wildfire raises to 14960, Velvet calls 14960, Pickpocket goes ALL-IN to 18720, Professor calls 13185, Wildfire calls 3692, Velvet calls 3105 → Pickpocket wins 81092 with Straight, 10 high (8♣ 10♦)",
    "pot": 81092
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 25/50 · Baseline calls 50, Pearl calls 50, Venus raises to 115, Shadow calls 115, River Rat calls 115, Hammer folds, Midas folds, Baseline calls 65, Pearl calls 65, [flop: 6♥ Q♠ 4♠], Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, [turn: 6♥ Q♠ 4♠ 7♥], Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, [river: 6♥ Q♠ 4♠ 7♥ 7♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks → Venus wins 650 with Two pair, As and 7s (A♦ A♣)",
+   "pot": 650
   }
  ],
  "finishes": [
