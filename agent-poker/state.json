@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:49:14.326Z",
+ "updatedAt": "2026-11-20T01:49:38.934Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 114,
+ "handsPlayed": 115,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 55323,
+     "stack": 55383,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 1487,
+     "stack": 1427,
      "status": "seated",
      "reentered": false
     },
@@ -50,7 +50,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 38
+   "handsPlayed": 39
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 55323,
+   "stack": 55383,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1487,
+   "stack": 1427,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 39,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Venus",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 35,
-   "text": "Table 3 · Hand 35 · blinds 30/60 · Deuce calls 60, Icebox folds, River Rat checks, [flop: 5♣ 9♠ 9♦], River Rat checks, Deuce checks, [turn: 5♣ 9♠ 9♦ Q♦], River Rat checks, Deuce checks, [river: 5♣ 9♠ 9♦ Q♦ 2♥], River Rat checks, Deuce checks → Deuce wins 150 with Two pair, Qs and 9s (Q♠ 6♥)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 36,
@@ -552,6 +546,12 @@
    "handNo": 38,
    "text": "Table 3 · Hand 38 · blinds 30/60 · Deuce calls 60, Icebox folds, River Rat checks, [flop: J♣ 9♣ 2♥], River Rat checks, Deuce checks, [turn: J♣ 9♣ 2♥ 7♣], River Rat raises to 60, Deuce folds → River Rat takes 210 (everyone else folded)",
    "pot": 210
+  },
+  {
+   "table": 1,
+   "handNo": 39,
+   "text": "Table 1 · Hand 39 · blinds 30/60 · Venus folds, Midas folds, Baseline calls 30, Pearl checks, [flop: 7♥ K♥ 2♠], Baseline checks, Pearl checks, [turn: 7♥ K♥ 2♠ A♥], Baseline raises to 70, Pearl folds → Baseline takes 190 (everyone else folded)",
+   "pot": 190
   }
  ],
  "finishes": [
