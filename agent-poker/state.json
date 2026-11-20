@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:35:34.922Z",
+ "updatedAt": "2026-11-20T02:35:54.849Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 223,
+ "handsPlayed": 224,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 72722,
+     "stack": 72482,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 39560,
+     "stack": 39320,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 248694,
+     "stack": 248454,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 60270,
+     "stack": 60990,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 94
+   "handsPlayed": 95
   }
  ],
  "seats": [
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 248694,
+   "stack": 248454,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 60270,
+   "stack": 60990,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 72722,
+   "stack": 72482,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39560,
+   "stack": 39320,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 95,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 85,
-   "text": "Table 1 · Hand 85 · blinds 60/120 · Marble folds, Compass calls 120, Deuce folds, Granite calls 120, Midas calls 60, River Rat checks, [flop: 9♥ 3♣ 4♥], Midas checks, River Rat checks, Compass checks, Granite checks, [turn: 9♥ 3♣ 4♥ 6♣], Midas checks, River Rat checks, Compass checks, Granite checks, [river: 9♥ 3♣ 4♥ 6♣ 7♥], Midas checks, River Rat checks, Compass checks, Granite checks → River Rat wins 480 with Three of a kind, 7s (7♠ 7♣)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 86,
@@ -404,6 +390,12 @@
    "handNo": 94,
    "text": "Table 1 · Hand 94 · blinds 60/120 · Granite folds, Midas folds, River Rat calls 120, Marble folds, Compass folds, Deuce checks, [flop: Q♣ 4♥ 9♣], Deuce checks, River Rat checks, [turn: Q♣ 4♥ 9♣ J♣], Deuce checks, River Rat raises to 120, Deuce calls 120, [river: Q♣ 4♥ 9♣ J♣ 4♣], Deuce raises to 155, River Rat raises to 310, Deuce raises to 510, River Rat raises to 710, Deuce raises to 970, River Rat raises to 1230, Deuce raises to 1570, River Rat raises to 1910, Deuce raises to 2350, River Rat raises to 2790, Deuce raises to 3360, River Rat raises to 3930, Deuce raises to 4670, River Rat raises to 5410, Deuce raises to 6370, River Rat raises to 7330, Deuce raises to 8580, River Rat raises to 9830, Deuce raises to 11455, River Rat raises to 13080, Deuce raises to 15195, River Rat raises to 17310, Deuce raises to 20060, River Rat raises to 22810, Deuce raises to 26385, River Rat raises to 29960, Deuce raises to 34610, River Rat goes ALL-IN to 36091, Deuce raises to 42136 → River Rat wins 72722 with Flush, K high (K♣ 3♣); Deuce wins 6045 with Three of a kind, 4s (4♠ 3♥)",
    "pot": 78767
+  },
+  {
+   "table": 1,
+   "handNo": 95,
+   "text": "Table 1 · Hand 95 · blinds 60/120 · Midas folds, River Rat calls 120, Marble raises to 240, Compass folds, Deuce calls 180, Granite calls 120, River Rat calls 120, [flop: A♥ 8♥ 8♦], Deuce checks, Granite checks, River Rat checks, Marble checks, [turn: A♥ 8♥ 8♦ 4♠], Deuce checks, Granite checks, River Rat checks, Marble checks, [river: A♥ 8♥ 8♦ 4♠ 2♣], Deuce checks, Granite checks, River Rat checks, Marble checks → Granite wins 960 with Two pair, As and 8s (3♦ A♦)",
+   "pot": 960
   }
  ],
  "finishes": [
