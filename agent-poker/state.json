@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:07:38.436Z",
+ "updatedAt": "2026-11-20T02:07:53.938Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 157,
+ "handsPlayed": 158,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 65200,
+     "stack": 65292,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 38820,
+     "stack": 38635,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 115190,
+     "stack": 115283,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 51
+   "handsPlayed": 52
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 65200,
+   "stack": 65292,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 38820,
+   "stack": 38635,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 115190,
+   "stack": 115283,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 52,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "River Rat",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 50,
-   "text": "Table 2 · Hand 50 · blinds 40/80 · Marble folds, Granite folds → Compass takes 120 (everyone else folded)",
-   "pot": 120
-  },
   {
    "table": 3,
    "handNo": 49,
@@ -552,6 +538,12 @@
    "handNo": 53,
    "text": "Table 2 · Hand 53 · blinds 40/80 · Marble folds, Granite folds → Compass takes 120 (everyone else folded)",
    "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 52,
+   "text": "Table 3 · Hand 52 · blinds 40/80 · River Rat calls 80, Deuce calls 40, Icebox checks, [flop: 8♠ 4♣ A♠], Deuce checks, Icebox checks, River Rat checks, [turn: 8♠ 4♣ A♠ Q♣], Deuce checks, Icebox checks, River Rat checks, [river: 8♠ 4♣ A♠ Q♣ Q♠], Deuce raises to 105, Icebox calls 105, River Rat calls 105 → Deuce wins 277 with Three of a kind, Qs (Q♦ 2♥); River Rat wins 278 with Three of a kind, Qs (Q♥ 7♦)",
+   "pot": 555
   }
  ],
  "finishes": [
