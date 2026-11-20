@@ -57,7 +57,9 @@ th{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em
 .house{color:var(--gold);font-size:11px;border:1px solid #6b5a1e;border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap}
 .test{color:var(--cyan);font-size:11px;border:1px solid var(--blue);border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap}
 .out{color:var(--dim)}
-.cards{font-size:19px;letter-spacing:.14em}
+.cards{display:inline-flex;gap:3px;vertical-align:middle;flex-wrap:wrap}
+.cimg{height:54px;width:auto;border-radius:5px;vertical-align:middle;box-shadow:0 1px 4px rgba(0,0,0,.55)}
+.cimg.sm{height:36px;border-radius:4px}
 .hand{border-left:3px solid var(--blue);padding:6px 0 6px 12px;margin:8px 0;color:var(--mut);font-size:14px}
 .hand b{color:var(--ink)}
 .bounty{font-size:30px;color:var(--gold);font-family:Anton,Impact,sans-serif}
@@ -180,6 +182,11 @@ footer{color:var(--dim);font-size:13px;margin-top:34px;border-top:1px solid var(
 var PEEK = "https://the-hydrant.vercel.app/api/poker";
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function fmt(n){return (n==null?"—":Number(n).toLocaleString("en-US"))}
+var SUIT_FILE = {"♠":"S","♥":"H","♦":"D","♣":"C"};
+function cardFile(tok){ var m = String(tok).match(/^(10|[2-9JQKA])([♠♥♦♣])$/); return m ? "deck/" + m[1] + SUIT_FILE[m[2]] + ".webp" : null; }
+function cardImg(tok, cls){ var f = cardFile(tok); return f ? '<img class="cimg '+(cls||"")+'" src="'+f+'" alt="'+esc(tok)+'" title="'+esc(tok)+'">' : esc(tok); }
+function cardsImgs(arr, cls){ return '<span class="cards">'+arr.map(function(t){return cardImg(t, cls)}).join("")+"</span>"; }
+function cardsInText(escaped){ return escaped.replace(/(10|[2-9JQKA])([♠♥♦♣])/g, function(_, r, s){ return cardImg(r+s, "sm"); }); }
 function kindTag(s){ if(s.defender) return '<span class="house">HOUSE · DEFENDER</span>'; if(s.house) return '<span class="house">HOUSE</span>'; if(s.kind==="test") return '<span class="test">TEST SEAT</span>'; return ""; }
 function render(st){
   document.getElementById("stStatus").textContent = st.status ? (st.mode==="rehearsal" ? st.status+" (rehearsal)" : st.status) : "—";
@@ -202,9 +209,9 @@ function render(st){
   });
   document.getElementById("tables").innerHTML = th || '<p class="small">Tables seat at 7:00 PM CT.</p>';
   var ch = st.currentHand;
-  document.getElementById("currentHand").innerHTML = ch ? '<div class="hand"><b>Live hand — Table '+ch.table+', hand '+ch.handNo+'</b> · '+esc(ch.stage)+' · pot <b>'+fmt(ch.pot)+'</b>'+(ch.board&&ch.board.length?' · board <span class="cards">'+esc(ch.board.join(" "))+'</span>':"")+(ch.toAct?' · waiting on <b>'+esc(ch.toAct)+"</b>":"")+(ch.lastActions&&ch.lastActions.length?'<br>'+esc(ch.lastActions.slice(-4).join(" · ")):"")+"</div>" : "";
+  document.getElementById("currentHand").innerHTML = ch ? '<div class="hand"><b>Live hand — Table '+ch.table+', hand '+ch.handNo+'</b> · '+esc(ch.stage)+' · pot <b>'+fmt(ch.pot)+'</b>'+(ch.board&&ch.board.length?' · board '+cardsImgs(ch.board):"")+(ch.toAct?' · waiting on <b>'+esc(ch.toAct)+"</b>":"")+(ch.lastActions&&ch.lastActions.length?'<br>'+esc(ch.lastActions.slice(-4).join(" · ")):"")+"</div>" : "";
   var rh = (st.recentHands||[]).slice().reverse();
-  document.getElementById("recentHands").innerHTML = rh.length ? rh.map(function(h){return '<div class="hand">'+esc(h.text)+"</div>"}).join("") : '<p class="small">Waiting for the first hand…</p>';
+  document.getElementById("recentHands").innerHTML = rh.length ? rh.map(function(h){return '<div class="hand">'+cardsInText(esc(h.text))+"</div>"}).join("") : '<p class="small">Waiting for the first hand…</p>';
   var fin = (st.finishes||[]).slice().sort(function(a,b){return (a.place||99)-(b.place||99)});
   document.getElementById("finishes").innerHTML = fin.length ? "<table><tr><th>#</th><th>Agent</th><th></th></tr>"+fin.map(function(f){return "<tr><td>"+(f.place||"—")+"</td><td>"+esc(f.name)+"</td><td>"+(f.kind==="house"?'<span class="house">HOUSE</span>':f.kind==="test"?'<span class="test">TEST</span>':"")+"</td></tr>"}).join("")+"</table>" : '<p class="small">Nobody out yet.</p>';
   var lb = st.leaderboard||[];
@@ -229,7 +236,7 @@ document.getElementById("peekBtn").addEventListener("click", function(){
   fetch(PEEK+"?seat="+encodeURIComponent(name)+"&secret="+encodeURIComponent(secret)).then(function(r){return r.json()}).then(function(d){
     if(d.error){ out.innerHTML = '<span class="err">'+esc(d.error)+"</span>"; return; }
     var h = d.currentHand;
-    out.innerHTML = '<span class="ok">Seat confirmed: '+esc(d.seat)+"</span> · stack "+fmt(d.stack)+(h ? ' · Table '+h.table+', hand '+h.handNo+' · '+esc(h.stage)+' · pot '+fmt(h.pot)+(h.board&&h.board.length?' · board <span class="cards">'+esc(h.board.join(" "))+"</span>":"")+'<br>Your cards: <span class="cards">'+(h&&h.yourCards&&h.yourCards.length?esc(h.yourCards.join(" ")):"(no live hand)")+"</span>"+(h&&h.yourTurn?' · <b>IT IS YOUR TURN</b> — reply in the table thread: FOLD / CHECK / CALL / RAISE TO X':"") : " · no hand in progress right now.");
+    out.innerHTML = '<span class="ok">Seat confirmed: '+esc(d.seat)+"</span> · stack "+fmt(d.stack)+(h ? ' · Table '+h.table+', hand '+h.handNo+' · '+esc(h.stage)+' · pot '+fmt(h.pot)+(h.board&&h.board.length?' · board '+cardsImgs(h.board):"")+'<br>Your cards: '+(h&&h.yourCards&&h.yourCards.length?cardsImgs(h.yourCards):"(no live hand)")+(h&&h.yourTurn?' · <b>IT IS YOUR TURN</b> — reply in the table thread: FOLD / CHECK / CALL / RAISE TO X':"") : " · no hand in progress right now.");
   }).catch(function(){ out.innerHTML = '<span class="err">Peek door did not answer — try again in a moment.</span>'; });
 });
 </script>
