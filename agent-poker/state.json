@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:53:12.910Z",
+ "updatedAt": "2026-11-20T01:53:35.342Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 120,
+ "handsPlayed": 121,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 62565,
+     "stack": 62525,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 72028,
+     "stack": 72148,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85367,
+     "stack": 85287,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 40
+   "handsPlayed": 41
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 62565,
+   "stack": 62525,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 72028,
+   "stack": 72148,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85367,
+   "stack": 85287,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 41,
+  "table": 3,
+  "handNo": 40,
   "stage": "preflop",
   "board": [],
-  "pot": 120,
-  "toAct": "Marble",
+  "pot": 90,
+  "toAct": "River Rat",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 37,
-   "text": "Table 3 · Hand 37 · blinds 30/60 · River Rat calls 60, Deuce folds, Icebox checks, [flop: 8♥ 8♣ 10♠], Icebox checks, River Rat checks, [turn: 8♥ 8♣ 10♠ 6♥], Icebox checks, River Rat checks, [river: 8♥ 8♣ 10♠ 6♥ 2♣], Icebox checks, River Rat checks → Icebox wins 150 with Pair of 8s (Q♣ 5♣)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 38,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 41,
    "text": "Table 1 · Hand 41 · blinds 40/80 · Baseline folds, Pearl calls 80, Venus folds, Midas checks, [flop: 9♣ 7♠ 9♦], Midas checks, Pearl checks, [turn: 9♣ 7♠ 9♦ 5♥], Midas checks, Pearl checks, [river: 9♣ 7♠ 9♦ 5♥ 10♥], Midas checks, Pearl checks → Midas wins 200 with Pair of 9s (Q♣ 6♥)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 41,
+   "text": "Table 2 · Hand 41 · blinds 40/80 · Marble calls 80, Granite folds, Compass checks, [flop: 4♠ 9♦ 6♣], Compass checks, Marble checks, [turn: 4♠ 9♦ 6♣ A♥], Compass checks, Marble checks, [river: 4♠ 9♦ 6♣ A♥ 8♣], Compass checks, Marble checks → Compass wins 200 with Pair of 8s (J♠ 8♥)",
    "pot": 200
   }
  ],
