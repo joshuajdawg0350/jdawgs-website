@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:07:19.310Z",
+ "updatedAt": "2026-11-20T01:07:42.209Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 14,
+ "handsPlayed": 15,
  "tables": [
   {
    "id": 1,
@@ -70,22 +70,6 @@
      "kind": "house",
      "house": true,
      "stack": 19505,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 20385,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 20320,
      "status": "seated",
      "reentered": false
     }
@@ -166,6 +150,14 @@
      "stack": 9165,
      "status": "seated",
      "reentered": false
+    },
+    {
+     "name": "Ozone",
+     "kind": "house",
+     "house": true,
+     "stack": 20385,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 5
@@ -185,15 +177,15 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 20562,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19795,
+     "stack": 19665,
      "status": "seated",
      "reentered": false
     },
@@ -209,15 +201,15 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19975,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 18650,
+     "stack": 18625,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +217,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20630,
+     "stack": 81092,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +225,20 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19770,
+     "stack": 0,
+     "status": "out",
+     "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 20320,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -301,8 +301,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20562,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19795,
+   "stack": 19665,
    "status": "seated",
    "reentered": false
   },
@@ -382,8 +382,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19975,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18650,
+   "stack": 18625,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "name": "Ozone",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 20385,
    "status": "seated",
    "reentered": false
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20630,
+   "stack": 81092,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 20320,
    "status": "seated",
    "reentered": false
@@ -463,8 +463,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19770,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry calls 50, Slick raises to 115, Granite folds, Dice raises to 350, Bulldog calls 300, Copper folds, Compass calls 300, Sixgun calls 300, Quarry calls 300, Slick folds, [flop: 10♥ 2♥ 3♣], Dice checks, Bulldog checks, Compass checks, Sixgun checks, Quarry checks, [turn: 10♥ 2♥ 3♣ A♠], Dice checks, Bulldog checks, Compass raises to 60, Sixgun folds, Quarry calls 60, Dice calls 60, Bulldog folds, [river: 10♥ 2♥ 3♣ A♠ 2♠], Dice raises to 1255, Compass calls 1255, Quarry calls 1255 → Dice wins 5860 with Two pair, As and 2s (K♥ A♥)",
-   "pot": 5860
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -552,6 +538,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Sixgun calls 50, Quarry folds, Slick calls 50, Granite folds, Dice calls 50, Bulldog folds, Copper calls 50, Compass raises to 105, Marble raises to 320, Sixgun calls 270, Slick calls 270, Dice calls 270, Copper calls 270, Compass raises to 1345, Marble raises to 3110, Sixgun calls 2790, Slick calls 2790, Dice calls 2790, Copper calls 2790, Compass raises to 13245, Marble raises to 30520, Sixgun calls 7770, Slick calls 7605, Dice calls 11915, Copper calls 17040, Compass calls 4940, [flop: 9♠ 8♣ A♣], Marble checks, [turn: 9♠ 8♣ A♣ 2♥], Marble checks, [river: 9♠ 8♣ A♣ 2♥ 7♥], Marble checks → Compass wins 45588 with Pair of Qs (Q♥ Q♦); Marble wins 59887 with Pair of Qs (Q♠ Q♣)",
    "pot": 105475
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce folds, Wildfire raises to 130, Millstone calls 130, Icebox folds, Velvet calls 130, Tally folds, Pickpocket calls 80, Professor calls 80, [flop: 9♠ 7♦ 6♥], Pickpocket raises to 405, Professor calls 405, Wildfire calls 405, Millstone folds, Velvet calls 405, [turn: 9♠ 7♦ 6♥ 4♥], Pickpocket raises to 1375, Professor calls 1375, Wildfire calls 1375, Velvet calls 1375, [river: 9♠ 7♦ 6♥ 4♥ K♥], Pickpocket raises to 4675, Professor calls 4675, Wildfire raises to 14960, Velvet calls 14960, Pickpocket goes ALL-IN to 18720, Professor calls 13185, Wildfire calls 3692, Velvet calls 3105 → Pickpocket wins 81092 with Straight, 10 high (8♣ 10♦)",
+   "pot": 81092
   }
  ],
  "finishes": [
@@ -584,6 +576,30 @@
    "place": null,
    "kind": "house",
    "table": 2,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Wildfire",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Velvet",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Professor",
+   "place": null,
+   "kind": "house",
+   "table": 3,
    "handNo": 5,
    "provisional": true
   }
