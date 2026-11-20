@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:02:08.242Z",
+ "updatedAt": "2026-11-20T01:02:22.606Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 0,
+ "handsPlayed": 1,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19760,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 21125,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19760,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19760,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19760,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19760,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 21125,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19760,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19760,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19760,
    "status": "seated",
    "reentered": false
   },
@@ -484,15 +484,22 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Venus",
+  "toAct": "Bulldog",
   "lastActions": []
  },
- "recentHands": [],
+ "recentHands": [
+  {
+   "table": 1,
+   "handNo": 1,
+   "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow folds, River Rat calls 50, Hammer calls 50, Ozone raises to 115, Anchor calls 115, Midas folds, Baseline calls 90, Pearl calls 65, Venus calls 65, River Rat folds, Hammer calls 65, [flop: 10♠ 6♦ Q♦], Baseline raises to 60, Pearl calls 60, Venus calls 60, Hammer folds, Ozone calls 60, Anchor calls 60, [turn: 10♠ 6♦ Q♦ J♣], Baseline checks, Pearl checks, Venus checks, Ozone checks, Anchor checks, [river: 10♠ 6♦ Q♦ J♣ J♥], Baseline checks, Pearl checks, Venus checks, Ozone raises to 65, Anchor calls 65, Baseline calls 65, Pearl calls 65, Venus calls 65 → Pearl wins 1365 with Two pair, Qs and Js (Q♥ K♥)",
+   "pot": 1365
+  }
+ ],
  "finishes": [],
  "champion": null,
  "tableWinner": null,
