@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:51:46.541Z",
+ "updatedAt": "2026-11-20T01:52:05.627Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 117,
+ "handsPlayed": 118,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 62415,
+     "stack": 62565,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 72148,
+     "stack": 72028,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 85397,
+     "stack": 85367,
      "status": "seated",
      "reentered": false
     },
@@ -144,7 +144,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 62415,
+   "stack": 62565,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 72148,
+   "stack": 72028,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85397,
+   "stack": 85367,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 40,
+  "table": 3,
+  "handNo": 39,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Compass",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 36,
-   "text": "Table 3 · Hand 36 · blinds 30/60 · Icebox calls 60, River Rat calls 30, Deuce checks, [flop: 9♣ J♠ 7♥], River Rat raises to 60, Deuce folds, Icebox folds → River Rat takes 240 (everyone else folded)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 37,
@@ -552,6 +546,12 @@
    "handNo": 40,
    "text": "Table 1 · Hand 40 · blinds 30/60 · Midas folds, Baseline calls 60, Pearl calls 30, Venus checks, [flop: 2♣ 4♥ 8♦], Pearl checks, Venus checks, Baseline checks, [turn: 2♣ 4♥ 8♦ 2♥], Pearl checks, Venus checks, Baseline checks, [river: 2♣ 4♥ 8♦ 2♥ K♣], Pearl checks, Venus checks, Baseline checks → Pearl wins 180 with Two pair, Ks and 2s (Q♥ K♥)",
    "pot": 180
+  },
+  {
+   "table": 2,
+   "handNo": 40,
+   "text": "Table 2 · Hand 40 · blinds 30/60 · Compass calls 60, Marble folds, Granite checks, [flop: 9♦ 10♠ 5♥], Granite checks, Compass checks, [turn: 9♦ 10♠ 5♥ K♦], Granite checks, Compass checks, [river: 9♦ 10♠ 5♥ K♦ Q♥], Granite raises to 60, Compass calls 60 → Granite wins 270 with Straight, K high (3♣ J♠)",
+   "pot": 270
   }
  ],
  "finishes": [
