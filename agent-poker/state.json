@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:23:29.015Z",
+ "updatedAt": "2026-11-20T02:23:43.113Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  200,
-  400
+  250,
+  500
  ],
- "level": 10,
- "handsPlayed": 199,
+ "level": 11,
+ "handsPlayed": 200,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 114548,
+     "stack": 114448,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 84707,
+     "stack": 84607,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 65087,
+     "stack": 64987,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 60595,
+     "stack": 61245,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 53593,
+     "stack": 53493,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 39635,
+     "stack": 39585,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23861,
+     "stack": 23761,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 2116,
+     "stack": 2016,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 70
+   "handsPlayed": 71
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23861,
+   "stack": 23761,
    "status": "seated",
    "reentered": false
   },
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 53593,
+   "stack": 53493,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 65087,
+   "stack": 64987,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 60595,
+   "stack": 61245,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2116,
+   "stack": 2016,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39635,
+   "stack": 39585,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 114548,
+   "stack": 114448,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 84707,
+   "stack": 84607,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 71,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 64,
-   "text": "Table 2 · Hand 64 · blinds 50/100 · Compass calls 100, Marble folds, Granite checks, [flop: 4♥ 7♥ 2♣], Granite checks, Compass checks, [turn: 4♥ 7♥ 2♣ 6♦], Granite checks, Compass checks, [river: 4♥ 7♥ 2♣ 6♦ 3♠], Granite checks, Compass checks → Compass wins 250 with A high (A♦ 10♦)",
-   "pot": 250
-  },
   {
    "table": 3,
    "handNo": 63,
@@ -404,6 +390,12 @@
    "handNo": 70,
    "text": "Table 1 · Hand 70 · blinds 50/100 · Midas folds, Venus calls 100, River Rat calls 100, Marble folds, Compass calls 100, Deuce calls 100, Granite folds, Baseline calls 50, Icebox checks, [flop: 3♠ 9♦ 10♠], Baseline checks, Icebox checks, Venus checks, River Rat checks, Compass checks, Deuce checks, [turn: 3♠ 9♦ 10♠ 4♦], Baseline checks, Icebox checks, Venus checks, River Rat checks, Compass checks, Deuce checks, [river: 3♠ 9♦ 10♠ 4♦ 8♦], Baseline checks, Icebox checks, Venus checks, River Rat checks, Compass checks, Deuce checks → River Rat wins 600 with Two pair, 9s and 4s (9♣ 4♣)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 71,
+   "text": "Table 1 · Hand 71 · blinds 50/100 · Venus calls 100, River Rat calls 100, Marble calls 100, Compass folds, Deuce calls 100, Granite calls 100, Baseline calls 100, Icebox folds, Midas checks, [flop: 7♠ 4♥ 4♦], Midas checks, Venus checks, River Rat checks, Marble checks, Deuce checks, Granite checks, Baseline checks, [turn: 7♠ 4♥ 4♦ 2♣], Midas checks, Venus checks, River Rat checks, Marble checks, Deuce checks, Granite checks, Baseline checks, [river: 7♠ 4♥ 4♦ 2♣ 6♥], Midas checks, Venus checks, River Rat checks, Marble checks, Deuce checks, Granite checks, Baseline checks → Granite wins 750 with Three of a kind, 4s (Q♣ 4♣)",
+   "pot": 750
   }
  ],
  "finishes": [
