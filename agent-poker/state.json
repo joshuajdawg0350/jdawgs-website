@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T01:03:51.103Z",
+ "updatedAt": "2026-11-20T01:04:04.516Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 5,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20300,
+     "stack": 20625,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20300,
+   "stack": 20625,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -522,6 +514,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Marble folds, Sixgun calls 50, Quarry calls 50, Slick raises to 115, Granite folds, Dice raises to 350, Bulldog calls 300, Copper folds, Compass calls 300, Sixgun calls 300, Quarry calls 300, Slick folds, [flop: 10♥ 2♥ 3♣], Dice checks, Bulldog checks, Compass checks, Sixgun checks, Quarry checks, [turn: 10♥ 2♥ 3♣ A♠], Dice checks, Bulldog checks, Compass raises to 60, Sixgun folds, Quarry calls 60, Dice calls 60, Bulldog folds, [river: 10♥ 2♥ 3♣ A♠ 2♠], Dice raises to 1255, Compass calls 1255, Quarry calls 1255 → Dice wins 5860 with Two pair, As and 2s (K♥ A♥)",
    "pot": 5860
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone folds, Icebox checks, [flop: 6♠ A♣ Q♥], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [turn: 6♠ A♣ Q♥ 4♦], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [river: 6♠ A♣ Q♥ 4♦ 10♥], Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks → Velvet wins 375 with Pair of As (A♦ 9♦)",
+   "pot": 375
   }
  ],
  "finishes": [],
