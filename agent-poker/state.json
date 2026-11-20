@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-20T02:32:45.220Z",
+ "updatedAt": "2026-11-20T02:33:04.064Z",
  "mode": "real",
  "date": "2026-11-19",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 218,
+ "handsPlayed": 219,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 36966,
+     "stack": 36846,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 40040,
+     "stack": 39920,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 74828,
+     "stack": 74708,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 284595,
+     "stack": 284475,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 60100,
+     "stack": 60040,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23471,
+     "stack": 24011,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 89
+   "handsPlayed": 90
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23471,
+   "stack": 24011,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 284595,
+   "stack": 284475,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 60100,
+   "stack": 60040,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 36966,
+   "stack": 36846,
    "status": "seated",
    "reentered": false
   },
@@ -252,7 +252,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 74828,
+   "stack": 74708,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 40040,
+   "stack": 39920,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 90,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "River Rat",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 80,
-   "text": "Table 1 · Hand 80 · blinds 50/100 · Compass raises to 210, Deuce calls 210, Granite calls 210, Midas folds, River Rat calls 160, Marble folds, [flop: J♦ 8♥ 4♥], River Rat checks, Compass checks, Deuce checks, Granite checks, [turn: J♦ 8♥ 4♥ Q♥], River Rat raises to 100, Compass calls 100, Deuce calls 100, Granite folds, [river: J♦ 8♥ 4♥ Q♥ Q♦], River Rat raises to 100, Compass calls 100, Deuce calls 100 → River Rat wins 1540 with Flush, K high (K♥ J♥)",
-   "pot": 1540
-  },
   {
    "table": 1,
    "handNo": 81,
@@ -404,6 +390,12 @@
    "handNo": 89,
    "text": "Table 1 · Hand 89 · blinds 60/120 · Midas folds, River Rat calls 120, Marble calls 120, Compass calls 120, Deuce calls 60, Granite checks, [flop: 2♥ 3♠ J♦], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks, [turn: 2♥ 3♠ J♦ A♣], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks, [river: 2♥ 3♠ J♦ A♣ 9♣], Deuce checks, Granite checks, River Rat checks, Marble checks, Compass checks → Marble wins 600 with Pair of 3s (K♠ 3♣)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 90,
+   "text": "Table 1 · Hand 90 · blinds 60/120 · River Rat calls 120, Marble calls 120, Compass calls 120, Deuce calls 120, Granite folds, Midas checks, [flop: A♣ 2♣ J♦], Midas checks, River Rat checks, Marble checks, Compass checks, Deuce checks, [turn: A♣ 2♣ J♦ 8♦], Midas checks, River Rat checks, Marble checks, Compass checks, Deuce checks, [river: A♣ 2♣ J♦ 8♦ 5♣], Midas checks, River Rat checks, Marble checks, Compass checks, Deuce checks → Midas wins 660 with Pair of Js (J♥ 4♣)",
+   "pot": 660
   }
  ],
  "finishes": [
