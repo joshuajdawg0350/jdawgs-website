@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:31:53.153Z",
+ "updatedAt": "2026-11-21T03:32:07.925Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 278,
+ "handsPlayed": 279,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 74945,
+     "stack": 75185,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 445055,
+     "stack": 444815,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 158
+   "handsPlayed": 159
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 445055,
+   "stack": 444815,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 74945,
+   "stack": 75185,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 159,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 149,
-   "text": "Table 1 · Hand 149 · blinds 120/240 · Venus calls 120, Quarry checks, [flop: 5♦ K♦ 7♣], Quarry checks, Venus checks, [turn: 5♦ K♦ 7♣ 5♣], Quarry checks, Venus checks, [river: 5♦ K♦ 7♣ 5♣ A♣], Quarry checks, Venus checks → Venus wins 480 with Pair of 5s (3♥ Q♣)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 150,
@@ -396,6 +382,12 @@
    "handNo": 158,
    "text": "Table 1 · Hand 158 · blinds 120/240 · Quarry calls 120, Venus raises to 530, Quarry calls 290, [flop: 6♠ 10♠ 3♠], Venus checks, Quarry checks, [turn: 6♠ 10♠ 3♠ K♣], Venus checks, Quarry checks, [river: 6♠ 10♠ 3♠ K♣ 7♦], Venus checks, Quarry checks → Quarry wins 1060 with Pair of Ks (2♠ K♥)",
    "pot": 1060
+  },
+  {
+   "table": 1,
+   "handNo": 159,
+   "text": "Table 1 · Hand 159 · blinds 120/240 · Venus calls 120, Quarry checks, [flop: 2♣ 10♦ 3♠], Quarry checks, Venus checks, [turn: 2♣ 10♦ 3♠ 9♥], Quarry checks, Venus checks, [river: 2♣ 10♦ 3♠ 9♥ 4♦], Quarry checks, Venus checks → Quarry wins 480 with K high (Q♦ K♣)",
+   "pot": 480
   }
  ],
  "finishes": [
