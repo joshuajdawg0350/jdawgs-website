@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:34:45.837Z",
+ "updatedAt": "2026-11-21T03:35:06.748Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 282,
+ "handsPlayed": 283,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 73715,
+     "stack": 73865,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 446285,
+     "stack": 446135,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 162
+   "handsPlayed": 163
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 446285,
+   "stack": 446135,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 73715,
+   "stack": 73865,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 163,
-  "stage": "preflop",
-  "board": [],
-  "pot": 450,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 153,
-   "text": "Table 1 · Hand 153 · blinds 120/240 · Venus raises to 545, Quarry calls 305, [flop: 2♠ 4♣ 3♦], Quarry checks, Venus checks, [turn: 2♠ 4♣ 3♦ 10♠], Quarry checks, Venus checks, [river: 2♠ 4♣ 3♦ 10♠ 10♥], Quarry checks, Venus checks → Venus wins 1090 with Two pair, Ks and 10s (K♥ K♠)",
-   "pot": 1090
-  },
   {
    "table": 1,
    "handNo": 154,
@@ -395,6 +381,12 @@
    "table": 1,
    "handNo": 162,
    "text": "Table 1 · Hand 162 · blinds 150/300 · Quarry folds → Venus takes 450 (everyone else folded)",
+   "pot": 450
+  },
+  {
+   "table": 1,
+   "handNo": 163,
+   "text": "Table 1 · Hand 163 · blinds 150/300 · Venus folds → Quarry takes 450 (everyone else folded)",
    "pot": 450
   }
  ],
