@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:56:43.458Z",
+ "updatedAt": "2026-11-21T02:56:56.441Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 188,
+ "handsPlayed": 189,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 179200,
+     "stack": 177410,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 163420,
+     "stack": 161630,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 28785,
+     "stack": 28685,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16090,
+     "stack": 20290,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 9560,
+     "stack": 9360,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 9740,
+     "stack": 9420,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 68
+   "handsPlayed": 69
   }
  ],
  "seats": [
@@ -136,7 +136,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9560,
+   "stack": 9360,
    "status": "seated",
    "reentered": false
   },
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 163420,
+   "stack": 161630,
    "status": "seated",
    "reentered": false
   },
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16090,
+   "stack": 20290,
    "status": "seated",
    "reentered": false
   },
@@ -199,7 +199,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 28785,
+   "stack": 28685,
    "status": "seated",
    "reentered": false
   },
@@ -262,7 +262,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9740,
+   "stack": 9420,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 179200,
+   "stack": 177410,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 69,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 59,
-   "text": "Table 2 · Hand 59 · blinds 40/80 · Granite folds, Professor calls 40, Quarry checks, [flop: 7♥ 8♣ 4♥], Professor checks, Quarry checks, [turn: 7♥ 8♣ 4♥ Q♠], Professor checks, Quarry checks, [river: 7♥ 8♣ 4♥ Q♠ K♥], Professor checks, Quarry raises to 80, Professor calls 80 → Quarry wins 320 with Flush, K high (2♥ 8♥)",
-   "pot": 320
-  },
   {
    "table": 3,
    "handNo": 59,
@@ -396,6 +382,12 @@
    "handNo": 68,
    "text": "Table 1 · Hand 68 · blinds 50/100 · Quarry folds, Venus calls 100, Tally folds, Icebox folds, Shadow calls 100, Granite folds, Ozone checks, [flop: J♥ K♦ 8♦], Ozone checks, Venus checks, Shadow checks, [turn: J♥ K♦ 8♦ A♦], Ozone checks, Venus raises to 100, Shadow folds, Ozone calls 100, [river: J♥ K♦ 8♦ A♦ K♠], Ozone checks, Venus raises to 100, Ozone calls 100 → Venus wins 750 with Straight, A high (Q♦ 10♥)",
    "pot": 750
+  },
+  {
+   "table": 1,
+   "handNo": 69,
+   "text": "Table 1 · Hand 69 · blinds 50/100 · Venus calls 100, Tally folds, Icebox calls 100, Shadow calls 100, Granite raises to 200, Ozone calls 150, Quarry calls 100, Venus calls 100, Icebox folds, Shadow calls 100, [flop: 9♣ 5♠ 3♣], Ozone checks, Quarry checks, Venus checks, Shadow checks, Granite checks, [turn: 9♣ 5♠ 3♣ 2♠], Ozone raises to 120, Quarry calls 120, Venus calls 120, Shadow raises to 250, Granite folds, Ozone folds, Quarry calls 130, Venus calls 130, [river: 9♣ 5♠ 3♣ 2♠ 10♥], Quarry checks, Venus raises to 100, Shadow raises to 1340, Quarry calls 1340, Venus calls 1240 → Shadow wins 5990 with Straight, 5 high (A♦ 4♠)",
+   "pot": 5990
   }
  ],
  "finishes": [
