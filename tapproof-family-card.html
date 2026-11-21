@@ -315,6 +315,10 @@ document.getElementById("fill").addEventListener("click",function(){
   };
 })();
 </script>
+<script>
+/* Family Card tool: tapping "Put it on the card" opens the sheet so the filled card is visible (registry precedent). */
+(function(){function wire(){if(!window.__dsheet){setTimeout(wire,60);return;}var btn=document.getElementById('fill');if(btn)btn.addEventListener('click',function(){if(!window.matchMedia('(max-width: 899px)').matches)return;setTimeout(function(){window.__dsheet.open('full');setTimeout(function(){var body=document.getElementById('dsheetBody');var card=document.getElementById('card');if(body&&card){var y=card.getBoundingClientRect().top-body.getBoundingClientRect().top+body.scrollTop-8;body.scrollTo({top:Math.max(0,y),behavior:'instant'});}},340);},0);});}wire();})();
+</script>
 
 </body>
 </html>
