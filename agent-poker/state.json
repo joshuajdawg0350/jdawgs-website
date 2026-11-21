@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:59:25.937Z",
+ "updatedAt": "2026-11-21T02:59:37.507Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 195,
+ "handsPlayed": 196,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 162530,
+     "stack": 162480,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 136680,
+     "stack": 136470,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 34570,
+     "stack": 34830,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 75
+   "handsPlayed": 76
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 162530,
+   "stack": 162480,
    "status": "seated",
    "reentered": false
   },
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 34570,
+   "stack": 34830,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 136680,
+   "stack": 136470,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 76,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 66,
-   "text": "Table 1 · Hand 66 · blinds 50/100 · Granite calls 100, Ozone calls 100, Quarry calls 100, Venus calls 100, Tally calls 100, Icebox folds, Shadow checks, [flop: 7♠ 4♠ 3♣], Shadow checks, Granite checks, Ozone checks, Quarry checks, Venus checks, Tally checks, [turn: 7♠ 4♠ 3♣ 9♣], Shadow checks, Granite checks, Ozone checks, Quarry checks, Venus checks, Tally checks, [river: 7♠ 4♠ 3♣ 9♣ J♥], Shadow checks, Granite checks, Ozone checks, Quarry checks, Venus checks, Tally checks → Ozone wins 650 with Pair of 9s (9♥ 2♥)",
-   "pot": 650
-  },
   {
    "table": 1,
    "handNo": 67,
@@ -396,6 +382,12 @@
    "handNo": 75,
    "text": "Table 1 · Hand 75 · blinds 50/100 · Tally calls 100, Shadow calls 100, Granite calls 100, Quarry calls 50, Venus checks, [flop: 9♣ Q♥ 2♣], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks, [turn: 9♣ Q♥ 2♣ 7♥], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks, [river: 9♣ Q♥ 2♣ 7♥ K♥], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks → Venus wins 500 with Pair of Ks (K♠ A♦)",
    "pot": 500
+  },
+  {
+   "table": 1,
+   "handNo": 76,
+   "text": "Table 1 · Hand 76 · blinds 50/100 · Shadow calls 100, Granite folds, Quarry folds, Venus folds, Tally checks, [flop: K♥ Q♠ 8♣], Tally checks, Shadow checks, [turn: K♥ Q♠ 8♣ 5♠], Tally checks, Shadow checks, [river: K♥ Q♠ 8♣ 5♠ 5♣], Tally checks, Shadow raises to 110, Tally calls 110 → Shadow wins 470 with Full house, 5s full of Ks (5♥ K♣)",
+   "pot": 470
   }
  ],
  "finishes": [
