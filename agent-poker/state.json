@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:00:32.543Z",
+ "updatedAt": "2026-11-21T02:00:53.934Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 25,
+ "handsPlayed": 26,
  "tables": [
   {
    "id": 1,
@@ -91,8 +91,8 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 10065,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -131,8 +131,8 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 10940,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 120120,
+     "stack": 141175,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20180,
+     "stack": 20130,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 3,
@@ -265,8 +265,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10065,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -400,8 +400,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10940,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 120120,
+   "stack": 141175,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20180,
+   "stack": 20130,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Professor",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 25/50 · Granite folds, Compass calls 50, Sixgun calls 50, Professor calls 50, Quarry calls 25, Slick checks, [flop: 4♦ 2♦ Q♣], Quarry checks, Slick checks, Compass raises to 60, Sixgun folds, Professor folds, Quarry calls 60, Slick folds, [turn: 4♦ 2♦ Q♣ A♣], Quarry checks, Compass checks, [river: 4♦ 2♦ Q♣ A♣ 9♥], Quarry checks, Compass checks → Quarry wins 370 with Pair of Qs (J♦ Q♥)",
-   "pot": 370
-  },
   {
    "table": 3,
    "handNo": 5,
@@ -552,6 +546,12 @@
    "handNo": 11,
    "text": "Table 1 · Hand 11 · blinds 25/50 · Pearl calls 50, Venus calls 50, Shadow raises to 115, Midas folds, Baseline raises to 200, Pearl calls 150, Venus calls 150, Shadow folds, [flop: Q♦ 8♥ 8♣], Baseline checks, Pearl checks, Venus checks, [turn: Q♦ 8♥ 8♣ Q♥], Baseline checks, Pearl checks, Venus checks, [river: Q♦ 8♥ 8♣ Q♥ 6♦], Baseline checks, Pearl checks, Venus checks → Venus wins 740 with Two pair, Qs and 8s (5♠ 10♠)",
    "pot": 740
+  },
+  {
+   "table": 2,
+   "handNo": 8,
+   "text": "Table 2 · Hand 8 · blinds 25/50 · Professor folds, Quarry calls 50, Slick calls 50, Granite folds, Compass calls 25, Sixgun checks, [flop: 10♣ A♥ 8♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [turn: 10♣ A♥ 8♥ Q♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [river: 10♣ A♥ 8♥ Q♥ 9♥], Compass raises to 55, Sixgun raises to 210, Quarry folds, Slick calls 210, Compass raises to 615, Sixgun raises to 1650, Slick calls 1440, Compass raises to 4120, Sixgun raises to 10445, Slick calls 8365, Compass goes ALL-IN to 10890, Sixgun raises to 29820 → Sixgun wins 50925 with Flush, A high (7♥ J♦)",
+   "pot": 50925
   }
  ],
  "finishes": [
@@ -633,6 +633,22 @@
    "kind": "house",
    "table": 3,
    "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Compass",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 8,
+   "provisional": true
+  },
+  {
+   "name": "Slick",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 8,
    "provisional": true
   }
  ],
