@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:41:36.454Z",
+ "updatedAt": "2026-11-21T02:41:46.783Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 133,
+ "handsPlayed": 134,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 2780,
+     "stack": 2740,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 184400,
+     "stack": 184440,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   },
   {
    "id": 3,
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 2780,
+   "stack": 2740,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 184400,
+   "stack": 184440,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 44,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Granite",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 44,
-   "text": "Table 1 · Hand 44 · blinds 40/80 · Shadow calls 80, Midas folds, Baseline folds, Venus checks, [flop: 6♠ 10♣ 4♣], Venus checks, Shadow checks, [turn: 6♠ 10♣ 4♣ 5♦], Venus checks, Shadow checks, [river: 6♠ 10♣ 4♣ 5♦ K♠], Venus checks, Shadow checks → Venus wins 200 with Pair of 4s (3♠ 4♥)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 41,
@@ -552,6 +546,12 @@
    "handNo": 47,
    "text": "Table 1 · Hand 47 · blinds 40/80 · Venus calls 80, Shadow calls 80, Midas folds, Baseline checks, [flop: 10♥ 8♥ Q♣], Baseline checks, Venus checks, Shadow checks, [turn: 10♥ 8♥ Q♣ J♥], Baseline checks, Venus checks, Shadow checks, [river: 10♥ 8♥ Q♣ J♥ A♥], Baseline raises to 90, Venus calls 90, Shadow calls 90 → Baseline wins 550 with Flush, A high (Q♥ 6♣)",
    "pot": 550
+  },
+  {
+   "table": 2,
+   "handNo": 44,
+   "text": "Table 2 · Hand 44 · blinds 40/80 · Granite folds, Professor folds → Quarry takes 120 (everyone else folded)",
+   "pot": 120
   }
  ],
  "finishes": [
