@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:24:33.011Z",
+ "updatedAt": "2026-11-21T01:24:50.815Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 11700,
+     "stack": 11650,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 88275,
+     "stack": 88225,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20250,
+     "stack": 20450,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11700,
+   "stack": 11650,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88275,
+   "stack": 88225,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19900,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20250,
+   "stack": 20450,
    "status": "seated",
    "reentered": false
   }
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 3,
+  "table": 2,
+  "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Ozone",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -516,6 +516,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, Ozone calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Pearl calls 25, Venus checks, [flop: 6♦ 8♣ 10♣], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [turn: 6♦ 8♣ 10♣ 3♥], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [river: 6♦ 8♣ 10♣ 3♥ J♠], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks → Quarry wins 300 with Pair of Js (J♦ 4♥)",
    "pot": 300
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · Ozone calls 50, Quarry calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: 10♣ 6♠ 9♦], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks, [turn: 10♣ 6♠ 9♦ 5♠], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks, [river: 10♣ 6♠ 9♦ 5♠ 2♦], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks → Quarry wins 250 with Pair of 10s (10♠ K♠)",
+   "pot": 250
   }
  ],
  "finishes": [
