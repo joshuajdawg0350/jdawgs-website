@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:24:41.515Z",
+ "updatedAt": "2026-11-21T03:24:52.604Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  400,
-  800
+  500,
+  1000
  ],
- "level": 13,
- "handsPlayed": 259,
+ "level": 14,
+ "handsPlayed": 260,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 74440,
+     "stack": 74240,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 445560,
+     "stack": 445760,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 139
+   "handsPlayed": 140
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 445560,
+   "stack": 445760,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 74440,
+   "stack": 74240,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 140,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Quarry",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 130,
-   "text": "Table 1 · Hand 130 · blinds 100/200 · Quarry folds → Venus takes 300 (everyone else folded)",
-   "pot": 300
-  },
   {
    "table": 1,
    "handNo": 131,
@@ -396,6 +382,12 @@
    "handNo": 139,
    "text": "Table 1 · Hand 139 · blinds 100/200 · Venus folds → Quarry takes 300 (everyone else folded)",
    "pot": 300
+  },
+  {
+   "table": 1,
+   "handNo": 140,
+   "text": "Table 1 · Hand 140 · blinds 100/200 · Quarry calls 100, Venus checks, [flop: 4♣ 10♦ 7♠], Venus checks, Quarry checks, [turn: 4♣ 10♦ 7♠ 6♥], Venus checks, Quarry checks, [river: 4♣ 10♦ 7♠ 6♥ 10♠], Venus checks, Quarry checks → Venus wins 400 with Pair of 10s (2♣ A♣)",
+   "pot": 400
   }
  ],
  "finishes": [
