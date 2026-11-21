@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:51:31.115Z",
+ "updatedAt": "2026-11-21T02:51:42.490Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 172,
+ "handsPlayed": 173,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 13350,
+     "stack": 13470,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3430,
+     "stack": 3350,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 183560,
+     "stack": 183520,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 56
+   "handsPlayed": 57
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 13350,
+   "stack": 13470,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3430,
+   "stack": 3350,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 183560,
+   "stack": 183520,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 57,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Professor",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 57,
-   "text": "Table 1 · Hand 57 · blinds 40/80 · Midas folds, Baseline calls 80, Venus folds, Shadow checks, [flop: 6♦ 8♣ J♦], Shadow checks, Baseline checks, [turn: 6♦ 8♣ J♦ J♣], Shadow checks, Baseline checks, [river: 6♦ 8♣ J♦ J♣ 4♠], Shadow checks, Baseline checks → Shadow wins 200 with Two pair, Js and 6s (K♠ 6♠)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 54,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 60,
    "text": "Table 1 · Hand 60 · blinds 40/80 · Shadow calls 80, Midas folds, Baseline folds, Venus checks, [flop: 7♣ A♦ 10♣], Venus checks, Shadow checks, [turn: 7♣ A♦ 10♣ 6♥], Venus checks, Shadow checks, [river: 7♣ A♦ 10♣ 6♥ Q♠], Venus checks, Shadow checks → Shadow wins 200 with Pair of As (A♠ 2♦)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 57,
+   "text": "Table 2 · Hand 57 · blinds 40/80 · Professor calls 80, Quarry folds, Granite checks, [flop: K♦ 3♥ Q♠], Granite checks, Professor checks, [turn: K♦ 3♥ Q♠ 7♠], Granite checks, Professor checks, [river: K♦ 3♥ Q♠ 7♠ 7♦], Granite checks, Professor checks → Granite wins 200 with Two pair, Ks and 7s (J♦ K♣)",
    "pot": 200
   }
  ],
