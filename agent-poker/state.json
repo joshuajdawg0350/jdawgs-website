@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:24:50.815Z",
+ "updatedAt": "2026-11-21T01:25:09.713Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 5,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -123,24 +123,24 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19895,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 10340,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 10340,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -155,20 +155,20 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19895,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 58875,
+     "stack": 119345,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -319,8 +319,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19895,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -346,8 +346,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10340,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -373,8 +373,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10340,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -427,8 +427,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19895,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 58875,
+   "stack": 119345,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Velvet",
   "lastActions": []
  },
  "recentHands": [
@@ -522,6 +522,12 @@
    "handNo": 3,
    "text": "Table 1 · Hand 3 · blinds 25/50 · Ozone calls 50, Quarry calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: 10♣ 6♠ 9♦], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks, [turn: 10♣ 6♠ 9♦ 5♠], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks, [river: 10♣ 6♠ 9♦ 5♠ 2♦], Venus checks, Shadow checks, Ozone checks, Quarry checks, Pearl checks → Quarry wins 250 with Pair of 10s (10♠ K♠)",
    "pot": 250
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass folds, Marble calls 50, Sixgun calls 50, Slick folds, Granite folds, Dice calls 25, Bulldog checks, [flop: A♥ A♠ 5♠], Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun checks, [turn: A♥ A♠ 5♠ 9♦], Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun raises to 150, Dice calls 150, Bulldog calls 150, Copper calls 150, Marble calls 150, [river: A♥ A♠ 5♠ 9♦ 2♠], Dice checks, Bulldog checks, Copper raises to 50, Marble calls 50, Sixgun raises to 710, Dice calls 710, Bulldog calls 710, Copper raises to 1370, Marble calls 1320, Sixgun raises to 4890, Dice calls 4180, Bulldog calls 4180, Copper raises to 8410, Marble calls 7040, Sixgun raises to 27905, Dice calls 14805, Bulldog calls 5250, Copper calls 1730, Marble calls 11285 → Sixgun wins 88575 with Two pair, As and 9s (9♠ 7♣)",
+   "pot": 88575
   }
  ],
  "finishes": [
@@ -547,6 +553,38 @@
    "kind": "house",
    "table": 1,
    "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Dice",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Marble",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Bulldog",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Copper",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
    "provisional": true
   }
  ],
