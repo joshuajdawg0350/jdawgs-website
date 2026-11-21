@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:26:28.030Z",
+ "updatedAt": "2026-11-21T02:26:40.440Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 83,
+ "handsPlayed": 84,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 10065,
+     "stack": 10215,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 14270,
+     "stack": 14210,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 115090,
+     "stack": 115030,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20115,
+     "stack": 20085,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 26
+   "handsPlayed": 27
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 10065,
+   "stack": 10215,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 14270,
+   "stack": 14210,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 115090,
+   "stack": 115030,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20115,
+   "stack": 20085,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 27,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 24,
-   "text": "Table 2 · Hand 24 · blinds 30/60 · Quarry calls 60, Granite calls 60, Sixgun folds, Professor checks, [flop: 6♦ Q♣ J♣], Professor checks, Quarry checks, Granite checks, [turn: 6♦ Q♣ J♣ J♥], Professor checks, Quarry checks, Granite checks, [river: 6♦ Q♣ J♣ J♥ 10♠], Professor raises to 65, Quarry calls 65, Granite calls 65 → Professor wins 405 with Straight, A high (A♣ K♣)",
-   "pot": 405
-  },
   {
    "table": 3,
    "handNo": 24,
@@ -552,6 +538,12 @@
    "handNo": 27,
    "text": "Table 2 · Hand 27 · blinds 30/60 · Professor calls 60, Quarry raises to 120, Granite calls 90, Sixgun calls 60, Professor calls 60, [flop: 3♦ 7♦ 7♥], Granite checks, Sixgun raises to 290, Professor calls 290, Quarry calls 290, Granite calls 290, [turn: 3♦ 7♦ 7♥ 4♥], Granite checks, Sixgun raises to 985, Professor calls 985, Quarry calls 985, Granite calls 985, [river: 3♦ 7♦ 7♥ 4♥ 6♠], Granite checks, Sixgun raises to 3350, Professor calls 3350, Quarry calls 3350, Granite calls 3350 → Sixgun wins 18980 with Straight, 7 high (5♠ 7♠)",
    "pot": 18980
+  },
+  {
+   "table": 3,
+   "handNo": 27,
+   "text": "Table 3 · Hand 27 · blinds 30/60 · Icebox calls 60, Tally calls 60, Ozone folds, Millstone checks, [flop: K♣ 2♥ 10♦], Millstone checks, Icebox checks, Tally checks, [turn: K♣ 2♥ 10♦ 3♠], Millstone checks, Icebox checks, Tally checks, [river: K♣ 2♥ 10♦ 3♠ A♦], Millstone checks, Icebox checks, Tally checks → Millstone wins 210 with Pair of As (A♥ 6♣)",
+   "pot": 210
   }
  ],
  "finishes": [
