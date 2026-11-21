@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:45:08.481Z",
+ "updatedAt": "2026-11-21T02:45:19.135Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 147,
+ "handsPlayed": 148,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 57961,
+     "stack": 58041,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 64950,
+     "stack": 64870,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 51
+   "handsPlayed": 52
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57961,
+   "stack": 58041,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 64950,
+   "stack": 64870,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 52,
+  "table": 2,
+  "handNo": 49,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Shadow",
+  "toAct": "Quarry",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 45,
-   "text": "Table 3 · Hand 45 · blinds 40/80 · Ozone calls 80, Millstone calls 80, Icebox folds, Tally checks, [flop: A♠ J♠ 7♣], Tally checks, Ozone checks, Millstone checks, [turn: A♠ J♠ 7♣ 8♥], Tally checks, Ozone checks, Millstone checks, [river: A♠ J♠ 7♣ 8♥ 2♠], Tally checks, Ozone checks, Millstone checks → Tally wins 280 with Pair of 8s (5♣ 8♠)",
-   "pot": 280
-  },
   {
    "table": 1,
    "handNo": 49,
@@ -552,6 +546,12 @@
    "handNo": 48,
    "text": "Table 3 · Hand 48 · blinds 40/80 · Tally calls 80, Ozone raises to 185, Millstone folds, Icebox folds, Tally calls 105, [flop: 5♠ 3♦ 8♦], Tally checks, Ozone checks, [turn: 5♠ 3♦ 8♦ 4♣], Tally checks, Ozone checks, [river: 5♠ 3♦ 8♦ 4♣ 4♠], Tally checks, Ozone checks → Ozone wins 490 with Two pair, 7s and 4s (7♥ 7♣)",
    "pot": 490
+  },
+  {
+   "table": 1,
+   "handNo": 52,
+   "text": "Table 1 · Hand 52 · blinds 40/80 · Shadow folds, Midas folds, Baseline calls 40, Venus checks, [flop: 8♣ 10♠ Q♥], Baseline checks, Venus checks, [turn: 8♣ 10♠ Q♥ 5♥], Baseline checks, Venus checks, [river: 8♣ 10♠ Q♥ 5♥ 3♥], Baseline checks, Venus checks → Baseline wins 160 with Pair of Qs (9♥ Q♦)",
+   "pot": 160
   }
  ],
  "finishes": [
