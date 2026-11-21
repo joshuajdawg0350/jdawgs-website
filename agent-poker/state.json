@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:22:17.686Z",
+ "updatedAt": "2026-11-21T02:22:34.525Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 69,
+ "handsPlayed": 70,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19984,
+     "stack": 19924,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 22260,
+     "stack": 23030,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 10221,
+     "stack": 9961,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 88255,
+     "stack": 87995,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19400,
+     "stack": 19210,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 25
+   "handsPlayed": 26
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19984,
+   "stack": 19924,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22260,
+   "stack": 23030,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10221,
+   "stack": 9961,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88255,
+   "stack": 87995,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19400,
+   "stack": 19210,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 26,
+  "table": 2,
+  "handNo": 23,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Pearl",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 19,
-   "text": "Table 3 · Hand 19 · blinds 25/50 · Icebox folds, Tally calls 50, Ozone folds, Millstone checks, [flop: J♥ 5♥ 3♠], Millstone checks, Tally checks, [turn: J♥ 5♥ 3♠ 10♦], Millstone checks, Tally checks, [river: J♥ 5♥ 3♠ 10♦ J♦], Millstone raises to 50, Tally calls 50 → Millstone wins 225 with Three of a kind, Js (J♣ Q♥)",
-   "pot": 225
-  },
   {
    "table": 1,
    "handNo": 23,
@@ -552,6 +546,12 @@
    "handNo": 22,
    "text": "Table 3 · Hand 22 · blinds 30/60 · Millstone folds, Icebox calls 60, Tally calls 30, Ozone checks, [flop: K♣ 6♣ 3♠], Tally checks, Ozone checks, Icebox checks, [turn: K♣ 6♣ 3♠ A♦], Tally checks, Ozone checks, Icebox checks, [river: K♣ 6♣ 3♠ A♦ 5♣], Tally checks, Ozone checks, Icebox checks → Tally wins 180 with Pair of As (4♦ A♥)",
    "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 26,
+   "text": "Table 1 · Hand 26 · blinds 30/60 · Pearl calls 60, Venus calls 60, Shadow calls 60, Midas calls 30, Baseline checks, [flop: Q♥ 5♥ 6♣], Midas checks, Baseline checks, Pearl checks, Venus checks, Shadow checks, [turn: Q♥ 5♥ 6♣ J♦], Midas checks, Baseline checks, Pearl checks, Venus checks, Shadow checks, [river: Q♥ 5♥ 6♣ J♦ 5♦], Midas checks, Baseline raises to 65, Pearl calls 65, Venus raises to 130, Shadow calls 130, Midas folds, Baseline raises to 200, Pearl calls 135, Venus calls 70, Shadow folds → Baseline wins 1030 with Three of a kind, 5s (5♠ 7♥)",
+   "pot": 1030
   }
  ],
  "finishes": [
