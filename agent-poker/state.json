@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:48:07.114Z",
+ "updatedAt": "2026-11-21T02:48:18.293Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  120,
-  240
+  150,
+  300
  ],
- "level": 8,
- "handsPlayed": 159,
+ "level": 9,
+ "handsPlayed": 160,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 59821,
+     "stack": 59781,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 63685,
+     "stack": 63885,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16960,
+     "stack": 16800,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 55
+   "handsPlayed": 56
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59821,
+   "stack": 59781,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 63685,
+   "stack": 63885,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16960,
+   "stack": 16800,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 56,
+  "table": 2,
+  "handNo": 53,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 49,
-   "text": "Table 3 · Hand 49 · blinds 40/80 · Ozone calls 80, Millstone calls 80, Icebox folds, Tally checks, [flop: 10♥ 3♣ 4♠], Tally raises to 95, Ozone folds, Millstone folds → Tally takes 375 (everyone else folded)",
-   "pot": 375
-  },
   {
    "table": 1,
    "handNo": 53,
@@ -552,6 +546,12 @@
    "handNo": 52,
    "text": "Table 3 · Hand 52 · blinds 40/80 · Tally folds, Ozone calls 80, Millstone calls 40, Icebox checks, [flop: Q♦ 6♦ Q♣], Millstone checks, Icebox checks, Ozone checks, [turn: Q♦ 6♦ Q♣ K♣], Millstone checks, Icebox checks, Ozone checks, [river: Q♦ 6♦ Q♣ K♣ Q♠], Millstone raises to 80, Icebox calls 80, Ozone raises to 185, Millstone raises to 290, Icebox calls 210, Ozone raises to 425, Millstone raises to 560, Icebox calls 270, Ozone raises to 735, Millstone raises to 910, Icebox calls 350, Ozone raises to 1140, Millstone raises to 1370, Icebox calls 460, Ozone raises to 1670, Millstone raises to 1970, Icebox calls 600, Ozone raises to 2360, Millstone raises to 2750, Icebox calls 780, Ozone raises to 3255, Millstone raises to 3760, Icebox calls 1010, Ozone raises to 4415, Millstone raises to 5070, Icebox calls 1310, Ozone raises to 5920, Millstone raises to 6770, Icebox calls 1700, Ozone raises to 7875, Millstone raises to 8980, Icebox calls 2210, Ozone raises to 10415, Millstone calls 220, Icebox calls 1435 → Icebox wins 30270 with Three of a kind, Qs (A♥ 4♣)",
    "pot": 30270
+  },
+  {
+   "table": 1,
+   "handNo": 56,
+   "text": "Table 1 · Hand 56 · blinds 40/80 · Shadow calls 80, Midas folds, Baseline folds, Venus checks, [flop: 2♥ 2♦ A♣], Venus checks, Shadow checks, [turn: 2♥ 2♦ A♣ 10♥], Venus checks, Shadow checks, [river: 2♥ 2♦ A♣ 10♥ K♥], Venus raises to 80, Shadow calls 80 → Venus wins 360 with Straight, A high (J♦ Q♣)",
+   "pot": 360
   }
  ],
  "finishes": [
