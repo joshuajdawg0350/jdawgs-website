@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:26:54.033Z",
+ "updatedAt": "2026-11-21T02:27:07.118Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 84,
+ "handsPlayed": 85,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19864,
+     "stack": 19834,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 23205,
+     "stack": 56486,
      "status": "seated",
      "reentered": false
     },
@@ -37,15 +37,15 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 9836,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 87870,
+     "stack": 64665,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19345,
+     "stack": 19135,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 30
+   "handsPlayed": 31
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19864,
+   "stack": 19834,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23205,
+   "stack": 56486,
    "status": "seated",
    "reentered": false
   },
@@ -283,8 +283,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9836,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 87870,
+   "stack": 64665,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19345,
+   "stack": 19135,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 31,
+  "table": 2,
+  "handNo": 28,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Pearl",
+  "toAct": "Quarry",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 24,
-   "text": "Table 3 · Hand 24 · blinds 30/60 · Tally folds, Ozone calls 60, Millstone calls 30, Icebox checks, [flop: 9♠ 3♠ 10♥], Millstone checks, Icebox checks, Ozone checks, [turn: 9♠ 3♠ 10♥ 4♣], Millstone checks, Icebox checks, Ozone checks, [river: 9♠ 3♠ 10♥ 4♣ 3♣], Millstone checks, Icebox checks, Ozone checks → Icebox wins 180 with Two pair, 10s and 3s (10♠ J♥)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 28,
@@ -552,6 +546,12 @@
    "handNo": 27,
    "text": "Table 3 · Hand 27 · blinds 30/60 · Icebox calls 60, Tally calls 60, Ozone folds, Millstone checks, [flop: K♣ 2♥ 10♦], Millstone checks, Icebox checks, Tally checks, [turn: K♣ 2♥ 10♦ 3♠], Millstone checks, Icebox checks, Tally checks, [river: K♣ 2♥ 10♦ 3♠ A♦], Millstone checks, Icebox checks, Tally checks → Millstone wins 210 with Pair of As (A♥ 6♣)",
    "pot": 210
+  },
+  {
+   "table": 1,
+   "handNo": 31,
+   "text": "Table 1 · Hand 31 · blinds 30/60 · Pearl calls 60, Venus calls 60, Shadow calls 60, Midas folds, Baseline checks, [flop: 10♣ 8♠ A♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [turn: 10♣ 8♠ A♣ Q♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [river: 10♣ 8♠ A♣ Q♣ 7♣], Baseline raises to 65, Pearl calls 65, Venus raises to 150, Shadow calls 150, Baseline raises to 245, Pearl calls 180, Venus raises to 365, Shadow folds, Baseline raises to 495, Pearl calls 250, Venus raises to 660, Baseline raises to 1900, Pearl calls 1405, Venus raises to 3140, Baseline raises to 7555, Pearl calls 5655, Venus raises to 13205, Baseline goes ALL-IN to 23145, Pearl calls 2221, Venus raises to 35870 → Baseline wins 56486 with Flush, A high (A♦ K♣); Venus wins 12725 with Flush, A high (J♣ 4♥)",
+   "pot": 69211
   }
  ],
  "finishes": [
@@ -657,6 +657,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 9,
+   "provisional": true
+  },
+  {
+   "name": "Pearl",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 31,
    "provisional": true
   }
  ],
