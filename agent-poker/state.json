@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:02:56.827Z",
+ "updatedAt": "2026-11-21T03:03:10.086Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 204,
+ "handsPlayed": 205,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 176035,
+     "stack": 29230,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 162875,
+     "stack": 344305,
      "status": "seated",
      "reentered": false
     },
@@ -53,8 +53,8 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 34625,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 84
+   "handsPlayed": 85
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 162875,
+   "stack": 344305,
    "status": "seated",
    "reentered": false
   },
@@ -181,8 +181,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 34625,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 176035,
+   "stack": 29230,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 85,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 75,
-   "text": "Table 1 · Hand 75 · blinds 50/100 · Tally calls 100, Shadow calls 100, Granite calls 100, Quarry calls 50, Venus checks, [flop: 9♣ Q♥ 2♣], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks, [turn: 9♣ Q♥ 2♣ 7♥], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks, [river: 9♣ Q♥ 2♣ 7♥ K♥], Quarry checks, Venus checks, Tally checks, Shadow checks, Granite checks → Venus wins 500 with Pair of Ks (K♠ A♦)",
-   "pot": 500
-  },
   {
    "table": 1,
    "handNo": 76,
@@ -396,6 +382,12 @@
    "handNo": 84,
    "text": "Table 1 · Hand 84 · blinds 60/120 · Venus calls 120, Tally calls 120, Shadow calls 120, Granite folds, Quarry checks, [flop: Q♥ 3♣ 5♠], Quarry checks, Venus checks, Tally checks, Shadow checks, [turn: Q♥ 3♣ 5♠ 7♦], Quarry checks, Venus checks, Tally checks, Shadow checks, [river: Q♥ 3♣ 5♠ 7♦ K♦], Quarry checks, Venus checks, Tally checks, Shadow checks → Shadow wins 540 with Pair of Qs (Q♠ A♦)",
    "pot": 540
+  },
+  {
+   "table": 1,
+   "handNo": 85,
+   "text": "Table 1 · Hand 85 · blinds 60/120 · Tally folds, Shadow calls 120, Granite folds, Quarry calls 60, Venus checks, [flop: 4♥ 4♦ 6♣], Quarry checks, Venus checks, Shadow checks, [turn: 4♥ 4♦ 6♣ 4♣], Quarry checks, Venus raises to 120, Shadow raises to 410, Quarry calls 410, Venus calls 290, [river: 4♥ 4♦ 6♣ 4♣ 9♠], Quarry checks, Venus raises to 120, Shadow raises to 1145, Quarry calls 1145, Venus raises to 2455, Shadow raises to 6255, Quarry calls 5110, Venus raises to 11120, Shadow raises to 26250, Quarry calls 19995, Venus raises to 45615, Shadow calls 7845, Quarry raises to 64980, Venus raises to 89765, Quarry raises to 114550, Venus raises to 146275, Quarry calls 31725 → Venus wins 328235 with Full house, 4s full of 9s (A♥ 9♥)",
+   "pot": 328235
   }
  ],
  "finishes": [
@@ -565,6 +557,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 71,
+   "provisional": true
+  },
+  {
+   "name": "Shadow",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 85,
    "provisional": true
   }
  ],
