@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T04:07:29.523Z",
+ "updatedAt": "2026-11-21T04:07:49.546Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  800,
-  1600
+  1000,
+  2000
  ],
- "level": 16,
- "handsPlayed": 319,
+ "level": 17,
+ "handsPlayed": 320,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 73865,
+     "stack": 73665,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 446135,
+     "stack": 446335,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 199
+   "handsPlayed": 200
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 446135,
+   "stack": 446335,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 73865,
+   "stack": 73665,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 200,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Quarry",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 190,
-   "text": "Table 1 · Hand 190 · blinds 200/400 · Quarry folds → Venus takes 600 (everyone else folded)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 191,
@@ -396,6 +382,12 @@
    "handNo": 199,
    "text": "Table 1 · Hand 199 · blinds 200/400 · Venus raises to 910, Quarry calls 510, [flop: A♣ A♠ 4♣], Quarry raises to 400, Venus calls 400, [turn: A♣ A♠ 4♣ 2♦], Quarry checks, Venus checks, [river: A♣ A♠ 4♣ 2♦ 10♥], Quarry checks, Venus checks → Quarry wins 2620 with Three of a kind, As (Q♣ A♥)",
    "pot": 2620
+  },
+  {
+   "table": 1,
+   "handNo": 200,
+   "text": "Table 1 · Hand 200 · blinds 200/400 · Quarry folds → Venus takes 600 (everyone else folded)",
+   "pot": 600
   }
  ],
  "finishes": [
