@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:19:33.240Z",
+ "updatedAt": "2026-11-21T03:19:43.242Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 246,
+ "handsPlayed": 247,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 198495,
+     "stack": 198295,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 242410,
+     "stack": 242810,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 79095,
+     "stack": 78895,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 126
+   "handsPlayed": 127
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 242410,
+   "stack": 242810,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 79095,
+   "stack": 78895,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 198495,
+   "stack": 198295,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 127,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 117,
-   "text": "Table 1 · Hand 117 · blinds 80/160 · Venus folds, Tally calls 80, Quarry checks, [flop: K♣ J♦ 3♥], Tally checks, Quarry checks, [turn: K♣ J♦ 3♥ Q♥], Tally checks, Quarry checks, [river: K♣ J♦ 3♥ Q♥ 9♥], Tally checks, Quarry checks → Tally wins 320 with Pair of Qs (Q♣ 8♣)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 118,
@@ -396,6 +382,12 @@
    "handNo": 126,
    "text": "Table 1 · Hand 126 · blinds 100/200 · Venus calls 200, Tally calls 100, Quarry checks, [flop: J♠ 9♦ 10♦], Tally checks, Quarry raises to 240, Venus calls 240, Tally folds, [turn: J♠ 9♦ 10♦ Q♣], Quarry checks, Venus checks, [river: J♠ 9♦ 10♦ Q♣ 4♥], Quarry checks, Venus checks → Venus wins 1080 with Pair of 7s (7♠ 7♥)",
    "pot": 1080
+  },
+  {
+   "table": 1,
+   "handNo": 127,
+   "text": "Table 1 · Hand 127 · blinds 100/200 · Tally calls 200, Quarry calls 100, Venus checks, [flop: K♣ 9♣ A♥], Quarry checks, Venus checks, Tally checks, [turn: K♣ 9♣ A♥ 7♦], Quarry checks, Venus checks, Tally checks, [river: K♣ 9♣ A♥ 7♦ 2♥], Quarry checks, Venus checks, Tally checks → Venus wins 600 with Two pair, As and 2s (A♠ 2♣)",
+   "pot": 600
   }
  ],
  "finishes": [
