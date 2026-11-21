@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:52:08.098Z",
+ "updatedAt": "2026-11-21T01:52:30.123Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19870,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 10140,
+     "stack": 10375,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19690,
+     "stack": 19665,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20250,
+     "stack": 20145,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 19870,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10140,
+   "stack": 10375,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19690,
+   "stack": 19665,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20250,
+   "stack": 20145,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Slick",
+  "toAct": "Pickpocket",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 4♣ 10♦ 7♣], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [turn: 4♣ 10♦ 7♣ 6♣], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Pickpocket checks, Professor raises to 60, Deuce calls 60, Wildfire calls 60, Millstone folds, Velvet calls 60, Tally calls 60, Pickpocket calls 60, [river: 4♣ 10♦ 7♣ 6♣ A♦], Wildfire checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks → Tally wins 710 with Two pair, As and 4s (4♥ A♥)",
-   "pot": 710
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -552,6 +546,12 @@
    "handNo": 6,
    "text": "Table 1 · Hand 6 · blinds 25/50 · Pearl calls 50, Venus calls 50, Shadow folds, Ozone calls 50, Midas folds, Baseline checks, [flop: 10♠ K♠ 10♣], Baseline checks, Pearl checks, Venus checks, Ozone checks, [turn: 10♠ K♠ 10♣ 6♠], Baseline raises to 55, Pearl calls 55, Venus calls 55, Ozone calls 55, [river: 10♠ K♠ 10♣ 6♠ 9♦], Baseline raises to 55, Pearl calls 55, Venus calls 55, Ozone calls 55 → Baseline wins 665 with Two pair, 10s and 6s (6♦ 2♠)",
    "pot": 665
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 25/50 · Slick folds, Granite calls 50, Compass calls 50, Sixgun folds, Professor folds, Quarry checks, [flop: J♦ Q♠ 3♠], Quarry checks, Granite checks, Compass checks, [turn: J♦ Q♠ 3♠ J♠], Quarry checks, Granite checks, Compass checks, [river: J♦ Q♠ 3♠ J♠ K♣], Quarry checks, Granite checks, Compass raises to 55, Quarry calls 55, Granite calls 55 → Compass wins 340 with Two pair, Qs and Js (Q♦ 10♦)",
+   "pot": 340
   }
  ],
  "finishes": [
