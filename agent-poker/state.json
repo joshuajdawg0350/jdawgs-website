@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:46:39.166Z",
+ "updatedAt": "2026-11-21T02:46:50.705Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 153,
+ "handsPlayed": 154,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19394,
+     "stack": 19314,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 57961,
+     "stack": 59991,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 64830,
+     "stack": 63855,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 17935,
+     "stack": 16960,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19394,
+   "stack": 19314,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57961,
+   "stack": 59991,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 64830,
+   "stack": 63855,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17935,
+   "stack": 16960,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 54,
+  "table": 2,
+  "handNo": 51,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Baseline",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 47,
-   "text": "Table 3 · Hand 47 · blinds 40/80 · Icebox folds, Tally calls 80, Ozone folds, Millstone checks, [flop: 10♥ 7♣ Q♣], Millstone checks, Tally checks, [turn: 10♥ 7♣ Q♣ 8♦], Millstone checks, Tally checks, [river: 10♥ 7♣ Q♣ 8♦ 9♠], Millstone checks, Tally raises to 80, Millstone calls 80 → Tally wins 360 with Straight, K high (J♣ K♣)",
-   "pot": 360
-  },
   {
    "table": 1,
    "handNo": 51,
@@ -552,6 +546,12 @@
    "handNo": 50,
    "text": "Table 3 · Hand 50 · blinds 40/80 · Millstone calls 80, Icebox folds, Tally folds, Ozone checks, [flop: 7♠ A♦ 4♣], Ozone checks, Millstone checks, [turn: 7♠ A♦ 4♣ 6♠], Ozone checks, Millstone checks, [river: 7♠ A♦ 4♣ 6♠ 2♣], Ozone checks, Millstone checks → Millstone wins 200 with Pair of 4s (J♥ 4♥)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 54,
+   "text": "Table 1 · Hand 54 · blinds 40/80 · Baseline calls 80, Venus calls 80, Shadow calls 40, Midas checks, [flop: K♠ J♥ 6♣], Shadow checks, Midas checks, Baseline checks, Venus checks, [turn: K♠ J♥ 6♣ K♣], Shadow checks, Midas checks, Baseline raises to 90, Venus calls 90, Shadow calls 90, Midas folds, [river: K♠ J♥ 6♣ K♣ J♠], Shadow checks, Baseline raises to 90, Venus raises to 180, Shadow calls 180, Baseline raises to 805, Venus calls 625, Shadow calls 625 → Baseline wins 3005 with Full house, Ks full of Js (K♥ 3♣)",
+   "pot": 3005
   }
  ],
  "finishes": [
