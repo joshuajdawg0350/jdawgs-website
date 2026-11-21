@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:53:29.743Z",
+ "updatedAt": "2026-11-21T01:53:44.533Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 10140,
+     "stack": 10090,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 10375,
+     "stack": 10265,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 120145,
+     "stack": 120095,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19665,
+     "stack": 19615,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20145,
+     "stack": 20405,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10140,
+   "stack": 10090,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10375,
+   "stack": 10265,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 120145,
+   "stack": 120095,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19665,
+   "stack": 19615,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20145,
+   "stack": 20405,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass folds, Marble calls 50, Sixgun calls 50, Slick folds, Granite folds, Dice calls 25, Bulldog checks, [flop: A♥ A♠ 5♠], Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun checks, [turn: A♥ A♠ 5♠ 9♦], Dice checks, Bulldog checks, Copper checks, Marble checks, Sixgun raises to 150, Dice calls 150, Bulldog calls 150, Copper calls 150, Marble calls 150, [river: A♥ A♠ 5♠ 9♦ 2♠], Dice checks, Bulldog checks, Copper raises to 50, Marble calls 50, Sixgun raises to 710, Dice calls 710, Bulldog calls 710, Copper raises to 1370, Marble calls 1320, Sixgun raises to 4890, Dice calls 4180, Bulldog calls 4180, Copper raises to 8410, Marble calls 7040, Sixgun raises to 27905, Dice calls 14805, Bulldog calls 5250, Copper calls 1730, Marble calls 11285 → Sixgun wins 88575 with Two pair, As and 9s (9♠ 7♣)",
-   "pot": 88575
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -552,6 +546,12 @@
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 25/50 · Venus calls 50, Shadow calls 50, Ozone calls 50, Midas folds, Baseline calls 25, Pearl checks, [flop: 3♠ 5♣ K♠], Baseline checks, Pearl checks, Venus checks, Shadow checks, Ozone checks, [turn: 3♠ 5♣ K♠ 10♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, Ozone checks, [river: 3♠ 5♣ K♠ 10♣ K♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, Ozone checks → Pearl wins 250 with Two pair, Ks and 5s (8♥ 5♠)",
    "pot": 250
+  },
+  {
+   "table": 2,
+   "handNo": 5,
+   "text": "Table 2 · Hand 5 · blinds 25/50 · Granite folds, Compass calls 50, Sixgun calls 50, Professor calls 50, Quarry calls 25, Slick checks, [flop: 4♦ 2♦ Q♣], Quarry checks, Slick checks, Compass raises to 60, Sixgun folds, Professor folds, Quarry calls 60, Slick folds, [turn: 4♦ 2♦ Q♣ A♣], Quarry checks, Compass checks, [river: 4♦ 2♦ Q♣ A♣ 9♥], Quarry checks, Compass checks → Quarry wins 370 with Pair of Qs (J♦ Q♥)",
+   "pot": 370
   }
  ],
  "finishes": [
