@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:42:59.245Z",
+ "updatedAt": "2026-11-21T02:43:09.470Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  100,
-  200
+  120,
+  240
  ],
- "level": 7,
- "handsPlayed": 139,
+ "level": 8,
+ "handsPlayed": 140,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 13080,
+     "stack": 13040,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3130,
+     "stack": 3250,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 184130,
+     "stack": 184050,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 45
+   "handsPlayed": 46
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 13080,
+   "stack": 13040,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3130,
+   "stack": 3250,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 184130,
+   "stack": 184050,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 46,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Quarry",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 46,
-   "text": "Table 1 · Hand 46 · blinds 40/80 · Baseline calls 80, Venus folds, Shadow folds, Midas checks, [flop: Q♠ A♠ 10♥], Midas checks, Baseline checks, [turn: Q♠ A♠ 10♥ K♥], Midas checks, Baseline checks, [river: Q♠ A♠ 10♥ K♥ K♣], Midas checks, Baseline raises to 90, Midas calls 90 → Baseline wins 380 with Three of a kind, Ks (6♣ K♠)",
-   "pot": 380
-  },
   {
    "table": 2,
    "handNo": 43,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 49,
    "text": "Table 1 · Hand 49 · blinds 40/80 · Midas folds, Baseline calls 80, Venus folds, Shadow checks, [flop: 3♥ J♥ A♠], Shadow checks, Baseline checks, [turn: 3♥ J♥ A♠ K♣], Shadow checks, Baseline checks, [river: 3♥ J♥ A♠ K♣ 6♦], Shadow checks, Baseline checks → Shadow wins 200 with Two pair, Js and 3s (J♠ 3♦)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 46,
+   "text": "Table 2 · Hand 46 · blinds 40/80 · Quarry calls 80, Granite folds, Professor checks, [flop: A♥ 4♣ 2♦], Professor checks, Quarry checks, [turn: A♥ 4♣ 2♦ 5♣], Professor checks, Quarry checks, [river: A♥ 4♣ 2♦ 5♣ Q♠], Professor checks, Quarry checks → Professor wins 200 with Pair of As (9♣ A♦)",
    "pot": 200
   }
  ],
