@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:34:28.254Z",
+ "updatedAt": "2026-11-21T02:34:41.711Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 109,
+ "handsPlayed": 110,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 12205,
+     "stack": 12325,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 85550,
+     "stack": 85490,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3395,
+     "stack": 3335,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 35
+   "handsPlayed": 36
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 12205,
+   "stack": 12325,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85550,
+   "stack": 85490,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3395,
+   "stack": 3335,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 36,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Quarry",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 36,
-   "text": "Table 1 · Hand 36 · blinds 30/60 · Shadow folds, Midas folds, Baseline calls 30, Venus checks, [flop: 7♠ 10♥ 6♦], Baseline checks, Venus checks, [turn: 7♠ 10♥ 6♦ 7♥], Baseline checks, Venus checks, [river: 7♠ 10♥ 6♦ 7♥ Q♣], Baseline checks, Venus checks → Baseline wins 120 with Two pair, Qs and 7s (5♥ Q♠)",
-   "pot": 120
-  },
   {
    "table": 2,
    "handNo": 33,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 39,
    "text": "Table 1 · Hand 39 · blinds 30/60 · Venus calls 60, Shadow folds, Midas calls 30, Baseline checks, [flop: 7♣ 9♣ 6♣], Midas checks, Baseline checks, Venus checks, [turn: 7♣ 9♣ 6♣ 6♦], Midas checks, Baseline checks, Venus checks, [river: 7♣ 9♣ 6♣ 6♦ K♥], Midas checks, Baseline checks, Venus checks → Midas wins 180 with Two pair, 7s and 6s (7♥ 10♣)",
+   "pot": 180
+  },
+  {
+   "table": 2,
+   "handNo": 36,
+   "text": "Table 2 · Hand 36 · blinds 30/60 · Quarry folds, Granite calls 60, Sixgun calls 30, Professor checks, [flop: 9♦ 7♠ 2♠], Sixgun checks, Professor checks, Granite checks, [turn: 9♦ 7♠ 2♠ 10♠], Sixgun checks, Professor checks, Granite checks, [river: 9♦ 7♠ 2♠ 10♠ 6♥], Sixgun checks, Professor checks, Granite checks → Granite wins 180 with Pair of 10s (4♠ 10♣)",
    "pot": 180
   }
  ],
