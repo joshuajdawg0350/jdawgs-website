@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:37:05.115Z",
+ "updatedAt": "2026-11-21T02:37:17.694Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 117,
+ "handsPlayed": 118,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19644,
+     "stack": 19764,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 57741,
+     "stack": 57661,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 18545,
+     "stack": 18505,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 41
+   "handsPlayed": 42
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19644,
+   "stack": 19764,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57741,
+   "stack": 57661,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18545,
+   "stack": 18505,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 42,
+  "table": 2,
+  "handNo": 39,
   "stage": "preflop",
   "board": [],
-  "pot": 120,
-  "toAct": "Baseline",
+  "pot": 90,
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 35,
-   "text": "Table 3 · Hand 35 · blinds 30/60 · Icebox folds, Tally calls 60, Ozone calls 30, Millstone checks, [flop: 2♠ 4♣ K♦], Ozone raises to 70, Millstone calls 70, Tally folds, [turn: 2♠ 4♣ K♦ J♠], Ozone checks, Millstone checks, [river: 2♠ 4♣ K♦ J♠ 6♦], Ozone checks, Millstone checks → Ozone wins 320 with Pair of 6s (6♣ 9♥)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 39,
@@ -552,6 +546,12 @@
    "handNo": 38,
    "text": "Table 3 · Hand 38 · blinds 30/60 · Millstone raises to 140, Icebox calls 140, Tally folds, Ozone calls 80, [flop: 5♠ 10♦ 10♠], Ozone checks, Millstone checks, Icebox checks, [turn: 5♠ 10♦ 10♠ J♠], Ozone raises to 80, Millstone calls 80, Icebox calls 80, [river: 5♠ 10♦ 10♠ J♠ Q♣], Ozone raises to 80, Millstone calls 80, Icebox calls 80 → Ozone wins 930 with Two pair, Js and 10s (J♦ 4♠)",
    "pot": 930
+  },
+  {
+   "table": 1,
+   "handNo": 42,
+   "text": "Table 1 · Hand 42 · blinds 40/80 · Baseline calls 80, Venus folds, Shadow folds, Midas checks, [flop: 3♣ Q♣ 2♣], Midas checks, Baseline checks, [turn: 3♣ Q♣ 2♣ 10♣], Midas checks, Baseline checks, [river: 3♣ Q♣ 2♣ 10♣ A♥], Midas checks, Baseline checks → Midas wins 200 with Pair of 2s (K♦ 2♠)",
+   "pot": 200
   }
  ],
  "finishes": [
