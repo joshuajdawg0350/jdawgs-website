@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:11:29.585Z",
+ "updatedAt": "2026-11-21T02:11:41.650Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 35,
+ "handsPlayed": 36,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 3500,
+     "stack": 3450,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 18080,
+     "stack": 18240,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20070,
+     "stack": 19960,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 3500,
+   "stack": 3450,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18080,
+   "stack": 18240,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20070,
+   "stack": 19960,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 11,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 8,
-   "text": "Table 2 · Hand 8 · blinds 25/50 · Professor folds, Quarry calls 50, Slick calls 50, Granite folds, Compass calls 25, Sixgun checks, [flop: 10♣ A♥ 8♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [turn: 10♣ A♥ 8♥ Q♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [river: 10♣ A♥ 8♥ Q♥ 9♥], Compass raises to 55, Sixgun raises to 210, Quarry folds, Slick calls 210, Compass raises to 615, Sixgun raises to 1650, Slick calls 1440, Compass raises to 4120, Sixgun raises to 10445, Slick calls 8365, Compass goes ALL-IN to 10890, Sixgun raises to 29820 → Sixgun wins 50925 with Flush, A high (7♥ J♦)",
-   "pot": 50925
-  },
   {
    "table": 3,
    "handNo": 8,
@@ -552,6 +538,12 @@
    "handNo": 11,
    "text": "Table 2 · Hand 11 · blinds 25/50 · Professor folds, Quarry folds, Granite folds → Sixgun takes 75 (everyone else folded)",
    "pot": 75
+  },
+  {
+   "table": 3,
+   "handNo": 11,
+   "text": "Table 3 · Hand 11 · blinds 25/50 · Icebox calls 50, Tally folds, Ozone calls 25, Millstone checks, [flop: Q♠ K♥ 5♣], Ozone raises to 60, Millstone folds, Icebox calls 60, [turn: Q♠ K♥ 5♣ J♥], Ozone checks, Icebox checks, [river: Q♠ K♥ 5♣ J♥ K♦], Ozone checks, Icebox checks → Icebox wins 270 with Three of a kind, Ks (K♠ 6♣)",
+   "pot": 270
   }
  ],
  "finishes": [
