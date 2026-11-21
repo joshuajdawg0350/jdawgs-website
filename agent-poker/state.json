@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:22:56.414Z",
+ "updatedAt": "2026-11-21T02:23:09.622Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 71,
+ "handsPlayed": 72,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 3325,
+     "stack": 10005,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 17555,
+     "stack": 14290,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 118265,
+     "stack": 114880,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20395,
+     "stack": 20365,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 22
+   "handsPlayed": 23
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 3325,
+   "stack": 10005,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17555,
+   "stack": 14290,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 118265,
+   "stack": 114880,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20395,
+   "stack": 20365,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 23,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 20,
-   "text": "Table 2 · Hand 20 · blinds 25/50 · Quarry folds, Granite calls 50, Sixgun calls 25, Professor checks, [flop: 10♦ A♠ 9♥], Sixgun checks, Professor checks, Granite checks, [turn: 10♦ A♠ 9♥ 4♣], Sixgun raises to 60, Professor folds, Granite calls 60, [river: 10♦ A♠ 9♥ 4♣ Q♦], Sixgun checks, Granite checks → Granite wins 270 with Pair of 9s (9♣ J♠)",
-   "pot": 270
-  },
   {
    "table": 3,
    "handNo": 20,
@@ -552,6 +538,12 @@
    "handNo": 23,
    "text": "Table 2 · Hand 23 · blinds 30/60 · Professor raises to 125, Quarry calls 125, Granite calls 95, Sixgun calls 65, [flop: 9♣ K♠ 8♣], Granite checks, Sixgun checks, Professor checks, Quarry checks, [turn: 9♣ K♠ 8♣ 9♥], Granite checks, Sixgun checks, Professor checks, Quarry checks, [river: 9♣ K♠ 8♣ 9♥ 6♣], Granite checks, Sixgun raises to 300, Professor raises to 630, Quarry calls 630, Granite calls 630, Sixgun calls 330 → Professor wins 3020 with Two pair, 9s and 7s (7♠ 7♣)",
    "pot": 3020
+  },
+  {
+   "table": 3,
+   "handNo": 23,
+   "text": "Table 3 · Hand 23 · blinds 30/60 · Icebox calls 60, Tally calls 60, Ozone folds, Millstone checks, [flop: 6♦ 4♥ 7♠], Millstone checks, Icebox checks, Tally checks, [turn: 6♦ 4♥ 7♠ 7♥], Millstone checks, Icebox checks, Tally checks, [river: 6♦ 4♥ 7♠ 7♥ 7♣], Millstone raises to 60, Icebox calls 60, Tally raises to 120, Millstone raises to 180, Icebox calls 120, Tally raises to 240, Millstone raises to 300, Icebox calls 120, Tally raises to 360, Millstone raises to 420, Icebox calls 120, Tally raises to 480, Millstone raises to 540, Icebox calls 120, Tally raises to 600, Millstone raises to 660, Icebox calls 120, Tally raises to 720, Millstone raises to 780, Icebox calls 120, Tally raises to 840, Millstone raises to 900, Icebox calls 120, Tally raises to 960, Millstone raises to 1020, Icebox calls 120, Tally raises to 1080, Millstone raises to 1140, Icebox calls 120, Tally raises to 1200, Millstone raises to 1260, Icebox calls 120, Tally raises to 1320, Millstone raises to 1380, Icebox calls 120, Tally raises to 1440, Millstone raises to 1500, Icebox calls 120, Tally raises to 1560, Millstone raises to 1620, Icebox calls 120, Tally raises to 1680, Millstone raises to 1740, Icebox calls 120, Tally raises to 1800, Millstone raises to 1860, Icebox calls 120, Tally raises to 1920, Millstone raises to 1980, Icebox calls 120, Tally raises to 2040, Millstone raises to 2100, Icebox calls 120, Tally raises to 2160, Millstone raises to 2220, Icebox calls 120, Tally raises to 2280, Millstone raises to 2340, Icebox calls 120, Tally raises to 2400, Millstone raises to 2460, Icebox calls 120, Tally raises to 2520, Millstone raises to 2580, Icebox calls 120, Tally raises to 2640, Millstone raises to 2700, Icebox calls 120, Tally raises to 2760, Millstone raises to 2820, Icebox calls 120, Tally raises to 2880, Millstone raises to 2940, Icebox calls 120, Tally raises to 3000, Millstone raises to 3060, Icebox calls 120, Tally raises to 3120, Millstone raises to 3180, Icebox calls 120, Tally raises to 3240, Millstone goes ALL-IN to 3265, Icebox calls 85, Tally raises to 3325, Icebox calls 60 → Millstone wins 10005 with Three of a kind, 7s (A♦ K♥); Icebox wins 120 with Three of a kind, 7s (9♦ 10♥)",
+   "pot": 10125
   }
  ],
  "finishes": [
