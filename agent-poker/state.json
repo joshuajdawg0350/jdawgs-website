@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:18:40.497Z",
+ "updatedAt": "2026-11-21T02:18:56.049Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 57,
+ "handsPlayed": 58,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 21750,
+     "stack": 21625,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 10696,
+     "stack": 10571,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 88030,
+     "stack": 88405,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19600,
+     "stack": 19475,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21750,
+   "stack": 21625,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10696,
+   "stack": 10571,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88030,
+   "stack": 88405,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19600,
+   "stack": 19475,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 22,
+  "table": 2,
+  "handNo": 19,
   "stage": "preflop",
   "board": [],
-  "pot": 90,
-  "toAct": "Venus",
+  "pot": 75,
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 15,
-   "text": "Table 3 · Hand 15 · blinds 25/50 · Icebox calls 50, Tally calls 50, Ozone calls 25, Millstone checks, [flop: 5♠ J♥ 2♦], Ozone raises to 60, Millstone calls 60, Icebox calls 60, Tally calls 60, [turn: 5♠ J♥ 2♦ A♦], Ozone raises to 60, Millstone calls 60, Icebox folds, Tally calls 60, [river: 5♠ J♥ 2♦ A♦ A♣], Ozone checks, Millstone checks, Tally raises to 50, Ozone calls 50, Millstone calls 50 → Millstone wins 770 with Two pair, As and Js (J♦ 6♣)",
-   "pot": 770
-  },
   {
    "table": 1,
    "handNo": 19,
@@ -552,6 +546,12 @@
    "handNo": 18,
    "text": "Table 3 · Hand 18 · blinds 25/50 · Millstone calls 50, Icebox folds, Tally folds, Ozone checks, [flop: 5♦ Q♦ 6♣], Ozone checks, Millstone checks, [turn: 5♦ Q♦ 6♣ 4♣], Ozone checks, Millstone checks, [river: 5♦ Q♦ 6♣ 4♣ 9♦], Ozone checks, Millstone checks → Ozone wins 125 with Pair of 5s (7♥ 5♥)",
    "pot": 125
+  },
+  {
+   "table": 1,
+   "handNo": 22,
+   "text": "Table 1 · Hand 22 · blinds 30/60 · Venus calls 60, Shadow calls 60, Midas folds, Baseline calls 30, Pearl checks, [flop: A♥ 4♠ 6♥], Baseline checks, Pearl checks, Venus checks, Shadow checks, [turn: A♥ 4♠ 6♥ 3♦], Baseline checks, Pearl checks, Venus checks, Shadow checks, [river: A♥ 4♠ 6♥ 3♦ 3♣], Baseline checks, Pearl checks, Venus checks, Shadow raises to 65, Baseline calls 65, Pearl calls 65, Venus calls 65 → Venus wins 500 with Three of a kind, 3s (9♣ 3♠)",
+   "pot": 500
   }
  ],
  "finishes": [
