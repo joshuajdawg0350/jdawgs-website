@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:14:13.952Z",
+ "updatedAt": "2026-11-21T02:14:28.140Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 44,
+ "handsPlayed": 45,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 17845,
+     "stack": 17945,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 118290,
+     "stack": 118240,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20545,
+     "stack": 20495,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17845,
+   "stack": 17945,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 118290,
+   "stack": 118240,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20545,
+   "stack": 20495,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 14,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 11,
-   "text": "Table 2 · Hand 11 · blinds 25/50 · Professor folds, Quarry folds, Granite folds → Sixgun takes 75 (everyone else folded)",
-   "pot": 75
-  },
   {
    "table": 3,
    "handNo": 11,
@@ -552,6 +538,12 @@
    "handNo": 14,
    "text": "Table 2 · Hand 14 · blinds 25/50 · Sixgun calls 50, Professor calls 50, Quarry folds, Granite checks, [flop: 5♥ 9♣ 8♦], Granite checks, Sixgun raises to 105, Professor folds, Granite folds → Sixgun takes 280 (everyone else folded)",
    "pot": 280
+  },
+  {
+   "table": 3,
+   "handNo": 14,
+   "text": "Table 3 · Hand 14 · blinds 25/50 · Millstone folds, Icebox calls 50, Tally calls 25, Ozone checks, [flop: J♠ 10♦ 4♥], Tally checks, Ozone checks, Icebox checks, [turn: J♠ 10♦ 4♥ Q♠], Tally checks, Ozone checks, Icebox checks, [river: J♠ 10♦ 4♥ Q♠ 10♣], Tally checks, Ozone checks, Icebox checks → Icebox wins 150 with Three of a kind, 10s (6♣ 10♠)",
+   "pot": 150
   }
  ],
  "finishes": [
