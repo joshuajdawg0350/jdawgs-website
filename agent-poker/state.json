@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:50:11.974Z",
+ "updatedAt": "2026-11-21T02:50:23.522Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 167,
+ "handsPlayed": 168,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 33015,
+     "stack": 32975,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 116795,
+     "stack": 116835,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 54
+   "handsPlayed": 55
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 33015,
+   "stack": 32975,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 116795,
+   "stack": 116835,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 55,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Ozone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 52,
-   "text": "Table 2 · Hand 52 · blinds 40/80 · Quarry calls 80, Granite calls 40, Professor checks, [flop: 3♥ 8♥ 4♥], Granite checks, Professor checks, Quarry checks, [turn: 3♥ 8♥ 4♥ K♣], Granite checks, Professor checks, Quarry checks, [river: 3♥ 8♥ 4♥ K♣ 9♥], Granite raises to 80, Professor calls 80, Quarry calls 80 → Granite wins 480 with Flush, J high (9♦ J♥)",
-   "pot": 480
-  },
   {
    "table": 3,
    "handNo": 52,
@@ -552,6 +538,12 @@
    "handNo": 55,
    "text": "Table 2 · Hand 55 · blinds 40/80 · Quarry calls 80, Granite folds, Professor checks, [flop: Q♦ 6♥ J♣], Professor checks, Quarry checks, [turn: Q♦ 6♥ J♣ K♦], Professor checks, Quarry checks, [river: Q♦ 6♥ J♣ K♦ 2♠], Professor checks, Quarry checks → Professor wins 200 with Pair of 6s (6♠ 10♥)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 55,
+   "text": "Table 3 · Hand 55 · blinds 40/80 · Ozone folds, Icebox folds → Tally takes 120 (everyone else folded)",
+   "pot": 120
   }
  ],
  "finishes": [
