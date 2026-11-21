@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:58:23.748Z",
+ "updatedAt": "2026-11-21T01:58:39.707Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 18,
+ "handsPlayed": 19,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 11630,
+     "stack": 11730,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 88165,
+     "stack": 88115,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20280,
+     "stack": 20230,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11630,
+   "stack": 11730,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88165,
+   "stack": 88115,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20280,
+   "stack": 20230,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 9,
+  "table": 2,
+  "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Compass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Quarry calls 50, Slick calls 50, Granite folds, Compass calls 50, Sixgun calls 25, Professor checks, [flop: 5♥ 6♠ K♥], Sixgun checks, Professor checks, Quarry checks, Slick checks, Compass checks, [turn: 5♥ 6♠ K♥ 9♦], Sixgun checks, Professor checks, Quarry checks, Slick checks, Compass checks, [river: 5♥ 6♠ K♥ 9♦ K♦], Sixgun raises to 150, Professor calls 150, Quarry calls 150, Slick calls 150, Compass calls 150 → Sixgun wins 1000 with Three of a kind, Ks (K♠ 7♥)",
-   "pot": 1000
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 1 · Hand 8 · blinds 25/50 · Shadow calls 50, Midas folds, Baseline calls 50, Pearl calls 25, Venus checks, [flop: 7♥ 4♥ 8♣], Pearl checks, Venus checks, Shadow checks, Baseline checks, [turn: 7♥ 4♥ 8♣ 7♦], Pearl checks, Venus checks, Shadow checks, Baseline checks, [river: 7♥ 4♥ 8♣ 7♦ 2♣], Pearl checks, Venus checks, Shadow checks, Baseline checks → Pearl wins 200 with Two pair, 7s and 2s (6♣ 2♠)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 9,
+   "text": "Table 1 · Hand 9 · blinds 25/50 · Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: J♦ 3♦ 10♠], Venus checks, Shadow checks, Pearl checks, [turn: J♦ 3♦ 10♠ K♠], Venus checks, Shadow checks, Pearl checks, [river: J♦ 3♦ 10♠ K♠ 10♣], Venus checks, Shadow checks, Pearl checks → Pearl wins 150 with Two pair, Js and 10s (4♦ J♠)",
+   "pot": 150
   }
  ],
  "finishes": [
