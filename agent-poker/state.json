@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:47:45.052Z",
+ "updatedAt": "2026-11-21T02:47:56.228Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 158,
+ "handsPlayed": 159,
  "tables": [
   {
    "id": 1,
@@ -193,15 +193,15 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 9280,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 13160,
+     "stack": 32935,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20145,
+     "stack": 9650,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 51
+   "handsPlayed": 52
   }
  ],
  "seats": [
@@ -328,8 +328,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 9280,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 13160,
+   "stack": 32935,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20145,
+   "stack": 9650,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 52,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 49,
-   "text": "Table 2 · Hand 49 · blinds 40/80 · Quarry calls 80, Granite calls 40, Professor checks, [flop: 7♠ 8♦ 4♥], Granite checks, Professor checks, Quarry checks, [turn: 7♠ 8♦ 4♥ 5♦], Granite checks, Professor checks, Quarry checks, [river: 7♠ 8♦ 4♥ 5♦ Q♦], Granite checks, Professor raises to 90, Quarry calls 90, Granite calls 90 → Professor wins 510 with Two pair, Qs and 7s (7♦ Q♠)",
-   "pot": 510
-  },
   {
    "table": 3,
    "handNo": 49,
@@ -552,6 +538,12 @@
    "handNo": 52,
    "text": "Table 2 · Hand 52 · blinds 40/80 · Quarry calls 80, Granite calls 40, Professor checks, [flop: 3♥ 8♥ 4♥], Granite checks, Professor checks, Quarry checks, [turn: 3♥ 8♥ 4♥ K♣], Granite checks, Professor checks, Quarry checks, [river: 3♥ 8♥ 4♥ K♣ 9♥], Granite raises to 80, Professor calls 80, Quarry calls 80 → Granite wins 480 with Flush, J high (9♦ J♥)",
    "pot": 480
+  },
+  {
+   "table": 3,
+   "handNo": 52,
+   "text": "Table 3 · Hand 52 · blinds 40/80 · Tally folds, Ozone calls 80, Millstone calls 40, Icebox checks, [flop: Q♦ 6♦ Q♣], Millstone checks, Icebox checks, Ozone checks, [turn: Q♦ 6♦ Q♣ K♣], Millstone checks, Icebox checks, Ozone checks, [river: Q♦ 6♦ Q♣ K♣ Q♠], Millstone raises to 80, Icebox calls 80, Ozone raises to 185, Millstone raises to 290, Icebox calls 210, Ozone raises to 425, Millstone raises to 560, Icebox calls 270, Ozone raises to 735, Millstone raises to 910, Icebox calls 350, Ozone raises to 1140, Millstone raises to 1370, Icebox calls 460, Ozone raises to 1670, Millstone raises to 1970, Icebox calls 600, Ozone raises to 2360, Millstone raises to 2750, Icebox calls 780, Ozone raises to 3255, Millstone raises to 3760, Icebox calls 1010, Ozone raises to 4415, Millstone raises to 5070, Icebox calls 1310, Ozone raises to 5920, Millstone raises to 6770, Icebox calls 1700, Ozone raises to 7875, Millstone raises to 8980, Icebox calls 2210, Ozone raises to 10415, Millstone calls 220, Icebox calls 1435 → Icebox wins 30270 with Three of a kind, Qs (A♥ 4♣)",
+   "pot": 30270
   }
  ],
  "finishes": [
@@ -673,6 +665,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 43,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 52,
    "provisional": true
   }
  ],
