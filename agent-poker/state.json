@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T04:08:55.859Z",
+ "updatedAt": "2026-11-21T04:09:15.423Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 321,
+ "handsPlayed": 322,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 73915,
+     "stack": 73665,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 446085,
+     "stack": 446335,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 201
+   "handsPlayed": 202
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 446085,
+   "stack": 446335,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 73915,
+   "stack": 73665,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 202,
-  "stage": "preflop",
-  "board": [],
-  "pot": 750,
-  "toAct": "Quarry",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 192,
-   "text": "Table 1 · Hand 192 · blinds 200/400 · Quarry folds → Venus takes 600 (everyone else folded)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 193,
@@ -395,6 +381,12 @@
    "table": 1,
    "handNo": 201,
    "text": "Table 1 · Hand 201 · blinds 250/500 · Venus folds → Quarry takes 750 (everyone else folded)",
+   "pot": 750
+  },
+  {
+   "table": 1,
+   "handNo": 202,
+   "text": "Table 1 · Hand 202 · blinds 250/500 · Quarry folds → Venus takes 750 (everyone else folded)",
    "pot": 750
   }
  ],
