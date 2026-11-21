@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:53:44.533Z",
+ "updatedAt": "2026-11-21T01:53:59.804Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 16,
+ "handsPlayed": 17,
  "tables": [
   {
    "id": 1,
@@ -71,14 +71,6 @@
      "house": true,
      "stack": 0,
      "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 19430,
-     "status": "seated",
      "reentered": false
     },
     {
@@ -185,23 +177,23 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19470,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19740,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 20365,
+     "stack": 1130,
      "status": "seated",
      "reentered": false
     },
@@ -217,15 +209,15 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19090,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19800,
+     "stack": 117700,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +225,20 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 21770,
+     "stack": 1405,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ozone",
+     "kind": "house",
+     "house": true,
+     "stack": 19430,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -274,8 +274,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19470,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -301,8 +301,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19740,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20365,
+   "stack": 1130,
    "status": "seated",
    "reentered": false
   },
@@ -382,8 +382,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19090,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19800,
+   "stack": 117700,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "name": "Ozone",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19430,
    "status": "seated",
    "reentered": false
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21770,
+   "stack": 1405,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: A♦ 5♣ J♥], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 60, Deuce folds, Wildfire folds, Millstone folds, Icebox folds, Velvet calls 60, Tally calls 60, [turn: A♦ 5♣ J♥ 9♣], Velvet checks, Tally checks, Pickpocket checks, [river: A♦ 5♣ J♥ 9♣ 9♥], Velvet checks, Tally checks, Pickpocket raises to 320, Velvet calls 320, Tally calls 320 → Pickpocket wins 1490 with Three of a kind, 9s (2♦ 9♦)",
-   "pot": 1490
-  },
   {
    "table": 1,
    "handNo": 4,
@@ -552,6 +538,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Granite folds, Compass calls 50, Sixgun calls 50, Professor calls 50, Quarry calls 25, Slick checks, [flop: 4♦ 2♦ Q♣], Quarry checks, Slick checks, Compass raises to 60, Sixgun folds, Professor folds, Quarry calls 60, Slick folds, [turn: 4♦ 2♦ Q♣ A♣], Quarry checks, Compass checks, [river: 4♦ 2♦ Q♣ A♣ 9♥], Quarry checks, Compass checks → Quarry wins 370 with Pair of Qs (J♦ Q♥)",
    "pot": 370
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 25, Pickpocket raises to 230, Deuce calls 180, Wildfire calls 180, Millstone calls 180, Velvet calls 180, Tally calls 180, [flop: 6♠ J♦ A♦], Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [turn: 6♠ J♦ A♦ 3♠], Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [river: 6♠ J♦ A♦ 3♠ 6♥], Tally raises to 50, Pickpocket raises to 910, Deuce calls 910, Wildfire calls 910, Millstone raises to 1770, Velvet calls 1770, Tally raises to 2630, Pickpocket raises to 8800, Deuce calls 7890, Wildfire calls 7890, Millstone raises to 14970, Velvet calls 13200, Tally goes ALL-IN to 19570, Pickpocket goes ALL-IN to 21540, Deuce calls 10440, Wildfire calls 10710, Millstone calls 5165, Velvet calls 3890 → Millstone wins 1130 with Two pair, As and 6s (A♠ 9♠); Tally wins 117700 with Three of a kind, 6s (6♣ K♦); Pickpocket wins 1405 with Two pair, Qs and 6s (Q♠ Q♣)",
+   "pot": 120235
   }
  ],
  "finishes": [
@@ -609,6 +601,30 @@
    "kind": "house",
    "table": 2,
    "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Wildfire",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Deuce",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Velvet",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
    "provisional": true
   }
  ],
