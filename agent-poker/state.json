@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:10:41.827Z",
+ "updatedAt": "2026-11-21T03:10:53.361Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -327,7 +327,15 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 104,
+  "stage": "preflop",
+  "board": [],
+  "pot": 240,
+  "toAct": "Quarry",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
