@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:26:02.291Z",
+ "updatedAt": "2026-11-21T02:26:13.836Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 81,
+ "handsPlayed": 82,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19924,
+     "stack": 19864,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 22785,
+     "stack": 23205,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 9956,
+     "stack": 9836,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 87990,
+     "stack": 87870,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19465,
+     "stack": 19345,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 29
+   "handsPlayed": 30
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19924,
+   "stack": 19864,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22785,
+   "stack": 23205,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9956,
+   "stack": 9836,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 87990,
+   "stack": 87870,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19465,
+   "stack": 19345,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 30,
+  "table": 2,
+  "handNo": 27,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Baseline",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 23,
-   "text": "Table 3 · Hand 23 · blinds 30/60 · Icebox calls 60, Tally calls 60, Ozone folds, Millstone checks, [flop: 6♦ 4♥ 7♠], Millstone checks, Icebox checks, Tally checks, [turn: 6♦ 4♥ 7♠ 7♥], Millstone checks, Icebox checks, Tally checks, [river: 6♦ 4♥ 7♠ 7♥ 7♣], Millstone raises to 60, Icebox calls 60, Tally raises to 120, Millstone raises to 180, Icebox calls 120, Tally raises to 240, Millstone raises to 300, Icebox calls 120, Tally raises to 360, Millstone raises to 420, Icebox calls 120, Tally raises to 480, Millstone raises to 540, Icebox calls 120, Tally raises to 600, Millstone raises to 660, Icebox calls 120, Tally raises to 720, Millstone raises to 780, Icebox calls 120, Tally raises to 840, Millstone raises to 900, Icebox calls 120, Tally raises to 960, Millstone raises to 1020, Icebox calls 120, Tally raises to 1080, Millstone raises to 1140, Icebox calls 120, Tally raises to 1200, Millstone raises to 1260, Icebox calls 120, Tally raises to 1320, Millstone raises to 1380, Icebox calls 120, Tally raises to 1440, Millstone raises to 1500, Icebox calls 120, Tally raises to 1560, Millstone raises to 1620, Icebox calls 120, Tally raises to 1680, Millstone raises to 1740, Icebox calls 120, Tally raises to 1800, Millstone raises to 1860, Icebox calls 120, Tally raises to 1920, Millstone raises to 1980, Icebox calls 120, Tally raises to 2040, Millstone raises to 2100, Icebox calls 120, Tally raises to 2160, Millstone raises to 2220, Icebox calls 120, Tally raises to 2280, Millstone raises to 2340, Icebox calls 120, Tally raises to 2400, Millstone raises to 2460, Icebox calls 120, Tally raises to 2520, Millstone raises to 2580, Icebox calls 120, Tally raises to 2640, Millstone raises to 2700, Icebox calls 120, Tally raises to 2760, Millstone raises to 2820, Icebox calls 120, Tally raises to 2880, Millstone raises to 2940, Icebox calls 120, Tally raises to 3000, Millstone raises to 3060, Icebox calls 120, Tally raises to 3120, Millstone raises to 3180, Icebox calls 120, Tally raises to 3240, Millstone goes ALL-IN to 3265, Icebox calls 85, Tally raises to 3325, Icebox calls 60 → Millstone wins 10005 with Three of a kind, 7s (A♦ K♥); Icebox wins 120 with Three of a kind, 7s (9♦ 10♥)",
-   "pot": 10125
-  },
   {
    "table": 1,
    "handNo": 27,
@@ -552,6 +546,12 @@
    "handNo": 26,
    "text": "Table 3 · Hand 26 · blinds 30/60 · Millstone calls 60, Icebox folds, Tally calls 30, Ozone raises to 130, Millstone calls 70, Tally calls 70, [flop: Q♣ A♥ Q♥], Tally checks, Ozone checks, Millstone checks, [turn: Q♣ A♥ Q♥ 7♥], Tally checks, Ozone checks, Millstone checks, [river: Q♣ A♥ Q♥ 7♥ J♥], Tally checks, Ozone checks, Millstone checks → Millstone wins 390 with Two pair, As and Qs (A♦ 4♠)",
    "pot": 390
+  },
+  {
+   "table": 1,
+   "handNo": 30,
+   "text": "Table 1 · Hand 30 · blinds 30/60 · Baseline calls 60, Pearl calls 60, Venus calls 60, Shadow calls 30, Midas checks, [flop: Q♥ J♣ 6♦], Shadow checks, Midas checks, Baseline checks, Pearl checks, Venus checks, [turn: Q♥ J♣ 6♦ Q♦], Shadow checks, Midas checks, Baseline checks, Pearl checks, Venus checks, [river: Q♥ J♣ 6♦ Q♦ 7♦], Shadow checks, Midas checks, Baseline checks, Pearl checks, Venus raises to 60, Shadow calls 60, Midas folds, Baseline calls 60, Pearl calls 60 → Baseline wins 540 with Two pair, Qs and 7s (7♥ 9♥)",
+   "pot": 540
   }
  ],
  "finishes": [
