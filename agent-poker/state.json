@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:09:45.443Z",
+ "updatedAt": "2026-11-21T01:10:03.434Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 10340,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19895,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 10340,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 10340,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 10340,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19895,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 58875,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 10340,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19895,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 10340,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 10340,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 10340,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19895,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 58875,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
@@ -498,6 +498,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow folds, River Rat calls 50, Hammer calls 50, Ozone calls 50, Anchor calls 50, Midas folds, Baseline folds, Pearl checks, [flop: 2♦ Q♣ K♦], Pearl checks, Venus checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [turn: 2♦ Q♣ K♦ 5♦], Pearl checks, Venus raises to 50, River Rat raises to 100, Hammer calls 100, Ozone folds, Anchor calls 100, Pearl calls 100, Venus raises to 165, River Rat raises to 230, Hammer calls 130, Anchor calls 130, Pearl calls 130, Venus raises to 315, River Rat raises to 400, Hammer calls 170, Anchor calls 170, Pearl calls 170, Venus raises to 510, River Rat raises to 620, Hammer calls 220, Anchor calls 220, Pearl calls 220, Venus raises to 760, River Rat raises to 900, Hammer calls 280, Anchor calls 280, Pearl calls 280, Venus raises to 1080, River Rat raises to 1260, Hammer calls 360, Anchor calls 360, Pearl calls 360, Venus raises to 1440, River Rat raises to 1620, Hammer calls 360, Anchor calls 360, Pearl calls 360, Venus raises to 1850, River Rat raises to 2080, Hammer calls 460, Anchor calls 460, Pearl calls 460, Venus raises to 2375, River Rat raises to 2670, Hammer calls 590, Anchor calls 590, Pearl calls 590, Venus raises to 3050, River Rat raises to 3430, Hammer calls 760, Anchor calls 760, Pearl calls 760, Venus raises to 3915, River Rat raises to 4400, Hammer calls 970, Anchor calls 970, Pearl calls 970, Venus raises to 4885, River Rat raises to 5370, Hammer calls 970, Anchor calls 970, Pearl calls 970, Venus raises to 5990, River Rat raises to 6610, Hammer calls 1240, Anchor calls 1240, Pearl calls 1240, Venus raises to 7405, River Rat raises to 8200, Hammer calls 1590, Anchor calls 1590, Pearl calls 1590, Venus raises to 9220, River Rat raises to 10240, Hammer calls 2040, Anchor calls 2040, Pearl folds, Venus raises to 11545, River Rat raises to 12850, Hammer calls 2610, Anchor calls 2610, Venus raises to 14520, River Rat raises to 16190, Hammer calls 3340, Anchor calls 3340, Venus raises to 18330, River Rat goes ALL-IN to 19950, Hammer calls 3760, Anchor calls 3760, Venus calls 1620, [river: 2♦ Q♣ K♦ 5♦ 9♥] → Venus wins 88325 with Flush, K high (8♦ Q♦)",
    "pot": 88325
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Compass raises to 105, Marble calls 105, Sixgun calls 105, Quarry folds, Slick calls 105, Granite folds, Dice calls 55, Bulldog calls 55, Copper calls 55, [flop: Q♣ A♠ 5♥], Dice checks, Bulldog checks, Copper checks, Compass checks, Marble checks, Sixgun raises to 455, Slick calls 455, Dice folds, Bulldog calls 455, Copper calls 455, Compass calls 455, Marble folds, [turn: Q♣ A♠ 5♥ 2♠], Bulldog checks, Copper checks, Compass checks, Sixgun raises to 1820, Slick calls 1820, Bulldog calls 1820, Copper calls 1820, Compass calls 1820, [river: Q♣ A♠ 5♥ 2♠ 9♠], Bulldog checks, Copper checks, Compass checks, Sixgun raises to 7280, Slick calls 7280, Bulldog calls 7280, Copper calls 7280, Compass calls 7280 → Sixgun wins 48535 with Two pair, As and 5s (A♥ 5♣)",
+   "pot": 48535
   }
  ],
  "finishes": [
