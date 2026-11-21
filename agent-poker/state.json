@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:39:13.276Z",
+ "updatedAt": "2026-11-21T02:39:25.377Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 124,
+ "handsPlayed": 125,
  "tables": [
   {
    "id": 1,
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 85345,
+     "stack": 85585,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3190,
+     "stack": 3110,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 98805,
+     "stack": 98645,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 40
+   "handsPlayed": 41
   },
   {
    "id": 3,
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85345,
+   "stack": 85585,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3190,
+   "stack": 3110,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 98805,
+   "stack": 98645,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 41,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Granite",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 41,
-   "text": "Table 1 · Hand 41 · blinds 40/80 · Midas folds, Baseline calls 80, Venus folds, Shadow checks, [flop: K♠ 4♥ 9♣], Shadow checks, Baseline checks, [turn: K♠ 4♥ 9♣ 10♦], Shadow checks, Baseline checks, [river: K♠ 4♥ 9♣ 10♦ 8♥], Shadow checks, Baseline checks → Baseline wins 200 with Pair of 10s (10♥ 3♣)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 38,
@@ -552,6 +546,12 @@
    "handNo": 44,
    "text": "Table 1 · Hand 44 · blinds 40/80 · Shadow calls 80, Midas folds, Baseline folds, Venus checks, [flop: 6♠ 10♣ 4♣], Venus checks, Shadow checks, [turn: 6♠ 10♣ 4♣ 5♦], Venus checks, Shadow checks, [river: 6♠ 10♣ 4♣ 5♦ K♠], Venus checks, Shadow checks → Venus wins 200 with Pair of 4s (3♠ 4♥)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 41,
+   "text": "Table 2 · Hand 41 · blinds 40/80 · Granite folds, Sixgun calls 80, Professor calls 40, Quarry raises to 160, Sixgun calls 80, Professor folds, [flop: 7♣ 9♥ Q♠], Quarry checks, Sixgun checks, [turn: 7♣ 9♥ Q♠ J♣], Quarry checks, Sixgun checks, [river: 7♣ 9♥ Q♠ J♣ 5♣], Quarry checks, Sixgun checks → Sixgun wins 400 with Pair of Js (J♠ K♣)",
+   "pot": 400
   }
  ],
  "finishes": [
