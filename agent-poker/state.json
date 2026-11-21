@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:10:51.936Z",
+ "updatedAt": "2026-11-21T01:11:08.025Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 11750,
+     "stack": 11700,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 88325,
+     "stack": 88275,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20250,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19975,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11750,
+   "stack": 11700,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88325,
+   "stack": 88275,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20250,
    "status": "seated",
    "reentered": false
   }
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -510,6 +510,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox folds, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: 4♣ 10♦ 7♣], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [turn: 4♣ 10♦ 7♣ 6♣], Wildfire checks, Millstone checks, Velvet checks, Tally checks, Pickpocket checks, Professor raises to 60, Deuce calls 60, Wildfire calls 60, Millstone folds, Velvet calls 60, Tally calls 60, Pickpocket calls 60, [river: 4♣ 10♦ 7♣ 6♣ A♦], Wildfire checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks → Tally wins 710 with Two pair, As and 4s (4♥ A♥)",
    "pot": 710
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, Ozone calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Pearl calls 25, Venus checks, [flop: 6♦ 8♣ 10♣], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [turn: 6♦ 8♣ 10♣ 3♥], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [river: 6♦ 8♣ 10♣ 3♥ J♠], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks → Quarry wins 300 with Pair of Js (J♦ 4♥)",
+   "pot": 300
   }
  ],
  "finishes": [
