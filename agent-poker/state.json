@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:12:49.670Z",
+ "updatedAt": "2026-11-21T02:13:09.213Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  30,
-  60
+  40,
+  80
  ],
- "level": 2,
- "handsPlayed": 39,
+ "level": 3,
+ "handsPlayed": 40,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20149,
+     "stack": 20124,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 21715,
+     "stack": 21665,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 10891,
+     "stack": 10841,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 87815,
+     "stack": 87990,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19550,
+     "stack": 19500,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20149,
+   "stack": 20124,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21715,
+   "stack": 21665,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10891,
+   "stack": 10841,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 87815,
+   "stack": 87990,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19550,
+   "stack": 19500,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 16,
+  "table": 2,
+  "handNo": 13,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Pearl",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 9,
-   "text": "Table 3 · Hand 9 · blinds 25/50 · Pickpocket calls 50, Ozone folds, Millstone raises to 130, Icebox calls 105, Tally calls 80, Pickpocket calls 80, [flop: 5♥ 6♣ 2♦], Icebox checks, Tally checks, Pickpocket checks, Millstone checks, [turn: 5♥ 6♣ 2♦ 2♠], Icebox checks, Tally checks, Pickpocket checks, Millstone checks, [river: 5♥ 6♣ 2♦ 2♠ 6♠], Icebox checks, Tally raises to 50, Pickpocket raises to 390, Millstone calls 390, Icebox calls 390, Tally raises to 730, Pickpocket goes ALL-IN to 1195, Millstone calls 355, Icebox calls 805, Tally raises to 1660, Icebox calls 465 → Millstone wins 3500 with Two pair, Qs and 6s (Q♠ Q♣); Tally wins 2280 with Two pair, 6s and 2s (K♠ A♠)",
-   "pot": 5780
-  },
   {
    "table": 1,
    "handNo": 13,
@@ -552,6 +546,12 @@
    "handNo": 12,
    "text": "Table 3 · Hand 12 · blinds 25/50 · Tally raises to 130, Ozone calls 130, Millstone calls 105, Icebox calls 80, [flop: 3♥ 4♠ 5♥], Millstone checks, Icebox checks, Tally checks, Ozone raises to 60, Millstone folds, Icebox folds, Tally calls 60, [turn: 3♥ 4♠ 5♥ K♠], Tally checks, Ozone checks, [river: 3♥ 4♠ 5♥ K♠ 5♠], Tally checks, Ozone checks → Tally wins 640 with Two pair, As and 5s (A♦ A♥)",
    "pot": 640
+  },
+  {
+   "table": 1,
+   "handNo": 16,
+   "text": "Table 1 · Hand 16 · blinds 25/50 · Pearl calls 50, Venus calls 50, Shadow calls 50, Midas folds, Baseline checks, [flop: 10♠ 8♣ A♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [turn: 10♠ 8♣ A♣ 3♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [river: 10♠ 8♣ A♣ 3♣ 8♠], Baseline checks, Pearl checks, Venus checks, Shadow checks → Venus wins 225 with Two pair, As and 8s (A♠ 9♦)",
+   "pot": 225
   }
  ],
  "finishes": [
