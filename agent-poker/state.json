@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:33:34.826Z",
+ "updatedAt": "2026-11-21T02:33:47.737Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 106,
+ "handsPlayed": 107,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 12235,
+     "stack": 12205,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 85150,
+     "stack": 85550,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3580,
+     "stack": 3395,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 99375,
+     "stack": 99190,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 34
+   "handsPlayed": 35
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 12235,
+   "stack": 12205,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85150,
+   "stack": 85550,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3580,
+   "stack": 3395,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 99375,
+   "stack": 99190,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 35,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Professor",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 35,
-   "text": "Table 1 · Hand 35 · blinds 30/60 · Venus calls 60, Shadow calls 60, Midas calls 30, Baseline checks, [flop: 4♦ 9♣ 3♥], Midas checks, Baseline checks, Venus checks, Shadow raises to 70, Midas folds, Baseline calls 70, Venus folds, [turn: 4♦ 9♣ 3♥ K♥], Baseline checks, Shadow checks, [river: 4♦ 9♣ 3♥ K♥ 7♥], Baseline checks, Shadow checks → Baseline wins 380 with Pair of 9s (9♠ 10♦)",
-   "pot": 380
-  },
   {
    "table": 2,
    "handNo": 32,
@@ -552,6 +546,12 @@
    "handNo": 38,
    "text": "Table 1 · Hand 38 · blinds 30/60 · Baseline calls 60, Venus calls 60, Shadow folds, Midas checks, [flop: 7♠ Q♥ 3♥], Midas checks, Baseline checks, Venus checks, [turn: 7♠ Q♥ 3♥ 4♠], Midas checks, Baseline checks, Venus checks, [river: 7♠ Q♥ 3♥ 4♠ 2♥], Midas checks, Baseline checks, Venus checks → Venus wins 210 with Pair of 7s (K♦ 7♣)",
    "pot": 210
+  },
+  {
+   "table": 2,
+   "handNo": 35,
+   "text": "Table 2 · Hand 35 · blinds 30/60 · Professor calls 60, Quarry calls 60, Granite folds, Sixgun checks, [flop: 6♣ 9♥ 2♠], Sixgun checks, Professor checks, Quarry checks, [turn: 6♣ 9♥ 2♠ 6♠], Sixgun raises to 125, Professor calls 125, Quarry calls 125, [river: 6♣ 9♥ 2♠ 6♠ 10♠], Sixgun checks, Professor checks, Quarry checks → Sixgun wins 585 with Two pair, 6s and 2s (2♥ K♦)",
+   "pot": 585
   }
  ],
  "finishes": [
