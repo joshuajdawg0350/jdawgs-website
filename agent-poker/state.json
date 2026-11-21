@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:49:26.443Z",
+ "updatedAt": "2026-11-21T02:49:37.567Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 164,
+ "handsPlayed": 165,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 33095,
+     "stack": 33015,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 116875,
+     "stack": 116795,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 9570,
+     "stack": 9730,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 33095,
+   "stack": 33015,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 116875,
+   "stack": 116795,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 9570,
+   "stack": 9730,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 54,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 51,
-   "text": "Table 2 · Hand 51 · blinds 40/80 · Professor calls 80, Quarry calls 40, Granite checks, [flop: 6♠ J♥ 6♣], Quarry checks, Granite checks, Professor checks, [turn: 6♠ J♥ 6♣ 7♦], Quarry checks, Granite checks, Professor checks, [river: 6♠ J♥ 6♣ 7♦ K♣], Quarry checks, Granite checks, Professor checks → Granite wins 240 with Two pair, Js and 6s (5♣ J♣)",
-   "pot": 240
-  },
   {
    "table": 3,
    "handNo": 51,
@@ -552,6 +538,12 @@
    "handNo": 54,
    "text": "Table 2 · Hand 54 · blinds 40/80 · Professor calls 80, Quarry folds, Granite checks, [flop: 3♣ 3♠ 8♦], Granite checks, Professor checks, [turn: 3♣ 3♠ 8♦ 4♦], Granite checks, Professor checks, [river: 3♣ 3♠ 8♦ 4♦ 2♦], Granite checks, Professor checks → Granite wins 200 with Pair of 3s (J♠ 5♣)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 54,
+   "text": "Table 3 · Hand 54 · blinds 40/80 · Tally calls 80, Ozone calls 40, Icebox checks, [flop: 10♣ J♦ A♥], Ozone checks, Icebox checks, Tally checks, [turn: 10♣ J♦ A♥ 7♠], Ozone checks, Icebox checks, Tally checks, [river: 10♣ J♦ A♥ 7♠ K♥], Ozone checks, Icebox checks, Tally checks → Ozone wins 240 with Pair of As (A♦ 2♥)",
+   "pot": 240
   }
  ],
  "finishes": [
