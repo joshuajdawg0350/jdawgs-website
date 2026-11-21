@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:57:08.115Z",
+ "updatedAt": "2026-11-21T02:57:19.274Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 189,
+ "handsPlayed": 190,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 177410,
+     "stack": 177310,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 161630,
+     "stack": 162030,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20290,
+     "stack": 20190,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 9360,
+     "stack": 9160,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 69
+   "handsPlayed": 70
   }
  ],
  "seats": [
@@ -136,7 +136,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9360,
+   "stack": 9160,
    "status": "seated",
    "reentered": false
   },
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 161630,
+   "stack": 162030,
    "status": "seated",
    "reentered": false
   },
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20290,
+   "stack": 20190,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 177410,
+   "stack": 177310,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 70,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Tally",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 59,
-   "text": "Table 3 · Hand 59 · blinds 40/80 · Icebox folds, Tally calls 40, Ozone checks, [flop: A♥ 3♦ 4♥], Tally checks, Ozone checks, [turn: A♥ 3♦ 4♥ 9♥], Tally checks, Ozone checks, [river: A♥ 3♦ 4♥ 9♥ 10♦], Tally checks, Ozone checks → Tally wins 160 with Pair of 10s (7♦ 10♣)",
-   "pot": 160
-  },
   {
    "table": 1,
    "handNo": 63,
@@ -396,6 +382,12 @@
    "handNo": 69,
    "text": "Table 1 · Hand 69 · blinds 50/100 · Venus calls 100, Tally folds, Icebox calls 100, Shadow calls 100, Granite raises to 200, Ozone calls 150, Quarry calls 100, Venus calls 100, Icebox folds, Shadow calls 100, [flop: 9♣ 5♠ 3♣], Ozone checks, Quarry checks, Venus checks, Shadow checks, Granite checks, [turn: 9♣ 5♠ 3♣ 2♠], Ozone raises to 120, Quarry calls 120, Venus calls 120, Shadow raises to 250, Granite folds, Ozone folds, Quarry calls 130, Venus calls 130, [river: 9♣ 5♠ 3♣ 2♠ 10♥], Quarry checks, Venus raises to 100, Shadow raises to 1340, Quarry calls 1340, Venus calls 1240 → Shadow wins 5990 with Straight, 5 high (A♦ 4♠)",
    "pot": 5990
+  },
+  {
+   "table": 1,
+   "handNo": 70,
+   "text": "Table 1 · Hand 70 · blinds 50/100 · Tally folds, Icebox folds, Shadow calls 100, Granite calls 100, Ozone folds, Quarry calls 50, Venus checks, [flop: A♠ 6♣ 9♣], Quarry checks, Venus checks, Shadow checks, Granite checks, [turn: A♠ 6♣ 9♣ Q♥], Quarry checks, Venus checks, Shadow checks, Granite checks, [river: A♠ 6♣ 9♣ Q♥ 7♣], Quarry checks, Venus raises to 100, Shadow folds, Granite calls 100, Quarry folds → Venus wins 600 with Three of a kind, 7s (7♠ 7♥)",
+   "pot": 600
   }
  ],
  "finishes": [
