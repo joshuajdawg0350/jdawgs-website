@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:52:11.930Z",
+ "updatedAt": "2026-11-21T02:52:25.392Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 174,
+ "handsPlayed": 175,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 59781,
+     "stack": 59931,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 64405,
+     "stack": 64355,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16640,
+     "stack": 16540,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 60
+   "handsPlayed": 61
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59781,
+   "stack": 59931,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 64405,
+   "stack": 64355,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16640,
+   "stack": 16540,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 61,
+  "table": 2,
+  "handNo": 58,
   "stage": "preflop",
   "board": [],
-  "pot": 150,
-  "toAct": "Midas",
+  "pot": 120,
+  "toAct": "Quarry",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 54,
-   "text": "Table 3 · Hand 54 · blinds 40/80 · Tally calls 80, Ozone calls 40, Icebox checks, [flop: 10♣ J♦ A♥], Ozone checks, Icebox checks, Tally checks, [turn: 10♣ J♦ A♥ 7♠], Ozone checks, Icebox checks, Tally checks, [river: 10♣ J♦ A♥ 7♠ K♥], Ozone checks, Icebox checks, Tally checks → Ozone wins 240 with Pair of As (A♦ 2♥)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 58,
@@ -552,6 +546,12 @@
    "handNo": 57,
    "text": "Table 3 · Hand 57 · blinds 40/80 · Tally calls 80, Ozone calls 40, Icebox checks, [flop: 10♥ 8♦ 4♥], Ozone checks, Icebox checks, Tally checks, [turn: 10♥ 8♦ 4♥ 2♥], Ozone checks, Icebox checks, Tally checks, [river: 10♥ 8♦ 4♥ 2♥ Q♣], Ozone checks, Icebox checks, Tally checks → Icebox wins 240 with A high (J♥ A♠)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 61,
+   "text": "Table 1 · Hand 61 · blinds 50/100 · Midas folds, Baseline calls 100, Venus folds, Shadow checks, [flop: 9♦ Q♠ 2♥], Shadow checks, Baseline checks, [turn: 9♦ Q♠ 2♥ A♣], Shadow checks, Baseline raises to 120, Shadow folds → Baseline takes 370 (everyone else folded)",
+   "pot": 370
   }
  ],
  "finishes": [
