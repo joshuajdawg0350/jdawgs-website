@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:50:55.776Z",
+ "updatedAt": "2026-11-21T02:51:07.825Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 170,
+ "handsPlayed": 171,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 116835,
+     "stack": 116795,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 9730,
+     "stack": 9770,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 55
+   "handsPlayed": 56
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 116835,
+   "stack": 116795,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 9730,
+   "stack": 9770,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 56,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 53,
-   "text": "Table 2 · Hand 53 · blinds 40/80 · Granite folds, Professor calls 40, Quarry checks, [flop: 2♠ 2♦ A♥], Professor checks, Quarry checks, [turn: 2♠ 2♦ A♥ 10♠], Professor checks, Quarry checks, [river: 2♠ 2♦ A♥ 10♠ 4♣], Professor checks, Quarry checks → Quarry wins 160 with Two pair, 3s and 2s (3♥ 3♠)",
-   "pot": 160
-  },
   {
    "table": 3,
    "handNo": 53,
@@ -552,6 +538,12 @@
    "handNo": 56,
    "text": "Table 2 · Hand 56 · blinds 40/80 · Granite folds, Professor calls 40, Quarry checks, [flop: K♦ 7♣ Q♣], Professor checks, Quarry checks, [turn: K♦ 7♣ Q♣ 9♥], Professor checks, Quarry checks, [river: K♦ 7♣ Q♣ 9♥ 2♥], Professor checks, Quarry checks → Quarry wins 160 with Pair of Ks (A♣ K♠)",
    "pot": 160
+  },
+  {
+   "table": 3,
+   "handNo": 56,
+   "text": "Table 3 · Hand 56 · blinds 40/80 · Icebox folds, Tally folds → Ozone takes 120 (everyone else folded)",
+   "pot": 120
   }
  ],
  "finishes": [
