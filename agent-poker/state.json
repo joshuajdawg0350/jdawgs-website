@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T04:20:25.950Z",
+ "updatedAt": "2026-11-21T04:20:50.934Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 336,
+ "handsPlayed": 337,
  "tables": [
   {
    "id": 1,
@@ -21,15 +21,15 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 73415,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 446585,
+     "stack": 520000,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 216
+   "handsPlayed": 217
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 446585,
+   "stack": 520000,
    "status": "seated",
    "reentered": false
   },
@@ -316,8 +316,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 73415,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   }
  ],
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 217,
-  "stage": "preflop",
-  "board": [],
-  "pot": 750,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 207,
-   "text": "Table 1 · Hand 207 · blinds 250/500 · Venus calls 250, Quarry raises to 1000, Venus calls 500, [flop: 5♠ 3♠ 8♠], Quarry checks, Venus checks, [turn: 5♠ 3♠ 8♠ 7♣], Quarry checks, Venus checks, [river: 5♠ 3♠ 8♠ 7♣ 4♣], Quarry checks, Venus checks → Quarry wins 2000 with Pair of Ks (K♦ K♥)",
-   "pot": 2000
-  },
   {
    "table": 1,
    "handNo": 208,
@@ -396,6 +382,12 @@
    "handNo": 216,
    "text": "Table 1 · Hand 216 · blinds 250/500 · Quarry calls 250, Venus checks, [flop: J♣ J♠ K♠], Venus checks, Quarry checks, [turn: J♣ J♠ K♠ 7♣], Venus checks, Quarry checks, [river: J♣ J♠ K♠ 7♣ 3♣], Venus raises to 500, Quarry calls 500 → Venus wins 2000 with Flush, J high (8♣ 9♣)",
    "pot": 2000
+  },
+  {
+   "table": 1,
+   "handNo": 217,
+   "text": "Table 1 · Hand 217 · blinds 250/500 · Venus calls 250, Quarry checks, [flop: 5♠ 3♥ 4♣], Quarry checks, Venus checks, [turn: 5♠ 3♥ 4♣ Q♠], Quarry checks, Venus checks, [river: 5♠ 3♥ 4♣ Q♠ 2♠], Quarry raises to 500, Venus raises to 1140, Quarry raises to 1780, Venus raises to 2600, Quarry raises to 3420, Venus raises to 4470, Quarry raises to 5815, Venus raises to 7535, Quarry raises to 9255, Venus raises to 11455, Quarry raises to 13655, Venus raises to 16470, Quarry raises to 20075, Venus raises to 24690, Quarry raises to 30595, Venus raises to 38155, Quarry raises to 47830, Venus raises to 60215, Quarry goes ALL-IN to 72915, Venus raises to 89170 → Venus wins 163085 with Flush, A high (A♠ K♠)",
+   "pot": 163085
   }
  ],
  "finishes": [
@@ -589,6 +581,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 129,
+   "provisional": true
+  },
+  {
+   "name": "Quarry",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 217,
    "provisional": true
   }
  ],
