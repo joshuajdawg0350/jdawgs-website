@@ -107,6 +107,12 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1
   .dsheet-handle{display:none!important}
 }
 @media (max-width:899px){html.js .dsheet-body{padding:0 14px}}
+@media print{
+  html.js .dsheet{position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;display:block!important;background:none!important;border:none!important;border-radius:0!important;box-shadow:none!important}
+  html.js .dsheet-body{overflow:visible!important;height:auto!important;max-height:none!important;min-height:0!important;padding:0!important}
+  #dsheetHandle,.dsheet-handle{display:none!important}
+  html.js body{padding-bottom:0!important}
+}
 </style>
 </head>
 <body>
