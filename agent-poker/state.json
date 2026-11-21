@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:09:37.400Z",
+ "updatedAt": "2026-11-21T02:09:52.120Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 29,
+ "handsPlayed": 30,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 875,
+     "stack": 3500,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19870,
+     "stack": 18080,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 117550,
+     "stack": 118040,
      "status": "seated",
      "reentered": false
     },
@@ -225,8 +225,8 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 1325,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 875,
+   "stack": 3500,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19870,
+   "stack": 18080,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 117550,
+   "stack": 118040,
    "status": "seated",
    "reentered": false
   },
@@ -436,8 +436,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1325,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 9,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Pickpocket",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 6,
-   "text": "Table 2 · Hand 6 · blinds 25/50 · Compass calls 50, Sixgun calls 50, Professor raises to 115, Quarry calls 115, Slick folds, Granite calls 65, Compass calls 65, Sixgun calls 65, [flop: Q♠ 3♠ J♠], Granite checks, Compass checks, Sixgun checks, Professor checks, Quarry checks, [turn: Q♠ 3♠ J♠ A♣], Granite checks, Compass checks, Sixgun checks, Professor raises to 60, Quarry calls 60, Granite calls 60, Compass calls 60, Sixgun calls 60, [river: Q♠ 3♠ J♠ A♣ 8♣], Granite checks, Compass checks, Sixgun checks, Professor checks, Quarry checks → Compass wins 900 with Two pair, Js and 3s (J♦ 3♥)",
-   "pot": 900
-  },
   {
    "table": 3,
    "handNo": 6,
@@ -552,6 +538,12 @@
    "handNo": 9,
    "text": "Table 2 · Hand 9 · blinds 25/50 · Granite calls 50, Sixgun calls 50, Professor calls 25, Quarry checks, [flop: J♠ J♥ A♦], Professor checks, Quarry checks, Granite checks, Sixgun checks, [turn: J♠ J♥ A♦ 5♥], Professor checks, Quarry checks, Granite checks, Sixgun checks, [river: J♠ J♥ A♦ 5♥ 5♣], Professor checks, Quarry checks, Granite checks, Sixgun raises to 120, Professor calls 120, Quarry calls 120, Granite calls 120 → Granite wins 170 with Two pair, Js and 5s (Q♠ 7♥); Sixgun wins 170 with Two pair, Js and 5s (9♠ K♠); Professor wins 170 with Two pair, Js and 5s (10♠ 8♠); Quarry wins 170 with Two pair, Js and 5s (K♣ Q♥)",
    "pot": 680
+  },
+  {
+   "table": 3,
+   "handNo": 9,
+   "text": "Table 3 · Hand 9 · blinds 25/50 · Pickpocket calls 50, Ozone folds, Millstone raises to 130, Icebox calls 105, Tally calls 80, Pickpocket calls 80, [flop: 5♥ 6♣ 2♦], Icebox checks, Tally checks, Pickpocket checks, Millstone checks, [turn: 5♥ 6♣ 2♦ 2♠], Icebox checks, Tally checks, Pickpocket checks, Millstone checks, [river: 5♥ 6♣ 2♦ 2♠ 6♠], Icebox checks, Tally raises to 50, Pickpocket raises to 390, Millstone calls 390, Icebox calls 390, Tally raises to 730, Pickpocket goes ALL-IN to 1195, Millstone calls 355, Icebox calls 805, Tally raises to 1660, Icebox calls 465 → Millstone wins 3500 with Two pair, Qs and 6s (Q♠ Q♣); Tally wins 2280 with Two pair, 6s and 2s (K♠ A♠)",
+   "pot": 5780
   }
  ],
  "finishes": [
@@ -649,6 +641,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 8,
+   "provisional": true
+  },
+  {
+   "name": "Pickpocket",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 9,
    "provisional": true
   }
  ],
