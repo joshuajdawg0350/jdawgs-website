@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T04:03:32.209Z",
+ "updatedAt": "2026-11-21T04:03:54.150Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 314,
+ "handsPlayed": 315,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 72955,
+     "stack": 72555,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 447045,
+     "stack": 447445,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 194
+   "handsPlayed": 195
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 447045,
+   "stack": 447445,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 72955,
+   "stack": 72555,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 195,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 185,
-   "text": "Table 1 · Hand 185 · blinds 200/400 · Venus folds → Quarry takes 600 (everyone else folded)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 186,
@@ -396,6 +382,12 @@
    "handNo": 194,
    "text": "Table 1 · Hand 194 · blinds 200/400 · Quarry folds → Venus takes 600 (everyone else folded)",
    "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 195,
+   "text": "Table 1 · Hand 195 · blinds 200/400 · Venus calls 200, Quarry checks, [flop: 6♣ J♥ 8♦], Quarry checks, Venus checks, [turn: 6♣ J♥ 8♦ A♥], Quarry checks, Venus checks, [river: 6♣ J♥ 8♦ A♥ 10♣], Quarry checks, Venus checks → Venus wins 800 with Pair of 10s (10♦ 5♥)",
+   "pot": 800
   }
  ],
  "finishes": [
