@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:00:53.934Z",
+ "updatedAt": "2026-11-21T02:09:11.547Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 26,
+ "handsPlayed": 27,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 900,
+     "stack": 875,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19695,
+     "stack": 19870,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 117600,
+     "stack": 117550,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 1375,
+     "stack": 1325,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19970,
+     "stack": 19920,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 900,
+   "stack": 875,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19695,
+   "stack": 19870,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 117600,
+   "stack": 117550,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19970,
+   "stack": 19920,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1375,
+   "stack": 1325,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 3,
-  "handNo": 8,
+  "table": 1,
+  "handNo": 12,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Tally",
+  "toAct": "Venus",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 25/50 · Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 25, Pickpocket raises to 230, Deuce calls 180, Wildfire calls 180, Millstone calls 180, Velvet calls 180, Tally calls 180, [flop: 6♠ J♦ A♦], Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [turn: 6♠ J♦ A♦ 3♠], Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, [river: 6♠ J♦ A♦ 3♠ 6♥], Tally raises to 50, Pickpocket raises to 910, Deuce calls 910, Wildfire calls 910, Millstone raises to 1770, Velvet calls 1770, Tally raises to 2630, Pickpocket raises to 8800, Deuce calls 7890, Wildfire calls 7890, Millstone raises to 14970, Velvet calls 13200, Tally goes ALL-IN to 19570, Pickpocket goes ALL-IN to 21540, Deuce calls 10440, Wildfire calls 10710, Millstone calls 5165, Velvet calls 3890 → Millstone wins 1130 with Two pair, As and 6s (A♠ 9♠); Tally wins 117700 with Three of a kind, 6s (6♣ K♦); Pickpocket wins 1405 with Two pair, Qs and 6s (Q♠ Q♣)",
-   "pot": 120235
-  },
   {
    "table": 1,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 2 · Hand 8 · blinds 25/50 · Professor folds, Quarry calls 50, Slick calls 50, Granite folds, Compass calls 25, Sixgun checks, [flop: 10♣ A♥ 8♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [turn: 10♣ A♥ 8♥ Q♥], Compass checks, Sixgun checks, Quarry checks, Slick checks, [river: 10♣ A♥ 8♥ Q♥ 9♥], Compass raises to 55, Sixgun raises to 210, Quarry folds, Slick calls 210, Compass raises to 615, Sixgun raises to 1650, Slick calls 1440, Compass raises to 4120, Sixgun raises to 10445, Slick calls 8365, Compass goes ALL-IN to 10890, Sixgun raises to 29820 → Sixgun wins 50925 with Flush, A high (7♥ J♦)",
    "pot": 50925
+  },
+  {
+   "table": 3,
+   "handNo": 8,
+   "text": "Table 3 · Hand 8 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Ozone calls 50, Millstone folds, Icebox checks, [flop: 6♦ 9♥ J♠], Icebox checks, Tally checks, Pickpocket checks, Ozone checks, [turn: 6♦ 9♥ J♠ 9♠], Icebox checks, Tally checks, Pickpocket checks, Ozone checks, [river: 6♦ 9♥ J♠ 9♠ Q♦], Icebox checks, Tally checks, Pickpocket checks, Ozone checks → Icebox wins 225 with Two pair, Qs and 9s (Q♣ 10♥)",
+   "pot": 225
   }
  ],
  "finishes": [
