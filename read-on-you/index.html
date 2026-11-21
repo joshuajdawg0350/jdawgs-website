@@ -43,7 +43,8 @@
   li{ margin:.3em 0; }
   footer{ color:var(--muted); font-size:.85rem; margin-top:28px; border-top:1px solid var(--line); padding-top:12px; }
   select{ background:var(--panel2); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:10px; font-size:1rem; width:100%; }
-  .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
+  @media (max-width:899px){html,body{overscroll-behavior:none}}
+.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
    (Joshua's order, 2026-11-20). Mobile only (<900px): the long
@@ -922,6 +923,13 @@ showProof();
     snap: function () { return snap; }
   };
 })();
+</script>
+<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
+(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
+document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
+document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
+if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
+if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

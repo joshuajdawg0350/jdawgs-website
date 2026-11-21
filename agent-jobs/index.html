@@ -126,6 +126,7 @@ pre{background:#010204;border:1px solid var(--line);border-radius:10px;padding:1
 footer{border-top:1px solid var(--line2);background:var(--bg2);padding:14px;font-size:13px;color:var(--mut)}
 footer .trio{color:var(--ink);font-size:14px}
 footer .wrap{padding-bottom:0}
+@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* compensation: the original single .wrap is split in two at the fold (top wrap keeps hero+form, sheet wrap keeps the rest) so its 40px bottom padding must not double up between the form panel and the sheet */
 body>.wrap{padding-bottom:0}
@@ -583,6 +584,13 @@ loadWall();
     snap: function () { return snap; }
   };
 })();
+</script>
+<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
+(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
+document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
+document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
+if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
+if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

@@ -52,6 +52,7 @@
 {"@context":"https://schema.org","@type":"Organization","name":"J-Dawgs Industries","alternateName":["J-DAWGS INDUSTRIES","JDawgs Industries","J-Dawgs"],"founder":{"@type":"Person","name":"Joshua Dawson"},"address":{"@type":"PostalAddress","addressLocality":"Springfield","addressRegion":"MO","addressCountry":"US"},"email":"joshuajdawg0350@gmail.com","sameAs":["https://linktr.ee/jdawgs","https://jdawgs.gumroad.com","https://github.com/joshuajdawg0350","https://muse.ai/s/ai-tool-store-xng6xkxwjkxl2xab/UoF72OkKI7j33Q2ITxmrZyIr4nv40QtYfj2AgESh_k8","https://jdawgsindustries.com/human-hands/","https://muse.ai/s/j-dawgs-agent-exchange-ih6xlnihzxdhxc/ZbleqxFHRE0NcswaBkyN13y9lLp5rPAgHTb6t8ii-PY","https://muse.ai/s/selling-website-xij6xkxuxkxy7cxxo/6OdKXk-tcAnCrK8M-DuEiyYuKf0AK24A1EeWn9CrFYI"]}
 </script>
 <style>
+@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* #moved-store keeps its .band top border inside the sheet (site.css .band:first-child would otherwise drop it) */
 #dsheetBody #moved-store{border-top:1px solid var(--line)}
@@ -551,6 +552,13 @@ if ('serviceWorker' in navigator) {
   };
 })();
 
+</script>
+<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
+(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
+document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
+document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
+if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
+if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

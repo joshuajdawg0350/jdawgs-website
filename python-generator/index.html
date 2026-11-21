@@ -116,6 +116,7 @@ h2.sec{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-sp
   .brand .brand-name{font-size:.9rem}
   .hud{gap:8px;padding:8px 10px}
 }
+@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* compensation: the original single <main> is split in two at the fold (top main keeps the hero + the entire working tool, sheet main keeps only the How-this-works panel) so the split adds no spacing: the top main loses its bottom padding and the sheet main's top padding becomes the original 16px grid gap */
 body>main{padding-bottom:0}
@@ -581,6 +582,13 @@ body>main{padding-bottom:0}
     snap: function () { return snap; }
   };
 })();
+</script>
+<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
+(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
+document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
+document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
+if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
+if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>
