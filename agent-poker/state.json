@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:46:50.705Z",
+ "updatedAt": "2026-11-21T02:47:01.432Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 154,
+ "handsPlayed": 155,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 12790,
+     "stack": 12950,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3790,
+     "stack": 3710,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 183760,
+     "stack": 183680,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 50
+   "handsPlayed": 51
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 12790,
+   "stack": 12950,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3790,
+   "stack": 3710,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 183760,
+   "stack": 183680,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 51,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Professor",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 51,
-   "text": "Table 1 · Hand 51 · blinds 40/80 · Venus calls 80, Shadow calls 80, Midas folds, Baseline checks, [flop: 5♣ 5♦ 4♦], Baseline checks, Venus checks, Shadow checks, [turn: 5♣ 5♦ 4♦ 8♦], Baseline raises to 90, Venus calls 90, Shadow calls 90, [river: 5♣ 5♦ 4♦ 8♦ 7♥], Baseline checks, Venus raises to 80, Shadow calls 80, Baseline calls 80 → Venus wins 790 with Straight, 8 high (J♥ 6♠)",
-   "pot": 790
-  },
   {
    "table": 2,
    "handNo": 48,
@@ -552,6 +546,12 @@
    "handNo": 54,
    "text": "Table 1 · Hand 54 · blinds 40/80 · Baseline calls 80, Venus calls 80, Shadow calls 40, Midas checks, [flop: K♠ J♥ 6♣], Shadow checks, Midas checks, Baseline checks, Venus checks, [turn: K♠ J♥ 6♣ K♣], Shadow checks, Midas checks, Baseline raises to 90, Venus calls 90, Shadow calls 90, Midas folds, [river: K♠ J♥ 6♣ K♣ J♠], Shadow checks, Baseline raises to 90, Venus raises to 180, Shadow calls 180, Baseline raises to 805, Venus calls 625, Shadow calls 625 → Baseline wins 3005 with Full house, Ks full of Js (K♥ 3♣)",
    "pot": 3005
+  },
+  {
+   "table": 2,
+   "handNo": 51,
+   "text": "Table 2 · Hand 51 · blinds 40/80 · Professor calls 80, Quarry calls 40, Granite checks, [flop: 6♠ J♥ 6♣], Quarry checks, Granite checks, Professor checks, [turn: 6♠ J♥ 6♣ 7♦], Quarry checks, Granite checks, Professor checks, [river: 6♠ J♥ 6♣ 7♦ K♣], Quarry checks, Granite checks, Professor checks → Granite wins 240 with Two pair, Js and 6s (5♣ J♣)",
+   "pot": 240
   }
  ],
  "finishes": [
