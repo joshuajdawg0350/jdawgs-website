@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:53:22.562Z",
+ "updatedAt": "2026-11-21T02:53:33.642Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 178,
+ "handsPlayed": 179,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3510,
+     "stack": 3350,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 183440,
+     "stack": 183600,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 58
+   "handsPlayed": 59
   },
   {
    "id": 3,
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3510,
+   "stack": 3350,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 183440,
+   "stack": 183600,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 59,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Granite",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 59,
-   "text": "Table 1 · Hand 59 · blinds 40/80 · Venus calls 80, Shadow calls 80, Midas folds, Baseline checks, [flop: 4♥ 2♠ 3♣], Baseline checks, Venus checks, Shadow checks, [turn: 4♥ 2♠ 3♣ 5♠], Baseline raises to 90, Venus folds, Shadow folds → Baseline takes 370 (everyone else folded)",
-   "pot": 370
-  },
   {
    "table": 2,
    "handNo": 56,
@@ -552,6 +546,12 @@
    "handNo": 62,
    "text": "Table 1 · Hand 62 · blinds 50/100 · Baseline folds, Venus calls 100, Shadow folds, Midas checks, [flop: A♣ 7♦ 7♠], Midas checks, Venus checks, [turn: A♣ 7♦ 7♠ 5♣], Midas checks, Venus checks, [river: A♣ 7♦ 7♠ 5♣ 3♥], Midas checks, Venus checks → Venus wins 250 with Pair of 7s (9♥ 10♦)",
    "pot": 250
+  },
+  {
+   "table": 2,
+   "handNo": 59,
+   "text": "Table 2 · Hand 59 · blinds 40/80 · Granite folds, Professor calls 40, Quarry checks, [flop: 7♥ 8♣ 4♥], Professor checks, Quarry checks, [turn: 7♥ 8♣ 4♥ Q♠], Professor checks, Quarry checks, [river: 7♥ 8♣ 4♥ Q♠ K♥], Professor checks, Quarry raises to 80, Professor calls 80 → Quarry wins 320 with Flush, K high (2♥ 8♥)",
+   "pot": 320
   }
  ],
  "finishes": [
