@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:29:47.788Z",
+ "updatedAt": "2026-11-21T02:30:00.593Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 94,
+ "handsPlayed": 95,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 12085,
+     "stack": 12055,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 120220,
+     "stack": 85330,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 34890,
+     "stack": 3490,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 33145,
+     "stack": 99465,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 30
+   "handsPlayed": 31
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 12085,
+   "stack": 12055,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 120220,
+   "stack": 85330,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 34890,
+   "stack": 3490,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 33145,
+   "stack": 99465,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 31,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Professor",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 31,
-   "text": "Table 1 · Hand 31 · blinds 30/60 · Pearl calls 60, Venus calls 60, Shadow calls 60, Midas folds, Baseline checks, [flop: 10♣ 8♠ A♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [turn: 10♣ 8♠ A♣ Q♣], Baseline checks, Pearl checks, Venus checks, Shadow checks, [river: 10♣ 8♠ A♣ Q♣ 7♣], Baseline raises to 65, Pearl calls 65, Venus raises to 150, Shadow calls 150, Baseline raises to 245, Pearl calls 180, Venus raises to 365, Shadow folds, Baseline raises to 495, Pearl calls 250, Venus raises to 660, Baseline raises to 1900, Pearl calls 1405, Venus raises to 3140, Baseline raises to 7555, Pearl calls 5655, Venus raises to 13205, Baseline goes ALL-IN to 23145, Pearl calls 2221, Venus raises to 35870 → Baseline wins 56486 with Flush, A high (A♦ K♣); Venus wins 12725 with Flush, A high (J♣ 4♥)",
-   "pot": 69211
-  },
   {
    "table": 2,
    "handNo": 28,
@@ -552,6 +546,12 @@
    "handNo": 34,
    "text": "Table 1 · Hand 34 · blinds 30/60 · Baseline calls 60, Venus calls 60, Shadow folds, Midas checks, [flop: 3♣ 10♦ 3♦], Midas checks, Baseline raises to 65, Venus calls 65, Midas calls 65, [turn: 3♣ 10♦ 3♦ 9♣], Midas checks, Baseline raises to 65, Venus calls 65, Midas calls 65, [river: 3♣ 10♦ 3♦ 9♣ 5♥], Midas checks, Baseline checks, Venus checks → Baseline wins 600 with Three of a kind, 3s (3♥ Q♣)",
    "pot": 600
+  },
+  {
+   "table": 2,
+   "handNo": 31,
+   "text": "Table 2 · Hand 31 · blinds 30/60 · Professor calls 60, Quarry calls 60, Granite folds, Sixgun checks, [flop: Q♥ 5♠ J♥], Sixgun checks, Professor checks, Quarry checks, [turn: Q♥ 5♠ J♥ 10♠], Sixgun checks, Professor checks, Quarry raises to 60, Sixgun calls 60, Professor calls 60, [river: Q♥ 5♠ J♥ 10♠ 10♥], Sixgun raises to 235, Professor calls 235, Quarry raises to 535, Sixgun raises to 1370, Professor calls 1135, Quarry raises to 2440, Sixgun raises to 5780, Professor calls 4410, Quarry raises to 10055, Sixgun raises to 23260, Professor calls 17480, Quarry goes ALL-IN to 33025, Sixgun raises to 80985, Professor calls 11510 → Sixgun wins 46215 with Two pair, 10s and 5s (8♥ 5♦); Professor wins 3490 with Two pair, Qs and 10s (4♣ Q♣); Quarry wins 99465 with Straight, Q high (8♠ 9♥)",
+   "pot": 149170
   }
  ],
  "finishes": [
