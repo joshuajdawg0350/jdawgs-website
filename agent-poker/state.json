@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:11:15.639Z",
+ "updatedAt": "2026-11-21T02:11:29.585Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 34,
+ "handsPlayed": 35,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19595,
+     "stack": 19570,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 141875,
+     "stack": 141900,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19595,
+   "stack": 19570,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 141875,
+   "stack": 141900,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Professor",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 11,
-   "text": "Table 1 · Hand 11 · blinds 25/50 · Pearl calls 50, Venus calls 50, Shadow raises to 115, Midas folds, Baseline raises to 200, Pearl calls 150, Venus calls 150, Shadow folds, [flop: Q♦ 8♥ 8♣], Baseline checks, Pearl checks, Venus checks, [turn: Q♦ 8♥ 8♣ Q♥], Baseline checks, Pearl checks, Venus checks, [river: Q♦ 8♥ 8♣ Q♥ 6♦], Baseline checks, Pearl checks, Venus checks → Venus wins 740 with Two pair, Qs and 8s (5♠ 10♠)",
-   "pot": 740
-  },
   {
    "table": 2,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 14,
    "text": "Table 1 · Hand 14 · blinds 25/50 · Midas folds, Baseline calls 50, Pearl calls 50, Venus calls 25, Shadow checks, [flop: A♥ 9♦ 7♣], Venus checks, Shadow checks, Baseline checks, Pearl checks, [turn: A♥ 9♦ 7♣ 8♥], Venus checks, Shadow checks, Baseline checks, Pearl checks, [river: A♥ 9♦ 7♣ 8♥ 4♣], Venus checks, Shadow checks, Baseline checks, Pearl checks → Shadow wins 200 with Pair of As (3♦ A♣)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 11,
+   "text": "Table 2 · Hand 11 · blinds 25/50 · Professor folds, Quarry folds, Granite folds → Sixgun takes 75 (everyone else folded)",
+   "pot": 75
   }
  ],
  "finishes": [
