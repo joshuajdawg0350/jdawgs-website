@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:09:24.614Z",
+ "updatedAt": "2026-11-21T02:09:37.400Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 28,
+ "handsPlayed": 29,
  "tables": [
   {
    "id": 1,
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 3,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Pickpocket",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 9,
-   "text": "Table 1 · Hand 9 · blinds 25/50 · Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: J♦ 3♦ 10♠], Venus checks, Shadow checks, Pearl checks, [turn: J♦ 3♦ 10♠ K♠], Venus checks, Shadow checks, Pearl checks, [river: J♦ 3♦ 10♠ K♠ 10♣], Venus checks, Shadow checks, Pearl checks → Pearl wins 150 with Two pair, Js and 10s (4♦ J♠)",
-   "pot": 150
-  },
   {
    "table": 2,
    "handNo": 6,
@@ -552,6 +546,12 @@
    "handNo": 12,
    "text": "Table 1 · Hand 12 · blinds 25/50 · Venus calls 50, Shadow folds, Midas folds, Baseline folds, Pearl checks, [flop: J♦ 3♦ 10♠], Pearl checks, Venus checks, [turn: J♦ 3♦ 10♠ K♠], Pearl checks, Venus checks, [river: J♦ 3♦ 10♠ K♠ 10♣], Pearl checks, Venus checks → Pearl wins 125 with Two pair, Js and 10s (4♦ J♠)",
    "pot": 125
+  },
+  {
+   "table": 2,
+   "handNo": 9,
+   "text": "Table 2 · Hand 9 · blinds 25/50 · Granite calls 50, Sixgun calls 50, Professor calls 25, Quarry checks, [flop: J♠ J♥ A♦], Professor checks, Quarry checks, Granite checks, Sixgun checks, [turn: J♠ J♥ A♦ 5♥], Professor checks, Quarry checks, Granite checks, Sixgun checks, [river: J♠ J♥ A♦ 5♥ 5♣], Professor checks, Quarry checks, Granite checks, Sixgun raises to 120, Professor calls 120, Quarry calls 120, Granite calls 120 → Granite wins 170 with Two pair, Js and 5s (Q♠ 7♥); Sixgun wins 170 with Two pair, Js and 5s (9♠ K♠); Professor wins 170 with Two pair, Js and 5s (10♠ 8♠); Quarry wins 170 with Two pair, Js and 5s (K♣ Q♥)",
+   "pot": 680
   }
  ],
  "finishes": [
