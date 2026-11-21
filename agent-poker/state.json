@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:04:56.975Z",
+ "updatedAt": "2026-11-21T03:05:07.360Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 208,
+ "handsPlayed": 209,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 315530,
+     "stack": 315470,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 136505,
+     "stack": 136565,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 88
+   "handsPlayed": 89
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 315530,
+   "stack": 315470,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 136505,
+   "stack": 136565,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 89,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Quarry",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 79,
-   "text": "Table 1 · Hand 79 · blinds 50/100 · Venus calls 100, Tally raises to 260, Shadow calls 260, Granite folds, Quarry calls 160, Venus calls 160, [flop: 3♣ Q♣ 4♣], Quarry checks, Venus checks, Tally checks, Shadow checks, [turn: 3♣ Q♣ 4♣ 3♠], Quarry checks, Venus checks, Tally checks, Shadow checks, [river: 3♣ Q♣ 4♣ 3♠ 7♠], Quarry checks, Venus checks, Tally checks, Shadow checks → Tally wins 1090 with Two pair, As and 3s (A♠ A♥)",
-   "pot": 1090
-  },
   {
    "table": 1,
    "handNo": 80,
@@ -395,6 +381,12 @@
    "table": 1,
    "handNo": 88,
    "text": "Table 1 · Hand 88 · blinds 60/120 · Tally folds, Quarry folds → Venus takes 180 (everyone else folded)",
+   "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 89,
+   "text": "Table 1 · Hand 89 · blinds 60/120 · Quarry folds, Venus folds → Tally takes 180 (everyone else folded)",
    "pot": 180
   }
  ],
