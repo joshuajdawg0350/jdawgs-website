@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T01:52:30.123Z",
+ "updatedAt": "2026-11-21T01:52:45.695Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 13,
+ "handsPlayed": 14,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19730,
+     "stack": 19470,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 20415,
+     "stack": 20365,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19350,
+     "stack": 19090,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20060,
+     "stack": 19800,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20840,
+     "stack": 21770,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19730,
+   "stack": 19470,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19790,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20415,
+   "stack": 20365,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19925,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19350,
+   "stack": 19090,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20060,
+   "stack": 19800,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20840,
+   "stack": 21770,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 4,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Pickpocket",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 2,
-   "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, Ozone calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Pearl calls 25, Venus checks, [flop: 6♦ 8♣ 10♣], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [turn: 6♦ 8♣ 10♣ 3♥], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks, [river: 6♦ 8♣ 10♣ 3♥ J♠], Pearl checks, Venus checks, Shadow checks, Ozone checks, Quarry checks, Baseline checks → Quarry wins 300 with Pair of Js (J♦ 4♥)",
-   "pot": 300
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +538,12 @@
    "handNo": 4,
    "text": "Table 2 · Hand 4 · blinds 25/50 · Slick folds, Granite calls 50, Compass calls 50, Sixgun folds, Professor folds, Quarry checks, [flop: J♦ Q♠ 3♠], Quarry checks, Granite checks, Compass checks, [turn: J♦ Q♠ 3♠ J♠], Quarry checks, Granite checks, Compass checks, [river: J♦ Q♠ 3♠ J♠ K♣], Quarry checks, Granite checks, Compass raises to 55, Quarry calls 55, Granite calls 55 → Compass wins 340 with Two pair, Qs and Js (Q♦ 10♦)",
    "pot": 340
+  },
+  {
+   "table": 3,
+   "handNo": 4,
+   "text": "Table 3 · Hand 4 · blinds 25/50 · Pickpocket calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox calls 50, Velvet calls 25, Tally checks, [flop: 3♥ 5♣ 9♠], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Icebox checks, [turn: 3♥ 5♣ 9♠ 8♦], Velvet checks, Tally checks, Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Icebox checks, [river: 3♥ 5♣ 9♠ 8♦ 6♥], Velvet checks, Tally checks, Pickpocket raises to 210, Deuce calls 210, Wildfire folds, Millstone folds, Icebox folds, Velvet calls 210, Tally calls 210 → Pickpocket wins 1190 with Straight, 9 high (7♥ 3♣)",
+   "pot": 1190
   }
  ],
  "finishes": [
