@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T03:07:47.418Z",
+ "updatedAt": "2026-11-21T03:07:58.644Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 215,
+ "handsPlayed": 216,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 67725,
+     "stack": 68205,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 315350,
+     "stack": 315110,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 136925,
+     "stack": 136685,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 95
+   "handsPlayed": 96
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 315350,
+   "stack": 315110,
    "status": "seated",
    "reentered": false
   },
@@ -253,7 +253,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 136925,
+   "stack": 136685,
    "status": "seated",
    "reentered": false
   },
@@ -316,7 +316,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 67725,
+   "stack": 68205,
    "status": "seated",
    "reentered": false
   }
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 96,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 86,
-   "text": "Table 1 · Hand 86 · blinds 60/120 · Granite calls 120, Quarry calls 120, Venus raises to 240, Tally folds, Granite calls 120, Quarry calls 120, [flop: 9♣ 5♦ J♥], Venus checks, Granite checks, Quarry checks, [turn: 9♣ 5♦ J♥ 9♥], Venus checks, Granite checks, Quarry checks, [river: 9♣ 5♦ J♥ 9♥ 9♦], Venus raises to 120, Granite calls 120, Quarry raises to 275, Venus raises to 475, Granite calls 355, Quarry raises to 730, Venus raises to 1055, Granite calls 580, Quarry raises to 1470, Venus raises to 2000, Granite calls 945, Quarry raises to 2680, Venus raises to 3550, Granite calls 1550, Quarry raises to 4665, Venus raises to 6090, Granite calls 2540, Quarry raises to 7915, Venus raises to 10250, Granite calls 3235, Quarry raises to 13240, Venus raises to 17065, Quarry raises to 21960, Venus raises to 28225, Quarry goes ALL-IN to 28990, Venus raises to 37010 → Quarry wins 68145 with Full house, 9s full of Js (2♠ J♠); Venus wins 8020 with Full house, 9s full of 10s (10♥ 10♠)",
-   "pot": 76165
-  },
   {
    "table": 1,
    "handNo": 87,
@@ -396,6 +382,12 @@
    "handNo": 95,
    "text": "Table 1 · Hand 95 · blinds 60/120 · Quarry calls 120, Venus folds, Tally raises to 240, Quarry calls 120, [flop: 6♥ K♠ 3♦], Tally checks, Quarry checks, [turn: 6♥ K♠ 3♦ 7♣], Tally checks, Quarry checks, [river: 6♥ K♠ 3♦ 7♣ 7♦], Tally checks, Quarry checks → Tally wins 540 with Two pair, 8s and 7s (8♣ 8♠)",
    "pot": 540
+  },
+  {
+   "table": 1,
+   "handNo": 96,
+   "text": "Table 1 · Hand 96 · blinds 60/120 · Venus calls 120, Tally calls 60, Quarry raises to 240, Venus calls 120, Tally calls 120, [flop: 2♣ 5♥ 6♥], Tally checks, Quarry checks, Venus checks, [turn: 2♣ 5♥ 6♥ 4♦], Tally checks, Quarry checks, Venus checks, [river: 2♣ 5♥ 6♥ 4♦ 7♦], Tally checks, Quarry checks, Venus checks → Quarry wins 720 with Pair of As (A♠ A♦)",
+   "pot": 720
   }
  ],
  "finishes": [
