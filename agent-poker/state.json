@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:35:07.147Z",
+ "updatedAt": "2026-11-21T02:35:19.679Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 111,
+ "handsPlayed": 112,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 57681,
+     "stack": 57621,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 64110,
+     "stack": 64230,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 18685,
+     "stack": 18625,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57681,
+   "stack": 57621,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 64110,
+   "stack": 64230,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18685,
+   "stack": 18625,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 40,
+  "table": 2,
+  "handNo": 37,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 33,
-   "text": "Table 3 · Hand 33 · blinds 30/60 · Ozone calls 60, Millstone calls 60, Icebox folds, Tally checks, [flop: A♠ 2♦ 5♣], Tally checks, Ozone checks, Millstone checks, [turn: A♠ 2♦ 5♣ K♦], Tally checks, Ozone checks, Millstone raises to 70, Tally calls 70, Ozone folds, [river: A♠ 2♦ 5♣ K♦ 2♥], Tally raises to 60, Millstone calls 60 → Tally wins 470 with Two pair, As and 2s (6♥ A♣)",
-   "pot": 470
-  },
   {
    "table": 1,
    "handNo": 37,
@@ -552,6 +546,12 @@
    "handNo": 36,
    "text": "Table 3 · Hand 36 · blinds 30/60 · Tally calls 60, Ozone calls 60, Millstone calls 30, Icebox checks, [flop: K♠ 10♣ 6♦], Millstone checks, Icebox checks, Tally checks, Ozone checks, [turn: K♠ 10♣ 6♦ 8♦], Millstone checks, Icebox checks, Tally checks, Ozone checks, [river: K♠ 10♣ 6♦ 8♦ 3♣], Millstone checks, Icebox checks, Tally checks, Ozone checks → Icebox wins 240 with Pair of Ks (K♦ 2♦)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 40,
+   "text": "Table 1 · Hand 40 · blinds 30/60 · Shadow calls 60, Midas folds, Baseline calls 30, Venus checks, [flop: 5♦ A♦ 6♠], Baseline checks, Venus checks, Shadow checks, [turn: 5♦ A♦ 6♠ Q♦], Baseline checks, Venus checks, Shadow checks, [river: 5♦ A♦ 6♠ Q♦ 10♠], Baseline checks, Venus checks, Shadow checks → Venus wins 180 with Pair of As (4♠ A♠)",
+   "pot": 180
   }
  ],
  "finishes": [
