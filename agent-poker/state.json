@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:46:14.988Z",
+ "updatedAt": "2026-11-21T02:46:27.133Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 152,
+ "handsPlayed": 153,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 9240,
+     "stack": 9360,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 116755,
+     "stack": 116715,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20305,
+     "stack": 20225,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 9240,
+   "stack": 9360,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 116755,
+   "stack": 116715,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20305,
+   "stack": 20225,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 50,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 47,
-   "text": "Table 2 · Hand 47 · blinds 40/80 · Granite folds, Professor raises to 170, Quarry folds → Professor takes 250 (everyone else folded)",
-   "pot": 250
-  },
   {
    "table": 3,
    "handNo": 47,
@@ -552,6 +538,12 @@
    "handNo": 50,
    "text": "Table 2 · Hand 50 · blinds 40/80 · Granite folds, Professor folds → Quarry takes 120 (everyone else folded)",
    "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 50,
+   "text": "Table 3 · Hand 50 · blinds 40/80 · Millstone calls 80, Icebox folds, Tally folds, Ozone checks, [flop: 7♠ A♦ 4♣], Ozone checks, Millstone checks, [turn: 7♠ A♦ 4♣ 6♠], Ozone checks, Millstone checks, [river: 7♠ A♦ 4♣ 6♠ 2♣], Ozone checks, Millstone checks → Millstone wins 200 with Pair of 4s (J♥ 4♥)",
+   "pot": 200
   }
  ],
  "finishes": [
