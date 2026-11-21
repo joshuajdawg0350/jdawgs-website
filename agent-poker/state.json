@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-21T02:46:04.892Z",
+ "updatedAt": "2026-11-21T02:46:14.988Z",
  "mode": "real",
  "date": "2026-11-20",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 151,
+ "handsPlayed": 152,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 3830,
+     "stack": 3790,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 183720,
+     "stack": 183760,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   },
   {
    "id": 3,
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3830,
+   "stack": 3790,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 183720,
+   "stack": 183760,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 50,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Granite",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 50,
-   "text": "Table 1 · Hand 50 · blinds 40/80 · Baseline calls 80, Venus folds, Shadow calls 40, Midas checks, [flop: 5♠ Q♣ K♣], Shadow checks, Midas checks, Baseline checks, [turn: 5♠ Q♣ K♣ 8♠], Shadow checks, Midas checks, Baseline checks, [river: 5♠ Q♣ K♣ 8♠ 10♠], Shadow checks, Midas checks, Baseline checks → Shadow wins 240 with Two pair, 10s and 8s (8♦ 10♣)",
-   "pot": 240
-  },
   {
    "table": 2,
    "handNo": 47,
@@ -552,6 +546,12 @@
    "handNo": 53,
    "text": "Table 1 · Hand 53 · blinds 40/80 · Midas folds, Baseline calls 80, Venus folds, Shadow checks, [flop: K♦ 9♠ 6♠], Shadow checks, Baseline checks, [turn: K♦ 9♠ 6♠ 5♣], Shadow checks, Baseline checks, [river: K♦ 9♠ 6♠ 5♣ 6♣], Shadow checks, Baseline checks → Shadow wins 200 with Two pair, 6s and 5s (8♦ 5♥)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 50,
+   "text": "Table 2 · Hand 50 · blinds 40/80 · Granite folds, Professor folds → Quarry takes 120 (everyone else folded)",
+   "pot": 120
   }
  ],
  "finishes": [
