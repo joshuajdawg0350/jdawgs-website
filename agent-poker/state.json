@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:06:38.551Z",
+ "updatedAt": "2026-11-22T01:07:26.589Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 8,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19600,
+     "stack": 19550,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19600,
+     "stack": 20345,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19600,
+     "stack": 19485,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20380,
+     "stack": 20265,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19660,
+     "stack": 19485,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19710,
+     "stack": 19535,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 21740,
+     "stack": 21625,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19600,
+   "stack": 19550,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19600,
+   "stack": 20345,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19600,
+   "stack": 19485,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20380,
+   "stack": 20265,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19660,
+   "stack": 19485,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19710,
+   "stack": 19535,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21740,
+   "stack": 21625,
    "status": "seated",
    "reentered": false
   },
@@ -486,12 +486,12 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 3,
-  "handNo": 3,
+  "table": 1,
+  "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Tally",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
@@ -542,6 +542,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Marble folds, Sixgun calls 50, Anchor calls 50, Slick folds, Dice calls 50, Bulldog folds, Copper checks, [flop: K♠ 7♠ 10♥], Copper checks, Sixgun checks, Anchor checks, Dice checks, [turn: K♠ 7♠ 10♥ 3♣], Copper checks, Sixgun checks, Anchor checks, Dice checks, [river: K♠ 7♠ 10♥ 3♣ 5♦], Copper checks, Sixgun checks, Anchor checks, Dice checks → Sixgun wins 225 with Pair of 10s (10♠ A♣)",
    "pot": 225
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 50, Millstone raises to 115, Icebox calls 90, Velvet calls 65, Tally calls 65, Pickpocket calls 65, Deuce folds, Wildfire calls 65, [flop: 4♥ 9♥ A♣], Icebox checks, Velvet checks, Tally raises to 60, Pickpocket folds, Wildfire calls 60, Millstone folds, Icebox folds, Velvet calls 60, [turn: 4♥ 9♥ A♣ 7♦], Velvet checks, Tally checks, Wildfire checks, [river: 4♥ 9♥ A♣ 7♦ 5♥], Velvet checks, Tally checks, Wildfire checks → Wildfire wins 920 with Pair of As (J♣ A♦)",
+   "pot": 920
   }
  ],
  "finishes": [
