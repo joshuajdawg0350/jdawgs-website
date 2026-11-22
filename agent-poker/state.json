@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:52:23.547Z",
+ "updatedAt": "2026-11-22T03:52:34.943Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 265,
+ "handsPlayed": 266,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 424764,
+     "stack": 424164,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 95236,
+     "stack": 95836,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 239
+   "handsPlayed": 240
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 424764,
+   "stack": 424164,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 95236,
+   "stack": 95836,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 240,
-  "stage": "preflop",
-  "board": [],
-  "pot": 900,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 230,
-   "text": "Table 1 · Hand 230 · blinds 300/600 · Shadow folds → Millstone takes 900 (everyone else folded)",
-   "pot": 900
-  },
   {
    "table": 1,
    "handNo": 231,
@@ -406,6 +392,12 @@
    "handNo": 239,
    "text": "Table 1 · Hand 239 · blinds 300/600 · Millstone folds → Shadow takes 900 (everyone else folded)",
    "pot": 900
+  },
+  {
+   "table": 1,
+   "handNo": 240,
+   "text": "Table 1 · Hand 240 · blinds 300/600 · Shadow calls 300, Millstone checks, [flop: K♣ 2♥ 9♣], Millstone checks, Shadow checks, [turn: K♣ 2♥ 9♣ 2♠], Millstone checks, Shadow checks, [river: K♣ 2♥ 9♣ 2♠ 4♣], Millstone checks, Shadow checks → Shadow wins 1200 with Pair of 2s (Q♥ 5♠)",
+   "pot": 1200
   }
  ],
  "finishes": [
