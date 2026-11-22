@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:57:53.794Z",
+ "updatedAt": "2026-11-22T03:58:07.278Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 277,
+ "handsPlayed": 278,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 251
+   "handsPlayed": 252
   }
  ],
  "seats": [
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 252,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1200,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 242,
-   "text": "Table 1 · Hand 242 · blinds 400/800 · Shadow folds → Millstone takes 1200 (everyone else folded)",
-   "pot": 1200
-  },
   {
    "table": 1,
    "handNo": 243,
@@ -406,6 +392,12 @@
    "handNo": 251,
    "text": "Table 1 · Hand 251 · blinds 400/800 · Millstone folds → Shadow takes 1200 (everyone else folded)",
    "pot": 1200
+  },
+  {
+   "table": 1,
+   "handNo": 252,
+   "text": "Table 1 · Hand 252 · blinds 400/800 · Shadow calls 400, Millstone checks, [flop: 3♥ K♥ 6♦], Millstone checks, Shadow checks, [turn: 3♥ K♥ 6♦ 3♠], Millstone checks, Shadow checks, [river: 3♥ K♥ 6♦ 3♠ 3♣], Millstone raises to 800, Shadow raises to 2240, Millstone raises to 5025, Shadow raises to 10345, Millstone raises to 20525, Shadow raises to 40005, Millstone raises to 77285, Shadow goes ALL-IN to 99996, Millstone raises to 207326 → Millstone wins 208126 with Full house, 3s full of Ks (5♥ K♦); Shadow wins 100796 with Full house, 3s full of Ks (Q♠ K♠)",
+   "pot": 308922
   }
  ],
  "finishes": [
