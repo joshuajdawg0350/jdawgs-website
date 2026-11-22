@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T02:04:35.918Z",
+ "updatedAt": "2026-11-22T02:04:56.980Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 69,
+ "handsPlayed": 70,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 179863,
+     "stack": 179823,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 33210,
+     "stack": 33130,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7540,
+     "stack": 7660,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   }
  ],
  "seats": [
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 33210,
+   "stack": 33130,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 179863,
+   "stack": 179823,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7540,
+   "stack": 7660,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 44,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 34,
-   "text": "Table 1 · Hand 34 · blinds 30/60 · Midas folds, Marble calls 60, Millstone folds, Copper calls 30, Shadow checks, [flop: 4♦ 8♦ K♠], Copper checks, Shadow checks, Marble checks, [turn: 4♦ 8♦ K♠ Q♥], Copper checks, Shadow checks, Marble checks, [river: 4♦ 8♦ K♠ Q♥ 5♣], Copper checks, Shadow checks, Marble checks → Marble wins 180 with Pair of 4s (4♥ J♠)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 35,
@@ -406,6 +392,12 @@
    "handNo": 43,
    "text": "Table 1 · Hand 43 · blinds 40/80 · Shadow calls 80, Midas folds, Marble calls 80, Millstone calls 40, Copper checks, [flop: 6♠ 9♣ 2♥], Millstone checks, Copper checks, Shadow checks, Marble checks, [turn: 6♠ 9♣ 2♥ 5♥], Millstone checks, Copper checks, Shadow checks, Marble checks, [river: 6♠ 9♣ 2♥ 5♥ A♠], Millstone checks, Copper checks, Shadow checks, Marble checks → Copper wins 320 with Pair of 6s (6♣ 7♠)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 44,
+   "text": "Table 1 · Hand 44 · blinds 40/80 · Midas folds, Marble calls 80, Millstone folds, Copper folds, Shadow checks, [flop: J♥ Q♠ 5♦], Shadow checks, Marble checks, [turn: J♥ Q♠ 5♦ 3♦], Shadow checks, Marble checks, [river: J♥ Q♠ 5♦ 3♦ 5♠], Shadow checks, Marble checks → Marble wins 200 with Two pair, Qs and Js (Q♦ J♦)",
+   "pot": 200
   }
  ],
  "finishes": [
