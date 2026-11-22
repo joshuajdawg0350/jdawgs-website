@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:20:45.491Z",
+ "updatedAt": "2026-11-22T01:21:12.952Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 26,
+ "handsPlayed": 27,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 6440,
+     "stack": 6270,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 97060,
+     "stack": 96890,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17750,
+     "stack": 18260,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19265,
+     "stack": 19095,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 6440,
+   "stack": 6270,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 97060,
+   "stack": 96890,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17750,
+   "stack": 18260,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19265,
+   "stack": 19095,
    "status": "seated",
    "reentered": false
   },
@@ -485,22 +485,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 3,
-  "handNo": 9,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Wildfire",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 6,
-   "text": "Table 2 · Hand 6 · blinds 25/50 · Slick folds, Bulldog calls 50, Copper calls 50, Marble folds, Anchor calls 25, Professor checks, [flop: 6♦ 4♣ 5♠], Anchor checks, Professor checks, Bulldog checks, Copper checks, [turn: 6♦ 4♣ 5♠ K♦], Anchor checks, Professor checks, Bulldog checks, Copper checks, [river: 6♦ 4♣ 5♠ K♦ 8♠], Anchor checks, Professor checks, Bulldog checks, Copper checks → Anchor wins 200 with Pair of 6s (Q♣ 6♠)",
-   "pot": 200
-  },
   {
    "table": 3,
    "handNo": 6,
@@ -554,6 +540,12 @@
    "handNo": 9,
    "text": "Table 2 · Hand 9 · blinds 25/50 · Professor calls 50, Bulldog calls 50, Copper folds, Marble checks, [flop: 10♣ A♣ 8♣], Marble checks, Professor checks, Bulldog checks, [turn: 10♣ A♣ 8♣ 10♠], Marble checks, Professor checks, Bulldog raises to 105, Marble calls 105, Professor calls 105, [river: 10♣ A♣ 8♣ 10♠ 4♠], Marble checks, Professor checks, Bulldog checks → Bulldog wins 490 with Two pair, As and 10s (3♦ A♠)",
    "pot": 490
+  },
+  {
+   "table": 3,
+   "handNo": 9,
+   "text": "Table 3 · Hand 9 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Velvet calls 25, Tally checks, [flop: K♦ 10♠ Q♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [turn: K♦ 10♠ Q♠ 5♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [river: K♦ 10♠ Q♠ 5♠ 3♥], Velvet checks, Tally checks, Wildfire raises to 120, Millstone calls 120, Velvet calls 120, Tally calls 120 → Velvet wins 680 with Two pair, Qs and 5s (Q♥ 5♦)",
+   "pot": 680
   }
  ],
  "finishes": [
