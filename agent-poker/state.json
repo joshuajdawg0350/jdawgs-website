@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:07:26.589Z",
+ "updatedAt": "2026-11-22T01:07:58.762Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 19795,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20035,
+     "stack": 200,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19730,
+     "stack": 59290,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 985,
+     "stack": 935,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 210,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19845,
+   "stack": 19795,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20035,
+   "stack": 200,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19730,
+   "stack": 59290,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 985,
+   "stack": 935,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19835,
+   "stack": 210,
    "status": "seated",
    "reentered": false
   },
@@ -486,12 +486,12 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Ozone",
+  "toAct": "Sixgun",
   "lastActions": []
  },
  "recentHands": [
@@ -548,6 +548,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 50, Millstone raises to 115, Icebox calls 90, Velvet calls 65, Tally calls 65, Pickpocket calls 65, Deuce folds, Wildfire calls 65, [flop: 4♥ 9♥ A♣], Icebox checks, Velvet checks, Tally raises to 60, Pickpocket folds, Wildfire calls 60, Millstone folds, Icebox folds, Velvet calls 60, [turn: 4♥ 9♥ A♣ 7♦], Velvet checks, Tally checks, Wildfire checks, [river: 4♥ 9♥ A♣ 7♦ 5♥], Velvet checks, Tally checks, Wildfire checks → Wildfire wins 920 with Pair of As (J♣ A♦)",
    "pot": 920
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 25/50 · Ozone calls 50, Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, River Rat raises to 100, Hammer folds, Ozone calls 50, Baseline folds, Venus calls 50, [flop: 2♥ Q♣ 3♣], River Rat checks, Ozone checks, Venus checks, [turn: 2♥ Q♣ 3♣ K♦], River Rat checks, Ozone checks, Venus checks, [river: 2♥ Q♣ 3♣ K♦ K♣], River Rat raises to 50, Ozone raises to 115, Venus calls 115, River Rat raises to 180, Ozone raises to 665, Venus calls 550, River Rat raises to 1150, Ozone raises to 1780, Venus calls 1115, River Rat raises to 2410, Ozone raises to 6230, Venus calls 4450, River Rat raises to 10050, Ozone raises to 15015, Venus calls 8785, River Rat goes ALL-IN to 19630, Ozone goes ALL-IN to 19735, Venus calls 4720 → River Rat wins 59290 with Full house, Qs full of Ks (Q♠ Q♦); Ozone wins 210 with Flush, K high (9♣ 8♣)",
+   "pot": 59500
   }
  ],
  "finishes": [
