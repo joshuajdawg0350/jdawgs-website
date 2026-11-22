@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:04:30.175Z",
+ "updatedAt": "2026-11-22T01:05:03.260Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19895,
+     "stack": 19795,
      "status": "seated",
      "reentered": false
     },
@@ -107,15 +107,15 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19975,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 21735,
+     "stack": 21635,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 79375,
      "status": "seated",
      "reentered": false
     },
@@ -139,15 +139,15 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19500,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 19500,
+     "stack": 19400,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19500,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19895,
+   "stack": 19795,
    "status": "seated",
    "reentered": false
   },
@@ -292,8 +292,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21735,
+   "stack": 21635,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 79375,
    "status": "seated",
    "reentered": false
   },
@@ -400,8 +400,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19500,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19500,
+   "stack": 19400,
    "status": "seated",
    "reentered": false
   },
@@ -472,8 +472,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19500,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   }
  ],
@@ -486,12 +486,12 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Velvet",
   "lastActions": []
  },
  "recentHands": [
@@ -518,6 +518,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Shadow calls 50, River Rat calls 50, Hammer raises to 115, Ozone calls 115, Anchor calls 115, Midas folds, Baseline folds, Pearl calls 90, Venus folds, Shadow calls 65, River Rat calls 65, [flop: 9♠ 7♣ Q♣], Pearl checks, Shadow checks, River Rat checks, Hammer checks, Ozone checks, Anchor checks, [turn: 9♠ 7♣ Q♣ 6♥], Pearl checks, Shadow checks, River Rat checks, Hammer raises to 60, Ozone folds, Anchor calls 60, Pearl calls 60, Shadow folds, River Rat folds, [river: 9♠ 7♣ Q♣ 6♥ 8♣], Pearl checks, Hammer raises to 65, Anchor raises to 140, Pearl calls 140, Hammer raises to 900, Anchor raises to 1750, Pearl calls 1610, Hammer raises to 4940, Anchor raises to 8515, Pearl calls 6765, Hammer goes ALL-IN to 20695, Anchor calls 11145, Pearl calls 11145 → Hammer wins 1035 with Straight, 9 high (4♥ 5♣); Anchor wins 59900 with Straight, Q high (J♠ 10♠)",
    "pot": 60935
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass calls 50, Marble calls 50, Sixgun calls 50, Quarry raises to 100, Slick calls 100, Granite calls 100, Dice calls 75, Bulldog calls 50, Compass calls 50, Marble calls 50, Sixgun calls 50, [flop: 2♦ 8♦ 9♥], Dice checks, Bulldog checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Granite checks, [turn: 2♦ 8♦ 9♥ J♠], Dice checks, Bulldog raises to 480, Compass calls 480, Marble folds, Sixgun folds, Quarry calls 480, Slick folds, Granite calls 480, Dice folds, [river: 2♦ 8♦ 9♥ J♠ 6♦], Bulldog raises to 1630, Compass raises to 3425, Quarry raises to 5220, Granite calls 5220, Bulldog raises to 16150, Compass goes ALL-IN to 18920, Quarry calls 13700, Granite calls 13700, Bulldog goes ALL-IN to 19420, Granite calls 475 → Bulldog wins 79375 with Straight, J high (7♦ 10♥)",
+   "pot": 79375
   }
  ],
  "finishes": [
@@ -526,6 +532,30 @@
    "place": null,
    "kind": "house",
    "table": 1,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Granite",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Compass",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 2,
+   "provisional": true
+  },
+  {
+   "name": "Quarry",
+   "place": null,
+   "kind": "house",
+   "table": 2,
    "handNo": 2,
    "provisional": true
   }
