@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:35:55.099Z",
+ "updatedAt": "2026-11-22T04:36:07.114Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 353,
+ "handsPlayed": 354,
  "tables": [
   {
    "id": 1,
@@ -29,8 +29,8 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 147616,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 372384,
+     "stack": 520000,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 327
+   "handsPlayed": 328
   }
  ],
  "seats": [
@@ -180,8 +180,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 147616,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 372384,
+   "stack": 520000,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 328,
-  "stage": "preflop",
-  "board": [],
-  "pot": 3000,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 318,
-   "text": "Table 1 · Hand 318 · blinds 800/1600 · Shadow folds → Millstone takes 2400 (everyone else folded)",
-   "pot": 2400
-  },
   {
    "table": 1,
    "handNo": 319,
@@ -406,6 +392,12 @@
    "handNo": 327,
    "text": "Table 1 · Hand 327 · blinds 1000/2000 · Millstone calls 1000, Shadow checks, [flop: 2♦ 10♦ 8♦], Shadow checks, Millstone checks, [turn: 2♦ 10♦ 8♦ Q♣], Shadow checks, Millstone checks, [river: 2♦ 10♦ 8♦ Q♣ 9♠], Shadow raises to 2200, Millstone calls 2200 → Shadow wins 8400 with Straight, K high (J♠ K♦)",
    "pot": 8400
+  },
+  {
+   "table": 1,
+   "handNo": 328,
+   "text": "Table 1 · Hand 328 · blinds 1000/2000 · Shadow calls 1000, Millstone checks, [flop: 10♥ 10♣ 7♣], Millstone checks, Shadow raises to 2200, Millstone calls 2200, [turn: 10♥ 10♣ 7♣ Q♣], Millstone checks, Shadow raises to 2200, Millstone calls 2200, [river: 10♥ 10♣ 7♣ Q♣ Q♥], Millstone raises to 2000, Shadow raises to 10880, Millstone raises to 19760, Shadow raises to 45825, Millstone raises to 71890, Shadow raises to 150200, Millstone calls 69326 → Shadow wins 304216 with Full house, 7s full of Qs (7♦ 7♠)",
+   "pot": 304216
   }
  ],
  "finishes": [
@@ -599,6 +591,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 130,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 328,
    "provisional": true
   }
  ],
