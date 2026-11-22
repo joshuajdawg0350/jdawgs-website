@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:35:29.981Z",
+ "updatedAt": "2026-11-22T04:35:42.735Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 352,
+ "handsPlayed": 353,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 151816,
+     "stack": 147616,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 368184,
+     "stack": 372384,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 326
+   "handsPlayed": 327
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 151816,
+   "stack": 147616,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 368184,
+   "stack": 372384,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 327,
-  "stage": "preflop",
-  "board": [],
-  "pot": 3000,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 317,
-   "text": "Table 1 · Hand 317 · blinds 800/1600 · Millstone folds → Shadow takes 2400 (everyone else folded)",
-   "pot": 2400
-  },
   {
    "table": 1,
    "handNo": 318,
@@ -406,6 +392,12 @@
    "handNo": 326,
    "text": "Table 1 · Hand 326 · blinds 1000/2000 · Shadow folds → Millstone takes 3000 (everyone else folded)",
    "pot": 3000
+  },
+  {
+   "table": 1,
+   "handNo": 327,
+   "text": "Table 1 · Hand 327 · blinds 1000/2000 · Millstone calls 1000, Shadow checks, [flop: 2♦ 10♦ 8♦], Shadow checks, Millstone checks, [turn: 2♦ 10♦ 8♦ Q♣], Shadow checks, Millstone checks, [river: 2♦ 10♦ 8♦ Q♣ 9♠], Shadow raises to 2200, Millstone calls 2200 → Shadow wins 8400 with Straight, K high (J♠ K♦)",
+   "pot": 8400
   }
  ],
  "finishes": [
