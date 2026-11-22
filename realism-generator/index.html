@@ -1369,9 +1369,21 @@
            plain sentence, then hand back the Direct (Clean) prompt ---- */
         window.HCPG = window.HCPG || {};
         window.HCPG.realismSetup = function (goalText, isVideo, charName) {
-          $("subject").value = goalText;
+          /* the goal sentence is not the subject word-for-word: drop a
+             leading "a photo of …" so the prompt doesn't nest it inside
+             the shot phrase ("Portrait of a photo of my shop …") */
+          $("subject").value = goalText.replace(/^\s*(a\s+|an\s+|the\s+)?(photo|picture|image|portrait|drawing|painting)\s+of\s+/i, "");
           $("target").value = isVideo ? "video" : "generic";
           $("detail").value = "realism";
+          /* honor the plain time-of-day words in the goal instead of
+             contradicting them with the daylight default */
+          var gLow = " " + goalText.toLowerCase() + " ";
+          if (/\b(sunset|sunrise|golden hour|dawn)\b/.test(gLow)) $("lighting").value = "golden";
+          /* a place or a building is a wide shot, not a head-and-shoulders
+             portrait — unless a person is the named subject */
+          var placeCue = /\b(shop|store|building|house|home|street|city|skyline|landscape|farm|barn|bridge|church|school|restaurant|office|warehouse|cabin|tower|downtown|neighborhood|park|beach|mountain|mountains|lake|river|field|yard|garden|room|kitchen|garage|porch|harbor|airport|station)\b/.test(gLow);
+          var personCue = /\b(man|woman|guy|girl|boy|cowboy|cowgirl|worker|king|queen|lady|gentleman|portrait|face|selfie|son|daughter|mom|dad|mother|father|husband|wife|boyfriend|girlfriend|person|people|kid|child|baby)\b/.test(gLow);
+          if (placeCue && !personCue) $("shot").value = "wide";
           if (charName) {
             $("likenessName").value = charName;
             if (!likeness.on) $("likenessLock").click();
@@ -2090,7 +2102,7 @@
         /* ---- plain-word inference when no chip is picked ---- */
         var SIGNALS = {
           video:   ["video", "clip", "reel", "commercial", "animation", "animate", "footage", "movie", "tiktok", "short film"],
-          code:    ["code", "coding", "an app", "app that", "game", "website", "web page", "webpage", "script", "program", "debug", "software", "build me a"],
+          code:    ["code", "coding", "an app", "app that", "game", "website", "web page", "webpage", "script", "program", "debug", "software", "build me a", "fix", "bug", "broken", "doesn't work", "doesnt work", "not working", "button", "slot machine", "gameplay", "pinochle"],
           ad:      ["ad for", "advertis", "sell", "marketing", "promote", "promotion", "pitch", "flyer", "consignment", "facebook post", "instagram post", "social media post"],
           agent:   ["agent", "system prompt", "instructions for an ai", "instructions for ai", "ai assistant", "chatbot", "bot that"],
           picture: ["picture", "image", "photo", "portrait", "drawing", "draw ", "logo", "illustration", "painting", "poster", "cover art", "character"],
@@ -2110,11 +2122,22 @@
         }
 
         /* ---- a named character: "King Balsey", or "of Balsey" ---- */
+        /* A capitalized pair is not automatically a person: "Springfield
+           Missouri" is a place, and claiming a real likeness (a face, a
+           reference photo) for a place invents a person who doesn't exist.
+           State names, months, and place words disqualify a match. */
+        var NOT_A_NAME = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "Hampshire", "Jersey", "Mexico", "York", "Carolina", "Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "Wisconsin", "Wyoming", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "City", "County", "River", "Lake", "Beach", "Park", "Valley", "Island", "Islands", "Springs", "Falls", "Heights", "Junction", "Harbor", "Fort", "Port", "North", "South", "East", "West", "New", "Grand", "San", "Santa", "Saint", "Mount", "Mountains"];
+        function looksLikePlace(candidate) {
+          var words = candidate.split(" ");
+          for (var i = 0; i < words.length; i++) if (NOT_A_NAME.indexOf(words[i]) !== -1) return true;
+          return false;
+        }
         function findName(goal) {
-          var m = goal.match(/\b([A-Z][a-z]+ [A-Z][a-z]+)\b/);
-          if (m) return m[1];
+          var re = /\b([A-Z][a-z]+ [A-Z][a-z]+)\b/g, mm;
+          while ((mm = re.exec(goal)) !== null) { if (!looksLikePlace(mm[1])) return mm[1]; }
           var m2 = goal.match(/\bof ([A-Z][a-z]+)\b/);
-          return m2 ? m2[1] : null;
+          if (m2 && !looksLikePlace(m2[1])) return m2[1];
+          return null;
         }
 
         /* ---- copy with the same visible fallback as the engines ---- */
