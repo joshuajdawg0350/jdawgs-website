@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:21:53.512Z",
+ "updatedAt": "2026-11-22T04:22:05.057Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 321,
+ "handsPlayed": 322,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 148616,
+     "stack": 149216,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 371384,
+     "stack": 370784,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 295
+   "handsPlayed": 296
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 148616,
+   "stack": 149216,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 371384,
+   "stack": 370784,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 296,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1800,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 286,
-   "text": "Table 1 · Hand 286 · blinds 600/1200 · Shadow folds → Millstone takes 1800 (everyone else folded)",
-   "pot": 1800
-  },
   {
    "table": 1,
    "handNo": 287,
@@ -406,6 +392,12 @@
    "handNo": 295,
    "text": "Table 1 · Hand 295 · blinds 600/1200 · Millstone calls 600, Shadow checks, [flop: 4♠ 6♠ 2♠], Shadow checks, Millstone checks, [turn: 4♠ 6♠ 2♠ 3♥], Shadow checks, Millstone raises to 1440, Shadow folds → Millstone takes 3840 (everyone else folded)",
    "pot": 3840
+  },
+  {
+   "table": 1,
+   "handNo": 296,
+   "text": "Table 1 · Hand 296 · blinds 600/1200 · Shadow folds → Millstone takes 1800 (everyone else folded)",
+   "pot": 1800
   }
  ],
  "finishes": [
