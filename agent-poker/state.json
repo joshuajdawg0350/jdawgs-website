@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:26:40.080Z",
+ "updatedAt": "2026-11-22T04:26:50.995Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 333,
+ "handsPlayed": 334,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 143216,
+     "stack": 144016,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 376784,
+     "stack": 375984,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 307
+   "handsPlayed": 308
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 143216,
+   "stack": 144016,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 376784,
+   "stack": 375984,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 308,
-  "stage": "preflop",
-  "board": [],
-  "pot": 2400,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 298,
-   "text": "Table 1 · Hand 298 · blinds 600/1200 · Shadow calls 600, Millstone checks, [flop: K♠ J♠ 5♠], Millstone checks, Shadow raises to 1320, Millstone folds → Shadow takes 3720 (everyone else folded)",
-   "pot": 3720
-  },
   {
    "table": 1,
    "handNo": 299,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 307,
    "text": "Table 1 · Hand 307 · blinds 800/1600 · Millstone folds → Shadow takes 2400 (everyone else folded)",
+   "pot": 2400
+  },
+  {
+   "table": 1,
+   "handNo": 308,
+   "text": "Table 1 · Hand 308 · blinds 800/1600 · Shadow folds → Millstone takes 2400 (everyone else folded)",
    "pot": 2400
   }
  ],
