@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:10:25.107Z",
+ "updatedAt": "2026-11-22T04:10:39.473Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  600,
-  1200
+  800,
+  1600
  ],
- "level": 15,
- "handsPlayed": 299,
+ "level": 16,
+ "handsPlayed": 300,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 326808,
+     "stack": 327808,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 193192,
+     "stack": 192192,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 273
+   "handsPlayed": 274
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 326808,
+   "stack": 327808,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 193192,
+   "stack": 192192,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 274,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1500,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 264,
-   "text": "Table 1 · Hand 264 · blinds 500/1000 · Shadow folds → Millstone takes 1500 (everyone else folded)",
-   "pot": 1500
-  },
   {
    "table": 1,
    "handNo": 265,
@@ -406,6 +392,12 @@
    "handNo": 273,
    "text": "Table 1 · Hand 273 · blinds 500/1000 · Millstone folds → Shadow takes 1500 (everyone else folded)",
    "pot": 1500
+  },
+  {
+   "table": 1,
+   "handNo": 274,
+   "text": "Table 1 · Hand 274 · blinds 500/1000 · Shadow calls 500, Millstone checks, [flop: 2♠ 5♣ 5♥], Millstone checks, Shadow checks, [turn: 2♠ 5♣ 5♥ 8♥], Millstone checks, Shadow checks, [river: 2♠ 5♣ 5♥ 8♥ A♣], Millstone checks, Shadow checks → Millstone wins 2000 with Pair of 5s (K♦ 3♥)",
+   "pot": 2000
   }
  ],
  "finishes": [
