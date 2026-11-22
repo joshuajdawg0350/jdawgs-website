@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:15:38.290Z",
+ "updatedAt": "2026-11-22T04:15:51.979Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 308,
+ "handsPlayed": 309,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 330708,
+     "stack": 333108,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 189292,
+     "stack": 186892,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 282
+   "handsPlayed": 283
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 330708,
+   "stack": 333108,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 189292,
+   "stack": 186892,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 283,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1800,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 273,
-   "text": "Table 1 · Hand 273 · blinds 500/1000 · Millstone folds → Shadow takes 1500 (everyone else folded)",
-   "pot": 1500
-  },
   {
    "table": 1,
    "handNo": 274,
@@ -406,6 +392,12 @@
    "handNo": 282,
    "text": "Table 1 · Hand 282 · blinds 600/1200 · Shadow folds → Millstone takes 1800 (everyone else folded)",
    "pot": 1800
+  },
+  {
+   "table": 1,
+   "handNo": 283,
+   "text": "Table 1 · Hand 283 · blinds 600/1200 · Millstone calls 600, Shadow checks, [flop: 10♦ 2♥ 7♣], Shadow checks, Millstone checks, [turn: 10♦ 2♥ 7♣ Q♥], Shadow checks, Millstone checks, [river: 10♦ 2♥ 7♣ Q♥ 7♥], Shadow checks, Millstone raises to 1200, Shadow calls 1200 → Millstone wins 4800 with Full house, 7s full of Qs (7♠ Q♦)",
+   "pot": 4800
   }
  ],
  "finishes": [
