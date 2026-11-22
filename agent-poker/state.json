@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:07:58.762Z",
+ "updatedAt": "2026-11-22T01:08:42.358Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 10,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19795,
+     "stack": 19745,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 21585,
+     "stack": 21475,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 19820,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 19575,
+     "stack": 19860,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 59850,
+     "stack": 59800,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19795,
+   "stack": 19745,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21585,
+   "stack": 21475,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19845,
+   "stack": 19820,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19900,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 59850,
+   "stack": 59800,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19575,
+   "stack": 19860,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Sixgun",
+  "toAct": "Pickpocket",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Venus calls 50, Shadow calls 50, River Rat calls 50, Hammer calls 50, Ozone folds, Anchor raises to 105, Midas folds, Baseline calls 80, Pearl calls 55, Venus calls 55, Shadow calls 55, River Rat calls 55, Hammer calls 55, [flop: K♦ A♣ 8♥], Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, Hammer checks, Anchor checks, [turn: K♦ A♣ 8♥ 4♠], Baseline checks, Pearl checks, Venus checks, Shadow raises to 60, River Rat folds, Hammer calls 60, Anchor calls 60, Baseline folds, Pearl calls 60, Venus calls 60, [river: K♦ A♣ 8♥ 4♠ 5♣], Pearl checks, Venus checks, Shadow checks, Hammer checks, Anchor checks → Hammer wins 1035 with Pair of As (2♥ A♥)",
-   "pot": 1035
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -554,6 +548,12 @@
    "handNo": 4,
    "text": "Table 1 · Hand 4 · blinds 25/50 · Ozone calls 50, Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, River Rat raises to 100, Hammer folds, Ozone calls 50, Baseline folds, Venus calls 50, [flop: 2♥ Q♣ 3♣], River Rat checks, Ozone checks, Venus checks, [turn: 2♥ Q♣ 3♣ K♦], River Rat checks, Ozone checks, Venus checks, [river: 2♥ Q♣ 3♣ K♦ K♣], River Rat raises to 50, Ozone raises to 115, Venus calls 115, River Rat raises to 180, Ozone raises to 665, Venus calls 550, River Rat raises to 1150, Ozone raises to 1780, Venus calls 1115, River Rat raises to 2410, Ozone raises to 6230, Venus calls 4450, River Rat raises to 10050, Ozone raises to 15015, Venus calls 8785, River Rat goes ALL-IN to 19630, Ozone goes ALL-IN to 19735, Venus calls 4720 → River Rat wins 59290 with Full house, Qs full of Ks (Q♠ Q♦); Ozone wins 210 with Flush, K high (9♣ 8♣)",
    "pot": 59500
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 25/50 · Sixgun calls 50, Anchor calls 50, Slick calls 50, Dice calls 50, Bulldog folds, Copper folds, Marble checks, [flop: J♦ 6♥ Q♠], Marble checks, Sixgun checks, Anchor checks, Slick checks, Dice raises to 60, Marble folds, Sixgun calls 60, Anchor folds, Slick folds, [turn: J♦ 6♥ Q♠ 3♦], Sixgun checks, Dice checks, [river: J♦ 6♥ Q♠ 3♦ 4♣], Sixgun checks, Dice checks → Sixgun wins 395 with Pair of 6s (5♠ 6♦)",
+   "pot": 395
   }
  ],
  "finishes": [
