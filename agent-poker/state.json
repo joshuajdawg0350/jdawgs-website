@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:03:09.684Z",
+ "updatedAt": "2026-11-22T01:03:35.161Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20430,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20430,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -504,6 +496,12 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Bulldog folds, Copper calls 50, Compass raises to 105, Marble folds, Sixgun calls 105, Quarry calls 105, Slick calls 105, Granite folds, Dice calls 55, Copper calls 55, [flop: A♣ 10♠ 4♥], Dice checks, Copper checks, Compass checks, Sixgun checks, Quarry checks, Slick checks, [turn: A♣ 10♠ 4♥ Q♣], Dice checks, Copper checks, Compass checks, Sixgun checks, Quarry checks, Slick checks, [river: A♣ 10♠ 4♥ Q♣ 9♦], Dice raises to 395, Copper folds, Compass calls 395, Sixgun calls 395, Quarry calls 395, Slick folds → Dice wins 2235 with Straight, Q high (8♥ J♥)",
    "pot": 2235
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally folds, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: Q♦ 7♦ 3♥], Wildfire raises to 60, Millstone calls 60, Icebox calls 60, Velvet folds, Pickpocket folds, Deuce calls 60, [turn: Q♦ 7♦ 3♥ 5♣], Wildfire checks, Millstone checks, Icebox checks, Deuce checks, [river: Q♦ 7♦ 3♥ 5♣ 6♦], Wildfire checks, Millstone checks, Icebox checks, Deuce checks → Icebox wins 540 with Pair of Qs (Q♠ J♠)",
+   "pot": 540
   }
  ],
  "finishes": [],
