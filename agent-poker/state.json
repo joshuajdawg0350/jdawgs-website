@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:24:25.253Z",
+ "updatedAt": "2026-11-22T01:24:54.472Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 31,
+ "handsPlayed": 32,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 93320,
+     "stack": 93270,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 98870,
+     "stack": 98820,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 47625,
+     "stack": 47575,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19570,
+     "stack": 19720,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 93320,
+   "stack": 93270,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 98870,
+   "stack": 98820,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 47625,
+   "stack": 47575,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19570,
+   "stack": 19720,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 8,
-   "text": "Table 1 · Hand 8 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline calls 50, Shadow folds, River Rat checks, [flop: 7♥ 4♦ A♠], River Rat checks, Hammer checks, Baseline checks, [turn: 7♥ 4♦ A♠ 2♦], River Rat checks, Hammer checks, Baseline checks, [river: 7♥ 4♦ A♠ 2♦ 3♥], River Rat checks, Hammer raises to 65, Baseline folds, River Rat calls 65 → Hammer wins 305 with Straight, 5 high (5♠ 10♦)",
-   "pot": 305
-  },
   {
    "table": 2,
    "handNo": 8,
@@ -554,6 +548,12 @@
    "handNo": 11,
    "text": "Table 1 · Hand 11 · blinds 25/50 · River Rat calls 50, Midas folds, Baseline calls 25, Shadow checks, [flop: 9♦ 7♠ 3♠], Baseline checks, Shadow checks, River Rat checks, [turn: 9♦ 7♠ 3♠ K♠], Baseline checks, Shadow raises to 55, River Rat calls 55, Baseline calls 55, [river: 9♦ 7♠ 3♠ K♠ J♠], Baseline checks, Shadow raises to 55, River Rat raises to 110, Baseline calls 110, Shadow raises to 170, River Rat raises to 230, Baseline calls 120, Shadow raises to 795, River Rat raises to 1360, Baseline calls 1130, Shadow raises to 3660, River Rat raises to 5960, Baseline calls 4600, Shadow raises to 15495, River Rat raises to 25030, Baseline calls 12626, Shadow calls 1181 → Shadow wins 50343 with Flush, A high (A♠ 9♠); River Rat wins 10264 with Flush, K high (8♥ 8♠)",
    "pot": 60607
+  },
+  {
+   "table": 2,
+   "handNo": 11,
+   "text": "Table 2 · Hand 11 · blinds 25/50 · Copper calls 50, Marble calls 50, Professor calls 25, Bulldog checks, [flop: 10♦ A♠ 3♥], Professor checks, Bulldog checks, Copper checks, Marble checks, [turn: 10♦ A♠ 3♥ 6♦], Professor checks, Bulldog checks, Copper checks, Marble checks, [river: 10♦ A♠ 3♥ 6♦ 4♠], Professor checks, Bulldog checks, Copper checks, Marble checks → Professor wins 200 with Pair of 10s (10♥ 7♣)",
+   "pot": 200
   }
  ],
  "finishes": [
