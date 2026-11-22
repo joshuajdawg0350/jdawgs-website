@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:44:40.158Z",
+ "updatedAt": "2026-11-22T01:45:45.746Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 53,
+ "handsPlayed": 54,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 267579,
+     "stack": 267549,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 88135,
+     "stack": 88075,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 120590,
+     "stack": 120530,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 7085,
+     "stack": 7235,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 27
+   "handsPlayed": 28
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 267579,
+   "stack": 267549,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 120590,
+   "stack": 120530,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88135,
+   "stack": 88075,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7085,
+   "stack": 7235,
    "status": "seated",
    "reentered": false
   },
@@ -341,12 +341,6 @@
  "recentHands": [
   {
    "table": 1,
-   "handNo": 18,
-   "text": "Table 1 · Hand 18 · blinds 25/50 · Marble calls 50, Velvet calls 50, Bulldog calls 50, Millstone calls 50, Copper calls 50, Shadow calls 50, Tally calls 50, River Rat calls 25, Midas checks, [flop: 10♠ 4♣ 5♦], River Rat checks, Midas checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks, Tally checks, [turn: 10♠ 4♣ 5♦ 7♣], River Rat checks, Midas checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow raises to 60, Tally calls 60, River Rat calls 60, Midas folds, Marble folds, Velvet calls 60, Bulldog calls 60, Millstone calls 60, Copper folds, [river: 10♠ 4♣ 5♦ 7♣ 8♠], River Rat checks, Velvet checks, Bulldog checks, Millstone raises to 50, Shadow raises to 105, Tally calls 105, River Rat calls 105, Velvet folds, Bulldog calls 105, Millstone raises to 875, Shadow raises to 2230, Tally calls 2125, River Rat calls 2125, Bulldog calls 2125, Millstone raises to 8595, Shadow raises to 15595, Tally calls 13365, River Rat calls 13365, Bulldog calls 13365, Millstone raises to 58665, Shadow calls 33776, Tally calls 33385, River Rat calls 25773, Bulldog calls 43070 → Millstone wins 138224 with Straight, 8 high (10♣ 6♣); Shadow wins 119635 with Straight, 8 high (A♣ 6♠)",
-   "pot": 257859
-  },
-  {
-   "table": 1,
    "handNo": 19,
    "text": "Table 1 · Hand 19 · blinds 25/50 · Bulldog calls 50, Millstone calls 50, Copper calls 50, Shadow calls 50, Midas folds, Marble folds, Velvet checks, [flop: 5♣ 6♦ K♥], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks, [turn: 5♣ 6♦ K♥ K♠], Velvet checks, Bulldog raises to 165, Millstone calls 165, Copper calls 165, Shadow calls 165, Velvet calls 165, [river: 5♣ 6♦ K♥ K♠ Q♠], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks → Shadow wins 1100 with Two pair, Ks and Qs (Q♣ 7♥)",
    "pot": 1100
@@ -398,6 +392,12 @@
    "handNo": 27,
    "text": "Table 1 · Hand 27 · blinds 30/60 · Copper calls 60, Shadow folds, Midas folds, Marble calls 60, Velvet calls 30, Millstone checks, [flop: Q♠ 9♥ 8♣], Velvet raises to 60, Millstone folds, Copper folds, Marble folds → Velvet takes 300 (everyone else folded)",
    "pot": 300
+  },
+  {
+   "table": 1,
+   "handNo": 28,
+   "text": "Table 1 · Hand 28 · blinds 30/60 · Shadow calls 60, Midas folds, Marble folds, Velvet calls 60, Millstone folds, Copper checks, [flop: 3♥ A♣ 4♠], Copper checks, Shadow checks, Velvet checks, [turn: 3♥ A♣ 4♠ 2♥], Copper checks, Shadow checks, Velvet checks, [river: 3♥ A♣ 4♠ 2♥ 6♦], Copper checks, Shadow checks, Velvet checks → Velvet wins 210 with Two pair, As and 3s (3♦ A♥)",
+   "pot": 210
   }
  ],
  "finishes": [
