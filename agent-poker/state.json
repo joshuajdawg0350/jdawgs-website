@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:49:54.220Z",
+ "updatedAt": "2026-11-22T03:50:06.224Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  400,
-  800
+  500,
+  1000
  ],
- "level": 13,
- "handsPlayed": 259,
+ "level": 14,
+ "handsPlayed": 260,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 422964,
+     "stack": 423264,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 97036,
+     "stack": 96736,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 233
+   "handsPlayed": 234
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 422964,
+   "stack": 423264,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97036,
+   "stack": 96736,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 234,
-  "stage": "preflop",
-  "board": [],
-  "pot": 900,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 224,
-   "text": "Table 1 · Hand 224 · blinds 300/600 · Shadow calls 300, Millstone checks, [flop: 2♥ 5♣ J♥], Millstone checks, Shadow checks, [turn: 2♥ 5♣ J♥ K♣], Millstone checks, Shadow checks, [river: 2♥ 5♣ J♥ K♣ J♣], Millstone checks, Shadow checks → Millstone wins 1200 with Pair of Js (7♦ Q♣)",
-   "pot": 1200
-  },
   {
    "table": 1,
    "handNo": 225,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 233,
    "text": "Table 1 · Hand 233 · blinds 300/600 · Millstone folds → Shadow takes 900 (everyone else folded)",
+   "pot": 900
+  },
+  {
+   "table": 1,
+   "handNo": 234,
+   "text": "Table 1 · Hand 234 · blinds 300/600 · Shadow folds → Millstone takes 900 (everyone else folded)",
    "pot": 900
   }
  ],
