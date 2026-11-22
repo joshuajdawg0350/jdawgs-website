@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:22:19.427Z",
+ "updatedAt": "2026-11-22T04:22:33.513Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 322,
+ "handsPlayed": 323,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 149216,
+     "stack": 148616,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 370784,
+     "stack": 371384,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 296
+   "handsPlayed": 297
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 149216,
+   "stack": 148616,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 370784,
+   "stack": 371384,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 297,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1800,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 287,
-   "text": "Table 1 · Hand 287 · blinds 600/1200 · Millstone calls 600, Shadow checks, [flop: 8♣ 10♠ 6♣], Shadow checks, Millstone checks, [turn: 8♣ 10♠ 6♣ Q♦], Shadow checks, Millstone checks, [river: 8♣ 10♠ 6♣ Q♦ 9♥], Shadow checks, Millstone checks → Millstone wins 2400 with Pair of Qs (Q♥ 3♦)",
-   "pot": 2400
-  },
   {
    "table": 1,
    "handNo": 288,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 296,
    "text": "Table 1 · Hand 296 · blinds 600/1200 · Shadow folds → Millstone takes 1800 (everyone else folded)",
+   "pot": 1800
+  },
+  {
+   "table": 1,
+   "handNo": 297,
+   "text": "Table 1 · Hand 297 · blinds 600/1200 · Millstone folds → Shadow takes 1800 (everyone else folded)",
    "pot": 1800
   }
  ],
