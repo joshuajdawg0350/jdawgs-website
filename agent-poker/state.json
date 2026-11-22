@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:28:38.260Z",
+ "updatedAt": "2026-11-22T01:29:12.950Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 37,
+ "handsPlayed": 38,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 93165,
+     "stack": 191995,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 98715,
+     "stack": 59265,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 47575,
+     "stack": 8125,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19930,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 12
+   "handsPlayed": 13
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 93165,
+   "stack": 191995,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 98715,
+   "stack": 59265,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 47575,
+   "stack": 8125,
    "status": "seated",
    "reentered": false
   },
@@ -463,8 +463,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19930,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 13,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Professor",
+  "toAct": "Velvet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 10,
-   "text": "Table 1 · Hand 10 · blinds 25/50 · Baseline calls 50, Shadow calls 50, River Rat calls 50, Hammer calls 25, Midas checks, [flop: 7♠ 8♣ 8♥], Hammer checks, Midas raises to 138, Baseline calls 138, Shadow calls 138, River Rat calls 138, Hammer calls 138, [turn: 7♠ 8♣ 8♥ 5♠], Hammer checks, Midas raises to 517, Baseline calls 517, Shadow calls 517, River Rat calls 517, Hammer calls 517, [river: 7♠ 8♣ 8♥ 5♠ Q♥], Hammer checks, Midas raises to 1939, Baseline calls 1939, Shadow calls 1939, River Rat calls 1939, Hammer calls 25 → Midas wins 11306 with Three of a kind, 8s (8♠ J♠)",
-   "pot": 11306
-  },
   {
    "table": 2,
    "handNo": 10,
@@ -554,6 +548,12 @@
    "handNo": 13,
    "text": "Table 1 · Hand 13 · blinds 25/50 · River Rat calls 50, Midas calls 25, Shadow checks, [flop: 4♥ 4♣ 6♠], Midas checks, Shadow checks, River Rat checks, [turn: 4♥ 4♣ 6♠ 9♦], Midas checks, Shadow checks, River Rat checks, [river: 4♥ 4♣ 6♠ 9♦ 7♠], Midas checks, Shadow checks, River Rat checks → Midas wins 150 with Two pair, 9s and 4s (J♥ 9♣)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 13,
+   "text": "Table 2 · Hand 13 · blinds 25/50 · Professor calls 50, Bulldog calls 50, Copper calls 25, Marble raises to 100, Professor calls 50, Bulldog calls 50, Copper calls 50, [flop: 8♠ J♥ A♥], Copper checks, Marble checks, Professor checks, Bulldog checks, [turn: 8♠ J♥ A♥ 6♠], Copper checks, Marble checks, Professor checks, Bulldog checks, [river: 8♠ J♥ A♥ 6♠ J♣], Copper checks, Marble checks, Professor raises to 55, Bulldog raises to 330, Copper calls 330, Marble calls 330, Professor raises to 635, Bulldog raises to 1850, Copper calls 1520, Marble calls 1520, Professor raises to 3185, Bulldog raises to 8665, Copper calls 6815, Marble calls 6815, Professor raises to 14695, Bulldog raises to 39350, Copper calls 30685, Marble calls 30685, Professor calls 5135 → Bulldog wins 138280 with Three of a kind, Js (J♦ 9♠)",
+   "pot": 138280
   }
  ],
  "finishes": [
@@ -683,6 +683,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 11,
+   "provisional": true
+  },
+  {
+   "name": "Professor",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 13,
    "provisional": true
   }
  ],
