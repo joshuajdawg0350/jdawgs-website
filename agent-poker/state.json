@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:05:42.779Z",
+ "updatedAt": "2026-11-22T01:06:18.785Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 6,
+ "handsPlayed": 7,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19895,
+     "stack": 19845,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19785,
+     "stack": 20035,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19720,
+     "stack": 19670,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19780,
+     "stack": 19730,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 1035,
+     "stack": 985,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19895,
+   "stack": 19845,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19785,
+   "stack": 20035,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19720,
+   "stack": 19670,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19780,
+   "stack": 19730,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1035,
+   "stack": 985,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -486,12 +486,12 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
@@ -530,6 +530,12 @@
    "handNo": 2,
    "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 9♥ 5♠ 8♥], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [turn: 9♥ 5♠ 8♥ 4♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [river: 9♥ 5♠ 8♥ 4♣ 5♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 240, Professor calls 240, Deuce calls 240, Wildfire calls 240, Millstone calls 240, Icebox folds, Velvet calls 240, Tally calls 240 → Pickpocket wins 2080 with Two pair, 9s and 5s (9♠ 6♥)",
    "pot": 2080
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · Hammer calls 50, Ozone calls 50, Midas folds, Baseline calls 50, Venus calls 50, Shadow calls 25, River Rat checks, [flop: 8♦ 9♠ K♦], Shadow checks, River Rat checks, Hammer checks, Ozone checks, Baseline checks, Venus checks, [turn: 8♦ 9♠ K♦ K♥], Shadow checks, River Rat checks, Hammer checks, Ozone checks, Baseline checks, Venus checks, [river: 8♦ 9♠ K♦ K♥ 6♣], Shadow checks, River Rat checks, Hammer checks, Ozone checks, Baseline checks, Venus checks → Venus wins 300 with Two pair, Ks and 6s (6♠ A♠)",
+   "pot": 300
   }
  ],
  "finishes": [
