@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:03:21.208Z",
+ "updatedAt": "2026-11-22T03:03:38.102Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 154,
+ "handsPlayed": 155,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 270608,
+     "stack": 270408,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 97354,
+     "stack": 97254,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 5288,
+     "stack": 5588,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 128
+   "handsPlayed": 129
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 270608,
+   "stack": 270408,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97354,
+   "stack": 97254,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5288,
+   "stack": 5588,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 129,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 119,
-   "text": "Table 1 · Hand 119 · blinds 80/160 · Shadow calls 160, Marble calls 160, Millstone calls 80, Copper checks, [flop: 4♠ 3♠ 3♣], Millstone checks, Copper checks, Shadow checks, Marble checks, [turn: 4♠ 3♠ 3♣ 7♣], Millstone checks, Copper checks, Shadow checks, Marble checks, [river: 4♠ 3♠ 3♣ 7♣ 5♥], Millstone checks, Copper checks, Shadow raises to 175, Marble calls 175, Millstone calls 175, Copper calls 175 → Shadow wins 1340 with Three of a kind, 3s (Q♣ 3♥)",
-   "pot": 1340
-  },
   {
    "table": 1,
    "handNo": 120,
@@ -406,6 +392,12 @@
    "handNo": 128,
    "text": "Table 1 · Hand 128 · blinds 100/200 · Marble calls 200, Millstone calls 200, Copper folds, Shadow checks, [flop: 2♥ 7♠ 3♠], Shadow checks, Marble checks, Millstone checks, [turn: 2♥ 7♠ 3♠ J♣], Shadow checks, Marble checks, Millstone checks, [river: 2♥ 7♠ 3♠ J♣ 4♣], Shadow checks, Marble checks, Millstone checks → Shadow wins 700 with Pair of Js (Q♣ J♥)",
    "pot": 700
+  },
+  {
+   "table": 1,
+   "handNo": 129,
+   "text": "Table 1 · Hand 129 · blinds 100/200 · Millstone calls 200, Copper folds, Shadow folds, Marble checks, [flop: K♠ 8♦ A♦], Marble checks, Millstone checks, [turn: K♠ 8♦ A♦ Q♦], Marble checks, Millstone checks, [river: K♠ 8♦ A♦ Q♦ 3♦], Marble checks, Millstone checks → Marble wins 500 with Two pair, Ks and 3s (3♠ K♣)",
+   "pot": 500
   }
  ],
  "finishes": [
