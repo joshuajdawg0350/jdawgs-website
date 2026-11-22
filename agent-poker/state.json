@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:23:51.788Z",
+ "updatedAt": "2026-11-22T01:24:25.253Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 30,
+ "handsPlayed": 31,
  "tables": [
   {
    "id": 1,
@@ -29,8 +29,8 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 18691,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 16781,
+     "stack": 50343,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 56401,
+     "stack": 41530,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 2,
@@ -256,8 +256,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18691,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16781,
+   "stack": 50343,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 56401,
+   "stack": 41530,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "River Rat",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 7,
-   "text": "Table 3 · Hand 7 · blinds 25/50 · Millstone calls 50, Icebox calls 50, Velvet calls 50, Tally folds, Pickpocket calls 50, Deuce calls 25, Wildfire checks, [flop: 5♠ A♦ A♠], Deuce checks, Wildfire raises to 180, Millstone raises to 360, Icebox calls 360, Velvet calls 360, Pickpocket calls 360, Deuce calls 360, Wildfire raises to 1730, Millstone raises to 3100, Icebox calls 2740, Velvet folds, Pickpocket calls 2740, Deuce calls 2740, Wildfire raises to 11975, Millstone goes ALL-IN to 19280, Icebox calls 16180, Pickpocket calls 16180, Deuce calls 16180, Wildfire goes ALL-IN to 22125, Icebox calls 935, Pickpocket calls 2595, Deuce calls 65, [turn: 5♠ A♦ A♠ 2♥], [river: 5♠ A♦ A♠ 2♥ 3♦] → Wildfire wins 6440 with Two pair, As and 5s (5♣ 8♦); Millstone wins 97060 with Three of a kind, As (6♦ A♣)",
-   "pot": 103500
-  },
   {
    "table": 1,
    "handNo": 8,
@@ -554,6 +548,12 @@
    "handNo": 10,
    "text": "Table 3 · Hand 10 · blinds 25/50 · Millstone calls 50, Velvet calls 50, Tally calls 25, Wildfire checks, [flop: Q♥ 10♣ Q♠], Tally raises to 50, Wildfire calls 50, Millstone calls 50, Velvet calls 50, [turn: Q♥ 10♣ Q♠ 5♣], Tally raises to 50, Wildfire calls 50, Millstone calls 50, Velvet calls 50, [river: Q♥ 10♣ Q♠ 5♣ 5♥], Tally raises to 50, Wildfire raises to 440, Millstone calls 440, Velvet calls 440, Tally raises to 1620, Wildfire raises to 3745, Millstone calls 3305, Velvet calls 3305, Tally raises to 11820, Wildfire calls 2375, Millstone calls 8075, Velvet calls 8075 → Tally wins 42180 with Full house, Qs full of 5s (9♠ Q♣)",
    "pot": 42180
+  },
+  {
+   "table": 1,
+   "handNo": 11,
+   "text": "Table 1 · Hand 11 · blinds 25/50 · River Rat calls 50, Midas folds, Baseline calls 25, Shadow checks, [flop: 9♦ 7♠ 3♠], Baseline checks, Shadow checks, River Rat checks, [turn: 9♦ 7♠ 3♠ K♠], Baseline checks, Shadow raises to 55, River Rat calls 55, Baseline calls 55, [river: 9♦ 7♠ 3♠ K♠ J♠], Baseline checks, Shadow raises to 55, River Rat raises to 110, Baseline calls 110, Shadow raises to 170, River Rat raises to 230, Baseline calls 120, Shadow raises to 795, River Rat raises to 1360, Baseline calls 1130, Shadow raises to 3660, River Rat raises to 5960, Baseline calls 4600, Shadow raises to 15495, River Rat raises to 25030, Baseline calls 12626, Shadow calls 1181 → Shadow wins 50343 with Flush, A high (A♠ 9♠); River Rat wins 10264 with Flush, K high (8♥ 8♠)",
+   "pot": 60607
   }
  ],
  "finishes": [
@@ -675,6 +675,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 10,
+   "provisional": true
+  },
+  {
+   "name": "Baseline",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 11,
    "provisional": true
   }
  ],
