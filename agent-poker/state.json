@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:07:35.091Z",
+ "updatedAt": "2026-11-22T03:07:47.680Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 162,
+ "handsPlayed": 163,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 497946,
+     "stack": 497526,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 22054,
+     "stack": 22474,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 136
+   "handsPlayed": 137
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 497946,
+   "stack": 497526,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22054,
+   "stack": 22474,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 137,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 127,
-   "text": "Table 1 · Hand 127 · blinds 100/200 · Shadow folds, Marble calls 200, Millstone calls 100, Copper checks, [flop: Q♦ 7♠ 6♠], Millstone checks, Copper checks, Marble checks, [turn: Q♦ 7♠ 6♠ 3♥], Millstone checks, Copper checks, Marble checks, [river: Q♦ 7♠ 6♠ 3♥ 5♦], Millstone checks, Copper checks, Marble checks → Millstone wins 600 with Two pair, Qs and 7s (7♥ Q♣)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 128,
@@ -406,6 +392,12 @@
    "handNo": 136,
    "text": "Table 1 · Hand 136 · blinds 100/200 · Shadow raises to 460, Millstone folds → Shadow takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 1,
+   "handNo": 137,
+   "text": "Table 1 · Hand 137 · blinds 100/200 · Millstone calls 100, Shadow checks, [flop: Q♦ Q♥ 10♦], Shadow checks, Millstone checks, [turn: Q♦ Q♥ 10♦ 2♥], Shadow checks, Millstone checks, [river: Q♦ Q♥ 10♦ 2♥ 4♦], Shadow raises to 220, Millstone calls 220 → Shadow wins 840 with Flush, Q high (5♦ 3♦)",
+   "pot": 840
   }
  ],
  "finishes": [
