@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:33:50.999Z",
+ "updatedAt": "2026-11-22T01:34:22.044Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 42,
+ "handsPlayed": 43,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 191845,
+     "stack": 191695,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 84215,
+     "stack": 85115,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 49631,
+     "stack": 49481,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 49240,
+     "stack": 49090,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 41628,
+     "stack": 41478,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7975,
+     "stack": 7825,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 7395,
+     "stack": 7245,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 84215,
+   "stack": 85115,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49631,
+   "stack": 49481,
    "status": "seated",
    "reentered": false
   },
@@ -198,7 +198,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 191845,
+   "stack": 191695,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 41628,
+   "stack": 41478,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7395,
+   "stack": 7245,
    "status": "seated",
    "reentered": false
   },
@@ -261,7 +261,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49240,
+   "stack": 49090,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7975,
+   "stack": 7825,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 17,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 11,
-   "text": "Table 3 · Hand 11 · blinds 25/50 · Tally calls 50, Millstone calls 25, Velvet checks, [flop: 9♦ 10♠ 4♥], Millstone checks, Velvet checks, Tally checks, [turn: 9♦ 10♠ 4♥ 4♦], Millstone checks, Velvet checks, Tally checks, [river: 9♦ 10♠ 4♥ 4♦ 9♠], Millstone checks, Velvet raises to 50, Tally calls 50, Millstone calls 50 → Velvet wins 300 with Full house, 4s full of 9s (Q♠ 4♣)",
-   "pot": 300
-  },
   {
    "table": 1,
    "handNo": 12,
@@ -406,6 +392,12 @@
    "handNo": 16,
    "text": "Table 1 · Hand 16 · blinds 25/50 · River Rat calls 50, Midas folds, Marble folds, Velvet calls 50, Bulldog calls 50, Millstone raises to 100, Copper calls 100, Shadow calls 75, Tally calls 50, River Rat calls 50, Velvet calls 50, Bulldog calls 50, [flop: K♠ 2♥ 8♥], Shadow checks, Tally checks, River Rat checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, [turn: K♠ 2♥ 8♥ 5♠], Shadow checks, Tally checks, River Rat checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, [river: K♠ 2♥ 8♥ 5♠ 4♠], Shadow checks, Tally checks, River Rat raises to 50, Velvet calls 50, Bulldog folds, Millstone calls 50, Copper calls 50, Shadow folds, Tally folds → River Rat wins 900 with Flush, K high (7♠ 6♠)",
    "pot": 900
+  },
+  {
+   "table": 1,
+   "handNo": 17,
+   "text": "Table 1 · Hand 17 · blinds 25/50 · Midas folds, Marble calls 50, Velvet calls 50, Bulldog calls 50, Millstone calls 50, Copper folds, Shadow calls 50, Tally calls 25, River Rat checks, [flop: 4♣ J♥ 2♥], Tally checks, River Rat checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks, Shadow checks, [turn: 4♣ J♥ 2♥ 4♠], Tally checks, River Rat checks, Marble checks, Velvet checks, Bulldog checks, Millstone raises to 50, Shadow calls 50, Tally calls 50, River Rat calls 50, Marble calls 50, Velvet calls 50, Bulldog calls 50, [river: 4♣ J♥ 2♥ 4♠ 3♦], Tally checks, River Rat checks, Marble checks, Velvet checks, Bulldog checks, Millstone raises to 50, Shadow calls 50, Tally calls 50, River Rat calls 50, Marble calls 50, Velvet calls 50, Bulldog calls 50 → Millstone wins 1050 with Three of a kind, 4s (4♥ A♦)",
+   "pot": 1050
   }
  ],
  "finishes": [
