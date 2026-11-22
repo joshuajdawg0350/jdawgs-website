@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:11:41.962Z",
+ "updatedAt": "2026-11-22T01:12:22.185Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 14,
+ "handsPlayed": 15,
  "tables": [
   {
    "id": 1,
@@ -166,6 +166,14 @@
      "stack": 8115,
      "status": "seated",
      "reentered": false
+    },
+    {
+     "name": "Professor",
+     "kind": "house",
+     "house": true,
+     "stack": 19485,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 5
@@ -185,7 +193,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 22330,
+     "stack": 22280,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +217,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17750,
+     "stack": 17635,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +225,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 19485,
+     "stack": 19370,
      "status": "seated",
      "reentered": false
     },
@@ -225,20 +233,12 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 21575,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Professor",
-     "kind": "house",
-     "house": true,
-     "stack": 19660,
+     "stack": 22030,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 22330,
+   "stack": 22280,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17750,
+   "stack": 17635,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19485,
+   "stack": 19370,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21575,
+   "stack": 22030,
    "status": "seated",
    "reentered": false
   },
@@ -462,8 +462,8 @@
    "name": "Professor",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 19660,
+   "table": 2,
+   "stack": 19485,
    "status": "seated",
    "reentered": false
   },
@@ -485,22 +485,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass calls 50, Marble calls 50, Sixgun calls 50, Quarry raises to 100, Slick calls 100, Granite calls 100, Dice calls 75, Bulldog calls 50, Compass calls 50, Marble calls 50, Sixgun calls 50, [flop: 2♦ 8♦ 9♥], Dice checks, Bulldog checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Granite checks, [turn: 2♦ 8♦ 9♥ J♠], Dice checks, Bulldog raises to 480, Compass calls 480, Marble folds, Sixgun folds, Quarry calls 480, Slick folds, Granite calls 480, Dice folds, [river: 2♦ 8♦ 9♥ J♠ 6♦], Bulldog raises to 1630, Compass raises to 3425, Quarry raises to 5220, Granite calls 5220, Bulldog raises to 16150, Compass goes ALL-IN to 18920, Quarry calls 13700, Granite calls 13700, Bulldog goes ALL-IN to 19420, Granite calls 475 → Bulldog wins 79375 with Straight, J high (7♦ 10♥)",
-   "pot": 79375
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -554,6 +540,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Anchor calls 50, Slick folds, Dice calls 50, Bulldog calls 50, Copper calls 50, Marble calls 25, Sixgun checks, [flop: 5♣ 4♥ 4♦], Marble checks, Sixgun checks, Anchor checks, Dice checks, Bulldog checks, Copper checks, [turn: 5♣ 4♥ 4♦ 2♥], Marble checks, Sixgun checks, Anchor checks, Dice checks, Bulldog raises to 180, Copper calls 180, Marble folds, Sixgun calls 180, Anchor calls 180, Dice calls 180, [river: 5♣ 4♥ 4♦ 2♥ 10♥], Sixgun checks, Anchor checks, Dice checks, Bulldog raises to 720, Copper raises to 1440, Sixgun calls 1440, Anchor calls 1440, Dice calls 1440, Bulldog raises to 6050, Copper raises to 13855, Sixgun calls 12415, Anchor calls 12415, Dice calls 12415, Bulldog raises to 51455, Copper calls 5735, Sixgun calls 5775, Anchor calls 37600, Dice calls 7390 → Bulldog wins 65425 with Straight, 5 high (3♥ A♦); Copper wins 99150 with Flush, Q high (Q♥ J♥)",
    "pot": 164575
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce folds, Wildfire calls 50, Millstone folds, Icebox folds, Velvet calls 50, Tally raises to 115, Pickpocket calls 65, Professor calls 65, Wildfire folds, Velvet calls 65, [flop: A♥ 5♦ Q♠], Tally checks, Pickpocket checks, Professor checks, Velvet checks, [turn: A♥ 5♦ Q♠ 6♦], Tally checks, Pickpocket checks, Professor raises to 60, Velvet folds, Tally folds, Pickpocket raises to 140, Professor folds → Pickpocket takes 710 (everyone else folded)",
+   "pot": 710
   }
  ],
  "finishes": [
