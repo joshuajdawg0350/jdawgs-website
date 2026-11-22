@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:26:31.664Z",
+ "updatedAt": "2026-11-22T01:27:04.484Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 34,
+ "handsPlayed": 35,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 93270,
+     "stack": 93165,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 98820,
+     "stack": 98715,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19720,
+     "stack": 19930,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 93270,
+   "stack": 93165,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 98820,
+   "stack": 98715,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19720,
+   "stack": 19930,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 12,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Marble",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 9,
-   "text": "Table 1 · Hand 9 · blinds 25/50 · Midas folds, Baseline calls 50, Shadow folds, River Rat calls 25, Hammer checks, [flop: 9♠ Q♥ A♥], River Rat checks, Hammer checks, Baseline checks, [turn: 9♠ Q♥ A♥ K♣], River Rat checks, Hammer checks, Baseline checks, [river: 9♠ Q♥ A♥ K♣ 4♣], River Rat checks, Hammer checks, Baseline checks → Baseline wins 150 with Pair of Qs (7♣ Q♣)",
-   "pot": 150
-  },
   {
    "table": 2,
    "handNo": 9,
@@ -554,6 +548,12 @@
    "handNo": 12,
    "text": "Table 1 · Hand 12 · blinds 25/50 · Shadow calls 50, River Rat calls 25, Midas checks, [flop: 8♥ 4♠ 4♦], River Rat checks, Midas checks, Shadow checks, [turn: 8♥ 4♠ 4♦ A♥], River Rat checks, Midas raises to 83, Shadow calls 83, River Rat calls 83, [river: 8♥ 4♠ 4♦ A♥ 3♣], River Rat checks, Midas raises to 219, Shadow calls 219, River Rat calls 219 → Midas wins 1056 with Two pair, As and 4s (9♣ A♦)",
    "pot": 1056
+  },
+  {
+   "table": 2,
+   "handNo": 12,
+   "text": "Table 2 · Hand 12 · blinds 25/50 · Marble folds, Professor raises to 105, Bulldog calls 80, Copper calls 55, [flop: 4♠ 4♦ Q♠], Bulldog checks, Copper checks, Professor checks, [turn: 4♠ 4♦ Q♠ 3♣], Bulldog checks, Copper checks, Professor checks, [river: 4♠ 4♦ Q♠ 3♣ 7♥], Bulldog checks, Copper checks, Professor checks → Professor wins 315 with Two pair, 9s and 4s (9♣ 9♥)",
+   "pot": 315
   }
  ],
  "finishes": [
