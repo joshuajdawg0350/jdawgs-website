@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:54:31.454Z",
+ "updatedAt": "2026-11-22T01:55:03.989Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 61,
+ "handsPlayed": 62,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 269139,
+     "stack": 269079,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 179758,
+     "stack": 179698,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 30868,
+     "stack": 30808,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7630,
+     "stack": 7810,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 35
+   "handsPlayed": 36
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30868,
+   "stack": 30808,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 269139,
+   "stack": 269079,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 179758,
+   "stack": 179698,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7630,
+   "stack": 7810,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 36,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 26,
-   "text": "Table 1 · Hand 26 · blinds 30/60 · Bulldog calls 60, Millstone calls 60, Copper calls 60, Shadow folds, Midas folds, Marble calls 30, Velvet checks, [flop: J♣ K♥ 4♠], Marble checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, [turn: J♣ K♥ 4♠ 10♦], Marble checks, Velvet checks, Bulldog checks, Millstone checks, Copper checks, [river: J♣ K♥ 4♠ 10♦ 9♠], Marble checks, Velvet checks, Bulldog checks, Millstone raises to 60, Copper raises to 275, Marble folds, Velvet calls 275, Bulldog calls 275, Millstone raises to 985, Copper raises to 2250, Velvet folds, Bulldog calls 1975, Millstone raises to 5885, Copper raises to 12460, Bulldog calls 10210, Millstone raises to 31290, Copper goes ALL-IN to 58605, Bulldog calls 46145, Millstone raises to 148050, Bulldog calls 73720 → Millstone wins 251360 with Straight, K high (Q♣ 10♠); Copper wins 88195 with Straight, K high (3♥ Q♠)",
-   "pot": 339555
-  },
   {
    "table": 1,
    "handNo": 27,
@@ -406,6 +392,12 @@
    "handNo": 35,
    "text": "Table 1 · Hand 35 · blinds 30/60 · Marble folds, Millstone folds, Copper calls 60, Shadow calls 30, Midas checks, [flop: K♥ 2♣ 3♣], Shadow checks, Midas checks, Copper checks, [turn: K♥ 2♣ 3♣ A♠], Shadow checks, Midas raises to 99, Copper calls 99, Shadow folds, [river: K♥ 2♣ 3♣ A♠ 6♣], Midas raises to 208, Copper raises to 418, Midas raises to 1163, Copper raises to 1908, Midas calls 745 → Midas wins 4194 with Straight, 6 high (4♦ 5♥)",
    "pot": 4194
+  },
+  {
+   "table": 1,
+   "handNo": 36,
+   "text": "Table 1 · Hand 36 · blinds 30/60 · Millstone calls 60, Copper calls 60, Shadow folds, Midas calls 30, Marble checks, [flop: A♣ Q♠ 8♦], Midas checks, Marble checks, Millstone checks, Copper checks, [turn: A♣ Q♠ 8♦ J♠], Midas checks, Marble checks, Millstone checks, Copper checks, [river: A♣ Q♠ 8♦ J♠ 7♠], Midas checks, Marble checks, Millstone checks, Copper checks → Marble wins 240 with Two pair, As and Qs (Q♦ A♦)",
+   "pot": 240
   }
  ],
  "finishes": [
