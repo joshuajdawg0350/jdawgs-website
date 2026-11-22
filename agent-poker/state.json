@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:27:04.484Z",
+ "updatedAt": "2026-11-22T01:27:33.069Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 35,
+ "handsPlayed": 36,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 84820,
+     "stack": 84770,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 6490,
+     "stack": 6590,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 49205,
+     "stack": 49155,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 84820,
+   "stack": 84770,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 6490,
+   "stack": 6590,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 49205,
+   "stack": 49155,
    "status": "seated",
    "reentered": false
   },
@@ -485,22 +485,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 3,
-  "handNo": 12,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 9,
-   "text": "Table 2 · Hand 9 · blinds 25/50 · Professor calls 50, Bulldog calls 50, Copper folds, Marble checks, [flop: 10♣ A♣ 8♣], Marble checks, Professor checks, Bulldog checks, [turn: 10♣ A♣ 8♣ 10♠], Marble checks, Professor checks, Bulldog raises to 105, Marble calls 105, Professor calls 105, [river: 10♣ A♣ 8♣ 10♠ 4♠], Marble checks, Professor checks, Bulldog checks → Bulldog wins 490 with Two pair, As and 10s (3♦ A♠)",
-   "pot": 490
-  },
   {
    "table": 3,
    "handNo": 9,
@@ -554,6 +540,12 @@
    "handNo": 12,
    "text": "Table 2 · Hand 12 · blinds 25/50 · Marble folds, Professor raises to 105, Bulldog calls 80, Copper calls 55, [flop: 4♠ 4♦ Q♠], Bulldog checks, Copper checks, Professor checks, [turn: 4♠ 4♦ Q♠ 3♣], Bulldog checks, Copper checks, Professor checks, [river: 4♠ 4♦ Q♠ 3♣ 7♥], Bulldog checks, Copper checks, Professor checks → Professor wins 315 with Two pair, 9s and 4s (9♣ 9♥)",
    "pot": 315
+  },
+  {
+   "table": 3,
+   "handNo": 12,
+   "text": "Table 3 · Hand 12 · blinds 25/50 · Millstone calls 50, Velvet calls 25, Tally checks, [flop: 10♠ 10♥ 7♣], Velvet checks, Tally checks, Millstone checks, [turn: 10♠ 10♥ 7♣ 3♠], Velvet checks, Tally checks, Millstone checks, [river: 10♠ 10♥ 7♣ 3♠ 9♠], Velvet checks, Tally checks, Millstone checks → Velvet wins 150 with Three of a kind, 10s (10♣ 4♣)",
+   "pot": 150
   }
  ],
  "finishes": [
