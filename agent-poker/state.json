@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:36:54.567Z",
+ "updatedAt": "2026-11-22T01:37:21.058Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 45,
+ "handsPlayed": 46,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 132705,
+     "stack": 132655,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 164349,
+     "stack": 164299,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 58775,
+     "stack": 58725,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 120520,
+     "stack": 120470,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 6920,
+     "stack": 7120,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 19
+   "handsPlayed": 20
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 164349,
+   "stack": 164299,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 120520,
+   "stack": 120470,
    "status": "seated",
    "reentered": false
   },
@@ -198,7 +198,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 132705,
+   "stack": 132655,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 58775,
+   "stack": 58725,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6920,
+   "stack": 7120,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 20,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 12,
-   "text": "Table 3 · Hand 12 · blinds 25/50 · Millstone calls 50, Velvet calls 25, Tally checks, [flop: 10♠ 10♥ 7♣], Velvet checks, Tally checks, Millstone checks, [turn: 10♠ 10♥ 7♣ 3♠], Velvet checks, Tally checks, Millstone checks, [river: 10♠ 10♥ 7♣ 3♠ 9♠], Velvet checks, Tally checks, Millstone checks → Velvet wins 150 with Three of a kind, 10s (10♣ 4♣)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 13,
@@ -406,6 +392,12 @@
    "handNo": 19,
    "text": "Table 1 · Hand 19 · blinds 25/50 · Bulldog calls 50, Millstone calls 50, Copper calls 50, Shadow calls 50, Midas folds, Marble folds, Velvet checks, [flop: 5♣ 6♦ K♥], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks, [turn: 5♣ 6♦ K♥ K♠], Velvet checks, Bulldog raises to 165, Millstone calls 165, Copper calls 165, Shadow calls 165, Velvet calls 165, [river: 5♣ 6♦ K♥ K♠ Q♠], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks → Shadow wins 1100 with Two pair, Ks and Qs (Q♣ 7♥)",
    "pot": 1100
+  },
+  {
+   "table": 1,
+   "handNo": 20,
+   "text": "Table 1 · Hand 20 · blinds 25/50 · Millstone calls 50, Copper calls 50, Shadow calls 50, Midas folds, Marble folds, Velvet calls 25, Bulldog checks, [flop: 4♣ 7♥ 6♣], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks, [turn: 4♣ 7♥ 6♣ 2♠], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks, [river: 4♣ 7♥ 6♣ 2♠ 10♣], Velvet checks, Bulldog checks, Millstone checks, Copper checks, Shadow checks → Velvet wins 250 with Two pair, 7s and 4s (7♦ 4♥)",
+   "pot": 250
   }
  ],
  "finishes": [
