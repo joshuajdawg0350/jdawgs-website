@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T02:01:06.564Z",
+ "updatedAt": "2026-11-22T02:01:25.583Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 65,
+ "handsPlayed": 66,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 268899,
+     "stack": 268839,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 179603,
+     "stack": 179543,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 32910,
+     "stack": 33090,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 30808,
+     "stack": 30748,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30808,
+   "stack": 30748,
    "status": "seated",
    "reentered": false
   },
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 268899,
+   "stack": 268839,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32910,
+   "stack": 33090,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 179603,
+   "stack": 179543,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 40,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 30,
-   "text": "Table 1 · Hand 30 · blinds 30/60 · Marble calls 60, Velvet calls 60, Millstone calls 60, Copper calls 60, Shadow calls 30, Midas checks, [flop: 7♦ J♥ 7♣], Shadow checks, Midas checks, Marble checks, Velvet checks, Millstone raises to 60, Copper calls 60, Shadow calls 60, Midas folds, Marble calls 60, Velvet calls 60, [turn: 7♦ J♥ 7♣ 5♥], Shadow checks, Marble checks, Velvet checks, Millstone raises to 60, Copper calls 60, Shadow folds, Marble calls 60, Velvet calls 60, [river: 7♦ J♥ 7♣ 5♥ 4♠], Marble checks, Velvet checks, Millstone raises to 60, Copper calls 60, Marble folds, Velvet calls 60 → Millstone wins 1080 with Three of a kind, 7s (Q♠ 7♠)",
-   "pot": 1080
-  },
   {
    "table": 1,
    "handNo": 31,
@@ -406,6 +392,12 @@
    "handNo": 39,
    "text": "Table 1 · Hand 39 · blinds 30/60 · Midas folds, Marble folds, Millstone calls 60, Copper calls 30, Shadow raises to 125, Millstone folds, Copper calls 65, [flop: 4♠ 5♥ 9♣], Copper checks, Shadow checks, [turn: 4♠ 5♥ 9♣ 6♦], Copper checks, Shadow checks, [river: 4♠ 5♥ 9♣ 6♦ 6♠], Copper checks, Shadow checks → Shadow wins 310 with Two pair, Qs and 6s (Q♥ Q♦)",
    "pot": 310
+  },
+  {
+   "table": 1,
+   "handNo": 40,
+   "text": "Table 1 · Hand 40 · blinds 30/60 · Marble folds, Millstone calls 60, Copper calls 60, Shadow calls 30, Midas checks, [flop: 10♠ J♣ 5♠], Shadow checks, Midas checks, Millstone checks, Copper checks, [turn: 10♠ J♣ 5♠ 3♣], Shadow checks, Midas checks, Millstone checks, Copper checks, [river: 10♠ J♣ 5♠ 3♣ 7♦], Shadow checks, Midas checks, Millstone checks, Copper checks → Shadow wins 240 with Pair of 10s (8♠ 10♥)",
+   "pot": 240
   }
  ],
  "finishes": [
