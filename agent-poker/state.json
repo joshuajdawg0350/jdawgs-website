@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:15:27.302Z",
+ "updatedAt": "2026-11-22T03:15:41.029Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 178,
+ "handsPlayed": 179,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 152
+   "handsPlayed": 153
   }
  ],
  "seats": [
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 153,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 143,
-   "text": "Table 1 · Hand 143 · blinds 120/240 · Millstone folds → Shadow takes 360 (everyone else folded)",
-   "pot": 360
-  },
   {
    "table": 1,
    "handNo": 144,
@@ -406,6 +392,12 @@
    "handNo": 152,
    "text": "Table 1 · Hand 152 · blinds 120/240 · Shadow raises to 550, Millstone folds → Shadow takes 790 (everyone else folded)",
    "pot": 790
+  },
+  {
+   "table": 1,
+   "handNo": 153,
+   "text": "Table 1 · Hand 153 · blinds 120/240 · Millstone calls 120, Shadow checks, [flop: 5♣ 5♦ 4♣], Shadow checks, Millstone checks, [turn: 5♣ 5♦ 4♣ Q♦], Shadow checks, Millstone checks, [river: 5♣ 5♦ 4♣ Q♦ J♥], Shadow checks, Millstone checks → Millstone wins 240 with Pair of 5s (K♥ 6♦); Shadow wins 240 with Pair of 5s (7♥ K♠)",
+   "pot": 480
   }
  ],
  "finishes": [
