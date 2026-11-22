@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:10:07.770Z",
+ "updatedAt": "2026-11-22T01:10:54.179Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19795,
+     "stack": 20140,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 59290,
+     "stack": 59130,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 935,
+     "stack": 910,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 210,
+     "stack": 50,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19795,
+   "stack": 20140,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59290,
+   "stack": 59130,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 935,
+   "stack": 910,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 210,
+   "stack": 50,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Anchor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally folds, Pickpocket calls 50, Professor folds, Deuce calls 50, Wildfire calls 25, Millstone checks, [flop: Q♦ 7♦ 3♥], Wildfire raises to 60, Millstone calls 60, Icebox calls 60, Velvet folds, Pickpocket folds, Deuce calls 60, [turn: Q♦ 7♦ 3♥ 5♣], Wildfire checks, Millstone checks, Icebox checks, Deuce checks, [river: Q♦ 7♦ 3♥ 5♣ 6♦], Wildfire checks, Millstone checks, Icebox checks, Deuce checks → Icebox wins 540 with Pair of Qs (Q♠ J♠)",
-   "pot": 540
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -554,6 +548,12 @@
    "handNo": 4,
    "text": "Table 3 · Hand 4 · blinds 25/50 · Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 25, Tally checks, [flop: 3♠ 7♦ 9♠], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire raises to 210, Millstone folds, Velvet calls 210, Tally folds, Pickpocket folds, Professor folds, Deuce folds, [turn: 3♠ 7♦ 9♠ 4♠], Velvet checks, Wildfire raises to 460, Velvet calls 460, [river: 3♠ 7♦ 9♠ 4♠ 9♥], Velvet checks, Wildfire raises to 1015, Velvet calls 1015 → Wildfire wins 3720 with Full house, 9s full of 7s (9♦ 7♥)",
    "pot": 3720
+  },
+  {
+   "table": 1,
+   "handNo": 5,
+   "text": "Table 1 · Hand 5 · blinds 25/50 · Midas folds, Baseline calls 50, Venus folds, Shadow folds, River Rat calls 50, Hammer folds, Ozone checks, [flop: K♥ 6♦ 6♣], Ozone checks, Baseline checks, River Rat checks, [turn: K♥ 6♦ 6♣ Q♣], Ozone checks, Baseline raises to 55, River Rat calls 55, Ozone calls 55, [river: K♥ 6♦ 6♣ Q♣ 2♠], Ozone checks, Baseline raises to 55, River Rat calls 55, Ozone calls 55 → Baseline wins 505 with Two pair, Ks and 6s (K♣ 8♣)",
+   "pot": 505
   }
  ],
  "finishes": [
