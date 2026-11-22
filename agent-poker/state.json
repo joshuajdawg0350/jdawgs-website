@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:03:55.203Z",
+ "updatedAt": "2026-11-22T03:04:17.807Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 155,
+ "handsPlayed": 156,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 270408,
+     "stack": 497446,
      "status": "seated",
      "reentered": false
     },
@@ -37,15 +37,15 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 146750,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 97254,
+     "stack": 22554,
      "status": "seated",
      "reentered": false
     },
@@ -77,8 +77,8 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 5588,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 129
+   "handsPlayed": 130
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 270408,
+   "stack": 497446,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97254,
+   "stack": 22554,
    "status": "seated",
    "reentered": false
   },
@@ -225,8 +225,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 146750,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -279,8 +279,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5588,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 130,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Copper",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 120,
-   "text": "Table 1 · Hand 120 · blinds 80/160 · Marble folds, Millstone calls 160, Copper raises to 370, Shadow calls 210, Millstone calls 210, [flop: 3♥ 5♦ 3♠], Copper checks, Shadow checks, Millstone checks, [turn: 3♥ 5♦ 3♠ Q♠], Copper checks, Shadow checks, Millstone checks, [river: 3♥ 5♦ 3♠ Q♠ 3♦], Copper raises to 160, Shadow calls 160, Millstone raises to 320, Copper raises to 480, Shadow raises to 655, Millstone raises to 830, Copper raises to 1005, Shadow calls 350, Millstone raises to 1180, Copper calls 175, Shadow calls 175 → Shadow wins 4650 with Three of a kind, 3s (K♠ 2♥)",
-   "pot": 4650
-  },
   {
    "table": 1,
    "handNo": 121,
@@ -406,6 +392,12 @@
    "handNo": 129,
    "text": "Table 1 · Hand 129 · blinds 100/200 · Millstone calls 200, Copper folds, Shadow folds, Marble checks, [flop: K♠ 8♦ A♦], Marble checks, Millstone checks, [turn: K♠ 8♦ A♦ Q♦], Marble checks, Millstone checks, [river: K♠ 8♦ A♦ Q♦ 3♦], Marble checks, Millstone checks → Marble wins 500 with Two pair, Ks and 3s (3♠ K♣)",
    "pot": 500
+  },
+  {
+   "table": 1,
+   "handNo": 130,
+   "text": "Table 1 · Hand 130 · blinds 100/200 · Copper raises to 400, Shadow calls 400, Marble calls 300, Millstone raises to 600, Copper raises to 800, Shadow calls 400, Marble calls 400, Millstone raises to 2600, Copper raises to 4400, Shadow calls 3600, Marble calls 3600, Millstone raises to 6200, Copper raises to 8000, Shadow calls 3600, Marble calls 1188, Millstone raises to 24675, Copper raises to 41350, Shadow calls 33350, Millstone raises to 58025, Copper raises to 74700, Shadow calls 33350, Millstone raises to 91375, Copper raises to 108050, Shadow folds, Millstone goes ALL-IN to 270408, Copper calls 38700, [flop: J♣ 4♠ 6♥], [turn: J♣ 4♠ 6♥ 3♣], [river: J♣ 4♠ 6♥ 3♣ 4♥] → Millstone wins 497446 with Full house, Js full of 4s (J♦ J♥)",
+   "pot": 497446
   }
  ],
  "finishes": [
@@ -583,6 +575,22 @@
    "kind": "house",
    "table": 1,
    "handNo": 65,
+   "provisional": true
+  },
+  {
+   "name": "Copper",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 130,
+   "provisional": true
+  },
+  {
+   "name": "Marble",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 130,
    "provisional": true
   }
  ],
