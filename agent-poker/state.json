@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:07:07.619Z",
+ "updatedAt": "2026-11-22T03:07:20.307Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 161,
+ "handsPlayed": 162,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 498146,
+     "stack": 497946,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 21854,
+     "stack": 22054,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 135
+   "handsPlayed": 136
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 498146,
+   "stack": 497946,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21854,
+   "stack": 22054,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 136,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 126,
-   "text": "Table 1 · Hand 126 · blinds 100/200 · Copper calls 200, Shadow folds, Marble folds, Millstone checks, [flop: 7♦ 9♠ 5♦], Millstone checks, Copper checks, [turn: 7♦ 9♠ 5♦ 6♦], Millstone checks, Copper checks, [river: 7♦ 9♠ 5♦ 6♦ K♥], Millstone raises to 200, Copper calls 200 → Millstone wins 900 with Two pair, Ks and 5s (K♦ 5♥)",
-   "pot": 900
-  },
   {
    "table": 1,
    "handNo": 127,
@@ -406,6 +392,12 @@
    "handNo": 135,
    "text": "Table 1 · Hand 135 · blinds 100/200 · Millstone calls 100, Shadow checks, [flop: 3♠ 10♠ 3♥], Shadow checks, Millstone raises to 200, Shadow calls 200, [turn: 3♠ 10♠ 3♥ 7♣], Shadow checks, Millstone raises to 200, Shadow calls 200, [river: 3♠ 10♠ 3♥ 7♣ 8♣], Shadow checks, Millstone raises to 200, Shadow calls 200 → Millstone wins 1600 with Three of a kind, 3s (9♣ 3♣)",
    "pot": 1600
+  },
+  {
+   "table": 1,
+   "handNo": 136,
+   "text": "Table 1 · Hand 136 · blinds 100/200 · Shadow raises to 460, Millstone folds → Shadow takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [
