@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:49:31.992Z",
+ "updatedAt": "2026-11-22T03:49:42.735Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 258,
+ "handsPlayed": 259,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 423264,
+     "stack": 422964,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 96736,
+     "stack": 97036,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 232
+   "handsPlayed": 233
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 423264,
+   "stack": 422964,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 96736,
+   "stack": 97036,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 233,
-  "stage": "preflop",
-  "board": [],
-  "pot": 900,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 223,
-   "text": "Table 1 · Hand 223 · blinds 300/600 · Millstone calls 300, Shadow checks, [flop: 7♦ Q♣ K♣], Shadow raises to 720, Millstone raises to 1655, Shadow folds → Millstone takes 3575 (everyone else folded)",
-   "pot": 3575
-  },
   {
    "table": 1,
    "handNo": 224,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 232,
    "text": "Table 1 · Hand 232 · blinds 300/600 · Shadow folds → Millstone takes 900 (everyone else folded)",
+   "pot": 900
+  },
+  {
+   "table": 1,
+   "handNo": 233,
+   "text": "Table 1 · Hand 233 · blinds 300/600 · Millstone folds → Shadow takes 900 (everyone else folded)",
    "pot": 900
   }
  ],
