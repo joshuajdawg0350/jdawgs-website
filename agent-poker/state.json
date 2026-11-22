@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:15:56.261Z",
+ "updatedAt": "2026-11-22T01:16:31.769Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  25,
-  50
+  30,
+  60
  ],
- "level": 1,
- "handsPlayed": 19,
+ "level": 2,
+ "handsPlayed": 20,
  "tables": [
   {
    "id": 1,
@@ -91,8 +91,8 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19745,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 93040,
+     "stack": 92990,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 99100,
+     "stack": 99050,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19800,
+     "stack": 47935,
      "status": "seated",
      "reentered": false
     },
@@ -163,20 +163,20 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 8265,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19435,
+     "stack": 19410,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 3,
@@ -265,8 +265,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19745,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 93040,
+   "stack": 92990,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 99100,
+   "stack": 99050,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19800,
+   "stack": 47935,
    "status": "seated",
    "reentered": false
   },
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 8265,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19435,
+   "stack": 19410,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 4,
-   "text": "Table 1 · Hand 4 · blinds 25/50 · Ozone calls 50, Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, River Rat raises to 100, Hammer folds, Ozone calls 50, Baseline folds, Venus calls 50, [flop: 2♥ Q♣ 3♣], River Rat checks, Ozone checks, Venus checks, [turn: 2♥ Q♣ 3♣ K♦], River Rat checks, Ozone checks, Venus checks, [river: 2♥ Q♣ 3♣ K♦ K♣], River Rat raises to 50, Ozone raises to 115, Venus calls 115, River Rat raises to 180, Ozone raises to 665, Venus calls 550, River Rat raises to 1150, Ozone raises to 1780, Venus calls 1115, River Rat raises to 2410, Ozone raises to 6230, Venus calls 4450, River Rat raises to 10050, Ozone raises to 15015, Venus calls 8785, River Rat goes ALL-IN to 19630, Ozone goes ALL-IN to 19735, Venus calls 4720 → River Rat wins 59290 with Full house, Qs full of Ks (Q♠ Q♦); Ozone wins 210 with Flush, K high (9♣ 8♣)",
-   "pot": 59500
-  },
   {
    "table": 2,
    "handNo": 4,
@@ -554,6 +548,12 @@
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 25/50 · Shadow calls 50, River Rat calls 50, Hammer calls 50, Midas calls 50, Baseline raises to 105, Venus raises to 160, Shadow calls 110, River Rat calls 110, Hammer calls 110, Midas calls 110, Baseline raises to 220, Venus calls 40, Shadow calls 60, River Rat calls 60, Hammer calls 60, Midas calls 60, [flop: 7♠ 10♣ 4♣], Baseline raises to 55, Shadow folds, River Rat folds, Hammer folds, Midas calls 55, [turn: 7♠ 10♣ 4♣ 6♦], Baseline raises to 55, Midas calls 55, [river: 7♠ 10♣ 4♣ 6♦ 2♠], Baseline raises to 55, Midas calls 55 → Baseline wins 1630 with Three of a kind, 10s (10♥ 10♦)",
    "pot": 1630
+  },
+  {
+   "table": 2,
+   "handNo": 7,
+   "text": "Table 2 · Hand 7 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Marble calls 50, Anchor calls 50, Professor folds, Slick checks, [flop: 5♦ J♠ 3♥], Slick checks, Bulldog checks, Copper checks, Marble checks, Anchor checks, [turn: 5♦ J♠ 3♥ 2♠], Slick checks, Bulldog checks, Copper checks, Marble checks, Anchor checks, [river: 5♦ J♠ 3♥ 2♠ 4♦], Slick raises to 50, Bulldog folds, Copper folds, Marble raises to 245, Anchor calls 245, Slick raises to 735, Marble raises to 1635, Anchor calls 1390, Slick raises to 4205, Marble raises to 8855, Anchor calls 6580, Slick goes ALL-IN to 19695, Marble goes ALL-IN to 19750 → Marble wins 47935 with Straight, 6 high (6♦ Q♦)",
+   "pot": 47935
   }
  ],
  "finishes": [
@@ -618,6 +618,22 @@
    "place": null,
    "kind": "house",
    "table": 1,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Slick",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Anchor",
+   "place": null,
+   "kind": "house",
+   "table": 2,
    "handNo": 7,
    "provisional": true
   }
