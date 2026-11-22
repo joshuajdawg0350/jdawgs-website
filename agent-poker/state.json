@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:30:22.144Z",
+ "updatedAt": "2026-11-22T01:30:57.149Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  30,
-  60
+  40,
+  80
  ],
- "level": 2,
- "handsPlayed": 39,
+ "level": 3,
+ "handsPlayed": 40,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 84390,
+     "stack": 84365,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 59265,
+     "stack": 59215,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 49941,
+     "stack": 49841,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 48775,
+     "stack": 49450,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 41128,
+     "stack": 40928,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 8125,
+     "stack": 8025,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 7350,
+     "stack": 7150,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 84390,
+   "stack": 84365,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49941,
+   "stack": 49841,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 41128,
+   "stack": 40928,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59265,
+   "stack": 59215,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7350,
+   "stack": 7150,
    "status": "seated",
    "reentered": false
   },
@@ -261,7 +261,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 48775,
+   "stack": 49450,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 8125,
+   "stack": 8025,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 14,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 10,
-   "text": "Table 3 · Hand 10 · blinds 25/50 · Millstone calls 50, Velvet calls 50, Tally calls 25, Wildfire checks, [flop: Q♥ 10♣ Q♠], Tally raises to 50, Wildfire calls 50, Millstone calls 50, Velvet calls 50, [turn: Q♥ 10♣ Q♠ 5♣], Tally raises to 50, Wildfire calls 50, Millstone calls 50, Velvet calls 50, [river: Q♥ 10♣ Q♠ 5♣ 5♥], Tally raises to 50, Wildfire raises to 440, Millstone calls 440, Velvet calls 440, Tally raises to 1620, Wildfire raises to 3745, Millstone calls 3305, Velvet calls 3305, Tally raises to 11820, Wildfire calls 2375, Millstone calls 8075, Velvet calls 8075 → Tally wins 42180 with Full house, Qs full of 5s (9♠ Q♣)",
-   "pot": 42180
-  },
   {
    "table": 1,
    "handNo": 11,
@@ -406,6 +392,12 @@
    "handNo": 13,
    "text": "Table 3 · Hand 13 · blinds 25/50 · Velvet calls 50, Tally calls 25, Millstone checks, [flop: K♣ J♣ K♦], Tally checks, Millstone checks, Velvet checks, [turn: K♣ J♣ K♦ Q♣], Tally raises to 50, Millstone calls 50, Velvet raises to 105, Tally raises to 160, Millstone calls 110, Velvet raises to 220, Tally raises to 280, Millstone calls 120, Velvet calls 60, [river: K♣ J♣ K♦ Q♣ 5♥], Tally raises to 50, Millstone calls 50, Velvet calls 50 → Velvet wins 1140 with Three of a kind, Ks (K♥ 3♣)",
    "pot": 1140
+  },
+  {
+   "table": 1,
+   "handNo": 14,
+   "text": "Table 1 · Hand 14 · blinds 25/50 · Shadow calls 50, Tally raises to 100, River Rat calls 100, Midas folds, Marble calls 100, Velvet calls 100, Bulldog folds, Millstone folds, Copper folds, Shadow calls 50, [flop: A♦ J♣ J♦], Shadow checks, Tally checks, River Rat checks, Marble checks, Velvet checks, [turn: A♦ J♣ J♦ 2♦], Shadow checks, Tally raises to 50, River Rat calls 50, Marble folds, Velvet calls 50, Shadow folds, [river: A♦ J♣ J♦ 2♦ 5♥], Tally raises to 50, River Rat calls 50, Velvet calls 50 → Tally wins 875 with Two pair, Js and 7s (7♥ 7♦)",
+   "pot": 875
   }
  ],
  "finishes": [
