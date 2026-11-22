@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:38:45.083Z",
+ "updatedAt": "2026-11-22T01:39:11.151Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 47,
+ "handsPlayed": 48,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 132625,
+     "stack": 132505,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 164629,
+     "stack": 164509,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 58605,
+     "stack": 58545,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 120410,
+     "stack": 120350,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7750,
+     "stack": 7690,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 7000,
+     "stack": 7420,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 164629,
+   "stack": 164509,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 120410,
+   "stack": 120350,
    "status": "seated",
    "reentered": false
   },
@@ -198,7 +198,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 132625,
+   "stack": 132505,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 58605,
+   "stack": 58545,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7000,
+   "stack": 7420,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7750,
+   "stack": 7690,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 22,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 13,
-   "text": "Table 2 · Hand 13 · blinds 25/50 · Professor calls 50, Bulldog calls 50, Copper calls 25, Marble raises to 100, Professor calls 50, Bulldog calls 50, Copper calls 50, [flop: 8♠ J♥ A♥], Copper checks, Marble checks, Professor checks, Bulldog checks, [turn: 8♠ J♥ A♥ 6♠], Copper checks, Marble checks, Professor checks, Bulldog checks, [river: 8♠ J♥ A♥ 6♠ J♣], Copper checks, Marble checks, Professor raises to 55, Bulldog raises to 330, Copper calls 330, Marble calls 330, Professor raises to 635, Bulldog raises to 1850, Copper calls 1520, Marble calls 1520, Professor raises to 3185, Bulldog raises to 8665, Copper calls 6815, Marble calls 6815, Professor raises to 14695, Bulldog raises to 39350, Copper calls 30685, Marble calls 30685, Professor calls 5135 → Bulldog wins 138280 with Three of a kind, Js (J♦ 9♠)",
-   "pot": 138280
-  },
   {
    "table": 3,
    "handNo": 13,
@@ -406,6 +392,12 @@
    "handNo": 21,
    "text": "Table 1 · Hand 21 · blinds 30/60 · Copper calls 60, Shadow calls 60, Midas folds, Marble folds, Velvet calls 60, Bulldog folds, Millstone checks, [flop: 5♦ Q♦ K♣], Millstone checks, Copper checks, Shadow checks, Velvet checks, [turn: 5♦ Q♦ K♣ 3♠], Millstone checks, Copper checks, Shadow checks, Velvet checks, [river: 5♦ Q♦ K♣ 3♠ 3♦], Millstone raises to 60, Copper calls 60, Shadow folds, Velvet calls 60 → Millstone wins 450 with Two pair, Ks and 3s (10♦ K♠)",
    "pot": 450
+  },
+  {
+   "table": 1,
+   "handNo": 22,
+   "text": "Table 1 · Hand 22 · blinds 30/60 · Shadow calls 60, Midas folds, Marble calls 60, Velvet calls 60, Bulldog calls 60, Millstone raises to 120, Copper folds, Shadow folds, Marble folds, Velvet calls 60, Bulldog calls 60, [flop: 3♥ K♦ K♣], Millstone checks, Velvet checks, Bulldog checks, [turn: 3♥ K♦ K♣ J♥], Millstone checks, Velvet checks, Bulldog checks, [river: 3♥ K♦ K♣ J♥ 10♣], Millstone checks, Velvet checks, Bulldog checks → Velvet wins 540 with Three of a kind, Ks (5♥ K♠)",
+   "pot": 540
   }
  ],
  "finishes": [
