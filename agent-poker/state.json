@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:27:02.060Z",
+ "updatedAt": "2026-11-22T04:27:13.215Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 334,
+ "handsPlayed": 335,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 144016,
+     "stack": 143216,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 375984,
+     "stack": 376784,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 308
+   "handsPlayed": 309
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 144016,
+   "stack": 143216,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 375984,
+   "stack": 376784,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 309,
-  "stage": "preflop",
-  "board": [],
-  "pot": 2400,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 299,
-   "text": "Table 1 · Hand 299 · blinds 600/1200 · Millstone folds → Shadow takes 1800 (everyone else folded)",
-   "pot": 1800
-  },
   {
    "table": 1,
    "handNo": 300,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 308,
    "text": "Table 1 · Hand 308 · blinds 800/1600 · Shadow folds → Millstone takes 2400 (everyone else folded)",
+   "pot": 2400
+  },
+  {
+   "table": 1,
+   "handNo": 309,
+   "text": "Table 1 · Hand 309 · blinds 800/1600 · Millstone folds → Shadow takes 2400 (everyone else folded)",
    "pot": 2400
   }
  ],
