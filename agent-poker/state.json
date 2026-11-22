@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:05:03.260Z",
+ "updatedAt": "2026-11-22T01:05:23.653Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 5,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -78,14 +78,6 @@
      "kind": "house",
      "house": true,
      "stack": 19885,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 59900,
      "status": "seated",
      "reentered": false
     }
@@ -166,6 +158,14 @@
      "stack": 0,
      "status": "out",
      "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 59900,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 2
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19600,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19600,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19600,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20430,
+     "stack": 20380,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19660,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19710,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 21740,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19710,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19890,
+   "stack": 19600,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19890,
+   "stack": 19600,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19890,
+   "stack": 19600,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20430,
+   "stack": 20380,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19660,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19710,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 21740,
    "status": "seated",
    "reentered": false
   },
@@ -444,7 +444,7 @@
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 59900,
    "status": "seated",
    "reentered": false
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19710,
    "status": "seated",
    "reentered": false
   },
@@ -485,15 +485,7 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -524,6 +516,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass calls 50, Marble calls 50, Sixgun calls 50, Quarry raises to 100, Slick calls 100, Granite calls 100, Dice calls 75, Bulldog calls 50, Compass calls 50, Marble calls 50, Sixgun calls 50, [flop: 2♦ 8♦ 9♥], Dice checks, Bulldog checks, Compass checks, Marble checks, Sixgun checks, Quarry checks, Slick checks, Granite checks, [turn: 2♦ 8♦ 9♥ J♠], Dice checks, Bulldog raises to 480, Compass calls 480, Marble folds, Sixgun folds, Quarry calls 480, Slick folds, Granite calls 480, Dice folds, [river: 2♦ 8♦ 9♥ J♠ 6♦], Bulldog raises to 1630, Compass raises to 3425, Quarry raises to 5220, Granite calls 5220, Bulldog raises to 16150, Compass goes ALL-IN to 18920, Quarry calls 13700, Granite calls 13700, Bulldog goes ALL-IN to 19420, Granite calls 475 → Bulldog wins 79375 with Straight, J high (7♦ 10♥)",
    "pot": 79375
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 9♥ 5♠ 8♥], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [turn: 9♥ 5♠ 8♥ 4♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [river: 9♥ 5♠ 8♥ 4♣ 5♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 240, Professor calls 240, Deuce calls 240, Wildfire calls 240, Millstone calls 240, Icebox folds, Velvet calls 240, Tally calls 240 → Pickpocket wins 2080 with Two pair, 9s and 5s (9♠ 6♥)",
+   "pot": 2080
   }
  ],
  "finishes": [
