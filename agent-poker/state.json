@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:50:39.670Z",
+ "updatedAt": "2026-11-22T01:51:37.485Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 58,
+ "handsPlayed": 59,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 269199,
+     "stack": 269139,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 87625,
+     "stack": 181885,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 120350,
+     "stack": 32725,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 6575,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 32
+   "handsPlayed": 33
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 269199,
+   "stack": 269139,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 120350,
+   "stack": 32725,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 87625,
+   "stack": 181885,
    "status": "seated",
    "reentered": false
   },
@@ -234,8 +234,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6575,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 33,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Copper",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 23,
-   "text": "Table 1 · Hand 23 · blinds 30/60 · Midas folds, Marble calls 60, Velvet calls 60, Bulldog calls 60, Millstone calls 60, Copper calls 30, Shadow checks, [flop: 9♦ 8♠ 9♥], Copper checks, Shadow checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks, [turn: 9♦ 8♠ 9♥ Q♠], Copper checks, Shadow checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks, [river: 9♦ 8♠ 9♥ Q♠ 2♥], Copper checks, Shadow checks, Marble checks, Velvet checks, Bulldog checks, Millstone checks → Marble wins 360 with Two pair, Qs and 9s (J♥ Q♥)",
-   "pot": 360
-  },
   {
    "table": 1,
    "handNo": 24,
@@ -406,6 +392,12 @@
    "handNo": 32,
    "text": "Table 1 · Hand 32 · blinds 30/60 · Millstone calls 60, Copper folds, Shadow folds, Midas folds, Marble folds, Velvet checks, [flop: A♣ A♠ Q♣], Velvet checks, Millstone checks, [turn: A♣ A♠ Q♣ J♦], Velvet checks, Millstone raises to 60, Velvet calls 60, [river: A♣ A♠ Q♣ J♦ 5♥], Velvet checks, Millstone raises to 60, Velvet calls 60 → Millstone wins 390 with Straight, A high (10♥ K♣)",
    "pot": 390
+  },
+  {
+   "table": 1,
+   "handNo": 33,
+   "text": "Table 1 · Hand 33 · blinds 30/60 · Copper calls 60, Shadow calls 60, Midas folds, Marble folds, Velvet calls 30, Millstone checks, [flop: 8♥ 6♦ 9♣], Velvet checks, Millstone checks, Copper checks, Shadow checks, [turn: 8♥ 6♦ 9♣ 7♥], Velvet checks, Millstone checks, Copper raises to 60, Shadow raises to 240, Velvet calls 240, Millstone folds, Copper raises to 710, Shadow raises to 1570, Velvet calls 1330, Copper raises to 4025, Shadow raises to 8470, Velvet calls 4945, Copper raises to 20020, Shadow raises to 41165, Copper raises to 81930, Shadow goes ALL-IN to 120290, Copper calls 5635, [river: 8♥ 6♦ 9♣ 7♥ Q♠] → Copper wins 181885 with Straight, 10 high (2♣ 10♠); Shadow wins 32725 with Straight, 9 high (K♥ 5♥)",
+   "pot": 214610
   }
  ],
  "finishes": [
@@ -567,6 +559,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 26,
+   "provisional": true
+  },
+  {
+   "name": "Velvet",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 33,
    "provisional": true
   }
  ],
