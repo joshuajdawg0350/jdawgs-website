@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:03:35.161Z",
+ "updatedAt": "2026-11-22T01:03:58.482Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -482,8 +482,18 @@
   "house": 26,
   "test": 0
  },
- "waitlist": [],
- "currentHand": null,
+ "waitlist": [
+  "xtech-ai"
+ ],
+ "currentHand": {
+  "table": 1,
+  "handNo": 2,
+  "stage": "preflop",
+  "board": [],
+  "pot": 75,
+  "toAct": "Shadow",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
