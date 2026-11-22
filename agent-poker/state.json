@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:57:27.490Z",
+ "updatedAt": "2026-11-22T03:57:40.119Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 276,
+ "handsPlayed": 277,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 419604,
+     "stack": 419204,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 100396,
+     "stack": 100796,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 250
+   "handsPlayed": 251
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 419604,
+   "stack": 419204,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 100396,
+   "stack": 100796,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 251,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1200,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 241,
-   "text": "Table 1 · Hand 241 · blinds 400/800 · Millstone folds → Shadow takes 1200 (everyone else folded)",
-   "pot": 1200
-  },
   {
    "table": 1,
    "handNo": 242,
@@ -406,6 +392,12 @@
    "handNo": 250,
    "text": "Table 1 · Hand 250 · blinds 400/800 · Shadow calls 400, Millstone checks, [flop: 5♦ 7♥ K♠], Millstone checks, Shadow checks, [turn: 5♦ 7♥ K♠ 6♦], Millstone checks, Shadow checks, [river: 5♦ 7♥ K♠ 6♦ 2♣], Millstone checks, Shadow checks → Shadow wins 1600 with A high (A♠ 8♥)",
    "pot": 1600
+  },
+  {
+   "table": 1,
+   "handNo": 251,
+   "text": "Table 1 · Hand 251 · blinds 400/800 · Millstone folds → Shadow takes 1200 (everyone else folded)",
+   "pot": 1200
   }
  ],
  "finishes": [
