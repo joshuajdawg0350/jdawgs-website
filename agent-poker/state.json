@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:20:23.069Z",
+ "updatedAt": "2026-11-22T03:20:33.584Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 189,
+ "handsPlayed": 190,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 163
+   "handsPlayed": 164
   }
  ],
  "seats": [
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 164,
-  "stage": "preflop",
-  "board": [],
-  "pot": 450,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 154,
-   "text": "Table 1 · Hand 154 · blinds 120/240 · Shadow calls 120, Millstone checks, [flop: J♠ J♣ 4♣], Millstone raises to 240, Shadow calls 240, [turn: J♠ J♣ 4♣ 2♣], Millstone raises to 240, Shadow calls 240, [river: J♠ J♣ 4♣ 2♣ 10♠], Millstone raises to 240, Shadow calls 240 → Millstone wins 1920 with Three of a kind, Js (J♦ 6♥)",
-   "pot": 1920
-  },
   {
    "table": 1,
    "handNo": 155,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 163,
    "text": "Table 1 · Hand 163 · blinds 150/300 · Millstone calls 150, Shadow checks, [flop: 3♣ 3♠ 9♠], Shadow checks, Millstone checks, [turn: 3♣ 3♠ 9♠ 10♣], Shadow checks, Millstone checks, [river: 3♣ 3♠ 9♠ 10♣ 9♦], Shadow checks, Millstone checks → Shadow wins 600 with Two pair, 9s and 3s (8♦ A♥)",
+   "pot": 600
+  },
+  {
+   "table": 1,
+   "handNo": 164,
+   "text": "Table 1 · Hand 164 · blinds 150/300 · Shadow calls 150, Millstone checks, [flop: 9♦ 3♣ 2♦], Millstone checks, Shadow checks, [turn: 9♦ 3♣ 2♦ K♥], Millstone checks, Shadow checks, [river: 9♦ 3♣ 2♦ K♥ 3♠], Millstone checks, Shadow checks → Millstone wins 300 with Pair of 3s (4♥ A♦); Shadow wins 300 with Pair of 3s (A♥ 6♣)",
    "pot": 600
   }
  ],
