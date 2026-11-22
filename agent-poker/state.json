@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T02:20:49.059Z",
+ "updatedAt": "2026-11-22T02:21:12.875Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 90,
+ "handsPlayed": 91,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 180063,
+     "stack": 146065,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 33998,
+     "stack": 98584,
      "status": "seated",
      "reentered": false
     },
@@ -69,15 +69,15 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 30488,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 7338,
+     "stack": 7238,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 64
+   "handsPlayed": 65
   }
  ],
  "seats": [
@@ -99,8 +99,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30488,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 33998,
+   "stack": 98584,
    "status": "seated",
    "reentered": false
   },
@@ -225,7 +225,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 180063,
+   "stack": 146065,
    "status": "seated",
    "reentered": false
   },
@@ -279,7 +279,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 7338,
+   "stack": 7238,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 65,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 55,
-   "text": "Table 1 · Hand 55 · blinds 40/80 · Marble calls 80, Millstone calls 80, Copper calls 80, Shadow raises to 185, Midas folds, Marble folds, Millstone calls 105, Copper calls 105, [flop: 3♠ 7♠ Q♦], Shadow raises to 95, Millstone folds, Copper calls 95, [turn: 3♠ 7♠ Q♦ A♠], Shadow checks, Copper raises to 80, Shadow folds → Copper takes 985 (everyone else folded)",
-   "pot": 985
-  },
   {
    "table": 1,
    "handNo": 56,
@@ -406,6 +392,12 @@
    "handNo": 64,
    "text": "Table 1 · Hand 64 · blinds 50/100 · Midas folds, Marble calls 100, Millstone calls 100, Copper calls 50, Shadow checks, [flop: 4♣ 6♥ 4♠], Copper checks, Shadow raises to 110, Marble folds, Millstone calls 110, Copper calls 110, [turn: 4♣ 6♥ 4♠ J♠], Copper checks, Shadow checks, Millstone checks, [river: 4♣ 6♥ 4♠ J♠ A♠], Copper checks, Shadow raises to 110, Millstone calls 110, Copper calls 110 → Shadow wins 1060 with Three of a kind, 4s (7♠ 4♦)",
    "pot": 1060
+  },
+  {
+   "table": 1,
+   "handNo": 65,
+   "text": "Table 1 · Hand 65 · blinds 50/100 · Marble calls 100, Millstone folds, Copper calls 100, Shadow calls 50, Midas checks, [flop: 7♠ 8♠ A♠], Shadow checks, Midas checks, Marble checks, Copper checks, [turn: 7♠ 8♠ A♠ 5♠], Shadow checks, Midas raises to 220, Marble folds, Copper raises to 590, Shadow calls 590, Midas raises to 1927, Copper raises to 4067, Shadow raises to 6422, Midas raises to 15938, Copper raises to 32033, Shadow goes ALL-IN to 33898, Midas calls 14450, Copper raises to 91928, [river: 7♠ 8♠ A♠ 5♠ A♣], Copper raises to 100 → Copper wins 58130 with Flush, A high (6♠ 6♣); Shadow wins 98584 with Full house, 7s full of As (7♣ 7♥)",
+   "pot": 156714
   }
  ],
  "finishes": [
@@ -576,6 +568,14 @@
    "table": 1,
    "handNo": 33,
    "provisional": true
+  },
+  {
+   "name": "Midas",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 65,
+   "provisional": true
   }
  ],
  "champion": null,
@@ -583,7 +583,7 @@
  "defended": false,
  "midas": {
   "styleTonight": null,
-  "knockedOutBy": null,
+  "knockedOutBy": "Shadow",
   "finish": null
  },
  "bounty": {
