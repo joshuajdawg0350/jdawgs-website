@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:17:38.782Z",
+ "updatedAt": "2026-11-22T01:18:10.176Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 21,
+ "handsPlayed": 22,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 21285,
+     "stack": 21235,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19450,
+     "stack": 19425,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 59210,
+     "stack": 59095,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 590,
+     "stack": 780,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21285,
+   "stack": 21235,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19450,
+   "stack": 19425,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59210,
+   "stack": 59095,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 590,
+   "stack": 780,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Marble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 4,
-   "text": "Table 3 · Hand 4 · blinds 25/50 · Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 25, Tally checks, [flop: 3♠ 7♦ 9♠], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire raises to 210, Millstone folds, Velvet calls 210, Tally folds, Pickpocket folds, Professor folds, Deuce folds, [turn: 3♠ 7♦ 9♠ 4♠], Velvet checks, Wildfire raises to 460, Velvet calls 460, [river: 3♠ 7♦ 9♠ 4♠ 9♥], Velvet checks, Wildfire raises to 1015, Velvet calls 1015 → Wildfire wins 3720 with Full house, 9s full of 7s (9♦ 7♥)",
-   "pot": 3720
-  },
   {
    "table": 1,
    "handNo": 5,
@@ -554,6 +548,12 @@
    "handNo": 7,
    "text": "Table 3 · Hand 7 · blinds 25/50 · Millstone calls 50, Icebox calls 50, Velvet calls 50, Tally folds, Pickpocket calls 50, Deuce calls 25, Wildfire checks, [flop: 5♠ A♦ A♠], Deuce checks, Wildfire raises to 180, Millstone raises to 360, Icebox calls 360, Velvet calls 360, Pickpocket calls 360, Deuce calls 360, Wildfire raises to 1730, Millstone raises to 3100, Icebox calls 2740, Velvet folds, Pickpocket calls 2740, Deuce calls 2740, Wildfire raises to 11975, Millstone goes ALL-IN to 19280, Icebox calls 16180, Pickpocket calls 16180, Deuce calls 16180, Wildfire goes ALL-IN to 22125, Icebox calls 935, Pickpocket calls 2595, Deuce calls 65, [turn: 5♠ A♦ A♠ 2♥], [river: 5♠ A♦ A♠ 2♥ 3♦] → Wildfire wins 6440 with Two pair, As and 5s (5♣ 8♦); Millstone wins 97060 with Three of a kind, As (6♦ A♣)",
    "pot": 103500
+  },
+  {
+   "table": 1,
+   "handNo": 8,
+   "text": "Table 1 · Hand 8 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline calls 50, Shadow folds, River Rat checks, [flop: 7♥ 4♦ A♠], River Rat checks, Hammer checks, Baseline checks, [turn: 7♥ 4♦ A♠ 2♦], River Rat checks, Hammer checks, Baseline checks, [river: 7♥ 4♦ A♠ 2♦ 3♥], River Rat checks, Hammer raises to 65, Baseline folds, River Rat calls 65 → Hammer wins 305 with Straight, 5 high (5♠ 10♦)",
+   "pot": 305
   }
  ],
  "finishes": [
