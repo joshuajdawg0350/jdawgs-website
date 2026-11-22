@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:28:05.848Z",
+ "updatedAt": "2026-11-22T01:28:38.260Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 36,
+ "handsPlayed": 37,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 28931,
+     "stack": 29031,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 49991,
+     "stack": 49941,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 41178,
+     "stack": 41128,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 12
+   "handsPlayed": 13
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 28931,
+   "stack": 29031,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49991,
+   "stack": 49941,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 41178,
+   "stack": 41128,
    "status": "seated",
    "reentered": false
   },
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 13,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "River Rat",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 9,
-   "text": "Table 3 · Hand 9 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Velvet calls 25, Tally checks, [flop: K♦ 10♠ Q♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [turn: K♦ 10♠ Q♠ 5♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [river: K♦ 10♠ Q♠ 5♠ 3♥], Velvet checks, Tally checks, Wildfire raises to 120, Millstone calls 120, Velvet calls 120, Tally calls 120 → Velvet wins 680 with Two pair, Qs and 5s (Q♥ 5♦)",
-   "pot": 680
-  },
   {
    "table": 1,
    "handNo": 10,
@@ -553,6 +547,12 @@
    "table": 3,
    "handNo": 12,
    "text": "Table 3 · Hand 12 · blinds 25/50 · Millstone calls 50, Velvet calls 25, Tally checks, [flop: 10♠ 10♥ 7♣], Velvet checks, Tally checks, Millstone checks, [turn: 10♠ 10♥ 7♣ 3♠], Velvet checks, Tally checks, Millstone checks, [river: 10♠ 10♥ 7♣ 3♠ 9♠], Velvet checks, Tally checks, Millstone checks → Velvet wins 150 with Three of a kind, 10s (10♣ 4♣)",
+   "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 13,
+   "text": "Table 1 · Hand 13 · blinds 25/50 · River Rat calls 50, Midas calls 25, Shadow checks, [flop: 4♥ 4♣ 6♠], Midas checks, Shadow checks, River Rat checks, [turn: 4♥ 4♣ 6♠ 9♦], Midas checks, Shadow checks, River Rat checks, [river: 4♥ 4♣ 6♠ 9♦ 7♠], Midas checks, Shadow checks, River Rat checks → Midas wins 150 with Two pair, 9s and 4s (J♥ 9♣)",
    "pot": 150
   }
  ],
