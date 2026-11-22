@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:18:52.189Z",
+ "updatedAt": "2026-11-22T04:19:04.279Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 314,
+ "handsPlayed": 315,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 150416,
+     "stack": 149216,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 369584,
+     "stack": 370784,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 288
+   "handsPlayed": 289
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 150416,
+   "stack": 149216,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 369584,
+   "stack": 370784,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 289,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1800,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 279,
-   "text": "Table 1 · Hand 279 · blinds 500/1000 · Millstone folds → Shadow takes 1500 (everyone else folded)",
-   "pot": 1500
-  },
   {
    "table": 1,
    "handNo": 280,
@@ -405,6 +391,12 @@
    "table": 1,
    "handNo": 288,
    "text": "Table 1 · Hand 288 · blinds 600/1200 · Shadow calls 600, Millstone checks, [flop: J♣ K♥ Q♣], Millstone checks, Shadow checks, [turn: J♣ K♥ Q♣ 4♣], Millstone checks, Shadow checks, [river: J♣ K♥ Q♣ 4♣ 5♥], Millstone checks, Shadow checks → Millstone wins 2400 with Two pair, Ks and 4s (4♦ K♠)",
+   "pot": 2400
+  },
+  {
+   "table": 1,
+   "handNo": 289,
+   "text": "Table 1 · Hand 289 · blinds 600/1200 · Millstone calls 600, Shadow checks, [flop: A♥ 8♠ 3♥], Shadow checks, Millstone checks, [turn: A♥ 8♠ 3♥ 5♣], Shadow checks, Millstone checks, [river: A♥ 8♠ 3♥ 5♣ 10♠], Shadow checks, Millstone checks → Shadow wins 2400 with Pair of 8s (2♦ 8♣)",
    "pot": 2400
   }
  ],
