@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T03:14:58.282Z",
+ "updatedAt": "2026-11-22T03:15:13.679Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 177,
+ "handsPlayed": 178,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 496861,
+     "stack": 496621,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 23139,
+     "stack": 23379,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 151
+   "handsPlayed": 152
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496861,
+   "stack": 496621,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23139,
+   "stack": 23379,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 152,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 142,
-   "text": "Table 1 · Hand 142 · blinds 120/240 · Shadow calls 120, Millstone checks, [flop: 10♥ 7♠ 2♥], Millstone checks, Shadow checks, [turn: 10♥ 7♠ 2♥ K♥], Millstone checks, Shadow checks, [river: 10♥ 7♠ 2♥ K♥ J♦], Millstone checks, Shadow checks → Millstone wins 480 with Pair of Js (J♠ A♣)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 143,
@@ -406,6 +392,12 @@
    "handNo": 151,
    "text": "Table 1 · Hand 151 · blinds 120/240 · Millstone calls 120, Shadow checks, [flop: 5♠ Q♥ 4♦], Shadow checks, Millstone checks, [turn: 5♠ Q♥ 4♦ 10♠], Shadow checks, Millstone checks, [river: 5♠ Q♥ 4♦ 10♠ 7♦], Shadow raises to 265, Millstone calls 265 → Shadow wins 1010 with Straight, 7 high (3♥ 6♦)",
    "pot": 1010
+  },
+  {
+   "table": 1,
+   "handNo": 152,
+   "text": "Table 1 · Hand 152 · blinds 120/240 · Shadow raises to 550, Millstone folds → Shadow takes 790 (everyone else folded)",
+   "pot": 790
   }
  ],
  "finishes": [
