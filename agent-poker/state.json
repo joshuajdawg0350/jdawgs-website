@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T04:32:23.891Z",
+ "updatedAt": "2026-11-22T04:32:41.796Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 345,
+ "handsPlayed": 346,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 149616,
+     "stack": 151216,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 370384,
+     "stack": 368784,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 319
+   "handsPlayed": 320
   }
  ],
  "seats": [
@@ -180,7 +180,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 149616,
+   "stack": 151216,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 370384,
+   "stack": 368784,
    "status": "seated",
    "reentered": false
   },
@@ -337,22 +337,8 @@
  "waitlist": [
   "xtech-ai"
  ],
- "currentHand": {
-  "table": 1,
-  "handNo": 320,
-  "stage": "preflop",
-  "board": [],
-  "pot": 2400,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 310,
-   "text": "Table 1 · Hand 310 · blinds 800/1600 · Shadow folds → Millstone takes 2400 (everyone else folded)",
-   "pot": 2400
-  },
   {
    "table": 1,
    "handNo": 311,
@@ -406,6 +392,12 @@
    "handNo": 319,
    "text": "Table 1 · Hand 319 · blinds 800/1600 · Millstone folds → Shadow takes 2400 (everyone else folded)",
    "pot": 2400
+  },
+  {
+   "table": 1,
+   "handNo": 320,
+   "text": "Table 1 · Hand 320 · blinds 800/1600 · Shadow calls 800, Millstone checks, [flop: A♣ 2♣ J♣], Millstone raises to 1600, Shadow folds → Millstone takes 4800 (everyone else folded)",
+   "pot": 4800
   }
  ],
  "finishes": [
