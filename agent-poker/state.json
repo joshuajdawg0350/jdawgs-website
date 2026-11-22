@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-22T01:21:41.674Z",
+ "updatedAt": "2026-11-22T01:22:12.945Z",
  "mode": "real",
  "date": "2026-11-21",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 27,
+ "handsPlayed": 28,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19565,
+     "stack": 28227,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 21335,
+     "stack": 18691,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19425,
+     "stack": 16781,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 59045,
+     "stack": 56401,
      "status": "seated",
      "reentered": false
     },
@@ -69,8 +69,8 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 730,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19565,
+   "stack": 28227,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21335,
+   "stack": 18691,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19425,
+   "stack": 16781,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59045,
+   "stack": 56401,
    "status": "seated",
    "reentered": false
   },
@@ -391,8 +391,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 730,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -486,21 +486,15 @@
   "xtech-ai"
  ],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 10,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 6,
-   "text": "Table 3 · Hand 6 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet raises to 105, Tally calls 105, Pickpocket calls 80, Deuce calls 55, Wildfire calls 55, Millstone calls 55, [flop: 7♥ 9♣ K♦], Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, Tally checks, [turn: 7♥ 9♣ K♦ A♠], Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, Tally checks, [river: 7♥ 9♣ K♦ A♠ 3♥], Pickpocket checks, Deuce checks, Wildfire checks, Millstone checks, Velvet checks, Tally checks → Velvet wins 630 with Three of a kind, Ks (K♥ K♠)",
-   "pot": 630
-  },
   {
    "table": 1,
    "handNo": 7,
@@ -554,6 +548,12 @@
    "handNo": 9,
    "text": "Table 3 · Hand 9 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Velvet calls 25, Tally checks, [flop: K♦ 10♠ Q♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [turn: K♦ 10♠ Q♠ 5♠], Velvet checks, Tally checks, Wildfire checks, Millstone checks, [river: K♦ 10♠ Q♠ 5♠ 3♥], Velvet checks, Tally checks, Wildfire raises to 120, Millstone calls 120, Velvet calls 120, Tally calls 120 → Velvet wins 680 with Two pair, Qs and 5s (Q♥ 5♦)",
    "pot": 680
+  },
+  {
+   "table": 1,
+   "handNo": 10,
+   "text": "Table 1 · Hand 10 · blinds 25/50 · Baseline calls 50, Shadow calls 50, River Rat calls 50, Hammer calls 25, Midas checks, [flop: 7♠ 8♣ 8♥], Hammer checks, Midas raises to 138, Baseline calls 138, Shadow calls 138, River Rat calls 138, Hammer calls 138, [turn: 7♠ 8♣ 8♥ 5♠], Hammer checks, Midas raises to 517, Baseline calls 517, Shadow calls 517, River Rat calls 517, Hammer calls 517, [river: 7♠ 8♣ 8♥ 5♠ Q♥], Hammer checks, Midas raises to 1939, Baseline calls 1939, Shadow calls 1939, River Rat calls 1939, Hammer calls 25 → Midas wins 11306 with Three of a kind, 8s (8♠ J♠)",
+   "pot": 11306
   }
  ],
  "finishes": [
@@ -659,6 +659,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Hammer",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 10,
    "provisional": true
   }
  ],
