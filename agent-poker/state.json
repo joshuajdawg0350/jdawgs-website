@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:01:16.642Z",
+ "updatedAt": "2026-11-23T04:01:36.245Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 190,
+ "handsPlayed": 191,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 39486,
+     "stack": 39186,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 480514,
+     "stack": 480814,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 164
+   "handsPlayed": 165
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39486,
+   "stack": 39186,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 480514,
+   "stack": 480814,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 165,
-  "stage": "preflop",
-  "board": [],
-  "pot": 450,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 155,
-   "text": "Table 1 · Hand 155 · blinds 120/240 · Midas folds, Icebox folds → Velvet takes 360 (everyone else folded)",
-   "pot": 360
-  },
   {
    "table": 1,
    "handNo": 156,
@@ -404,6 +390,12 @@
    "handNo": 164,
    "text": "Table 1 · Hand 164 · blinds 150/300 · Midas calls 150, Icebox checks, [flop: 8♠ 5♠ 3♠], Icebox checks, Midas checks, [turn: 8♠ 5♠ 3♠ K♥], Icebox checks, Midas raises to 330, Icebox calls 330, [river: 8♠ 5♠ 3♠ K♥ 3♦], Icebox checks, Midas raises to 693, Icebox calls 693 → Midas wins 2646 with Two pair, Ks and 3s (4♣ K♣)",
    "pot": 2646
+  },
+  {
+   "table": 1,
+   "handNo": 165,
+   "text": "Table 1 · Hand 165 · blinds 150/300 · Icebox calls 150, Midas checks, [flop: K♣ J♥ 2♠], Midas checks, Icebox checks, [turn: K♣ J♥ 2♠ 3♠], Midas checks, Icebox checks, [river: K♣ J♥ 2♠ 3♠ 9♦], Midas checks, Icebox checks → Icebox wins 600 with Pair of Ks (K♥ 7♦)",
+   "pot": 600
   }
  ],
  "finishes": [
