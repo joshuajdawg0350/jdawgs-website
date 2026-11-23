@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T03:03:36.136Z",
+ "updatedAt": "2026-11-23T03:04:06.437Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 114,
+ "handsPlayed": 115,
  "tables": [
   {
    "id": 1,
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 480795,
+     "stack": 480675,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17584,
+     "stack": 17704,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 88
+   "handsPlayed": 89
   }
  ],
  "seats": [
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 480795,
+   "stack": 480675,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17584,
+   "stack": 17704,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 89,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 79,
-   "text": "Table 1 · Hand 79 · blinds 50/100 · Velvet calls 100, Midas folds, Icebox checks, [flop: 7♣ 4♠ K♦], Icebox checks, Velvet checks, [turn: 7♣ 4♠ K♦ 3♥], Icebox checks, Velvet checks, [river: 7♣ 4♠ K♦ 3♥ Q♦], Icebox checks, Velvet checks → Icebox wins 250 with Pair of Ks (6♠ K♥)",
-   "pot": 250
-  },
   {
    "table": 1,
    "handNo": 80,
@@ -404,6 +390,12 @@
    "handNo": 88,
    "text": "Table 1 · Hand 88 · blinds 60/120 · Velvet calls 120, Midas calls 60, Icebox checks, [flop: 2♠ J♣ 7♣], Midas checks, Icebox checks, Velvet checks, [turn: 2♠ J♣ 7♣ 4♦], Midas checks, Icebox checks, Velvet checks, [river: 2♠ J♣ 7♣ 4♦ J♠], Midas checks, Icebox checks, Velvet checks → Velvet wins 360 with Two pair, Js and 4s (4♠ 5♠)",
    "pot": 360
+  },
+  {
+   "table": 1,
+   "handNo": 89,
+   "text": "Table 1 · Hand 89 · blinds 60/120 · Midas folds, Icebox calls 60, Velvet checks, [flop: 5♥ 9♥ 10♠], Icebox checks, Velvet checks, [turn: 5♥ 9♥ 10♠ 7♥], Icebox checks, Velvet checks, [river: 5♥ 9♥ 10♠ 7♥ 6♣], Icebox checks, Velvet checks → Velvet wins 240 with Pair of 10s (10♣ Q♠)",
+   "pot": 240
   }
  ],
  "finishes": [
