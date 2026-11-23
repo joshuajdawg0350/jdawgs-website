@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:36:39.840Z",
+ "updatedAt": "2026-11-23T04:36:59.623Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 250,
+ "handsPlayed": 251,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 40710,
+     "stack": 41010,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 479290,
+     "stack": 478990,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 224
+   "handsPlayed": 225
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 40710,
+   "stack": 41010,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 479290,
+   "stack": 478990,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 225,
-  "stage": "preflop",
-  "board": [],
-  "pot": 900,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 215,
-   "text": "Table 1 · Hand 215 · blinds 250/500 · Icebox folds → Midas takes 750 (everyone else folded)",
-   "pot": 750
-  },
   {
    "table": 1,
    "handNo": 216,
@@ -404,6 +390,12 @@
    "handNo": 224,
    "text": "Table 1 · Hand 224 · blinds 300/600 · Midas calls 300, Icebox checks, [flop: 6♦ 2♠ 8♦], Icebox checks, Midas checks, [turn: 6♦ 2♠ 8♦ 2♣], Icebox checks, Midas checks, [river: 6♦ 2♠ 8♦ 2♣ 3♠], Icebox checks, Midas checks → Icebox wins 1200 with Three of a kind, 2s (2♥ 4♥)",
    "pot": 1200
+  },
+  {
+   "table": 1,
+   "handNo": 225,
+   "text": "Table 1 · Hand 225 · blinds 300/600 · Icebox folds → Midas takes 900 (everyone else folded)",
+   "pot": 900
   }
  ],
  "finishes": [
