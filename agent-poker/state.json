@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:32:38.145Z",
+ "updatedAt": "2026-11-23T01:33:01.451Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 5,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19775,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20550,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20325,
+     "stack": 20125,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19975,
+   "stack": 19775,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 20550,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20325,
+   "stack": 20125,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -522,6 +514,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass folds, Marble calls 50, Sixgun calls 50, Slick folds, Granite calls 50, Dice calls 25, Bulldog checks, [flop: J♣ 3♦ K♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [turn: J♣ 3♦ K♥ 2♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [river: J♣ 3♦ K♥ 2♥ 4♠], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite raises to 50, Dice calls 50, Bulldog calls 50, Marble folds, Sixgun calls 50 → Granite wins 450 with Straight, 5 high (5♣ A♠)",
    "pot": 450
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally folds, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 4♥ 2♥ 6♦], Millstone raises to 50, Icebox folds, Velvet calls 50, Pickpocket folds, Professor folds, Deuce folds, Wildfire calls 50, [turn: 4♥ 2♥ 6♦ A♥], Millstone raises to 50, Velvet calls 50, Wildfire calls 50, [river: 4♥ 2♥ 6♦ A♥ 9♦], Millstone raises to 50, Velvet calls 50, Wildfire calls 50 → Millstone wins 800 with Three of a kind, 4s (4♦ 4♠)",
+   "pot": 800
   }
  ],
  "finishes": [
