@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:52:02.741Z",
+ "updatedAt": "2026-11-23T01:52:24.158Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 35,
+ "handsPlayed": 36,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 2470,
+     "stack": 2305,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20550,
+     "stack": 20445,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19130,
+     "stack": 19565,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 118380,
+     "stack": 118215,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 2470,
+   "stack": 2305,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20550,
+   "stack": 20445,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19130,
+   "stack": 19565,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 118380,
+   "stack": 118215,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 12,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 9,
-   "text": "Table 2 · Hand 9 · blinds 25/50 · Ozone calls 50, Granite folds, Bulldog calls 25, Copper checks, [flop: 4♠ 10♠ 6♦], Bulldog raises to 90, Copper folds, Ozone folds → Bulldog takes 240 (everyone else folded)",
-   "pot": 240
-  },
   {
    "table": 3,
    "handNo": 9,
@@ -552,6 +538,12 @@
    "handNo": 12,
    "text": "Table 2 · Hand 12 · blinds 25/50 · Bulldog calls 50, Ozone calls 50, Quarry calls 25, Granite checks, [flop: 4♥ K♦ 2♥], Quarry checks, Granite checks, Bulldog checks, Ozone checks, [turn: 4♥ K♦ 2♥ 3♣], Quarry checks, Granite checks, Bulldog checks, Ozone checks, [river: 4♥ K♦ 2♥ 3♣ 4♦], Quarry checks, Granite checks, Bulldog checks, Ozone checks → Granite wins 200 with Two pair, 4s and 2s (10♣ 2♠)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 12,
+   "text": "Table 3 · Hand 12 · blinds 25/50 · Professor raises to 105, Wildfire calls 105, Icebox calls 80, Velvet calls 55, [flop: A♥ 4♦ Q♠], Icebox checks, Velvet checks, Professor checks, Wildfire checks, [turn: A♥ 4♦ Q♠ 7♣], Icebox checks, Velvet checks, Professor checks, Wildfire raises to 60, Icebox folds, Velvet calls 60, Professor calls 60, [river: A♥ 4♦ Q♠ 7♣ 8♣], Velvet checks, Professor checks, Wildfire checks → Velvet wins 600 with Pair of As (9♦ A♠)",
+   "pot": 600
   }
  ],
  "finishes": [
