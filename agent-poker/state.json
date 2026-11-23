@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:51:14.347Z",
+ "updatedAt": "2026-11-23T01:51:40.444Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 33,
+ "handsPlayed": 34,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 32638,
+     "stack": 32588,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 54680,
+     "stack": 54830,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20360,
+     "stack": 20310,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19875,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32638,
+   "stack": 32588,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 54680,
+   "stack": 54830,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20360,
+   "stack": 20310,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 12,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 8,
-   "text": "Table 3 · Hand 8 · blinds 25/50 · Professor calls 50, Quarry folds, Wildfire calls 50, Icebox folds, Velvet checks, [flop: 8♣ 8♥ 5♠], Velvet checks, Professor checks, Wildfire checks, [turn: 8♣ 8♥ 5♠ K♣], Velvet checks, Professor checks, Wildfire checks, [river: 8♣ 8♥ 5♠ K♣ 2♠], Velvet checks, Professor checks, Wildfire checks → Velvet wins 175 with Three of a kind, 8s (8♦ 4♦)",
-   "pot": 175
-  },
   {
    "table": 1,
    "handNo": 9,
@@ -552,6 +546,12 @@
    "handNo": 11,
    "text": "Table 3 · Hand 11 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Quarry calls 25, Wildfire raises to 110, Icebox calls 60, Velvet calls 60, Professor calls 60, Quarry calls 60, [flop: 10♣ 5♥ 7♥], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [turn: 10♣ 5♥ 7♥ 4♦], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [river: 10♣ 5♥ 7♥ 4♦ Q♣], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks → Quarry wins 550 with Pair of 10s (10♠ J♥)",
    "pot": 550
+  },
+  {
+   "table": 1,
+   "handNo": 12,
+   "text": "Table 1 · Hand 12 · blinds 25/50 · Baseline calls 50, Venus calls 50, Shadow calls 25, Midas checks, [flop: 8♦ 8♥ A♦], Shadow checks, Midas checks, Baseline checks, Venus checks, [turn: 8♦ 8♥ A♦ 3♠], Shadow checks, Midas checks, Baseline checks, Venus checks, [river: 8♦ 8♥ A♦ 3♠ 4♦], Shadow checks, Midas checks, Baseline checks, Venus checks → Venus wins 200 with Two pair, As and 8s (6♣ A♥)",
+   "pot": 200
   }
  ],
  "finishes": [
