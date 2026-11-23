@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:30:13.356Z",
+ "updatedAt": "2026-11-23T01:30:39.738Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 0,
+ "handsPlayed": 1,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 52463,
      "status": "seated",
      "reentered": false
     },
@@ -37,8 +37,8 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -61,23 +61,23 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 52462,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 15075,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 52463,
    "status": "seated",
    "reentered": false
   },
@@ -283,8 +283,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -364,8 +364,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -391,8 +391,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 52462,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 15075,
    "status": "seated",
    "reentered": false
   },
@@ -484,16 +484,48 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Venus",
+  "toAct": "Bulldog",
   "lastActions": []
  },
- "recentHands": [],
- "finishes": [],
+ "recentHands": [
+  {
+   "table": 1,
+   "handNo": 1,
+   "text": "Table 1 · Hand 1 · blinds 25/50 · Venus folds, Shadow folds, River Rat calls 50, Hammer calls 50, Ozone calls 50, Anchor calls 50, Midas folds, Baseline calls 25, Pearl checks, [flop: Q♥ Q♠ A♥], Baseline raises to 55, Pearl calls 55, River Rat calls 55, Hammer calls 55, Ozone raises to 125, Anchor calls 125, Baseline raises to 200, Pearl calls 145, River Rat calls 145, Hammer calls 145, Ozone raises to 300, Anchor calls 175, Baseline raises to 410, Pearl calls 210, River Rat calls 210, Hammer calls 210, Ozone raises to 555, Anchor calls 255, Baseline raises to 715, Pearl calls 305, River Rat calls 305, Hammer calls 305, Ozone raises to 925, Anchor calls 370, Baseline raises to 1155, Pearl calls 440, River Rat calls 440, Hammer calls 440, Ozone raises to 1455, Anchor calls 530, Baseline raises to 1785, Pearl calls 630, River Rat calls 630, Hammer calls 630, Ozone raises to 2215, Anchor calls 760, Baseline raises to 2690, Pearl calls 905, River Rat calls 905, Hammer calls 905, Ozone raises to 3310, Anchor calls 1095, Baseline raises to 3990, Pearl calls 1300, River Rat calls 1300, Hammer calls 1300, Ozone raises to 4875, Anchor calls 1565, Baseline raises to 5850, Pearl calls 1860, River Rat calls 1860, Hammer calls 1860, Ozone raises to 7120, Anchor folds, Baseline raises to 8515, Pearl calls 2665, River Rat calls 2665, Hammer calls 2665, Ozone raises to 10330, Baseline raises to 12325, Pearl calls 3810, River Rat calls 3810, Hammer calls 3810, Ozone raises to 14920, Baseline raises to 17775, Pearl calls 5450, River Rat calls 5450, Hammer calls 5450, Ozone goes ALL-IN to 19950, Baseline calls 2175, Pearl calls 2175, River Rat calls 2175, Hammer calls 2175, [turn: Q♥ Q♠ A♥ 5♣], [river: Q♥ Q♠ A♥ 5♣ 6♣] → Baseline wins 52463 with Three of a kind, Qs (Q♦ 3♣); Ozone wins 52462 with Three of a kind, Qs (Q♣ 4♣)",
+   "pot": 104925
+  }
+ ],
+ "finishes": [
+  {
+   "name": "Pearl",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "River Rat",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Hammer",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 1,
+   "provisional": true
+  }
+ ],
  "champion": null,
  "tableWinner": null,
  "defended": false,
