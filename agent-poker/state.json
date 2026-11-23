@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:45:28.240Z",
+ "updatedAt": "2026-11-23T02:45:50.859Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 91,
+ "handsPlayed": 92,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21311,
+     "stack": 21211,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 16470,
+     "stack": 16570,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 65
+   "handsPlayed": 66
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21311,
+   "stack": 21211,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16470,
+   "stack": 16570,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 66,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 56,
-   "text": "Table 1 · Hand 56 · blinds 40/80 · Midas folds, Shadow folds, Icebox folds, Velvet calls 40, Venus checks, [flop: 9♦ 3♥ K♣], Velvet checks, Venus checks, [turn: 9♦ 3♥ K♣ K♠], Velvet checks, Venus checks, [river: 9♦ 3♥ K♣ K♠ 7♦], Velvet checks, Venus checks → Velvet wins 160 with Three of a kind, Ks (K♥ J♣)",
-   "pot": 160
-  },
   {
    "table": 1,
    "handNo": 57,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 65,
    "text": "Table 1 · Hand 65 · blinds 50/100 · Midas folds, Icebox calls 50, Velvet checks, [flop: 8♦ Q♣ 7♣], Icebox checks, Velvet checks, [turn: 8♦ Q♣ 7♣ 3♦], Icebox checks, Velvet checks, [river: 8♦ Q♣ 7♣ 3♦ 3♠], Icebox checks, Velvet checks → Velvet wins 200 with Pair of 3s (K♦ 2♣)",
+   "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 66,
+   "text": "Table 1 · Hand 66 · blinds 50/100 · Icebox folds, Velvet calls 50, Midas checks, [flop: Q♠ 2♥ 8♥], Velvet checks, Midas checks, [turn: Q♠ 2♥ 8♥ J♠], Velvet checks, Midas checks, [river: Q♠ 2♥ 8♥ J♠ 5♣], Velvet checks, Midas checks → Velvet wins 200 with Pair of 5s (5♦ 10♠)",
    "pot": 200
   }
  ],
