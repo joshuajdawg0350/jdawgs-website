@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:06:19.043Z",
+ "updatedAt": "2026-11-23T04:06:40.050Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 198,
+ "handsPlayed": 199,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 39336,
+     "stack": 39486,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 480664,
+     "stack": 480514,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 172
+   "handsPlayed": 173
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 39336,
+   "stack": 39486,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 480664,
+   "stack": 480514,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 173,
-  "stage": "preflop",
-  "board": [],
-  "pot": 450,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 163,
-   "text": "Table 1 · Hand 163 · blinds 150/300 · Velvet calls 300, Midas calls 150, Icebox checks, [flop: J♠ 10♠ 5♠], Midas raises to 495, Icebox folds, Velvet calls 495, [turn: J♠ 10♠ 5♠ J♣], Midas raises to 1040, Velvet calls 1040, [river: J♠ 10♠ 5♠ J♣ 9♦], Midas raises to 2184, Velvet raises to 4629, Midas raises to 12635, Velvet goes ALL-IN to 16803, Midas goes ALL-IN to 17390 → Midas wins 38163 with Full house, Js full of 9s (9♠ J♥)",
-   "pot": 38163
-  },
   {
    "table": 1,
    "handNo": 164,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 172,
    "text": "Table 1 · Hand 172 · blinds 150/300 · Midas folds → Icebox takes 450 (everyone else folded)",
+   "pot": 450
+  },
+  {
+   "table": 1,
+   "handNo": 173,
+   "text": "Table 1 · Hand 173 · blinds 150/300 · Icebox folds → Midas takes 450 (everyone else folded)",
    "pot": 450
   }
  ],
