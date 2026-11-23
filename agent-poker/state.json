@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:15:12.441Z",
+ "updatedAt": "2026-11-23T04:15:32.770Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 213,
+ "handsPlayed": 214,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 187
+   "handsPlayed": 188
   }
  ],
  "seats": [
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 188,
-  "stage": "preflop",
-  "board": [],
-  "pot": 600,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 178,
-   "text": "Table 1 · Hand 178 · blinds 150/300 · Midas calls 150, Icebox checks, [flop: K♥ 10♠ 6♥], Icebox checks, Midas checks, [turn: K♥ 10♠ 6♥ 10♣], Icebox checks, Midas checks, [river: K♥ 10♠ 6♥ 10♣ A♣], Icebox checks, Midas checks → Midas wins 600 with Two pair, 10s and 6s (6♦ 4♦)",
-   "pot": 600
-  },
   {
    "table": 1,
    "handNo": 179,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 187,
    "text": "Table 1 · Hand 187 · blinds 200/400 · Icebox calls 200, Midas checks, [flop: 10♣ 9♠ 10♥], Midas checks, Icebox checks, [turn: 10♣ 9♠ 10♥ 6♥], Midas checks, Icebox checks, [river: 10♣ 9♠ 10♥ 6♥ 5♣], Midas checks, Icebox checks → Icebox wins 800 with Two pair, 10s and 2s (2♥ 2♠)",
+   "pot": 800
+  },
+  {
+   "table": 1,
+   "handNo": 188,
+   "text": "Table 1 · Hand 188 · blinds 200/400 · Midas calls 200, Icebox checks, [flop: A♦ 9♣ 9♦], Icebox checks, Midas checks, [turn: A♦ 9♣ 9♦ Q♥], Icebox checks, Midas checks, [river: A♦ 9♣ 9♦ Q♥ J♥], Icebox checks, Midas checks → Midas wins 400 with Pair of 9s (5♦ 3♣); Icebox wins 400 with Pair of 9s (6♠ 2♣)",
    "pot": 800
   }
  ],
