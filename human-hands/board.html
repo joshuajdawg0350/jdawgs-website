@@ -39,11 +39,12 @@
 </script>
 <script>document.documentElement.className+=" js"</script>
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="hh-app.css">
 <link rel="icon" href="../assets/j-favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/j-icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../assets/j-icon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/j-icon-180.png">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/hh-icon-180.png">
+<link rel="manifest" href="/human-hands/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
 <style>
   :root{--eb:#39c2ff;--eb-bright:#39c2ff}
@@ -635,13 +636,7 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
   }
 })();
 </script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
-  });
-}
-</script>
+<script src="hh-app.js" defer></script>
 <script src="../jdawgs-chat.js" defer></script>
 <script>
 /* ============================================================

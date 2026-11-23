@@ -39,11 +39,12 @@
 </script>
 <script>document.documentElement.className+=" js"</script>
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="hh-app.css">
 <link rel="icon" href="../assets/j-favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/j-icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../assets/j-icon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/j-icon-180.png">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/hh-icon-180.png">
+<link rel="manifest" href="/human-hands/manifest.webmanifest">
 <meta name="theme-color" content="#05080E">
 <style>
   :root{--eb:#39c2ff;--eb-bright:#39c2ff}
@@ -247,6 +248,23 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
     <div class="hh-confirm" id="hh-confirm" hidden>
       <p class="hh-confirm-title">You're in.</p>
       <p class="hh-confirm-body" data-hh-confirm-body></p>
+      <div class="hh-appstep" id="hh-app-step">
+        <h3>Next step — get live job alerts</h3>
+        <p>Install the Human Hands app and turn on alerts: when a job posts, it lands on this phone as a notification — the job, the pay, the area. The app opens straight to the job board.</p>
+        <div class="hh-row">
+          <button type="button" class="btn btn-primary" data-hh-install-btn>Install the app</button>
+          <button type="button" class="btn btn-ghost" data-hh-alerts-toggle>Enable notifications</button>
+        </div>
+        <div class="hh-ios-help" data-hh-ios-help hidden>
+          <strong>On an iPhone:</strong> alerts only work inside the installed app —
+          <ol>
+            <li>Tap the <b>Share</b> button in Safari (the square with an arrow).</li>
+            <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+            <li>Open the Human Hands app from your home screen, go to <b>Alerts</b>, and tap <b>Enable notifications</b>.</li>
+          </ol>
+        </div>
+        <p class="hh-app-status" data-hh-app-status role="status"></p>
+      </div>
     </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#hh-signup-manual">Sign up free</a>
@@ -374,6 +392,7 @@ if (window.HHGoogle) {
         confirmBox.hidden = false;
         confirmBox.scrollIntoView({ block: 'center' });
       }
+      if (window.HHApp) window.HHApp.afterSignup(r.email || p.email);
     });
   });
 }
@@ -442,6 +461,7 @@ if (window.HHGoogle) {
         confirmBox.hidden = false;
         confirmBox.scrollIntoView({ block: 'center' });
       }
+      if (window.HHApp) window.HHApp.afterSignup(out.body.email || data.email);
     }).catch(function () {
       if (btn) btn.disabled = false;
       if (status) {
@@ -451,13 +471,7 @@ if (window.HHGoogle) {
   });
 })();
 </script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
-  });
-}
-</script>
+<script src="hh-app.js" defer></script>
 <script src="../jdawgs-chat.js" defer></script>
 <script>
 /* ============================================================

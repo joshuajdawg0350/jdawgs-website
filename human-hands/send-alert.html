@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Send a Job Alert — Human Hands (operator)</title>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/hh-icon-192.png">
+<meta name="theme-color" content="#05080E">
+<link rel="stylesheet" href="hh-app.css">
+<style>
+  body{background:#05080e;color:#c9d4e4}
+  .wrap{max-width:640px}
+  .card{border:1px solid #39c2ff;border-radius:10px;background:#10151f;padding:1.4rem 1.6rem;margin:1.6rem 0}
+  .field{margin-bottom:1rem}
+  label{display:block;font-weight:600;color:#fff;margin-bottom:.4rem}
+  input{width:100%;background:#0b0f16;border:1px solid #33435e;border-radius:6px;color:#fff;padding:.75rem .9rem;font:inherit;min-height:48px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:52px;border-radius:10px;border:1px solid #d7e5f2;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-weight:800;cursor:pointer;font-size:1rem}
+  pre{background:#0b0f16;border:1px solid #33435e;border-radius:8px;padding:1rem;white-space:pre-wrap;word-break:break-word}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 style="color:#fff;margin-top:1.6rem">Send a job alert — operator</h1>
+  <p>Fire this when a job is <strong style="color:#fff">approved and payment-matched</strong> — the same moment it goes live for workers. The alert goes to every worker device with alerts on. Title is the job; the line under it is pay + area. Tapping it opens the board. The exact address never goes in an alert.</p>
+  <div class="card">
+    <form id="alertForm">
+      <div class="field">
+        <label for="fSecret">Send secret (PUSH_SEND_SECRET — lives in the Vercel project env; never saved here)</label>
+        <input id="fSecret" type="password" autocomplete="off" required>
+      </div>
+      <div class="field">
+        <label for="fTitle">Job title</label>
+        <input id="fTitle" type="text" maxlength="140" placeholder="e.g. Check on a vacant rental between tenants" required>
+      </div>
+      <div class="field">
+        <label for="fPay">Pay (as shown to workers)</label>
+        <input id="fPay" type="text" maxlength="40" placeholder="e.g. $40">
+      </div>
+      <div class="field">
+        <label for="fArea">Area (never the exact address)</label>
+        <input id="fArea" type="text" maxlength="80" placeholder="e.g. Midtown, Springfield">
+      </div>
+      <button class="btn" type="submit" id="fBtn">Send job alert to all workers</button>
+    </form>
+    <p id="fStatus" role="status" style="min-height:1.4em"></p>
+    <pre id="fResult" hidden></pre>
+  </div>
+  <p><a href="board.html">← Job board</a> · <a href="alerts.html">Alerts page</a></p>
+</div>
+<script src="hh-config.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('alertForm');
+  var status = document.getElementById('fStatus');
+  var result = document.getElementById('fResult');
+  var btn = document.getElementById('fBtn');
+  var apiBase = (window.HH_API_BASE || '').replace(/\/+$/, '');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var secret = document.getElementById('fSecret').value.trim();
+    var body = {
+      title: document.getElementById('fTitle').value.trim(),
+      pay: document.getElementById('fPay').value.trim(),
+      area: document.getElementById('fArea').value.trim()
+    };
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+    result.hidden = true;
+    fetch(apiBase + '/api/push/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + secret },
+      body: JSON.stringify(body)
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        return { status: res.status, data: data };
+      });
+    }).then(function (r) {
+      btn.disabled = false;
+      result.textContent = JSON.stringify(r.data, null, 2);
+      result.hidden = false;
+      if (r.status === 200 && r.data.ok) {
+        status.textContent = 'Alert sent: ' + r.data.accepted + ' of ' + r.data.total +
+          ' device(s) accepted it' + (r.data.pruned ? ' · ' + r.data.pruned + ' dead subscription(s) pruned' : '') +
+          (r.data.failed ? ' · ' + r.data.failed + ' failed' : '') + '.';
+      } else if (r.status === 401) {
+        status.textContent = 'The secret was refused — check it and try again. Nothing was sent.';
+      } else {
+        status.textContent = 'Send failed (HTTP ' + r.status + '). Nothing was confirmed sent.';
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      status.textContent = 'Network error — the send did not complete.';
+    });
+  });
+})();
+</script>
+</body>
+</html>
