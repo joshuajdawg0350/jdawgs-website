@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:38:19.871Z",
+ "updatedAt": "2026-11-23T01:38:40.834Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 16,
+ "handsPlayed": 17,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 20675,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20940,
+     "stack": 20820,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 59840,
+     "stack": 59660,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19810,
+     "stack": 19630,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19500,
+     "stack": 19320,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20190,
+     "stack": 20010,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 20675,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20940,
+   "stack": 20820,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 59840,
+   "stack": 59660,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19810,
+   "stack": 19630,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19500,
+   "stack": 19320,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20190,
+   "stack": 20010,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 3,
-   "text": "Table 1 · Hand 3 · blinds 25/50 · Anchor calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, Ozone checks, [flop: Q♥ 8♦ 7♥], Ozone checks, Anchor checks, Quarry checks, Baseline checks, Venus checks, [turn: Q♥ 8♦ 7♥ A♥], Ozone checks, Anchor checks, Quarry checks, Baseline checks, Venus checks, [river: Q♥ 8♦ 7♥ A♥ Q♠], Ozone checks, Anchor checks, Quarry checks, Baseline raises to 55, Venus calls 55, Ozone calls 55, Anchor calls 55, Quarry calls 55 → Baseline wins 550 with Three of a kind, Qs (Q♦ 9♥)",
-   "pot": 550
-  },
   {
    "table": 2,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 6,
    "text": "Table 1 · Hand 6 · blinds 25/50 · Shadow calls 50, Ozone folds, Midas folds, Baseline calls 25, Venus checks, [flop: J♣ 5♥ 3♠], Baseline checks, Venus checks, Shadow checks, [turn: J♣ 5♥ 3♠ 4♥], Baseline checks, Venus checks, Shadow checks, [river: J♣ 5♥ 3♠ 4♥ Q♥], Baseline checks, Venus checks, Shadow checks → Baseline wins 150 with Pair of Js (7♣ J♦)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 6,
+   "text": "Table 2 · Hand 6 · blinds 25/50 · Granite raises to 120, Bulldog calls 120, Copper calls 120, Compass calls 120, Sixgun calls 95, Slick calls 70, [flop: 7♥ 3♦ 9♣], Sixgun checks, Slick checks, Granite checks, Bulldog checks, Copper checks, Compass checks, [turn: 7♥ 3♦ 9♣ A♣], Sixgun checks, Slick checks, Granite checks, Bulldog checks, Copper checks, Compass checks, [river: 7♥ 3♦ 9♣ A♣ K♦], Sixgun checks, Slick checks, Granite checks, Bulldog raises to 60, Copper calls 60, Compass calls 60, Sixgun calls 60, Slick calls 60, Granite folds → Slick wins 1020 with Pair of As (A♠ 6♣)",
+   "pot": 1020
   }
  ],
  "finishes": [
