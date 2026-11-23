@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:41:23.441Z",
+ "updatedAt": "2026-11-23T02:41:43.867Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 85,
+ "handsPlayed": 86,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21401,
+     "stack": 21561,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 481999,
+     "stack": 481919,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 16600,
+     "stack": 16520,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 59
+   "handsPlayed": 60
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21401,
+   "stack": 21561,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 481999,
+   "stack": 481919,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16600,
+   "stack": 16520,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 60,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 50,
-   "text": "Table 1 · Hand 50 · blinds 40/80 · Venus calls 80, Midas folds, Shadow calls 80, Icebox calls 40, Velvet checks, [flop: K♦ 7♥ 2♦], Icebox checks, Velvet checks, Venus checks, Shadow checks, [turn: K♦ 7♥ 2♦ 4♣], Icebox checks, Velvet checks, Venus checks, Shadow checks, [river: K♦ 7♥ 2♦ 4♣ Q♦], Icebox checks, Velvet checks, Venus checks, Shadow checks → Velvet wins 320 with Three of a kind, 4s (4♥ 4♠)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 51,
@@ -404,6 +390,12 @@
    "handNo": 59,
    "text": "Table 1 · Hand 59 · blinds 40/80 · Velvet calls 80, Venus calls 80, Midas folds, Shadow calls 40, Icebox checks, [flop: A♦ K♣ J♣], Shadow checks, Icebox checks, Velvet checks, Venus checks, [turn: A♦ K♣ J♣ 2♦], Shadow checks, Icebox checks, Velvet checks, Venus checks, [river: A♦ K♣ J♣ 2♦ 4♣], Shadow checks, Icebox raises to 80, Velvet calls 80, Venus raises to 160, Shadow calls 160, Icebox raises to 240, Velvet calls 160, Venus raises to 320, Shadow calls 160, Icebox raises to 430, Velvet calls 190, Venus raises to 540, Shadow calls 220, Icebox raises to 690, Velvet calls 260, Venus raises to 840, Shadow calls 300, Icebox raises to 1045, Velvet calls 355, Venus raises to 1250, Shadow calls 410, Icebox raises to 1530, Velvet calls 485, Venus raises to 1810, Shadow calls 560, Icebox raises to 2190, Velvet calls 660, Venus raises to 2570, Shadow calls 760, Icebox raises to 2950, Velvet calls 760, Venus raises to 3330, Shadow calls 760, Icebox raises to 3845, Velvet calls 895, Venus raises to 4360, Shadow calls 1030, Icebox raises to 5060, Velvet calls 1215, Venus raises to 5760, Shadow calls 325, Icebox raises to 6710, Velvet calls 1650, Venus raises to 7660, Icebox raises to 8610, Velvet calls 1900, Venus raises to 9560, Icebox raises to 10510, Velvet calls 1900, Venus raises to 11460, Icebox raises to 12750, Velvet folds, Venus raises to 14040, Icebox raises to 15795, Venus raises to 17550, Icebox raises to 19935, Venus raises to 22320, Icebox raises to 24705, Venus raises to 27090, Icebox raises to 30335, Venus raises to 33580, Icebox raises to 37995, Venus raises to 42410, Icebox raises to 48415, Venus raises to 54420, Icebox raises to 62585, Venus raises to 70750, Icebox raises to 81855, Venus goes ALL-IN to 92034, Icebox raises to 107139 → Icebox wins 214688 with Flush, K high (Q♣ 6♣)",
    "pot": 214688
+  },
+  {
+   "table": 1,
+   "handNo": 60,
+   "text": "Table 1 · Hand 60 · blinds 40/80 · Icebox calls 80, Velvet calls 40, Midas checks, [flop: 4♦ 5♣ 2♦], Velvet checks, Midas checks, Icebox checks, [turn: 4♦ 5♣ 2♦ Q♠], Velvet checks, Midas checks, Icebox checks, [river: 4♦ 5♣ 2♦ Q♠ J♦], Velvet checks, Midas checks, Icebox checks → Midas wins 240 with Pair of 5s (5♠ 10♦)",
+   "pot": 240
   }
  ],
  "finishes": [
