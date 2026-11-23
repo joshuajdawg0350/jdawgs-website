@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:37:55.329Z",
+ "updatedAt": "2026-11-23T01:38:19.871Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 32898,
+     "stack": 32998,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 54545,
+     "stack": 54495,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20110,
+     "stack": 20060,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32898,
+   "stack": 32998,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 54545,
+   "stack": 54495,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20110,
+   "stack": 20060,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally folds, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 4♥ 2♥ 6♦], Millstone raises to 50, Icebox folds, Velvet calls 50, Pickpocket folds, Professor folds, Deuce folds, Wildfire calls 50, [turn: 4♥ 2♥ 6♦ A♥], Millstone raises to 50, Velvet calls 50, Wildfire calls 50, [river: 4♥ 2♥ 6♦ A♥ 9♦], Millstone raises to 50, Velvet calls 50, Wildfire calls 50 → Millstone wins 800 with Three of a kind, 4s (4♦ 4♠)",
-   "pot": 800
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Icebox calls 50, Velvet calls 50, Professor calls 25, Quarry checks, [flop: 4♥ A♣ A♥], Professor checks, Quarry checks, Wildfire checks, Millstone checks, Icebox checks, Velvet checks, [turn: 4♥ A♣ A♥ 3♠], Professor checks, Quarry checks, Wildfire raises to 180, Millstone calls 180, Icebox calls 180, Velvet calls 180, Professor calls 180, Quarry calls 180, [river: 4♥ A♣ A♥ 3♠ A♦], Professor raises to 55, Quarry raises to 110, Wildfire goes ALL-IN to 210, Millstone raises to 310, Icebox calls 310, Velvet calls 310, Professor raises to 420, Quarry calls 310, Millstone goes ALL-IN to 470, Icebox calls 160, Velvet calls 160, Professor raises to 590, Quarry calls 170, Icebox calls 120, Velvet calls 120 → Wildfire wins 2640 with Full house, As full of 3s (10♥ 3♥); Icebox wins 1780 with Three of a kind, As (K♣ 9♥)",
    "pot": 4420
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 25/50 · Shadow calls 50, Ozone folds, Midas folds, Baseline calls 25, Venus checks, [flop: J♣ 5♥ 3♠], Baseline checks, Venus checks, Shadow checks, [turn: J♣ 5♥ 3♠ 4♥], Baseline checks, Venus checks, Shadow checks, [river: J♣ 5♥ 3♠ 4♥ Q♥], Baseline checks, Venus checks, Shadow checks → Baseline wins 150 with Pair of Js (7♣ J♦)",
+   "pot": 150
   }
  ],
  "finishes": [
