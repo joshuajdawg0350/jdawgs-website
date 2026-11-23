@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:54:51.633Z",
+ "updatedAt": "2026-11-23T02:55:11.139Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -335,7 +335,15 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 78,
+  "stage": "preflop",
+  "board": [],
+  "pot": 150,
+  "toAct": "Icebox",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
