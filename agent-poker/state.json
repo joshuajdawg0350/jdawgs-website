@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T03:14:24.555Z",
+ "updatedAt": "2026-11-23T03:14:42.168Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 127,
+ "handsPlayed": 128,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22077,
+     "stack": 22237,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17826,
+     "stack": 17666,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 101
+   "handsPlayed": 102
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22077,
+   "stack": 22237,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17826,
+   "stack": 17666,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 102,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 92,
-   "text": "Table 1 · Hand 92 · blinds 60/120 · Midas folds, Icebox folds → Velvet takes 180 (everyone else folded)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 93,
@@ -404,6 +390,12 @@
    "handNo": 101,
    "text": "Table 1 · Hand 101 · blinds 80/160 · Midas folds, Icebox folds → Velvet takes 240 (everyone else folded)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 102,
+   "text": "Table 1 · Hand 102 · blinds 80/160 · Icebox folds, Velvet calls 80, Midas checks, [flop: 2♥ Q♣ 7♥], Velvet checks, Midas checks, [turn: 2♥ Q♣ 7♥ J♥], Velvet checks, Midas checks, [river: 2♥ Q♣ 7♥ J♥ 9♠], Velvet checks, Midas checks → Midas wins 320 with K high (6♠ K♠)",
+   "pot": 320
   }
  ],
  "finishes": [
