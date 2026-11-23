@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:36:31.858Z",
+ "updatedAt": "2026-11-23T01:36:52.437Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 52743,
+     "stack": 32898,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 54545,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 14805,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 52743,
+   "stack": 32898,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19845,
+   "stack": 54545,
    "status": "seated",
    "reentered": false
   },
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 14805,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Slick",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire folds, Millstone checks, [flop: Q♦ J♣ 3♥], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [turn: Q♦ J♣ 3♥ A♦], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [river: Q♦ J♣ 3♥ A♦ 8♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks → Velvet wins 375 with Two pair, Qs and Js (J♠ Q♣)",
-   "pot": 375
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -552,6 +546,12 @@
    "handNo": 4,
    "text": "Table 3 · Hand 4 · blinds 25/50 · Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 25, Tally checks, [flop: Q♥ 9♠ 4♦], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, Millstone checks, [turn: Q♥ 9♠ 4♦ 4♣], Velvet checks, Tally checks, Pickpocket raises to 210, Professor raises to 440, Deuce calls 440, Wildfire calls 440, Millstone calls 440, Velvet calls 440, Tally calls 440, Pickpocket raises to 2360, Professor raises to 4470, Deuce calls 4030, Wildfire calls 4030, Millstone calls 4030, Velvet folds, Tally calls 4030, Pickpocket goes ALL-IN to 19740, Professor goes ALL-IN to 19800, Deuce calls 15270, Wildfire calls 15330, Millstone calls 15330, Tally calls 15320, [river: Q♥ 9♠ 4♦ 4♣ 10♠], Wildfire checks, Millstone checks → Professor wins 119460 with Three of a kind, 4s (4♥ 7♥)",
    "pot": 119460
+  },
+  {
+   "table": 1,
+   "handNo": 5,
+   "text": "Table 1 · Hand 5 · blinds 25/50 · Baseline calls 50, Venus calls 50, Shadow folds, Ozone folds, Anchor calls 25, Midas checks, [flop: 10♥ K♦ Q♦], Anchor checks, Midas checks, Baseline checks, Venus checks, [turn: 10♥ K♦ Q♦ K♥], Anchor checks, Midas checks, Baseline checks, Venus checks, [river: 10♥ K♦ Q♦ K♥ Q♥], Anchor checks, Midas checks, Baseline raises to 55, Venus raises to 110, Anchor calls 110, Midas folds, Baseline raises to 170, Venus raises to 230, Anchor calls 120, Baseline raises to 295, Venus raises to 360, Anchor calls 130, Baseline raises to 430, Venus raises to 500, Anchor calls 140, Baseline raises to 575, Venus raises to 650, Anchor calls 150, Baseline raises to 735, Venus raises to 820, Anchor calls 170, Baseline raises to 915, Venus raises to 1010, Anchor calls 190, Baseline raises to 1115, Venus raises to 1220, Anchor calls 210, Baseline raises to 1335, Venus raises to 1450, Anchor calls 230, Baseline raises to 1575, Venus raises to 1700, Anchor calls 250, Baseline raises to 1840, Venus raises to 1980, Anchor calls 280, Baseline raises to 2135, Venus raises to 2290, Anchor calls 310, Baseline raises to 2460, Venus raises to 2630, Anchor calls 340, Baseline raises to 2815, Venus raises to 3000, Anchor calls 370, Baseline raises to 3205, Venus raises to 3410, Anchor calls 410, Baseline raises to 3635, Venus raises to 3860, Anchor calls 450, Baseline raises to 4110, Venus raises to 4360, Anchor calls 500, Baseline raises to 4635, Venus raises to 4910, Anchor calls 550, Baseline raises to 5215, Venus raises to 5520, Anchor calls 610, Baseline raises to 5855, Venus raises to 6190, Anchor calls 670, Baseline raises to 6560, Venus raises to 6930, Anchor calls 740, Baseline raises to 7335, Venus raises to 7740, Anchor calls 810, Baseline raises to 8185, Venus raises to 8630, Anchor calls 890, Baseline raises to 9120, Venus raises to 9610, Anchor calls 980, Baseline raises to 10150, Venus raises to 10690, Anchor calls 1080, Baseline raises to 11285, Venus raises to 11880, Anchor calls 1190, Baseline raises to 12535, Venus raises to 13190, Anchor calls 1310, Baseline raises to 13910, Venus raises to 14630, Anchor calls 1440, Baseline raises to 15420, Venus raises to 16210, Anchor calls 125, Baseline raises to 17080, Venus raises to 17950, Baseline raises to 18905, Venus goes ALL-IN to 19795, Baseline raises to 20845 → Baseline wins 1050 with Two pair, Ks and Qs (8♣ 2♥); Venus wins 54545 with Two pair, Ks and Qs (8♥ J♦)",
+   "pot": 55595
   }
  ],
  "finishes": [
@@ -617,6 +617,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 4,
+   "provisional": true
+  },
+  {
+   "name": "Anchor",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 5,
    "provisional": true
   }
  ],
