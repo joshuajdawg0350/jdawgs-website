@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>J-Dawgs Content Calendar</title>
+<style>
+:root{
+  --bg:#05070a; --panel:#0b0f16; --panel2:#101623; --line:#232c3d;
+  --chrome1:#e8edf5; --chrome2:#9aa7ba; --chrome3:#5b6a80;
+  --blue:#2f9dff; --blue2:#0077e6; --glow:0 0 12px rgba(47,157,255,.45);
+  --text:#e8edf5; --muted:#9aa7ba; --danger:#ff5d6c; --ok:#39d98a;
+  --radius:14px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  max-width:100%; overflow-x:hidden}
+button{font-family:inherit; cursor:pointer}
+.chrome-text{background:linear-gradient(180deg,#ffffff 0%,#c7d2e0 45%,#7e8ea6 55%,#dfe7f2 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent}
+header{padding:14px 14px 8px; background:linear-gradient(180deg,#0d1320,#05070a);
+  border-bottom:1px solid var(--line); position:sticky; top:0; z-index:30}
+h1{margin:0; font-size:22px; letter-spacing:.4px}
+.tagline{color:var(--muted); font-size:12px; margin-top:2px}
+.howto{margin:10px 14px 0; background:var(--panel2); border:1px solid var(--line);
+  border-radius:var(--radius); padding:10px 12px; font-size:13px; color:var(--chrome1)}
+.howto b{color:var(--blue)}
+.toolbar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 14px 4px}
+.navbtn,.tabbtn,.actbtn{border:1px solid var(--line); background:linear-gradient(180deg,#1a2334,#0d1320);
+  color:var(--text); border-radius:10px; padding:9px 12px; font-size:14px; min-height:42px}
+.navbtn:active,.tabbtn:active,.actbtn:active{transform:translateY(1px)}
+.tabbtn.active{background:linear-gradient(180deg,var(--blue),var(--blue2)); border-color:var(--blue);
+  color:#fff; box-shadow:var(--glow)}
+.actbtn.primary{background:linear-gradient(180deg,var(--blue),var(--blue2)); border-color:var(--blue);
+  color:#fff; box-shadow:var(--glow); font-weight:700}
+.period{font-size:17px; font-weight:700; margin:6px 14px 2px}
+main{padding:6px 10px 120px}
+/* month grid */
+.mgrid{display:grid; grid-template-columns:repeat(7,1fr); gap:4px}
+.dow{font-size:11px; color:var(--muted); text-align:center; padding:4px 0; text-transform:uppercase; letter-spacing:.5px}
+.day{background:var(--panel); border:1px solid var(--line); border-radius:10px; min-height:74px;
+  padding:4px; overflow:hidden; cursor:pointer}
+.day.dim{opacity:.38}
+.day.today{border-color:var(--blue); box-shadow:var(--glow)}
+.day .dnum{font-size:12px; font-weight:700; color:var(--chrome1)}
+.day.dragover{outline:2px dashed var(--blue)}
+.chip{display:block; margin-top:3px; font-size:10.5px; line-height:1.25; padding:3px 5px; border-radius:6px;
+  color:#04101f; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:grab}
+.more{font-size:10px; color:var(--blue); margin-top:2px}
+/* week view */
+.wgrid{display:flex; flex-direction:column; gap:8px}
+.wday{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:8px 10px}
+.wday.today{border-color:var(--blue); box-shadow:var(--glow)}
+.wday h3{margin:0 0 6px; font-size:14px}
+.wday h3 span{color:var(--muted); font-weight:400; font-size:12px}
+.witem{display:flex; gap:8px; align-items:flex-start; background:var(--panel2); border:1px solid var(--line);
+  border-left:5px solid var(--blue); border-radius:10px; padding:8px; margin-top:6px; cursor:pointer; width:100%; text-align:left; color:var(--text)}
+.witem .t{font-weight:700; font-size:14px}
+.witem .c{color:var(--muted); font-size:12.5px; white-space:pre-wrap; word-break:break-word}
+.witem .m{font-size:11px; color:var(--blue)}
+.addday{margin-top:8px; background:none; border:1px dashed var(--chrome3); color:var(--chrome2);
+  border-radius:8px; padding:7px 10px; font-size:13px; width:100%}
+/* list view */
+.empty{color:var(--muted); text-align:center; padding:26px 10px; font-size:14px}
+/* bottom sheet editor */
+.sheet-wrap{position:fixed; inset:0; z-index:60; display:none}
+.sheet-wrap.open{display:block}
+.sheet-bg{position:absolute; inset:0; background:rgba(0,0,0,.65)}
+.sheet{position:absolute; left:0; right:0; bottom:0; max-height:92vh; overflow-y:auto;
+  background:linear-gradient(180deg,#131b2c,#0a0f18); border-top:2px solid var(--blue);
+  border-radius:20px 20px 0 0; padding:6px 16px calc(18px + env(safe-area-inset-bottom));
+  box-shadow:0 -8px 40px rgba(0,0,0,.7); touch-action:pan-y}
+.handle{width:52px; height:5px; border-radius:3px; background:var(--chrome3); margin:8px auto 4px}
+.sheet h2{margin:6px 0 10px; font-size:18px}
+label{display:block; font-size:12px; color:var(--muted); margin:12px 0 4px; text-transform:uppercase; letter-spacing:.5px}
+input,select,textarea{width:100%; background:#060a11; color:var(--text); border:1px solid var(--line);
+  border-radius:10px; padding:11px; font-size:15px; font-family:inherit}
+textarea{min-height:96px; resize:vertical}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.sheet-btns{display:flex; gap:8px; margin-top:18px; flex-wrap:wrap}
+.sheet-btns button{flex:1; min-height:46px; border-radius:10px; font-size:15px; border:1px solid var(--line);
+  background:linear-gradient(180deg,#1a2334,#0d1320); color:var(--text)}
+#saveBtn{background:linear-gradient(180deg,var(--blue),var(--blue2)); color:#fff; font-weight:700; border-color:var(--blue)}
+#deleteBtn{color:var(--danger); border-color:#4a232a}
+.toast{position:fixed; left:50%; transform:translateX(-50%); bottom:22px; z-index:80; background:#0d1524;
+  border:1px solid var(--blue); color:var(--text); padding:10px 16px; border-radius:24px; font-size:14px;
+  box-shadow:var(--glow); display:none; max-width:92vw; text-align:center}
+footer{color:var(--chrome3); font-size:11px; text-align:center; padding:0 14px 26px}
+@media print{
+  header,.toolbar,.howto,.sheet-wrap,.toast,footer{display:none !important}
+  body{background:#fff; color:#000} main{padding:0}
+  .day,.wday,.witem{background:#fff; border-color:#bbb; color:#000; box-shadow:none}
+  .day .dnum,.witem .t{color:#000} .chip{border:1px solid #888}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="chrome-text">J-DAWGS CONTENT CALENDAR</h1>
+  <div class="tagline">Plan your posts. Stay consistent. Big dreams for a small world.</div>
+</header>
+
+<div class="howto">
+  <b>How it works:</b> Tap a day to add a post. Tap any post to edit or delete it.
+  Drag a post to a new day in Month view, or change its date in the editor.
+  Everything saves on this device automatically — no account, no sign-in.
+  Use <b>Copy Week</b> to paste your plan into your own AI assistant.
+</div>
+
+<div class="toolbar">
+  <button class="navbtn" id="prevBtn" aria-label="Previous">&#9664;</button>
+  <button class="navbtn" id="todayBtn">Today</button>
+  <button class="navbtn" id="nextBtn" aria-label="Next">&#9654;</button>
+  <button class="tabbtn" data-view="month">Month</button>
+  <button class="tabbtn" data-view="week">Week</button>
+  <button class="tabbtn" data-view="list">Today / Week</button>
+</div>
+<div class="toolbar">
+  <button class="actbtn primary" id="addBtn">+ Add Post</button>
+  <button class="actbtn" id="copyWeekBtn">Copy Week as Text</button>
+  <button class="actbtn" id="csvBtn">Export CSV</button>
+  <button class="actbtn" id="icsBtn">Export .ics</button>
+  <button class="actbtn" id="printBtn">Print</button>
+</div>
+
+<div class="period" id="periodLabel"></div>
+<main id="main"></main>
+<footer>J-Dawgs Industries &middot; Content Calendar &middot; Your plan is stored only in this browser.</footer>
+
+<div class="sheet-wrap" id="sheetWrap">
+  <div class="sheet-bg" id="sheetBg"></div>
+  <div class="sheet" id="sheet">
+    <div class="handle" id="sheetHandle"></div>
+    <h2 id="sheetTitle">Add Post</h2>
+    <input type="hidden" id="fId">
+    <label for="fTitle">Title</label>
+    <input id="fTitle" type="text" placeholder="e.g. New product video" maxlength="120">
+    <div class="row2">
+      <div><label for="fDate">Date</label><input id="fDate" type="date"></div>
+      <div><label for="fTime">Time</label><input id="fTime" type="time" value="09:00"></div>
+    </div>
+    <div class="row2">
+      <div><label for="fPlatform">Platform</label>
+        <select id="fPlatform">
+          <option>Facebook</option><option>Instagram</option><option>YouTube</option>
+          <option>TikTok</option><option>X</option><option>Bluesky</option>
+          <option>Moltbook</option><option>Blog</option><option>Email</option><option>Other</option>
+        </select></div>
+      <div><label for="fStatus">Status</label>
+        <select id="fStatus">
+          <option>Idea</option><option>Drafted</option><option>Scheduled</option><option>Posted</option>
+        </select></div>
+    </div>
+    <label for="fCaption">Caption / Copy</label>
+    <textarea id="fCaption" placeholder="Write the post text here..."></textarea>
+    <div class="sheet-btns">
+      <button id="saveBtn">Save</button>
+      <button id="deleteBtn" style="display:none">Delete</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+var KEY = "jdawgs-content-calendar-v1";
+var PLATFORM_COLORS = {
+  "Facebook":"#7db8ff","Instagram":"#ff9de2","YouTube":"#ff8a80","TikTok":"#8ef6ff",
+  "X":"#d7dee9","Bluesky":"#6fc3ff","Moltbook":"#ffd97d","Blog":"#b6ffb0",
+  "Email":"#ffc48f","Other":"#c9b8ff"
+};
+var items = load();
+var view = "month";
+var cursor = startOfDay(new Date());
+
+function load(){
+  try{ var raw = localStorage.getItem(KEY); var arr = raw ? JSON.parse(raw) : []; return Array.isArray(arr) ? arr : []; }
+  catch(e){ return []; }
+}
+function save(){ localStorage.setItem(KEY, JSON.stringify(items)); }
+function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+function startOfDay(d){ var x = new Date(d); x.setHours(0,0,0,0); return x; }
+function pad(n){ return (n<10?"0":"")+n; }
+function isoDate(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function parseDate(s){ var p = s.split("-"); return new Date(+p[0], +p[1]-1, +p[2]); }
+function fmtDay(d){ return d.toLocaleDateString(undefined,{weekday:"short", month:"short", day:"numeric"}); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function itemsOn(dateStr){ return items.filter(function(i){ return i.date === dateStr; })
+  .sort(function(a,b){ return (a.time||"").localeCompare(b.time||""); }); }
+function toast(msg){ var t = document.getElementById("toast"); t.textContent = msg; t.style.display="block";
+  clearTimeout(t._h); t._h = setTimeout(function(){ t.style.display="none"; }, 2600); }
+
+/* ---------- rendering ---------- */
+function startOfWeek(d){ var x = startOfDay(d); x.setDate(x.getDate() - x.getDay()); return x; }
+function render(){
+  document.querySelectorAll(".tabbtn").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-view") === view); });
+  var main = document.getElementById("main");
+  var label = document.getElementById("periodLabel");
+  if(view === "month"){
+    var first = new Date(cursor.getFullYear(), cursor.getMonth(), 1);
+    label.textContent = first.toLocaleDateString(undefined,{month:"long", year:"numeric"});
+    main.innerHTML = renderMonth(first);
+    bindDays();
+  } else if(view === "week"){
+    var ws = startOfWeek(cursor), we = new Date(ws); we.setDate(we.getDate()+6);
+    label.textContent = fmtDay(ws) + " – " + fmtDay(we);
+    main.innerHTML = renderWeek(ws);
+    bindDays();
+  } else {
+    label.textContent = "Today & This Week";
+    main.innerHTML = renderList();
+    bindDays();
+  }
+}
+function renderMonth(first){
+  var y = first.getFullYear(), m = first.getMonth();
+  var gridStart = startOfWeek(first);
+  var todayStr = isoDate(new Date());
+  var html = '<div class="mgrid">';
+  ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].forEach(function(d){ html += '<div class="dow">'+d+'</div>'; });
+  for(var i=0;i<42;i++){
+    var d = new Date(gridStart); d.setDate(d.getDate()+i);
+    var ds = isoDate(d);
+    var dayItems = itemsOn(ds);
+    html += '<div class="day'+(d.getMonth()!==m?' dim':'')+(ds===todayStr?' today':'')+'" data-date="'+ds+'">'
+      + '<div class="dnum">'+d.getDate()+'</div>';
+    dayItems.slice(0,3).forEach(function(it){
+      html += '<span class="chip" draggable="true" data-id="'+it.id+'" style="background:'+(PLATFORM_COLORS[it.platform]||"#ccc")+'">'
+        + esc(it.title) + '</span>';
+    });
+    if(dayItems.length > 3) html += '<div class="more">+'+(dayItems.length-3)+' more</div>';
+    html += '</div>';
+  }
+  return html + '</div>';
+}
+function itemButton(it){
+  return '<button class="witem" data-id="'+it.id+'" style="border-left-color:'+(PLATFORM_COLORS[it.platform]||"#2f9dff")+'">'
+    + '<div><div class="t">'+esc(it.title)+'</div>'
+    + '<div class="m">'+esc(it.platform)+' &middot; '+esc(it.status)+(it.time?' &middot; '+esc(it.time):'')+'</div>'
+    + (it.caption ? '<div class="c">'+esc(it.caption)+'</div>' : '') + '</div></button>';
+}
+function renderWeek(ws){
+  var todayStr = isoDate(new Date());
+  var html = '<div class="wgrid">';
+  for(var i=0;i<7;i++){
+    var d = new Date(ws); d.setDate(d.getDate()+i);
+    var ds = isoDate(d), dayItems = itemsOn(ds);
+    html += '<div class="wday'+(ds===todayStr?' today':'')+'" data-date="'+ds+'">'
+      + '<h3>'+fmtDay(d)+(ds===todayStr?' <span>(today)</span>':'')+'</h3>';
+    dayItems.forEach(function(it){ html += itemButton(it); });
+    if(!dayItems.length) html += '<div class="c" style="color:var(--muted);font-size:12.5px">Nothing planned.</div>';
+    html += '<button class="addday" data-add="'+ds+'">+ Add to this day</button></div>';
+  }
+  return html + '</div>';
+}
+function renderList(){
+  var today = startOfDay(new Date()), ws = startOfWeek(today), we = new Date(ws); we.setDate(we.getDate()+6);
+  var inWeek = items.filter(function(i){ var d = parseDate(i.date); return d >= ws && d <= we; })
+    .sort(function(a,b){ return (a.date+a.time).localeCompare(b.date+b.time); });
+  if(!inWeek.length) return '<div class="empty">Nothing planned this week yet.<br>Tap a day in Month or Week view, or use + Add Post.</div>';
+  var html = "", lastDate = "";
+  inWeek.forEach(function(it){
+    if(it.date !== lastDate){ lastDate = it.date;
+      html += '<h3 style="margin:14px 4px 4px">'+fmtDay(parseDate(it.date))+(it.date===isoDate(today)?' (today)':'')+'</h3>'; }
+    html += itemButton(it);
+  });
+  return html;
+}
+function bindDays(){
+  document.querySelectorAll(".day").forEach(function(el){
+    el.addEventListener("click", function(e){
+      if(e.target.classList.contains("chip")) return;
+      openEditor(null, el.getAttribute("data-date"));
+    });
+  });
+  document.querySelectorAll("[data-add]").forEach(function(el){
+    el.addEventListener("click", function(){ openEditor(null, el.getAttribute("data-add")); });
+  });
+  document.querySelectorAll(".chip, .witem").forEach(function(el){
+    el.addEventListener("click", function(e){ e.stopPropagation(); openEditor(el.getAttribute("data-id"), null); });
+  });
+  /* drag to move (month view) */
+  document.querySelectorAll(".chip").forEach(function(el){
+    el.addEventListener("dragstart", function(e){ e.dataTransfer.setData("text/plain", el.getAttribute("data-id")); });
+  });
+  document.querySelectorAll(".day").forEach(function(el){
+    el.addEventListener("dragover", function(e){ e.preventDefault(); el.classList.add("dragover"); });
+    el.addEventListener("dragleave", function(){ el.classList.remove("dragover"); });
+    el.addEventListener("drop", function(e){
+      e.preventDefault(); el.classList.remove("dragover");
+      var id = e.dataTransfer.getData("text/plain");
+      var it = items.find(function(x){ return x.id === id; });
+      if(it){ it.date = el.getAttribute("data-date"); save(); render(); toast("Moved to " + it.date); }
+    });
+  });
+}
+
+/* ---------- editor sheet ---------- */
+var wrap = document.getElementById("sheetWrap");
+function openEditor(id, dateStr){
+  var it = id ? items.find(function(x){ return x.id === id; }) : null;
+  document.getElementById("fId").value = it ? it.id : "";
+  document.getElementById("fTitle").value = it ? it.title : "";
+  document.getElementById("fDate").value = it ? it.date : (dateStr || isoDate(new Date()));
+  document.getElementById("fTime").value = it ? (it.time || "09:00") : "09:00";
+  document.getElementById("fPlatform").value = it ? it.platform : "Facebook";
+  document.getElementById("fStatus").value = it ? it.status : "Idea";
+  document.getElementById("fCaption").value = it ? (it.caption || "") : "";
+  document.getElementById("deleteBtn").style.display = it ? "" : "none";
+  document.getElementById("sheetTitle").textContent = it ? "Edit Post" : "Add Post";
+  wrap.classList.add("open");
+}
+function closeEditor(){ wrap.classList.remove("open"); }
+document.getElementById("sheetBg").addEventListener("click", closeEditor);
+document.getElementById("cancelBtn").addEventListener("click", closeEditor);
+document.getElementById("saveBtn").addEventListener("click", function(){
+  var title = document.getElementById("fTitle").value.trim();
+  var date = document.getElementById("fDate").value;
+  if(!title){ toast("Give the post a title first."); return; }
+  if(!date){ toast("Pick a date first."); return; }
+  var id = document.getElementById("fId").value;
+  var data = { title:title, date:date,
+    time: document.getElementById("fTime").value || "",
+    platform: document.getElementById("fPlatform").value,
+    status: document.getElementById("fStatus").value,
+    caption: document.getElementById("fCaption").value };
+  if(id){ var it = items.find(function(x){ return x.id === id; }); Object.assign(it, data); }
+  else { data.id = uid(); items.push(data); }
+  save(); closeEditor(); render(); toast(id ? "Post updated." : "Post added.");
+});
+document.getElementById("deleteBtn").addEventListener("click", function(){
+  var id = document.getElementById("fId").value;
+  items = items.filter(function(x){ return x.id !== id; });
+  save(); closeEditor(); render(); toast("Post deleted.");
+});
+/* drag-sheet: swipe the handle down to close */
+(function(){
+  var handle = document.getElementById("sheetHandle"), sheet = document.getElementById("sheet"), startY = null;
+  handle.addEventListener("touchstart", function(e){ startY = e.touches[0].clientY; }, {passive:true});
+  handle.addEventListener("touchmove", function(e){
+    if(startY === null) return;
+    var dy = e.touches[0].clientY - startY;
+    if(dy > 0) sheet.style.transform = "translateY(" + dy + "px)";
+  }, {passive:true});
+  handle.addEventListener("touchend", function(e){
+    if(startY === null) return;
+    var dy = e.changedTouches[0].clientY - startY;
+    sheet.style.transform = "";
+    if(dy > 70) closeEditor();
+    startY = null;
+  });
+})();
+
+/* ---------- toolbar ---------- */
+document.querySelectorAll(".tabbtn").forEach(function(b){
+  b.addEventListener("click", function(){ view = b.getAttribute("data-view"); render(); });
+});
+document.getElementById("prevBtn").addEventListener("click", function(){
+  if(view === "month") cursor.setMonth(cursor.getMonth()-1);
+  else cursor.setDate(cursor.getDate()-7);
+  render();
+});
+document.getElementById("nextBtn").addEventListener("click", function(){
+  if(view === "month") cursor.setMonth(cursor.getMonth()+1);
+  else cursor.setDate(cursor.getDate()+7);
+  render();
+});
+document.getElementById("todayBtn").addEventListener("click", function(){ cursor = startOfDay(new Date()); render(); });
+document.getElementById("addBtn").addEventListener("click", function(){ openEditor(null, isoDate(cursor)); });
+document.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
+
+function download(name, content, type){
+  var blob = new Blob([content], {type:type});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 400);
+}
+function csvCell(s){ return '"' + String(s==null?"":s).replace(/"/g,'""') + '"'; }
+document.getElementById("csvBtn").addEventListener("click", function(){
+  var rows = [["Date","Time","Platform","Title","Caption","Status"].join(",")];
+  items.slice().sort(function(a,b){ return (a.date+a.time).localeCompare(b.date+b.time); })
+    .forEach(function(it){
+      rows.push([it.date, it.time||"", it.platform, it.title, it.caption||"", it.status].map(csvCell).join(","));
+    });
+  download("content-calendar.csv", rows.join("\r\n"), "text/csv");
+  toast("CSV downloaded.");
+});
+function icsEscape(s){ return String(s==null?"":s).replace(/\\/g,"\\\\").replace(/;/g,"\\;")
+  .replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
+document.getElementById("icsBtn").addEventListener("click", function(){
+  var lines = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//J-Dawgs Industries//Content Calendar//EN"];
+  items.forEach(function(it){
+    var d = it.date.replace(/-/g,"");
+    var t = (it.time || "09:00").replace(":","") + "00";
+    lines.push("BEGIN:VEVENT");
+    lines.push("UID:" + it.id + "@jdawgs-content-calendar");
+    lines.push("DTSTAMP:20260101T000000Z");
+    lines.push("DTSTART:" + d + "T" + t);
+    lines.push("SUMMARY:" + icsEscape("[" + it.platform + "] " + it.title));
+    lines.push("DESCRIPTION:" + icsEscape((it.caption || "") + " (Status: " + it.status + ")"));
+    lines.push("END:VEVENT");
+  });
+  lines.push("END:VCALENDAR");
+  download("content-calendar.ics", lines.join("\r\n"), "text/calendar");
+  toast("Calendar file (.ics) downloaded.");
+});
+document.getElementById("copyWeekBtn").addEventListener("click", function(){
+  var ws = startOfWeek(cursor), we = new Date(ws); we.setDate(we.getDate()+6);
+  var lines = ["My content plan for the week of " + fmtDay(ws) + " to " + fmtDay(we) + ":"];
+  var any = false;
+  for(var i=0;i<7;i++){
+    var d = new Date(ws); d.setDate(d.getDate()+i);
+    var dayItems = itemsOn(isoDate(d));
+    if(dayItems.length){
+      any = true;
+      lines.push("", fmtDay(d) + ":");
+      dayItems.forEach(function(it){
+        lines.push("- " + (it.time || "") + " [" + it.platform + "] " + it.title
+          + " (" + it.status + ")" + (it.caption ? " — " + it.caption.replace(/\s+/g," ") : ""));
+      });
+    }
+  }
+  if(!any) lines.push("", "Nothing scheduled this week yet.");
+  var text = lines.join("\n");
+  function done(){ toast("Week copied. Paste it into your AI assistant."); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
+});
+function fallbackCopy(text){
+  var ta = document.createElement("textarea");
+  ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); }catch(e){}
+  ta.remove();
+}
+
+render();
+</script>
+</body>
+</html>
