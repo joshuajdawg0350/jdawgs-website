@@ -12,11 +12,21 @@
 //    HHGoogle.onVerified(fn). Sign-in is optional on every page.
 //  * If Google's script is blocked or slow, the block explains that and the
 //    form below carries on untouched — sign-in never gates the form.
+//  * HHGoogle.completeSignup() is the one-tap worker signup (owner order,
+//    2026-11-13): it re-sends the credential from the sign-in the user
+//    just completed to POST /api/signup, which verifies it server-side
+//    again and records the verified { name, email } AS the signup — no
+//    form, no questions. The credential never leaves this closure; page
+//    hooks only see the result. Pages opt in by calling it from their
+//    onVerified hook (work.html does; board.html does not — posters are
+//    not signed up as workers).
 (function () {
   'use strict';
 
   var clientId = (window.HH_GOOGLE_CLIENT_ID || '').trim();
   var apiBase = (window.HH_API_BASE || 'https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app').replace(/\/+$/, '');
+
+  var lastCredential = null;
 
   var HHGoogle = {
     enabled: !!clientId,
@@ -28,6 +38,24 @@
       if (HHGoogle.profile) {
         try { fn(HHGoogle.profile); } catch (e) { /* page hook errors never break sign-in */ }
       }
+    },
+    completeSignup: function () {
+      return new Promise(function (resolve) {
+        if (!lastCredential) { resolve({ ok: false, error: 'no_credential' }); return; }
+        fetch(apiBase + '/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id_token: lastCredential })
+        }).then(function (res) {
+          return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+        }).then(function (r) {
+          if (r.ok && r.data && r.data.signed_up === true) {
+            resolve({ ok: true, duplicate: r.data.duplicate === true, name: r.data.name || '', email: r.data.email || '' });
+          } else {
+            resolve({ ok: false, error: (r.data && r.data.error) || 'signup_failed' });
+          }
+        }).catch(function () { resolve({ ok: false, error: 'network' }); });
+      });
     }
   };
   window.HHGoogle = HHGoogle;
@@ -40,11 +68,12 @@
   }
 
   function gracefulFail() {
-    setStatus('Google sign-in is unavailable right now — no problem, the form works exactly the same without it.');
+    setStatus('Google sign-in is unavailable right now — please try again in a moment. If it keeps failing, email joshuajdawg0350@gmail.com and we will sign you up by hand.');
   }
 
   function onCredential(response) {
     if (!response || !response.credential) { gracefulFail(); return; }
+    lastCredential = response.credential;
     setStatus('Checking your sign-in with Google…');
     fetch(apiBase + '/api/auth/google', {
       method: 'POST',
