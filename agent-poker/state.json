@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:23:15.947Z",
+ "updatedAt": "2026-11-23T04:23:33.450Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 227,
+ "handsPlayed": 228,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 201
+   "handsPlayed": 202
   }
  ],
  "seats": [
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 202,
-  "stage": "preflop",
-  "board": [],
-  "pot": 750,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 192,
-   "text": "Table 1 · Hand 192 · blinds 200/400 · Midas calls 200, Icebox checks, [flop: 8♠ 3♥ 4♣], Icebox checks, Midas checks, [turn: 8♠ 3♥ 4♣ 10♠], Icebox checks, Midas checks, [river: 8♠ 3♥ 4♣ 10♠ 7♥], Icebox checks, Midas checks → Midas wins 800 with J high (5♥ J♦)",
-   "pot": 800
-  },
   {
    "table": 1,
    "handNo": 193,
@@ -404,6 +390,12 @@
    "handNo": 201,
    "text": "Table 1 · Hand 201 · blinds 250/500 · Icebox folds → Midas takes 750 (everyone else folded)",
    "pot": 750
+  },
+  {
+   "table": 1,
+   "handNo": 202,
+   "text": "Table 1 · Hand 202 · blinds 250/500 · Midas calls 250, Icebox checks, [flop: 4♣ 4♥ 8♦], Icebox checks, Midas checks, [turn: 4♣ 4♥ 8♦ A♦], Icebox checks, Midas checks, [river: 4♣ 4♥ 8♦ A♦ 10♦], Icebox checks, Midas checks → Midas wins 500 with Pair of 4s (K♣ 5♦); Icebox wins 500 with Pair of 4s (5♥ K♥)",
+   "pot": 1000
   }
  ],
  "finishes": [
