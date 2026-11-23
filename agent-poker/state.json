@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:37:14.441Z",
+ "updatedAt": "2026-11-23T01:37:35.058Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 14,
+ "handsPlayed": 15,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 440,
+     "stack": 2640,
      "status": "seated",
      "reentered": false
     },
@@ -185,15 +185,15 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 700,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 20835,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19525,
+     "stack": 18705,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 119460,
+     "stack": 118640,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20190,
+     "stack": 19370,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 440,
+   "stack": 2640,
    "status": "seated",
    "reentered": false
   },
@@ -328,8 +328,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 700,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19875,
+   "stack": 20835,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19525,
+   "stack": 18705,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 119460,
+   "stack": 118640,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20190,
+   "stack": 19370,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Wildfire",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass folds, Marble calls 50, Sixgun calls 50, Slick folds, Granite calls 50, Dice calls 25, Bulldog checks, [flop: J♣ 3♦ K♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [turn: J♣ 3♦ K♥ 2♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [river: J♣ 3♦ K♥ 2♥ 4♠], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite raises to 50, Dice calls 50, Bulldog calls 50, Marble folds, Sixgun calls 50 → Granite wins 450 with Straight, 5 high (5♣ A♠)",
-   "pot": 450
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -552,6 +538,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Slick folds, Granite folds, Bulldog calls 50, Copper folds, Compass calls 25, Sixgun checks, [flop: A♠ J♥ 10♣], Compass checks, Sixgun checks, Bulldog checks, [turn: A♠ J♥ 10♣ K♥], Compass checks, Sixgun raises to 90, Bulldog folds, Compass calls 90, [river: A♠ J♥ 10♣ K♥ 2♥], Compass checks, Sixgun raises to 200, Compass calls 200 → Sixgun wins 730 with Straight, A high (J♠ Q♦)",
    "pot": 730
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Wildfire calls 50, Millstone calls 50, Icebox calls 50, Velvet calls 50, Professor calls 25, Quarry checks, [flop: 4♥ A♣ A♥], Professor checks, Quarry checks, Wildfire checks, Millstone checks, Icebox checks, Velvet checks, [turn: 4♥ A♣ A♥ 3♠], Professor checks, Quarry checks, Wildfire raises to 180, Millstone calls 180, Icebox calls 180, Velvet calls 180, Professor calls 180, Quarry calls 180, [river: 4♥ A♣ A♥ 3♠ A♦], Professor raises to 55, Quarry raises to 110, Wildfire goes ALL-IN to 210, Millstone raises to 310, Icebox calls 310, Velvet calls 310, Professor raises to 420, Quarry calls 310, Millstone goes ALL-IN to 470, Icebox calls 160, Velvet calls 160, Professor raises to 590, Quarry calls 170, Icebox calls 120, Velvet calls 120 → Wildfire wins 2640 with Full house, As full of 3s (10♥ 3♥); Icebox wins 1780 with Three of a kind, As (K♣ 9♥)",
+   "pot": 4420
   }
  ],
  "finishes": [
@@ -624,6 +616,14 @@
    "place": null,
    "kind": "house",
    "table": 1,
+   "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 3,
    "handNo": 5,
    "provisional": true
   }
