@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T03:23:57.832Z",
+ "updatedAt": "2026-11-23T03:24:23.052Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 135,
+ "handsPlayed": 136,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21421,
+     "stack": 23313,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 479857,
+     "stack": 479777,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 18722,
+     "stack": 16910,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 109
+   "handsPlayed": 110
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21421,
+   "stack": 23313,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 479857,
+   "stack": 479777,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18722,
+   "stack": 16910,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 110,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 100,
-   "text": "Table 1 · Hand 100 · blinds 60/120 · Velvet calls 120, Midas calls 60, Icebox checks, [flop: 5♦ 9♦ 10♠], Midas checks, Icebox checks, Velvet checks, [turn: 5♦ 9♦ 10♠ 3♠], Midas checks, Icebox checks, Velvet checks, [river: 5♦ 9♦ 10♠ 3♠ 7♥], Midas checks, Icebox checks, Velvet checks → Midas wins 360 with Pair of 2s (2♠ 2♥)",
-   "pot": 360
-  },
   {
    "table": 1,
    "handNo": 101,
@@ -404,6 +390,12 @@
    "handNo": 109,
    "text": "Table 1 · Hand 109 · blinds 80/160 · Velvet calls 160, Midas calls 80, Icebox checks, [flop: 4♦ K♦ A♥], Midas checks, Icebox checks, Velvet checks, [turn: 4♦ K♦ A♥ 10♦], Midas checks, Icebox checks, Velvet checks, [river: 4♦ K♦ A♥ 10♦ 9♠], Midas checks, Icebox checks, Velvet checks → Velvet wins 480 with Pair of As (7♠ A♦)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 110,
+   "text": "Table 1 · Hand 110 · blinds 80/160 · Midas calls 160, Icebox folds, Velvet checks, [flop: 7♥ 6♦ 4♦], Velvet checks, Midas raises to 220, Velvet calls 220, [turn: 7♥ 6♦ 4♦ 9♠], Velvet checks, Midas raises to 462, Velvet calls 462, [river: 7♥ 6♦ 4♦ 9♠ 10♣], Velvet checks, Midas raises to 970, Velvet calls 970 → Midas wins 3704 with Three of a kind, 10s (10♥ 10♠)",
+   "pot": 3704
   }
  ],
  "finishes": [
