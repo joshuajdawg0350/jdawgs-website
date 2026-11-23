@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:31:50.263Z",
+ "updatedAt": "2026-11-23T01:32:15.468Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 52463,
+     "stack": 52413,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20250,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 52462,
+     "stack": 52412,
      "status": "seated",
      "reentered": false
     },
@@ -85,7 +85,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 15075,
+     "stack": 15025,
      "status": "seated",
      "reentered": false
     },
@@ -93,12 +93,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 52463,
+   "stack": 52413,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20250,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 52462,
+   "stack": 52412,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 15075,
+   "stack": 15025,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   }
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Ozone",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -510,6 +510,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire folds, Millstone checks, [flop: Q♦ J♣ 3♥], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [turn: Q♦ J♣ 3♥ A♦], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, [river: Q♦ J♣ 3♥ A♦ 8♣], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks → Velvet wins 375 with Two pair, Qs and Js (J♠ Q♣)",
    "pot": 375
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Ozone calls 50, Anchor calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Venus calls 25, Shadow checks, [flop: 7♣ 9♦ Q♥], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks, [turn: 7♣ 9♦ Q♥ 6♥], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks, [river: 7♣ 9♦ Q♥ 6♥ 4♣], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks → Shadow wins 300 with Two pair, 9s and 4s (9♠ 4♥)",
+   "pot": 300
   }
  ],
  "finishes": [
