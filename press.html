@@ -85,7 +85,6 @@ body.hustle-face .site-footer a:hover{color:#39c2ff}
 /* money-only gold (kit \u00a71): prices keep a gold tone, never a gold theme */
 body.hustle-face .product .p-price{color:#ffd34d}
 body.hustle-face figure img{border:1px solid #263144}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -187,6 +186,7 @@ body.hustle-face figure img{border:1px solid #263144}
       <ul>
         <li><a href="https://news.prfree.org/@joshuajdawg0350/humans-hire-the-ai-the-ai-does-the-hiring-springfield-construction-worker-launches-human-hands-a-job-marketplace-run-through-ai-agents-p29r1m3mjxfr">PRFree — the full launch release</a></li>
         <li><a href="https://submitpr.org/press-release/humans-hire-the-ai-the-ai-does-the-hiring-springfield-construction-worker-launches-human-hands-a-job-marketplace-run-thr">SubmitPR — the full launch release</a></li>
+        <li><a href="https://sbj.net/stories/construction-worker-launches-ai-platform-to-connect-job-seekers-projects,106443">Springfield Business Journal — “Construction worker launches AI platform to connect job seekers, projects,” by Geoff Pickle (November 10, 2026)</a> (subscriber access)</li>
         <li><a href="https://dev.to/joshuajdawg0350/i-built-a-free-safety-grader-for-mcp-configs-then-graded-the-official-examples-1ep7">dev.to — "I Built a Free Safety Grader for MCP Configs"</a></li>
       </ul>
     </div>
@@ -476,13 +476,6 @@ if ('serviceWorker' in navigator) {
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>
