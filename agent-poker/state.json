@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:40:04.932Z",
+ "updatedAt": "2026-11-23T01:40:27.625Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 20,
+ "handsPlayed": 21,
  "tables": [
   {
    "id": 1,
@@ -71,14 +71,6 @@
      "house": true,
      "stack": 0,
      "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 52142,
-     "status": "seated",
      "reentered": false
     },
     {
@@ -158,6 +150,14 @@
      "stack": 0,
      "status": "out",
      "reentered": false
+    },
+    {
+     "name": "Ozone",
+     "kind": "house",
+     "house": true,
+     "stack": 52142,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 7
@@ -177,7 +177,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 2590,
+     "stack": 2790,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20785,
+     "stack": 20735,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19065,
+     "stack": 19015,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 118430,
+     "stack": 118380,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19320,
+     "stack": 19270,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 2590,
+   "stack": 2790,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20785,
+   "stack": 20735,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19065,
+   "stack": 19015,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "name": "Ozone",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 52142,
    "status": "seated",
    "reentered": false
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 118430,
+   "stack": 118380,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19320,
+   "stack": 19270,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 7,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 4,
-   "text": "Table 2 · Hand 4 · blinds 25/50 · Marble calls 50, Sixgun calls 50, Slick folds, Granite calls 50, Dice calls 50, Bulldog calls 50, Copper folds, Compass checks, [flop: 7♠ 2♦ 3♣], Compass checks, Marble checks, Sixgun checks, Granite checks, Dice checks, Bulldog checks, [turn: 7♠ 2♦ 3♣ 4♠], Compass raises to 60, Marble calls 60, Sixgun folds, Granite folds, Dice calls 60, Bulldog raises to 365, Compass folds, Marble calls 305, Dice calls 305, [river: 7♠ 2♦ 3♣ 4♠ 7♦], Marble raises to 50, Dice raises to 970, Bulldog raises to 3180, Marble raises to 5390, Dice calls 4420, Bulldog raises to 14655, Marble goes ALL-IN to 19420, Dice calls 13930, Bulldog goes ALL-IN to 19670 → Bulldog wins 59890 with Full house, 4s full of 7s (4♦ 4♣)",
-   "pot": 59890
-  },
   {
    "table": 3,
    "handNo": 4,
@@ -552,6 +538,12 @@
    "handNo": 7,
    "text": "Table 2 · Hand 7 · blinds 25/50 · Bulldog raises to 170, Copper folds, Compass calls 170, Sixgun raises to 420, Slick calls 395, Granite folds, Bulldog raises to 1160, Compass calls 990, Sixgun raises to 3085, Slick calls 2665, Bulldog raises to 8210, Compass calls 7050, Sixgun goes ALL-IN to 20010, Slick calls 16925, Bulldog raises to 53905, Compass calls 11110, Slick calls 665, [flop: J♥ 2♠ Q♣], Bulldog goes ALL-IN to 5755, [turn: J♥ 2♠ Q♣ 2♣], [river: J♥ 2♠ Q♣ 2♣ 7♦] → Bulldog wins 119715 with Full house, Qs full of 2s (Q♥ Q♦)",
    "pot": 119715
+  },
+  {
+   "table": 3,
+   "handNo": 7,
+   "text": "Table 3 · Hand 7 · blinds 25/50 · Velvet calls 50, Professor calls 50, Quarry calls 50, Wildfire calls 25, Icebox checks, [flop: A♣ 6♥ 2♣], Wildfire checks, Icebox checks, Velvet checks, Professor checks, Quarry checks, [turn: A♣ 6♥ 2♣ 3♥], Wildfire checks, Icebox checks, Velvet checks, Professor checks, Quarry checks, [river: A♣ 6♥ 2♣ 3♥ K♦], Wildfire checks, Icebox checks, Velvet checks, Professor checks, Quarry checks → Wildfire wins 250 with Pair of Ks (4♥ K♣)",
+   "pot": 250
   }
  ],
  "finishes": [
