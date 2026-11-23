@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:40:04.565Z",
+ "updatedAt": "2026-11-23T02:40:24.047Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 83,
+ "handsPlayed": 84,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 92194,
+     "stack": 92114,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21441,
+     "stack": 21401,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 4485,
+     "stack": 4765,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 374610,
+     "stack": 374530,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 27270,
+     "stack": 27190,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 57
+   "handsPlayed": 58
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21441,
+   "stack": 21401,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 92194,
+   "stack": 92114,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 4485,
+   "stack": 4765,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 374610,
+   "stack": 374530,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 27270,
+   "stack": 27190,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 58,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 48,
-   "text": "Table 1 · Hand 48 · blinds 40/80 · Icebox folds, Velvet calls 80, Venus calls 80, Midas folds, Shadow checks, [flop: 4♠ 6♠ 10♣], Shadow checks, Velvet checks, Venus checks, [turn: 4♠ 6♠ 10♣ J♦], Shadow checks, Velvet checks, Venus raises to 95, Shadow folds, Velvet folds → Venus takes 375 (everyone else folded)",
-   "pot": 375
-  },
   {
    "table": 1,
    "handNo": 49,
@@ -404,6 +390,12 @@
    "handNo": 57,
    "text": "Table 1 · Hand 57 · blinds 40/80 · Shadow folds, Icebox folds, Velvet calls 80, Venus calls 40, Midas checks, [flop: 4♥ K♦ J♠], Venus checks, Midas checks, Velvet checks, [turn: 4♥ K♦ J♠ A♠], Venus checks, Midas checks, Velvet checks, [river: 4♥ K♦ J♠ A♠ 10♠], Venus raises to 80, Midas calls 80, Velvet calls 80 → Velvet wins 480 with Flush, A high (6♠ 3♠)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 58,
+   "text": "Table 1 · Hand 58 · blinds 40/80 · Icebox calls 80, Velvet calls 80, Venus calls 80, Midas folds, Shadow checks, [flop: 2♠ 10♣ 5♣], Shadow checks, Icebox checks, Velvet checks, Venus checks, [turn: 2♠ 10♣ 5♣ 8♦], Shadow checks, Icebox checks, Velvet checks, Venus checks, [river: 2♠ 10♣ 5♣ 8♦ Q♠], Shadow checks, Icebox checks, Velvet checks, Venus checks → Shadow wins 360 with Pair of Qs (Q♣ A♠)",
+   "pot": 360
   }
  ],
  "finishes": [
