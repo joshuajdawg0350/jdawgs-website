@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T03:10:25.435Z",
+ "updatedAt": "2026-11-23T03:10:47.160Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 121,
+ "handsPlayed": 122,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21201,
+     "stack": 21321,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17944,
+     "stack": 17824,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 95
+   "handsPlayed": 96
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21201,
+   "stack": 21321,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17944,
+   "stack": 17824,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 96,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 86,
-   "text": "Table 1 · Hand 86 · blinds 60/120 · Midas folds, Icebox raises to 240, Velvet calls 120, [flop: 2♦ 3♦ K♠], Icebox checks, Velvet checks, [turn: 2♦ 3♦ K♠ A♠], Icebox checks, Velvet checks, [river: 2♦ 3♦ K♠ A♠ 4♣], Icebox checks, Velvet checks → Icebox wins 480 with Pair of 10s (10♥ 10♣)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 87,
@@ -404,6 +390,12 @@
    "handNo": 95,
    "text": "Table 1 · Hand 95 · blinds 60/120 · Midas folds, Icebox calls 60, Velvet checks, [flop: 7♠ 5♠ 4♣], Icebox checks, Velvet checks, [turn: 7♠ 5♠ 4♣ J♥], Icebox checks, Velvet checks, [river: 7♠ 5♠ 4♣ J♥ 3♥], Icebox checks, Velvet checks → Velvet wins 240 with Pair of Js (J♦ 2♣)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 96,
+   "text": "Table 1 · Hand 96 · blinds 60/120 · Icebox folds, Velvet calls 60, Midas checks, [flop: 6♣ 2♣ Q♠], Velvet checks, Midas checks, [turn: 6♣ 2♣ Q♠ 9♥], Velvet checks, Midas checks, [river: 6♣ 2♣ Q♠ 9♥ 3♦], Velvet checks, Midas raises to 132, Velvet folds → Midas takes 372 (everyone else folded)",
+   "pot": 372
   }
  ],
  "finishes": [
