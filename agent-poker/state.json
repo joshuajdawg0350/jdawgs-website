@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T03:38:06.934Z",
+ "updatedAt": "2026-11-23T03:38:33.654Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 154,
+ "handsPlayed": 155,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20881,
+     "stack": 21081,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 18242,
+     "stack": 18042,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 128
+   "handsPlayed": 129
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20881,
+   "stack": 21081,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18242,
+   "stack": 18042,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 129,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 119,
-   "text": "Table 1 · Hand 119 · blinds 80/160 · Midas folds, Icebox folds → Velvet takes 240 (everyone else folded)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 120,
@@ -404,6 +390,12 @@
    "handNo": 128,
    "text": "Table 1 · Hand 128 · blinds 100/200 · Midas folds, Icebox folds → Velvet takes 300 (everyone else folded)",
    "pot": 300
+  },
+  {
+   "table": 1,
+   "handNo": 129,
+   "text": "Table 1 · Hand 129 · blinds 100/200 · Icebox folds, Velvet calls 100, Midas checks, [flop: 7♣ K♥ A♦], Velvet checks, Midas raises to 220, Velvet folds → Midas takes 620 (everyone else folded)",
+   "pot": 620
   }
  ],
  "finishes": [
