@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:31:57.822Z",
+ "updatedAt": "2026-11-23T04:32:13.544Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 242,
+ "handsPlayed": 243,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 40950,
+     "stack": 41200,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 479050,
+     "stack": 478800,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 216
+   "handsPlayed": 217
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 40950,
+   "stack": 41200,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 479050,
+   "stack": 478800,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 217,
-  "stage": "preflop",
-  "board": [],
-  "pot": 750,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 207,
-   "text": "Table 1 · Hand 207 · blinds 250/500 · Icebox calls 250, Midas checks, [flop: 2♥ K♥ 4♠], Midas checks, Icebox checks, [turn: 2♥ K♥ 4♠ 2♦], Midas checks, Icebox checks, [river: 2♥ K♥ 4♠ 2♦ Q♠], Midas raises to 550, Icebox folds → Midas takes 1550 (everyone else folded)",
-   "pot": 1550
-  },
   {
    "table": 1,
    "handNo": 208,
@@ -404,6 +390,12 @@
    "handNo": 216,
    "text": "Table 1 · Hand 216 · blinds 250/500 · Midas calls 250, Icebox checks, [flop: 6♠ 4♦ 10♦], Icebox checks, Midas checks, [turn: 6♠ 4♦ 10♦ 9♦], Icebox checks, Midas checks, [river: 6♠ 4♦ 10♦ 9♦ K♠], Icebox checks, Midas checks → Icebox wins 1000 with Pair of 10s (10♠ 3♠)",
    "pot": 1000
+  },
+  {
+   "table": 1,
+   "handNo": 217,
+   "text": "Table 1 · Hand 217 · blinds 250/500 · Icebox folds → Midas takes 750 (everyone else folded)",
+   "pot": 750
   }
  ],
  "finishes": [
