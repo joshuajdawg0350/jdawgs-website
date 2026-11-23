@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:29:25.242Z",
+ "updatedAt": "2026-11-23T02:29:51.628Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 69,
+ "handsPlayed": 70,
  "tables": [
   {
    "id": 1,
@@ -21,8 +21,8 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 10219,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 237233,
+     "stack": 91114,
      "status": "seated",
      "reentered": false
     },
@@ -45,8 +45,8 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 78539,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 5205,
+     "stack": 5165,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 161533,
+     "stack": 374850,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 5390,
+     "stack": 26990,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   }
  ],
  "seats": [
@@ -108,8 +108,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 78539,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 237233,
+   "stack": 91114,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5205,
+   "stack": 5165,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 161533,
+   "stack": 374850,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 5390,
+   "stack": 26990,
    "status": "seated",
    "reentered": false
   },
@@ -270,8 +270,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10219,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 44,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 34,
-   "text": "Table 1 · Hand 34 · blinds 30/60 · Shadow folds, Icebox calls 60, Velvet calls 60, Ozone calls 60, Professor calls 60, Venus folds, Baseline calls 30, Midas checks, [flop: 2♦ 3♥ 2♣], Baseline checks, Midas checks, Icebox checks, Velvet checks, Ozone checks, Professor checks, [turn: 2♦ 3♥ 2♣ 8♦], Baseline checks, Midas checks, Icebox checks, Velvet checks, Ozone checks, Professor checks, [river: 2♦ 3♥ 2♣ 8♦ 10♦], Baseline raises to 65, Midas folds, Icebox raises to 155, Velvet calls 155, Ozone calls 155, Professor calls 155, Baseline calls 90 → Icebox wins 1135 with Flush, J high (J♦ 4♦)",
-   "pot": 1135
-  },
   {
    "table": 1,
    "handNo": 35,
@@ -404,6 +390,12 @@
    "handNo": 43,
    "text": "Table 1 · Hand 43 · blinds 40/80 · Icebox calls 80, Velvet calls 80, Ozone raises to 250, Professor calls 250, Venus folds, Baseline calls 250, Midas folds, Shadow calls 170, Icebox calls 170, Velvet calls 170, [flop: 9♥ 7♥ 8♦], Shadow checks, Icebox raises to 80, Velvet calls 80, Ozone calls 80, Professor raises to 1150, Baseline calls 1150, Shadow folds, Icebox raises to 2605, Velvet calls 2525, Ozone calls 2525, Professor raises to 9600, Baseline calls 8450, Icebox raises to 19115, Velvet folds, Ozone calls 16510, Professor calls 8872, Baseline calls 9515, [turn: 9♥ 7♥ 8♦ 4♥], Icebox raises to 80, Ozone calls 80, Baseline calls 80, [river: 9♥ 7♥ 8♦ 4♥ Q♣], Icebox raises to 80, Ozone calls 80, Baseline calls 80 → Icebox wins 80442 with Flush, J high (J♥ 10♥)",
    "pot": 80442
+  },
+  {
+   "table": 1,
+   "handNo": 44,
+   "text": "Table 1 · Hand 44 · blinds 40/80 · Velvet calls 80, Ozone calls 80, Venus calls 80, Baseline calls 80, Midas folds, Shadow folds, Icebox checks, [flop: K♦ 7♥ J♦], Icebox checks, Velvet checks, Ozone checks, Venus checks, Baseline checks, [turn: K♦ 7♥ J♦ 7♠], Icebox checks, Velvet checks, Ozone checks, Venus checks, Baseline checks, [river: K♦ 7♥ J♦ 7♠ 7♦], Icebox raises to 80, Velvet raises to 170, Ozone raises to 285, Venus raises to 400, Baseline raises to 525, Icebox raises to 695, Velvet raises to 885, Ozone raises to 1130, Venus calls 730, Baseline raises to 1400, Icebox raises to 1670, Velvet raises to 1970, Ozone raises to 2360, Venus calls 1230, Baseline raises to 2790, Icebox raises to 3220, Velvet raises to 3700, Ozone raises to 4325, Venus calls 1965, Baseline raises to 5015, Icebox raises to 5955, Velvet calls 1610, Ozone raises to 7175, Venus calls 2850, Baseline raises to 8515, Icebox raises to 9855, Ozone goes ALL-IN to 10139, Venus raises to 11479, Baseline raises to 12954, Icebox raises to 14959, Venus raises to 16964, Baseline raises to 19169, Icebox raises to 22169, Venus calls 5205, Baseline raises to 25469, Icebox raises to 28769, Venus calls 6600, Baseline goes ALL-IN to 78459, Icebox raises to 146039, Venus calls 117270 → Icebox wins 359436 with Flush, A high (8♦ A♦); Velvet wins 26990 with Full house, 7s full of Ks (Q♦ K♠)",
+   "pot": 386426
   }
  ],
  "finishes": [
@@ -557,6 +549,22 @@
    "kind": "house",
    "table": 1,
    "handNo": 43,
+   "provisional": true
+  },
+  {
+   "name": "Baseline",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 44,
+   "provisional": true
+  },
+  {
+   "name": "Ozone",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 44,
    "provisional": true
   }
  ],
