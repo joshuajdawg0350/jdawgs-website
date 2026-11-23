@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:39:22.040Z",
+ "updatedAt": "2026-11-23T01:39:43.835Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 18,
+ "handsPlayed": 19,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 32998,
+     "stack": 32948,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 54495,
+     "stack": 54445,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20060,
+     "stack": 20210,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 52192,
+     "stack": 52142,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32998,
+   "stack": 32948,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 54495,
+   "stack": 54445,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20060,
+   "stack": 20210,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 52192,
+   "stack": 52142,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Ozone",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 3,
-   "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone folds, Icebox folds, Velvet checks, [flop: 5♥ 7♦ 9♣], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [turn: 5♥ 7♦ 9♣ A♥], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Deuce checks, Wildfire checks, [river: 5♥ 7♦ 9♣ A♥ K♠], Velvet checks, Tally checks, Pickpocket raises to 60, Professor folds, Deuce calls 60, Wildfire calls 60, Velvet calls 60, Tally calls 60 → Wildfire wins 625 with Pair of 9s (6♣ 9♠)",
-   "pot": 625
-  },
   {
    "table": 1,
    "handNo": 4,
@@ -552,6 +546,12 @@
    "handNo": 6,
    "text": "Table 3 · Hand 6 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Quarry calls 25, Wildfire checks, [flop: 4♠ 5♠ J♦], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [turn: 4♠ 5♠ J♦ 3♣], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor raises to 55, Quarry folds, Wildfire folds, Icebox folds, Velvet calls 55, [river: 4♠ 5♠ J♦ 3♣ A♣], Velvet raises to 50, Professor raises to 105, Velvet calls 55 → Velvet wins 570 with Straight, 5 high (2♣ 4♥)",
    "pot": 570
+  },
+  {
+   "table": 1,
+   "handNo": 7,
+   "text": "Table 1 · Hand 7 · blinds 25/50 · Ozone calls 50, Midas folds, Baseline calls 50, Venus calls 25, Shadow checks, [flop: J♥ 6♦ 4♠], Venus checks, Shadow checks, Ozone checks, Baseline checks, [turn: J♥ 6♦ 4♠ 3♠], Venus checks, Shadow checks, Ozone checks, Baseline checks, [river: J♥ 6♦ 4♠ 3♠ A♣], Venus checks, Shadow checks, Ozone checks, Baseline checks → Shadow wins 200 with Pair of Js (7♣ J♦)",
+   "pot": 200
   }
  ],
  "finishes": [
