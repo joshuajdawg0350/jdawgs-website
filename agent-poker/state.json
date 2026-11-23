@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:51:40.444Z",
+ "updatedAt": "2026-11-23T01:52:02.741Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 34,
+ "handsPlayed": 35,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19750,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 92980,
+     "stack": 92930,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 99527,
+     "stack": 99477,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19660,
+     "stack": 19610,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19750,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 92980,
+   "stack": 92930,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 99527,
+   "stack": 99477,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19660,
+   "stack": 19610,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 12,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 9,
-   "text": "Table 1 · Hand 9 · blinds 25/50 · Venus calls 50, Shadow calls 50, Midas folds, Baseline checks, [flop: 7♥ 8♥ 3♣], Baseline checks, Venus checks, Shadow checks, [turn: 7♥ 8♥ 3♣ 3♦], Baseline checks, Venus checks, Shadow checks, [river: 7♥ 8♥ 3♣ 3♦ A♠], Baseline checks, Venus checks, Shadow checks → Shadow wins 175 with Two pair, 8s and 3s (8♠ 10♥)",
-   "pot": 175
-  },
   {
    "table": 2,
    "handNo": 9,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 12,
    "text": "Table 1 · Hand 12 · blinds 25/50 · Baseline calls 50, Venus calls 50, Shadow calls 25, Midas checks, [flop: 8♦ 8♥ A♦], Shadow checks, Midas checks, Baseline checks, Venus checks, [turn: 8♦ 8♥ A♦ 3♠], Shadow checks, Midas checks, Baseline checks, Venus checks, [river: 8♦ 8♥ A♦ 3♠ 4♦], Shadow checks, Midas checks, Baseline checks, Venus checks → Venus wins 200 with Two pair, As and 8s (6♣ A♥)",
+   "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 12,
+   "text": "Table 2 · Hand 12 · blinds 25/50 · Bulldog calls 50, Ozone calls 50, Quarry calls 25, Granite checks, [flop: 4♥ K♦ 2♥], Quarry checks, Granite checks, Bulldog checks, Ozone checks, [turn: 4♥ K♦ 2♥ 3♣], Quarry checks, Granite checks, Bulldog checks, Ozone checks, [river: 4♥ K♦ 2♥ 3♣ 4♦], Quarry checks, Granite checks, Bulldog checks, Ozone checks → Granite wins 200 with Two pair, 4s and 2s (10♣ 2♠)",
    "pot": 200
   }
  ],
