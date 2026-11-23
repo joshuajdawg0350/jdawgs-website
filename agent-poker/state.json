@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:54:11.429Z",
+ "updatedAt": "2026-11-23T01:54:35.767Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  30,
-  60
+  40,
+  80
  ],
- "level": 2,
- "handsPlayed": 39,
+ "level": 3,
+ "handsPlayed": 40,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 212067,
+     "stack": 210412,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 131270,
+     "stack": 129615,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 53084,
+     "stack": 52304,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 32538,
+     "stack": 30883,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20195,
+     "stack": 18650,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 15070,
+     "stack": 15020,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 14190,
+     "stack": 21530,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32538,
+   "stack": 30883,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 53084,
+   "stack": 52304,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20195,
+   "stack": 18650,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 15070,
+   "stack": 15020,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 14190,
+   "stack": 21530,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 212067,
+   "stack": 210412,
    "status": "seated",
    "reentered": false
   },
@@ -315,7 +315,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 131270,
+   "stack": 129615,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 14,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Baseline",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 10,
-   "text": "Table 3 · Hand 10 · blinds 25/50 · Wildfire calls 50, Icebox folds, Velvet calls 50, Professor calls 25, Quarry checks, [flop: 6♥ A♠ 5♥], Professor checks, Quarry checks, Wildfire checks, Velvet checks, [turn: 6♥ A♠ 5♥ A♣], Professor checks, Quarry checks, Wildfire checks, Velvet checks, [river: 6♥ A♠ 5♥ A♣ 10♠], Professor checks, Quarry checks, Wildfire checks, Velvet checks → Velvet wins 200 with Two pair, As and 10s (10♥ 8♠)",
-   "pot": 200
-  },
   {
    "table": 1,
    "handNo": 11,
@@ -404,6 +390,12 @@
    "handNo": 13,
    "text": "Table 3 · Hand 13 · blinds 25/50 · Wildfire calls 50, Icebox calls 50, Velvet calls 25, Professor checks, [flop: K♠ J♠ K♦], Velvet checks, Professor checks, Wildfire checks, Icebox checks, [turn: K♠ J♠ K♦ 6♠], Velvet checks, Professor raises to 55, Wildfire raises to 210, Icebox calls 210, Velvet calls 210, Professor raises to 740, Wildfire raises to 1680, Icebox calls 1470, Velvet calls 1470, Professor raises to 5270, Wildfire calls 575, Icebox calls 3590, Velvet calls 3590, [river: K♠ J♠ K♦ 6♠ 8♦], Velvet checks, Professor raises to 55, Icebox calls 55, Velvet calls 55 → Professor wins 18430 with Flush, K high (8♠ 10♠)",
    "pot": 18430
+  },
+  {
+   "table": 1,
+   "handNo": 14,
+   "text": "Table 1 · Hand 14 · blinds 25/50 · Baseline calls 50, Midas folds, Shadow calls 50, Granite folds, Icebox calls 50, Velvet calls 50, Ozone calls 50, Professor raises to 245, Venus calls 195, Baseline calls 195, Shadow calls 195, Icebox folds, Velvet calls 195, Ozone raises to 500, Professor raises to 780, Venus calls 535, Baseline calls 535, Shadow calls 535, Velvet calls 535, Ozone raises to 1145, Professor raises to 1545, Venus folds, Baseline calls 765, Shadow calls 765, Velvet calls 765, Ozone calls 400, [flop: 2♣ 8♥ K♥], Professor checks, Baseline checks, Shadow checks, Velvet checks, Ozone checks, [turn: 2♣ 8♥ K♥ 2♥], Professor raises to 55, Baseline calls 55, Shadow folds, Velvet calls 55, Ozone calls 55, [river: 2♣ 8♥ K♥ 2♥ 6♦], Professor raises to 55, Baseline calls 55, Velvet calls 55, Ozone calls 55 → Velvet wins 8995 with Three of a kind, 2s (2♠ 7♣)",
+   "pot": 8995
   }
  ],
  "finishes": [
