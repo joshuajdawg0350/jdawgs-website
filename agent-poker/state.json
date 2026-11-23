@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:37:45.944Z",
+ "updatedAt": "2026-11-23T04:38:02.067Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 252,
+ "handsPlayed": 253,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 40410,
+     "stack": 39810,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 479590,
+     "stack": 480190,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 226
+   "handsPlayed": 227
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 40410,
+   "stack": 39810,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 479590,
+   "stack": 480190,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 227,
-  "stage": "preflop",
-  "board": [],
-  "pot": 900,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 217,
-   "text": "Table 1 · Hand 217 · blinds 250/500 · Icebox folds → Midas takes 750 (everyone else folded)",
-   "pot": 750
-  },
   {
    "table": 1,
    "handNo": 218,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 226,
    "text": "Table 1 · Hand 226 · blinds 300/600 · Midas calls 300, Icebox checks, [flop: 3♠ 10♣ 4♠], Icebox checks, Midas checks, [turn: 3♠ 10♣ 4♠ 7♠], Icebox checks, Midas checks, [river: 3♠ 10♣ 4♠ 7♠ 9♦], Icebox checks, Midas checks → Icebox wins 1200 with Pair of 10s (6♥ 10♦)",
+   "pot": 1200
+  },
+  {
+   "table": 1,
+   "handNo": 227,
+   "text": "Table 1 · Hand 227 · blinds 300/600 · Icebox calls 300, Midas checks, [flop: J♦ Q♠ 5♠], Midas checks, Icebox checks, [turn: J♦ Q♠ 5♠ 10♠], Midas checks, Icebox checks, [river: J♦ Q♠ 5♠ 10♠ 10♥], Midas checks, Icebox checks → Icebox wins 1200 with Two pair, Qs and 10s (4♣ Q♣)",
    "pot": 1200
   }
  ],
