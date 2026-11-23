@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:10:15.362Z",
+ "updatedAt": "2026-11-23T02:10:34.845Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 46,
+ "handsPlayed": 47,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 193727,
+     "stack": 193667,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 161539,
+     "stack": 161479,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 37329,
+     "stack": 37269,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 31303,
+     "stack": 31603,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 2085,
+     "stack": 2025,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 10045,
+     "stack": 9985,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 20
+   "handsPlayed": 21
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 31303,
+   "stack": 31603,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 37329,
+   "stack": 37269,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2085,
+   "stack": 2025,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10045,
+   "stack": 9985,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 193727,
+   "stack": 193667,
    "status": "seated",
    "reentered": false
   },
@@ -315,7 +315,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 161539,
+   "stack": 161479,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 21,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 13,
-   "text": "Table 1 · Hand 13 · blinds 25/50 · Venus raises to 115, Shadow calls 115, Midas calls 90, Baseline folds, [flop: K♠ 6♣ A♣], Midas raises to 217, Venus calls 217, Shadow folds, [turn: K♠ 6♣ A♣ 6♥], Midas raises to 456, Venus calls 456, [river: K♠ 6♣ A♣ 6♥ K♦], Midas raises to 958, Venus calls 958 → Midas wins 3657 with Two pair, As and Ks (A♥ 9♥)",
-   "pot": 3657
-  },
   {
    "table": 2,
    "handNo": 13,
@@ -404,6 +390,12 @@
    "handNo": 20,
    "text": "Table 1 · Hand 20 · blinds 25/50 · Ozone calls 50, Professor calls 50, Venus raises to 100, Baseline raises to 165, Midas folds, Shadow calls 165, Granite calls 165, Icebox folds, Velvet calls 115, Ozone calls 115, Professor calls 115, Venus raises to 230, Baseline folds, Shadow folds, Granite calls 65, Velvet calls 65, Ozone calls 65, Professor calls 65, [flop: K♥ 9♦ 7♣], Velvet checks, Ozone raises to 60, Professor calls 60, Venus calls 60, Granite folds, Velvet folds, [turn: K♥ 9♦ 7♣ 5♥], Ozone raises to 60, Professor calls 60, Venus calls 60, [river: K♥ 9♦ 7♣ 5♥ 4♦], Ozone checks, Professor checks, Venus checks → Venus wins 1865 with Pair of 8s (8♠ 8♥)",
    "pot": 1865
+  },
+  {
+   "table": 1,
+   "handNo": 21,
+   "text": "Table 1 · Hand 21 · blinds 30/60 · Professor calls 60, Venus calls 60, Baseline calls 60, Midas folds, Shadow calls 60, Granite folds, Icebox folds, Velvet calls 30, Ozone checks, [flop: 4♣ 6♥ Q♦], Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks, Shadow checks, [turn: 4♣ 6♥ Q♦ 4♥], Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks, Shadow checks, [river: 4♣ 6♥ Q♦ 4♥ J♦], Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks, Shadow checks → Baseline wins 360 with Two pair, Qs and 4s (Q♣ 7♦)",
+   "pot": 360
   }
  ],
  "finishes": [
