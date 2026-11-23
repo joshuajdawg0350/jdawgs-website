@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:26:02.634Z",
+ "updatedAt": "2026-11-23T02:26:23.342Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 65,
+ "handsPlayed": 66,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 30184,
+     "stack": 29994,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 18312,
+     "stack": 18122,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 237673,
+     "stack": 237483,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 97364,
+     "stack": 98314,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 100886,
+     "stack": 100696,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 8685,
+     "stack": 8495,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97364,
+   "stack": 98314,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 237673,
+   "stack": 237483,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 100886,
+   "stack": 100696,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 8685,
+   "stack": 8495,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30184,
+   "stack": 29994,
    "status": "seated",
    "reentered": false
   },
@@ -315,7 +315,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18312,
+   "stack": 18122,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 40,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Baseline",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 30,
-   "text": "Table 1 · Hand 30 · blinds 30/60 · Professor raises to 125, Venus calls 125, Baseline raises to 195, Midas folds, Shadow calls 195, Granite folds, Icebox folds, Velvet calls 165, Ozone calls 135, Professor raises to 270, Venus calls 145, Baseline raises to 355, Shadow folds, Velvet calls 160, Ozone calls 160, Professor raises to 450, Venus calls 180, Baseline raises to 555, Velvet calls 200, Ozone calls 200, Professor raises to 670, Venus calls 220, Baseline raises to 795, Velvet calls 240, Ozone calls 240, Professor raises to 935, Venus folds, Baseline raises to 1090, Velvet calls 295, Ozone calls 295, Professor raises to 1260, Baseline raises to 1445, Velvet calls 355, Ozone calls 355, Professor raises to 1650, Baseline raises to 1875, Velvet calls 430, Ozone calls 430, Professor raises to 2125, Baseline raises to 2400, Velvet calls 525, Ozone calls 525, Professor raises to 2705, Baseline raises to 3040, Velvet calls 640, Ozone calls 640, Professor raises to 3410, Baseline raises to 3815, Velvet calls 775, Ozone calls 775, Professor raises to 4260, Baseline raises to 4750, Velvet folds, Ozone calls 935, Professor raises to 5290, Baseline raises to 5885, Ozone calls 1135, Professor raises to 6540, Baseline raises to 7260, Ozone calls 1375, Professor raises to 8050, Baseline raises to 8920, Ozone calls 1660, Professor raises to 9875, Baseline raises to 10925, Ozone calls 2005, Professor raises to 12080, Baseline raises to 13350, Ozone calls 2425, Professor raises to 14745, Baseline raises to 16280, Ozone calls 2930, Professor raises to 17970, Baseline raises to 19830, Ozone calls 3550, Professor raises to 21875, Baseline raises to 24125, Ozone calls 4295, Professor raises to 26600, Baseline raises to 29325, Ozone calls 5200, Professor raises to 32325, Baseline calls 1518, Ozone calls 3000, [flop: J♥ A♥ 3♦], Ozone raises to 70, Professor calls 70, [turn: J♥ A♥ 3♦ J♦], Ozone checks, Professor checks, [river: J♥ A♥ 3♦ J♦ 3♣], Ozone checks, Professor checks → Professor wins 3104 with Two pair, Js and 8s (8♣ 8♥); Baseline wins 97209 with Two pair, Js and 10s (10♥ 10♣)",
-   "pot": 100313
-  },
   {
    "table": 1,
    "handNo": 31,
@@ -404,6 +390,12 @@
    "handNo": 39,
    "text": "Table 1 · Hand 39 · blinds 30/60 · Venus calls 60, Baseline calls 60, Midas folds, Shadow folds, Icebox folds, Velvet calls 60, Ozone calls 30, Professor checks, [flop: K♣ 5♣ 7♦], Ozone checks, Professor checks, Venus checks, Baseline checks, Velvet checks, [turn: K♣ 5♣ 7♦ 6♠], Ozone checks, Professor checks, Venus checks, Baseline raises to 70, Velvet calls 70, Ozone folds, Professor calls 70, Venus folds, [river: K♣ 5♣ 7♦ 6♠ A♦], Professor checks, Baseline checks, Velvet checks → Velvet wins 510 with Two pair, 7s and 5s (7♥ 5♠)",
    "pot": 510
+  },
+  {
+   "table": 1,
+   "handNo": 40,
+   "text": "Table 1 · Hand 40 · blinds 30/60 · Baseline calls 60, Midas folds, Shadow folds, Icebox calls 60, Velvet calls 60, Ozone calls 60, Professor calls 30, Venus checks, [flop: 6♥ J♣ 2♣], Professor checks, Venus checks, Baseline checks, Icebox checks, Velvet checks, Ozone checks, [turn: 6♥ J♣ 2♣ 2♥], Professor checks, Venus checks, Baseline raises to 65, Icebox calls 65, Velvet calls 65, Ozone calls 65, Professor calls 65, Venus calls 65, [river: 6♥ J♣ 2♣ 2♥ K♣], Professor checks, Venus checks, Baseline raises to 65, Icebox calls 65, Velvet calls 65, Ozone calls 65, Professor calls 65, Venus calls 65 → Baseline wins 1140 with Three of a kind, 2s (A♣ 2♦)",
+   "pot": 1140
   }
  ],
  "finishes": [
