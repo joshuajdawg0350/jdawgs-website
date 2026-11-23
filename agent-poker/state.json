@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:58:53.948Z",
+ "updatedAt": "2026-11-23T01:59:16.741Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 42,
+ "handsPlayed": 43,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 210107,
+     "stack": 210057,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 130190,
+     "stack": 130565,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 51784,
+     "stack": 51734,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 30808,
+     "stack": 30758,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21631,
+     "stack": 21606,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 18130,
+     "stack": 18080,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19500,
+     "stack": 19450,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 15020,
+     "stack": 14970,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 22830,
+     "stack": 22780,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21631,
+   "stack": 21606,
    "status": "seated",
    "reentered": false
   },
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30808,
+   "stack": 30758,
    "status": "seated",
    "reentered": false
   },
@@ -144,7 +144,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19500,
+   "stack": 19450,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 51784,
+   "stack": 51734,
    "status": "seated",
    "reentered": false
   },
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18130,
+   "stack": 18080,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 15020,
+   "stack": 14970,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22830,
+   "stack": 22780,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 210107,
+   "stack": 210057,
    "status": "seated",
    "reentered": false
   },
@@ -315,7 +315,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 130190,
+   "stack": 130565,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 17,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Granite",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 11,
-   "text": "Table 3 · Hand 11 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Quarry calls 25, Wildfire raises to 110, Icebox calls 60, Velvet calls 60, Professor calls 60, Quarry calls 60, [flop: 10♣ 5♥ 7♥], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [turn: 10♣ 5♥ 7♥ 4♦], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [river: 10♣ 5♥ 7♥ 4♦ Q♣], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks → Quarry wins 550 with Pair of 10s (10♠ J♥)",
-   "pot": 550
-  },
   {
    "table": 1,
    "handNo": 12,
@@ -404,6 +390,12 @@
    "handNo": 16,
    "text": "Table 1 · Hand 16 · blinds 25/50 · Shadow calls 50, Granite calls 50, Icebox folds, Velvet calls 50, Ozone folds, Professor calls 50, Venus calls 50, Baseline folds, Midas checks, [flop: Q♥ Q♠ A♥], Midas checks, Shadow checks, Granite checks, Velvet checks, Professor raises to 55, Venus calls 55, Midas calls 55, Shadow calls 55, Granite calls 55, Velvet calls 55, [turn: Q♥ Q♠ A♥ 5♣], Midas checks, Shadow checks, Granite checks, Velvet checks, Professor raises to 55, Venus calls 55, Midas folds, Shadow calls 55, Granite folds, Velvet calls 55, [river: Q♥ Q♠ A♥ 5♣ 6♣], Shadow checks, Velvet checks, Professor raises to 55, Venus calls 55, Shadow calls 55, Velvet calls 55 → Professor wins 1095 with Three of a kind, Qs (Q♦ 3♣)",
    "pot": 1095
+  },
+  {
+   "table": 1,
+   "handNo": 17,
+   "text": "Table 1 · Hand 17 · blinds 25/50 · Granite calls 50, Icebox calls 50, Velvet calls 50, Ozone calls 50, Professor calls 50, Venus calls 50, Baseline calls 50, Midas folds, Shadow checks, [flop: 9♦ 2♣ 6♥], Shadow checks, Granite checks, Icebox checks, Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks, [turn: 9♦ 2♣ 6♥ J♠], Shadow checks, Granite checks, Icebox checks, Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks, [river: 9♦ 2♣ 6♥ J♠ A♣], Shadow checks, Granite checks, Icebox checks, Velvet checks, Ozone checks, Professor checks, Venus checks, Baseline checks → Professor wins 425 with Two pair, Js and 9s (9♥ J♦)",
+   "pot": 425
   }
  ],
  "finishes": [
