@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:37:11.371Z",
+ "updatedAt": "2026-11-23T02:37:35.356Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  50,
-  100
+  60,
+  120
  ],
- "level": 4,
- "handsPlayed": 79,
+ "level": 5,
+ "handsPlayed": 80,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 4725,
+     "stack": 4645,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 374490,
+     "stack": 374650,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 27110,
+     "stack": 27030,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   }
  ],
  "seats": [
@@ -189,7 +189,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 4725,
+   "stack": 4645,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 374490,
+   "stack": 374650,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 27110,
+   "stack": 27030,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 54,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 44,
-   "text": "Table 1 · Hand 44 · blinds 40/80 · Velvet calls 80, Ozone calls 80, Venus calls 80, Baseline calls 80, Midas folds, Shadow folds, Icebox checks, [flop: K♦ 7♥ J♦], Icebox checks, Velvet checks, Ozone checks, Venus checks, Baseline checks, [turn: K♦ 7♥ J♦ 7♠], Icebox checks, Velvet checks, Ozone checks, Venus checks, Baseline checks, [river: K♦ 7♥ J♦ 7♠ 7♦], Icebox raises to 80, Velvet raises to 170, Ozone raises to 285, Venus raises to 400, Baseline raises to 525, Icebox raises to 695, Velvet raises to 885, Ozone raises to 1130, Venus calls 730, Baseline raises to 1400, Icebox raises to 1670, Velvet raises to 1970, Ozone raises to 2360, Venus calls 1230, Baseline raises to 2790, Icebox raises to 3220, Velvet raises to 3700, Ozone raises to 4325, Venus calls 1965, Baseline raises to 5015, Icebox raises to 5955, Velvet calls 1610, Ozone raises to 7175, Venus calls 2850, Baseline raises to 8515, Icebox raises to 9855, Ozone goes ALL-IN to 10139, Venus raises to 11479, Baseline raises to 12954, Icebox raises to 14959, Venus raises to 16964, Baseline raises to 19169, Icebox raises to 22169, Venus calls 5205, Baseline raises to 25469, Icebox raises to 28769, Venus calls 6600, Baseline goes ALL-IN to 78459, Icebox raises to 146039, Venus calls 117270 → Icebox wins 359436 with Flush, A high (8♦ A♦); Velvet wins 26990 with Full house, 7s full of Ks (Q♦ K♠)",
-   "pot": 386426
-  },
   {
    "table": 1,
    "handNo": 45,
@@ -404,6 +390,12 @@
    "handNo": 53,
    "text": "Table 1 · Hand 53 · blinds 40/80 · Icebox folds, Velvet calls 80, Venus calls 80, Midas calls 40, Shadow checks, [flop: 9♦ 2♠ Q♦], Midas checks, Shadow checks, Velvet checks, Venus checks, [turn: 9♦ 2♠ Q♦ 3♣], Midas checks, Shadow checks, Velvet checks, Venus checks, [river: 9♦ 2♠ Q♦ 3♣ 2♦], Midas checks, Shadow checks, Velvet checks, Venus checks → Venus wins 320 with Pair of 2s (A♠ K♠)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 54,
+   "text": "Table 1 · Hand 54 · blinds 40/80 · Velvet calls 80, Venus folds, Midas folds, Shadow calls 40, Icebox checks, [flop: 3♠ 10♦ 3♦], Shadow checks, Icebox checks, Velvet checks, [turn: 3♠ 10♦ 3♦ A♣], Shadow checks, Icebox checks, Velvet checks, [river: 3♠ 10♦ 3♦ A♣ 7♣], Shadow checks, Icebox checks, Velvet checks → Icebox wins 240 with Two pair, As and 3s (5♠ A♦)",
+   "pot": 240
   }
  ],
  "finishes": [
