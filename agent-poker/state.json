@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:55:45.729Z",
+ "updatedAt": "2026-11-23T04:56:07.634Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 283,
+ "handsPlayed": 284,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 78883,
+     "stack": 78483,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 441117,
+     "stack": 441517,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 257
+   "handsPlayed": 258
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 78883,
+   "stack": 78483,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 441117,
+   "stack": 441517,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 258,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1200,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 248,
-   "text": "Table 1 · Hand 248 · blinds 400/800 · Midas calls 400, Icebox checks, [flop: 7♣ 6♦ Q♠], Icebox checks, Midas raises to 880, Icebox folds → Midas takes 2480 (everyone else folded)",
-   "pot": 2480
-  },
   {
    "table": 1,
    "handNo": 249,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 257,
    "text": "Table 1 · Hand 257 · blinds 400/800 · Icebox folds → Midas takes 1200 (everyone else folded)",
+   "pot": 1200
+  },
+  {
+   "table": 1,
+   "handNo": 258,
+   "text": "Table 1 · Hand 258 · blinds 400/800 · Midas folds → Icebox takes 1200 (everyone else folded)",
    "pot": 1200
   }
  ],
