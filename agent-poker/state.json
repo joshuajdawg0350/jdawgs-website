@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:32:15.468Z",
+ "updatedAt": "2026-11-23T01:32:38.145Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20690,
+     "stack": 21040,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19785,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19785,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20690,
+   "stack": 21040,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19885,
+   "stack": 19785,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19885,
+   "stack": 19785,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19885,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Velvet",
   "lastActions": []
  },
  "recentHands": [
@@ -516,6 +516,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Ozone calls 50, Anchor calls 50, Quarry calls 50, Midas folds, Baseline calls 50, Venus calls 25, Shadow checks, [flop: 7♣ 9♦ Q♥], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks, [turn: 7♣ 9♦ Q♥ 6♥], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks, [river: 7♣ 9♦ Q♥ 6♥ 4♣], Venus checks, Shadow checks, Ozone checks, Anchor checks, Quarry checks, Baseline checks → Shadow wins 300 with Two pair, 9s and 4s (9♠ 4♥)",
    "pot": 300
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper folds, Compass folds, Marble calls 50, Sixgun calls 50, Slick folds, Granite calls 50, Dice calls 25, Bulldog checks, [flop: J♣ 3♦ K♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [turn: J♣ 3♦ K♥ 2♥], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite checks, [river: J♣ 3♦ K♥ 2♥ 4♠], Dice checks, Bulldog checks, Marble checks, Sixgun checks, Granite raises to 50, Dice calls 50, Bulldog calls 50, Marble folds, Sixgun calls 50 → Granite wins 450 with Straight, 5 high (5♣ A♠)",
+   "pot": 450
   }
  ],
  "finishes": [
