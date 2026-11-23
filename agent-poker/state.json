@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:38:40.834Z",
+ "updatedAt": "2026-11-23T01:39:01.160Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 17,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 2640,
+     "stack": 2590,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20835,
+     "stack": 20785,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 18705,
+     "stack": 19065,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 118640,
+     "stack": 118430,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 19370,
+     "stack": 19320,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 2640,
+   "stack": 2590,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20835,
+   "stack": 20785,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18705,
+   "stack": 19065,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 118640,
+   "stack": 118430,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19370,
+   "stack": 19320,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Marble folds, Sixgun calls 50, Slick calls 50, Granite calls 50, Dice calls 50, Bulldog calls 25, Copper checks, [flop: J♦ 10♦ 6♥], Bulldog checks, Copper checks, Compass checks, Sixgun checks, Slick checks, Granite checks, Dice checks, [turn: J♦ 10♦ 6♥ 2♥], Bulldog checks, Copper checks, Compass checks, Sixgun checks, Slick checks, Granite checks, Dice checks, [river: J♦ 10♦ 6♥ 2♥ 3♥], Bulldog checks, Copper checks, Compass checks, Sixgun checks, Slick checks, Granite checks, Dice checks → Bulldog wins 350 with Pair of 10s (10♣ K♦)",
-   "pot": 350
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -552,6 +538,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 25/50 · Granite raises to 120, Bulldog calls 120, Copper calls 120, Compass calls 120, Sixgun calls 95, Slick calls 70, [flop: 7♥ 3♦ 9♣], Sixgun checks, Slick checks, Granite checks, Bulldog checks, Copper checks, Compass checks, [turn: 7♥ 3♦ 9♣ A♣], Sixgun checks, Slick checks, Granite checks, Bulldog checks, Copper checks, Compass checks, [river: 7♥ 3♦ 9♣ A♣ K♦], Sixgun checks, Slick checks, Granite checks, Bulldog raises to 60, Copper calls 60, Compass calls 60, Sixgun calls 60, Slick calls 60, Granite folds → Slick wins 1020 with Pair of As (A♠ 6♣)",
    "pot": 1020
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Quarry calls 25, Wildfire checks, [flop: 4♠ 5♠ J♦], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor checks, [turn: 4♠ 5♠ J♦ 3♣], Quarry checks, Wildfire checks, Icebox checks, Velvet checks, Professor raises to 55, Quarry folds, Wildfire folds, Icebox folds, Velvet calls 55, [river: 4♠ 5♠ J♦ 3♣ A♣], Velvet raises to 50, Professor raises to 105, Velvet calls 55 → Velvet wins 570 with Straight, 5 high (2♣ 4♥)",
+   "pot": 570
   }
  ],
  "finishes": [
