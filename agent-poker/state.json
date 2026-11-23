@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:58:51.043Z",
+ "updatedAt": "2026-11-23T04:59:09.319Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 288,
+ "handsPlayed": 289,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 88892,
+     "stack": 89392,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 431108,
+     "stack": 430608,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 262
+   "handsPlayed": 263
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 88892,
+   "stack": 89392,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 431108,
+   "stack": 430608,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 263,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1500,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 253,
-   "text": "Table 1 · Hand 253 · blinds 400/800 · Icebox folds → Midas takes 1200 (everyone else folded)",
-   "pot": 1200
-  },
   {
    "table": 1,
    "handNo": 254,
@@ -404,6 +390,12 @@
    "handNo": 262,
    "text": "Table 1 · Hand 262 · blinds 500/1000 · Midas calls 500, Icebox checks, [flop: 10♦ 2♣ 9♠], Icebox checks, Midas raises to 1100, Icebox calls 1100, [turn: 10♦ 2♣ 9♠ 4♦], Icebox checks, Midas raises to 2310, Icebox folds → Midas takes 6510 (everyone else folded)",
    "pot": 6510
+  },
+  {
+   "table": 1,
+   "handNo": 263,
+   "text": "Table 1 · Hand 263 · blinds 500/1000 · Icebox folds → Midas takes 1500 (everyone else folded)",
+   "pot": 1500
   }
  ],
  "finishes": [
