@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T04:53:23.731Z",
+ "updatedAt": "2026-11-23T04:53:43.029Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  500,
-  1000
+  600,
+  1200
  ],
- "level": 14,
- "handsPlayed": 279,
+ "level": 15,
+ "handsPlayed": 280,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 71074,
+     "stack": 71874,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 448926,
+     "stack": 448126,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 253
+   "handsPlayed": 254
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 71074,
+   "stack": 71874,
    "status": "seated",
    "reentered": false
   },
@@ -207,7 +207,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 448926,
+   "stack": 448126,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 254,
-  "stage": "preflop",
-  "board": [],
-  "pot": 1200,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 244,
-   "text": "Table 1 · Hand 244 · blinds 400/800 · Midas calls 400, Icebox checks, [flop: 2♠ 10♦ 4♥], Icebox checks, Midas raises to 880, Icebox calls 880, [turn: 2♠ 10♦ 4♥ 8♠], Icebox checks, Midas checks, [river: 2♠ 10♦ 4♥ 8♠ Q♥], Icebox checks, Midas checks → Midas wins 3360 with Pair of 5s (5♥ 5♦)",
-   "pot": 3360
-  },
   {
    "table": 1,
    "handNo": 245,
@@ -404,6 +390,12 @@
    "handNo": 253,
    "text": "Table 1 · Hand 253 · blinds 400/800 · Icebox folds → Midas takes 1200 (everyone else folded)",
    "pot": 1200
+  },
+  {
+   "table": 1,
+   "handNo": 254,
+   "text": "Table 1 · Hand 254 · blinds 400/800 · Midas calls 400, Icebox checks, [flop: 6♠ A♠ 9♥], Icebox checks, Midas checks, [turn: 6♠ A♠ 9♥ 8♥], Icebox checks, Midas checks, [river: 6♠ A♠ 9♥ 8♥ A♣], Icebox checks, Midas checks → Midas wins 1600 with Two pair, As and 6s (6♦ 10♥)",
+   "pot": 1600
   }
  ],
  "finishes": [
