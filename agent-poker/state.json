@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T02:55:11.139Z",
+ "updatedAt": "2026-11-23T02:55:34.302Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 103,
+ "handsPlayed": 104,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21513,
+     "stack": 21413,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 17922,
+     "stack": 18022,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 77
+   "handsPlayed": 78
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21513,
+   "stack": 21413,
    "status": "seated",
    "reentered": false
   },
@@ -234,7 +234,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17922,
+   "stack": 18022,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 78,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 68,
-   "text": "Table 1 · Hand 68 · blinds 50/100 · Midas folds, Icebox folds → Velvet takes 150 (everyone else folded)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 69,
@@ -404,6 +390,12 @@
    "handNo": 77,
    "text": "Table 1 · Hand 77 · blinds 50/100 · Midas folds, Icebox folds → Velvet takes 150 (everyone else folded)",
    "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 78,
+   "text": "Table 1 · Hand 78 · blinds 50/100 · Icebox folds, Velvet calls 50, Midas checks, [flop: J♥ 9♣ 8♠], Velvet checks, Midas checks, [turn: J♥ 9♣ 8♠ 5♥], Velvet checks, Midas checks, [river: J♥ 9♣ 8♠ 5♥ 6♠], Velvet raises to 100, Midas folds → Velvet takes 300 (everyone else folded)",
+   "pot": 300
   }
  ],
  "finishes": [
