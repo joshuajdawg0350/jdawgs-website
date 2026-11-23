@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-23T01:46:29.044Z",
+ "updatedAt": "2026-11-23T01:50:22.562Z",
  "mode": "real",
  "date": "2026-11-22",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 31,
+ "handsPlayed": 32,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20745,
+     "stack": 19750,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 119780,
+     "stack": 92980,
      "status": "seated",
      "reentered": false
     },
@@ -123,8 +123,8 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19505,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -155,12 +155,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 52227,
+     "stack": 99527,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20745,
+   "stack": 19750,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 119780,
+   "stack": 92980,
    "status": "seated",
    "reentered": false
   },
@@ -373,8 +373,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19505,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 52227,
+   "stack": 99527,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 8,
-   "text": "Table 1 · Hand 8 · blinds 25/50 · Baseline calls 50, Venus calls 50, Shadow folds, Midas checks, [flop: 4♥ 2♣ 6♠], Midas checks, Baseline checks, Venus checks, [turn: 4♥ 2♣ 6♠ 8♥], Midas checks, Baseline checks, Venus checks, [river: 4♥ 2♣ 6♠ 8♥ 3♠], Midas checks, Baseline checks, Venus checks → Venus wins 175 with Pair of 8s (A♦ 8♦)",
-   "pot": 175
-  },
   {
    "table": 2,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 11,
    "text": "Table 1 · Hand 11 · blinds 25/50 · Midas folds, Baseline calls 50, Venus calls 25, Shadow checks, [flop: J♠ 3♠ 2♥], Venus checks, Shadow checks, Baseline checks, [turn: J♠ 3♠ 2♥ 6♠], Venus checks, Shadow checks, Baseline checks, [river: J♠ 3♠ 2♥ 6♠ 10♠], Venus checks, Shadow checks, Baseline checks → Shadow wins 150 with Two pair, 6s and 2s (2♦ 6♦)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 11,
+   "text": "Table 2 · Hand 11 · blinds 25/50 · Bulldog calls 50, Copper calls 50, Ozone calls 25, Granite checks, [flop: 4♦ K♣ K♥], Ozone raises to 65, Granite calls 65, Bulldog calls 65, Copper calls 65, [turn: 4♦ K♣ K♥ Q♣], Ozone raises to 65, Granite calls 65, Bulldog raises to 420, Copper calls 420, Ozone raises to 880, Granite calls 815, Bulldog calls 460, Copper calls 460, [river: 4♦ K♣ K♥ Q♣ 6♠], Ozone raises to 65, Granite folds, Bulldog raises to 2490, Copper calls 2490, Ozone raises to 5645, Bulldog raises to 14410, Copper calls 11920, Ozone raises to 25805, Bulldog calls 11395, Copper calls 4100 → Ozone wins 74100 with Three of a kind, Ks (J♦ K♠)",
+   "pot": 74100
   }
  ],
  "finishes": [
@@ -657,6 +657,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Copper",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 11,
    "provisional": true
   }
  ],
