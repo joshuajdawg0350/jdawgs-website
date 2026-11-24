@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:11:56.914Z",
+ "updatedAt": "2026-11-24T02:12:21.989Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 105,
+ "handsPlayed": 106,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 173292,
+     "stack": 108232,
      "status": "seated",
      "reentered": false
     },
@@ -29,15 +29,15 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 97470,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 81265,
+     "stack": 322770,
      "status": "seated",
      "reentered": false
     },
@@ -45,15 +45,15 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 56900,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 48287,
+     "stack": 48257,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 29274,
+     "stack": 29214,
      "status": "seated",
      "reentered": false
     },
@@ -69,8 +69,8 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 21985,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 37
+   "handsPlayed": 38
   }
  ],
  "seats": [
@@ -136,8 +136,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 56900,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 29274,
+   "stack": 29214,
    "status": "seated",
    "reentered": false
   },
@@ -172,8 +172,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 97470,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 48287,
+   "stack": 48257,
    "status": "seated",
    "reentered": false
   },
@@ -190,7 +190,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 173292,
+   "stack": 108232,
    "status": "seated",
    "reentered": false
   },
@@ -298,8 +298,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21985,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 81265,
+   "stack": 322770,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 38,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Sixgun",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 32,
-   "text": "Table 3 · Hand 32 · blinds 30/60 · Deuce calls 60, Millstone calls 60, Icebox folds, Professor checks, [flop: 7♣ Q♣ 8♦], Professor checks, Deuce checks, Millstone checks, [turn: 7♣ Q♣ 8♦ 5♥], Professor checks, Deuce checks, Millstone checks, [river: 7♣ Q♣ 8♦ 5♥ K♠], Professor raises to 70, Deuce calls 70, Millstone calls 70 → Millstone wins 420 with Pair of Qs (6♥ Q♦)",
-   "pot": 420
-  },
   {
    "table": 1,
    "handNo": 33,
@@ -396,6 +382,12 @@
    "handNo": 37,
    "text": "Table 1 · Hand 37 · blinds 30/60 · Venus folds, Sixgun calls 60, Midas folds, Bulldog calls 60, Millstone calls 60, Professor calls 60, Granite folds, Shadow checks, [flop: 5♠ 7♣ K♦], Shadow checks, Sixgun checks, Bulldog checks, Millstone checks, Professor checks, [turn: 5♠ 7♣ K♦ 4♣], Shadow checks, Sixgun checks, Bulldog raises to 70, Millstone folds, Professor folds, Shadow folds, Sixgun folds → Bulldog takes 400 (everyone else folded)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 38,
+   "text": "Table 1 · Hand 38 · blinds 30/60 · Sixgun calls 60, Midas folds, Bulldog calls 60, Millstone raises to 120, Professor calls 120, Granite calls 120, Shadow folds, Venus folds, Sixgun calls 60, Bulldog calls 60, [flop: A♦ 10♠ A♥], Sixgun checks, Bulldog checks, Millstone checks, Professor checks, Granite checks, [turn: A♦ 10♠ A♥ 10♣], Sixgun raises to 415, Bulldog calls 415, Millstone calls 415, Professor raises to 1575, Granite calls 1575, Sixgun raises to 4625, Bulldog raises to 10200, Millstone calls 9785, Professor raises to 27520, Granite calls 25945, Sixgun calls 17240, Bulldog calls 17320, Millstone calls 17320, [river: A♦ 10♠ A♥ 10♣ 3♥], Bulldog raises to 79580, Millstone calls 69830, Professor calls 53625, Granite calls 29260 → Bulldog wins 42160 with Two pair, As and 10s (6♦ J♥); Professor wins 322770 with Full house, 10s full of As (10♥ 4♦)",
+   "pot": 364930
   }
  ],
  "finishes": [
@@ -541,6 +533,30 @@
    "kind": "house",
    "table": 3,
    "handNo": 34,
+   "provisional": true
+  },
+  {
+   "name": "Millstone",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 38,
+   "provisional": true
+  },
+  {
+   "name": "Granite",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 38,
+   "provisional": true
+  },
+  {
+   "name": "Sixgun",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 38,
    "provisional": true
   }
  ],
