@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T03:26:33.874Z",
+ "updatedAt": "2026-11-24T03:27:22.893Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 214,
+ "handsPlayed": 215,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 390788,
+     "stack": 390548,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 96239,
+     "stack": 96479,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 146
+   "handsPlayed": 147
   }
  ],
  "seats": [
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 96239,
+   "stack": 96479,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 390788,
+   "stack": 390548,
    "status": "seated",
    "reentered": false
   },
@@ -329,12 +329,6 @@
  "waitlist": [],
  "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 137,
-   "text": "Table 1 · Hand 137 · blinds 100/200 · Shadow folds, Midas calls 100, Professor checks, [flop: 4♠ 4♣ 2♣], Midas raises to 220, Professor calls 220, [turn: 4♠ 4♣ 2♣ Q♠], Midas raises to 462, Professor calls 462, [river: 4♠ 4♣ 2♣ Q♠ A♣], Midas raises to 970, Professor calls 970 → Midas wins 3704 with Three of a kind, 4s (7♣ 4♦)",
-   "pot": 3704
-  },
   {
    "table": 1,
    "handNo": 138,
@@ -388,6 +382,12 @@
    "handNo": 146,
    "text": "Table 1 · Hand 146 · blinds 120/240 · Shadow calls 240, Midas calls 120, Professor checks, [flop: 7♠ 10♦ 8♥], Midas checks, Professor checks, Shadow checks, [turn: 7♠ 10♦ 8♥ 2♥], Midas checks, Professor checks, Shadow checks, [river: 7♠ 10♦ 8♥ 2♥ 5♠], Midas checks, Professor checks, Shadow checks → Professor wins 720 with Pair of 10s (10♠ 6♥)",
    "pot": 720
+  },
+  {
+   "table": 1,
+   "handNo": 147,
+   "text": "Table 1 · Hand 147 · blinds 120/240 · Midas folds, Professor calls 120, Shadow checks, [flop: 6♠ 9♦ 4♥], Professor checks, Shadow checks, [turn: 6♠ 9♦ 4♥ 8♠], Professor checks, Shadow checks, [river: 6♠ 9♦ 4♥ 8♠ 8♣], Professor checks, Shadow checks → Shadow wins 480 with Two pair, 9s and 8s (5♣ 9♠)",
+   "pot": 480
   }
  ],
  "finishes": [
