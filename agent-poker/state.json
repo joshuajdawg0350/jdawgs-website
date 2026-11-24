@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:52:01.919Z",
+ "updatedAt": "2026-11-24T01:52:27.621Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 69,
+ "handsPlayed": 70,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 11607,
+     "stack": 11797,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 29174,
+     "stack": 29114,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 48832,
+     "stack": 48702,
      "status": "seated",
      "reentered": false
     },
@@ -66,7 +66,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 23
+   "handsPlayed": 24
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11607,
+   "stack": 11797,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 29174,
+   "stack": 29114,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 48832,
+   "stack": 48702,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 24,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 20,
-   "text": "Table 3 · Hand 20 · blinds 25/50 · Deuce folds, Millstone folds, Icebox calls 50, Velvet calls 25, Professor checks, [flop: 10♦ 8♠ K♠], Velvet checks, Professor checks, Icebox checks, [turn: 10♦ 8♠ K♠ 2♠], Velvet checks, Professor checks, Icebox raises to 50, Velvet calls 50, Professor folds, [river: 10♦ 8♠ K♠ 2♠ 10♠], Velvet checks, Icebox raises to 50, Velvet calls 50 → Icebox wins 350 with Flush, K high (J♠ 9♠)",
-   "pot": 350
-  },
   {
    "table": 1,
    "handNo": 21,
@@ -552,6 +546,12 @@
    "handNo": 23,
    "text": "Table 3 · Hand 23 · blinds 30/60 · Professor calls 60, Deuce calls 60, Millstone folds, Icebox checks, [flop: 8♠ A♥ 7♠], Icebox checks, Professor checks, Deuce checks, [turn: 8♠ A♥ 7♠ 10♠], Icebox checks, Professor raises to 65, Deuce folds, Icebox folds → Professor takes 275 (everyone else folded)",
    "pot": 275
+  },
+  {
+   "table": 1,
+   "handNo": 24,
+   "text": "Table 1 · Hand 24 · blinds 30/60 · Shadow calls 60, Midas calls 30, Venus checks, [flop: 3♦ 5♠ 6♦], Midas checks, Venus checks, Shadow raises to 70, Midas calls 70, Venus folds, [turn: 3♦ 5♠ 6♦ 9♥], Midas checks, Shadow checks, [river: 3♦ 5♠ 6♦ 9♥ 2♥], Midas raises to 176, Shadow folds → Midas takes 496 (everyone else folded)",
+   "pot": 496
   }
  ],
  "finishes": [
