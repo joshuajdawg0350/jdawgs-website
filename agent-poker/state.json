@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:56:28.059Z",
+ "updatedAt": "2026-11-24T01:56:55.180Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 77,
+ "handsPlayed": 78,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 59901,
+     "stack": 59841,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 46714,
+     "stack": 46834,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20470,
+     "stack": 20410,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 25
+   "handsPlayed": 26
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 59901,
+   "stack": 59841,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 46714,
+   "stack": 46834,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20470,
+   "stack": 20410,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 26,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 23,
-   "text": "Table 2 · Hand 23 · blinds 30/60 · Hammer calls 60, Granite folds, Bulldog calls 30, Sixgun checks, [flop: 5♠ 4♥ 8♣], Bulldog checks, Sixgun checks, Hammer checks, [turn: 5♠ 4♥ 8♣ 3♣], Bulldog checks, Sixgun checks, Hammer checks, [river: 5♠ 4♥ 8♣ 3♣ A♥], Bulldog checks, Sixgun checks, Hammer raises to 70, Bulldog folds, Sixgun calls 70 → Sixgun wins 320 with A high (J♥ 6♥)",
-   "pot": 320
-  },
   {
    "table": 3,
    "handNo": 23,
@@ -552,6 +538,12 @@
    "handNo": 26,
    "text": "Table 2 · Hand 26 · blinds 30/60 · Sixgun calls 60, Hammer calls 60, Granite folds, Bulldog checks, [flop: K♠ K♥ 5♦], Bulldog raises to 125, Sixgun calls 125, Hammer calls 125, [turn: K♠ K♥ 5♦ J♥], Bulldog raises to 350, Sixgun calls 350, Hammer calls 350, [river: K♠ K♥ 5♦ J♥ Q♠], Bulldog raises to 980, Sixgun raises to 2550, Hammer calls 2550, Bulldog raises to 7180, Sixgun raises to 15530, Hammer calls 12980, Bulldog raises to 39455, Sixgun raises to 82745, Hammer calls 24962, Bulldog calls 26285 → Bulldog wins 173607 with Three of a kind, Ks (K♦ 8♠); Sixgun wins 17005 with Two pair, Ks and Qs (2♥ Q♣)",
    "pot": 190612
+  },
+  {
+   "table": 3,
+   "handNo": 26,
+   "text": "Table 3 · Hand 26 · blinds 30/60 · Icebox calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 5♥ J♦ 8♦], Deuce checks, Millstone checks, Icebox checks, [turn: 5♥ J♦ 8♦ K♣], Deuce checks, Millstone checks, Icebox checks, [river: 5♥ J♦ 8♦ K♣ 6♠], Deuce checks, Millstone checks, Icebox checks → Millstone wins 180 with Two pair, Ks and Js (J♣ K♥)",
+   "pot": 180
   }
  ],
  "finishes": [
