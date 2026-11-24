@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:06:05.667Z",
+ "updatedAt": "2026-11-24T02:06:25.350Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 94,
+ "handsPlayed": 95,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 56885,
+     "stack": 56855,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 173482,
+     "stack": 173122,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20800,
+     "stack": 21190,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 31
+   "handsPlayed": 32
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 56885,
+   "stack": 56855,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 173482,
+   "stack": 173122,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20800,
+   "stack": 21190,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 32,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Sixgun",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 29,
-   "text": "Table 1 · Hand 29 · blinds 30/60 · Venus calls 60, Shadow calls 30, Midas checks, [flop: A♠ J♣ 3♦], Shadow checks, Midas checks, Venus checks, [turn: A♠ J♣ 3♦ J♦], Shadow checks, Midas checks, Venus checks, [river: A♠ J♣ 3♦ J♦ 10♣], Shadow raises to 65, Midas folds, Venus calls 65 → Venus wins 310 with Two pair, Js and 10s (2♠ 10♦)",
-   "pot": 310
-  },
   {
    "table": 2,
    "handNo": 29,
@@ -552,6 +546,12 @@
    "handNo": 32,
    "text": "Table 1 · Hand 32 · blinds 30/60 · Venus calls 60, Shadow calls 30, Midas checks, [flop: 2♥ Q♠ J♦], Shadow checks, Midas checks, Venus checks, [turn: 2♥ Q♠ J♦ A♥], Shadow checks, Midas checks, Venus checks, [river: 2♥ Q♠ J♦ A♥ 5♦], Shadow checks, Midas checks, Venus checks → Shadow wins 180 with Two pair, As and Qs (A♣ Q♥)",
    "pot": 180
+  },
+  {
+   "table": 2,
+   "handNo": 32,
+   "text": "Table 2 · Hand 32 · blinds 30/60 · Sixgun calls 60, Granite folds, Bulldog checks, [flop: A♣ A♠ J♠], Bulldog checks, Sixgun checks, [turn: A♣ A♠ J♠ Q♠], Bulldog checks, Sixgun raises to 95, Bulldog calls 95, [river: A♣ A♠ J♠ Q♠ 8♦], Bulldog checks, Sixgun raises to 205, Bulldog calls 205 → Sixgun wins 750 with Flush, A high (3♠ 6♠)",
+   "pot": 750
   }
  ],
  "finishes": [
