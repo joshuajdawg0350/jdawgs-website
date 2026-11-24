@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:18:32.801Z",
+ "updatedAt": "2026-11-24T01:18:59.092Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 25,
+ "handsPlayed": 26,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 23245,
+     "stack": 23195,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19505,
+     "stack": 19480,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19555,
+     "stack": 19730,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 111460,
+     "stack": 111410,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20290,
+     "stack": 20240,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23245,
+   "stack": 23195,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19505,
+   "stack": 19480,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19555,
+   "stack": 19730,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20290,
+   "stack": 20240,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 111460,
+   "stack": 111410,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Sixgun",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 6,
-   "text": "Table 1 · Hand 6 · blinds 25/50 · Baseline calls 50, Pearl calls 50, Venus calls 50, Shadow folds, River Rat calls 50, Hammer calls 25, Midas checks, [flop: 4♦ Q♦ 2♥], Hammer checks, Midas checks, Baseline checks, Pearl checks, Venus checks, River Rat checks, [turn: 4♦ Q♦ 2♥ 7♦], Hammer checks, Midas checks, Baseline checks, Pearl checks, Venus checks, River Rat raises to 50, Hammer folds, Midas folds, Baseline calls 50, Pearl calls 50, Venus folds, [river: 4♦ Q♦ 2♥ 7♦ 3♦], Baseline checks, Pearl checks, River Rat raises to 50, Baseline calls 50, Pearl calls 50 → River Rat wins 600 with Flush, K high (2♦ K♦)",
-   "pot": 600
-  },
   {
    "table": 2,
    "handNo": 6,
@@ -552,6 +546,12 @@
    "handNo": 9,
    "text": "Table 1 · Hand 9 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline calls 50, Venus folds, Shadow checks, [flop: 8♣ 6♦ 2♠], Shadow checks, Hammer checks, Baseline checks, [turn: 8♣ 6♦ 2♠ A♦], Shadow checks, Hammer checks, Baseline checks, [river: 8♣ 6♦ 2♠ A♦ 4♥], Shadow checks, Hammer checks, Baseline raises to 60, Shadow calls 60, Hammer calls 60 → Shadow wins 355 with Pair of As (7♣ A♠)",
    "pot": 355
+  },
+  {
+   "table": 2,
+   "handNo": 9,
+   "text": "Table 2 · Hand 9 · blinds 25/50 · Sixgun calls 50, Anchor calls 50, Slick calls 50, Granite folds, Bulldog folds, Marble checks, [flop: 5♣ Q♥ 4♦], Marble checks, Sixgun checks, Anchor checks, Slick checks, [turn: 5♣ Q♥ 4♦ K♥], Marble checks, Sixgun checks, Anchor checks, Slick checks, [river: 5♣ Q♥ 4♦ K♥ 10♣], Marble checks, Sixgun checks, Anchor checks, Slick checks → Marble wins 225 with Pair of Ks (9♦ K♠)",
+   "pot": 225
   }
  ],
  "finishes": [
