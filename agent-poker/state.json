@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:27:08.754Z",
+ "updatedAt": "2026-11-24T01:27:28.369Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 42,
+ "handsPlayed": 43,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 1958,
+     "stack": 1908,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 9505,
+     "stack": 9455,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 58080,
+     "stack": 58055,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 49392,
+     "stack": 49517,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 14
+   "handsPlayed": 15
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1958,
+   "stack": 1908,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9505,
+   "stack": 9455,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 58080,
+   "stack": 58055,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49392,
+   "stack": 49517,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 15,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Sixgun",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 11,
-   "text": "Table 3 · Hand 11 · blinds 25/50 · Deuce calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Professor folds, Ozone checks, [flop: K♣ K♦ Q♠], Ozone checks, Deuce raises to 65, Millstone calls 65, Velvet calls 65, Ozone calls 65, [turn: K♣ K♦ Q♠ J♣], Ozone checks, Deuce raises to 65, Millstone calls 65, Velvet calls 65, Ozone calls 65, [river: K♣ K♦ Q♠ J♣ Q♣], Ozone raises to 65, Deuce raises to 550, Millstone raises to 1035, Velvet raises to 1580, Ozone raises to 2290, Deuce raises to 6010, Millstone raises to 9730, Velvet calls 1030, Ozone raises to 14565, Deuce goes ALL-IN to 20295, Millstone raises to 26025, Ozone calls 4425 → Deuce wins 57342 with Full house, Ks full of Qs (K♠ 2♣); Millstone wins 5730 with Two pair, Ks and Qs (8♥ 10♥); Velvet wins 5593 with Full house, Ks full of Qs (9♣ K♥)",
-   "pot": 68665
-  },
   {
    "table": 1,
    "handNo": 12,
@@ -552,6 +546,12 @@
    "handNo": 14,
    "text": "Table 3 · Hand 14 · blinds 25/50 · Professor calls 50, Deuce calls 50, Millstone calls 50, Icebox calls 25, Velvet checks, [flop: 2♣ A♥ Q♣], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [turn: 2♣ A♥ Q♣ 4♦], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [river: 2♣ A♥ Q♣ 4♦ 6♥], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks → Deuce wins 250 with Pair of 2s (2♦ 9♠)",
    "pot": 250
+  },
+  {
+   "table": 1,
+   "handNo": 15,
+   "text": "Table 1 · Hand 15 · blinds 25/50 · Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, Hammer checks, [flop: 7♠ 6♣ Q♠], Hammer checks, Baseline checks, Venus checks, [turn: 7♠ 6♣ Q♠ 4♦], Hammer checks, Baseline checks, Venus checks, [river: 7♠ 6♣ Q♠ 4♦ 7♦], Hammer checks, Baseline checks, Venus checks → Hammer wins 175 with Pair of 7s (J♣ A♠)",
+   "pot": 175
   }
  ],
  "finishes": [
