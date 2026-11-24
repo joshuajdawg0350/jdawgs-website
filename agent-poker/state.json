@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:23:52.773Z",
+ "updatedAt": "2026-11-24T02:24:07.631Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 124,
+ "handsPlayed": 125,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 90926,
+     "stack": 90846,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 331132,
+     "stack": 331052,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 48772,
+     "stack": 48692,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 32514,
+     "stack": 32754,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 56
+   "handsPlayed": 57
   }
  ],
  "seats": [
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 32514,
+   "stack": 32754,
    "status": "seated",
    "reentered": false
   },
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 48772,
+   "stack": 48692,
    "status": "seated",
    "reentered": false
   },
@@ -190,7 +190,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 90926,
+   "stack": 90846,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 331132,
+   "stack": 331052,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 57,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 47,
-   "text": "Table 1 · Hand 47 · blinds 40/80 · Venus calls 80, Midas folds, Bulldog calls 80, Professor folds, Shadow checks, [flop: 4♣ A♦ 8♠], Shadow checks, Venus checks, Bulldog checks, [turn: 4♣ A♦ 8♠ 8♣], Shadow checks, Venus checks, Bulldog checks, [river: 4♣ A♦ 8♠ 8♣ 3♣], Shadow checks, Venus checks, Bulldog checks → Venus wins 280 with Three of a kind, 8s (8♥ Q♠)",
-   "pot": 280
-  },
   {
    "table": 1,
    "handNo": 48,
@@ -396,6 +382,12 @@
    "handNo": 56,
    "text": "Table 1 · Hand 56 · blinds 40/80 · Shadow calls 80, Venus folds, Midas folds, Bulldog calls 40, Professor checks, [flop: 8♥ 10♠ 2♣], Bulldog checks, Professor checks, Shadow checks, [turn: 8♥ 10♠ 2♣ 7♥], Bulldog checks, Professor checks, Shadow checks, [river: 8♥ 10♠ 2♣ 7♥ 6♥], Bulldog checks, Professor raises to 90, Shadow raises to 205, Bulldog calls 205, Professor raises to 650, Shadow folds, Bulldog calls 445 → Professor wins 1745 with Straight, 10 high (9♦ 3♦)",
    "pot": 1745
+  },
+  {
+   "table": 1,
+   "handNo": 57,
+   "text": "Table 1 · Hand 57 · blinds 40/80 · Venus calls 80, Midas folds, Bulldog calls 80, Professor calls 40, Shadow checks, [flop: 10♥ 3♦ 8♣], Professor checks, Shadow checks, Venus checks, Bulldog checks, [turn: 10♥ 3♦ 8♣ 3♠], Professor checks, Shadow checks, Venus checks, Bulldog checks, [river: 10♥ 3♦ 8♣ 3♠ Q♥], Professor checks, Shadow checks, Venus checks, Bulldog checks → Venus wins 320 with Two pair, Qs and 8s (Q♠ 8♥)",
+   "pot": 320
   }
  ],
  "finishes": [
