@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T03:09:34.510Z",
+ "updatedAt": "2026-11-24T03:10:01.277Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -327,7 +327,15 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": null,
+ "currentHand": {
+  "table": 1,
+  "handNo": 127,
+  "stage": "preflop",
+  "board": [],
+  "pot": 300,
+  "toAct": "Professor",
+  "lastActions": []
+ },
  "recentHands": [
   {
    "table": 1,
