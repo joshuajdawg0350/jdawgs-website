@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:08:01.720Z",
+ "updatedAt": "2026-11-24T01:08:35.980Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19878,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 18610,
+     "stack": 18697,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 24165,
+     "stack": 24115,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19210,
+     "stack": 19185,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 18745,
+     "stack": 18695,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 18610,
+     "stack": 18560,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19790,
+   "stack": 19878,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18610,
+   "stack": 18697,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 24165,
+   "stack": 24115,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19210,
+   "stack": 19185,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18745,
+   "stack": 18695,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18610,
+   "stack": 18560,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
@@ -546,6 +546,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce folds, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet checks, [flop: 6♠ 3♦ 10♣], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Wildfire checks, Millstone checks, [turn: 6♠ 3♦ 10♣ A♥], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Wildfire checks, Millstone checks, [river: 6♠ 3♦ 10♣ A♥ J♦], Velvet checks, Tally checks, Pickpocket checks, Professor checks, Wildfire checks, Millstone checks → Velvet wins 325 with Two pair, Js and 10s (J♥ 10♦)",
    "pot": 325
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline calls 50, Pearl calls 50, Venus calls 50, Shadow folds, River Rat checks, [flop: 9♠ 6♦ K♥], River Rat checks, Hammer checks, Baseline checks, Pearl checks, Venus checks, [turn: 9♠ 6♦ K♥ 9♣], River Rat checks, Hammer checks, Baseline checks, Pearl checks, Venus checks, [river: 9♠ 6♦ K♥ 9♣ 6♣], River Rat checks, Hammer checks, Baseline checks, Pearl checks, Venus checks → Baseline wins 138 with Two pair, 9s and 6s (J♠ A♦); Pearl wins 137 with Two pair, 9s and 6s (Q♥ A♠)",
+   "pot": 275
   }
  ],
  "finishes": [
