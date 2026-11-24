@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T03:02:54.871Z",
+ "updatedAt": "2026-11-24T03:03:13.569Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 184,
+ "handsPlayed": 185,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 396670,
+     "stack": 396590,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 99749,
+     "stack": 99829,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 116
+   "handsPlayed": 117
   }
  ],
  "seats": [
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 99749,
+   "stack": 99829,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 396670,
+   "stack": 396590,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 117,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 107,
-   "text": "Table 1 · Hand 107 · blinds 80/160 · Shadow calls 160, Midas calls 80, Professor checks, [flop: 9♥ 3♠ Q♣], Midas checks, Professor checks, Shadow checks, [turn: 9♥ 3♠ Q♣ 2♦], Midas raises to 264, Professor calls 264, Shadow folds, [river: 9♥ 3♠ Q♣ 2♦ A♠], Midas raises to 554, Professor calls 554 → Midas wins 2116 with Two pair, Qs and 2s (2♠ Q♥)",
-   "pot": 2116
-  },
   {
    "table": 1,
    "handNo": 108,
@@ -396,6 +382,12 @@
    "handNo": 116,
    "text": "Table 1 · Hand 116 · blinds 80/160 · Shadow calls 160, Midas folds, Professor checks, [flop: K♣ Q♦ 7♥], Professor checks, Shadow checks, [turn: K♣ Q♦ 7♥ J♦], Professor checks, Shadow checks, [river: K♣ Q♦ 7♥ J♦ J♥], Professor checks, Shadow checks → Shadow wins 400 with Two pair, Ks and Js (8♣ K♥)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 117,
+   "text": "Table 1 · Hand 117 · blinds 80/160 · Midas folds, Professor folds → Shadow takes 240 (everyone else folded)",
+   "pot": 240
   }
  ],
  "finishes": [
