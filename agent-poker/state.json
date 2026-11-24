@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:26:14.050Z",
+ "updatedAt": "2026-11-24T02:26:27.455Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 129,
+ "handsPlayed": 130,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 454752,
+     "stack": 454542,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 48522,
+     "stack": 48782,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 16726,
+     "stack": 16676,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 61
+   "handsPlayed": 62
   }
  ],
  "seats": [
@@ -91,7 +91,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16726,
+   "stack": 16676,
    "status": "seated",
    "reentered": false
   },
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 48522,
+   "stack": 48782,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 454752,
+   "stack": 454542,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 62,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 52,
-   "text": "Table 1 · Hand 52 · blinds 40/80 · Venus calls 80, Midas folds, Bulldog folds, Professor calls 40, Shadow checks, [flop: Q♥ 9♠ K♦], Professor checks, Shadow checks, Venus checks, [turn: Q♥ 9♠ K♦ K♥], Professor checks, Shadow checks, Venus checks, [river: Q♥ 9♠ K♦ K♥ A♠], Professor checks, Shadow checks, Venus checks → Venus wins 240 with Two pair, As and Ks (A♦ 7♣)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 53,
@@ -396,6 +382,12 @@
    "handNo": 61,
    "text": "Table 1 · Hand 61 · blinds 50/100 · Professor calls 100, Shadow folds, Midas checks, [flop: 7♣ 5♦ A♠], Midas raises to 138, Professor folds → Midas takes 388 (everyone else folded)",
    "pot": 388
+  },
+  {
+   "table": 1,
+   "handNo": 62,
+   "text": "Table 1 · Hand 62 · blinds 50/100 · Shadow raises to 210, Midas folds, Professor calls 110, [flop: 4♠ K♦ 3♥], Professor checks, Shadow checks, [turn: 4♠ K♦ 3♥ K♠], Professor checks, Shadow checks, [river: 4♠ K♦ 3♥ K♠ Q♥], Professor checks, Shadow checks → Shadow wins 470 with Two pair, Ks and 10s (10♣ 10♥)",
+   "pot": 470
   }
  ],
  "finishes": [
