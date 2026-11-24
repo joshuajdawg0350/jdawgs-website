@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:02:37.540Z",
+ "updatedAt": "2026-11-24T02:03:03.107Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 87,
+ "handsPlayed": 88,
  "tables": [
   {
    "id": 1,
@@ -66,7 +66,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 29
+   "handsPlayed": 30
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 30,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 26,
-   "text": "Table 3 · Hand 26 · blinds 30/60 · Icebox calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 5♥ J♦ 8♦], Deuce checks, Millstone checks, Icebox checks, [turn: 5♥ J♦ 8♦ K♣], Deuce checks, Millstone checks, Icebox checks, [river: 5♥ J♦ 8♦ K♣ 6♠], Deuce checks, Millstone checks, Icebox checks → Millstone wins 180 with Two pair, Ks and Js (J♣ K♥)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 27,
@@ -552,6 +546,12 @@
    "handNo": 29,
    "text": "Table 3 · Hand 29 · blinds 30/60 · Millstone calls 60, Icebox calls 60, Professor calls 30, Deuce checks, [flop: 8♦ 7♥ 3♠], Professor checks, Deuce checks, Millstone checks, Icebox checks, [turn: 8♦ 7♥ 3♠ 4♥], Professor checks, Deuce checks, Millstone checks, Icebox checks, [river: 8♦ 7♥ 3♠ 4♥ J♦], Professor checks, Deuce checks, Millstone checks, Icebox checks → Millstone wins 240 with Pair of Js (9♠ J♣)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 30,
+   "text": "Table 1 · Hand 30 · blinds 30/60 · Shadow folds, Midas calls 30, Venus checks, [flop: 4♦ Q♠ 9♣], Midas raises to 66, Venus calls 66, [turn: 4♦ Q♠ 9♣ 10♦], Midas raises to 139, Venus calls 139, [river: 4♦ Q♠ 9♣ 10♦ J♥], Midas checks, Venus checks → Midas wins 265 with Pair of Qs (Q♦ 6♣); Venus wins 265 with Pair of Qs (3♦ Q♥)",
+   "pot": 530
   }
  ],
  "finishes": [
