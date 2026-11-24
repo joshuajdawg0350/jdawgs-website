@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:18:59.092Z",
+ "updatedAt": "2026-11-24T01:19:24.985Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 26,
+ "handsPlayed": 27,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 64740,
+     "stack": 64690,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 2890,
+     "stack": 2840,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 51970,
+     "stack": 52095,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 64740,
+   "stack": 64690,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19875,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 2890,
+   "stack": 2840,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 51970,
+   "stack": 52095,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 9,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 6,
-   "text": "Table 2 · Hand 6 · blinds 25/50 · Granite calls 50, Bulldog calls 50, Marble calls 50, Sixgun calls 50, Anchor calls 50, Ozone folds, Slick checks, [flop: 2♥ 9♥ A♣], Slick checks, Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [turn: 2♥ 9♥ A♣ 5♦], Slick checks, Granite checks, Bulldog checks, Marble checks, Sixgun raises to 60, Anchor calls 60, Slick folds, Granite folds, Bulldog folds, Marble calls 60, [river: 2♥ 9♥ A♣ 5♦ 6♥], Marble checks, Sixgun checks, Anchor raises to 50, Marble calls 50, Sixgun folds → Anchor wins 605 with Flush, 9 high (7♥ 4♥)",
-   "pot": 605
-  },
   {
    "table": 3,
    "handNo": 6,
@@ -552,6 +538,12 @@
    "handNo": 9,
    "text": "Table 2 · Hand 9 · blinds 25/50 · Sixgun calls 50, Anchor calls 50, Slick calls 50, Granite folds, Bulldog folds, Marble checks, [flop: 5♣ Q♥ 4♦], Marble checks, Sixgun checks, Anchor checks, Slick checks, [turn: 5♣ Q♥ 4♦ K♥], Marble checks, Sixgun checks, Anchor checks, Slick checks, [river: 5♣ Q♥ 4♦ K♥ 10♣], Marble checks, Sixgun checks, Anchor checks, Slick checks → Marble wins 225 with Pair of Ks (9♦ K♠)",
    "pot": 225
+  },
+  {
+   "table": 3,
+   "handNo": 9,
+   "text": "Table 3 · Hand 9 · blinds 25/50 · Professor calls 50, Ozone folds, Deuce folds, Millstone calls 50, Icebox folds, Velvet checks, [flop: K♥ 9♣ 3♥], Velvet checks, Professor checks, Millstone checks, [turn: K♥ 9♣ 3♥ Q♠], Velvet checks, Professor checks, Millstone checks, [river: K♥ 9♣ 3♥ Q♠ 4♦], Velvet checks, Professor checks, Millstone checks → Professor wins 175 with Pair of Ks (6♥ K♦)",
+   "pot": 175
   }
  ],
  "finishes": [
