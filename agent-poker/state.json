@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:23:23.701Z",
+ "updatedAt": "2026-11-24T02:23:39.203Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 123,
+ "handsPlayed": 124,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 91656,
+     "stack": 90926,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 330117,
+     "stack": 331132,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 49057,
+     "stack": 48772,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 55
+   "handsPlayed": 56
   }
  ],
  "seats": [
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49057,
+   "stack": 48772,
    "status": "seated",
    "reentered": false
   },
@@ -190,7 +190,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 91656,
+   "stack": 90926,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 330117,
+   "stack": 331132,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 56,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 46,
-   "text": "Table 1 · Hand 46 · blinds 40/80 · Shadow raises to 185, Venus calls 185, Midas folds, Bulldog calls 145, Professor calls 105, [flop: 10♣ A♥ A♣], Bulldog checks, Professor checks, Shadow checks, Venus checks, [turn: 10♣ A♥ A♣ 8♦], Bulldog checks, Professor checks, Shadow checks, Venus checks, [river: 10♣ A♥ A♣ 8♦ 7♣], Bulldog checks, Professor checks, Shadow checks, Venus checks → Venus wins 740 with Two pair, As and 7s (Q♦ 7♦)",
-   "pot": 740
-  },
   {
    "table": 1,
    "handNo": 47,
@@ -396,6 +382,12 @@
    "handNo": 55,
    "text": "Table 1 · Hand 55 · blinds 40/80 · Professor calls 80, Shadow folds, Venus folds, Midas folds, Bulldog checks, [flop: A♥ Q♠ 3♦], Bulldog checks, Professor checks, [turn: A♥ Q♠ 3♦ 4♣], Bulldog checks, Professor checks, [river: A♥ Q♠ 3♦ 4♣ 6♣], Bulldog checks, Professor raises to 95, Bulldog calls 95 → Bulldog wins 390 with Pair of Qs (9♥ Q♣)",
    "pot": 390
+  },
+  {
+   "table": 1,
+   "handNo": 56,
+   "text": "Table 1 · Hand 56 · blinds 40/80 · Shadow calls 80, Venus folds, Midas folds, Bulldog calls 40, Professor checks, [flop: 8♥ 10♠ 2♣], Bulldog checks, Professor checks, Shadow checks, [turn: 8♥ 10♠ 2♣ 7♥], Bulldog checks, Professor checks, Shadow checks, [river: 8♥ 10♠ 2♣ 7♥ 6♥], Bulldog checks, Professor raises to 90, Shadow raises to 205, Bulldog calls 205, Professor raises to 650, Shadow folds, Bulldog calls 445 → Professor wins 1745 with Straight, 10 high (9♦ 3♦)",
+   "pot": 1745
   }
  ],
  "finishes": [
