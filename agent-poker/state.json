@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:40:43.941Z",
+ "updatedAt": "2026-11-24T01:41:24.599Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 51,
+ "handsPlayed": 52,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 1833,
+     "stack": 1783,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 9680,
+     "stack": 9780,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 57955,
+     "stack": 57905,
      "status": "seated",
      "reentered": false
     },
@@ -66,7 +66,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 17
+   "handsPlayed": 18
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1833,
+   "stack": 1783,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9680,
+   "stack": 9780,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57955,
+   "stack": 57905,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 18,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Sixgun",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 14,
-   "text": "Table 3 · Hand 14 · blinds 25/50 · Professor calls 50, Deuce calls 50, Millstone calls 50, Icebox calls 25, Velvet checks, [flop: 2♣ A♥ Q♣], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [turn: 2♣ A♥ Q♣ 4♦], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [river: 2♣ A♥ Q♣ 4♦ 6♥], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks → Deuce wins 250 with Pair of 2s (2♦ 9♠)",
-   "pot": 250
-  },
   {
    "table": 1,
    "handNo": 15,
@@ -552,6 +546,12 @@
    "handNo": 17,
    "text": "Table 3 · Hand 17 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Deuce calls 25, Millstone raises to 100, Icebox calls 50, Velvet calls 50, Professor folds, Deuce calls 50, [flop: 2♦ 8♣ K♣], Deuce checks, Millstone checks, Icebox checks, Velvet checks, [turn: 2♦ 8♣ K♣ Q♠], Deuce checks, Millstone checks, Icebox checks, Velvet checks, [river: 2♦ 8♣ K♣ Q♠ 6♥], Deuce checks, Millstone checks, Icebox checks, Velvet checks → Velvet wins 450 with Two pair, Ks and 6s (6♣ K♦)",
    "pot": 450
+  },
+  {
+   "table": 1,
+   "handNo": 18,
+   "text": "Table 1 · Hand 18 · blinds 25/50 · Midas folds, Baseline calls 50, Venus calls 25, Shadow checks, [flop: 8♠ 7♠ K♦], Venus checks, Shadow checks, Baseline checks, [turn: 8♠ 7♠ K♦ K♣], Venus checks, Shadow checks, Baseline checks, [river: 8♠ 7♠ K♦ K♣ Q♦], Venus checks, Shadow checks, Baseline checks → Venus wins 150 with Two pair, Ks and Qs (2♦ Q♥)",
+   "pot": 150
   }
  ],
  "finishes": [
