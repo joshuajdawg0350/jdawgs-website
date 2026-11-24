@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:15:19.784Z",
+ "updatedAt": "2026-11-24T01:15:47.380Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 20,
+ "handsPlayed": 21,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20550,
+     "stack": 20525,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 14675,
+     "stack": 14850,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 24725,
+     "stack": 24675,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 3430,
+     "stack": 3380,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 76695,
+     "stack": 76645,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20550,
+   "stack": 20525,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 14675,
+   "stack": 14850,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24725,
+   "stack": 24675,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 3430,
+   "stack": 3380,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 76695,
+   "stack": 76645,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 7,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 4,
-   "text": "Table 2 · Hand 4 · blinds 25/50 · Ozone calls 50, Slick calls 50, Granite folds, Bulldog calls 50, Marble folds, Sixgun calls 25, Anchor checks, [flop: 8♠ 7♣ 7♦], Sixgun checks, Anchor checks, Ozone checks, Slick checks, Bulldog checks, [turn: 8♠ 7♣ 7♦ Q♥], Sixgun checks, Anchor checks, Ozone checks, Slick checks, Bulldog checks, [river: 8♠ 7♣ 7♦ Q♥ Q♠], Sixgun raises to 150, Anchor calls 150, Ozone calls 150, Slick calls 150, Bulldog calls 150 → Sixgun wins 1000 with Two pair, Qs and 7s (2♣ A♠)",
-   "pot": 1000
-  },
   {
    "table": 3,
    "handNo": 4,
@@ -552,6 +538,12 @@
    "handNo": 7,
    "text": "Table 2 · Hand 7 · blinds 25/50 · Bulldog calls 50, Marble calls 50, Sixgun calls 50, Anchor calls 50, Ozone calls 50, Slick calls 25, Granite checks, [flop: J♦ 5♥ 10♣], Slick checks, Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, Ozone checks, [turn: J♦ 5♥ 10♣ 9♥], Slick checks, Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, Ozone checks, [river: J♦ 5♥ 10♣ 9♥ 2♣], Slick checks, Granite checks, Bulldog raises to 60, Marble calls 60, Sixgun calls 60, Anchor calls 60, Ozone calls 60, Slick folds, Granite folds → Ozone wins 650 with Two pair, 9s and 5s (9♠ 5♣)",
    "pot": 650
+  },
+  {
+   "table": 3,
+   "handNo": 7,
+   "text": "Table 3 · Hand 7 · blinds 25/50 · Millstone calls 50, Icebox folds, Velvet calls 50, Professor calls 50, Deuce folds, Wildfire checks, [flop: 10♠ J♥ 2♣], Wildfire checks, Millstone checks, Velvet checks, Professor checks, [turn: 10♠ J♥ 2♣ 5♣], Wildfire checks, Millstone checks, Velvet checks, Professor checks, [river: 10♠ J♥ 2♣ 5♣ 4♦], Wildfire checks, Millstone checks, Velvet checks, Professor checks → Wildfire wins 225 with Pair of 2s (A♥ 2♦)",
+   "pot": 225
   }
  ],
  "finishes": [
