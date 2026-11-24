@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:09:10.853Z",
+ "updatedAt": "2026-11-24T02:09:28.739Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,40 +12,40 @@
   160
  ],
  "level": 6,
- "handsPlayed": 101,
+ "handsPlayed": 102,
  "tables": [
   {
    "id": 1,
    "seats": [
     {
-     "name": "Midas",
+     "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 11527,
+     "stack": 173212,
      "status": "seated",
      "reentered": false
     },
     {
-     "name": "Baseline",
+     "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
+     "stack": 97560,
+     "status": "seated",
      "reentered": false
     },
     {
-     "name": "Pearl",
+     "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
+     "stack": 81660,
+     "status": "seated",
      "reentered": false
     },
     {
-     "name": "Venus",
+     "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 29334,
+     "stack": 56795,
      "status": "seated",
      "reentered": false
     },
@@ -58,73 +58,11 @@
      "reentered": false
     },
     {
-     "name": "River Rat",
+     "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    }
-   ],
-   "handsPlayed": 34
-  },
-  {
-   "id": 2,
-   "seats": [
-    {
-     "name": "Slick",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Granite",
-     "kind": "house",
-     "house": true,
-     "stack": 56795,
+     "stack": 29334,
      "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Dice",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Bulldog",
-     "kind": "house",
-     "house": true,
-     "stack": 173212,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Copper",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Compass",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Marble",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
      "reentered": false
     },
     {
@@ -136,109 +74,15 @@
      "reentered": false
     },
     {
-     "name": "Quarry",
+     "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Hammer",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
+     "stack": 11527,
+     "status": "seated",
      "reentered": false
     }
    ],
    "handsPlayed": 34
-  },
-  {
-   "id": 3,
-   "seats": [
-    {
-     "name": "Deuce",
-     "kind": "house",
-     "house": true,
-     "stack": 7211,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Wildfire",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Millstone",
-     "kind": "house",
-     "house": true,
-     "stack": 70399,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Icebox",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Velvet",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Tally",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Pickpocket",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Professor",
-     "kind": "house",
-     "house": true,
-     "stack": 81660,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    }
-   ],
-   "handsPlayed": 33
   }
  ],
  "seats": [
@@ -274,8 +118,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 7211,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -291,7 +135,7 @@
    "name": "Granite",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 56795,
    "status": "seated",
    "reentered": false
@@ -327,8 +171,8 @@
    "name": "Millstone",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 70399,
+   "table": 1,
+   "stack": 97560,
    "status": "seated",
    "reentered": false
   },
@@ -345,7 +189,7 @@
    "name": "Bulldog",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 173212,
    "status": "seated",
    "reentered": false
@@ -355,8 +199,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -453,7 +297,7 @@
    "name": "Sixgun",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 21160,
    "status": "seated",
    "reentered": false
@@ -462,7 +306,7 @@
    "name": "Professor",
    "kind": "house",
    "house": true,
-   "table": 3,
+   "table": 1,
    "stack": 81660,
    "status": "seated",
    "reentered": false
@@ -483,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 34,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 31,
-   "text": "Table 2 · Hand 31 · blinds 30/60 · Bulldog calls 60, Sixgun raises to 140, Granite folds, Bulldog calls 80, [flop: 9♣ A♠ 4♠], Sixgun checks, Bulldog checks, [turn: 9♣ A♠ 4♠ 5♦], Sixgun checks, Bulldog checks, [river: 9♣ A♠ 4♠ 5♦ 8♦], Sixgun checks, Bulldog checks → Bulldog wins 340 with Pair of 5s (J♦ 5♠)",
-   "pot": 340
-  },
   {
    "table": 3,
    "handNo": 31,
@@ -552,6 +382,12 @@
    "handNo": 34,
    "text": "Table 2 · Hand 34 · blinds 30/60 · Bulldog calls 60, Sixgun calls 30, Granite checks, [flop: J♦ Q♦ 4♠], Sixgun checks, Granite checks, Bulldog checks, [turn: J♦ Q♦ 4♠ 3♦], Sixgun checks, Granite checks, Bulldog checks, [river: J♦ Q♦ 4♠ 3♦ K♦], Sixgun checks, Granite checks, Bulldog checks → Bulldog wins 180 with Two pair, Ks and Js (K♠ J♥)",
    "pot": 180
+  },
+  {
+   "table": 3,
+   "handNo": 34,
+   "text": "Table 3 · Hand 34 · blinds 30/60 · Icebox calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 3♣ 4♣ 6♣], Deuce checks, Millstone checks, Icebox checks, [turn: 3♣ 4♣ 6♣ A♦], Deuce checks, Millstone checks, Icebox checks, [river: 3♣ 4♣ 6♣ A♦ A♣], Deuce raises to 80, Millstone raises to 235, Icebox raises to 445, Deuce raises to 1010, Millstone raises to 2130, Icebox raises to 3655, Deuce goes ALL-IN to 7151, Millstone raises to 15021, Icebox goes ALL-IN to 19890, Millstone raises to 45235 → Millstone wins 72456 with Flush, A high (K♣ 4♠)",
+   "pot": 72456
   }
  ],
  "finishes": [
@@ -681,6 +517,22 @@
    "kind": "house",
    "table": 2,
    "handNo": 26,
+   "provisional": true
+  },
+  {
+   "name": "Icebox",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 34,
+   "provisional": true
+  },
+  {
+   "name": "Deuce",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 34,
    "provisional": true
   }
  ],
