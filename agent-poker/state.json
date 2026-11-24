@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:44:02.388Z",
+ "updatedAt": "2026-11-24T01:44:31.803Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 56,
+ "handsPlayed": 57,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 57217,
+     "stack": 57167,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 44140,
+     "stack": 44090,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19840,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 5768,
+     "stack": 5718,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 52095,
+     "stack": 52405,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 18
+   "handsPlayed": 19
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 57217,
+   "stack": 57167,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 44140,
+   "stack": 44090,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19840,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 5768,
+   "stack": 5718,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 52095,
+   "stack": 52405,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 19,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Professor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 16,
-   "text": "Table 2 · Hand 16 · blinds 25/50 · Granite folds, Bulldog raises to 170, Sixgun calls 145, Hammer calls 120, [flop: 6♣ 6♦ K♦], Sixgun checks, Hammer raises to 65, Bulldog raises to 410, Sixgun calls 410, Hammer calls 345, [turn: 6♣ 6♦ K♦ 4♦], Sixgun checks, Hammer raises to 65, Bulldog raises to 1150, Sixgun calls 1150, Hammer raises to 2560, Bulldog raises to 6520, Sixgun calls 5370, Hammer raises to 11670, Bulldog goes ALL-IN to 21715, Sixgun calls 15195, Hammer raises to 34775, Sixgun calls 13060, [river: 6♣ 6♦ K♦ 4♦ 3♥], Sixgun checks, Hammer raises to 65, Sixgun calls 65 → Bulldog wins 66885 with Full house, Ks full of 6s (K♣ K♠); Hammer wins 26250 with Two pair, Ks and 6s (8♦ K♥)",
-   "pot": 93135
-  },
   {
    "table": 3,
    "handNo": 16,
@@ -552,6 +538,12 @@
    "handNo": 19,
    "text": "Table 2 · Hand 19 · blinds 25/50 · Hammer calls 50, Granite calls 50, Bulldog calls 25, Sixgun checks, [flop: 4♣ 3♥ 2♥], Bulldog checks, Sixgun checks, Hammer checks, Granite checks, [turn: 4♣ 3♥ 2♥ 6♦], Bulldog checks, Sixgun raises to 60, Hammer folds, Granite folds, Bulldog folds → Sixgun takes 260 (everyone else folded)",
    "pot": 260
+  },
+  {
+   "table": 3,
+   "handNo": 19,
+   "text": "Table 3 · Hand 19 · blinds 25/50 · Professor calls 50, Deuce calls 50, Millstone calls 50, Icebox calls 25, Velvet checks, [flop: K♠ 8♠ 9♠], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [turn: K♠ 8♠ 9♠ 5♠], Icebox checks, Velvet checks, Professor raises to 55, Deuce folds, Millstone folds, Icebox calls 55, Velvet folds, [river: K♠ 8♠ 9♠ 5♠ 5♥], Icebox checks, Professor raises to 55, Icebox calls 55 → Professor wins 470 with Flush, K high (K♥ 7♠)",
+   "pot": 470
   }
  ],
  "finishes": [
