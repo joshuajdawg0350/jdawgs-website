@@ -10,8 +10,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className+=" js"</script>
-<title>Q-Day Ledger™ — CBOM &amp; Post-Quantum Migration Engine | J-Dawgs Industries</title>
-<meta name="description" content="Q-Day Ledger inventories every cryptographic dependency you run, scores the quantum risk, and writes your deadline-mapped migration plan. Local-first: your code never leaves your machine.">
+<title>Q-Day Ledger™ — Post-Quantum Cryptography Inventory, CBOM &amp; PQC Migration Assessment | J-Dawgs Industries</title>
+<meta name="description" content="Q-Day Ledger builds your cryptographic inventory (CBOM), inventories every cryptographic dependency you run, scores the post-quantum risk, and writes your deadline-mapped PQC migration plan. Local-first: your code never leaves your machine.">
 <style>
   /* Hustle Look Kit (jdawgs-hustle-look-kit.md §1-§3, §10) — Wave 2 FACE restyle.
      Palette/headline/button treatment only; copy, prices, links unchanged. */
@@ -90,7 +90,6 @@
   a{color:var(--cyan)}
   code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:.9em}
 .tap-note{font-size:.85rem;color:#93A1B5;margin:.55rem 0 0}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -508,13 +507,6 @@
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

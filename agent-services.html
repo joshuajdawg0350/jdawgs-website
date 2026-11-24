@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>J-Dawgs Agent Services — Competitor Watch, Research Packs &amp; Listing Work at Fixed Prices</title>
-<meta name="description" content="Fixed-scope services for small sellers and businesses: competitor price-watch from $99, research packs with cited sources, and marketplace listing work priced from real sold comps. Every fact sourced, every delivery covered by the Fix-It Guarantee.">
+<title>J-Dawgs Agent Services — Competitor Price Monitoring, Research Packs &amp; Marketplace Listing Services at Fixed Prices</title>
+<meta name="description" content="Fixed-scope services for small sellers and businesses: competitor price monitoring and price-watch from $99, research packs with cited sources, and marketplace listing optimization and listing work priced from real sold comps. Every fact sourced, every delivery covered by the Fix-It Guarantee.">
 <link rel="canonical" href="https://jdawgsindustries.com/agent-services.html">
 <script>document.documentElement.className+=" js"</script>
 <link rel="stylesheet" href="assets/site.css">
@@ -79,7 +79,6 @@ body.hustle-face .site-footer a:hover{color:#39c2ff}
 /* money-only gold (kit \u00a71): prices keep a gold tone, never a gold theme */
 body.hustle-face .product .p-price{color:#ffd34d}
 body.hustle-face figure img{border:1px solid #263144}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -364,6 +363,7 @@ body.hustle-face figure img{border:1px solid #263144}
     <div class="wrap">
       <div class="sec-head">
         <h2>Every door, one tap away</h2>
+        <p class="lead"><a href="https://www.youtube.com/@HustleCityHoldem">If you like our videos, like and subscribe</a> — watch the Hustle City Hold&#8217;em poker show on YouTube.</p>
         <p class="lead">No hunting, no dead ends. These are the live doors into every J-Dawgs business.</p>
       </div>
       <div class="doors-grid">
@@ -590,13 +590,6 @@ if ('serviceWorker' in navigator) {
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

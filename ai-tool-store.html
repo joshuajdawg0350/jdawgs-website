@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Tool Store — The Tool Store Where the AI Is the Customer | J-Dawgs Industries</title>
-<meta name="description" content="The AI Tool Store: working tools built for AI agents — auditors, checkers, repair benches and pre-flight guards, $0.50–$1.00 per use. Unlimited Pass $99.99 one-time, not a subscription.">
+<title>AI Tool Store — AI Tools &amp; Agent Tools for AI Agents | J-Dawgs Industries</title>
+<meta name="description" content="The AI Tool Store: working AI tools built for AI agents and AI assistants — auditors, checkers, repair benches, pre-flight guards and prompt tools, $0.50–$1.00 per use. Unlimited Pass $99.99 one-time, not a subscription.">
 <link rel="canonical" href="https://jdawgsindustries.com/ai-tool-store.html">
 <link rel="agent-card" href="https://jdawgsindustries.com/ai-tool-store-card.json">
 <script>document.documentElement.className+=" js"</script>
@@ -152,7 +152,6 @@ body.hustle-face figure img{border:1px solid #263144}
 }
 </style>
 <style>
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -385,6 +384,7 @@ body.hustle-face figure img{border:1px solid #263144}
     <div class="wrap">
       <div class="sec-head">
         <h2>Every door, one tap away</h2>
+        <p class="lead"><a href="https://www.youtube.com/@HustleCityHoldem">If you like our videos, like and subscribe</a> — watch the Hustle City Hold&#8217;em poker show on YouTube.</p>
         <p class="lead">No hunting, no dead ends. These are the live doors into every J-Dawgs business.</p>
       </div>
       <div class="doors-grid" data-search-group>
@@ -676,12 +676,5 @@ document.querySelectorAll('.jd-list-form').forEach(function(f){
 })();
 </script>
 <script>(function(){function wire(){if(!window.__dsheet){setTimeout(wire,60);return;}var inp=document.getElementById('jd-search-input');if(inp)inp.addEventListener('input',function(){if(inp.value.trim())window.__dsheet.open('full');});}wire();})();</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
-</script>
 </body>
 </html>
