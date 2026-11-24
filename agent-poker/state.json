@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:18:07.998Z",
+ "updatedAt": "2026-11-24T01:18:32.801Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 24,
+ "handsPlayed": 25,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 2268,
+     "stack": 2158,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 24300,
+     "stack": 24275,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 18965,
+     "stack": 19210,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 73327,
+     "stack": 73217,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2268,
+   "stack": 2158,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 24300,
+   "stack": 24275,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18965,
+   "stack": 19210,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 73327,
+   "stack": 73217,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Sixgun",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce folds, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 25, Pickpocket checks, [flop: 10♣ 3♦ 3♠], Tally checks, Pickpocket raises to 180, Professor calls 180, Wildfire calls 180, Millstone calls 180, Velvet calls 180, Tally calls 180, [turn: 10♣ 3♦ 3♠ A♠], Tally checks, Pickpocket raises to 830, Professor calls 830, Wildfire calls 830, Millstone calls 830, Velvet calls 830, Tally calls 830, [river: 10♣ 3♦ 3♠ A♠ Q♣], Tally checks, Pickpocket raises to 3815, Professor calls 3815, Wildfire calls 3815, Millstone calls 3815, Velvet folds, Tally calls 3815 → Millstone wins 25435 with Two pair, As and 3s (J♥ A♣)",
-   "pot": 25435
-  },
   {
    "table": 1,
    "handNo": 6,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 3 · Hand 8 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Deuce folds, Wildfire calls 25, Millstone checks, [flop: 3♠ 6♣ 2♦], Wildfire checks, Millstone checks, Icebox checks, Velvet checks, Professor checks, [turn: 3♠ 6♣ 2♦ 3♣], Wildfire checks, Millstone raises to 50, Icebox folds, Velvet calls 50, Professor raises to 105, Wildfire calls 105, Millstone raises to 440, Velvet calls 390, Professor raises to 810, Wildfire calls 705, Millstone raises to 2460, Velvet folds, Professor raises to 4275, Wildfire calls 3465, Millstone raises to 11295, Professor raises to 19015, Wildfire calls 10525, Millstone goes ALL-IN to 24625, Professor raises to 33115, [river: 3♠ 6♣ 2♦ 3♣ Q♠], Professor raises to 55 → Millstone wins 64740 with Full house, 3s full of 2s (3♦ 2♣); Professor wins 8545 with Three of a kind, 3s (3♥ K♥)",
    "pot": 73285
+  },
+  {
+   "table": 1,
+   "handNo": 9,
+   "text": "Table 1 · Hand 9 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline calls 50, Venus folds, Shadow checks, [flop: 8♣ 6♦ 2♠], Shadow checks, Hammer checks, Baseline checks, [turn: 8♣ 6♦ 2♠ A♦], Shadow checks, Hammer checks, Baseline checks, [river: 8♣ 6♦ 2♠ A♦ 4♥], Shadow checks, Hammer checks, Baseline raises to 60, Shadow calls 60, Hammer calls 60 → Shadow wins 355 with Pair of As (7♣ A♠)",
+   "pot": 355
   }
  ],
  "finishes": [
