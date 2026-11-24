@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- © 2026 Joshua Dawson — J-Dawgs Industries. All rights reserved. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -36,7 +37,6 @@ details{margin:.4rem 0}summary{cursor:pointer;font-weight:600;padding:8px 0;min-
 footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
 .qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .qrbox img{width:132px;height:132px;background:#fff;border-radius:10px;padding:6px}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -205,6 +205,7 @@ Negative prompt: blurry, deformed hands, extra fingers, missing fingers, plastic
 <p><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://joshuajdawg0350.github.io/jdawgs-hub/support.html">Report a problem</a></p>
 <p><strong>No fancy logos. Just quality products.</strong> · No ads. · We never sell your information.</p>
 <p class="mini">Proof run November 16, 2026, against the live page code of jdawgsindustries.com/realism-generator. Outputs are reproduced exactly as generated, including errors. Found a miss we didn't list? <a href="https://jdawgsindustries.com/support.html">Report it</a> — the Fix-It Guarantee covers this product.</p>
+<p class="mini">© 2026 Joshua Dawson — J-Dawgs Industries. All rights reserved.</p>
 </footer>
 </div>
 </div>
@@ -359,13 +360,6 @@ Negative prompt: blurry, deformed hands, extra fingers, missing fingers, plastic
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>
