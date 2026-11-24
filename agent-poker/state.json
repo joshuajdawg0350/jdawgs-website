@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:50:45.408Z",
+ "updatedAt": "2026-11-24T01:51:10.381Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 67,
+ "handsPlayed": 68,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 66825,
+     "stack": 66765,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 84775,
+     "stack": 84965,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 41827,
+     "stack": 41697,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 22
+   "handsPlayed": 23
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 66825,
+   "stack": 66765,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 41827,
+   "stack": 41697,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 84775,
+   "stack": 84965,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 23,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Hammer",
+  "toAct": "Professor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 20,
-   "text": "Table 1 · Hand 20 · blinds 25/50 · Venus calls 50, Shadow calls 50, Midas calls 25, Baseline checks, [flop: 4♥ 8♦ 5♣], Midas checks, Baseline checks, Venus checks, Shadow checks, [turn: 4♥ 8♦ 5♣ 3♦], Midas checks, Baseline checks, Venus checks, Shadow checks, [river: 4♥ 8♦ 5♣ 3♦ 10♥], Midas checks, Baseline checks, Venus checks, Shadow checks → Midas wins 200 with A high (A♦ Q♦)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 20,
@@ -552,6 +546,12 @@
    "handNo": 23,
    "text": "Table 1 · Hand 23 · blinds 30/60 · Baseline calls 60, Venus calls 60, Shadow calls 30, Midas checks, [flop: K♦ 2♦ 2♥], Shadow checks, Midas raises to 132, Baseline calls 132, Venus calls 132, Shadow calls 132, [turn: K♦ 2♦ 2♥ Q♥], Shadow checks, Midas raises to 422, Baseline calls 422, Venus calls 422, Shadow calls 422, [river: K♦ 2♦ 2♥ Q♥ 3♦], Shadow checks, Midas raises to 1351, Baseline goes ALL-IN to 1949, Venus raises to 3679, Shadow raises to 5584, Midas calls 4233, Venus raises to 8024, Shadow calls 2440, Midas calls 2440 → Venus wins 28477 with Flush, K high (8♦ 4♦)",
    "pot": 28477
+  },
+  {
+   "table": 2,
+   "handNo": 23,
+   "text": "Table 2 · Hand 23 · blinds 30/60 · Hammer calls 60, Granite folds, Bulldog calls 30, Sixgun checks, [flop: 5♠ 4♥ 8♣], Bulldog checks, Sixgun checks, Hammer checks, [turn: 5♠ 4♥ 8♣ 3♣], Bulldog checks, Sixgun checks, Hammer checks, [river: 5♠ 4♥ 8♣ 3♣ A♥], Bulldog checks, Sixgun checks, Hammer raises to 70, Bulldog folds, Sixgun calls 70 → Sixgun wins 320 with A high (J♥ 6♥)",
+   "pot": 320
   }
  ],
  "finishes": [
