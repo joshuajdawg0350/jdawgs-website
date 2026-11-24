@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:29:01.287Z",
+ "updatedAt": "2026-11-24T01:38:44.005Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 46,
+ "handsPlayed": 48,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 22295,
+     "stack": 66885,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 121215,
+     "stack": 85795,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 49517,
+     "stack": 40347,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   },
   {
    "id": 3,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 57417,
+     "stack": 57367,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 5393,
+     "stack": 5468,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 51995,
+     "stack": 51970,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 57417,
+   "stack": 57367,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22295,
+   "stack": 66885,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 5393,
+   "stack": 5468,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 49517,
+   "stack": 40347,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 121215,
+   "stack": 85795,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 51995,
+   "stack": 51970,
    "status": "seated",
    "reentered": false
   },
@@ -484,27 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 16,
+  "table": 1,
+  "handNo": 17,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Granite",
+  "toAct": "Shadow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 13,
-   "text": "Table 1 · Hand 13 · blinds 25/50 · Shadow calls 50, Hammer calls 50, Midas folds, Baseline calls 25, Venus checks, [flop: 9♠ 7♣ 8♦], Baseline checks, Venus checks, Shadow checks, Hammer checks, [turn: 9♠ 7♣ 8♦ 10♥], Baseline checks, Venus raises to 50, Shadow calls 50, Hammer calls 50, Baseline folds, [river: 9♠ 7♣ 8♦ 10♥ 10♦], Venus raises to 50, Shadow raises to 290, Hammer raises to 600, Venus raises to 995, Shadow raises to 2335, Hammer calls 1735, Venus raises to 4050, Shadow raises to 9490, Hammer raises to 16560, Venus goes ALL-IN to 24025, Shadow calls 9770, Hammer raises to 33730 → Venus wins 9530 with Straight, J high (2♥ J♦); Shadow wins 58130 with Full house, 10s full of 9s (9♣ 10♠); Hammer wins 9705 with Two pair, 10s and 7s (A♥ 7♦)",
-   "pot": 77365
-  },
-  {
-   "table": 2,
-   "handNo": 13,
-   "text": "Table 2 · Hand 13 · blinds 25/50 · Bulldog calls 50, Marble folds, Sixgun raises to 130, Anchor calls 130, Slick folds, Granite calls 80, Bulldog folds, [flop: 8♣ 8♦ 7♣], Granite checks, Sixgun raises to 280, Anchor calls 280, Granite calls 280, [turn: 8♣ 8♦ 7♣ 10♦], Granite checks, Sixgun raises to 785, Anchor calls 785, Granite calls 785, [river: 8♣ 8♦ 7♣ 10♦ 6♦], Granite checks, Sixgun raises to 2195, Anchor calls 2195, Granite calls 2195 → Granite wins 10245 with Three of a kind, 8s (J♠ 8♠)",
-   "pot": 10245
-  },
   {
    "table": 3,
    "handNo": 13,
@@ -552,6 +540,18 @@
    "handNo": 16,
    "text": "Table 1 · Hand 16 · blinds 25/50 · Venus calls 50, Shadow folds, Midas calls 25, Baseline checks, [flop: 9♠ 7♦ 7♠], Midas checks, Baseline checks, Venus checks, [turn: 9♠ 7♦ 7♠ 4♥], Midas checks, Baseline checks, Venus checks, [river: 9♠ 7♦ 7♠ 4♥ 2♦], Midas checks, Baseline checks, Venus checks → Venus wins 150 with Two pair, 9s and 7s (Q♠ 9♥)",
    "pot": 150
+  },
+  {
+   "table": 2,
+   "handNo": 16,
+   "text": "Table 2 · Hand 16 · blinds 25/50 · Granite folds, Bulldog raises to 170, Sixgun calls 145, Hammer calls 120, [flop: 6♣ 6♦ K♦], Sixgun checks, Hammer raises to 65, Bulldog raises to 410, Sixgun calls 410, Hammer calls 345, [turn: 6♣ 6♦ K♦ 4♦], Sixgun checks, Hammer raises to 65, Bulldog raises to 1150, Sixgun calls 1150, Hammer raises to 2560, Bulldog raises to 6520, Sixgun calls 5370, Hammer raises to 11670, Bulldog goes ALL-IN to 21715, Sixgun calls 15195, Hammer raises to 34775, Sixgun calls 13060, [river: 6♣ 6♦ K♦ 4♦ 3♥], Sixgun checks, Hammer raises to 65, Sixgun calls 65 → Bulldog wins 66885 with Full house, Ks full of 6s (K♣ K♠); Hammer wins 26250 with Two pair, Ks and 6s (8♦ K♥)",
+   "pot": 93135
+  },
+  {
+   "table": 3,
+   "handNo": 16,
+   "text": "Table 3 · Hand 16 · blinds 25/50 · Millstone folds, Icebox folds, Velvet calls 50, Professor folds, Deuce checks, [flop: 4♠ 8♣ 7♣], Deuce checks, Velvet checks, [turn: 4♠ 8♣ 7♣ 8♦], Deuce checks, Velvet checks, [river: 4♠ 8♣ 7♣ 8♦ K♠], Deuce checks, Velvet checks → Velvet wins 125 with Two pair, Ks and 8s (6♣ K♦)",
+   "pot": 125
   }
  ],
  "finishes": [
