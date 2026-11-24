@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:16:42.625Z",
+ "updatedAt": "2026-11-24T01:17:08.773Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 22,
+ "handsPlayed": 23,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 7520,
+     "stack": 7595,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19430,
+     "stack": 19505,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19605,
+     "stack": 19555,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 111510,
+     "stack": 111460,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20340,
+     "stack": 20290,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 7520,
+   "stack": 7595,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19430,
+   "stack": 19505,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19605,
+   "stack": 19555,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20340,
+   "stack": 20290,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 111510,
+   "stack": 111460,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 8,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Marble",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 5,
-   "text": "Table 1 · Hand 5 · blinds 25/50 · Midas folds, Baseline calls 50, Pearl calls 50, Venus raises to 115, Shadow calls 115, River Rat calls 90, Hammer folds, Baseline folds, Pearl calls 65, [flop: 6♥ K♦ 9♦], River Rat checks, Pearl checks, Venus checks, Shadow checks, [turn: 6♥ K♦ 9♦ 3♥], River Rat checks, Pearl checks, Venus checks, Shadow checks, [river: 6♥ K♦ 9♦ 3♥ 6♦], River Rat checks, Pearl checks, Venus checks, Shadow checks → Venus wins 560 with Two pair, As and 6s (A♠ A♣)",
-   "pot": 560
-  },
   {
    "table": 2,
    "handNo": 5,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 1 · Hand 8 · blinds 25/50 · Venus calls 50, Shadow calls 50, River Rat calls 50, Hammer calls 50, Midas folds, Baseline calls 25, Pearl checks, [flop: 7♣ 9♦ K♥], Baseline checks, Pearl checks, Venus checks, Shadow checks, River Rat checks, Hammer checks, [turn: 7♣ 9♦ K♥ J♦], Baseline raises to 55, Pearl calls 55, Venus folds, Shadow calls 55, River Rat calls 55, Hammer calls 55, [river: 7♣ 9♦ K♥ J♦ 5♦], Baseline raises to 55, Pearl calls 55, Shadow folds, River Rat calls 55, Hammer raises to 500, Baseline raises to 1285, Pearl calls 1230, River Rat calls 1230, Hammer raises to 4245, Baseline raises to 9455, Pearl calls 8170, River Rat calls 8170, Hammer raises to 16230, Baseline goes ALL-IN to 19893, Pearl calls 8712, River Rat calls 9310, Hammer calls 1965 → Baseline wins 2268 with Straight, J high (8♥ 10♣); Hammer wins 73327 with Flush, J high (7♦ 6♦)",
    "pot": 75595
+  },
+  {
+   "table": 2,
+   "handNo": 8,
+   "text": "Table 2 · Hand 8 · blinds 25/50 · Marble calls 50, Sixgun calls 50, Anchor calls 50, Ozone folds, Slick folds, Granite calls 25, Bulldog checks, [flop: A♥ 2♣ 7♦], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [turn: A♥ 2♣ 7♦ 8♥], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [river: A♥ 2♣ 7♦ 8♥ 4♣], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks → Granite wins 125 with Pair of As (A♦ K♥); Bulldog wins 125 with Pair of As (K♦ A♣)",
+   "pot": 250
   }
  ],
  "finishes": [
