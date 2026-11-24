@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:30:21.670Z",
+ "updatedAt": "2026-11-24T02:30:41.626Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 136,
+ "handsPlayed": 137,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 453078,
+     "stack": 452758,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 49012,
+     "stack": 49332,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 68
+   "handsPlayed": 69
   }
  ],
  "seats": [
@@ -181,7 +181,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 49012,
+   "stack": 49332,
    "status": "seated",
    "reentered": false
   },
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 453078,
+   "stack": 452758,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 69,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 59,
-   "text": "Table 1 · Hand 59 · blinds 40/80 · Bulldog calls 80, Professor calls 80, Shadow folds, Venus calls 40, Midas checks, [flop: 10♥ A♠ 10♣], Venus checks, Midas checks, Bulldog checks, Professor checks, [turn: 10♥ A♠ 10♣ 10♦], Venus checks, Midas checks, Bulldog raises to 190, Professor raises to 400, Venus calls 400, Midas folds, Bulldog raises to 1185, Professor raises to 2050, Venus raises to 2915, Bulldog raises to 6795, Professor raises to 11065, Venus calls 8150, Bulldog raises to 28610, Professor raises to 47910, Venus calls 21999, Bulldog goes ALL-IN to 90591, Professor raises to 137541, [river: 10♥ A♠ 10♣ 10♦ Q♣], Professor raises to 90 → Professor wins 261606 with Straight, A high (J♦ K♦)",
-   "pot": 261606
-  },
   {
    "table": 1,
    "handNo": 60,
@@ -396,6 +382,12 @@
    "handNo": 68,
    "text": "Table 1 · Hand 68 · blinds 50/100 · Shadow calls 100, Midas folds, Professor checks, [flop: K♦ 3♥ J♦], Professor checks, Shadow checks, [turn: K♦ 3♥ J♦ 6♠], Professor checks, Shadow checks, [river: K♦ 3♥ J♦ 6♠ 7♠], Professor checks, Shadow checks → Professor wins 250 with Pair of Js (J♣ 2♦)",
    "pot": 250
+  },
+  {
+   "table": 1,
+   "handNo": 69,
+   "text": "Table 1 · Hand 69 · blinds 50/100 · Midas folds, Professor calls 50, Shadow checks, [flop: J♠ J♥ K♠], Professor checks, Shadow raises to 110, Professor calls 110, [turn: J♠ J♥ K♠ 9♠], Professor checks, Shadow raises to 110, Professor calls 110, [river: J♠ J♥ K♠ 9♠ 7♣], Professor checks, Shadow checks → Shadow wins 640 with Three of a kind, Js (J♦ A♣)",
+   "pot": 640
   }
  ],
  "finishes": [
