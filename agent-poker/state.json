@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:56:03.581Z",
+ "updatedAt": "2026-11-24T01:56:28.059Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 76,
+ "handsPlayed": 77,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 57680,
+     "stack": 57650,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 66275,
+     "stack": 173607,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 86185,
+     "stack": 19910,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 41027,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 25
+   "handsPlayed": 26
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 57680,
+   "stack": 57650,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 66275,
+   "stack": 173607,
    "status": "seated",
    "reentered": false
   },
@@ -391,8 +391,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 41027,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 86185,
+   "stack": 19910,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 26,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Sixgun",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 23,
-   "text": "Table 1 · Hand 23 · blinds 30/60 · Baseline calls 60, Venus calls 60, Shadow calls 30, Midas checks, [flop: K♦ 2♦ 2♥], Shadow checks, Midas raises to 132, Baseline calls 132, Venus calls 132, Shadow calls 132, [turn: K♦ 2♦ 2♥ Q♥], Shadow checks, Midas raises to 422, Baseline calls 422, Venus calls 422, Shadow calls 422, [river: K♦ 2♦ 2♥ Q♥ 3♦], Shadow checks, Midas raises to 1351, Baseline goes ALL-IN to 1949, Venus raises to 3679, Shadow raises to 5584, Midas calls 4233, Venus raises to 8024, Shadow calls 2440, Midas calls 2440 → Venus wins 28477 with Flush, K high (8♦ 4♦)",
-   "pot": 28477
-  },
   {
    "table": 2,
    "handNo": 23,
@@ -552,6 +546,12 @@
    "handNo": 26,
    "text": "Table 1 · Hand 26 · blinds 30/60 · Venus calls 60, Shadow calls 30, Midas checks, [flop: K♠ 6♥ 3♣], Shadow checks, Midas checks, Venus checks, [turn: K♠ 6♥ 3♣ 8♠], Shadow checks, Midas checks, Venus checks, [river: K♠ 6♥ 3♣ 8♠ 10♥], Shadow checks, Midas checks, Venus checks → Shadow wins 180 with Pair of 8s (8♥ A♥)",
    "pot": 180
+  },
+  {
+   "table": 2,
+   "handNo": 26,
+   "text": "Table 2 · Hand 26 · blinds 30/60 · Sixgun calls 60, Hammer calls 60, Granite folds, Bulldog checks, [flop: K♠ K♥ 5♦], Bulldog raises to 125, Sixgun calls 125, Hammer calls 125, [turn: K♠ K♥ 5♦ J♥], Bulldog raises to 350, Sixgun calls 350, Hammer calls 350, [river: K♠ K♥ 5♦ J♥ Q♠], Bulldog raises to 980, Sixgun raises to 2550, Hammer calls 2550, Bulldog raises to 7180, Sixgun raises to 15530, Hammer calls 12980, Bulldog raises to 39455, Sixgun raises to 82745, Hammer calls 24962, Bulldog calls 26285 → Bulldog wins 173607 with Three of a kind, Ks (K♦ 8♠); Sixgun wins 17005 with Two pair, Ks and Qs (2♥ Q♣)",
+   "pot": 190612
   }
  ],
  "finishes": [
@@ -673,6 +673,14 @@
    "kind": "house",
    "table": 1,
    "handNo": 23,
+   "provisional": true
+  },
+  {
+   "name": "Hammer",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 26,
    "provisional": true
   }
  ],
