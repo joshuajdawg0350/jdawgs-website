@@ -104,23 +104,86 @@
     });
   }
 
+  // The install button must NEVER be dead. Chrome only fires
+  // beforeinstallprompt when its own installability + engagement
+  // criteria are met, so on most real visits there is no captured
+  // prompt and the old fallback just unhid an iPhone-only box — on an
+  // Android phone the tap looked like nothing happened. Now every
+  // path through install() ends in something visible: the native
+  // popup, or printed steps for the worker's own phone plus a plain
+  // status line saying why.
+  function applyHelpPlatform(container) {
+    var android = container.querySelectorAll('[data-hh-help-android]');
+    var ios = container.querySelectorAll('[data-hh-help-ios]');
+    for (var i = 0; i < android.length; i++) android[i].hidden = isIOS();
+    for (var j = 0; j < ios.length; j++) ios[j].hidden = !isIOS();
+  }
+
+  function setStatusNear(el, text) {
+    var scope = el;
+    while (scope && scope !== document.body) {
+      if (scope.querySelector) {
+        var nodes = scope.querySelectorAll('[data-hh-app-status]');
+        if (nodes.length) {
+          for (var i = 0; i < nodes.length; i++) nodes[i].textContent = text;
+          return true;
+        }
+      }
+      scope = scope.parentElement;
+    }
+    return false;
+  }
+
+  function showInstallHelp(reasonText) {
+    var helps = document.querySelectorAll('[data-hh-ios-help]');
+    for (var i = 0; i < helps.length; i++) {
+      applyHelpPlatform(helps[i]);
+      helps[i].hidden = false;
+    }
+    if (reasonText) {
+      if (!helps.length || !setStatusNear(helps[0], reasonText)) setStatus(reasonText);
+    }
+    if (helps.length && helps[0].scrollIntoView) {
+      try { helps[0].scrollIntoView({ block: 'nearest' }); } catch (e) { /* older browser */ }
+    }
+  }
+
   var HHApp = {
     isStandalone: isStandalone,
     pushSupported: pushSupported,
     installAvailable: function () { return Boolean(deferredInstallPrompt); },
 
     install: function () {
+      if (isStandalone()) {
+        setStatus('You are already using the installed app — it opens from your home screen.');
+        return Promise.resolve();
+      }
       if (deferredInstallPrompt) {
-        deferredInstallPrompt.prompt();
-        return deferredInstallPrompt.userChoice.then(function () {
+        var promptEvent = deferredInstallPrompt;
+        try {
+          promptEvent.prompt();
+        } catch (e) {
           deferredInstallPrompt = null;
+          showInstallHelp('The install popup could not open on this phone — here is how to add the app by hand:');
+          return Promise.resolve();
+        }
+        return promptEvent.userChoice.then(function (choice) {
+          deferredInstallPrompt = null;
+          if (choice && choice.outcome === 'accepted') {
+            setStatus('Installing… look for Human Hands on your home screen.');
+          } else {
+            showInstallHelp('No problem — if you change your mind, here is how to add the app by hand:');
+          }
           refreshUI();
+        }).catch(function () {
+          deferredInstallPrompt = null;
+          showInstallHelp('The install popup did not finish — here is how to add the app by hand:');
         });
       }
-      // No native prompt (iPhone, or already installed): the pages carry
-      // printed Add-to-Home-Screen steps — reveal them.
-      var helps = document.querySelectorAll('[data-hh-ios-help]');
-      for (var i = 0; i < helps.length; i++) helps[i].hidden = false;
+      // No native prompt available (the common case — Chrome had not
+      // offered one). NEVER sit silent: show the printed steps for
+      // this phone and say why, in plain words.
+      showInstallHelp('Your browser did not offer an install popup — no problem, here is how to add the app by hand:');
       return Promise.resolve();
     },
 
@@ -241,7 +304,7 @@
       var helps = document.querySelectorAll('[data-hh-ios-help]');
       for (var j = 0; j < helps.length; j++) {
         // iPhone gets the printed steps up front — there is no prompt.
-        if (isIOS() && !st.standalone) helps[j].hidden = false;
+        if (isIOS() && !st.standalone) { applyHelpPlatform(helps[j]); helps[j].hidden = false; }
       }
       var toggles = document.querySelectorAll('[data-hh-alerts-toggle]');
       for (var k = 0; k < toggles.length; k++) {
@@ -276,6 +339,10 @@
       toggles[j].addEventListener('click', function () {
         var emailEl = document.querySelector('[data-hh-email]');
         var email = emailEl ? emailEl.value : savedEmail();
+        // Speak up the instant the button is tapped — the state check
+        // below can take a few seconds on a first visit (it waits for
+        // the service worker), and a silent wait reads as a dead button.
+        setStatus('Working on it…');
         HHApp.getState().then(function (st) {
           if (st.subscribed) {
             setStatus('Turning alerts off…');
@@ -299,6 +366,10 @@
             }
             refreshUI();
           });
+        }).catch(function () {
+          // No silent failures: whatever went wrong, the tap gets an answer.
+          setStatus('That did not go through — try once more. If it keeps failing, email joshuajdawg0350@gmail.com.');
+          refreshUI();
         });
       });
     }
@@ -308,6 +379,8 @@
         setStatus('Sending a test alert…');
         HHApp.testAlert().then(function (r) {
           setStatus(r.ok ? 'Test alert sent — check your notifications.' : 'The test alert did not go through — try once more.');
+        }).catch(function () {
+          setStatus('The test alert did not go through — try once more.');
         });
       });
     }

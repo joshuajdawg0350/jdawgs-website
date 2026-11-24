@@ -110,12 +110,23 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         <button type="button" class="btn btn-primary" data-hh-install-btn>Install the app</button>
       </div>
       <div class="hh-ios-help" data-hh-ios-help hidden>
-        <strong>On an iPhone:</strong> alerts only work inside the installed app, so do this first —
-        <ol>
-          <li>Tap the <b>Share</b> button in Safari (the square with an arrow).</li>
-          <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
-          <li>Open the Human Hands app from your home screen and turn alerts on here.</li>
-        </ol>
+        <div data-hh-help-android>
+          <strong>On an Android phone:</strong>
+          <ol>
+            <li>Tap the <b>⋮ menu</b> at the top right of Chrome.</li>
+            <li>Tap <b>Install app</b> (on some phones it says <b>Add to Home screen</b>).</li>
+            <li>Tap <b>Install</b>. The Human Hands app is now on your home screen.</li>
+            <li>Open it from your home screen and turn alerts on here.</li>
+          </ol>
+        </div>
+        <div data-hh-help-ios>
+          <strong>On an iPhone:</strong> alerts only work inside the installed app, so do this first —
+          <ol>
+            <li>Tap the <b>Share</b> button in Safari (the square with an arrow).</li>
+            <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+            <li>Open the Human Hands app from your home screen and turn alerts on here.</li>
+          </ol>
+        </div>
       </div>
       <p class="hh-app-status" data-hh-app-status role="status"></p>
     </div>
@@ -133,5 +144,23 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
 
 <script src="hh-config.js"></script>
 <script src="hh-app.js" defer></script>
+<script>
+/* Safety net: if hh-app.js ever fails to load, the Install button still
+   answers a tap — it shows the printed steps instead of sitting dead. */
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    if (window.HHApp) return;
+    var btns = document.querySelectorAll('[data-hh-install-btn]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var helps = document.querySelectorAll('[data-hh-ios-help]');
+        for (var j = 0; j < helps.length; j++) helps[j].hidden = false;
+        var sts = document.querySelectorAll('[data-hh-app-status]');
+        for (var k = 0; k < sts.length; k++) sts[k].textContent = 'The app controls did not load — here is how to add the app by hand:';
+      });
+    }
+  }, 2500);
+});
+</script>
 </body>
 </html>
