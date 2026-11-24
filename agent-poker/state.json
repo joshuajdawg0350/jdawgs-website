@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:07:27.177Z",
+ "updatedAt": "2026-11-24T02:07:50.763Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 97,
+ "handsPlayed": 98,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 173122,
+     "stack": 173092,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 21190,
+     "stack": 21220,
      "status": "seated",
      "reentered": false
     },
@@ -160,7 +160,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 32
+   "handsPlayed": 33
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 173122,
+   "stack": 173092,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21190,
+   "stack": 21220,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 33,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Granite",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 30,
-   "text": "Table 1 · Hand 30 · blinds 30/60 · Shadow folds, Midas calls 30, Venus checks, [flop: 4♦ Q♠ 9♣], Midas raises to 66, Venus calls 66, [turn: 4♦ Q♠ 9♣ 10♦], Midas raises to 139, Venus calls 139, [river: 4♦ Q♠ 9♣ 10♦ J♥], Midas checks, Venus checks → Midas wins 265 with Pair of Qs (Q♦ 6♣); Venus wins 265 with Pair of Qs (3♦ Q♥)",
-   "pot": 530
-  },
   {
    "table": 2,
    "handNo": 30,
@@ -552,6 +546,12 @@
    "handNo": 33,
    "text": "Table 1 · Hand 33 · blinds 30/60 · Shadow folds, Midas calls 30, Venus checks, [flop: 2♠ 3♠ J♠], Midas checks, Venus checks, [turn: 2♠ 3♠ J♠ 7♣], Midas checks, Venus checks, [river: 2♠ 3♠ J♠ 7♣ 9♠], Midas checks, Venus checks → Venus wins 120 with Pair of 9s (5♦ 9♦)",
    "pot": 120
+  },
+  {
+   "table": 2,
+   "handNo": 33,
+   "text": "Table 2 · Hand 33 · blinds 30/60 · Granite folds, Bulldog folds → Sixgun takes 90 (everyone else folded)",
+   "pot": 90
   }
  ],
  "finishes": [
