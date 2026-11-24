@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:52:57.810Z",
+ "updatedAt": "2026-11-24T01:53:25.184Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 71,
+ "handsPlayed": 72,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 59951,
+     "stack": 59701,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 46964,
+     "stack": 46714,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19860,
+     "stack": 20610,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 52445,
+     "stack": 52195,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 23
+   "handsPlayed": 24
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 59951,
+   "stack": 59701,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 46964,
+   "stack": 46714,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19860,
+   "stack": 20610,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 52445,
+   "stack": 52195,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 24,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 21,
-   "text": "Table 2 · Hand 21 · blinds 30/60 · Bulldog calls 60, Sixgun calls 60, Hammer calls 30, Granite checks, [flop: 4♦ 4♥ 7♠], Hammer raises to 80, Granite folds, Bulldog calls 80, Sixgun calls 80, [turn: 4♦ 4♥ 7♠ Q♠], Hammer raises to 80, Bulldog calls 80, Sixgun calls 80, [river: 4♦ 4♥ 7♠ Q♠ 8♣], Hammer raises to 80, Bulldog calls 80, Sixgun calls 80 → Hammer wins 960 with Three of a kind, 4s (4♣ A♣)",
-   "pot": 960
-  },
   {
    "table": 3,
    "handNo": 21,
@@ -552,6 +538,12 @@
    "handNo": 24,
    "text": "Table 2 · Hand 24 · blinds 30/60 · Granite folds, Bulldog calls 60, Sixgun calls 30, Hammer checks, [flop: 2♣ A♥ 5♦], Sixgun checks, Hammer checks, Bulldog checks, [turn: 2♣ A♥ 5♦ 8♥], Sixgun checks, Hammer checks, Bulldog checks, [river: 2♣ A♥ 5♦ 8♥ 3♠], Sixgun checks, Hammer checks, Bulldog checks → Bulldog wins 180 with Pair of 8s (6♥ 8♦)",
    "pot": 180
+  },
+  {
+   "table": 3,
+   "handNo": 24,
+   "text": "Table 3 · Hand 24 · blinds 30/60 · Deuce calls 60, Millstone calls 60, Icebox calls 30, Professor checks, [flop: 8♣ Q♦ Q♣], Icebox raises to 60, Professor calls 60, Deuce calls 60, Millstone calls 60, [turn: 8♣ Q♦ Q♣ 2♦], Icebox checks, Professor raises to 65, Deuce calls 65, Millstone calls 65, Icebox calls 65, [river: 8♣ Q♦ Q♣ 2♦ 6♥], Icebox checks, Professor raises to 65, Deuce calls 65, Millstone calls 65, Icebox calls 65 → Icebox wins 1000 with Three of a kind, Qs (Q♠ J♥)",
+   "pot": 1000
   }
  ],
  "finishes": [
