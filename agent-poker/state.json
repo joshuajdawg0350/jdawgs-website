@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:50:14.262Z",
+ "updatedAt": "2026-11-24T01:50:45.408Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 66,
+ "handsPlayed": 67,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20245,
+     "stack": 11607,
      "status": "seated",
      "reentered": false
     },
@@ -29,8 +29,8 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 2563,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 9335,
+     "stack": 29174,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 57470,
+     "stack": 48832,
      "status": "seated",
      "reentered": false
     },
@@ -66,7 +66,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 22
+   "handsPlayed": 23
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20245,
+   "stack": 11607,
    "status": "seated",
    "reentered": false
   },
@@ -256,8 +256,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2563,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 9335,
+   "stack": 29174,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 57470,
+   "stack": 48832,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 23,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Baseline",
+  "toAct": "Hammer",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 19,
-   "text": "Table 3 · Hand 19 · blinds 25/50 · Professor calls 50, Deuce calls 50, Millstone calls 50, Icebox calls 25, Velvet checks, [flop: K♠ 8♠ 9♠], Icebox checks, Velvet checks, Professor checks, Deuce checks, Millstone checks, [turn: K♠ 8♠ 9♠ 5♠], Icebox checks, Velvet checks, Professor raises to 55, Deuce folds, Millstone folds, Icebox calls 55, Velvet folds, [river: K♠ 8♠ 9♠ 5♠ 5♥], Icebox checks, Professor raises to 55, Icebox calls 55 → Professor wins 470 with Flush, K high (K♥ 7♠)",
-   "pot": 470
-  },
   {
    "table": 1,
    "handNo": 20,
@@ -552,6 +546,12 @@
    "handNo": 22,
    "text": "Table 3 · Hand 22 · blinds 30/60 · Icebox calls 60, Velvet calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 10♣ 3♠ J♦], Deuce checks, Millstone checks, Icebox checks, Velvet checks, [turn: 10♣ 3♠ J♦ 9♥], Deuce checks, Millstone raises to 60, Icebox folds, Velvet calls 60, Deuce calls 60, [river: 10♣ 3♠ J♦ 9♥ Q♥], Deuce raises to 80, Millstone raises to 380, Velvet calls 380, Deuce raises to 1135, Millstone raises to 2525, Velvet calls 2145, Deuce raises to 6490, Millstone raises to 13665, Velvet calls 3103, Deuce raises to 29385, Millstone goes ALL-IN to 43970, Deuce goes ALL-IN to 56987 → Deuce wins 60011 with Straight, K high (3♥ K♥); Millstone wins 46994 with Straight, K high (K♦ Q♠)",
    "pot": 107005
+  },
+  {
+   "table": 1,
+   "handNo": 23,
+   "text": "Table 1 · Hand 23 · blinds 30/60 · Baseline calls 60, Venus calls 60, Shadow calls 30, Midas checks, [flop: K♦ 2♦ 2♥], Shadow checks, Midas raises to 132, Baseline calls 132, Venus calls 132, Shadow calls 132, [turn: K♦ 2♦ 2♥ Q♥], Shadow checks, Midas raises to 422, Baseline calls 422, Venus calls 422, Shadow calls 422, [river: K♦ 2♦ 2♥ Q♥ 3♦], Shadow checks, Midas raises to 1351, Baseline goes ALL-IN to 1949, Venus raises to 3679, Shadow raises to 5584, Midas calls 4233, Venus raises to 8024, Shadow calls 2440, Midas calls 2440 → Venus wins 28477 with Flush, K high (8♦ 4♦)",
+   "pot": 28477
   }
  ],
  "finishes": [
@@ -665,6 +665,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 22,
+   "provisional": true
+  },
+  {
+   "name": "Baseline",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 23,
    "provisional": true
   }
  ],
