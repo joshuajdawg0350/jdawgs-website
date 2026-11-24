@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:54:47.681Z",
+ "updatedAt": "2026-11-24T01:55:12.599Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 74,
+ "handsPlayed": 75,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 59701,
+     "stack": 59901,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20610,
+     "stack": 20470,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 52195,
+     "stack": 52135,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 24
+   "handsPlayed": 25
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 59701,
+   "stack": 59901,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20610,
+   "stack": 20470,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 52195,
+   "stack": 52135,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 25,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Millstone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 22,
-   "text": "Table 2 · Hand 22 · blinds 30/60 · Sixgun calls 60, Hammer calls 60, Granite folds, Bulldog checks, [flop: 6♠ 4♠ 8♥], Bulldog checks, Sixgun checks, Hammer checks, [turn: 6♠ 4♠ 8♥ 7♠], Bulldog checks, Sixgun checks, Hammer raises to 80, Bulldog folds, Sixgun folds → Hammer takes 290 (everyone else folded)",
-   "pot": 290
-  },
   {
    "table": 3,
    "handNo": 22,
@@ -552,6 +538,12 @@
    "handNo": 25,
    "text": "Table 2 · Hand 25 · blinds 30/60 · Bulldog calls 60, Sixgun calls 60, Hammer calls 30, Granite checks, [flop: J♠ 5♣ 4♥], Hammer checks, Granite checks, Bulldog checks, Sixgun checks, [turn: J♠ 5♣ 4♥ 6♦], Hammer checks, Granite checks, Bulldog checks, Sixgun raises to 145, Hammer calls 145, Granite folds, Bulldog calls 145, [river: J♠ 5♣ 4♥ 6♦ 9♣], Hammer checks, Bulldog checks, Sixgun raises to 405, Hammer calls 405, Bulldog calls 405 → Sixgun wins 1890 with Two pair, 6s and 4s (6♥ 4♦)",
    "pot": 1890
+  },
+  {
+   "table": 3,
+   "handNo": 25,
+   "text": "Table 3 · Hand 25 · blinds 30/60 · Millstone folds, Icebox calls 60, Professor calls 30, Deuce checks, [flop: J♣ 4♦ 7♥], Professor checks, Deuce checks, Icebox checks, [turn: J♣ 4♦ 7♥ 5♠], Professor checks, Deuce checks, Icebox checks, [river: J♣ 4♦ 7♥ 5♠ 6♥], Professor checks, Deuce raises to 80, Icebox calls 80, Professor folds → Deuce wins 340 with Straight, 7 high (9♠ 3♦)",
+   "pot": 340
   }
  ],
  "finishes": [
