@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:58:55.248Z",
+ "updatedAt": "2026-11-24T02:59:15.172Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 178,
+ "handsPlayed": 179,
  "tables": [
   {
    "id": 1,
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 110
+   "handsPlayed": 111
   }
  ],
  "seats": [
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 111,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 101,
-   "text": "Table 1 · Hand 101 · blinds 80/160 · Shadow calls 160, Midas calls 80, Professor checks, [flop: 5♠ A♦ 4♦], Midas checks, Professor checks, Shadow checks, [turn: 5♠ A♦ 4♦ 10♠], Midas checks, Professor checks, Shadow checks, [river: 5♠ A♦ 4♦ 10♠ 4♣], Midas checks, Professor checks, Shadow checks → Midas wins 480 with Two pair, 10s and 4s (8♦ 10♦)",
-   "pot": 480
-  },
   {
    "table": 1,
    "handNo": 102,
@@ -396,6 +382,12 @@
    "handNo": 110,
    "text": "Table 1 · Hand 110 · blinds 80/160 · Shadow calls 160, Midas calls 80, Professor checks, [flop: A♠ 7♠ 4♠], Midas checks, Professor checks, Shadow checks, [turn: A♠ 7♠ 4♠ J♥], Midas checks, Professor checks, Shadow checks, [river: A♠ 7♠ 4♠ J♥ 9♥], Midas raises to 264, Professor calls 264, Shadow calls 264 → Midas wins 1272 with Two pair, 9s and 7s (7♥ 9♣)",
    "pot": 1272
+  },
+  {
+   "table": 1,
+   "handNo": 111,
+   "text": "Table 1 · Hand 111 · blinds 80/160 · Midas folds, Professor calls 80, Shadow checks, [flop: 5♠ 6♠ A♣], Professor checks, Shadow checks, [turn: 5♠ 6♠ A♣ 2♣], Professor checks, Shadow checks, [river: 5♠ 6♠ A♣ 2♣ 4♥], Professor checks, Shadow checks → Professor wins 160 with A high (J♣ K♠); Shadow wins 160 with A high (K♣ J♦)",
+   "pot": 320
   }
  ],
  "finishes": [
