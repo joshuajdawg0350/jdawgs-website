@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:17:08.773Z",
+ "updatedAt": "2026-11-24T01:17:36.779Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 23,
+ "handsPlayed": 24,
  "tables": [
   {
    "id": 1,
@@ -158,14 +158,6 @@
      "stack": 20290,
      "status": "seated",
      "reentered": false
-    },
-    {
-     "name": "Ozone",
-     "kind": "house",
-     "house": true,
-     "stack": 19220,
-     "status": "seated",
-     "reentered": false
     }
    ],
    "handsPlayed": 8
@@ -185,15 +177,15 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 14850,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 24675,
+     "stack": 64740,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 3380,
+     "stack": 2890,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +225,20 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 76645,
+     "stack": 51970,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ozone",
+     "kind": "house",
+     "house": true,
+     "stack": 19220,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   }
  ],
  "seats": [
@@ -301,8 +301,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 14850,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24675,
+   "stack": 64740,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19925,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 3380,
+   "stack": 2890,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "name": "Ozone",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 19220,
    "status": "seated",
    "reentered": false
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 76645,
+   "stack": 51970,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 8,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 25/50 · Slick calls 50, Granite calls 50, Bulldog folds, Marble folds, Sixgun calls 50, Anchor calls 25, Ozone checks, [flop: 10♦ 2♣ J♦], Anchor checks, Ozone checks, Slick checks, Granite checks, Sixgun checks, [turn: 10♦ 2♣ J♦ 10♠], Anchor checks, Ozone checks, Slick checks, Granite checks, Sixgun raises to 150, Anchor calls 150, Ozone calls 150, Slick calls 150, Granite calls 150, [river: 10♦ 2♣ J♦ 10♠ 8♦], Anchor checks, Ozone checks, Slick checks, Granite checks, Sixgun raises to 600, Anchor calls 600, Ozone calls 600, Slick calls 600, Granite calls 600 → Slick wins 4000 with Two pair, 10s and 8s (8♣ Q♣)",
-   "pot": 4000
-  },
   {
    "table": 3,
    "handNo": 5,
@@ -552,6 +538,12 @@
    "handNo": 8,
    "text": "Table 2 · Hand 8 · blinds 25/50 · Marble calls 50, Sixgun calls 50, Anchor calls 50, Ozone folds, Slick folds, Granite calls 25, Bulldog checks, [flop: A♥ 2♣ 7♦], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [turn: A♥ 2♣ 7♦ 8♥], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [river: A♥ 2♣ 7♦ 8♥ 4♣], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks → Granite wins 125 with Pair of As (A♦ K♥); Bulldog wins 125 with Pair of As (K♦ A♣)",
    "pot": 250
+  },
+  {
+   "table": 3,
+   "handNo": 8,
+   "text": "Table 3 · Hand 8 · blinds 25/50 · Icebox calls 50, Velvet calls 50, Professor calls 50, Deuce folds, Wildfire calls 25, Millstone checks, [flop: 3♠ 6♣ 2♦], Wildfire checks, Millstone checks, Icebox checks, Velvet checks, Professor checks, [turn: 3♠ 6♣ 2♦ 3♣], Wildfire checks, Millstone raises to 50, Icebox folds, Velvet calls 50, Professor raises to 105, Wildfire calls 105, Millstone raises to 440, Velvet calls 390, Professor raises to 810, Wildfire calls 705, Millstone raises to 2460, Velvet folds, Professor raises to 4275, Wildfire calls 3465, Millstone raises to 11295, Professor raises to 19015, Wildfire calls 10525, Millstone goes ALL-IN to 24625, Professor raises to 33115, [river: 3♠ 6♣ 2♦ 3♣ Q♠], Professor raises to 55 → Millstone wins 64740 with Full house, 3s full of 2s (3♦ 2♣); Professor wins 8545 with Three of a kind, 3s (3♥ K♥)",
+   "pot": 73285
   }
  ],
  "finishes": [
@@ -616,6 +608,14 @@
    "place": null,
    "kind": "house",
    "table": 1,
+   "handNo": 8,
+   "provisional": true
+  },
+  {
+   "name": "Wildfire",
+   "place": null,
+   "kind": "house",
+   "table": 3,
    "handNo": 8,
    "provisional": true
   }
