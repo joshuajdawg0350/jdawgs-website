@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:25:13.147Z",
+ "updatedAt": "2026-11-24T01:25:32.042Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 38,
+ "handsPlayed": 39,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 57317,
+     "stack": 57267,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 44365,
+     "stack": 44315,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 20050,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 5543,
+     "stack": 5493,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 52145,
+     "stack": 52095,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 12
+   "handsPlayed": 13
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 57317,
+   "stack": 57267,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 44365,
+   "stack": 44315,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19850,
+   "stack": 20050,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 5543,
+   "stack": 5493,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 52145,
+   "stack": 52095,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 13,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velvet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 10,
-   "text": "Table 2 · Hand 10 · blinds 25/50 · Anchor calls 50, Slick folds, Granite calls 50, Bulldog calls 50, Marble calls 25, Sixgun checks, [flop: 9♠ 10♠ 5♠], Marble checks, Sixgun checks, Anchor checks, Granite checks, Bulldog checks, [turn: 9♠ 10♠ 5♠ 2♠], Marble checks, Sixgun checks, Anchor raises to 50, Granite folds, Bulldog raises to 230, Marble calls 230, Sixgun calls 230, Anchor calls 180, [river: 9♠ 10♠ 5♠ 2♠ A♥], Marble checks, Sixgun checks, Anchor checks, Bulldog raises to 700, Marble calls 700, Sixgun calls 700, Anchor calls 700 → Bulldog wins 3970 with Flush, K high (K♠ 6♦)",
-   "pot": 3970
-  },
   {
    "table": 3,
    "handNo": 10,
@@ -552,6 +538,12 @@
    "handNo": 13,
    "text": "Table 2 · Hand 13 · blinds 25/50 · Bulldog calls 50, Marble folds, Sixgun raises to 130, Anchor calls 130, Slick folds, Granite calls 80, Bulldog folds, [flop: 8♣ 8♦ 7♣], Granite checks, Sixgun raises to 280, Anchor calls 280, Granite calls 280, [turn: 8♣ 8♦ 7♣ 10♦], Granite checks, Sixgun raises to 785, Anchor calls 785, Granite calls 785, [river: 8♣ 8♦ 7♣ 10♦ 6♦], Granite checks, Sixgun raises to 2195, Anchor calls 2195, Granite calls 2195 → Granite wins 10245 with Three of a kind, 8s (J♠ 8♠)",
    "pot": 10245
+  },
+  {
+   "table": 3,
+   "handNo": 13,
+   "text": "Table 3 · Hand 13 · blinds 25/50 · Velvet calls 50, Professor calls 50, Deuce calls 50, Millstone calls 25, Icebox checks, [flop: 5♦ J♣ 10♠], Millstone checks, Icebox checks, Velvet checks, Professor checks, Deuce checks, [turn: 5♦ J♣ 10♠ 2♠], Millstone checks, Icebox checks, Velvet checks, Professor checks, Deuce checks, [river: 5♦ J♣ 10♠ 2♠ 5♣], Millstone checks, Icebox checks, Velvet checks, Professor checks, Deuce checks → Icebox wins 250 with Two pair, 10s and 5s (10♣ Q♠)",
+   "pot": 250
   }
  ],
  "finishes": [
