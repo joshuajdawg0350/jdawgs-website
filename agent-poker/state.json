@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:49:18.705Z",
+ "updatedAt": "2026-11-24T01:49:47.863Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 65,
+ "handsPlayed": 66,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 57107,
+     "stack": 60011,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 44090,
+     "stack": 46994,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 19980,
+     "stack": 19920,
      "status": "seated",
      "reentered": false
     },
@@ -201,8 +201,8 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 5748,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 57107,
+   "stack": 60011,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 44090,
+   "stack": 46994,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19980,
+   "stack": 19920,
    "status": "seated",
    "reentered": false
   },
@@ -382,8 +382,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 5748,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 22,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Icebox",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 19,
-   "text": "Table 2 · Hand 19 · blinds 25/50 · Hammer calls 50, Granite calls 50, Bulldog calls 25, Sixgun checks, [flop: 4♣ 3♥ 2♥], Bulldog checks, Sixgun checks, Hammer checks, Granite checks, [turn: 4♣ 3♥ 2♥ 6♦], Bulldog checks, Sixgun raises to 60, Hammer folds, Granite folds, Bulldog folds → Sixgun takes 260 (everyone else folded)",
-   "pot": 260
-  },
   {
    "table": 3,
    "handNo": 19,
@@ -552,6 +538,12 @@
    "handNo": 22,
    "text": "Table 2 · Hand 22 · blinds 30/60 · Sixgun calls 60, Hammer calls 60, Granite folds, Bulldog checks, [flop: 6♠ 4♠ 8♥], Bulldog checks, Sixgun checks, Hammer checks, [turn: 6♠ 4♠ 8♥ 7♠], Bulldog checks, Sixgun checks, Hammer raises to 80, Bulldog folds, Sixgun folds → Hammer takes 290 (everyone else folded)",
    "pot": 290
+  },
+  {
+   "table": 3,
+   "handNo": 22,
+   "text": "Table 3 · Hand 22 · blinds 30/60 · Icebox calls 60, Velvet calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 10♣ 3♠ J♦], Deuce checks, Millstone checks, Icebox checks, Velvet checks, [turn: 10♣ 3♠ J♦ 9♥], Deuce checks, Millstone raises to 60, Icebox folds, Velvet calls 60, Deuce calls 60, [river: 10♣ 3♠ J♦ 9♥ Q♥], Deuce raises to 80, Millstone raises to 380, Velvet calls 380, Deuce raises to 1135, Millstone raises to 2525, Velvet calls 2145, Deuce raises to 6490, Millstone raises to 13665, Velvet calls 3103, Deuce raises to 29385, Millstone goes ALL-IN to 43970, Deuce goes ALL-IN to 56987 → Deuce wins 60011 with Straight, K high (3♥ K♥); Millstone wins 46994 with Straight, K high (K♦ Q♠)",
+   "pot": 107005
   }
  ],
  "finishes": [
@@ -657,6 +649,14 @@
    "kind": "house",
    "table": 2,
    "handNo": 15,
+   "provisional": true
+  },
+  {
+   "name": "Velvet",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 22,
    "provisional": true
   }
  ],
