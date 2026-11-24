@@ -256,9 +256,35 @@
   window.HHApp = HHApp;
 
   /* ---------------- service worker ---------------- */
+  // Keep this stamp in sync with sw.js (VERSION) and the version line
+  // printed on alerts.html / work.html — it is how support knows what a
+  // phone is actually serving.
+  var HH_VERSION = '2026-11-23-2';
+  HHApp.version = HH_VERSION;
+
   if ('serviceWorker' in navigator) {
+    // When a NEW service worker takes control, reload ONCE so the user
+    // lands on the fresh copy without doing anything. Guards: only when
+    // this page was already controlled (never on a first visit), and at
+    // most once per version (sessionStorage) — a reload loop is
+    // impossible. The same hook is inlined in alerts.html / work.html so
+    // it works even while an old copy of this file is still the one
+    // running.
+    var hadController = Boolean(navigator.serviceWorker.controller);
+    var swReloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController || swReloaded) return;
+      try {
+        if (sessionStorage.getItem('hhSwReloaded') === HH_VERSION) return;
+        sessionStorage.setItem('hhSwReloaded', HH_VERSION);
+      } catch (e) { /* storage off — the in-memory flag still guards */ }
+      swReloaded = true;
+      window.location.reload();
+    });
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/human-hands/sw.js').catch(function () {});
+      navigator.serviceWorker.register('/human-hands/sw.js')
+        .then(function (reg) { if (reg && reg.update) reg.update().catch(function () {}); })
+        .catch(function () {});
     });
   }
 

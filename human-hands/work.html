@@ -274,6 +274,8 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
           </div>
         </div>
         <p class="hh-app-status" data-hh-app-status role="status"></p>
+        <p style="margin-top:.9rem;font-size:.95rem">Button not responding? <a href="work.html?fresh=2026-11-23-2">Tap here to load the newest version</a>.</p>
+        <p class="small muted" style="margin-top:.3rem">App version: 2026-11-23-2</p>
       </div>
     </div>
     <div class="hero-actions">
@@ -483,6 +485,30 @@ if (window.HHGoogle) {
 </script>
 <script src="hh-app.js" defer></script>
 <script>
+/* Service-worker update hook — inlined on purpose: it must work even
+   when the hh-app.js a phone is running is an old cached copy. When a
+   new service worker takes control, reload once (guarded: never on a
+   first visit, at most once per version) so the fresh copy lands with
+   no action from the user, and ask the browser to check for an update
+   right now instead of on its own schedule. */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var HH_VERSION = '2026-11-23-2';
+  var hadController = Boolean(navigator.serviceWorker.controller);
+  var done = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (!hadController || done) return;
+    try {
+      if (sessionStorage.getItem('hhSwReloaded') === HH_VERSION) return;
+      sessionStorage.setItem('hhSwReloaded', HH_VERSION);
+    } catch (e) { /* storage off — in-memory flag still guards */ }
+    done = true;
+    window.location.reload();
+  });
+  navigator.serviceWorker.getRegistration('/human-hands/')
+    .then(function (reg) { if (reg && reg.update) reg.update().catch(function () {}); })
+    .catch(function () {});
+})();
 /* Safety net: if hh-app.js ever fails to load, the Install button still
    answers a tap — it shows the printed steps instead of sitting dead. */
 window.addEventListener('load', function () {
