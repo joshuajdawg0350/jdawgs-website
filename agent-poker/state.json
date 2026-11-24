@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:39:12.865Z",
+ "updatedAt": "2026-11-24T01:39:40.363Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 49,
+ "handsPlayed": 50,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 58140,
+     "stack": 57560,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 66885,
+     "stack": 67465,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 85795,
+     "stack": 85215,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 40347,
+     "stack": 40927,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 58140,
+   "stack": 57560,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 66885,
+   "stack": 67465,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 40347,
+   "stack": 40927,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 85795,
+   "stack": 85215,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 17,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bulldog",
+  "toAct": "Icebox",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 14,
-   "text": "Table 1 · Hand 14 · blinds 25/50 · Hammer calls 50, Midas folds, Baseline folds, Venus folds, Shadow checks, [flop: 8♦ A♦ 3♦], Shadow checks, Hammer checks, [turn: 8♦ A♦ 3♦ J♣], Shadow checks, Hammer checks, [river: 8♦ A♦ 3♦ J♣ 7♣], Shadow checks, Hammer checks → Hammer wins 125 with Pair of 7s (9♣ 7♥)",
-   "pot": 125
-  },
   {
    "table": 2,
    "handNo": 14,
@@ -552,6 +546,12 @@
    "handNo": 17,
    "text": "Table 1 · Hand 17 · blinds 25/50 · Shadow calls 50, Midas folds, Baseline folds, Venus checks, [flop: 10♥ 10♠ 2♦], Venus checks, Shadow checks, [turn: 10♥ 10♠ 2♦ A♥], Venus raises to 50, Shadow calls 50, [river: 10♥ 10♠ 2♦ A♥ 8♠], Venus checks, Shadow checks → Venus wins 225 with Three of a kind, 10s (J♣ 10♣)",
    "pot": 225
+  },
+  {
+   "table": 2,
+   "handNo": 17,
+   "text": "Table 2 · Hand 17 · blinds 25/50 · Bulldog calls 50, Sixgun calls 50, Hammer calls 25, Granite checks, [flop: J♦ 10♠ 8♣], Hammer checks, Granite checks, Bulldog checks, Sixgun checks, [turn: J♦ 10♠ 8♣ 10♣], Hammer checks, Granite checks, Bulldog raises to 120, Sixgun calls 120, Hammer calls 120, Granite calls 120, [river: J♦ 10♠ 8♣ 10♣ 4♦], Hammer checks, Granite checks, Bulldog raises to 410, Sixgun calls 410, Hammer calls 410, Granite calls 410 → Bulldog wins 1160 with Two pair, 10s and 8s (8♠ 9♠); Hammer wins 1160 with Two pair, 10s and 8s (8♥ 6♥)",
+   "pot": 2320
   }
  ],
  "finishes": [
