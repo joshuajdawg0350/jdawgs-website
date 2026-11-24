@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:27:28.369Z",
+ "updatedAt": "2026-11-24T01:27:52.645Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 43,
+ "handsPlayed": 44,
  "tables": [
   {
    "id": 1,
@@ -83,15 +83,15 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 4925,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 14375,
+     "stack": 58140,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 22320,
+     "stack": 22295,
      "status": "seated",
      "reentered": false
     },
@@ -131,15 +131,15 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 43195,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 106770,
+     "stack": 121215,
      "status": "seated",
      "reentered": false
     },
@@ -155,12 +155,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 10065,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 14
+   "handsPlayed": 15
   },
   {
    "id": 3,
@@ -265,8 +265,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 4925,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 14375,
+   "stack": 58140,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22320,
+   "stack": 22295,
    "status": "seated",
    "reentered": false
   },
@@ -427,8 +427,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 43195,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 10065,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 106770,
+   "stack": 121215,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 15,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Sixgun",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 12,
-   "text": "Table 1 · Hand 12 · blinds 25/50 · Venus calls 50, Shadow calls 50, Hammer calls 50, Midas folds, Baseline checks, [flop: 4♦ 8♣ K♦], Baseline checks, Venus checks, Shadow checks, Hammer checks, [turn: 4♦ 8♣ K♦ 5♣], Baseline checks, Venus checks, Shadow checks, Hammer checks, [river: 4♦ 8♣ K♦ 5♣ Q♦], Baseline checks, Venus checks, Shadow checks, Hammer checks → Shadow wins 225 with Pair of Ks (J♠ K♣)",
-   "pot": 225
-  },
   {
    "table": 2,
    "handNo": 12,
@@ -552,6 +546,12 @@
    "handNo": 15,
    "text": "Table 1 · Hand 15 · blinds 25/50 · Midas folds, Baseline calls 50, Venus calls 50, Shadow folds, Hammer checks, [flop: 7♠ 6♣ Q♠], Hammer checks, Baseline checks, Venus checks, [turn: 7♠ 6♣ Q♠ 4♦], Hammer checks, Baseline checks, Venus checks, [river: 7♠ 6♣ Q♠ 4♦ 7♦], Hammer checks, Baseline checks, Venus checks → Hammer wins 175 with Pair of 7s (J♣ A♠)",
    "pot": 175
+  },
+  {
+   "table": 2,
+   "handNo": 15,
+   "text": "Table 2 · Hand 15 · blinds 25/50 · Sixgun calls 50, Anchor calls 50, Slick calls 50, Granite calls 50, Bulldog folds, Marble checks, [flop: 5♠ 4♦ J♦], Marble checks, Sixgun checks, Anchor checks, Slick checks, Granite checks, [turn: 5♠ 4♦ J♦ J♠], Marble checks, Sixgun raises to 165, Anchor calls 165, Slick calls 165, Granite calls 165, Marble calls 165, [river: 5♠ 4♦ J♦ J♠ 5♦], Marble checks, Sixgun raises to 660, Anchor calls 660, Slick raises to 1320, Granite raises to 3565, Marble calls 3565, Sixgun raises to 10085, Anchor calls 9190, Slick calls 3390, Granite goes ALL-IN to 14160, Marble calls 10595, Sixgun raises to 46600, Marble calls 28820 → Granite wins 58140 with Full house, Js full of 5s (J♥ 10♣); Sixgun wins 61260 with Full house, 5s full of Js (6♥ 5♥)",
+   "pot": 119400
   }
  ],
  "finishes": [
@@ -633,6 +633,30 @@
    "kind": "house",
    "table": 3,
    "handNo": 11,
+   "provisional": true
+  },
+  {
+   "name": "Marble",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 15,
+   "provisional": true
+  },
+  {
+   "name": "Anchor",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 15,
+   "provisional": true
+  },
+  {
+   "name": "Slick",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 15,
    "provisional": true
   }
  ],
