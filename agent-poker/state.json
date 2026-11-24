@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:12:23.702Z",
+ "updatedAt": "2026-11-24T01:12:51.683Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19828,
+     "stack": 19678,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 18582,
+     "stack": 18432,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 24560,
+     "stack": 24510,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 18580,
+     "stack": 19030,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 18510,
+     "stack": 18460,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19828,
+   "stack": 19678,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18582,
+   "stack": 18432,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 24560,
+   "stack": 24510,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18580,
+   "stack": 19030,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18510,
+   "stack": 18460,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 9♣ 4♥ 5♠], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 60, Professor folds, Deuce folds, Wildfire folds, Millstone folds, Icebox folds, Velvet folds, Tally folds → Pickpocket takes 460 (everyone else folded)",
-   "pot": 460
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 25/50 · Professor calls 50, Deuce folds, Wildfire calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Tally calls 25, Pickpocket checks, [flop: 10♣ 3♦ 3♠], Tally checks, Pickpocket raises to 180, Professor calls 180, Wildfire calls 180, Millstone calls 180, Velvet calls 180, Tally calls 180, [turn: 10♣ 3♦ 3♠ A♠], Tally checks, Pickpocket raises to 830, Professor calls 830, Wildfire calls 830, Millstone calls 830, Velvet calls 830, Tally calls 830, [river: 10♣ 3♦ 3♠ A♠ Q♣], Tally checks, Pickpocket raises to 3815, Professor calls 3815, Wildfire calls 3815, Millstone calls 3815, Velvet folds, Tally calls 3815 → Millstone wins 25435 with Two pair, As and 3s (J♥ A♣)",
    "pot": 25435
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 25/50 · Baseline calls 50, Pearl calls 50, Venus calls 50, Shadow folds, River Rat calls 50, Hammer calls 25, Midas checks, [flop: 4♦ Q♦ 2♥], Hammer checks, Midas checks, Baseline checks, Pearl checks, Venus checks, River Rat checks, [turn: 4♦ Q♦ 2♥ 7♦], Hammer checks, Midas checks, Baseline checks, Pearl checks, Venus checks, River Rat raises to 50, Hammer folds, Midas folds, Baseline calls 50, Pearl calls 50, Venus folds, [river: 4♦ Q♦ 2♥ 7♦ 3♦], Baseline checks, Pearl checks, River Rat raises to 50, Baseline calls 50, Pearl calls 50 → River Rat wins 600 with Flush, K high (2♦ K♦)",
+   "pot": 600
   }
  ],
  "finishes": [
