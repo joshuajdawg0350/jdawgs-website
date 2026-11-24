@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:06:33.494Z",
+ "updatedAt": "2026-11-24T01:07:00.300Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 7,
+ "handsPlayed": 8,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20345,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19790,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 111780,
+     "stack": 111730,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 21055,
+     "stack": 21005,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19815,
+     "stack": 19705,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20345,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19900,
+   "stack": 19790,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19815,
+   "stack": 19705,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19900,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21055,
+   "stack": 21005,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 111780,
+   "stack": 111730,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Anchor",
+  "toAct": "Tally",
   "lastActions": []
  },
  "recentHands": [
@@ -534,6 +534,12 @@
    "handNo": 3,
    "text": "Table 1 · Hand 3 · blinds 25/50 · River Rat calls 50, Hammer calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: 10♦ J♠ 3♥], Venus checks, Shadow checks, River Rat checks, Hammer checks, Pearl checks, [turn: 10♦ J♠ 3♥ Q♠], Venus checks, Shadow checks, River Rat checks, Hammer checks, Pearl checks, [river: 10♦ J♠ 3♥ Q♠ Q♥], Venus raises to 50, Shadow calls 50, River Rat calls 50, Hammer raises to 115, Pearl calls 115, Venus raises to 180, Shadow calls 130, River Rat calls 130, Hammer raises to 265, Pearl calls 150, Venus raises to 350, Shadow calls 170, River Rat calls 170, Hammer raises to 460, Pearl calls 195, Venus raises to 570, Shadow calls 220, River Rat calls 220, Hammer raises to 715, Pearl calls 255, Venus raises to 860, Shadow calls 290, River Rat calls 290, Hammer raises to 1050, Pearl calls 335, Venus calls 190, Shadow calls 190, River Rat calls 190 → Venus wins 5500 with Three of a kind, Qs (Q♦ A♥)",
    "pot": 5500
+  },
+  {
+   "table": 2,
+   "handNo": 3,
+   "text": "Table 2 · Hand 3 · blinds 25/50 · Anchor calls 50, Ozone calls 50, Slick calls 50, Granite folds, Bulldog calls 50, Marble folds, Sixgun checks, [flop: J♣ 4♦ K♠], Sixgun checks, Anchor checks, Ozone checks, Slick checks, Bulldog checks, [turn: J♣ 4♦ K♠ 9♣], Sixgun checks, Anchor checks, Ozone raises to 60, Slick calls 60, Bulldog calls 60, Sixgun folds, Anchor folds, [river: J♣ 4♦ K♠ 9♣ 2♣], Ozone checks, Slick checks, Bulldog checks → Slick wins 455 with Pair of Ks (7♦ K♥)",
+   "pot": 455
   }
  ],
  "finishes": [
