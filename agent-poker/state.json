@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:22:22.150Z",
+ "updatedAt": "2026-11-24T01:22:43.194Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 32,
+ "handsPlayed": 33,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20475,
+     "stack": 57342,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 64890,
+     "stack": 44415,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 2790,
+     "stack": 5593,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 52045,
+     "stack": 52020,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 19170,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20475,
+   "stack": 57342,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 64890,
+   "stack": 44415,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 2790,
+   "stack": 5593,
    "status": "seated",
    "reentered": false
   },
@@ -418,8 +418,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19170,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 52045,
+   "stack": 52020,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 11,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Deuce",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 8,
-   "text": "Table 2 · Hand 8 · blinds 25/50 · Marble calls 50, Sixgun calls 50, Anchor calls 50, Ozone folds, Slick folds, Granite calls 25, Bulldog checks, [flop: A♥ 2♣ 7♦], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [turn: A♥ 2♣ 7♦ 8♥], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks, [river: A♥ 2♣ 7♦ 8♥ 4♣], Granite checks, Bulldog checks, Marble checks, Sixgun checks, Anchor checks → Granite wins 125 with Pair of As (A♦ K♥); Bulldog wins 125 with Pair of As (K♦ A♣)",
-   "pot": 250
-  },
   {
    "table": 3,
    "handNo": 8,
@@ -552,6 +538,12 @@
    "handNo": 11,
    "text": "Table 2 · Hand 11 · blinds 25/50 · Slick calls 50, Granite folds, Bulldog folds, Marble calls 50, Sixgun calls 25, Anchor checks, [flop: Q♥ 9♦ 4♠], Sixgun checks, Anchor checks, Slick checks, Marble checks, [turn: Q♥ 9♦ 4♠ J♠], Sixgun checks, Anchor checks, Slick checks, Marble raises to 50, Sixgun folds, Anchor calls 50, Slick calls 50, [river: Q♥ 9♦ 4♠ J♠ Q♣], Anchor checks, Slick raises to 50, Marble raises to 290, Anchor calls 290, Slick raises to 530, Marble raises to 1405, Anchor calls 1115, Slick raises to 2280, Marble raises to 5545, Anchor calls 4140, Slick raises to 8810, Marble goes ALL-IN to 18650, Anchor folds, Slick goes ALL-IN to 23095 → Slick wins 4445 with Three of a kind, Qs (2♣ Q♠); Marble wins 43195 with Straight, K high (K♥ 10♠)",
    "pot": 47640
+  },
+  {
+   "table": 3,
+   "handNo": 11,
+   "text": "Table 3 · Hand 11 · blinds 25/50 · Deuce calls 50, Millstone calls 50, Icebox folds, Velvet calls 50, Professor folds, Ozone checks, [flop: K♣ K♦ Q♠], Ozone checks, Deuce raises to 65, Millstone calls 65, Velvet calls 65, Ozone calls 65, [turn: K♣ K♦ Q♠ J♣], Ozone checks, Deuce raises to 65, Millstone calls 65, Velvet calls 65, Ozone calls 65, [river: K♣ K♦ Q♠ J♣ Q♣], Ozone raises to 65, Deuce raises to 550, Millstone raises to 1035, Velvet raises to 1580, Ozone raises to 2290, Deuce raises to 6010, Millstone raises to 9730, Velvet calls 1030, Ozone raises to 14565, Deuce goes ALL-IN to 20295, Millstone raises to 26025, Ozone calls 4425 → Deuce wins 57342 with Full house, Ks full of Qs (K♠ 2♣); Millstone wins 5730 with Two pair, Ks and Qs (8♥ 10♥); Velvet wins 5593 with Full house, Ks full of Qs (9♣ K♥)",
+   "pot": 68665
   }
  ],
  "finishes": [
@@ -625,6 +617,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 8,
+   "provisional": true
+  },
+  {
+   "name": "Ozone",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 11,
    "provisional": true
   }
  ],
