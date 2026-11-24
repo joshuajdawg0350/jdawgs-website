@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:24:48.639Z",
+ "updatedAt": "2026-11-24T02:25:03.696Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 126,
+ "handsPlayed": 127,
  "tables": [
   {
    "id": 1,
@@ -21,8 +21,8 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 90671,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -37,7 +37,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 330877,
+     "stack": 454772,
      "status": "seated",
      "reentered": false
     },
@@ -61,8 +61,8 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 33144,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -77,12 +77,12 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 16656,
+     "stack": 16576,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 58
+   "handsPlayed": 59
   }
  ],
  "seats": [
@@ -91,7 +91,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 16656,
+   "stack": 16576,
    "status": "seated",
    "reentered": false
   },
@@ -154,8 +154,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 33144,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -190,8 +190,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 90671,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -307,7 +307,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 330877,
+   "stack": 454772,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 59,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Bulldog",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 49,
-   "text": "Table 1 · Hand 49 · blinds 40/80 · Bulldog folds, Professor calls 80, Shadow calls 80, Venus calls 40, Midas checks, [flop: 2♦ 3♠ 9♣], Venus checks, Midas checks, Professor checks, Shadow checks, [turn: 2♦ 3♠ 9♣ 7♠], Venus checks, Midas checks, Professor checks, Shadow checks, [river: 2♦ 3♠ 9♣ 7♠ J♠], Venus checks, Midas checks, Professor checks, Shadow checks → Shadow wins 320 with Two pair, Js and 9s (9♦ J♦)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 50,
@@ -396,6 +382,12 @@
    "handNo": 58,
    "text": "Table 1 · Hand 58 · blinds 40/80 · Midas folds, Bulldog calls 80, Professor calls 80, Shadow folds, Venus checks, [flop: K♦ A♦ 10♣], Venus checks, Bulldog raises to 95, Professor calls 95, Venus calls 95, [turn: K♦ A♦ 10♣ 7♥], Venus checks, Bulldog checks, Professor checks, [river: K♦ A♦ 10♣ 7♥ 4♦], Venus checks, Bulldog checks, Professor checks → Venus wins 565 with Pair of As (A♠ 8♦)",
    "pot": 565
+  },
+  {
+   "table": 1,
+   "handNo": 59,
+   "text": "Table 1 · Hand 59 · blinds 40/80 · Bulldog calls 80, Professor calls 80, Shadow folds, Venus calls 40, Midas checks, [flop: 10♥ A♠ 10♣], Venus checks, Midas checks, Bulldog checks, Professor checks, [turn: 10♥ A♠ 10♣ 10♦], Venus checks, Midas checks, Bulldog raises to 190, Professor raises to 400, Venus calls 400, Midas folds, Bulldog raises to 1185, Professor raises to 2050, Venus raises to 2915, Bulldog raises to 6795, Professor raises to 11065, Venus calls 8150, Bulldog raises to 28610, Professor raises to 47910, Venus calls 21999, Bulldog goes ALL-IN to 90591, Professor raises to 137541, [river: 10♥ A♠ 10♣ 10♦ Q♣], Professor raises to 90 → Professor wins 261606 with Straight, A high (J♦ K♦)",
+   "pot": 261606
   }
  ],
  "finishes": [
@@ -565,6 +557,22 @@
    "kind": "house",
    "table": 1,
    "handNo": 38,
+   "provisional": true
+  },
+  {
+   "name": "Bulldog",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 59,
+   "provisional": true
+  },
+  {
+   "name": "Venus",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 59,
    "provisional": true
   }
  ],
