@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T01:06:08.714Z",
+ "updatedAt": "2026-11-24T01:06:33.494Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 6,
+ "handsPlayed": 7,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19710,
+     "stack": 18610,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19765,
+     "stack": 24165,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 20310,
+     "stack": 19210,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 18745,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 19710,
+     "stack": 18610,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19710,
+   "stack": 18610,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19765,
+   "stack": 24165,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20310,
+   "stack": 19210,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19845,
+   "stack": 18745,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19710,
+   "stack": 18610,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "River Rat",
+  "toAct": "Anchor",
   "lastActions": []
  },
  "recentHands": [
@@ -528,6 +528,12 @@
    "handNo": 2,
    "text": "Table 3 · Hand 2 · blinds 25/50 · Velvet calls 50, Tally calls 50, Pickpocket calls 50, Professor calls 50, Deuce calls 50, Wildfire calls 50, Millstone calls 25, Icebox checks, [flop: 9♣ 4♥ 5♠], Millstone checks, Icebox checks, Velvet checks, Tally checks, Pickpocket raises to 60, Professor folds, Deuce folds, Wildfire folds, Millstone folds, Icebox folds, Velvet folds, Tally folds → Pickpocket takes 460 (everyone else folded)",
    "pot": 460
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · River Rat calls 50, Hammer calls 50, Midas folds, Baseline folds, Pearl calls 50, Venus calls 25, Shadow checks, [flop: 10♦ J♠ 3♥], Venus checks, Shadow checks, River Rat checks, Hammer checks, Pearl checks, [turn: 10♦ J♠ 3♥ Q♠], Venus checks, Shadow checks, River Rat checks, Hammer checks, Pearl checks, [river: 10♦ J♠ 3♥ Q♠ Q♥], Venus raises to 50, Shadow calls 50, River Rat calls 50, Hammer raises to 115, Pearl calls 115, Venus raises to 180, Shadow calls 130, River Rat calls 130, Hammer raises to 265, Pearl calls 150, Venus raises to 350, Shadow calls 170, River Rat calls 170, Hammer raises to 460, Pearl calls 195, Venus raises to 570, Shadow calls 220, River Rat calls 220, Hammer raises to 715, Pearl calls 255, Venus raises to 860, Shadow calls 290, River Rat calls 290, Hammer raises to 1050, Pearl calls 335, Venus calls 190, Shadow calls 190, River Rat calls 190 → Venus wins 5500 with Three of a kind, Qs (Q♦ A♥)",
+   "pot": 5500
   }
  ],
  "finishes": [
