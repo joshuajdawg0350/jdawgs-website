@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-24T02:16:15.716Z",
+ "updatedAt": "2026-11-24T02:16:35.081Z",
  "mode": "real",
  "date": "2026-11-23",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 111,
+ "handsPlayed": 112,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 106757,
+     "stack": 106677,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 31279,
+     "stack": 31439,
      "status": "seated",
      "reentered": false
     },
@@ -77,12 +77,12 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 11437,
+     "stack": 11357,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   }
  ],
  "seats": [
@@ -91,7 +91,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11437,
+   "stack": 11357,
    "status": "seated",
    "reentered": false
   },
@@ -154,7 +154,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 31279,
+   "stack": 31439,
    "status": "seated",
    "reentered": false
   },
@@ -190,7 +190,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 106757,
+   "stack": 106677,
    "status": "seated",
    "reentered": false
   },
@@ -327,22 +327,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 44,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Bulldog",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 34,
-   "text": "Table 3 · Hand 34 · blinds 30/60 · Icebox calls 60, Professor folds, Deuce calls 30, Millstone checks, [flop: 3♣ 4♣ 6♣], Deuce checks, Millstone checks, Icebox checks, [turn: 3♣ 4♣ 6♣ A♦], Deuce checks, Millstone checks, Icebox checks, [river: 3♣ 4♣ 6♣ A♦ A♣], Deuce raises to 80, Millstone raises to 235, Icebox raises to 445, Deuce raises to 1010, Millstone raises to 2130, Icebox raises to 3655, Deuce goes ALL-IN to 7151, Millstone raises to 15021, Icebox goes ALL-IN to 19890, Millstone raises to 45235 → Millstone wins 72456 with Flush, A high (K♣ 4♠)",
-   "pot": 72456
-  },
   {
    "table": 1,
    "handNo": 35,
@@ -396,6 +382,12 @@
    "handNo": 43,
    "text": "Table 1 · Hand 43 · blinds 40/80 · Midas folds, Bulldog calls 80, Professor calls 80, Shadow folds, Venus checks, [flop: 9♥ 7♥ 8♠], Venus checks, Bulldog checks, Professor checks, [turn: 9♥ 7♥ 8♠ 6♥], Venus raises to 80, Bulldog calls 80, Professor calls 80, [river: 9♥ 7♥ 8♠ 6♥ Q♥], Venus raises to 80, Bulldog calls 80, Professor raises to 170, Venus raises to 285, Bulldog calls 205, Professor raises to 410, Venus raises to 570, Bulldog calls 285, Professor raises to 745, Venus raises to 970, Bulldog calls 400, Professor calls 225 → Venus wins 3430 with Straight, 9 high (5♣ 3♣)",
    "pot": 3430
+  },
+  {
+   "table": 1,
+   "handNo": 44,
+   "text": "Table 1 · Hand 44 · blinds 40/80 · Bulldog calls 80, Professor folds, Shadow folds, Venus calls 40, Midas checks, [flop: 2♥ J♦ 2♣], Venus checks, Midas checks, Bulldog checks, [turn: 2♥ J♦ 2♣ A♣], Venus checks, Midas checks, Bulldog checks, [river: 2♥ J♦ 2♣ A♣ 7♦], Venus checks, Midas checks, Bulldog checks → Venus wins 240 with Two pair, 7s and 2s (10♦ 7♠)",
+   "pot": 240
   }
  ],
  "finishes": [
