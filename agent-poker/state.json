@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:31:23.498Z",
+ "updatedAt": "2026-11-25T03:31:36.303Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 296,
+ "handsPlayed": 297,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22399,
+     "stack": 22559,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21047,
+     "stack": 20887,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 100
+   "handsPlayed": 101
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22399,
+   "stack": 22559,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21047,
+   "stack": 20887,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 101,
+  "table": 2,
+  "handNo": 100,
   "stage": "preflop",
   "board": [],
-  "pot": 240,
-  "toAct": "Tempo",
+  "pot": 180,
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 94,
-   "text": "Table 3 · Hand 94 · blinds 60/120 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 60, Ricochet checks, [flop: 4♠ 2♥ 4♣], Mirage checks, Ricochet checks, [turn: 4♠ 2♥ 4♣ 7♠], Mirage raises to 156, Ricochet folds → Mirage takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 1,
    "handNo": 98,
@@ -552,6 +546,12 @@
    "handNo": 97,
    "text": "Table 3 · Hand 97 · blinds 60/120 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 60, Velcro checks, [flop: 5♥ 3♠ 5♦], Cobble checks, Velcro checks, [turn: 5♥ 3♠ 5♦ J♠], Cobble checks, Velcro checks, [river: 5♥ 3♠ 5♦ J♠ 8♥], Cobble checks, Velcro checks → Cobble wins 240 with Pair of 5s (10♦ A♦)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 101,
+   "text": "Table 1 · Hand 101 · blinds 80/160 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 80, Switchback checks, [flop: 7♣ 5♣ 6♣], Freezer checks, Switchback checks, [turn: 7♣ 5♣ 6♣ 6♥], Freezer raises to 208, Switchback folds → Freezer takes 528 (everyone else folded)",
+   "pot": 528
   }
  ],
  "finishes": [],
