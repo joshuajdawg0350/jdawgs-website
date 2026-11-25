@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:30:57.841Z",
+ "updatedAt": "2026-11-25T03:31:10.650Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 295,
+ "handsPlayed": 296,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 20889,
+     "stack": 21009,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 21630,
+     "stack": 21510,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 96
+   "handsPlayed": 97
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20889,
+   "stack": 21009,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21630,
+   "stack": 21510,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 97,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 96,
-   "text": "Table 2 · Hand 96 · blinds 60/120 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 60, Tidepool checks, [flop: J♥ 5♦ 7♠], Deadpan checks, Tidepool checks, [turn: J♥ 5♦ 7♠ 3♣], Deadpan checks, Tidepool raises to 156, Deadpan folds → Tidepool takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 94,
@@ -552,6 +538,12 @@
    "handNo": 99,
    "text": "Table 2 · Hand 99 · blinds 60/120 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 60, Minnow checks, [flop: J♥ 8♣ 10♠], Undertow raises to 156, Minnow calls 156, [turn: J♥ 8♣ 10♠ 8♠], Undertow checks, Minnow checks, [river: J♥ 8♣ 10♠ 8♠ 4♣], Undertow checks, Minnow checks → Undertow wins 552 with Two pair, 9s and 8s (9♣ 9♦)",
    "pot": 552
+  },
+  {
+   "table": 3,
+   "handNo": 97,
+   "text": "Table 3 · Hand 97 · blinds 60/120 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 60, Velcro checks, [flop: 5♥ 3♠ 5♦], Cobble checks, Velcro checks, [turn: 5♥ 3♠ 5♦ J♠], Cobble checks, Velcro checks, [river: 5♥ 3♠ 5♦ J♠ 8♥], Cobble checks, Velcro checks → Cobble wins 240 with Pair of 5s (10♦ A♦)",
+   "pot": 240
   }
  ],
  "finishes": [],
