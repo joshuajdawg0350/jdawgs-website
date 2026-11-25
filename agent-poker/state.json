@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:01:24.722Z",
+ "updatedAt": "2026-11-25T02:01:41.279Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 147,
+ "handsPlayed": 148,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18971,
+     "stack": 19051,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 22629,
+     "stack": 22549,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18971,
+   "stack": 19051,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22629,
+   "stack": 22549,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 50,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Static",
+  "toAct": "Tidepool",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 46,
-   "text": "Table 3 · Hand 46 · blinds 40/80 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 40, Ricochet checks, [flop: 7♦ 4♠ 4♥], Mirage raises to 104, Ricochet folds → Mirage takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 47,
@@ -552,6 +546,12 @@
    "handNo": 49,
    "text": "Table 3 · Hand 49 · blinds 40/80 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 40, Velcro checks, [flop: J♠ 6♣ 3♣], Cobble raises to 104, Velcro folds → Cobble takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 50,
+   "text": "Table 1 · Hand 50 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 9♥ 9♣ 6♦], Longshot checks, Highwire checks, [turn: 9♥ 9♣ 6♦ 2♥], Longshot checks, Highwire checks, [river: 9♥ 9♣ 6♦ 2♥ A♥], Longshot checks, Highwire checks → Longshot wins 160 with Pair of 9s (Q♠ 5♥)",
+   "pot": 160
   }
  ],
  "finishes": [],
