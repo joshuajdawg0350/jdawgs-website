@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:26:04.370Z",
+ "updatedAt": "2026-11-25T03:26:18.372Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 280,
+ "handsPlayed": 281,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 18728,
+     "stack": 18608,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 20659,
+     "stack": 20779,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 91
+   "handsPlayed": 92
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18728,
+   "stack": 18608,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20659,
+   "stack": 20779,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 92,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 91,
-   "text": "Table 2 · Hand 91 · blinds 60/120 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 60, Ledger checks, [flop: 6♦ 9♣ 3♥], Minnow checks, Ledger checks, [turn: 6♦ 9♣ 3♥ 9♠], Minnow raises to 156, Ledger folds → Minnow takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 89,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 94,
    "text": "Table 2 · Hand 94 · blinds 60/120 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 60, Glacier checks, [flop: 2♠ 5♥ Q♣], Bedrock checks, Glacier checks, [turn: 2♠ 5♥ Q♣ 2♦], Bedrock checks, Glacier raises to 156, Bedrock folds → Glacier takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 3,
+   "handNo": 92,
+   "text": "Table 3 · Hand 92 · blinds 60/120 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 60, Brass checks, [flop: J♥ 4♣ K♣], Snare checks, Brass checks, [turn: J♥ 4♣ K♣ J♦], Snare checks, Brass checks, [river: J♥ 4♣ K♣ J♦ K♥], Snare checks, Brass raises to 156, Snare folds → Brass takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
