@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:42:19.161Z",
+ "updatedAt": "2026-11-25T01:42:38.051Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 110,
+ "handsPlayed": 111,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 19825,
+     "stack": 19765,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 19944,
+     "stack": 20004,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 36
+   "handsPlayed": 37
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19825,
+   "stack": 19765,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19944,
+   "stack": 20004,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 37,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 34,
-   "text": "Table 2 · Hand 34 · blinds 30/60 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 60, Deadpan folds, Tidepool calls 30, Jackpot checks, [flop: K♦ 5♣ 2♠], Tidepool checks, Jackpot checks, Glacier raises to 117, Tidepool folds, Jackpot folds → Glacier takes 297 (everyone else folded)",
-   "pot": 297
-  },
   {
    "table": 3,
    "handNo": 34,
@@ -552,6 +538,12 @@
    "handNo": 37,
    "text": "Table 2 · Hand 37 · blinds 30/60 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow raises to 120, Ledger calls 60, [flop: 2♥ 2♣ 6♣], Minnow raises to 156, Ledger calls 156, [turn: 2♥ 2♣ 6♣ 3♥], Minnow raises to 359, Ledger calls 359, [river: 2♥ 2♣ 6♣ 3♥ A♣], Minnow raises to 826, Ledger folds → Minnow takes 2096 (everyone else folded)",
    "pot": 2096
+  },
+  {
+   "table": 3,
+   "handNo": 37,
+   "text": "Table 3 · Hand 37 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: K♦ K♣ 3♥], Brass checks, Mirage checks, [turn: K♦ K♣ 3♥ 3♠], Brass checks, Mirage checks, [river: K♦ K♣ 3♥ 3♠ 4♦], Brass checks, Mirage checks → Mirage wins 120 with Two pair, Ks and 3s (A♥ J♥)",
+   "pot": 120
   }
  ],
  "finishes": [],
