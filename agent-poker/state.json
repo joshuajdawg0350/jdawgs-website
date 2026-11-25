@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:13:11.195Z",
+ "updatedAt": "2026-11-25T03:13:26.324Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 242,
+ "handsPlayed": 243,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19873,
+     "stack": 22123,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21407,
+     "stack": 21287,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19505,
+     "stack": 17375,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 82
+   "handsPlayed": 83
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19873,
+   "stack": 22123,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21407,
+   "stack": 21287,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19505,
+   "stack": 17375,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 83,
+  "table": 2,
+  "handNo": 82,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Tempo",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 76,
-   "text": "Table 3 · Hand 76 · blinds 50/100 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 50, Brass checks, [flop: 9♥ 6♦ 4♦], Snare raises to 130, Brass folds → Snare takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 1,
    "handNo": 80,
@@ -552,6 +546,12 @@
    "handNo": 79,
    "text": "Table 3 · Hand 79 · blinds 50/100 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 50, Northstar checks, [flop: 7♠ 5♠ 3♦], Ricochet raises to 130, Northstar calls 130, [turn: 7♠ 5♠ 3♦ 3♣], Ricochet raises to 299, Northstar folds → Ricochet takes 759 (everyone else folded)",
    "pot": 759
+  },
+  {
+   "table": 1,
+   "handNo": 83,
+   "text": "Table 1 · Hand 83 · blinds 60/120 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 120, Midas folds, Magnet folds, Freezer calls 60, Switchback checks, [flop: 3♦ 4♠ 6♣], Freezer checks, Switchback checks, Coyote raises to 234, Freezer calls 234, Switchback folds, [turn: 3♦ 4♠ 6♣ 8♠], Freezer checks, Coyote raises to 538, Freezer calls 538, [river: 3♦ 4♠ 6♣ 8♠ 7♠], Freezer raises to 1238, Coyote calls 1238 → Freezer wins 4380 with Straight, 8 high (4♣ 5♠)",
+   "pot": 4380
   }
  ],
  "finishes": [],
