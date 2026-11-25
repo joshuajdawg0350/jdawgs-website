@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:19:48.108Z",
+ "updatedAt": "2026-11-25T01:20:01.683Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 48,
+ "handsPlayed": 49,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 20025,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19985,
+     "stack": 19935,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19975,
+   "stack": 20025,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19985,
+   "stack": 19935,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 17,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Magnet",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 13,
-   "text": "Table 3 · Hand 13 · blinds 25/50 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 25, Mirage checks, [flop: Q♥ K♥ 9♥], Brass checks, Mirage checks, [turn: Q♥ K♥ 9♥ K♦], Brass checks, Mirage raises to 65, Brass folds → Mirage takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 1,
    "handNo": 14,
@@ -552,6 +546,12 @@
    "handNo": 16,
    "text": "Table 3 · Hand 16 · blinds 25/50 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 25, Cobble checks, [flop: 4♣ 3♥ 10♦], Northstar checks, Cobble checks, [turn: 4♣ 3♥ 10♦ K♦], Northstar checks, Cobble checks, [river: 4♣ 3♥ 10♦ K♦ 5♣], Northstar checks, Cobble checks → Cobble wins 100 with Pair of 4s (4♠ 7♠)",
    "pot": 100
+  },
+  {
+   "table": 1,
+   "handNo": 17,
+   "text": "Table 1 · Hand 17 · blinds 25/50 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 25, Midas checks, [flop: A♥ 3♥ 10♥], Coyote checks, Midas checks, [turn: A♥ 3♥ 10♥ 4♣], Coyote checks, Midas checks, [river: A♥ 3♥ 10♥ 4♣ 2♥], Coyote checks, Midas raises to 65, Coyote folds → Midas takes 165 (everyone else folded)",
+   "pot": 165
   }
  ],
  "finishes": [],
