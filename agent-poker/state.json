@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:24:54.140Z",
+ "updatedAt": "2026-11-25T01:25:10.770Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 63,
+ "handsPlayed": 64,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19895,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 17384,
+     "stack": 17444,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19895,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17384,
+   "stack": 17444,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 22,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Highwire",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 18,
-   "text": "Table 3 · Hand 18 · blinds 25/50 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 25, Fossil checks, [flop: K♣ 3♣ 7♠], Velcro checks, Fossil checks, [turn: K♣ 3♣ 7♠ J♣], Velcro checks, Fossil checks, [river: K♣ 3♣ 7♠ J♣ 5♣], Velcro raises to 65, Fossil calls 65 → Velcro wins 230 with Flush, K high (5♠ 4♣)",
-   "pot": 230
-  },
   {
    "table": 1,
    "handNo": 19,
@@ -552,6 +546,12 @@
    "handNo": 21,
    "text": "Table 3 · Hand 21 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: 6♦ 7♥ 9♥], Brass checks, Mirage checks, [turn: 6♦ 7♥ 9♥ 8♦], Brass checks, Mirage checks, [river: 6♦ 7♥ 9♥ 8♦ 7♠], Brass checks, Mirage checks → Brass wins 60 with Pair of 7s (4♦ 3♠); Mirage wins 60 with Pair of 7s (2♣ 3♥)",
    "pot": 120
+  },
+  {
+   "table": 1,
+   "handNo": 22,
+   "text": "Table 1 · Hand 22 · blinds 30/60 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 30, Longshot checks, [flop: Q♣ Q♥ 8♣], Tempo checks, Longshot checks, [turn: Q♣ Q♥ 8♣ K♥], Tempo checks, Longshot checks, [river: Q♣ Q♥ 8♣ K♥ Q♦], Tempo checks, Longshot raises to 78, Tempo folds → Longshot takes 198 (everyone else folded)",
+   "pot": 198
   }
  ],
  "finishes": [],
