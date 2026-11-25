@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:20:34.782Z",
+ "updatedAt": "2026-11-25T03:20:48.364Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 264,
+ "handsPlayed": 265,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20322,
+     "stack": 20202,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19643,
+     "stack": 19763,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 88
+   "handsPlayed": 89
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20322,
+   "stack": 20202,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19643,
+   "stack": 19763,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 89,
+  "table": 3,
+  "handNo": 87,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Minnow",
+  "toAct": "Cobble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 87,
-   "text": "Table 1 · Hand 87 · blinds 60/120 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 60, Static checks, [flop: 2♣ 7♣ A♠], Highwire checks, Static checks, [turn: 2♣ 7♣ A♠ J♠], Highwire checks, Static checks, [river: 2♣ 7♣ A♠ J♠ K♠], Highwire checks, Static raises to 156, Highwire folds → Static takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 2,
    "handNo": 86,
@@ -552,6 +546,12 @@
    "handNo": 90,
    "text": "Table 1 · Hand 90 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: 4♣ 3♥ 4♦], Midas checks, Magnet checks, [turn: 4♣ 3♥ 4♦ 7♠], Midas checks, Magnet checks, [river: 4♣ 3♥ 4♦ 7♠ 7♣], Midas checks, Magnet checks → Midas wins 240 with Two pair, 7s and 4s (Q♠ 5♠)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 89,
+   "text": "Table 2 · Hand 89 · blinds 60/120 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 60, Undertow checks, [flop: 7♣ K♦ 3♣], Jackpot checks, Undertow checks, [turn: 7♣ K♦ 3♣ 8♦], Jackpot raises to 156, Undertow folds → Jackpot takes 396 (everyone else folded)",
+   "pot": 396
   }
  ],
  "finishes": [],
