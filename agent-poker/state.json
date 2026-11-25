@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:38:11.377Z",
+ "updatedAt": "2026-11-25T02:38:27.087Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 188,
+ "handsPlayed": 189,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17612,
+     "stack": 17762,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20607,
+     "stack": 20557,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19883,
+     "stack": 19783,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 63
+   "handsPlayed": 64
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17612,
+   "stack": 17762,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20607,
+   "stack": 20557,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19883,
+   "stack": 19783,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 64,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Switchback",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 59,
-   "text": "Table 3 · Hand 59 · blinds 40/80 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 40, Snare checks, [flop: 2♠ 8♣ 9♥], Fossil checks, Snare checks, [turn: 2♠ 8♣ 9♥ 7♠], Fossil checks, Snare checks, [river: 2♠ 8♣ 9♥ 7♠ 4♠], Fossil checks, Snare raises to 104, Fossil folds → Snare takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 61,
@@ -552,6 +546,12 @@
    "handNo": 62,
    "text": "Table 3 · Hand 62 · blinds 50/100 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 100, Mirage calls 50, Ricochet checks, [flop: 8♣ 6♠ 2♠], Mirage raises to 195, Ricochet folds, Brass folds → Mirage takes 495 (everyone else folded)",
    "pot": 495
+  },
+  {
+   "table": 1,
+   "handNo": 64,
+   "text": "Table 1 · Hand 64 · blinds 50/100 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 100, Magnet folds, Freezer checks, [flop: 8♥ 6♥ 6♠], Freezer checks, Midas raises to 163, Freezer folds → Midas takes 413 (everyone else folded)",
+   "pot": 413
   }
  ],
  "finishes": [],
