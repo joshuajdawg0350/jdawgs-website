@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:51:40.518Z",
+ "updatedAt": "2026-11-25T02:51:57.339Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  200,
-  400
+  250,
+  500
  ],
- "level": 10,
- "handsPlayed": 199,
+ "level": 11,
+ "handsPlayed": 200,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18937,
+     "stack": 17771,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18791,
+     "stack": 18741,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 22719,
+     "stack": 23935,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 67
+   "handsPlayed": 68
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18937,
+   "stack": 17771,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18791,
+   "stack": 18741,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22719,
+   "stack": 23935,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 68,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Static",
+  "toAct": "Tidepool",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 64,
-   "text": "Table 2 · Hand 64 · blinds 50/100 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 50, Ledger raises to 230, Minnow calls 130, [flop: 9♦ J♥ 4♦], Minnow raises to 299, Ledger folds → Minnow takes 759 (everyone else folded)",
-   "pot": 759
-  },
   {
    "table": 3,
    "handNo": 63,
@@ -552,6 +546,12 @@
    "handNo": 65,
    "text": "Table 3 · Hand 65 · blinds 50/100 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 50, Velcro checks, [flop: 10♥ 3♦ K♥], Cobble checks, Velcro checks, [turn: 10♥ 3♦ K♥ 4♠], Cobble checks, Velcro checks, [river: 10♥ 3♦ K♥ 4♠ A♠], Cobble checks, Velcro checks → Velcro wins 200 with A high (J♣ 7♦)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 68,
+   "text": "Table 1 · Hand 68 · blinds 50/100 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo raises to 200, Longshot folds, Highwire calls 100, [flop: K♣ 5♠ 4♣], Highwire raises to 293, Tempo calls 293, [turn: K♣ 5♠ 4♣ 4♦], Highwire raises to 673, Tempo calls 673, [river: K♣ 5♠ 4♣ 4♦ 10♥], Highwire checks, Tempo checks → Highwire wins 2382 with Two pair, Ks and 4s (8♣ K♦)",
+   "pot": 2382
   }
  ],
  "finishes": [],
