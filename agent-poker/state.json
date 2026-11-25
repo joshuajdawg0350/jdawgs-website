@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:59:32.380Z",
+ "updatedAt": "2026-11-25T03:59:44.782Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 385,
+ "handsPlayed": 386,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23913,
+     "stack": 24113,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 17888,
+     "stack": 17688,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 126
+   "handsPlayed": 127
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23913,
+   "stack": 24113,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17888,
+   "stack": 17688,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 127,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 126,
-   "text": "Table 2 · Hand 126 · blinds 100/200 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 100, Minnow checks, [flop: Q♠ 3♣ 2♣], Undertow checks, Minnow checks, [turn: Q♠ 3♣ 2♣ 5♦], Undertow checks, Minnow checks, [river: Q♠ 3♣ 2♣ 5♦ 3♦], Undertow checks, Minnow checks → Minnow wins 400 with Pair of 3s (K♣ 7♥)",
-   "pot": 400
-  },
   {
    "table": 3,
    "handNo": 124,
@@ -552,6 +538,12 @@
    "handNo": 129,
    "text": "Table 2 · Hand 129 · blinds 100/200 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 100, Bedrock checks, [flop: K♦ 7♦ 4♠], Ember checks, Bedrock checks, [turn: K♦ 7♦ 4♠ 9♦], Ember checks, Bedrock checks, [river: K♦ 7♦ 4♠ 9♦ 10♠], Ember checks, Bedrock checks → Ember wins 400 with Pair of 4s (4♥ 6♠)",
    "pot": 400
+  },
+  {
+   "table": 3,
+   "handNo": 127,
+   "text": "Table 3 · Hand 127 · blinds 100/200 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 100, Northstar checks, [flop: 6♣ J♦ 3♣], Ricochet checks, Northstar raises to 260, Ricochet folds → Northstar takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [],
