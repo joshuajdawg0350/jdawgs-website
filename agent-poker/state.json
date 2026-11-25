@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:01:41.279Z",
+ "updatedAt": "2026-11-25T02:02:00.326Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 148,
+ "handsPlayed": 149,
  "tables": [
   {
    "id": 1,
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   },
   {
    "id": 3,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 50,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Tidepool",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 47,
-   "text": "Table 1 · Hand 47 · blinds 40/80 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 40, Switchback checks, [flop: 6♣ 9♦ Q♠], Freezer checks, Switchback raises to 104, Freezer folds → Switchback takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 2,
    "handNo": 47,
@@ -552,6 +546,12 @@
    "handNo": 50,
    "text": "Table 1 · Hand 50 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 9♥ 9♣ 6♦], Longshot checks, Highwire checks, [turn: 9♥ 9♣ 6♦ 2♥], Longshot checks, Highwire checks, [river: 9♥ 9♣ 6♦ 2♥ A♥], Longshot checks, Highwire checks → Longshot wins 160 with Pair of 9s (Q♠ 5♥)",
    "pot": 160
+  },
+  {
+   "table": 2,
+   "handNo": 50,
+   "text": "Table 2 · Hand 50 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: A♥ 4♥ Q♠], Glacier raises to 104, Deadpan calls 104, [turn: A♥ 4♥ Q♠ 4♦], Glacier checks, Deadpan checks, [river: A♥ 4♥ Q♠ 4♦ 6♦], Glacier checks, Deadpan checks → Glacier wins 184 with Two pair, Qs and 4s (J♦ Q♦); Deadpan wins 184 with Two pair, Qs and 4s (10♥ Q♥)",
+   "pot": 368
   }
  ],
  "finishes": [],
