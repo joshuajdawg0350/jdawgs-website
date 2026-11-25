@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:25:31.159Z",
+ "updatedAt": "2026-11-25T03:25:50.255Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 278,
+ "handsPlayed": 279,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18421,
+     "stack": 12050,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 23465,
+     "stack": 29836,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 94
+   "handsPlayed": 95
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18421,
+   "stack": 12050,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23465,
+   "stack": 29836,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 95,
+  "table": 2,
+  "handNo": 94,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Static",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 88,
-   "text": "Table 3 · Hand 88 · blinds 60/120 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 60, Cobble checks, [flop: J♦ 4♥ 4♠], Northstar checks, Cobble checks, [turn: J♦ 4♥ 4♠ 5♥], Northstar checks, Cobble raises to 156, Northstar folds → Cobble takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 1,
    "handNo": 92,
@@ -552,6 +546,12 @@
    "handNo": 91,
    "text": "Table 3 · Hand 91 · blinds 60/120 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 60, Snare checks, [flop: 3♥ 6♥ 6♠], Fossil checks, Snare checks, [turn: 3♥ 6♥ 6♠ 8♦], Fossil raises to 156, Snare folds → Fossil takes 396 (everyone else folded)",
    "pot": 396
+  },
+  {
+   "table": 1,
+   "handNo": 95,
+   "text": "Table 1 · Hand 95 · blinds 60/120 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 60, Highwire checks, [flop: 9♣ A♠ 6♠], Longshot raises to 156, Highwire raises to 413, Longshot calls 257, [turn: 9♣ A♠ 6♠ 6♥], Longshot raises to 693, Highwire raises to 2237, Longshot calls 1544, [river: 9♣ A♠ 6♠ 6♥ 8♣], Longshot checks, Highwire raises to 3601, Longshot calls 3601 → Highwire wins 12742 with Full house, 6s full of 9s (9♦ 6♦)",
+   "pot": 12742
   }
  ],
  "finishes": [],
