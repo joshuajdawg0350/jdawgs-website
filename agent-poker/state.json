@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:21:48.985Z",
+ "updatedAt": "2026-11-25T03:22:03.761Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 268,
+ "handsPlayed": 269,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23877,
+     "stack": 23757,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21285,
+     "stack": 21405,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 87
+   "handsPlayed": 88
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23877,
+   "stack": 23757,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21285,
+   "stack": 21405,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 88,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 87,
-   "text": "Table 2 · Hand 87 · blinds 60/120 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 60, Tidepool checks, [flop: 10♠ 10♦ K♥], Deadpan raises to 156, Tidepool folds → Deadpan takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 85,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 90,
    "text": "Table 2 · Hand 90 · blinds 60/120 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 60, Minnow checks, [flop: 2♦ Q♥ K♠], Undertow checks, Minnow raises to 156, Undertow folds → Minnow takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 3,
+   "handNo": 88,
+   "text": "Table 3 · Hand 88 · blinds 60/120 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 60, Cobble checks, [flop: J♦ 4♥ 4♠], Northstar checks, Cobble checks, [turn: J♦ 4♥ 4♠ 5♥], Northstar checks, Cobble raises to 156, Northstar folds → Cobble takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
