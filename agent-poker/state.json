@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:02:00.326Z",
+ "updatedAt": "2026-11-25T02:02:21.626Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 149,
+ "handsPlayed": 150,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 19583,
+     "stack": 19503,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19647,
+     "stack": 19727,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 49
+   "handsPlayed": 50
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19583,
+   "stack": 19503,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19647,
+   "stack": 19727,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 50,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 47,
-   "text": "Table 2 · Hand 47 · blinds 40/80 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 40, Ember checks, [flop: 2♣ 7♦ J♠], Ledger checks, Ember checks, [turn: 2♣ 7♦ J♠ 10♠], Ledger raises to 104, Ember folds → Ledger takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 3,
    "handNo": 47,
@@ -552,6 +538,12 @@
    "handNo": 50,
    "text": "Table 2 · Hand 50 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: A♥ 4♥ Q♠], Glacier raises to 104, Deadpan calls 104, [turn: A♥ 4♥ Q♠ 4♦], Glacier checks, Deadpan checks, [river: A♥ 4♥ Q♠ 4♦ 6♦], Glacier checks, Deadpan checks → Glacier wins 184 with Two pair, Qs and 4s (J♦ Q♦); Deadpan wins 184 with Two pair, Qs and 4s (10♥ Q♥)",
    "pot": 368
+  },
+  {
+   "table": 3,
+   "handNo": 50,
+   "text": "Table 3 · Hand 50 · blinds 40/80 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 40, Fossil checks, [flop: 9♣ 10♦ 4♠], Velcro checks, Fossil checks, [turn: 9♣ 10♦ 4♠ 4♣], Velcro checks, Fossil checks, [river: 9♣ 10♦ 4♠ 4♣ J♥], Velcro checks, Fossil checks → Fossil wins 160 with Pair of 4s (6♦ Q♥)",
+   "pot": 160
   }
  ],
  "finishes": [],
