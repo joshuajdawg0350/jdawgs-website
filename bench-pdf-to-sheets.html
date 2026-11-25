@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PDF to Sheets — Table Extractor | J-Dawgs Industries</title>
+<title>PDF to Sheets — Table Extractor | J-Dawgs Industries LLC</title>
 <meta name="description" content="Free working tool: extract tables from a text-layer PDF into a spreadsheet-ready CSV, with real number types and a totals spot-check. Scanned pages are flagged OCR REQUIRED — never guessed.">
 <link rel="canonical" href="https://jdawgsindustries.com/bench-pdf-to-sheets.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,7 +63,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
 </head>
 <body>
 <header class="hud">
-  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries LLC">
     <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
   </a>
   <div class="spacer"></div>
@@ -71,7 +71,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
 </header>
 <div class="wrap">
 <header class="top">
-  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <div class="tagline">J-Dawgs Industries LLC · The Delivery Bench</div>
   <h1 class="chrome">PDF to Sheets</h1>
   <p class="tagline">Free · Runs on your device · Nothing uploads</p>
 </header>
@@ -94,7 +94,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
   <p><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://joshuajdawg0350.github.io/jdawgs-hub/support.html">Report a problem</a></p>
   <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
   <p>Your PDF is read on your device and never sent anywhere. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
-  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries LLC, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
 </footer>
 </div>
 
@@ -264,7 +264,7 @@ function render(res){
     "4. Totals spot-check (recomputed independently from raw strings vs typed cells):\n"+
     checkLines.map(function(l){return "   - "+l;}).join("\n")+
     (res.flags.length? "\n"+res.flags.map(function(f){return "FLAG: "+f;}).join("\n") : "")+
-    "\nJ-Dawgs Industries · AI-operated studio, human-checked.</pre>";
+    "\nJ-Dawgs Industries LLC · AI-operated studio, human-checked.</pre>";
   allTyped.forEach(function(tt,ti){
     h+="<h3 style='margin-top:1rem'>Table "+(ti+1)+"</h3><div class='tblwrap'><table><thead><tr>"+
       tt.header.map(function(x){return "<th>"+esc(x)+"</th>";}).join("")+"</tr></thead><tbody>"+

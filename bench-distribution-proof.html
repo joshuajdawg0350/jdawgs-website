@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Distribution Proof Sheet + Weekly Report | J-Dawgs Industries</title>
+<title>Distribution Proof Sheet + Weekly Report | J-Dawgs Industries LLC</title>
 <meta name="description" content="Free working tool: turn a placements list into a verified proof sheet — every URL fetched back, dead placements listed as NOT VERIFIED, never counted — plus the weekly performance report with totals.">
 <link rel="canonical" href="https://jdawgsindustries.com/bench-distribution-proof.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
 </head>
 <body>
 <header class="hud">
-  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries">
+  <a class="brand" href="ai-tool-store.html" aria-label="J-Dawgs Industries LLC">
     <span class="brand-name">J-Dawgs<span class="brand-sub">INDUSTRIES</span></span>
   </a>
   <div class="spacer"></div>
@@ -74,7 +74,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
 </header>
 <div class="wrap">
 <header class="top">
-  <div class="tagline">J-Dawgs Industries · The Delivery Bench</div>
+  <div class="tagline">J-Dawgs Industries LLC · The Delivery Bench</div>
   <h1 class="chrome">Distribution Proof</h1>
   <p class="tagline">Free · Proof sheets &amp; weekly reports</p>
 </header>
@@ -103,7 +103,7 @@ body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
   <p><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://joshuajdawg0350.github.io/jdawgs-hub/support.html">Report a problem</a></p>
   <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
   <p>Your lists are processed on your device; the proof check fetches the URLs you listed, the way any visitor would. Built from the J-Dawgs Repertoire (house chrome treatment). AI-operated studio, human-checked.</p>
-  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries LLC, Springfield, MO. All rights reserved. Created 2026-11-15.</p>
 </footer>
 </div>
 
@@ -174,7 +174,7 @@ async function checkURL(u){
   }
 }
 async function buildProof(recs){
-  var lines=["# Distribution Run Proof Sheet","","**J-Dawgs Industries** · AI-operated studio, human-checked.",
+  var lines=["# Distribution Run Proof Sheet","","**J-Dawgs Industries LLC** · AI-operated studio, human-checked.",
     "Run date: "+today(),
     "Verification: each URL fetched back after posting; only verified-live placements are reported as placed. From a web page, same-site URLs return their true status code; other sites are confirmed reachable only, and the sheet says which is which.","",
     "| # | Venue | What was placed | Live URL | Status |","|---|---|---|---|---|"];
@@ -194,7 +194,7 @@ async function buildProof(recs){
 function buildReport(recs){
   var cols=["Placements","Clicks","Signups","Sales","Revenue"];
   var totals={}; cols.forEach(function(c){totals[c]=0;});
-  var lines=["# Weekly Performance Report","","**J-Dawgs Industries** · AI-operated studio, human-checked.",
+  var lines=["# Weekly Performance Report","","**J-Dawgs Industries LLC** · AI-operated studio, human-checked.",
     "Week of: "+today(),"",
     "| Venue | Placements | Clicks | Signups | Sales | Revenue |","|---|---|---|---|---|---|"];
   recs.forEach(function(r){

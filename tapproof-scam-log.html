@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TapProof Scam Log™ — Log Suspicious Messages in the Fields That Matter | J-Dawgs Industries</title>
+<title>TapProof Scam Log™ — Log Suspicious Messages in the Fields That Matter | J-Dawgs Industries LLC</title>
 <meta name="description" content="A private on-device log of suspicious texts, emails, and QR codes in the exact fields the FTC, FBI IC3, and 7726 ask for. Exports CSV.">
 <link rel="canonical" href="https://jdawgsindustries.com/tapproof-scam-log.html">
 <script>document.documentElement.className+=" js"</script>
@@ -65,7 +65,6 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1
 .qopt:hover{border-color:var(--cyan)}
 .score{font-family:var(--fm);color:var(--cyan)}
 @media print{body{background:#fff;color:#000}.panel,.toolcard{background:#fff;border-color:#999}.chrome{color:#000;-webkit-text-fill-color:#000;background:none}.no-print{display:none!important}.stat,h2,.tagline{color:#000}}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#39c2ff;--dsInk:#9fb0c6;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -112,7 +111,7 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1
 <body>
 <div class="wrap">
 <header class="top">
-  <div class="tagline">J-Dawgs Industries · TapProofing™</div>
+  <div class="tagline">J-Dawgs Industries LLC · TapProofing™</div>
 
   <h1 class="chrome">Scam Log™</h1>
   <p class="tagline">TapProofing™</p>
@@ -149,8 +148,8 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1
 <footer>
   <p><strong>The J-Dawgs Fix-It Guarantee:</strong> if anything we sold or gave you doesn't work, tell us once — we fix it free. No receipts, no runaround. <a href="https://joshuajdawg0350.github.io/jdawgs-hub/support.html">Report a problem</a></p>
   <p class="trio"><strong>No fancy logos. Just quality products.</strong> · <strong>No ads.</strong> · <strong>We never sell your information.</strong></p>
-  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
-  <p>© 2026 Joshua Dawson, J-Dawgs Industries, Springfield, MO. All rights reserved.</p>
+  <p>TapProofing™ and its tool names are trademarks of J-Dawgs Industries LLC, in use since November 14, 2026. Everything on this page runs on your device — nothing you type, paste, or scan is sent anywhere.</p>
+  <p>© 2026 Joshua Dawson, J-Dawgs Industries LLC, Springfield, MO. All rights reserved.</p>
 </footer>
 </div>
 </div>
@@ -334,13 +333,6 @@ render();
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>
