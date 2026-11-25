@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:38:40.984Z",
+ "updatedAt": "2026-11-25T02:38:54.170Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 190,
+ "handsPlayed": 191,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 24477,
+     "stack": 24577,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18567,
+     "stack": 18467,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 62
+   "handsPlayed": 63
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24477,
+   "stack": 24577,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18567,
+   "stack": 18467,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 63,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 61,
-   "text": "Table 2 · Hand 61 · blinds 50/100 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 50, Jackpot checks, [flop: 6♦ 8♠ 6♥], Tidepool checks, Jackpot checks, [turn: 6♦ 8♠ 6♥ 2♦], Tidepool checks, Jackpot checks, [river: 6♦ 8♠ 6♥ 2♦ 10♠], Tidepool checks, Jackpot checks → Tidepool wins 100 with Pair of 6s (3♣ Q♠); Jackpot wins 100 with Pair of 6s (3♠ Q♣)",
-   "pot": 200
-  },
   {
    "table": 3,
    "handNo": 60,
@@ -552,6 +538,12 @@
    "handNo": 64,
    "text": "Table 2 · Hand 64 · blinds 50/100 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 50, Ledger raises to 230, Minnow calls 130, [flop: 9♦ J♥ 4♦], Minnow raises to 299, Ledger folds → Minnow takes 759 (everyone else folded)",
    "pot": 759
+  },
+  {
+   "table": 3,
+   "handNo": 63,
+   "text": "Table 3 · Hand 63 · blinds 50/100 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 50, Northstar raises to 230, Ricochet folds → Northstar takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
