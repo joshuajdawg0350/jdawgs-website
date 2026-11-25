@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:11:31.317Z",
+ "updatedAt": "2026-11-25T04:11:52.578Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 420,
+ "handsPlayed": 421,
  "tables": [
   {
    "id": 1,
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19828,
+     "stack": 20188,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 21237,
+     "stack": 21117,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 19578,
+     "stack": 19338,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 140
+   "handsPlayed": 141
   },
   {
    "id": 3,
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19828,
+   "stack": 20188,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21237,
+   "stack": 21117,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19578,
+   "stack": 19338,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 141,
+  "table": 3,
+  "handNo": 139,
   "stage": "preflop",
   "board": [],
-  "pot": 360,
-  "toAct": "Jackpot",
+  "pot": 300,
+  "toAct": "Brass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 139,
-   "text": "Table 1 · Hand 139 · blinds 100/200 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds → Longshot takes 300 (everyone else folded)",
-   "pot": 300
-  },
   {
    "table": 2,
    "handNo": 138,
@@ -552,6 +546,12 @@
    "handNo": 142,
    "text": "Table 1 · Hand 142 · blinds 120/240 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 240, Static folds, Coyote checks, [flop: 4♦ 2♠ 10♣], Coyote checks, Highwire raises to 390, Coyote calls 390, [turn: 4♦ 2♠ 10♣ A♥], Coyote checks, Highwire raises to 897, Coyote folds → Highwire takes 2277 (everyone else folded)",
    "pot": 2277
+  },
+  {
+   "table": 2,
+   "handNo": 141,
+   "text": "Table 2 · Hand 141 · blinds 120/240 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 240, Deadpan folds, Tidepool checks, [flop: 3♣ 4♣ Q♥], Tidepool checks, Glacier checks, [turn: 3♣ 4♣ Q♥ 8♥], Tidepool checks, Glacier raises to 390, Tidepool folds → Glacier takes 990 (everyone else folded)",
+   "pot": 990
   }
  ],
  "finishes": [],
