@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:51:03.576Z",
+ "updatedAt": "2026-11-25T02:51:24.881Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 198,
+ "handsPlayed": 199,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21405,
+     "stack": 21305,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 20740,
+     "stack": 20840,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 64
+   "handsPlayed": 65
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21405,
+   "stack": 21305,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20740,
+   "stack": 20840,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 65,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 64,
-   "text": "Table 1 · Hand 64 · blinds 50/100 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 100, Magnet folds, Freezer checks, [flop: 8♥ 6♥ 6♠], Freezer checks, Midas raises to 163, Freezer folds → Midas takes 413 (everyone else folded)",
-   "pot": 413
-  },
   {
    "table": 2,
    "handNo": 64,
@@ -552,6 +538,12 @@
    "handNo": 67,
    "text": "Table 2 · Hand 67 · blinds 50/100 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 100, Bedrock folds, Glacier checks, [flop: A♠ 8♦ Q♠], Glacier checks, Ember checks, [turn: A♠ 8♦ Q♠ 7♠], Glacier checks, Ember raises to 163, Glacier folds → Ember takes 413 (everyone else folded)",
    "pot": 413
+  },
+  {
+   "table": 3,
+   "handNo": 65,
+   "text": "Table 3 · Hand 65 · blinds 50/100 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 50, Velcro checks, [flop: 10♥ 3♦ K♥], Cobble checks, Velcro checks, [turn: 10♥ 3♦ K♥ 4♠], Cobble checks, Velcro checks, [river: 10♥ 3♦ K♥ 4♠ A♠], Cobble checks, Velcro checks → Velcro wins 200 with A high (J♣ 7♦)",
+   "pot": 200
   }
  ],
  "finishes": [],
