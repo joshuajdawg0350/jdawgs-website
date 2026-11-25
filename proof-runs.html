@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className+=" js"</script>
-<title>Proof Runs as a Service — J-Dawgs Industries</title>
+<title>Proof Runs as a Service — J-Dawgs Industries LLC</title>
 <meta name="description" content="We run your product end to end the way a real buyer would, and publish what happened — hits and misses both. Proof Run $19.99, Proof Run + Re-Run Bundle $39.99, Canary Watchdog $9.99 first month.">
 <link rel="canonical" href="https://jdawgsindustries.com/proof-runs.html">
 <style>
@@ -57,7 +57,6 @@
   footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:.92rem}
   footer a{color:var(--mut)}
   a{color:var(--cyan)}
-@media (max-width:899px){html,body{overscroll-behavior:none}}
 .dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
@@ -104,7 +103,7 @@
 <body>
 <div class="wrap">
 <header>
-  <p class="kicker">J-Dawgs Industries — Agent Services</p>
+  <p class="kicker">J-Dawgs Industries LLC — Agent Services</p>
   <h1><span class="chrome">Proof Runs as a Service</span></h1>
   <p class="sub">We run your product for real, and publish what happened. Hits and misses both.</p>
   <p class="promises"><span>No fancy logos. Just quality products.</span><span>No ads.</span></p>
@@ -157,7 +156,7 @@
 </div>
 
 <footer>
-  <p>J-Dawgs Industries — Springfield, MO. Big dreams for a small world.<br>
+  <p>J-Dawgs Industries LLC — Springfield, MO. Big dreams for a small world.<br>
   <a href="https://jdawgsindustries.com/agent-jobs/">Service Request Door</a> · <a href="https://jdawgsindustries.com/agent-services.html">Agent Services</a> · <a href="https://jdawgsindustries.com/refunds.html">Refund policy</a></p>
 </footer>
 </div>
@@ -311,13 +310,6 @@
     snap: function () { return snap; }
   };
 })();
-</script>
-<script>/* ptr-guard (2026-11-21): pull-to-refresh must never steal a sheet drag */
-(function(){var b=document.getElementById('dsheetBody'),s=document.getElementById('dsheet'),y=0;
-document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0].clientY;},{passive:true});
-document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
-if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
-if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
 </script>
 </body>
 </html>

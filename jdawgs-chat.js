@@ -981,7 +981,7 @@
       var leadP = hd.querySelector('.lead') || hd.querySelector('section p');
       stops.push({
         kind: 'intro', name: 'Welcome',
-        say: 'Welcome to J-Dawgs Industries. ' + h1 + '. ' + (leadP ? textOf(leadP) : '') + ' I am Little Bot, and I will walk you through what we do, out loud. ' + cmdHelp,
+        say: 'Welcome to J-Dawgs Industries LLC. ' + h1 + '. ' + (leadP ? textOf(leadP) : '') + ' I am Little Bot, and I will walk you through what we do, out loud. ' + cmdHelp,
         more: 'J-Dawgs is one small company with a few doors: tools for AIs, hands for hire through Human Hands, and goods for sale. The tour covers each one.'
       });
       pageBlocks(docs.home, 5).forEach(function (b) {
@@ -1056,7 +1056,7 @@
     }
     stops.push({
       kind: 'outro', name: 'The end',
-      say: 'That is J-Dawgs Industries — tools, services, Human Hands, and the store. Say tour to hear it again, or ask me anything at all.',
+      say: 'That is J-Dawgs Industries LLC — tools, services, Human Hands, and the store. Say tour to hear it again, or ask me anything at all.',
       more: 'Ask me about Human Hands, Agent Services, or anything on the site — or say tour and we go around again.'
     });
     return stops;

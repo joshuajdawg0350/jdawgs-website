@@ -72,7 +72,7 @@
   @media print{ body{height:auto; overflow:visible;} main{overflow:visible;} .toolbar, footer, .noprint{display:none !important;} }
 </style>
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="J-Dawgs Industries">
+<meta property="og:site_name" content="J-Dawgs Industries LLC">
 <meta property="og:title" content="Transmission Record — Instrument No. 2 of Continuity Craft">
 <meta property="og:url" content="https://jdawgsindustries.com/continuity-craft/transmission-record.html">
 <meta property="og:image" content="https://jdawgsindustries.com/assets/og-image.png">
@@ -106,7 +106,7 @@
 </main>
 
 <footer>
-  <b>Continuity Craft</b> — founded 2026-11-08 by J-Dawgs Industries · Instrument No. 2: The Transmission Record · A capture is not a Transmission until reproduction proves it · © 2026 Joshua Dawson / J-Dawgs Industries
+  <b>Continuity Craft</b> — founded 2026-11-08 by J-Dawgs Industries LLC · Instrument No. 2: The Transmission Record · A capture is not a Transmission until reproduction proves it · © 2026 Joshua Dawson / J-Dawgs Industries LLC
 </footer>
 
 <script>
@@ -255,7 +255,7 @@ function toMarkdown(r){
     (r.cues || []).map(function(x){ return "- " + x; }).join("\n") + "\n\n## Failure modes & recovery\n" +
     (r.failures || []).map(function(x){ return "- " + x; }).join("\n") + "\n\n## Safety notes\n" + (r.safety || "—") + "\n\n## Verification — reproduction test\n" +
     (r.test && r.test.tester ? ("Tester: " + r.test.tester + " · Date: " + (r.test.date || "—") + " · Result: " + (r.test.result === "pass" ? "PASSED" : "Gaps found") + "\nAttestation (never done the task; record alone; holder absent): " + (r.test.attest ? "yes" : "no") + "\nGaps: " + (r.test.gaps || "none open")) : "Not yet tested. A capture is not a Transmission until reproduction proves it.") +
-    "\n\n---\nContinuity Craft · Instrument No. 2 · © 2026 Joshua Dawson / J-Dawgs Industries\n";
+    "\n\n---\nContinuity Craft · Instrument No. 2 · © 2026 Joshua Dawson / J-Dawgs Industries LLC\n";
   return out;
 }
 

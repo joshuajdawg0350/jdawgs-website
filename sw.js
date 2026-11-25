@@ -1,4 +1,4 @@
-/* J-Dawgs Industries service worker — makes jdawgsindustries.com installable.
+/* J-Dawgs Industries LLC service worker — makes jdawgsindustries.com installable.
    Network-first for pages (content is never stale), cache-first for icons. */
 const CACHE = 'jdawgs-v4';
 const PRECACHE = [
