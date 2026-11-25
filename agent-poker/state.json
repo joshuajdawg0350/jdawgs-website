@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:47:22.110Z",
+ "updatedAt": "2026-11-25T03:47:40.602Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 350,
+ "handsPlayed": 351,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22245,
+     "stack": 22405,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 20121,
+     "stack": 19961,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 118
+   "handsPlayed": 119
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22245,
+   "stack": 22405,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20121,
+   "stack": 19961,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 119,
+  "table": 2,
+  "handNo": 118,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Tempo",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 112,
-   "text": "Table 3 · Hand 112 · blinds 80/160 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 80, Cobble checks, [flop: A♥ 4♦ 10♥], Northstar checks, Cobble raises to 208, Northstar folds → Cobble takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 1,
    "handNo": 116,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 115,
    "text": "Table 3 · Hand 115 · blinds 80/160 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 80, Snare checks, [flop: Q♦ 5♥ A♦], Fossil checks, Snare checks, [turn: Q♦ 5♥ A♦ K♣], Fossil checks, Snare checks, [river: Q♦ 5♥ A♦ K♣ 4♣], Fossil checks, Snare checks → Snare wins 320 with A high (9♥ 10♥)",
+   "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 119,
+   "text": "Table 1 · Hand 119 · blinds 80/160 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 80, Switchback checks, [flop: J♦ 4♠ 2♣], Freezer checks, Switchback checks, [turn: J♦ 4♠ 2♣ 8♠], Freezer checks, Switchback checks, [river: J♦ 4♠ 2♣ 8♠ 5♣], Freezer checks, Switchback checks → Freezer wins 320 with Pair of 2s (9♦ 2♠)",
    "pot": 320
   }
  ],
