@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:41:49.764Z",
+ "updatedAt": "2026-11-25T03:42:01.925Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 332,
+ "handsPlayed": 333,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 12418,
+     "stack": 12578,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 29836,
+     "stack": 29676,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 112
+   "handsPlayed": 113
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12418,
+   "stack": 12578,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 29836,
+   "stack": 29676,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 113,
+  "table": 2,
+  "handNo": 112,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Static",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 106,
-   "text": "Table 3 · Hand 106 · blinds 80/160 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 80, Fossil checks, [flop: 5♣ J♥ 3♠], Velcro checks, Fossil checks, [turn: 5♣ J♥ 3♠ 7♥], Velcro raises to 208, Fossil calls 208, [river: 5♣ J♥ 3♠ 7♥ 6♥], Velcro raises to 478, Fossil raises to 1267, Velcro raises to 3444, Fossil calls 2177 → Velcro wins 7624 with Flush, J high (4♥ 3♥)",
-   "pot": 7624
-  },
   {
    "table": 1,
    "handNo": 110,
@@ -552,6 +546,12 @@
    "handNo": 109,
    "text": "Table 3 · Hand 109 · blinds 80/160 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 80, Mirage checks, [flop: Q♦ J♠ 8♦], Brass checks, Mirage checks, [turn: Q♦ J♠ 8♦ 3♣], Brass raises to 208, Mirage folds → Brass takes 528 (everyone else folded)",
    "pot": 528
+  },
+  {
+   "table": 1,
+   "handNo": 113,
+   "text": "Table 1 · Hand 113 · blinds 80/160 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 80, Highwire checks, [flop: 8♠ Q♥ Q♣], Longshot checks, Highwire checks, [turn: 8♠ Q♥ Q♣ A♦], Longshot checks, Highwire checks, [river: 8♠ Q♥ Q♣ A♦ K♦], Longshot checks, Highwire checks → Longshot wins 320 with Two pair, Ks and Qs (2♠ K♣)",
+   "pot": 320
   }
  ],
  "finishes": [],
