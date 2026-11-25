@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:59:00.653Z",
+ "updatedAt": "2026-11-25T03:59:18.059Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 383,
+ "handsPlayed": 384,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20421,
+     "stack": 19961,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 12318,
+     "stack": 12778,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 129
+   "handsPlayed": 130
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20421,
+   "stack": 19961,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12318,
+   "stack": 12778,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 130,
+  "table": 2,
+  "handNo": 129,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Highwire",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 123,
-   "text": "Table 3 · Hand 123 · blinds 100/200 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 100, Snare raises to 460, Fossil calls 260, [flop: Q♥ 4♣ 4♠], Fossil checks, Snare checks, [turn: Q♥ 4♣ 4♠ 8♥], Fossil raises to 598, Snare calls 598, [river: Q♥ 4♣ 4♠ 8♥ J♣], Fossil checks, Snare checks → Fossil wins 2116 with Two pair, 8s and 4s (10♦ 8♠)",
-   "pot": 2116
-  },
   {
    "table": 1,
    "handNo": 127,
@@ -552,6 +546,12 @@
    "handNo": 126,
    "text": "Table 3 · Hand 126 · blinds 100/200 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 100, Ricochet checks, [flop: 4♠ 2♥ 8♦], Mirage checks, Ricochet checks, [turn: 4♠ 2♥ 8♦ 6♣], Mirage raises to 260, Ricochet folds → Mirage takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 1,
+   "handNo": 130,
+   "text": "Table 1 · Hand 130 · blinds 100/200 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 100, Longshot checks, [flop: 3♠ A♣ 7♠], Tempo checks, Longshot raises to 260, Tempo calls 260, [turn: 3♠ A♣ 7♠ 2♦], Tempo checks, Longshot raises to 598, Tempo folds → Longshot takes 1518 (everyone else folded)",
+   "pot": 1518
   }
  ],
  "finishes": [],
