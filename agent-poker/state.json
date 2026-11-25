@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:50:05.581Z",
+ "updatedAt": "2026-11-25T02:50:22.548Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 195,
+ "handsPlayed": 196,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 24577,
+     "stack": 24477,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21305,
+     "stack": 21405,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 63
+   "handsPlayed": 64
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24577,
+   "stack": 24477,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21305,
+   "stack": 21405,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 64,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 63,
-   "text": "Table 1 · Hand 63 · blinds 50/100 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 50, Magnet checks, [flop: J♣ 10♣ 8♣], Midas checks, Magnet raises to 130, Midas calls 130, [turn: J♣ 10♣ 8♣ 7♣], Midas checks, Magnet raises to 299, Midas folds → Magnet takes 759 (everyone else folded)",
-   "pot": 759
-  },
   {
    "table": 2,
    "handNo": 63,
@@ -552,6 +538,12 @@
    "handNo": 66,
    "text": "Table 2 · Hand 66 · blinds 50/100 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 50, Bedrock checks, [flop: 2♦ 10♠ A♥], Ember checks, Bedrock checks, [turn: 2♦ 10♠ A♥ 9♠], Ember checks, Bedrock checks, [river: 2♦ 10♠ A♥ 9♠ 5♠], Ember checks, Bedrock checks → Bedrock wins 200 with Pair of 5s (4♠ 5♣)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 64,
+   "text": "Table 3 · Hand 64 · blinds 50/100 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble checks, [flop: A♦ Q♣ K♠], Northstar checks, Cobble raises to 130, Northstar folds → Cobble takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
