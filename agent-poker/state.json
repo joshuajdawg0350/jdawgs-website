@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:47:01.936Z",
+ "updatedAt": "2026-11-25T01:47:21.628Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 120,
+ "handsPlayed": 121,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18971,
+     "stack": 19051,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 22525,
+     "stack": 22445,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 40
+   "handsPlayed": 41
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18971,
+   "stack": 19051,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22525,
+   "stack": 22445,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 41,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Static",
+  "toAct": "Tidepool",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 37,
-   "text": "Table 3 · Hand 37 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: K♦ K♣ 3♥], Brass checks, Mirage checks, [turn: K♦ K♣ 3♥ 3♠], Brass checks, Mirage checks, [river: K♦ K♣ 3♥ 3♠ 4♦], Brass checks, Mirage checks → Mirage wins 120 with Two pair, Ks and 3s (A♥ J♥)",
-   "pot": 120
-  },
   {
    "table": 1,
    "handNo": 38,
@@ -552,6 +546,12 @@
    "handNo": 40,
    "text": "Table 3 · Hand 40 · blinds 30/60 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 60, Northstar calls 30, Cobble checks, [flop: K♣ J♦ 7♥], Northstar checks, Cobble checks, Ricochet checks, [turn: K♣ J♦ 7♥ 7♦], Northstar checks, Cobble checks, Ricochet checks, [river: K♣ J♦ 7♥ 7♦ 7♣], Northstar checks, Cobble checks, Ricochet checks → Northstar wins 180 with Full house, 7s full of Js (A♠ J♣)",
    "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 41,
+   "text": "Table 1 · Hand 41 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 6♣ K♣ 3♥], Longshot checks, Highwire checks, [turn: 6♣ K♣ 3♥ K♠], Longshot checks, Highwire checks, [river: 6♣ K♣ 3♥ K♠ 5♦], Longshot raises to 104, Highwire folds → Longshot takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
