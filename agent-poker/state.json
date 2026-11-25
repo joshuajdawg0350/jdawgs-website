@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:13:38.812Z",
+ "updatedAt": "2026-11-25T04:14:02.470Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 425,
+ "handsPlayed": 426,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17072,
+     "stack": 17312,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20439,
+     "stack": 20199,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 143
+   "handsPlayed": 144
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17072,
+   "stack": 17312,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20439,
+   "stack": 20199,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 144,
+  "table": 2,
+  "handNo": 143,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 137,
-   "text": "Table 3 · Hand 137 · blinds 100/200 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 100, Velcro checks, [flop: 5♦ 7♥ 10♦], Cobble checks, Velcro checks, [turn: 5♦ 7♥ 10♦ K♣], Cobble raises to 260, Velcro folds → Cobble takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 1,
    "handNo": 141,
@@ -552,6 +546,12 @@
    "handNo": 140,
    "text": "Table 3 · Hand 140 · blinds 100/200 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 100, Brass checks, [flop: Q♦ 5♣ 10♦], Snare raises to 260, Brass folds → Snare takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 1,
+   "handNo": 144,
+   "text": "Table 1 · Hand 144 · blinds 120/240 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 120, Magnet checks, [flop: A♠ 10♠ J♠], Midas checks, Magnet checks, [turn: A♠ 10♠ J♠ J♣], Midas checks, Magnet checks, [river: A♠ 10♠ J♠ J♣ Q♦], Midas checks, Magnet checks → Midas wins 480 with Two pair, Js and 6s (6♠ 6♣)",
+   "pot": 480
   }
  ],
  "finishes": [],
