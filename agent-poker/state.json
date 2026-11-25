@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:04:19.435Z",
+ "updatedAt": "2026-11-25T01:04:39.655Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 6,
+ "handsPlayed": 7,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20065,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 20065,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Longshot",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
@@ -528,6 +528,12 @@
    "handNo": 2,
    "text": "Table 3 · Hand 2 · blinds 25/50 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 25, Fossil checks, [flop: 2♥ 6♦ 2♠], Velcro checks, Fossil raises to 65, Velcro folds → Fossil takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 25, Tempo checks, [flop: K♠ 5♠ Q♣], Switchback raises to 65, Tempo calls 65, [turn: K♠ 5♠ Q♣ 4♠], Switchback raises to 150, Tempo folds → Switchback takes 380 (everyone else folded)",
+   "pot": 380
   }
  ],
  "finishes": [],
