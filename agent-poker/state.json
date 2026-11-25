@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:16:29.111Z",
+ "updatedAt": "2026-11-25T04:16:51.395Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 431,
+ "handsPlayed": 432,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 21765,
+     "stack": 22005,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 18415,
+     "stack": 18175,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 145
+   "handsPlayed": 146
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21765,
+   "stack": 22005,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18415,
+   "stack": 18175,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 146,
+  "table": 2,
+  "handNo": 145,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Tempo",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 139,
-   "text": "Table 3 · Hand 139 · blinds 100/200 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 100, Snare checks, [flop: K♦ 10♥ 5♣], Fossil checks, Snare checks, [turn: K♦ 10♥ 5♣ A♦], Fossil checks, Snare checks, [river: K♦ 10♥ 5♣ A♦ 10♦], Fossil checks, Snare checks → Snare wins 400 with Two pair, 10s and 5s (5♠ J♥)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 143,
@@ -552,6 +546,12 @@
    "handNo": 142,
    "text": "Table 3 · Hand 142 · blinds 120/240 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 120, Ricochet checks, [flop: 7♦ Q♥ 8♣], Mirage checks, Ricochet raises to 312, Mirage folds → Ricochet takes 792 (everyone else folded)",
    "pot": 792
+  },
+  {
+   "table": 1,
+   "handNo": 146,
+   "text": "Table 1 · Hand 146 · blinds 120/240 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 120, Switchback checks, [flop: 8♣ A♣ 7♦], Freezer checks, Switchback checks, [turn: 8♣ A♣ 7♦ 5♣], Freezer checks, Switchback checks, [river: 8♣ A♣ 7♦ 5♣ J♣], Freezer checks, Switchback checks → Freezer wins 480 with Pair of 8s (8♠ 9♦)",
+   "pot": 480
   }
  ],
  "finishes": [],
