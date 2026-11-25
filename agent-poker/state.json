@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:00:46.267Z",
+ "updatedAt": "2026-11-25T03:01:00.642Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 208,
+ "handsPlayed": 209,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19300,
+     "stack": 19200,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 20353,
+     "stack": 20453,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 67
+   "handsPlayed": 68
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19300,
+   "stack": 19200,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20353,
+   "stack": 20453,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 68,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 65,
-   "text": "Table 3 · Hand 65 · blinds 50/100 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 50, Velcro checks, [flop: 10♥ 3♦ K♥], Cobble checks, Velcro checks, [turn: 10♥ 3♦ K♥ 4♠], Cobble checks, Velcro checks, [river: 10♥ 3♦ K♥ 4♠ A♠], Cobble checks, Velcro checks → Velcro wins 200 with A high (J♣ 7♦)",
-   "pot": 200
-  },
   {
    "table": 1,
    "handNo": 68,
@@ -552,6 +538,12 @@
    "handNo": 70,
    "text": "Table 2 · Hand 70 · blinds 50/100 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 50, Jackpot checks, [flop: 8♥ 8♠ 9♥], Tidepool raises to 130, Jackpot calls 130, [turn: 8♥ 8♠ 9♥ A♦], Tidepool raises to 299, Jackpot folds → Tidepool takes 759 (everyone else folded)",
    "pot": 759
+  },
+  {
+   "table": 3,
+   "handNo": 68,
+   "text": "Table 3 · Hand 68 · blinds 50/100 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 50, Brass checks, [flop: 6♠ 4♦ Q♦], Snare checks, Brass checks, [turn: 6♠ 4♦ Q♦ 10♠], Snare checks, Brass checks, [river: 6♠ 4♦ Q♦ 10♠ 5♥], Snare checks, Brass raises to 130, Snare folds → Brass takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
