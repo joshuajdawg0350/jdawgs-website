@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:11:19.100Z",
+ "updatedAt": "2026-11-25T03:11:36.461Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 237,
+ "handsPlayed": 238,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20737,
+     "stack": 20442,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 25373,
+     "stack": 25078,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19053,
+     "stack": 19643,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 79
+   "handsPlayed": 80
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20737,
+   "stack": 20442,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25373,
+   "stack": 25078,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19053,
+   "stack": 19643,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 80,
+  "table": 3,
+  "handNo": 78,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Minnow",
+  "toAct": "Northstar",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 78,
-   "text": "Table 1 · Hand 78 · blinds 50/100 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 50, Static raises to 230, Highwire calls 130, [flop: J♦ 2♣ 7♥], Highwire checks, Static checks, [turn: J♦ 2♣ 7♥ 8♠], Highwire checks, Static checks, [river: J♦ 2♣ 7♥ 8♠ 10♣], Highwire checks, Static checks → Static wins 460 with A high (K♠ A♥)",
-   "pot": 460
-  },
   {
    "table": 2,
    "handNo": 77,
@@ -552,6 +546,12 @@
    "handNo": 81,
    "text": "Table 1 · Hand 81 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: A♦ 10♥ 8♦], Midas checks, Magnet checks, [turn: A♦ 10♥ 8♦ Q♣], Midas checks, Magnet checks, [river: A♦ 10♥ 8♦ Q♣ 5♠], Midas checks, Magnet checks → Magnet wins 240 with Pair of Qs (6♣ Q♠)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 80,
+   "text": "Table 2 · Hand 80 · blinds 50/100 · Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 50, Undertow checks, [flop: 7♣ 9♦ J♠], Jackpot raises to 195, Undertow calls 195, Bedrock calls 195, [turn: 7♣ 9♦ J♠ 8♣], Jackpot checks, Undertow checks, Bedrock checks, [river: 7♣ 9♦ J♠ 8♣ 3♠], Jackpot checks, Undertow checks, Bedrock checks → Jackpot wins 885 with Two pair, 9s and 7s (9♠ 7♥)",
+   "pot": 885
   }
  ],
  "finishes": [],
