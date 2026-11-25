@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:14:02.470Z",
+ "updatedAt": "2026-11-25T04:14:24.382Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 426,
+ "handsPlayed": 427,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 22840,
+     "stack": 22600,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 18259,
+     "stack": 18499,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 142
+   "handsPlayed": 143
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22840,
+   "stack": 22600,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18259,
+   "stack": 18499,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 143,
+  "table": 3,
+  "handNo": 141,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Minnow",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 141,
-   "text": "Table 1 · Hand 141 · blinds 120/240 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 240, Highwire calls 120, Static checks, [flop: 6♦ 6♥ K♠], Highwire checks, Static checks, Longshot checks, [turn: 6♦ 6♥ K♠ 3♠], Highwire checks, Static checks, Longshot checks, [river: 6♦ 6♥ K♠ 3♠ 4♦], Highwire checks, Static checks, Longshot checks → Highwire wins 720 with Two pair, 6s and 4s (8♣ 4♥)",
-   "pot": 720
-  },
   {
    "table": 2,
    "handNo": 140,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 144,
    "text": "Table 1 · Hand 144 · blinds 120/240 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 120, Magnet checks, [flop: A♠ 10♠ J♠], Midas checks, Magnet checks, [turn: A♠ 10♠ J♠ J♣], Midas checks, Magnet checks, [river: A♠ 10♠ J♠ J♣ Q♦], Midas checks, Magnet checks → Midas wins 480 with Two pair, Js and 6s (6♠ 6♣)",
+   "pot": 480
+  },
+  {
+   "table": 2,
+   "handNo": 143,
+   "text": "Table 2 · Hand 143 · blinds 120/240 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 120, Undertow checks, [flop: 7♠ J♣ A♥], Jackpot checks, Undertow checks, [turn: 7♠ J♣ A♥ 9♥], Jackpot checks, Undertow checks, [river: 7♠ J♣ A♥ 9♥ 2♦], Jackpot checks, Undertow checks → Jackpot wins 480 with Pair of 2s (3♣ 2♣)",
    "pot": 480
   }
  ],
