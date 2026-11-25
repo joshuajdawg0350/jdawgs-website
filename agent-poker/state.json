@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:22:19.715Z",
+ "updatedAt": "2026-11-25T03:22:38.825Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 269,
+ "handsPlayed": 270,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22399,
+     "stack": 22519,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21287,
+     "stack": 21167,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 91
+   "handsPlayed": 92
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22399,
+   "stack": 22519,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21287,
+   "stack": 21167,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 92,
+  "table": 2,
+  "handNo": 91,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Tempo",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 85,
-   "text": "Table 3 · Hand 85 · blinds 60/120 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 60, Mirage checks, [flop: 10♠ 6♥ K♦], Brass checks, Mirage raises to 156, Brass folds → Mirage takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 1,
    "handNo": 89,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 88,
    "text": "Table 3 · Hand 88 · blinds 60/120 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 60, Cobble checks, [flop: J♦ 4♥ 4♠], Northstar checks, Cobble checks, [turn: J♦ 4♥ 4♠ 5♥], Northstar checks, Cobble raises to 156, Northstar folds → Cobble takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 1,
+   "handNo": 92,
+   "text": "Table 1 · Hand 92 · blinds 60/120 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 60, Switchback checks, [flop: A♥ 5♠ 10♦], Freezer raises to 156, Switchback folds → Freezer takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
