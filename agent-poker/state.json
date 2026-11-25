@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:12:45.862Z",
+ "updatedAt": "2026-11-25T01:13:07.683Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 29,
+ "handsPlayed": 30,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 10,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 7,
-   "text": "Table 2 · Hand 7 · blinds 25/50 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 25, Jackpot checks, [flop: 6♥ 2♣ 9♥], Tidepool checks, Jackpot checks, [turn: 6♥ 2♣ 9♥ 3♥], Tidepool checks, Jackpot checks, [river: 6♥ 2♣ 9♥ 3♥ 3♦], Tidepool checks, Jackpot raises to 65, Tidepool folds → Jackpot takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 3,
    "handNo": 7,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 10,
    "text": "Table 2 · Hand 10 · blinds 25/50 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 25, Ledger checks, [flop: J♦ 5♦ J♥], Minnow checks, Ledger checks, [turn: J♦ 5♦ J♥ A♠], Minnow checks, Ledger checks, [river: J♦ 5♦ J♥ A♠ A♥], Minnow checks, Ledger raises to 65, Minnow folds → Ledger takes 165 (everyone else folded)",
+   "pot": 165
+  },
+  {
+   "table": 3,
+   "handNo": 10,
+   "text": "Table 3 · Hand 10 · blinds 25/50 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 25, Fossil checks, [flop: 3♦ Q♣ 7♦], Velcro raises to 65, Fossil folds → Velcro takes 165 (everyone else folded)",
    "pot": 165
   }
  ],
