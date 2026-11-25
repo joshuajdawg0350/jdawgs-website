@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:20:22.899Z",
+ "updatedAt": "2026-11-25T04:20:40.632Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   8000
  ],
  "level": 23,
- "handsPlayed": 440,
+ "handsPlayed": 441,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 12086,
+     "stack": 12326,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 31206,
+     "stack": 30966,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 148
+   "handsPlayed": 149
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12086,
+   "stack": 12326,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 31206,
+   "stack": 30966,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 149,
+  "table": 2,
+  "handNo": 148,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Static",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 142,
-   "text": "Table 3 · Hand 142 · blinds 120/240 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 120, Ricochet checks, [flop: 7♦ Q♥ 8♣], Mirage checks, Ricochet raises to 312, Mirage folds → Ricochet takes 792 (everyone else folded)",
-   "pot": 792
-  },
   {
    "table": 1,
    "handNo": 146,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 145,
    "text": "Table 3 · Hand 145 · blinds 120/240 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 120, Velcro checks, [flop: 6♦ 10♥ 4♣], Cobble checks, Velcro checks, [turn: 6♦ 10♥ 4♣ 4♥], Cobble checks, Velcro checks, [river: 6♦ 10♥ 4♣ 4♥ 5♠], Cobble raises to 312, Velcro folds → Cobble takes 792 (everyone else folded)",
+   "pot": 792
+  },
+  {
+   "table": 1,
+   "handNo": 149,
+   "text": "Table 1 · Hand 149 · blinds 120/240 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 120, Highwire checks, [flop: 10♠ J♦ 9♦], Longshot raises to 312, Highwire folds → Longshot takes 792 (everyone else folded)",
    "pot": 792
   }
  ],
