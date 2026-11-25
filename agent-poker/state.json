@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:20:48.364Z",
+ "updatedAt": "2026-11-25T03:21:02.126Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 265,
+ "handsPlayed": 266,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23997,
+     "stack": 23877,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18288,
+     "stack": 18408,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 86
+   "handsPlayed": 87
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23997,
+   "stack": 23877,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18288,
+   "stack": 18408,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 87,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 86,
-   "text": "Table 2 · Hand 86 · blinds 60/120 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 60, Deadpan checks, [flop: 10♣ 2♠ Q♥], Glacier checks, Deadpan checks, [turn: 10♣ 2♠ Q♥ 7♥], Glacier checks, Deadpan checks, [river: 10♣ 2♠ Q♥ 7♥ Q♦], Glacier checks, Deadpan checks → Glacier wins 240 with Pair of Qs (9♥ A♦)",
-   "pot": 240
-  },
   {
    "table": 3,
    "handNo": 84,
@@ -552,6 +538,12 @@
    "handNo": 89,
    "text": "Table 2 · Hand 89 · blinds 60/120 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 60, Undertow checks, [flop: 7♣ K♦ 3♣], Jackpot checks, Undertow checks, [turn: 7♣ K♦ 3♣ 8♦], Jackpot raises to 156, Undertow folds → Jackpot takes 396 (everyone else folded)",
    "pot": 396
+  },
+  {
+   "table": 3,
+   "handNo": 87,
+   "text": "Table 3 · Hand 87 · blinds 60/120 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 60, Northstar checks, [flop: A♠ K♥ 7♠], Ricochet checks, Northstar checks, [turn: A♠ K♥ 7♠ 9♠], Ricochet checks, Northstar checks, [river: A♠ K♥ 7♠ 9♠ 10♣], Ricochet checks, Northstar checks → Ricochet wins 240 with Pair of 2s (2♠ 2♣)",
+   "pot": 240
   }
  ],
  "finishes": [],
