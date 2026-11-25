@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:28:43.017Z",
+ "updatedAt": "2026-11-25T02:28:57.563Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 184,
+ "handsPlayed": 185,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 19924,
+     "stack": 20453,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16290,
+     "stack": 15761,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 60
+   "handsPlayed": 61
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19924,
+   "stack": 20453,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16290,
+   "stack": 15761,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 61,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 59,
-   "text": "Table 1 · Hand 59 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 3♦ 9♥ 8♥], Longshot checks, Highwire checks, [turn: 3♦ 9♥ 8♥ A♠], Longshot checks, Highwire raises to 104, Longshot folds → Highwire takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 2,
    "handNo": 59,
@@ -552,6 +538,12 @@
    "handNo": 62,
    "text": "Table 2 · Hand 62 · blinds 50/100 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 100, Jackpot folds, Undertow checks, [flop: 9♣ 4♥ J♥], Undertow checks, Tidepool checks, [turn: 9♣ 4♥ J♥ 7♣], Undertow checks, Tidepool checks, [river: 9♣ 4♥ J♥ 7♣ K♣], Undertow checks, Tidepool checks → Tidepool wins 250 with A high (10♦ A♦)",
    "pot": 250
+  },
+  {
+   "table": 3,
+   "handNo": 61,
+   "text": "Table 3 · Hand 61 · blinds 50/100 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 50, Mirage checks, [flop: A♣ 2♦ 5♣], Brass checks, Mirage checks, [turn: A♣ 2♦ 5♣ 2♠], Brass raises to 130, Mirage calls 130, [river: A♣ 2♦ 5♣ 2♠ A♦], Brass raises to 299, Mirage calls 299 → Brass wins 1058 with Full house, 2s full of As (7♥ 2♣)",
+   "pot": 1058
   }
  ],
  "finishes": [],
