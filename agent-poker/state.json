@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:03:42.042Z",
+ "updatedAt": "2026-11-25T01:04:00.658Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 5,
+ "handsPlayed": 6,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20050,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20050,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 2,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -522,6 +514,12 @@
    "handNo": 2,
    "text": "Table 2 · Hand 2 · blinds 25/50 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 25, Ember checks, [flop: 9♠ A♠ K♥], Ledger checks, Ember checks, [turn: 9♠ A♠ K♥ 2♠], Ledger checks, Ember checks, [river: 9♠ A♠ K♥ 2♠ 5♠], Ledger raises to 65, Ember calls 65 → Ledger wins 230 with Flush, A high (4♣ Q♠)",
    "pot": 230
+  },
+  {
+   "table": 3,
+   "handNo": 2,
+   "text": "Table 3 · Hand 2 · blinds 25/50 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 25, Fossil checks, [flop: 2♥ 6♦ 2♠], Velcro checks, Fossil raises to 65, Velcro folds → Fossil takes 165 (everyone else folded)",
+   "pot": 165
   }
  ],
  "finishes": [],
