@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:19:17.530Z",
+ "updatedAt": "2026-11-25T01:19:32.777Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 47,
+ "handsPlayed": 48,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19735,
+     "stack": 19685,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 20315,
+     "stack": 20365,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 15
+   "handsPlayed": 16
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19735,
+   "stack": 19685,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20315,
+   "stack": 20365,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 16,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 13,
-   "text": "Table 2 · Hand 13 · blinds 25/50 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 25, Glacier checks, [flop: Q♠ 2♣ Q♣], Bedrock raises to 65, Glacier folds → Bedrock takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 3,
    "handNo": 13,
@@ -552,6 +538,12 @@
    "handNo": 16,
    "text": "Table 2 · Hand 16 · blinds 25/50 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds → Jackpot takes 75 (everyone else folded)",
    "pot": 75
+  },
+  {
+   "table": 3,
+   "handNo": 16,
+   "text": "Table 3 · Hand 16 · blinds 25/50 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 25, Cobble checks, [flop: 4♣ 3♥ 10♦], Northstar checks, Cobble checks, [turn: 4♣ 3♥ 10♦ K♦], Northstar checks, Cobble checks, [river: 4♣ 3♥ 10♦ K♦ 5♣], Northstar checks, Cobble checks → Cobble wins 100 with Pair of 4s (4♠ 7♠)",
+   "pot": 100
   }
  ],
  "finishes": [],
