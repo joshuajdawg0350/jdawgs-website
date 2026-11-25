@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:11:09.285Z",
+ "updatedAt": "2026-11-25T04:11:31.317Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  2500,
-  5000
+  3000,
+  6000
  ],
- "level": 21,
- "handsPlayed": 419,
+ "level": 22,
+ "handsPlayed": 420,
  "tables": [
   {
    "id": 1,
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 30456,
+     "stack": 31206,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20824,
+     "stack": 20704,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 18250,
+     "stack": 17620,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 141
+   "handsPlayed": 142
   },
   {
    "id": 2,
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 30456,
+   "stack": 31206,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20824,
+   "stack": 20704,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18250,
+   "stack": 17620,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 142,
+  "table": 2,
+  "handNo": 141,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Midas",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 135,
-   "text": "Table 3 · Hand 135 · blinds 100/200 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 100, Northstar checks, [flop: 9♣ 4♠ A♠], Ricochet checks, Northstar checks, [turn: 9♣ 4♠ A♠ 7♦], Ricochet checks, Northstar checks, [river: 9♣ 4♠ A♠ 7♦ 2♣], Ricochet checks, Northstar checks → Ricochet wins 400 with Pair of 4s (4♣ J♣)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 139,
@@ -552,6 +546,12 @@
    "handNo": 138,
    "text": "Table 3 · Hand 138 · blinds 100/200 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 200, Cobble folds, Velcro calls 100, Fossil checks, [flop: 7♥ A♣ K♦], Velcro checks, Fossil checks, Northstar raises to 390, Velcro calls 390, Fossil folds, [turn: 7♥ A♣ K♦ J♦], Velcro checks, Northstar raises to 897, Velcro calls 897, [river: 7♥ A♣ K♦ J♦ J♠], Velcro raises to 2063, Northstar raises to 6658, Velcro calls 4595 → Northstar wins 16490 with Full house, Ks full of Js (K♠ K♥)",
    "pot": 16490
+  },
+  {
+   "table": 1,
+   "handNo": 142,
+   "text": "Table 1 · Hand 142 · blinds 120/240 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 240, Static folds, Coyote checks, [flop: 4♦ 2♠ 10♣], Coyote checks, Highwire raises to 390, Coyote calls 390, [turn: 4♦ 2♠ 10♣ A♥], Coyote checks, Highwire raises to 897, Coyote folds → Highwire takes 2277 (everyone else folded)",
+   "pot": 2277
   }
  ],
  "finishes": [],
