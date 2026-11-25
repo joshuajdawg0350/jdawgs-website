@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:31:10.623Z",
+ "updatedAt": "2026-11-25T01:31:24.808Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 83,
+ "handsPlayed": 84,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 27
+   "handsPlayed": 28
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19890,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19885,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 28,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 25,
-   "text": "Table 2 · Hand 25 · blinds 30/60 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds → Jackpot takes 90 (everyone else folded)",
-   "pot": 90
-  },
   {
    "table": 3,
    "handNo": 25,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 28,
    "text": "Table 2 · Hand 28 · blinds 30/60 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 30, Ledger raises to 138, Minnow folds → Ledger takes 198 (everyone else folded)",
+   "pot": 198
+  },
+  {
+   "table": 3,
+   "handNo": 28,
+   "text": "Table 3 · Hand 28 · blinds 30/60 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 30, Brass checks, [flop: 9♥ 9♦ 4♦], Snare checks, Brass checks, [turn: 9♥ 9♦ 4♦ 2♦], Snare checks, Brass checks, [river: 9♥ 9♦ 4♦ 2♦ 8♦], Snare raises to 78, Brass folds → Snare takes 198 (everyone else folded)",
    "pot": 198
   }
  ],
