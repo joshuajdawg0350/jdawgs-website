@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:19:18.948Z",
+ "updatedAt": "2026-11-25T03:19:34.665Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 260,
+ "handsPlayed": 261,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17312,
+     "stack": 17192,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 18010,
+     "stack": 18130,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 88
+   "handsPlayed": 89
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17312,
+   "stack": 17192,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18010,
+   "stack": 18130,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 89,
+  "table": 2,
+  "handNo": 88,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Magnet",
+  "toAct": "Undertow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 82,
-   "text": "Table 3 · Hand 82 · blinds 60/120 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 60, Fossil checks, [flop: K♣ 7♥ A♣], Velcro checks, Fossil raises to 156, Velcro folds → Fossil takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 1,
    "handNo": 86,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 85,
    "text": "Table 3 · Hand 85 · blinds 60/120 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 60, Mirage checks, [flop: 10♠ 6♥ K♦], Brass checks, Mirage raises to 156, Brass folds → Mirage takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 1,
+   "handNo": 89,
+   "text": "Table 1 · Hand 89 · blinds 60/120 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 60, Midas checks, [flop: 6♣ A♣ 10♣], Coyote checks, Midas checks, [turn: 6♣ A♣ 10♣ 7♠], Coyote checks, Midas checks, [river: 6♣ A♣ 10♣ 7♠ 9♣], Coyote raises to 156, Midas folds → Coyote takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
