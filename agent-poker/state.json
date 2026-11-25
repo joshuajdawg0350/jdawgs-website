@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:19:49.575Z",
+ "updatedAt": "2026-11-25T03:20:02.916Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 262,
+ "handsPlayed": 263,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16510,
+     "stack": 16390,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18168,
+     "stack": 18288,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 85
+   "handsPlayed": 86
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16510,
+   "stack": 16390,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18168,
+   "stack": 18288,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 86,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 85,
-   "text": "Table 2 · Hand 85 · blinds 60/120 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 60, Glacier checks, [flop: 6♥ 10♠ K♠], Bedrock checks, Glacier raises to 156, Bedrock calls 156, [turn: 6♥ 10♠ K♠ K♣], Bedrock checks, Glacier raises to 359, Bedrock calls 359, [river: 6♥ 10♠ K♠ K♣ 9♣], Bedrock checks, Glacier raises to 826, Bedrock folds → Glacier takes 2096 (everyone else folded)",
-   "pot": 2096
-  },
   {
    "table": 3,
    "handNo": 83,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 88,
    "text": "Table 2 · Hand 88 · blinds 60/120 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 60, Jackpot checks, [flop: J♣ 4♠ A♦], Tidepool checks, Jackpot checks, [turn: J♣ 4♠ A♦ 9♣], Tidepool checks, Jackpot checks, [river: J♣ 4♠ A♦ 9♣ 3♥], Tidepool checks, Jackpot checks → Tidepool wins 120 with Pair of 4s (2♦ 4♥); Jackpot wins 120 with Pair of 4s (4♣ 7♦)",
+   "pot": 240
+  },
+  {
+   "table": 3,
+   "handNo": 86,
+   "text": "Table 3 · Hand 86 · blinds 60/120 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 60, Ricochet checks, [flop: Q♠ 8♦ 7♦], Mirage checks, Ricochet checks, [turn: Q♠ 8♦ 7♦ A♣], Mirage checks, Ricochet checks, [river: Q♠ 8♦ 7♦ A♣ 8♣], Mirage checks, Ricochet checks → Ricochet wins 240 with Pair of 8s (K♦ 10♣)",
    "pot": 240
   }
  ],
