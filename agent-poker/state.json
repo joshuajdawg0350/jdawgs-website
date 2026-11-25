@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:04:56.957Z",
+ "updatedAt": "2026-11-25T01:05:14.732Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 8,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 20050,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20050,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20050,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20050,
    "status": "seated",
    "reentered": false
   },
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -540,6 +532,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow folds, Ledger folds, Ember calls 25, Bedrock checks, [flop: 3♥ 10♥ 3♠], Ember checks, Bedrock checks, Undertow raises to 98, Ember folds, Bedrock calls 98, [turn: 3♥ 10♥ 3♠ Q♣], Bedrock checks, Undertow raises to 225, Bedrock folds → Undertow takes 571 (everyone else folded)",
    "pot": 571
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 25, Snare checks, [flop: 6♠ 2♥ 3♦], Fossil checks, Snare raises to 65, Fossil folds → Snare takes 165 (everyone else folded)",
+   "pot": 165
   }
  ],
  "finishes": [],
