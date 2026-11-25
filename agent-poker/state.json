@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:51:55.038Z",
+ "updatedAt": "2026-11-25T01:52:14.242Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 133,
+ "handsPlayed": 134,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20683,
+     "stack": 20603,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 21307,
+     "stack": 21467,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19583,
+     "stack": 19503,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 44
+   "handsPlayed": 45
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20683,
+   "stack": 20603,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21307,
+   "stack": 21467,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19583,
+   "stack": 19503,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 45,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Ledger",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 42,
-   "text": "Table 1 · Hand 42 · blinds 40/80 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 40, Static checks, [flop: 7♥ 3♠ 8♥], Highwire checks, Static raises to 104, Highwire calls 104, [turn: 7♥ 3♠ 8♥ A♣], Highwire checks, Static checks, [river: 7♥ 3♠ 8♥ A♣ 9♣], Highwire raises to 239, Static folds → Highwire takes 607 (everyone else folded)",
-   "pot": 607
-  },
   {
    "table": 2,
    "handNo": 42,
@@ -552,6 +546,12 @@
    "handNo": 45,
    "text": "Table 1 · Hand 45 · blinds 40/80 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 40, Magnet checks, [flop: 3♣ 10♦ 2♣], Midas checks, Magnet checks, [turn: 3♣ 10♦ 2♣ 5♥], Midas checks, Magnet checks, [river: 3♣ 10♦ 2♣ 5♥ 2♥], Midas checks, Magnet checks → Magnet wins 160 with Pair of 2s (A♠ 9♣)",
    "pot": 160
+  },
+  {
+   "table": 2,
+   "handNo": 45,
+   "text": "Table 2 · Hand 45 · blinds 40/80 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 80, Undertow calls 40, Minnow checks, [flop: Q♣ 5♠ 4♠], Undertow checks, Minnow checks, Jackpot checks, [turn: Q♣ 5♠ 4♠ 8♠], Undertow checks, Minnow checks, Jackpot checks, [river: Q♣ 5♠ 4♠ 8♠ 10♥], Undertow checks, Minnow checks, Jackpot checks → Minnow wins 240 with Pair of 4s (4♥ 2♠)",
+   "pot": 240
   }
  ],
  "finishes": [],
