@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:10:44.406Z",
+ "updatedAt": "2026-11-25T01:10:58.543Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 23,
+ "handsPlayed": 24,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19685,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20265,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 7
+   "handsPlayed": 8
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 19685,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 20265,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 8,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 5,
-   "text": "Table 2 · Hand 5 · blinds 25/50 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 25, Deadpan checks, [flop: Q♥ 3♣ Q♣], Glacier checks, Deadpan checks, [turn: Q♥ 3♣ Q♣ 4♦], Glacier raises to 65, Deadpan folds → Glacier takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 3,
    "handNo": 5,
@@ -552,6 +538,12 @@
    "handNo": 8,
    "text": "Table 2 · Hand 8 · blinds 25/50 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 25, Undertow checks, [flop: 10♣ J♣ A♦], Jackpot checks, Undertow checks, [turn: 10♣ J♣ A♦ 8♣], Jackpot checks, Undertow raises to 65, Jackpot folds → Undertow takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 3,
+   "handNo": 8,
+   "text": "Table 3 · Hand 8 · blinds 25/50 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 25, Cobble checks, [flop: 4♠ 5♠ 8♥], Northstar checks, Cobble checks, [turn: 4♠ 5♠ 8♥ 8♦], Northstar checks, Cobble raises to 65, Northstar calls 65, [river: 4♠ 5♠ 8♥ 8♦ 9♦], Northstar checks, Cobble raises to 150, Northstar calls 150 → Cobble wins 530 with Two pair, 8s and 5s (A♦ 5♣)",
+   "pot": 530
   }
  ],
  "finishes": [],
