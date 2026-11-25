@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:42:57.453Z",
+ "updatedAt": "2026-11-25T01:43:17.845Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 111,
+ "handsPlayed": 112,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19963,
+     "stack": 20023,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21976,
+     "stack": 21916,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 37
+   "handsPlayed": 38
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19963,
+   "stack": 20023,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21976,
+   "stack": 21916,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 38,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Tempo",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 34,
-   "text": "Table 3 · Hand 34 · blinds 30/60 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 60, Velcro folds, Fossil checks, [flop: 5♥ Q♣ 10♠], Fossil checks, Cobble checks, [turn: 5♥ Q♣ 10♠ K♥], Fossil checks, Cobble checks, [river: 5♥ Q♣ 10♠ K♥ 3♣], Fossil checks, Cobble checks → Cobble wins 150 with Pair of 8s (8♠ 8♣)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 35,
@@ -552,6 +546,12 @@
    "handNo": 37,
    "text": "Table 3 · Hand 37 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: K♦ K♣ 3♥], Brass checks, Mirage checks, [turn: K♦ K♣ 3♥ 3♠], Brass checks, Mirage checks, [river: K♦ K♣ 3♥ 3♠ 4♦], Brass checks, Mirage checks → Mirage wins 120 with Two pair, Ks and 3s (A♥ J♥)",
    "pot": 120
+  },
+  {
+   "table": 1,
+   "handNo": 38,
+   "text": "Table 1 · Hand 38 · blinds 30/60 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 30, Switchback checks, [flop: 5♣ A♣ 4♥], Freezer checks, Switchback checks, [turn: 5♣ A♣ 4♥ J♦], Freezer raises to 78, Switchback folds → Freezer takes 198 (everyone else folded)",
+   "pot": 198
   }
  ],
  "finishes": [],
