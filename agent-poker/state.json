@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:09:32.371Z",
+ "updatedAt": "2026-11-25T01:09:46.790Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  25,
-  50
+  30,
+  60
  ],
- "level": 1,
- "handsPlayed": 19,
+ "level": 2,
+ "handsPlayed": 20,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 20050,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20050,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 3,
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20050,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20050,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 7,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Undertow",
+  "toAct": "Cobble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 4,
-   "text": "Table 1 · Hand 4 · blinds 25/50 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 25, Longshot checks, [flop: 10♦ 5♣ 6♠], Tempo raises to 65, Longshot folds → Tempo takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 2,
    "handNo": 4,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 25/50 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 25, Coyote checks, [flop: 4♣ J♦ 4♦], Static checks, Coyote raises to 65, Static folds → Coyote takes 165 (everyone else folded)",
+   "pot": 165
+  },
+  {
+   "table": 2,
+   "handNo": 7,
+   "text": "Table 2 · Hand 7 · blinds 25/50 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 25, Jackpot checks, [flop: 6♥ 2♣ 9♥], Tidepool checks, Jackpot checks, [turn: 6♥ 2♣ 9♥ 3♥], Tidepool checks, Jackpot checks, [river: 6♥ 2♣ 9♥ 3♥ 3♦], Tidepool checks, Jackpot raises to 65, Tidepool folds → Jackpot takes 165 (everyone else folded)",
    "pot": 165
   }
  ],
