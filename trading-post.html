@@ -623,7 +623,7 @@
       .footer-tagline { margin: 5px 0 0; font-size: 14.5px; font-weight: 600; color: var(--ink-soft); font-style: italic; letter-spacing: 0.01em; }
       .footer-est { margin: 6px 0 0; font-size: 11.5px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-soft); }
 
-      /* ---------- Detail overlay ---------- */
+      /* ---------- Detail overlay / pull-up sheet ---------- */
       .overlay {
         position: fixed; inset: 0; z-index: 60;
         background: rgba(10, 11, 14, 0.9);
@@ -635,6 +635,32 @@
         max-width: 880px; margin: 0 auto;
         background: var(--surface); color: var(--ink);
         border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);
+      }
+      .sheet-handle { display: none; }
+      /* Mobile: the detail view becomes a pull-up drag sheet (house pattern). */
+      @media (max-width: 759px) {
+        .overlay { overflow: hidden; padding: 0; }
+        .sheet {
+          position: absolute; left: 0; right: 0; bottom: 0;
+          max-width: none; margin: 0;
+          height: 92vh; height: min(92dvh, 940px);
+          border-radius: 20px 20px 0 0;
+          display: flex; flex-direction: column;
+          transform: translateY(103%);
+          transition: transform 0.38s cubic-bezier(0.32, 0.72, 0.24, 1);
+        }
+        .overlay.open .sheet { transform: translateY(0); }
+        .sheet.no-anim { transition: none; }
+        .sheet-handle {
+          display: flex; flex: none; height: 54px; width: 100%;
+          flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+          background: none; border: none; padding: 0; cursor: grab;
+          touch-action: none; user-select: none; -webkit-user-select: none;
+        }
+        .sheet-handle .grab { width: 44px; height: 5px; border-radius: 3px; background: rgba(244, 244, 241, 0.35); }
+        .sheet-handle .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+        .sheet-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+        .sheet[data-snap="half"] .sheet-scroll { overflow-y: hidden; }
       }
       .sheet-grid { display: grid; grid-template-columns: 1fr; }
       @media (min-width: 760px) { .sheet-grid { grid-template-columns: 1.05fr 1fr; } }
@@ -946,7 +972,13 @@
     </div>
 
     <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Item details">
-      <div class="sheet" id="sheet"></div>
+      <div class="sheet" id="sheet" data-snap="full">
+        <button class="sheet-handle" id="sheet-handle" type="button" aria-label="Drag to resize, or drag down to close, the item sheet">
+          <span class="grab" aria-hidden="true"></span>
+          <span class="lbl" aria-hidden="true">Drag</span>
+        </button>
+        <div class="sheet-scroll" id="sheet-scroll"></div>
+      </div>
     </div>
 
     <script>
@@ -1058,31 +1090,9 @@
         const grid = document.getElementById('grid-cards');
         const pager = document.getElementById('case-pager');
         const sorted = items.slice().sort(function (a, b) { return cardYear(a) - cardYear(b); });
-        const paged = !query;
-        const pages = Math.max(1, Math.ceil(sorted.length / CARD_PAGE_SIZE));
-        if (cardPage > pages) cardPage = pages;
-        if (cardPage < 1) cardPage = 1;
-        const pageItems = paged ? sorted.slice((cardPage - 1) * CARD_PAGE_SIZE, cardPage * CARD_PAGE_SIZE) : sorted;
-        let html = '';
-        let lastLabel = null;
-        pageItems.forEach(function (it) {
-          const label = cardSetLabel(it);
-          if (label !== lastLabel) {
-            html += '<div class="shelf-bar" role="presentation">' + esc(label) + '</div>';
-            lastLabel = label;
-          }
-          html += caseTile(it);
-        });
-        grid.innerHTML = html;
-        if (!paged || pages <= 1) { pager.innerHTML = ''; pager.style.display = 'none'; return; }
-        pager.style.display = '';
-        let ph = '<button class="pg-btn" data-page="' + (cardPage - 1) + '"' + (cardPage === 1 ? ' disabled' : '') + '>← Previous</button>';
-        for (let p = 1; p <= pages; p++) {
-          ph += '<button class="pg-btn" data-page="' + p + '"' + (p === cardPage ? ' aria-current="page"' : '') + '>' + p + '</button>';
-        }
-        ph += '<span class="pg-status">Page ' + cardPage + ' of ' + pages + '</span>';
-        ph += '<button class="pg-btn" data-page="' + (cardPage + 1) + '"' + (cardPage === pages ? ' disabled' : '') + '>Next →</button>';
-        pager.innerHTML = ph;
+        grid.innerHTML = sorted.map(caseTile).join('');
+        pager.innerHTML = '';
+        pager.style.display = 'none';
       }
 
       function render() {
@@ -1164,7 +1174,11 @@
       // Detail overlay
       const overlay = document.getElementById('overlay');
       const sheet = document.getElementById('sheet');
+      const sheetScroll = document.getElementById('sheet-scroll');
+      const sheetHandle = document.getElementById('sheet-handle');
+      const sheetMQ = window.matchMedia('(max-width: 759px)');
       let lastFocus = null;
+      let closeTimer = null;
 
       function openItem(id) {
         const it = byId[id];
@@ -1201,7 +1215,7 @@
           '<div class="ship-step"><p class="ship-step-h">After you pay — send Joshua your shipping address</p>' +
           '<p class="ship-step-t">Paying by card? Card checkout collects your shipping address at checkout, so you\'re all set. Paying with <strong>Venmo or Cash App</strong>? Those apps never ask for an address — tap the button below to email Joshua where to send it. The item and total are already filled in; just add your name and address and hit send. Once Joshua has your payment <strong>and</strong> your address, he confirms your order, and it ships the same day it\'s ordered.</p>' +
           '<a class="mail-btn wide" href="' + shipEmailUrl(it.name, total) + '">' + MAIL_ICON + 'Step 2: Send Joshua your shipping address</a></div>';
-        sheet.innerHTML =
+        sheetScroll.innerHTML =
           '<button class="close-btn" id="close-btn">✕ Close</button>' +
           '<div class="sheet-grid">' +
           '<div class="main-ph"><img id="main-img" src="' + it.imgs[0] + '" alt="' + esc(it.name) + '" /></div>' +
@@ -1220,8 +1234,12 @@
           shipStep +
           (note ? '<dl class="dl">' + note + '</dl></div>' : '</div>') +
           '</div>';
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        sheet.style.transform = '';
+        sheet.dataset.snap = 'full';
         overlay.classList.add('open');
         overlay.scrollTop = 0;
+        sheetScroll.scrollTop = 0;
         document.body.style.overflow = 'hidden';
         document.getElementById('close-btn').addEventListener('click', closeItem);
         sheet.querySelectorAll('[data-thumb]').forEach(function (b) {
@@ -1236,10 +1254,107 @@
       }
 
       function closeItem() {
+        if (sheetMQ.matches && overlay.classList.contains('open')) {
+          // Mobile: slide the sheet down, then hide the overlay.
+          sheet.style.transform = 'translateY(103%)';
+          if (closeTimer) clearTimeout(closeTimer);
+          closeTimer = setTimeout(function () {
+            overlay.classList.remove('open');
+            sheet.style.transform = '';
+            sheet.dataset.snap = 'full';
+            document.body.style.overflow = '';
+            if (lastFocus) lastFocus.focus();
+            closeTimer = null;
+          }, 390);
+          return;
+        }
         overlay.classList.remove('open');
         document.body.style.overflow = '';
         if (lastFocus) lastFocus.focus();
       }
+
+      // ---------- Pull-up sheet drag (mobile) ----------
+      // Handle drags move the sheet between snap points: full (top) and half
+      // (about 48% of the screen showing). Dragging past the lower threshold
+      // dismisses. A swipe-down that starts at the top of the sheet's own
+      // scroll also pulls the sheet down to dismiss. Pointer events cover
+      // touch and mouse alike.
+      function sheetHeight() { return sheet.offsetHeight; }
+      function halfOffset() { return Math.max(0, sheetHeight() - Math.round(window.innerHeight * 0.48)); }
+      function setSnap(which) {
+        sheet.dataset.snap = which;
+        sheet.style.transform = which === 'half' ? 'translateY(' + halfOffset() + 'px)' : '';
+      }
+      let drag = null;
+      sheetHandle.addEventListener('pointerdown', function (e) {
+        if (!sheetMQ.matches || !overlay.classList.contains('open')) return;
+        drag = { y: e.clientY, off: sheet.dataset.snap === 'half' ? halfOffset() : 0, offNow: null, moved: false };
+        sheet.classList.add('no-anim');
+        try { sheetHandle.setPointerCapture(e.pointerId); } catch (_) {}
+        e.preventDefault();
+      });
+      sheetHandle.addEventListener('pointermove', function (e) {
+        if (!drag) return;
+        const dy = e.clientY - drag.y;
+        if (Math.abs(dy) > 4) drag.moved = true;
+        const off = Math.max(0, Math.min(sheetHeight() + 24, drag.off + dy));
+        drag.offNow = off;
+        sheet.style.transform = 'translateY(' + off + 'px)';
+      });
+      function endDrag() {
+        if (!drag) return;
+        const off = drag.offNow != null ? drag.offNow : drag.off;
+        const wasMoved = drag.moved;
+        drag = null;
+        sheet.classList.remove('no-anim');
+        if (!wasMoved) { setSnap(sheet.dataset.snap === 'half' ? 'full' : 'half'); return; }
+        const H = sheetHeight(), half = halfOffset();
+        if (off > (half + H) / 2 + 40) closeItem();
+        else if (off > half / 2) setSnap('half');
+        else setSnap('full');
+      }
+      sheetHandle.addEventListener('pointerup', endDrag);
+      sheetHandle.addEventListener('pointercancel', endDrag);
+
+      // Swipe-down from the top of the sheet's content pulls it down too.
+      let pull = null;
+      sheetScroll.addEventListener('touchstart', function (e) {
+        pull = null;
+        if (!sheetMQ.matches || !overlay.classList.contains('open')) return;
+        if (sheet.dataset.snap === 'full' && sheetScroll.scrollTop <= 0 && e.touches.length === 1) {
+          pull = { y: e.touches[0].clientY, dy: 0, active: false };
+        }
+      }, { passive: true });
+      sheetScroll.addEventListener('touchmove', function (e) {
+        if (!pull) return;
+        const dy = e.touches[0].clientY - pull.y;
+        if (!pull.active && dy > 8) { pull.active = true; sheet.classList.add('no-anim'); }
+        if (!pull.active) return;
+        if (dy <= 0) {
+          sheet.style.transform = '';
+          sheet.classList.remove('no-anim');
+          pull = null;
+          return;
+        }
+        e.preventDefault();
+        pull.dy = dy;
+        sheet.style.transform = 'translateY(' + dy + 'px)';
+      }, { passive: false });
+      sheetScroll.addEventListener('touchend', function () {
+        if (!pull) return;
+        const dy = pull.dy, wasActive = pull.active;
+        pull = null;
+        sheet.classList.remove('no-anim');
+        if (!wasActive) return;
+        if (dy > 110) closeItem();
+        else { sheet.style.transform = ''; sheet.dataset.snap = 'full'; }
+      });
+
+      window.addEventListener('resize', function () {
+        if (sheetMQ.matches && overlay.classList.contains('open') && sheet.dataset.snap === 'half' && !drag) {
+          sheet.style.transform = 'translateY(' + halfOffset() + 'px)';
+        }
+      });
 
       document.addEventListener('click', function (e) {
         const t = e.target.closest('[data-open]');
