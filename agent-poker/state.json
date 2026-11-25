@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:21:05.296Z",
+ "updatedAt": "2026-11-25T04:21:27.185Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   8000
  ],
  "level": 23,
- "handsPlayed": 442,
+ "handsPlayed": 443,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 15371,
+     "stack": 16641,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 16709,
+     "stack": 15439,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 145
+   "handsPlayed": 146
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 15371,
+   "stack": 16641,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16709,
+   "stack": 15439,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 146,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 145,
-   "text": "Table 2 · Hand 145 · blinds 120/240 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 120, Ledger checks, [flop: J♦ K♣ 4♣], Minnow checks, Ledger checks, [turn: J♦ K♣ 4♣ J♠], Minnow checks, Ledger checks, [river: J♦ K♣ 4♣ J♠ 10♦], Minnow checks, Ledger checks → Minnow wins 480 with Two pair, Js and 10s (10♣ 8♣)",
-   "pot": 480
-  },
   {
    "table": 3,
    "handNo": 143,
@@ -552,6 +538,12 @@
    "handNo": 148,
    "text": "Table 2 · Hand 148 · blinds 120/240 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 120, Glacier raises to 552, Bedrock calls 312, [flop: 6♠ 2♣ 10♥], Bedrock raises to 718, Glacier calls 718, [turn: 6♠ 2♣ 10♥ J♠], Bedrock raises to 1651, Glacier calls 1651, [river: 6♠ 2♣ 10♥ J♠ K♦], Bedrock checks, Glacier checks → Bedrock wins 5842 with Pair of 10s (10♦ 4♥)",
    "pot": 5842
+  },
+  {
+   "table": 3,
+   "handNo": 146,
+   "text": "Table 3 · Hand 146 · blinds 120/240 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 120, Fossil checks, [flop: 9♥ 5♣ A♠], Velcro raises to 312, Fossil calls 312, [turn: 9♥ 5♣ A♠ 3♠], Velcro raises to 718, Fossil calls 718, [river: 9♥ 5♣ A♠ 3♠ J♠], Velcro raises to 1651, Fossil folds → Velcro takes 4191 (everyone else folded)",
+   "pot": 4191
   }
  ],
  "finishes": [],
