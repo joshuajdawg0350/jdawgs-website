@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:57:35.396Z",
+ "updatedAt": "2026-11-25T03:57:51.769Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  1500,
-  3000
+  2000,
+  4000
  ],
- "level": 19,
- "handsPlayed": 379,
+ "level": 20,
+ "handsPlayed": 380,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 21139,
+     "stack": 21339,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16230,
+     "stack": 16030,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 124
+   "handsPlayed": 125
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21139,
+   "stack": 21339,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16230,
+   "stack": 16030,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 125,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 124,
-   "text": "Table 2 · Hand 124 · blinds 100/200 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 100, Jackpot checks, [flop: Q♥ 9♦ 6♠], Tidepool checks, Jackpot checks, [turn: Q♥ 9♦ 6♠ Q♦], Tidepool checks, Jackpot checks, [river: Q♥ 9♦ 6♠ Q♦ 8♣], Tidepool checks, Jackpot checks → Jackpot wins 400 with Two pair, Qs and 2s (2♥ 2♦)",
-   "pot": 400
-  },
   {
    "table": 3,
    "handNo": 122,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 127,
    "text": "Table 2 · Hand 127 · blinds 100/200 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 100, Ledger checks, [flop: K♥ 7♠ 3♥], Minnow checks, Ledger raises to 260, Minnow folds → Ledger takes 660 (everyone else folded)",
+   "pot": 660
+  },
+  {
+   "table": 3,
+   "handNo": 125,
+   "text": "Table 3 · Hand 125 · blinds 100/200 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 100, Mirage checks, [flop: 10♥ 9♣ Q♦], Brass checks, Mirage checks, [turn: 10♥ 9♣ Q♦ 7♣], Brass raises to 260, Mirage folds → Brass takes 660 (everyone else folded)",
    "pot": 660
   }
  ],
