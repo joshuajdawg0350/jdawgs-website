@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:40:35.798Z",
+ "updatedAt": "2026-11-25T03:40:47.382Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 328,
+ "handsPlayed": 329,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 18208,
+     "stack": 18048,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 21019,
+     "stack": 21179,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 107
+   "handsPlayed": 108
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18208,
+   "stack": 18048,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21019,
+   "stack": 21179,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 108,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 107,
-   "text": "Table 2 · Hand 107 · blinds 80/160 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 80, Undertow checks, [flop: 6♣ K♥ 10♦], Jackpot checks, Undertow raises to 208, Jackpot folds → Undertow takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 3,
    "handNo": 105,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 110,
    "text": "Table 2 · Hand 110 · blinds 80/160 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 80, Ember checks, [flop: K♣ Q♥ 6♦], Ledger checks, Ember raises to 208, Ledger folds → Ember takes 528 (everyone else folded)",
+   "pot": 528
+  },
+  {
+   "table": 3,
+   "handNo": 108,
+   "text": "Table 3 · Hand 108 · blinds 80/160 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 80, Brass checks, [flop: 5♦ 7♦ 9♣], Snare checks, Brass raises to 208, Snare folds → Brass takes 528 (everyone else folded)",
    "pot": 528
   }
  ],
