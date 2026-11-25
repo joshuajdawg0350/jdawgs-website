@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:01:30.818Z",
+ "updatedAt": "2026-11-25T03:01:44.368Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 210,
+ "handsPlayed": 211,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20707,
+     "stack": 20937,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19383,
+     "stack": 19153,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 70
+   "handsPlayed": 71
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20707,
+   "stack": 20937,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19383,
+   "stack": 19153,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 71,
+  "table": 3,
+  "handNo": 69,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Minnow",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 68,
-   "text": "Table 2 · Hand 68 · blinds 50/100 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier calls 50, Deadpan checks, [flop: 6♠ 3♣ K♦], Glacier checks, Deadpan checks, Bedrock checks, [turn: 6♠ 3♣ K♦ 2♠], Glacier checks, Deadpan checks, Bedrock checks, [river: 6♠ 3♣ K♦ 2♠ 5♠], Glacier raises to 195, Deadpan raises to 517, Bedrock folds, Glacier raises to 1175, Deadpan raises to 2470, Glacier calls 1295 → Deadpan wins 5240 with Flush, 7 high (3♠ 7♠)",
-   "pot": 5240
-  },
   {
    "table": 3,
    "handNo": 66,
@@ -552,6 +546,12 @@
    "handNo": 72,
    "text": "Table 1 · Hand 72 · blinds 50/100 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 50, Magnet checks, [flop: Q♣ Q♦ Q♠], Midas checks, Magnet checks, [turn: Q♣ Q♦ Q♠ K♦], Midas checks, Magnet checks, [river: Q♣ Q♦ Q♠ K♦ 9♥], Midas checks, Magnet checks → Midas wins 100 with Three of a kind, Qs (6♣ 2♦); Magnet wins 100 with Three of a kind, Qs (2♥ 8♠)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 71,
+   "text": "Table 2 · Hand 71 · blinds 50/100 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 50, Undertow checks, [flop: 10♥ 7♣ 4♥], Jackpot raises to 130, Undertow calls 130, [turn: 10♥ 7♣ 4♥ 5♣], Jackpot checks, Undertow raises to 299, Jackpot folds → Undertow takes 759 (everyone else folded)",
+   "pot": 759
   }
  ],
  "finishes": [],
