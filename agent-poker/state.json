@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:50:32.068Z",
+ "updatedAt": "2026-11-25T01:50:46.172Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 129,
+ "handsPlayed": 130,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17612,
+     "stack": 17532,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19765,
+     "stack": 19845,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17612,
+   "stack": 17532,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19765,
+   "stack": 19845,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 44,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Magnet",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 40,
-   "text": "Table 3 · Hand 40 · blinds 30/60 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 60, Northstar calls 30, Cobble checks, [flop: K♣ J♦ 7♥], Northstar checks, Cobble checks, Ricochet checks, [turn: K♣ J♦ 7♥ 7♦], Northstar checks, Cobble checks, Ricochet checks, [river: K♣ J♦ 7♥ 7♦ 7♣], Northstar checks, Cobble checks, Ricochet checks → Northstar wins 180 with Full house, 7s full of Js (A♠ J♣)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 41,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 43,
    "text": "Table 3 · Hand 43 · blinds 40/80 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 40, Snare checks, [flop: Q♠ Q♥ 5♠], Fossil checks, Snare checks, [turn: Q♠ Q♥ 5♠ 7♠], Fossil checks, Snare raises to 104, Fossil folds → Snare takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 44,
+   "text": "Table 1 · Hand 44 · blinds 40/80 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 40, Midas checks, [flop: A♥ 2♦ K♥], Coyote raises to 104, Midas folds → Coyote takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
