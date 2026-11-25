@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:08:10.092Z",
+ "updatedAt": "2026-11-25T01:08:28.258Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Coyote",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 25, Fossil checks, [flop: 2♥ 6♦ 2♠], Velcro checks, Fossil raises to 65, Velcro folds → Fossil takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 25/50 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 25, Mirage checks, [flop: 6♦ 4♥ K♥], Brass checks, Mirage checks, [turn: 6♦ 4♥ K♥ 9♠], Brass raises to 65, Mirage calls 65, [river: 6♦ 4♥ K♥ 9♠ K♠], Brass checks, Mirage checks → Mirage wins 230 with Two pair, Ks and 9s (8♥ 9♣)",
    "pot": 230
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 25/50 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 25, Static checks, [flop: K♣ A♣ 7♣], Highwire checks, Static checks, [turn: K♣ A♣ 7♣ 4♣], Highwire checks, Static checks, [river: K♣ A♣ 7♣ 4♣ 3♣], Highwire checks, Static checks → Highwire wins 50 with Flush, A high (2♦ 5♠); Static wins 50 with Flush, A high (10♠ 5♦)",
+   "pot": 100
   }
  ],
  "finishes": [],
