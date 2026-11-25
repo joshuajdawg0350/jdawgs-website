@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:45:42.742Z",
+ "updatedAt": "2026-11-25T01:46:00.761Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 117,
+ "handsPlayed": 118,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19715,
+     "stack": 18068,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 17324,
+     "stack": 18971,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19715,
+   "stack": 18068,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17324,
+   "stack": 18971,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 40,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Highwire",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 36,
-   "text": "Table 3 · Hand 36 · blinds 30/60 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 30, Brass checks, [flop: 9♠ A♣ 3♠], Snare checks, Brass checks, [turn: 9♠ A♣ 3♠ 4♦], Snare checks, Brass checks, [river: 9♠ A♣ 3♠ 4♦ 7♦], Snare checks, Brass checks → Snare wins 120 with Pair of 4s (4♠ K♥)",
-   "pot": 120
-  },
   {
    "table": 1,
    "handNo": 37,
@@ -552,6 +546,12 @@
    "handNo": 39,
    "text": "Table 3 · Hand 39 · blinds 30/60 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage raises to 120, Ricochet calls 90, Northstar folds, [flop: 6♣ 7♥ 9♦], Ricochet checks, Mirage raises to 195, Ricochet calls 195, [turn: 6♣ 7♥ 9♦ 7♦], Ricochet raises to 449, Mirage raises to 1189, Ricochet calls 740, [river: 6♣ 7♥ 9♦ 7♦ 5♦], Ricochet checks, Mirage raises to 1994, Ricochet calls 1994 → Ricochet wins 7056 with Three of a kind, 7s (7♠ A♠)",
    "pot": 7056
+  },
+  {
+   "table": 1,
+   "handNo": 40,
+   "text": "Table 1 · Hand 40 · blinds 30/60 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 30, Longshot checks, [flop: 10♦ J♣ A♥], Tempo raises to 78, Longshot calls 78, [turn: 10♦ J♣ A♥ Q♣], Tempo raises to 179, Longshot calls 179, [river: 10♦ J♣ A♥ Q♣ Q♥], Tempo raises to 412, Longshot raises to 1330, Tempo calls 918 → Longshot wins 3294 with Full house, Qs full of Js (Q♦ J♦)",
+   "pot": 3294
   }
  ],
  "finishes": [],
