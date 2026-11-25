@@ -107,6 +107,49 @@
 }
 
 </style>
+<style>
+/* ---- Homepage header menu (Joshua's order, 2026-11-25) ----
+   The old top strip squeezed all eight doors into one cramped
+   line of tiny caps that ran off the right edge of a phone —
+   the Trading Post fell off the end. Now: wordmark left, a
+   neat roomy row top-right on wide screens, and below that a
+   big visible Menu button top-right opening a clean panel of
+   full-width tappable rows — every door, Trading Post included. */
+header.site-header .nav-toggle{
+  display:none;margin-left:auto;align-items:center;gap:.55rem;
+  background:rgba(94,168,232,.10);border:1px solid #5ea8e8;color:#fff;
+  border-radius:8px;padding:.62rem 1.05rem;font:700 .98rem var(--font-body);
+  letter-spacing:.04em;text-transform:none;cursor:pointer;min-height:48px;
+}
+header.site-header .nav-toggle::after{content:"\25BE";color:#5ea8e8;font-size:.85em}
+header.site-header .nav-toggle[aria-expanded="true"]::after{content:"\25B4"}
+header.site-header .nav-toggle:hover{background:rgba(94,168,232,.20)}
+@media (min-width:1180px){
+  header.site-header .site-nav{display:block;position:static;margin-left:auto;
+    background:none;border:0;padding:0;box-shadow:none}
+  header.site-header .site-nav ul{flex-direction:row;gap:1.15rem}
+  header.site-header .site-nav a{font-size:.93rem;letter-spacing:.05em;padding:.5rem 0}
+  header.site-header .site-nav a:hover{color:#5ea8e8;border-bottom-color:#5ea8e8}
+}
+@media (max-width:1179px){
+  header.site-header .nav-toggle{display:inline-flex}
+  header.site-header .site-nav{display:none;position:absolute;top:72px;left:0;right:0;margin:0;
+    background:#05080E;border-bottom:2px solid #5ea8e8;padding:.4rem 0 .6rem;
+    box-shadow:0 18px 34px rgba(0,0,0,.55)}
+  header.site-header .site-nav.open{display:block}
+  header.site-header .site-nav ul{flex-direction:column;gap:0}
+  header.site-header .site-nav li{border-bottom:1px solid rgba(233,239,248,.09)}
+  header.site-header .site-nav li:last-child{border-bottom:0}
+  header.site-header .site-nav a{display:flex;align-items:center;min-height:54px;
+    padding:.85rem 1.4rem;font-size:1.06rem;font-weight:600;letter-spacing:.01em;
+    text-transform:none;color:#fff;border-bottom:0}
+  header.site-header .site-nav a:hover,header.site-header .site-nav a:active{
+    background:rgba(94,168,232,.14);color:#5ea8e8}
+}
+@media (max-width:640px){
+  header.site-header .site-nav{top:60px}
+}
+</style>
 </head>
 <body>
 
@@ -124,8 +167,8 @@
         <li><a href="https://jdawgsindustries.com/poker/">Poker Room</a></li>
         <li><a href="http://digitaldollarstore.org/">Digital Dollar Store</a></li>
         <li><a href="trading-post.html">Trading Post</a></li>
-        <li><a href="support.html">Support</a></li>
         <li><a href="press.html">Press</a></li>
+        <li><a href="support.html">Support</a></li>
       </ul>
     </nav>
   </div>
