@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:03:42.745Z",
+ "updatedAt": "2026-11-25T02:03:55.750Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 154,
+ "handsPlayed": 155,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 19490,
+     "stack": 19410,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19503,
+     "stack": 19583,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 51
+   "handsPlayed": 52
   },
   {
    "id": 3,
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19490,
+   "stack": 19410,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19503,
+   "stack": 19583,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 52,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Undertow",
+  "toAct": "Mirage",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 49,
-   "text": "Table 1 · Hand 49 · blinds 40/80 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 40, Longshot checks, [flop: 2♠ A♣ K♠], Tempo raises to 104, Longshot folds → Tempo takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 2,
    "handNo": 49,
@@ -552,6 +546,12 @@
    "handNo": 52,
    "text": "Table 1 · Hand 52 · blinds 40/80 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds → Coyote takes 120 (everyone else folded)",
    "pot": 120
+  },
+  {
+   "table": 2,
+   "handNo": 52,
+   "text": "Table 2 · Hand 52 · blinds 40/80 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 40, Jackpot checks, [flop: J♠ 9♦ 7♥], Tidepool checks, Jackpot checks, [turn: J♠ 9♦ 7♥ 4♦], Tidepool checks, Jackpot raises to 104, Tidepool folds → Jackpot takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
