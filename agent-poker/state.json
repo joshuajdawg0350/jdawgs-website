@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:01:15.271Z",
+ "updatedAt": "2026-11-25T03:01:30.818Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 209,
+ "handsPlayed": 210,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 71
+   "handsPlayed": 72
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 72,
+  "table": 2,
+  "handNo": 71,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 68,
-   "text": "Table 1 · Hand 68 · blinds 50/100 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo raises to 200, Longshot folds, Highwire calls 100, [flop: K♣ 5♠ 4♣], Highwire raises to 293, Tempo calls 293, [turn: K♣ 5♠ 4♣ 4♦], Highwire raises to 673, Tempo calls 673, [river: K♣ 5♠ 4♣ 4♦ 10♥], Highwire checks, Tempo checks → Highwire wins 2382 with Two pair, Ks and 4s (8♣ K♦)",
-   "pot": 2382
-  },
   {
    "table": 2,
    "handNo": 68,
@@ -552,6 +546,12 @@
    "handNo": 68,
    "text": "Table 3 · Hand 68 · blinds 50/100 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 50, Brass checks, [flop: 6♠ 4♦ Q♦], Snare checks, Brass checks, [turn: 6♠ 4♦ Q♦ 10♠], Snare checks, Brass checks, [river: 6♠ 4♦ Q♦ 10♠ 5♥], Snare checks, Brass raises to 130, Snare folds → Brass takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 72,
+   "text": "Table 1 · Hand 72 · blinds 50/100 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 50, Magnet checks, [flop: Q♣ Q♦ Q♠], Midas checks, Magnet checks, [turn: Q♣ Q♦ Q♠ K♦], Midas checks, Magnet checks, [river: Q♣ Q♦ Q♠ K♦ 9♥], Midas checks, Magnet checks → Midas wins 100 with Three of a kind, Qs (6♣ 2♦); Magnet wins 100 with Three of a kind, Qs (2♥ 8♠)",
+   "pot": 200
   }
  ],
  "finishes": [],
