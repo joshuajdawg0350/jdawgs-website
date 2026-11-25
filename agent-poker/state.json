@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:20:17.729Z",
+ "updatedAt": "2026-11-25T03:20:34.782Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 263,
+ "handsPlayed": 264,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17192,
+     "stack": 17312,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20787,
+     "stack": 20667,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 89
+   "handsPlayed": 90
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17192,
+   "stack": 17312,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20787,
+   "stack": 20667,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 90,
+  "table": 2,
+  "handNo": 89,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 83,
-   "text": "Table 3 · Hand 83 · blinds 60/120 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 60, Snare checks, [flop: K♦ 4♠ 5♠], Fossil checks, Snare checks, [turn: K♦ 4♠ 5♠ K♠], Fossil checks, Snare checks, [river: K♦ 4♠ 5♠ K♠ 9♥], Fossil raises to 156, Snare calls 156 → Fossil wins 552 with Two pair, Ks and 9s (9♦ 8♦)",
-   "pot": 552
-  },
   {
    "table": 1,
    "handNo": 87,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 86,
    "text": "Table 3 · Hand 86 · blinds 60/120 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 60, Ricochet checks, [flop: Q♠ 8♦ 7♦], Mirage checks, Ricochet checks, [turn: Q♠ 8♦ 7♦ A♣], Mirage checks, Ricochet checks, [river: Q♠ 8♦ 7♦ A♣ 8♣], Mirage checks, Ricochet checks → Ricochet wins 240 with Pair of 8s (K♦ 10♣)",
+   "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 90,
+   "text": "Table 1 · Hand 90 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: 4♣ 3♥ 4♦], Midas checks, Magnet checks, [turn: 4♣ 3♥ 4♦ 7♠], Midas checks, Magnet checks, [river: 4♣ 3♥ 4♦ 7♠ 7♣], Midas checks, Magnet checks → Midas wins 240 with Two pair, 7s and 4s (Q♠ 5♠)",
    "pot": 240
   }
  ],
