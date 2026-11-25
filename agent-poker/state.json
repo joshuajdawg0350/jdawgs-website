@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:15:35.454Z",
+ "updatedAt": "2026-11-25T03:15:51.101Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 249,
+ "handsPlayed": 250,
  "tables": [
   {
    "id": 1,
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 20025,
+     "stack": 20145,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 25078,
+     "stack": 24958,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 83
+   "handsPlayed": 84
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20025,
+   "stack": 20145,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25078,
+   "stack": 24958,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 84,
+  "table": 3,
+  "handNo": 82,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Glacier",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 82,
-   "text": "Table 1 · Hand 82 · blinds 60/120 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 60, Freezer checks, [flop: 10♦ 9♣ 4♦], Magnet checks, Freezer checks, [turn: 10♦ 9♣ 4♦ 10♥], Magnet checks, Freezer checks, [river: 10♦ 9♣ 4♦ 10♥ 6♣], Magnet checks, Freezer raises to 156, Magnet folds → Freezer takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 2,
    "handNo": 81,
@@ -552,6 +546,12 @@
    "handNo": 85,
    "text": "Table 1 · Hand 85 · blinds 60/120 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 60, Longshot checks, [flop: 9♣ 9♥ 2♣], Tempo checks, Longshot checks, [turn: 9♣ 9♥ 2♣ 5♥], Tempo checks, Longshot checks, [river: 9♣ 9♥ 2♣ 5♥ 5♣], Tempo checks, Longshot checks → Longshot wins 240 with Two pair, 9s and 5s (K♣ 3♦)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 84,
+   "text": "Table 2 · Hand 84 · blinds 60/120 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 60, Bedrock checks, [flop: 9♦ J♣ 10♠], Ember checks, Bedrock checks, [turn: 9♦ J♣ 10♠ 7♥], Ember raises to 156, Bedrock folds → Ember takes 396 (everyone else folded)",
+   "pot": 396
   }
  ],
  "finishes": [],
