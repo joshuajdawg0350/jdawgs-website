@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:12:25.040Z",
+ "updatedAt": "2026-11-25T04:12:37.905Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 422,
+ "handsPlayed": 423,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17312,
+     "stack": 17072,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 17620,
+     "stack": 17860,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 142
+   "handsPlayed": 143
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17312,
+   "stack": 17072,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17620,
+   "stack": 17860,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 143,
+  "table": 2,
+  "handNo": 142,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Magnet",
+  "toAct": "Undertow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 136,
-   "text": "Table 3 · Hand 136 · blinds 100/200 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 100, Cobble raises to 460, Northstar folds → Cobble takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 1,
    "handNo": 140,
@@ -552,6 +546,12 @@
    "handNo": 139,
    "text": "Table 3 · Hand 139 · blinds 100/200 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 100, Snare checks, [flop: K♦ 10♥ 5♣], Fossil checks, Snare checks, [turn: K♦ 10♥ 5♣ A♦], Fossil checks, Snare checks, [river: K♦ 10♥ 5♣ A♦ 10♦], Fossil checks, Snare checks → Snare wins 400 with Two pair, 10s and 5s (5♠ J♥)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 143,
+   "text": "Table 1 · Hand 143 · blinds 120/240 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 120, Midas checks, [flop: 8♠ J♣ Q♣], Coyote checks, Midas checks, [turn: 8♠ J♣ Q♣ 5♦], Coyote checks, Midas checks, [river: 8♠ J♣ Q♣ 5♦ K♥], Coyote raises to 312, Midas folds → Coyote takes 792 (everyone else folded)",
+   "pot": 792
   }
  ],
  "finishes": [],
