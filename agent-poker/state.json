@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:33:54.935Z",
+ "updatedAt": "2026-11-25T01:34:13.547Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 90,
+ "handsPlayed": 91,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 30
+   "handsPlayed": 31
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 31,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Highwire",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 27,
-   "text": "Table 3 · Hand 27 · blinds 30/60 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 30, Snare checks, [flop: 2♣ 9♣ 7♠], Fossil checks, Snare checks, [turn: 2♣ 9♣ 7♠ K♥], Fossil checks, Snare checks, [river: 2♣ 9♣ 7♠ K♥ 5♦], Fossil checks, Snare checks → Fossil wins 120 with Pair of 5s (8♥ 5♠)",
-   "pot": 120
-  },
   {
    "table": 1,
    "handNo": 28,
@@ -552,6 +546,12 @@
    "handNo": 30,
    "text": "Table 3 · Hand 30 · blinds 30/60 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 30, Ricochet checks, [flop: 9♦ 3♥ Q♠], Mirage checks, Ricochet checks, [turn: 9♦ 3♥ Q♠ 5♠], Mirage checks, Ricochet checks, [river: 9♦ 3♥ Q♠ 5♠ 4♥], Mirage checks, Ricochet raises to 78, Mirage folds → Ricochet takes 198 (everyone else folded)",
    "pot": 198
+  },
+  {
+   "table": 1,
+   "handNo": 31,
+   "text": "Table 1 · Hand 31 · blinds 30/60 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 30, Longshot checks, [flop: 8♠ J♥ 5♠], Tempo checks, Longshot checks, [turn: 8♠ J♥ 5♠ K♠], Tempo checks, Longshot checks, [river: 8♠ J♥ 5♠ K♠ 5♥], Tempo checks, Longshot checks → Tempo wins 60 with Pair of 5s (3♥ 10♠); Longshot wins 60 with Pair of 5s (10♣ 4♣)",
+   "pot": 120
   }
  ],
  "finishes": [],
