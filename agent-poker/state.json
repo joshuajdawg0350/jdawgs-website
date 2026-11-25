@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:18:14.881Z",
+ "updatedAt": "2026-11-25T01:18:33.201Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 44,
+ "handsPlayed": 45,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19685,
+     "stack": 19735,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 20211,
+     "stack": 20161,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 14
+   "handsPlayed": 15
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19685,
+   "stack": 19735,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20211,
+   "stack": 20161,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 15,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 12,
-   "text": "Table 2 · Hand 12 · blinds 25/50 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 25, Bedrock checks, [flop: 4♣ 2♣ 4♠], Ember checks, Bedrock checks, [turn: 4♣ 2♣ 4♠ 5♠], Ember raises to 65, Bedrock folds → Ember takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 3,
    "handNo": 12,
@@ -552,6 +538,12 @@
    "handNo": 15,
    "text": "Table 2 · Hand 15 · blinds 25/50 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 25, Tidepool checks, [flop: 4♣ 4♦ 9♥], Deadpan checks, Tidepool checks, [turn: 4♣ 4♦ 9♥ J♠], Deadpan raises to 65, Tidepool folds → Deadpan takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 3,
+   "handNo": 15,
+   "text": "Table 3 · Hand 15 · blinds 25/50 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 25, Northstar checks, [flop: 8♣ J♦ 6♠], Ricochet checks, Northstar checks, [turn: 8♣ J♦ 6♠ 8♠], Ricochet checks, Northstar checks, [river: 8♣ J♦ 6♠ 8♠ 8♥], Ricochet checks, Northstar checks → Northstar wins 100 with Three of a kind, 8s (A♦ 9♦)",
+   "pot": 100
   }
  ],
  "finishes": [],
