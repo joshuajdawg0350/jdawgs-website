@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:25:23.473Z",
+ "updatedAt": "2026-11-25T01:25:37.229Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 65,
+ "handsPlayed": 66,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 20004,
+     "stack": 20064,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 20161,
+     "stack": 20101,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 21
+   "handsPlayed": 22
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20004,
+   "stack": 20064,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20161,
+   "stack": 20101,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 22,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 19,
-   "text": "Table 2 · Hand 19 · blinds 25/50 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 25, Ledger checks, [flop: 9♠ 9♦ 10♦], Minnow raises to 65, Ledger calls 65, [turn: 9♠ 9♦ 10♦ 2♠], Minnow raises to 150, Ledger calls 150, [river: 9♠ 9♦ 10♦ 2♠ 2♣], Minnow raises to 345, Ledger calls 345 → Minnow wins 1220 with Full house, 9s full of 2s (9♥ 6♣)",
-   "pot": 1220
-  },
   {
    "table": 3,
    "handNo": 19,
@@ -552,6 +538,12 @@
    "handNo": 22,
    "text": "Table 2 · Hand 22 · blinds 30/60 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 30, Glacier checks, [flop: J♥ 3♣ 6♠], Bedrock checks, Glacier checks, [turn: J♥ 3♣ 6♠ K♥], Bedrock checks, Glacier checks, [river: J♥ 3♣ 6♠ K♥ 10♣], Bedrock checks, Glacier checks → Bedrock wins 120 with K high (Q♦ 5♥)",
    "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 22,
+   "text": "Table 3 · Hand 22 · blinds 30/60 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 30, Ricochet checks, [flop: 7♣ Q♠ 7♠], Mirage raises to 78, Ricochet folds → Mirage takes 198 (everyone else folded)",
+   "pot": 198
   }
  ],
  "finishes": [],
