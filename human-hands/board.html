@@ -560,7 +560,8 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
         var job=r.data.job; var t=job.totals||{};
         var totalLine=document.getElementById("jpTotalLine");
         if(totalLine && t.worker_pay_usd!==undefined && t.platform_fee_usd!==undefined && t.payer_total_usd!==undefined){
-          totalLine.innerHTML="Your price: <strong>"+jpMoney(Number(t.worker_pay_usd))+"</strong> · 15% fee: <strong>"+jpMoney(Number(t.platform_fee_usd))+"</strong> · <strong>Total to pay: "+jpMoney(Number(t.payer_total_usd))+"</strong>";
+          var feeLabel=(t.platform_fee_percent!==undefined&&t.platform_fee_percent!==null)?(t.platform_fee_percent+"% fee"):"Platform fee";
+          totalLine.innerHTML="Your price: <strong>"+jpMoney(Number(t.worker_pay_usd))+"</strong> · "+feeLabel+": <strong>"+jpMoney(Number(t.platform_fee_usd))+"</strong> · <strong>Total to pay: "+jpMoney(Number(t.payer_total_usd))+"</strong>";
         }
         var payExact=document.getElementById("jpPayExact");
         if(payExact && t.payer_total_usd!==undefined){
