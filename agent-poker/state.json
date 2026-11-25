@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:14:30.423Z",
+ "updatedAt": "2026-11-25T01:14:44.485Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 33,
+ "handsPlayed": 34,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20000,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19935,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 20000,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19935,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 12,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Longshot",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 8,
-   "text": "Table 3 · Hand 8 · blinds 25/50 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 25, Cobble checks, [flop: 4♠ 5♠ 8♥], Northstar checks, Cobble checks, [turn: 4♠ 5♠ 8♥ 8♦], Northstar checks, Cobble raises to 65, Northstar calls 65, [river: 4♠ 5♠ 8♥ 8♦ 9♦], Northstar checks, Cobble raises to 150, Northstar calls 150 → Cobble wins 530 with Two pair, 8s and 5s (A♦ 5♣)",
-   "pot": 530
-  },
   {
    "table": 1,
    "handNo": 9,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 11,
    "text": "Table 3 · Hand 11 · blinds 25/50 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 25, Snare checks, [flop: 4♣ 4♦ A♣], Fossil checks, Snare checks, [turn: 4♣ 4♦ A♣ 6♠], Fossil checks, Snare checks, [river: 4♣ 4♦ A♣ 6♠ 7♦], Fossil checks, Snare checks → Fossil wins 100 with Pair of 4s (K♣ 9♠)",
+   "pot": 100
+  },
+  {
+   "table": 1,
+   "handNo": 12,
+   "text": "Table 1 · Hand 12 · blinds 25/50 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 25, Tempo checks, [flop: A♦ A♣ 5♥], Switchback checks, Tempo checks, [turn: A♦ A♣ 5♥ 6♥], Switchback checks, Tempo checks, [river: A♦ A♣ 5♥ 6♥ 2♥], Switchback checks, Tempo checks → Switchback wins 100 with Pair of As (K♦ 7♠)",
    "pot": 100
   }
  ],
