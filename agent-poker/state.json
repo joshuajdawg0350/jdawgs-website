@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:26:49.182Z",
+ "updatedAt": "2026-11-25T03:27:05.570Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 282,
+ "handsPlayed": 283,
  "tables": [
   {
    "id": 1,
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 17575,
+     "stack": 17455,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 23590,
+     "stack": 23710,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 94
+   "handsPlayed": 95
   },
   {
    "id": 3,
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 17575,
+   "stack": 17455,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23590,
+   "stack": 23710,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 95,
+  "table": 3,
+  "handNo": 93,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Tidepool",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 93,
-   "text": "Table 1 · Hand 93 · blinds 60/120 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 60, Tempo checks, [flop: 2♣ A♠ Q♣], Switchback checks, Tempo raises to 156, Switchback folds → Tempo takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 2,
    "handNo": 92,
@@ -552,6 +546,12 @@
    "handNo": 96,
    "text": "Table 1 · Hand 96 · blinds 60/120 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 60, Static checks, [flop: K♠ 8♥ 6♥], Highwire checks, Static checks, [turn: K♠ 8♥ 6♥ J♣], Highwire checks, Static checks, [river: K♠ 8♥ 6♥ J♣ 4♦], Highwire checks, Static checks → Highwire wins 120 with A high (A♦ 5♣); Static wins 120 with A high (A♣ 2♣)",
    "pot": 240
+  },
+  {
+   "table": 2,
+   "handNo": 95,
+   "text": "Table 2 · Hand 95 · blinds 60/120 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 60, Deadpan checks, [flop: 3♣ Q♠ 4♣], Glacier checks, Deadpan raises to 156, Glacier folds → Deadpan takes 396 (everyone else folded)",
+   "pot": 396
   }
  ],
  "finishes": [],
