@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:07:56.530Z",
+ "updatedAt": "2026-11-25T04:08:11.217Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   5000
  ],
  "level": 21,
- "handsPlayed": 410,
+ "handsPlayed": 411,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19761,
+     "stack": 19661,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 12978,
+     "stack": 13078,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 138
+   "handsPlayed": 139
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19761,
+   "stack": 19661,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12978,
+   "stack": 13078,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 139,
+  "table": 2,
+  "handNo": 138,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Highwire",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 132,
-   "text": "Table 3 · Hand 132 · blinds 100/200 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 100, Brass checks, [flop: 8♣ 3♥ 6♣], Snare checks, Brass checks, [turn: 8♣ 3♥ 6♣ 4♣], Snare checks, Brass checks, [river: 8♣ 3♥ 6♣ 4♣ 7♦], Snare checks, Brass checks → Brass wins 400 with A high (A♠ 10♣)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 136,
@@ -552,6 +546,12 @@
    "handNo": 135,
    "text": "Table 3 · Hand 135 · blinds 100/200 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 100, Northstar checks, [flop: 9♣ 4♠ A♠], Ricochet checks, Northstar checks, [turn: 9♣ 4♠ A♠ 7♦], Ricochet checks, Northstar checks, [river: 9♣ 4♠ A♠ 7♦ 2♣], Ricochet checks, Northstar checks → Ricochet wins 400 with Pair of 4s (4♣ J♣)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 139,
+   "text": "Table 1 · Hand 139 · blinds 100/200 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds → Longshot takes 300 (everyone else folded)",
+   "pot": 300
   }
  ],
  "finishes": [],
