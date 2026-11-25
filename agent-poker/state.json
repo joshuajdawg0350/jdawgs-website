@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:09:34.886Z",
+ "updatedAt": "2026-11-25T03:09:49.551Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 232,
+ "handsPlayed": 233,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19100,
+     "stack": 19200,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 20703,
+     "stack": 20603,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 75
+   "handsPlayed": 76
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19100,
+   "stack": 19200,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20703,
+   "stack": 20603,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 76,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 75,
-   "text": "Table 2 · Hand 75 · blinds 50/100 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 50, Bedrock checks, [flop: A♠ 7♦ 4♦], Ember raises to 130, Bedrock folds → Ember takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 3,
    "handNo": 73,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 78,
    "text": "Table 2 · Hand 78 · blinds 50/100 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 50, Tidepool checks, [flop: Q♦ Q♥ A♦], Deadpan checks, Tidepool checks, [turn: Q♦ Q♥ A♦ 10♥], Deadpan checks, Tidepool checks, [river: Q♦ Q♥ A♦ 10♥ K♠], Deadpan checks, Tidepool raises to 130, Deadpan folds → Tidepool takes 330 (everyone else folded)",
+   "pot": 330
+  },
+  {
+   "table": 3,
+   "handNo": 76,
+   "text": "Table 3 · Hand 76 · blinds 50/100 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 50, Brass checks, [flop: 9♥ 6♦ 4♦], Snare raises to 130, Brass folds → Snare takes 330 (everyone else folded)",
    "pot": 330
   }
  ],
