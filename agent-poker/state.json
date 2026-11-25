@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:04:07.027Z",
+ "updatedAt": "2026-11-25T03:04:21.172Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 217,
+ "handsPlayed": 218,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 24477,
+     "stack": 24377,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 17938,
+     "stack": 18038,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 70
+   "handsPlayed": 71
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24477,
+   "stack": 24377,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17938,
+   "stack": 18038,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 71,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 70,
-   "text": "Table 2 · Hand 70 · blinds 50/100 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 50, Jackpot checks, [flop: 8♥ 8♠ 9♥], Tidepool raises to 130, Jackpot calls 130, [turn: 8♥ 8♠ 9♥ A♦], Tidepool raises to 299, Jackpot folds → Tidepool takes 759 (everyone else folded)",
-   "pot": 759
-  },
   {
    "table": 3,
    "handNo": 68,
@@ -552,6 +538,12 @@
    "handNo": 73,
    "text": "Table 2 · Hand 73 · blinds 50/100 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 100, Minnow calls 50, Ledger checks, [flop: 9♠ 3♣ 7♥], Minnow checks, Ledger checks, Undertow checks, [turn: 9♠ 3♣ 7♥ 8♦], Minnow checks, Ledger checks, Undertow checks, [river: 9♠ 3♣ 7♥ 8♦ K♠], Minnow checks, Ledger checks, Undertow checks → Minnow wins 300 with Pair of 8s (8♠ 6♣)",
    "pot": 300
+  },
+  {
+   "table": 3,
+   "handNo": 71,
+   "text": "Table 3 · Hand 71 · blinds 50/100 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 50, Northstar checks, [flop: 9♠ 4♣ 2♣], Ricochet raises to 130, Northstar folds → Ricochet takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
