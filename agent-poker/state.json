@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:40:59.527Z",
+ "updatedAt": "2026-11-25T03:41:11.088Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 329,
+ "handsPlayed": 330,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22877,
+     "stack": 22405,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 17843,
+     "stack": 18475,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 12578,
+     "stack": 12418,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 111
+   "handsPlayed": 112
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22877,
+   "stack": 22405,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17843,
+   "stack": 18475,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12578,
+   "stack": 12418,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 112,
+  "table": 2,
+  "handNo": 111,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Highwire",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 105,
-   "text": "Table 3 · Hand 105 · blinds 80/160 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 80, Velcro raises to 368, Cobble folds → Velcro takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 1,
    "handNo": 109,
@@ -552,6 +546,12 @@
    "handNo": 108,
    "text": "Table 3 · Hand 108 · blinds 80/160 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 80, Brass checks, [flop: 5♦ 7♦ 9♣], Snare checks, Brass raises to 208, Snare folds → Brass takes 528 (everyone else folded)",
    "pot": 528
+  },
+  {
+   "table": 1,
+   "handNo": 112,
+   "text": "Table 1 · Hand 112 · blinds 80/160 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 160, Switchback folds, Tempo calls 80, Longshot checks, [flop: 9♣ 5♥ 3♣], Tempo checks, Longshot checks, Freezer checks, [turn: 9♣ 5♥ 3♣ 4♣], Tempo checks, Longshot checks, Freezer checks, [river: 9♣ 5♥ 3♣ 4♣ A♥], Tempo raises to 312, Longshot folds, Freezer calls 312 → Tempo wins 1104 with Two pair, 4s and 3s (3♥ 4♦)",
+   "pot": 1104
   }
  ],
  "finishes": [],
