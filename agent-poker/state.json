@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:20:46.124Z",
+ "updatedAt": "2026-11-25T01:21:00.049Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 51,
+ "handsPlayed": 52,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20025,
+     "stack": 20075,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 17
+   "handsPlayed": 18
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20025,
+   "stack": 20075,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19925,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 18,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Freezer",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 14,
-   "text": "Table 3 · Hand 14 · blinds 25/50 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 25, Ricochet checks, [flop: 4♥ 6♠ J♦], Mirage raises to 65, Ricochet raises to 172, Mirage raises to 391, Ricochet calls 219, [turn: 4♥ 6♠ J♦ 9♣], Mirage raises to 573, Ricochet calls 573, [river: 4♥ 6♠ J♦ 9♣ 8♦], Mirage raises to 1318, Ricochet folds → Mirage takes 3346 (everyone else folded)",
-   "pot": 3346
-  },
   {
    "table": 1,
    "handNo": 15,
@@ -552,6 +546,12 @@
    "handNo": 17,
    "text": "Table 3 · Hand 17 · blinds 25/50 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds → Velcro takes 75 (everyone else folded)",
    "pot": 75
+  },
+  {
+   "table": 1,
+   "handNo": 18,
+   "text": "Table 1 · Hand 18 · blinds 25/50 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 25, Magnet checks, [flop: 5♦ 6♠ 6♦], Midas checks, Magnet checks, [turn: 5♦ 6♠ 6♦ 2♠], Midas checks, Magnet checks, [river: 5♦ 6♠ 6♦ 2♠ Q♣], Midas raises to 65, Magnet folds → Midas takes 165 (everyone else folded)",
+   "pot": 165
   }
  ],
  "finishes": [],
