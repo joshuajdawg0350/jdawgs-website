@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:01:51.081Z",
+ "updatedAt": "2026-11-25T04:02:04.713Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 392,
+ "handsPlayed": 393,
  "tables": [
   {
    "id": 1,
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20464,
+     "stack": 20664,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 18650,
+     "stack": 18450,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 132
+   "handsPlayed": 133
   },
   {
    "id": 2,
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20464,
+   "stack": 20664,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18650,
+   "stack": 18450,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 133,
+  "table": 2,
+  "handNo": 132,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Midas",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 126,
-   "text": "Table 3 · Hand 126 · blinds 100/200 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 100, Ricochet checks, [flop: 4♠ 2♥ 8♦], Mirage checks, Ricochet checks, [turn: 4♠ 2♥ 8♦ 6♣], Mirage raises to 260, Ricochet folds → Mirage takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 1,
    "handNo": 130,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 129,
    "text": "Table 3 · Hand 129 · blinds 100/200 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 100, Velcro checks, [flop: 6♠ J♠ K♥], Cobble checks, Velcro checks, [turn: 6♠ J♠ K♥ 7♣], Cobble checks, Velcro checks, [river: 6♠ J♠ K♥ 7♣ 7♦], Cobble checks, Velcro checks → Cobble wins 400 with Pair of 7s (A♦ 10♣)",
+   "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 133,
+   "text": "Table 1 · Hand 133 · blinds 100/200 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 100, Coyote checks, [flop: 2♦ 10♠ A♦], Static checks, Coyote checks, [turn: 2♦ 10♠ A♦ 5♥], Static checks, Coyote checks, [river: 2♦ 10♠ A♦ 5♥ 10♣], Static checks, Coyote checks → Static wins 400 with Pair of 10s (Q♣ 4♠)",
    "pot": 400
   }
  ],
