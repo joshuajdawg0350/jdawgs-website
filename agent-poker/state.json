@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:52:20.057Z",
+ "updatedAt": "2026-11-25T02:52:44.529Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 201,
+ "handsPlayed": 202,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 20840,
+     "stack": 20940,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19527,
+     "stack": 19427,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 65
+   "handsPlayed": 66
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20840,
+   "stack": 20940,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19527,
+   "stack": 19427,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 66,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 65,
-   "text": "Table 1 · Hand 65 · blinds 50/100 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 50, Switchback checks, [flop: 8♥ A♣ 3♠], Freezer checks, Switchback checks, [turn: 8♥ A♣ 3♠ K♠], Freezer checks, Switchback checks, [river: 8♥ A♣ 3♠ K♠ 6♦], Freezer checks, Switchback checks → Freezer wins 200 with Pair of 6s (6♥ 7♦)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 65,
@@ -552,6 +538,12 @@
    "handNo": 68,
    "text": "Table 2 · Hand 68 · blinds 50/100 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier calls 50, Deadpan checks, [flop: 6♠ 3♣ K♦], Glacier checks, Deadpan checks, Bedrock checks, [turn: 6♠ 3♣ K♦ 2♠], Glacier checks, Deadpan checks, Bedrock checks, [river: 6♠ 3♣ K♦ 2♠ 5♠], Glacier raises to 195, Deadpan raises to 517, Bedrock folds, Glacier raises to 1175, Deadpan raises to 2470, Glacier calls 1295 → Deadpan wins 5240 with Flush, 7 high (3♠ 7♠)",
    "pot": 5240
+  },
+  {
+   "table": 3,
+   "handNo": 66,
+   "text": "Table 3 · Hand 66 · blinds 50/100 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 50, Fossil checks, [flop: 9♥ 3♦ K♣], Velcro raises to 130, Fossil folds → Velcro takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
