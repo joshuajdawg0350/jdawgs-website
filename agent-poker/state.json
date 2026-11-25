@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:19:36.571Z",
+ "updatedAt": "2026-11-25T04:19:54.610Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 438,
+ "handsPlayed": 439,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 22360,
+     "stack": 26859,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 21111,
+     "stack": 16852,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 23983,
+     "stack": 23743,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 146
+   "handsPlayed": 147
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 22360,
+   "stack": 26859,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21111,
+   "stack": 16852,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23983,
+   "stack": 23743,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 147,
+  "table": 3,
+  "handNo": 145,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Glacier",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 145,
-   "text": "Table 1 · Hand 145 · blinds 120/240 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 120, Freezer checks, [flop: Q♣ 7♥ 8♣], Magnet checks, Freezer checks, [turn: Q♣ 7♥ 8♣ 4♠], Magnet checks, Freezer checks, [river: Q♣ 7♥ 8♣ 4♠ 5♠], Magnet raises to 312, Freezer folds → Magnet takes 792 (everyone else folded)",
-   "pot": 792
-  },
   {
    "table": 2,
    "handNo": 144,
@@ -552,6 +546,12 @@
    "handNo": 148,
    "text": "Table 1 · Hand 148 · blinds 120/240 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 120, Longshot checks, [flop: J♣ J♥ 10♦], Tempo raises to 312, Longshot calls 312, [turn: J♣ J♥ 10♦ Q♠], Tempo checks, Longshot checks, [river: J♣ J♥ 10♦ Q♠ A♠], Tempo checks, Longshot checks → Tempo wins 1104 with Two pair, As and Js (A♥ 10♥)",
    "pot": 1104
+  },
+  {
+   "table": 2,
+   "handNo": 147,
+   "text": "Table 2 · Hand 147 · blinds 120/240 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 240, Minnow folds, Ledger folds, Ember calls 120, Bedrock checks, [flop: K♥ 9♣ 4♣], Ember checks, Bedrock checks, Undertow raises to 468, Ember calls 468, Bedrock folds, [turn: K♥ 9♣ 4♣ A♥], Ember checks, Undertow raises to 1076, Ember calls 1076, [river: K♥ 9♣ 4♣ A♥ 4♥], Ember checks, Undertow raises to 2475, Ember calls 2475 → Undertow wins 8758 with Full house, As full of 4s (A♠ A♦)",
+   "pot": 8758
   }
  ],
  "finishes": [],
