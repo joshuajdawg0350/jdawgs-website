@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:59:43.280Z",
+ "updatedAt": "2026-11-25T02:59:56.835Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 205,
+ "handsPlayed": 206,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19427,
+     "stack": 19197,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19070,
+     "stack": 19300,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 66
+   "handsPlayed": 67
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19427,
+   "stack": 19197,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19070,
+   "stack": 19300,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 67,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 64,
-   "text": "Table 3 · Hand 64 · blinds 50/100 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble checks, [flop: A♦ Q♣ K♠], Northstar checks, Cobble raises to 130, Northstar folds → Cobble takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 1,
    "handNo": 67,
@@ -552,6 +538,12 @@
    "handNo": 69,
    "text": "Table 2 · Hand 69 · blinds 50/100 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 50, Tidepool checks, [flop: 7♥ 3♦ J♠], Deadpan checks, Tidepool checks, [turn: 7♥ 3♦ J♠ 7♠], Deadpan checks, Tidepool checks, [river: 7♥ 3♦ J♠ 7♠ Q♥], Deadpan checks, Tidepool checks → Tidepool wins 200 with Pair of 7s (8♥ 9♥)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 67,
+   "text": "Table 3 · Hand 67 · blinds 50/100 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 50, Snare raises to 230, Fossil calls 130, [flop: 6♦ 7♦ 3♠], Fossil checks, Snare checks, [turn: 6♦ 7♦ 3♠ 8♦], Fossil checks, Snare checks, [river: 6♦ 7♦ 3♠ 8♦ 7♣], Fossil checks, Snare checks → Snare wins 460 with Pair of 7s (10♣ A♦)",
+   "pot": 460
   }
  ],
  "finishes": [],
