@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:59:29.633Z",
+ "updatedAt": "2026-11-25T02:59:43.280Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 204,
+ "handsPlayed": 205,
  "tables": [
   {
    "id": 1,
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 23070,
+     "stack": 22970,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 19640,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 68
+   "handsPlayed": 69
   },
   {
    "id": 3,
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23070,
+   "stack": 22970,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19640,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 69,
+  "table": 3,
+  "handNo": 67,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Jackpot",
+  "toAct": "Brass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 66,
-   "text": "Table 2 · Hand 66 · blinds 50/100 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 50, Bedrock checks, [flop: 2♦ 10♠ A♥], Ember checks, Bedrock checks, [turn: 2♦ 10♠ A♥ 9♠], Ember checks, Bedrock checks, [river: 2♦ 10♠ A♥ 9♠ 5♠], Ember checks, Bedrock checks → Bedrock wins 200 with Pair of 5s (4♠ 5♣)",
-   "pot": 200
-  },
   {
    "table": 3,
    "handNo": 64,
@@ -552,6 +546,12 @@
    "handNo": 70,
    "text": "Table 1 · Hand 70 · blinds 50/100 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 50, Coyote checks, [flop: 8♥ 6♥ 6♠], Static raises to 130, Coyote folds → Static takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 2,
+   "handNo": 69,
+   "text": "Table 2 · Hand 69 · blinds 50/100 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 50, Tidepool checks, [flop: 7♥ 3♦ J♠], Deadpan checks, Tidepool checks, [turn: 7♥ 3♦ J♠ 7♠], Deadpan checks, Tidepool checks, [river: 7♥ 3♦ J♠ 7♠ Q♥], Deadpan checks, Tidepool checks → Tidepool wins 200 with Pair of 7s (8♥ 9♥)",
+   "pot": 200
   }
  ],
  "finishes": [],
