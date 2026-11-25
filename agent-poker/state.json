@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:02:47.989Z",
+ "updatedAt": "2026-11-25T03:03:04.598Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 213,
+ "handsPlayed": 214,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20937,
+     "stack": 20837,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 21413,
+     "stack": 21513,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 71
+   "handsPlayed": 72
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20937,
+   "stack": 20837,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21413,
+   "stack": 21513,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 72,
+  "table": 3,
+  "handNo": 70,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Ledger",
+  "toAct": "Northstar",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 70,
-   "text": "Table 1 · Hand 70 · blinds 50/100 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 50, Coyote checks, [flop: 8♥ 6♥ 6♠], Static raises to 130, Coyote folds → Static takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 2,
    "handNo": 69,
@@ -552,6 +546,12 @@
    "handNo": 73,
    "text": "Table 1 · Hand 73 · blinds 50/100 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 50, Freezer checks, [flop: 10♣ A♣ J♣], Magnet raises to 130, Freezer calls 130, [turn: 10♣ A♣ J♣ 4♦], Magnet raises to 299, Freezer folds → Magnet takes 759 (everyone else folded)",
    "pot": 759
+  },
+  {
+   "table": 2,
+   "handNo": 72,
+   "text": "Table 2 · Hand 72 · blinds 50/100 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow raises to 230, Undertow folds → Minnow takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
