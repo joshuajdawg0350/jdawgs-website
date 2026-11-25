@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:04:24.379Z",
+ "updatedAt": "2026-11-25T02:04:36.655Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 156,
+ "handsPlayed": 157,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17452,
+     "stack": 17532,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19805,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 52
+   "handsPlayed": 53
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17452,
+   "stack": 17532,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19885,
+   "stack": 19805,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 53,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Magnet",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 49,
-   "text": "Table 3 · Hand 49 · blinds 40/80 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 40, Velcro checks, [flop: J♠ 6♣ 3♣], Cobble raises to 104, Velcro folds → Cobble takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 50,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 52,
    "text": "Table 3 · Hand 52 · blinds 40/80 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 40, Brass checks, [flop: Q♠ 7♦ 2♥], Snare checks, Brass checks, [turn: Q♠ 7♦ 2♥ 7♥], Snare checks, Brass checks, [river: Q♠ 7♦ 2♥ 7♥ K♦], Snare raises to 104, Brass folds → Snare takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 53,
+   "text": "Table 1 · Hand 53 · blinds 40/80 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 40, Midas checks, [flop: 7♠ 8♦ 10♠], Coyote checks, Midas checks, [turn: 7♠ 8♦ 10♠ 5♦], Coyote checks, Midas raises to 104, Coyote folds → Midas takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
