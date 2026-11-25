@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:46:53.824Z",
+ "updatedAt": "2026-11-25T03:47:07.911Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 349,
+ "handsPlayed": 350,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 16011,
+     "stack": 15851,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 18048,
+     "stack": 18208,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 114
+   "handsPlayed": 115
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16011,
+   "stack": 15851,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18048,
+   "stack": 18208,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 115,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 114,
-   "text": "Table 2 · Hand 114 · blinds 80/160 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 80, Tidepool checks, [flop: A♠ J♠ 10♥], Deadpan raises to 208, Tidepool folds → Deadpan takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 3,
    "handNo": 112,
@@ -552,6 +538,12 @@
    "handNo": 117,
    "text": "Table 2 · Hand 117 · blinds 80/160 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 80, Minnow checks, [flop: K♣ A♠ 4♦], Undertow raises to 208, Minnow calls 208, [turn: K♣ A♠ 4♦ 8♣], Undertow raises to 478, Minnow calls 478, [river: K♣ A♠ 4♦ 8♣ 8♥], Undertow raises to 1100, Minnow calls 1100 → Undertow wins 3892 with Two pair, As and 8s (A♥ 6♠)",
    "pot": 3892
+  },
+  {
+   "table": 3,
+   "handNo": 115,
+   "text": "Table 3 · Hand 115 · blinds 80/160 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 80, Snare checks, [flop: Q♦ 5♥ A♦], Fossil checks, Snare checks, [turn: Q♦ 5♥ A♦ K♣], Fossil checks, Snare checks, [river: Q♦ 5♥ A♦ K♣ 4♣], Fossil checks, Snare checks → Snare wins 320 with A high (9♥ 10♥)",
+   "pot": 320
   }
  ],
  "finishes": [],
