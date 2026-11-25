@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:50:49.743Z",
+ "updatedAt": "2026-11-25T02:51:03.576Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 197,
+ "handsPlayed": 198,
  "tables": [
   {
    "id": 1,
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 19765,
+     "stack": 19915,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 25723,
+     "stack": 25673,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19690,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 66
+   "handsPlayed": 67
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19765,
+   "stack": 19915,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25723,
+   "stack": 25673,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19790,
+   "stack": 19690,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 67,
+  "table": 3,
+  "handNo": 65,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Deadpan",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 62,
-   "text": "Table 3 · Hand 62 · blinds 50/100 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 100, Mirage calls 50, Ricochet checks, [flop: 8♣ 6♠ 2♠], Mirage raises to 195, Ricochet folds, Brass folds → Mirage takes 495 (everyone else folded)",
-   "pot": 495
-  },
   {
    "table": 1,
    "handNo": 64,
@@ -552,6 +546,12 @@
    "handNo": 67,
    "text": "Table 1 · Hand 67 · blinds 50/100 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 50, Longshot checks, [flop: 7♦ J♦ 3♦], Tempo checks, Longshot checks, [turn: 7♦ J♦ 3♦ K♦], Tempo checks, Longshot checks, [river: 7♦ J♦ 3♦ K♦ 8♣], Tempo checks, Longshot checks → Tempo wins 200 with Pair of 3s (3♠ 5♠)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 67,
+   "text": "Table 2 · Hand 67 · blinds 50/100 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 100, Bedrock folds, Glacier checks, [flop: A♠ 8♦ Q♠], Glacier checks, Ember checks, [turn: A♠ 8♦ Q♠ 7♠], Glacier checks, Ember raises to 163, Glacier folds → Ember takes 413 (everyone else folded)",
+   "pot": 413
   }
  ],
  "finishes": [],
