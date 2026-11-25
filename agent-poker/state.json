@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:08:45.061Z",
+ "updatedAt": "2026-11-25T01:09:00.461Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 17,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 20115,
+     "stack": 18940,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 21175,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20115,
+   "stack": 18940,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 21175,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow folds, Ledger folds, Ember calls 25, Bedrock checks, [flop: 3♥ 10♥ 3♠], Ember checks, Bedrock checks, Undertow raises to 98, Ember folds, Bedrock calls 98, [turn: 3♥ 10♥ 3♠ Q♣], Bedrock checks, Undertow raises to 225, Bedrock folds → Undertow takes 571 (everyone else folded)",
-   "pot": 571
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -552,6 +538,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 25/50 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 25, Tidepool checks, [flop: 6♦ A♣ 2♠], Deadpan checks, Tidepool raises to 65, Deadpan folds → Tidepool takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 25/50 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 25, Ricochet checks, [flop: 7♥ 6♦ K♥], Mirage raises to 65, Ricochet raises to 172, Mirage calls 107, [turn: 7♥ 6♦ K♥ 3♥], Mirage checks, Ricochet raises to 289, Mirage calls 289, [river: 7♥ 6♦ K♥ 3♥ K♣], Mirage checks, Ricochet raises to 664, Mirage calls 664 → Ricochet wins 2350 with Three of a kind, Ks (Q♠ K♠)",
+   "pot": 2350
   }
  ],
  "finishes": [],
