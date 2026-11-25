@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:16:46.049Z",
+ "updatedAt": "2026-11-25T01:16:59.430Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 40,
+ "handsPlayed": 41,
  "tables": [
   {
    "id": 1,
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19685,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 20165,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   },
   {
    "id": 3,
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19685,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19900,
+   "stack": 20165,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 14,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Tidepool",
+  "toAct": "Northstar",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 11,
-   "text": "Table 1 · Hand 11 · blinds 25/50 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 25, Switchback checks, [flop: 4♣ 8♥ 6♥], Freezer checks, Switchback checks, [turn: 4♣ 8♥ 6♥ 7♠], Freezer checks, Switchback checks, [river: 4♣ 8♥ 6♥ 7♠ 5♠], Freezer raises to 65, Switchback calls 65 → Freezer wins 230 with Straight, 9 high (K♣ 9♠)",
-   "pot": 230
-  },
   {
    "table": 2,
    "handNo": 11,
@@ -552,6 +546,12 @@
    "handNo": 14,
    "text": "Table 1 · Hand 14 · blinds 25/50 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 25, Highwire checks, [flop: 10♥ 3♣ J♥], Longshot raises to 65, Highwire folds → Longshot takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 2,
+   "handNo": 14,
+   "text": "Table 2 · Hand 14 · blinds 25/50 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 25, Deadpan checks, [flop: 9♦ 10♣ 7♦], Glacier checks, Deadpan checks, [turn: 9♦ 10♣ 7♦ 9♣], Glacier checks, Deadpan raises to 65, Glacier calls 65, [river: 9♦ 10♣ 7♦ 9♣ 6♦], Glacier checks, Deadpan raises to 150, Glacier calls 150 → Deadpan wins 530 with Three of a kind, 9s (3♦ 9♥)",
+   "pot": 530
   }
  ],
  "finishes": [],
