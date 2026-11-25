@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:05:41.460Z",
+ "updatedAt": "2026-11-25T02:05:55.171Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 161,
+ "handsPlayed": 162,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16210,
+     "stack": 16290,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 23719,
+     "stack": 23639,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16210,
+   "stack": 16290,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23719,
+   "stack": 23639,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 54,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 51,
-   "text": "Table 2 · Hand 51 · blinds 40/80 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 40, Tidepool checks, [flop: J♣ 7♠ 8♣], Deadpan checks, Tidepool checks, [turn: J♣ 7♠ 8♣ A♥], Deadpan checks, Tidepool checks, [river: J♣ 7♠ 8♣ A♥ 2♥], Deadpan checks, Tidepool raises to 104, Deadpan folds → Tidepool takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 3,
    "handNo": 51,
@@ -552,6 +538,12 @@
    "handNo": 54,
    "text": "Table 2 · Hand 54 · blinds 40/80 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 40, Minnow checks, [flop: J♣ 8♥ 8♠], Undertow checks, Minnow checks, [turn: J♣ 8♥ 8♠ 2♣], Undertow checks, Minnow checks, [river: J♣ 8♥ 8♠ 2♣ 3♠], Undertow raises to 104, Minnow calls 104 → Undertow wins 368 with Two pair, 8s and 6s (6♥ 6♣)",
    "pot": 368
+  },
+  {
+   "table": 3,
+   "handNo": 54,
+   "text": "Table 3 · Hand 54 · blinds 40/80 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 40, Ricochet checks, [flop: 8♣ 9♠ J♦], Mirage checks, Ricochet checks, [turn: 8♣ 9♠ J♦ 3♥], Mirage checks, Ricochet checks, [river: 8♣ 9♠ J♦ 3♥ 7♠], Mirage raises to 104, Ricochet folds → Mirage takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
