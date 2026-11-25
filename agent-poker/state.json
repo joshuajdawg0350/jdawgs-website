@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:29:49.146Z",
+ "updatedAt": "2026-11-25T02:30:04.183Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 187,
+ "handsPlayed": 188,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 20453,
+     "stack": 20353,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 15761,
+     "stack": 15961,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18667,
+     "stack": 18567,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 61
+   "handsPlayed": 62
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20453,
+   "stack": 20353,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 15761,
+   "stack": 15961,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18667,
+   "stack": 18567,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 62,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 60,
-   "text": "Table 2 · Hand 60 · blinds 40/80 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 40, Tidepool checks, [flop: 2♥ 2♦ Q♦], Deadpan checks, Tidepool checks, [turn: 2♥ 2♦ Q♦ 4♦], Deadpan checks, Tidepool checks, [river: 2♥ 2♦ Q♦ 4♦ 3♠], Deadpan checks, Tidepool checks → Tidepool wins 160 with Two pair, 4s and 2s (4♥ 9♥)",
-   "pot": 160
-  },
   {
    "table": 3,
    "handNo": 59,
@@ -552,6 +538,12 @@
    "handNo": 63,
    "text": "Table 2 · Hand 63 · blinds 50/100 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow checks, [flop: 10♠ 7♣ J♣], Undertow checks, Minnow checks, [turn: 10♠ 7♣ J♣ 8♦], Undertow checks, Minnow checks, [river: 10♠ 7♣ J♣ 8♦ 10♣], Undertow checks, Minnow checks → Undertow wins 200 with Two pair, 10s and 7s (7♠ 5♠)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 62,
+   "text": "Table 3 · Hand 62 · blinds 50/100 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 100, Mirage calls 50, Ricochet checks, [flop: 8♣ 6♠ 2♠], Mirage raises to 195, Ricochet folds, Brass folds → Mirage takes 495 (everyone else folded)",
+   "pot": 495
   }
  ],
  "finishes": [],
