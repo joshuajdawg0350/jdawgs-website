@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:58:18.874Z",
+ "updatedAt": "2026-11-25T03:58:34.459Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 381,
+ "handsPlayed": 382,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 12961,
+     "stack": 13161,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 21271,
+     "stack": 21071,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 127
+   "handsPlayed": 128
   },
   {
    "id": 3,
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 12961,
+   "stack": 13161,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21271,
+   "stack": 21071,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 128,
+  "table": 3,
+  "handNo": 126,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Bedrock",
+  "toAct": "Northstar",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 126,
-   "text": "Table 1 · Hand 126 · blinds 100/200 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 100, Magnet checks, [flop: 2♥ 10♠ 6♣], Midas checks, Magnet checks, [turn: 2♥ 10♠ 6♣ Q♥], Midas checks, Magnet checks, [river: 2♥ 10♠ 6♣ Q♥ A♦], Midas raises to 260, Magnet folds → Midas takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 2,
    "handNo": 125,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 129,
    "text": "Table 1 · Hand 129 · blinds 100/200 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 100, Tempo checks, [flop: 8♠ Q♥ 7♦], Switchback checks, Tempo raises to 260, Switchback folds → Tempo takes 660 (everyone else folded)",
+   "pot": 660
+  },
+  {
+   "table": 2,
+   "handNo": 128,
+   "text": "Table 2 · Hand 128 · blinds 100/200 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 100, Ember checks, [flop: 3♠ K♥ 6♠], Ledger checks, Ember checks, [turn: 3♠ K♥ 6♠ 6♥], Ledger raises to 260, Ember folds → Ledger takes 660 (everyone else folded)",
    "pot": 660
   }
  ],
