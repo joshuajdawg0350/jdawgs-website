@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:10:37.483Z",
+ "updatedAt": "2026-11-25T04:10:54.291Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   5000
  ],
  "level": 21,
- "handsPlayed": 418,
+ "handsPlayed": 419,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23513,
+     "stack": 31858,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 23756,
+     "stack": 15611,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 17109,
+     "stack": 16909,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 137
+   "handsPlayed": 138
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23513,
+   "stack": 31858,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23756,
+   "stack": 15611,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17109,
+   "stack": 16909,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 138,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 137,
-   "text": "Table 2 · Hand 137 · blinds 100/200 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 100, Ember checks, [flop: K♦ K♠ 3♥], Ledger raises to 260, Ember folds → Ledger takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 3,
    "handNo": 135,
@@ -552,6 +538,12 @@
    "handNo": 140,
    "text": "Table 2 · Hand 140 · blinds 100/200 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 100, Deadpan checks, [flop: J♠ 8♠ A♠], Glacier raises to 260, Deadpan folds → Glacier takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 3,
+   "handNo": 138,
+   "text": "Table 3 · Hand 138 · blinds 100/200 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 200, Cobble folds, Velcro calls 100, Fossil checks, [flop: 7♥ A♣ K♦], Velcro checks, Fossil checks, Northstar raises to 390, Velcro calls 390, Fossil folds, [turn: 7♥ A♣ K♦ J♦], Velcro checks, Northstar raises to 897, Velcro calls 897, [river: 7♥ A♣ K♦ J♦ J♠], Velcro raises to 2063, Northstar raises to 6658, Velcro calls 4595 → Northstar wins 16490 with Full house, Ks full of Js (K♠ K♥)",
+   "pot": 16490
   }
  ],
  "finishes": [],
