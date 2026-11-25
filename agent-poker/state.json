@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:07:46.441Z",
+ "updatedAt": "2026-11-25T02:08:01.664Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 167,
+ "handsPlayed": 168,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 24557,
+     "stack": 24477,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21145,
+     "stack": 21225,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 55
+   "handsPlayed": 56
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 24557,
+   "stack": 24477,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21145,
+   "stack": 21225,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 56,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 53,
-   "text": "Table 2 · Hand 53 · blinds 40/80 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 40, Undertow checks, [flop: 4♥ K♦ 5♠], Jackpot checks, Undertow checks, [turn: 4♥ K♦ 5♠ 9♣], Jackpot checks, Undertow checks, [river: 4♥ K♦ 5♠ 9♣ 2♥], Jackpot checks, Undertow checks → Jackpot wins 160 with Pair of 4s (4♣ Q♣)",
-   "pot": 160
-  },
   {
    "table": 3,
    "handNo": 53,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 56,
    "text": "Table 2 · Hand 56 · blinds 40/80 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 40, Ember checks, [flop: 4♠ 3♣ 7♥], Ledger raises to 104, Ember folds → Ledger takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 3,
+   "handNo": 56,
+   "text": "Table 3 · Hand 56 · blinds 40/80 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 40, Cobble checks, [flop: 8♥ 3♦ 10♣], Northstar checks, Cobble raises to 104, Northstar folds → Cobble takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
