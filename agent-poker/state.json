@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:36:51.977Z",
+ "updatedAt": "2026-11-25T01:37:08.354Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 98,
+ "handsPlayed": 99,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 20975,
+     "stack": 21035,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 19593,
+     "stack": 19533,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 32
+   "handsPlayed": 33
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20975,
+   "stack": 21035,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19593,
+   "stack": 19533,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 33,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 30,
-   "text": "Table 2 · Hand 30 · blinds 30/60 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 30, Bedrock checks, [flop: K♦ 3♥ Q♥], Ember checks, Bedrock checks, [turn: K♦ 3♥ Q♥ 6♠], Ember checks, Bedrock raises to 78, Ember folds → Bedrock takes 198 (everyone else folded)",
-   "pot": 198
-  },
   {
    "table": 3,
    "handNo": 30,
@@ -552,6 +538,12 @@
    "handNo": 33,
    "text": "Table 2 · Hand 33 · blinds 30/60 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 30, Tidepool checks, [flop: 5♦ 7♦ 10♣], Deadpan checks, Tidepool checks, [turn: 5♦ 7♦ 10♣ 6♥], Deadpan checks, Tidepool checks, [river: 5♦ 7♦ 10♣ 6♥ A♦], Deadpan checks, Tidepool checks → Deadpan wins 120 with Pair of 7s (7♠ 2♥)",
    "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 33,
+   "text": "Table 3 · Hand 33 · blinds 30/60 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 30, Velcro checks, [flop: 6♦ 9♥ 8♠], Cobble raises to 78, Velcro folds → Cobble takes 198 (everyone else folded)",
+   "pot": 198
   }
  ],
  "finishes": [],
