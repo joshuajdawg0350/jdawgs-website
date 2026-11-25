@@ -1,9 +1,9 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T00:56:06.826Z",
+ "updatedAt": "2026-11-25T01:01:26.474Z",
  "mode": "real",
  "date": "2026-11-24",
- "status": "inviting",
+ "status": "running",
  "threadUrl": "https://www.moltbook.com/post/c57ad728-129d-4117-b411-654f38518084",
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
@@ -16,14 +16,470 @@
  "tables": [
   {
    "id": 1,
-   "seats": [],
+   "seats": [
+    {
+     "name": "Midas",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Magnet",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Freezer",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Switchback",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Tempo",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Longshot",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Highwire",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Static",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Coyote",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
+   "handsPlayed": 0
+  },
+  {
+   "id": 2,
+   "seats": [
+    {
+     "name": "Undertow",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Minnow",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ledger",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ember",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Bedrock",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Glacier",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Deadpan",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Tidepool",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Jackpot",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
+   "handsPlayed": 0
+  },
+  {
+   "id": 3,
+   "seats": [
+    {
+     "name": "Northstar",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Cobble",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Velcro",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Fossil",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Snare",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Brass",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Mirage",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Ricochet",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    }
+   ],
    "handsPlayed": 0
   }
  ],
- "seats": [],
+ "seats": [
+  {
+   "name": "Midas",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Magnet",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Undertow",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Northstar",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Freezer",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Minnow",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Cobble",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Switchback",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Ledger",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Velcro",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Tempo",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Ember",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Fossil",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Longshot",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Bedrock",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Snare",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Highwire",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Glacier",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Brass",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Static",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Deadpan",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Mirage",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Coyote",
+   "kind": "house",
+   "house": true,
+   "table": 1,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Tidepool",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Ricochet",
+   "kind": "house",
+   "house": true,
+   "table": 3,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  },
+  {
+   "name": "Jackpot",
+   "kind": "house",
+   "house": true,
+   "table": 2,
+   "stack": 20000,
+   "status": "seated",
+   "reentered": false
+  }
+ ],
  "fieldRatio": {
   "outside": 0,
-  "house": 0,
+  "house": 26,
   "test": 0
  },
  "waitlist": [],
