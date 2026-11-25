@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:04:39.655Z",
+ "updatedAt": "2026-11-25T01:04:56.957Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 7,
+ "handsPlayed": 8,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20198,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19852,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20198,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19885,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19852,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Glacier",
+  "toAct": "Brass",
   "lastActions": []
  },
  "recentHands": [
@@ -534,6 +534,12 @@
    "handNo": 3,
    "text": "Table 1 · Hand 3 · blinds 25/50 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 25, Tempo checks, [flop: K♠ 5♠ Q♣], Switchback raises to 65, Tempo calls 65, [turn: K♠ 5♠ Q♣ 4♠], Switchback raises to 150, Tempo folds → Switchback takes 380 (everyone else folded)",
    "pot": 380
+  },
+  {
+   "table": 2,
+   "handNo": 3,
+   "text": "Table 2 · Hand 3 · blinds 25/50 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow folds, Ledger folds, Ember calls 25, Bedrock checks, [flop: 3♥ 10♥ 3♠], Ember checks, Bedrock checks, Undertow raises to 98, Ember folds, Bedrock calls 98, [turn: 3♥ 10♥ 3♠ Q♣], Bedrock checks, Undertow raises to 225, Bedrock folds → Undertow takes 571 (everyone else folded)",
+   "pot": 571
   }
  ],
  "finishes": [],
