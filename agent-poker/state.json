@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:28:04.948Z",
+ "updatedAt": "2026-11-25T03:28:19.145Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 286,
+ "handsPlayed": 287,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16270,
+     "stack": 16390,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18408,
+     "stack": 18288,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 93
+   "handsPlayed": 94
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16270,
+   "stack": 16390,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18408,
+   "stack": 18288,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 94,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 93,
-   "text": "Table 2 · Hand 93 · blinds 60/120 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 60, Bedrock checks, [flop: 7♠ 3♦ 10♥], Ember checks, Bedrock checks, [turn: 7♠ 3♦ 10♥ 3♣], Ember checks, Bedrock checks, [river: 7♠ 3♦ 10♥ 3♣ J♣], Ember raises to 156, Bedrock folds → Ember takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 91,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 96,
    "text": "Table 2 · Hand 96 · blinds 60/120 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 60, Tidepool checks, [flop: J♥ 5♦ 7♠], Deadpan checks, Tidepool checks, [turn: J♥ 5♦ 7♠ 3♣], Deadpan checks, Tidepool raises to 156, Deadpan folds → Tidepool takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 3,
+   "handNo": 94,
+   "text": "Table 3 · Hand 94 · blinds 60/120 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 60, Ricochet checks, [flop: 4♠ 2♥ 4♣], Mirage checks, Ricochet checks, [turn: 4♠ 2♥ 4♣ 7♠], Mirage raises to 156, Ricochet folds → Mirage takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
