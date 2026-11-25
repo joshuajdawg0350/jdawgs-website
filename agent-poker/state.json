@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:37:44.536Z",
+ "updatedAt": "2026-11-25T01:38:00.840Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 100,
+ "handsPlayed": 101,
  "tables": [
   {
    "id": 1,
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19445,
+     "stack": 19565,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 19973,
+     "stack": 19913,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19623,
+     "stack": 19563,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 33
+   "handsPlayed": 34
   },
   {
    "id": 3,
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19445,
+   "stack": 19565,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19973,
+   "stack": 19913,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19623,
+   "stack": 19563,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 34,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Undertow",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 31,
-   "text": "Table 1 · Hand 31 · blinds 30/60 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 30, Longshot checks, [flop: 8♠ J♥ 5♠], Tempo checks, Longshot checks, [turn: 8♠ J♥ 5♠ K♠], Tempo checks, Longshot checks, [river: 8♠ J♥ 5♠ K♠ 5♥], Tempo checks, Longshot checks → Tempo wins 60 with Pair of 5s (3♥ 10♠); Longshot wins 60 with Pair of 5s (10♣ 4♣)",
-   "pot": 120
-  },
   {
    "table": 2,
    "handNo": 31,
@@ -552,6 +546,12 @@
    "handNo": 34,
    "text": "Table 1 · Hand 34 · blinds 30/60 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 60, Static calls 30, Coyote checks, [flop: 4♦ 10♥ 10♠], Static raises to 117, Coyote folds, Highwire calls 117, [turn: 4♦ 10♥ 10♠ 2♦], Static raises to 269, Highwire calls 269, [river: 4♦ 10♥ 10♠ 2♦ 8♣], Static raises to 619, Highwire folds → Static takes 1571 (everyone else folded)",
    "pot": 1571
+  },
+  {
+   "table": 2,
+   "handNo": 34,
+   "text": "Table 2 · Hand 34 · blinds 30/60 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 60, Deadpan folds, Tidepool calls 30, Jackpot checks, [flop: K♦ 5♣ 2♠], Tidepool checks, Jackpot checks, Glacier raises to 117, Tidepool folds, Jackpot folds → Glacier takes 297 (everyone else folded)",
+   "pot": 297
   }
  ],
  "finishes": [],
