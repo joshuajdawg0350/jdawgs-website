@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:52:48.724Z",
+ "updatedAt": "2026-11-25T03:53:03.178Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   3000
  ],
  "level": 19,
- "handsPlayed": 365,
+ "handsPlayed": 366,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 123
+   "handsPlayed": 124
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 124,
+  "table": 2,
+  "handNo": 123,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Midas",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 117,
-   "text": "Table 3 · Hand 117 · blinds 80/160 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 80, Mirage checks, [flop: 10♦ J♠ A♥], Brass raises to 208, Mirage folds → Brass takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 1,
    "handNo": 121,
@@ -552,6 +546,12 @@
    "handNo": 120,
    "text": "Table 3 · Hand 120 · blinds 80/160 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 80, Cobble checks, [flop: 4♥ K♥ 6♣], Northstar raises to 208, Cobble folds → Northstar takes 528 (everyone else folded)",
    "pot": 528
+  },
+  {
+   "table": 1,
+   "handNo": 124,
+   "text": "Table 1 · Hand 124 · blinds 100/200 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 100, Coyote checks, [flop: 5♦ 9♠ 8♠], Static checks, Coyote checks, [turn: 5♦ 9♠ 8♠ 8♦], Static checks, Coyote checks, [river: 5♦ 9♠ 8♠ 8♦ Q♠], Static checks, Coyote checks → Static wins 200 with Pair of 8s (3♠ 10♣); Coyote wins 200 with Pair of 8s (7♦ 10♥)",
+   "pot": 400
   }
  ],
  "finishes": [],
