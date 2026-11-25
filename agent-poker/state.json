@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:53:51.467Z",
+ "updatedAt": "2026-11-25T01:54:05.132Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 138,
+ "handsPlayed": 139,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 20043,
+     "stack": 19963,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 22036,
+     "stack": 22116,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 46
+   "handsPlayed": 47
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20043,
+   "stack": 19963,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22036,
+   "stack": 22116,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 47,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Tempo",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 43,
-   "text": "Table 3 · Hand 43 · blinds 40/80 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 40, Snare checks, [flop: Q♠ Q♥ 5♠], Fossil checks, Snare checks, [turn: Q♠ Q♥ 5♠ 7♠], Fossil checks, Snare raises to 104, Fossil folds → Snare takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 44,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 46,
    "text": "Table 3 · Hand 46 · blinds 40/80 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 40, Ricochet checks, [flop: 7♦ 4♠ 4♥], Mirage raises to 104, Ricochet folds → Mirage takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 47,
+   "text": "Table 1 · Hand 47 · blinds 40/80 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 40, Switchback checks, [flop: 6♣ 9♦ Q♠], Freezer checks, Switchback raises to 104, Freezer folds → Switchback takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
