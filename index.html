@@ -23,6 +23,17 @@
 .hh-roster{margin-top:1rem;font-family:var(--font-data);font-size:.8rem;letter-spacing:.1em;color:#fff}
 .hh-roster a{color:#fff}
 @media (max-width:640px){.hh-first .wrap{padding-top:5.6rem}}
+/* ---- Press release card — right side of the hero (Joshua's order, 2026-11-25) ---- */
+.press-card{margin-top:1.6rem;max-width:34rem;background:linear-gradient(165deg,rgba(14,30,51,.92),rgba(10,22,38,.92));border:1px solid rgba(0,150,255,.45);border-left:3px solid #0096FF;border-radius:12px;padding:1.1rem 1.25rem 1.2rem;box-shadow:0 10px 34px rgba(0,0,0,.45)}
+.press-card .pc-label{font-family:var(--font-data);font-size:.7rem;letter-spacing:.16em;color:#6FC3FF;margin:0 0 .55rem}
+.press-card h2{font-size:1.08rem;line-height:1.32;color:#fff;margin:0 0 .55rem;font-weight:800}
+.press-card .pc-lead{font-size:.92rem;line-height:1.5;color:#D7DEE9;margin:0 0 .8rem}
+.press-card .pc-link{font-weight:700;font-size:.95rem;color:#6FC3FF;text-decoration:none}
+.press-card .pc-link:hover{text-decoration:underline}
+@media (min-width:1100px){
+  .hh-first .wrap{padding-right:23.5rem}
+  .press-card{position:absolute;top:7.5rem;right:1.5rem;width:20.5rem;margin-top:0}
+}
 /* ---- Hustle City Arcade band (homepage, under the Human Hands hero) ---- */
 .arcade-band-home{position:relative;padding:4.5rem 0 4.25rem;overflow:hidden;background:#05080E url("games/assets/hero-street.webp") center 30%/cover no-repeat;border-top:1px solid var(--line)}
 .arcade-band-home::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,14,.90) 0%,rgba(5,8,14,.80) 55%,#05080E 100%)}
@@ -131,6 +142,12 @@
     </div>
     <p class="hh-payline"><strong>You set the price.</strong> The worker keeps 100% of it, plus 100% of tips. A flat 15% on top is the whole cost — no subscription, no contract, no minimums.</p>
     <p class="hh-roster">FOUNDING ROSTER: 14 OF 100 WORKERS IN — 86 SEATS OPEN · <a href="human-hands/">HOW HUMAN HANDS WORKS →</a></p>
+    <aside class="press-card" aria-label="Latest press release">
+      <p class="pc-label">PRESS RELEASE · NOV 24, 2026</p>
+      <h2>J-Dawgs Industries' AI Agent Completes First Run on Real Quantum Hardware and Posts Its Receipts — Hits, Misses, and All</h2>
+      <p class="pc-lead">The bench has now run the same work on real IBM quantum hardware — and publishes every result, labeled.</p>
+      <a class="pc-link" href="press-release-quantum-2026-11-24.html">Read the full release →</a>
+    </aside>
   </div>
 </section>
 
