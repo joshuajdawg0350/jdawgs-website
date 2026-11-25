@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:08:34.713Z",
+ "updatedAt": "2026-11-25T03:08:50.295Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 229,
+ "handsPlayed": 230,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21105,
+     "stack": 21305,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 18967,
+     "stack": 18867,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19200,
+     "stack": 19100,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 74
+   "handsPlayed": 75
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21105,
+   "stack": 21305,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18967,
+   "stack": 18867,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19200,
+   "stack": 19100,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 75,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 74,
-   "text": "Table 2 · Hand 74 · blinds 50/100 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 50, Ember checks, [flop: J♣ 7♥ 3♦], Ledger raises to 130, Ember calls 130, [turn: J♣ 7♥ 3♦ K♣], Ledger raises to 299, Ember folds → Ledger takes 759 (everyone else folded)",
-   "pot": 759
-  },
   {
    "table": 3,
    "handNo": 72,
@@ -552,6 +538,12 @@
    "handNo": 77,
    "text": "Table 2 · Hand 77 · blinds 50/100 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 50, Deadpan checks, [flop: 4♠ 6♦ K♥], Glacier raises to 130, Deadpan raises to 420, Glacier calls 290, [turn: 4♠ 6♦ K♥ 10♣], Glacier checks, Deadpan raises to 676, Glacier folds → Deadpan takes 1716 (everyone else folded)",
    "pot": 1716
+  },
+  {
+   "table": 3,
+   "handNo": 75,
+   "text": "Table 3 · Hand 75 · blinds 50/100 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 100, Velcro folds, Fossil calls 50, Snare checks, [flop: 7♠ A♣ 7♦], Fossil checks, Snare checks, Cobble checks, [turn: 7♠ A♣ 7♦ 2♣], Fossil checks, Snare checks, Cobble checks, [river: 7♠ A♣ 7♦ 2♣ 9♣], Fossil checks, Snare checks, Cobble raises to 195, Fossil folds, Snare folds → Cobble takes 495 (everyone else folded)",
+   "pot": 495
   }
  ],
  "finishes": [],
