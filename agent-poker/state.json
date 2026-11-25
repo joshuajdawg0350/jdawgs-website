@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:47:21.628Z",
+ "updatedAt": "2026-11-25T01:47:39.651Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 121,
+ "handsPlayed": 122,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 13714,
+     "stack": 13119,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19035,
+     "stack": 19710,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 20137,
+     "stack": 20057,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 40
+   "handsPlayed": 41
   },
   {
    "id": 3,
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 13714,
+   "stack": 13119,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19035,
+   "stack": 19710,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20137,
+   "stack": 20057,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 41,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Tidepool",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 38,
-   "text": "Table 1 · Hand 38 · blinds 30/60 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 30, Switchback checks, [flop: 5♣ A♣ 4♥], Freezer checks, Switchback checks, [turn: 5♣ A♣ 4♥ J♦], Freezer raises to 78, Switchback folds → Freezer takes 198 (everyone else folded)",
-   "pot": 198
-  },
   {
    "table": 2,
    "handNo": 38,
@@ -552,6 +546,12 @@
    "handNo": 41,
    "text": "Table 1 · Hand 41 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 6♣ K♣ 3♥], Longshot checks, Highwire checks, [turn: 6♣ K♣ 3♥ K♠], Longshot checks, Highwire checks, [river: 6♣ K♣ 3♥ K♠ 5♦], Longshot raises to 104, Highwire folds → Longshot takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 2,
+   "handNo": 41,
+   "text": "Table 2 · Hand 41 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 80, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: 7♣ 8♣ 10♣], Glacier checks, Deadpan checks, Ledger raises to 156, Glacier calls 156, Deadpan folds, [turn: 7♣ 8♣ 10♣ J♦], Glacier raises to 359, Ledger calls 359, [river: 7♣ 8♣ 10♣ J♦ K♦], Glacier raises to 826, Ledger folds → Glacier takes 2096 (everyone else folded)",
+   "pot": 2096
   }
  ],
  "finishes": [],
