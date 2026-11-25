@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:49:32.336Z",
+ "updatedAt": "2026-11-25T01:49:47.130Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 126,
+ "handsPlayed": 127,
  "tables": [
   {
    "id": 1,
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20419,
+     "stack": 20499,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19845,
+     "stack": 19765,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 42
+   "handsPlayed": 43
   },
   {
    "id": 2,
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20419,
+   "stack": 20499,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19845,
+   "stack": 19765,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 43,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Midas",
+  "toAct": "Undertow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 39,
-   "text": "Table 3 · Hand 39 · blinds 30/60 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage raises to 120, Ricochet calls 90, Northstar folds, [flop: 6♣ 7♥ 9♦], Ricochet checks, Mirage raises to 195, Ricochet calls 195, [turn: 6♣ 7♥ 9♦ 7♦], Ricochet raises to 449, Mirage raises to 1189, Ricochet calls 740, [river: 6♣ 7♥ 9♦ 7♦ 5♦], Ricochet checks, Mirage raises to 1994, Ricochet calls 1994 → Ricochet wins 7056 with Three of a kind, 7s (7♠ A♠)",
-   "pot": 7056
-  },
   {
    "table": 1,
    "handNo": 40,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 42,
    "text": "Table 3 · Hand 42 · blinds 40/80 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 40, Fossil checks, [flop: 3♦ 2♦ 6♣], Velcro raises to 104, Fossil folds → Velcro takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 43,
+   "text": "Table 1 · Hand 43 · blinds 40/80 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 40, Coyote checks, [flop: 9♠ 7♣ 4♥], Static raises to 104, Coyote folds → Static takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
