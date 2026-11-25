@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:46:00.761Z",
+ "updatedAt": "2026-11-25T01:46:22.569Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 118,
+ "handsPlayed": 119,
  "tables": [
   {
    "id": 1,
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 24910,
+     "stack": 25440,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19565,
+     "stack": 19035,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   },
   {
    "id": 3,
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 24910,
+   "stack": 25440,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19565,
+   "stack": 19035,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 40,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Deadpan",
+  "toAct": "Velcro",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 37,
-   "text": "Table 1 · Hand 37 · blinds 30/60 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 30, Freezer checks, [flop: A♣ 9♥ J♥], Magnet checks, Freezer checks, [turn: A♣ 9♥ J♥ A♦], Magnet checks, Freezer checks, [river: A♣ 9♥ J♥ A♦ 7♦], Magnet checks, Freezer checks → Magnet wins 120 with Pair of As (2♥ K♦)",
-   "pot": 120
-  },
   {
    "table": 2,
    "handNo": 37,
@@ -552,6 +546,12 @@
    "handNo": 40,
    "text": "Table 1 · Hand 40 · blinds 30/60 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 30, Longshot checks, [flop: 10♦ J♣ A♥], Tempo raises to 78, Longshot calls 78, [turn: 10♦ J♣ A♥ Q♣], Tempo raises to 179, Longshot calls 179, [river: 10♦ J♣ A♥ Q♣ Q♥], Tempo raises to 412, Longshot raises to 1330, Tempo calls 918 → Longshot wins 3294 with Full house, Qs full of Js (Q♦ J♦)",
    "pot": 3294
+  },
+  {
+   "table": 2,
+   "handNo": 40,
+   "text": "Table 2 · Hand 40 · blinds 30/60 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 30, Glacier checks, [flop: 2♥ 3♠ 6♠], Bedrock checks, Glacier checks, [turn: 2♥ 3♠ 6♠ 7♥], Bedrock checks, Glacier checks, [river: 2♥ 3♠ 6♠ 7♥ 8♥], Bedrock raises to 78, Glacier raises to 207, Bedrock raises to 470, Glacier calls 263 → Bedrock wins 1060 with Flush, 9 high (4♥ 9♥)",
+   "pot": 1060
   }
  ],
  "finishes": [],
