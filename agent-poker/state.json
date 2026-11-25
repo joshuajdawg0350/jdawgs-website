@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:01:57.979Z",
+ "updatedAt": "2026-11-25T01:02:17.132Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20115,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20115,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Ember",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
@@ -498,6 +498,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 50, Magnet folds, Freezer checks, [flop: 8♥ 6♥ 6♠], Freezer checks, Midas raises to 81, Freezer folds → Midas takes 206 (everyone else folded)",
    "pot": 206
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 25, Ledger raises to 115, Minnow calls 65, [flop: 9♦ J♥ 4♦], Minnow raises to 150, Ledger folds → Minnow takes 380 (everyone else folded)",
+   "pot": 380
   }
  ],
  "finishes": [],
