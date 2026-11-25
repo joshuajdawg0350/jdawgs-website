@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:36:53.663Z",
+ "updatedAt": "2026-11-25T03:37:05.414Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 315,
+ "handsPlayed": 316,
  "tables": [
   {
    "id": 1,
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 20010,
+     "stack": 20170,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19607,
+     "stack": 19447,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 105
+   "handsPlayed": 106
   },
   {
    "id": 3,
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20010,
+   "stack": 20170,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19607,
+   "stack": 19447,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 106,
+  "table": 3,
+  "handNo": 104,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Undertow",
+  "toAct": "Velcro",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 104,
-   "text": "Table 1 · Hand 104 · blinds 80/160 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 80, Highwire checks, [flop: 7♠ 5♠ 3♠], Longshot checks, Highwire checks, [turn: 7♠ 5♠ 3♠ 4♦], Longshot raises to 208, Highwire folds → Longshot takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 2,
    "handNo": 103,
@@ -552,6 +546,12 @@
    "handNo": 107,
    "text": "Table 1 · Hand 107 · blinds 80/160 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 80, Midas checks, [flop: 5♦ 9♦ 7♥], Coyote checks, Midas checks, [turn: 5♦ 9♦ 7♥ K♣], Coyote raises to 208, Midas folds → Coyote takes 528 (everyone else folded)",
    "pot": 528
+  },
+  {
+   "table": 2,
+   "handNo": 106,
+   "text": "Table 2 · Hand 106 · blinds 80/160 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 80, Jackpot checks, [flop: 5♣ 9♥ K♥], Tidepool checks, Jackpot checks, [turn: 5♣ 9♥ K♥ Q♥], Tidepool checks, Jackpot checks, [river: 5♣ 9♥ K♥ Q♥ 8♥], Tidepool checks, Jackpot checks → Tidepool wins 320 with A high (3♠ A♦)",
+   "pot": 320
   }
  ],
  "finishes": [],
