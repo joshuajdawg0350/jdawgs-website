@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:16:51.395Z",
+ "updatedAt": "2026-11-25T04:17:13.604Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 432,
+ "handsPlayed": 433,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 19363,
+     "stack": 19603,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 13561,
+     "stack": 13321,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 144
+   "handsPlayed": 145
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19363,
+   "stack": 19603,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 13561,
+   "stack": 13321,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 145,
+  "table": 3,
+  "handNo": 143,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Ember",
+  "toAct": "Cobble",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 143,
-   "text": "Table 1 · Hand 143 · blinds 120/240 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 120, Midas checks, [flop: 8♠ J♣ Q♣], Coyote checks, Midas checks, [turn: 8♠ J♣ Q♣ 5♦], Coyote checks, Midas checks, [river: 8♠ J♣ Q♣ 5♦ K♥], Coyote raises to 312, Midas folds → Coyote takes 792 (everyone else folded)",
-   "pot": 792
-  },
   {
    "table": 2,
    "handNo": 142,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 146,
    "text": "Table 1 · Hand 146 · blinds 120/240 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 120, Switchback checks, [flop: 8♣ A♣ 7♦], Freezer checks, Switchback checks, [turn: 8♣ A♣ 7♦ 5♣], Freezer checks, Switchback checks, [river: 8♣ A♣ 7♦ 5♣ J♣], Freezer checks, Switchback checks → Freezer wins 480 with Pair of 8s (8♠ 9♦)",
+   "pot": 480
+  },
+  {
+   "table": 2,
+   "handNo": 145,
+   "text": "Table 2 · Hand 145 · blinds 120/240 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 120, Ledger checks, [flop: J♦ K♣ 4♣], Minnow checks, Ledger checks, [turn: J♦ K♣ 4♣ J♠], Minnow checks, Ledger checks, [river: J♦ K♣ 4♣ J♠ 10♦], Minnow checks, Ledger checks → Minnow wins 480 with Two pair, Js and 10s (10♣ 8♣)",
    "pot": 480
   }
  ],
