@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:23:42.966Z",
+ "updatedAt": "2026-11-25T03:23:57.870Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 273,
+ "handsPlayed": 274,
  "tables": [
   {
    "id": 1,
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 91
+   "handsPlayed": 92
   },
   {
    "id": 3,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 92,
+  "table": 3,
+  "handNo": 90,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Bedrock",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 90,
-   "text": "Table 1 · Hand 90 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: 4♣ 3♥ 4♦], Midas checks, Magnet checks, [turn: 4♣ 3♥ 4♦ 7♠], Midas checks, Magnet checks, [river: 4♣ 3♥ 4♦ 7♠ 7♣], Midas checks, Magnet checks → Midas wins 240 with Two pair, 7s and 4s (Q♠ 5♠)",
-   "pot": 240
-  },
   {
    "table": 2,
    "handNo": 89,
@@ -552,6 +546,12 @@
    "handNo": 93,
    "text": "Table 1 · Hand 93 · blinds 60/120 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 60, Tempo checks, [flop: 2♣ A♠ Q♣], Switchback checks, Tempo raises to 156, Switchback folds → Tempo takes 396 (everyone else folded)",
    "pot": 396
+  },
+  {
+   "table": 2,
+   "handNo": 92,
+   "text": "Table 2 · Hand 92 · blinds 60/120 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 60, Ember checks, [flop: 9♣ 6♦ 3♠], Ledger checks, Ember checks, [turn: 9♣ 6♦ 3♠ 3♣], Ledger checks, Ember checks, [river: 9♣ 6♦ 3♠ 3♣ K♦], Ledger checks, Ember checks → Ledger wins 120 with Pair of 3s (J♠ A♦); Ember wins 120 with Pair of 3s (J♣ A♥)",
+   "pot": 240
   }
  ],
  "finishes": [],
