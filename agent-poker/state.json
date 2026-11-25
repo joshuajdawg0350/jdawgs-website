@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:26:19.799Z",
+ "updatedAt": "2026-11-25T01:26:32.877Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 68,
+ "handsPlayed": 69,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19685,
+     "stack": 19625,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 20101,
+     "stack": 20161,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 22
+   "handsPlayed": 23
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19685,
+   "stack": 19625,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20101,
+   "stack": 20161,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 23,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 20,
-   "text": "Table 2 · Hand 20 · blinds 25/50 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 25, Ember checks, [flop: 5♥ 7♦ 3♠], Ledger checks, Ember raises to 65, Ledger calls 65, [turn: 5♥ 7♦ 3♠ 4♦], Ledger checks, Ember raises to 150, Ledger folds → Ember takes 380 (everyone else folded)",
-   "pot": 380
-  },
   {
    "table": 3,
    "handNo": 20,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 23,
    "text": "Table 2 · Hand 23 · blinds 30/60 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 30, Deadpan checks, [flop: 2♠ 8♥ Q♣], Glacier checks, Deadpan raises to 78, Glacier folds → Deadpan takes 198 (everyone else folded)",
+   "pot": 198
+  },
+  {
+   "table": 3,
+   "handNo": 23,
+   "text": "Table 3 · Hand 23 · blinds 30/60 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 30, Northstar checks, [flop: 5♠ 10♣ K♠], Ricochet raises to 78, Northstar folds → Ricochet takes 198 (everyone else folded)",
    "pot": 198
   }
  ],
