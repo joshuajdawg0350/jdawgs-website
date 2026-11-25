@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:06:50.438Z",
+ "updatedAt": "2026-11-25T01:07:09.937Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 17284,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 22666,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 2,
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 17284,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 22666,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Static",
+  "toAct": "Tidepool",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble calls 25, Velcro checks, [flop: 8♦ 9♥ 7♥], Cobble checks, Velcro checks, Northstar checks, [turn: 8♦ 9♥ 7♥ 5♦], Cobble checks, Velcro checks, Northstar checks, [river: 8♦ 9♥ 7♥ 5♦ 6♣], Cobble checks, Velcro checks, Northstar checks → Northstar wins 50 with Straight, 9 high (Q♦ Q♥); Cobble wins 50 with Straight, 9 high (K♦ 2♥); Velcro wins 50 with Straight, 9 high (2♦ 9♠)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -552,6 +546,12 @@
    "handNo": 4,
    "text": "Table 3 · Hand 4 · blinds 25/50 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 25, Brass checks, [flop: 3♦ 10♠ 6♥], Snare checks, Brass raises to 65, Snare folds → Brass takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 1,
+   "handNo": 5,
+   "text": "Table 1 · Hand 5 · blinds 25/50 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 25, Highwire checks, [flop: 4♥ K♦ 4♠], Longshot raises to 65, Highwire raises to 210, Longshot raises to 454, Highwire calls 244, [turn: 4♥ K♦ 4♠ 5♥], Longshot checks, Highwire raises to 655, Longshot calls 655, [river: 4♥ K♦ 4♠ 5♥ 3♥], Longshot checks, Highwire raises to 1507, Longshot calls 1507 → Highwire wins 5332 with Three of a kind, 4s (8♥ 4♦)",
+   "pot": 5332
   }
  ],
  "finishes": [],
