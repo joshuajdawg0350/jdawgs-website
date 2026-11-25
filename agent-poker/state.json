@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:45:04.646Z",
+ "updatedAt": "2026-11-25T01:45:25.134Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 116,
+ "handsPlayed": 117,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19685,
+     "stack": 19625,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 19944,
+     "stack": 16446,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 20221,
+     "stack": 23779,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 38
+   "handsPlayed": 39
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19685,
+   "stack": 19625,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19944,
+   "stack": 16446,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20221,
+   "stack": 23779,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 39,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Cobble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 36,
-   "text": "Table 2 · Hand 36 · blinds 30/60 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 30, Minnow checks, [flop: 3♦ 8♠ 10♥], Undertow checks, Minnow checks, [turn: 3♦ 8♠ 10♥ Q♦], Undertow checks, Minnow checks, [river: 3♦ 8♠ 10♥ Q♦ 8♦], Undertow checks, Minnow checks → Undertow wins 60 with Pair of 8s (5♦ A♠); Minnow wins 60 with Pair of 8s (9♦ A♥)",
-   "pot": 120
-  },
   {
    "table": 3,
    "handNo": 36,
@@ -552,6 +538,12 @@
    "handNo": 39,
    "text": "Table 2 · Hand 39 · blinds 30/60 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 60, Ember calls 30, Bedrock checks, [flop: 7♦ 3♥ J♦], Ember checks, Bedrock checks, Ledger checks, [turn: 7♦ 3♥ J♦ 10♥], Ember checks, Bedrock checks, Ledger checks, [river: 7♦ 3♥ J♦ 10♥ 9♣], Ember checks, Bedrock checks, Ledger checks → Ember wins 180 with Pair of 7s (7♠ 5♦)",
    "pot": 180
+  },
+  {
+   "table": 3,
+   "handNo": 39,
+   "text": "Table 3 · Hand 39 · blinds 30/60 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage raises to 120, Ricochet calls 90, Northstar folds, [flop: 6♣ 7♥ 9♦], Ricochet checks, Mirage raises to 195, Ricochet calls 195, [turn: 6♣ 7♥ 9♦ 7♦], Ricochet raises to 449, Mirage raises to 1189, Ricochet calls 740, [river: 6♣ 7♥ 9♦ 7♦ 5♦], Ricochet checks, Mirage raises to 1994, Ricochet calls 1994 → Ricochet wins 7056 with Three of a kind, 7s (7♠ A♠)",
+   "pot": 7056
   }
  ],
  "finishes": [],
