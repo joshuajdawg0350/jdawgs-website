@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:44:59.584Z",
+ "updatedAt": "2026-11-25T03:45:14.418Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 343,
+ "handsPlayed": 344,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21169,
+     "stack": 22015,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 25362,
+     "stack": 24516,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 112
+   "handsPlayed": 113
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21169,
+   "stack": 22015,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 25362,
+   "stack": 24516,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 113,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 112,
-   "text": "Table 2 · Hand 112 · blinds 80/160 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 80, Glacier checks, [flop: K♣ 5♣ 10♦], Bedrock checks, Glacier raises to 208, Bedrock folds → Glacier takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 3,
    "handNo": 110,
@@ -552,6 +538,12 @@
    "handNo": 115,
    "text": "Table 2 · Hand 115 · blinds 80/160 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 80, Jackpot checks, [flop: 6♦ 8♠ 6♣], Tidepool raises to 208, Jackpot calls 208, [turn: 6♦ 8♠ 6♣ 5♠], Tidepool raises to 478, Jackpot folds → Tidepool takes 1214 (everyone else folded)",
    "pot": 1214
+  },
+  {
+   "table": 3,
+   "handNo": 113,
+   "text": "Table 3 · Hand 113 · blinds 80/160 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 80, Velcro checks, [flop: K♦ 8♣ 5♣], Cobble raises to 208, Velcro calls 208, [turn: K♦ 8♣ 5♣ 5♦], Cobble raises to 478, Velcro calls 478, [river: K♦ 8♣ 5♣ 5♦ K♣], Cobble raises to 1100, Velcro folds → Cobble takes 2792 (everyone else folded)",
+   "pot": 2792
   }
  ],
  "finishes": [],
