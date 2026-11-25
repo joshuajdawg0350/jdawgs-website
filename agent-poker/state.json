@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:11:12.900Z",
+ "updatedAt": "2026-11-25T01:11:27.580Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 24,
+ "handsPlayed": 25,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 9,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Freezer",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 5,
-   "text": "Table 3 · Hand 5 · blinds 25/50 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 25, Mirage checks, [flop: 6♦ 4♥ K♥], Brass checks, Mirage checks, [turn: 6♦ 4♥ K♥ 9♠], Brass raises to 65, Mirage calls 65, [river: 6♦ 4♥ K♥ 9♠ K♠], Brass checks, Mirage checks → Mirage wins 230 with Two pair, Ks and 9s (8♥ 9♣)",
-   "pot": 230
-  },
   {
    "table": 1,
    "handNo": 6,
@@ -552,6 +546,12 @@
    "handNo": 8,
    "text": "Table 3 · Hand 8 · blinds 25/50 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 25, Cobble checks, [flop: 4♠ 5♠ 8♥], Northstar checks, Cobble checks, [turn: 4♠ 5♠ 8♥ 8♦], Northstar checks, Cobble raises to 65, Northstar calls 65, [river: 4♠ 5♠ 8♥ 8♦ 9♦], Northstar checks, Cobble raises to 150, Northstar calls 150 → Cobble wins 530 with Two pair, 8s and 5s (A♦ 5♣)",
    "pot": 530
+  },
+  {
+   "table": 1,
+   "handNo": 9,
+   "text": "Table 1 · Hand 9 · blinds 25/50 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 25, Magnet checks, [flop: K♦ Q♦ 5♣], Midas checks, Magnet checks, [turn: K♦ Q♦ 5♣ J♠], Midas checks, Magnet checks, [river: K♦ Q♦ 5♣ J♠ Q♣], Midas checks, Magnet checks → Midas wins 50 with Pair of Qs (3♠ A♠); Magnet wins 50 with Pair of Qs (9♥ A♦)",
+   "pot": 100
   }
  ],
  "finishes": [],
