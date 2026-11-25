@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:04:49.140Z",
+ "updatedAt": "2026-11-25T02:05:01.656Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 158,
+ "handsPlayed": 159,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 20028,
+     "stack": 20108,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16290,
+     "stack": 16210,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 52
+   "handsPlayed": 53
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20028,
+   "stack": 20108,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16290,
+   "stack": 16210,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 53,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 50,
-   "text": "Table 2 · Hand 50 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: A♥ 4♥ Q♠], Glacier raises to 104, Deadpan calls 104, [turn: A♥ 4♥ Q♠ 4♦], Glacier checks, Deadpan checks, [river: A♥ 4♥ Q♠ 4♦ 6♦], Glacier checks, Deadpan checks → Glacier wins 184 with Two pair, Qs and 4s (J♦ Q♦); Deadpan wins 184 with Two pair, Qs and 4s (10♥ Q♥)",
-   "pot": 368
-  },
   {
    "table": 3,
    "handNo": 50,
@@ -552,6 +538,12 @@
    "handNo": 53,
    "text": "Table 2 · Hand 53 · blinds 40/80 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 40, Undertow checks, [flop: 4♥ K♦ 5♠], Jackpot checks, Undertow checks, [turn: 4♥ K♦ 5♠ 9♣], Jackpot checks, Undertow checks, [river: 4♥ K♦ 5♠ 9♣ 2♥], Jackpot checks, Undertow checks → Jackpot wins 160 with Pair of 4s (4♣ Q♣)",
    "pot": 160
+  },
+  {
+   "table": 3,
+   "handNo": 53,
+   "text": "Table 3 · Hand 53 · blinds 40/80 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 40, Mirage checks, [flop: K♣ 4♥ J♥], Brass raises to 104, Mirage folds → Brass takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
