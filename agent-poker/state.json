@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:49:26.039Z",
+ "updatedAt": "2026-11-25T02:49:48.365Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 193,
+ "handsPlayed": 194,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21936,
+     "stack": 21407,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18308,
+     "stack": 18837,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 65
+   "handsPlayed": 66
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21936,
+   "stack": 21407,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18308,
+   "stack": 18837,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 66,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Longshot",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 62,
-   "text": "Table 2 · Hand 62 · blinds 50/100 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 100, Jackpot folds, Undertow checks, [flop: 9♣ 4♥ J♥], Undertow checks, Tidepool checks, [turn: 9♣ 4♥ J♥ 7♣], Undertow checks, Tidepool checks, [river: 9♣ 4♥ J♥ 7♣ K♣], Undertow checks, Tidepool checks → Tidepool wins 250 with A high (10♦ A♦)",
-   "pot": 250
-  },
   {
    "table": 3,
    "handNo": 61,
@@ -552,6 +546,12 @@
    "handNo": 65,
    "text": "Table 2 · Hand 65 · blinds 50/100 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 50, Ember raises to 230, Ledger folds → Ember takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 66,
+   "text": "Table 1 · Hand 66 · blinds 50/100 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 50, Tempo checks, [flop: 8♥ 6♥ 6♠], Switchback checks, Tempo raises to 130, Switchback calls 130, [turn: 8♥ 6♥ 6♠ 4♥], Switchback checks, Tempo raises to 299, Switchback calls 299, [river: 8♥ 6♥ 6♠ 4♥ 4♦], Switchback checks, Tempo raises to 688, Switchback folds → Tempo takes 1746 (everyone else folded)",
+   "pot": 1746
   }
  ],
  "finishes": [],
