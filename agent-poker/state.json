@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:37:31.407Z",
+ "updatedAt": "2026-11-25T03:37:43.653Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 317,
+ "handsPlayed": 318,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17152,
+     "stack": 17312,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20631,
+     "stack": 20471,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 107
+   "handsPlayed": 108
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17152,
+   "stack": 17312,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20631,
+   "stack": 20471,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 108,
+  "table": 2,
+  "handNo": 107,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 101,
-   "text": "Table 3 · Hand 101 · blinds 80/160 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass raises to 320, Mirage calls 160, [flop: K♥ 2♣ 3♣], Brass raises to 416, Mirage calls 416, [turn: K♥ 2♣ 3♣ 3♦], Brass checks, Mirage checks, [river: K♥ 2♣ 3♣ 3♦ 8♥], Brass checks, Mirage checks → Brass wins 736 with Two pair, 10s and 3s (10♠ 10♣); Mirage wins 736 with Two pair, 10s and 3s (10♦ 10♥)",
-   "pot": 1472
-  },
   {
    "table": 1,
    "handNo": 105,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 104,
    "text": "Table 3 · Hand 104 · blinds 80/160 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 80, Cobble checks, [flop: J♥ 9♠ 9♥], Northstar checks, Cobble raises to 208, Northstar folds → Cobble takes 528 (everyone else folded)",
+   "pot": 528
+  },
+  {
+   "table": 1,
+   "handNo": 108,
+   "text": "Table 1 · Hand 108 · blinds 80/160 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 80, Magnet checks, [flop: 5♠ 7♠ 4♣], Midas checks, Magnet checks, [turn: 5♠ 7♠ 4♣ 6♠], Midas raises to 208, Magnet folds → Midas takes 528 (everyone else folded)",
    "pot": 528
   }
  ],
