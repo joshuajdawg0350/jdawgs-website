@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:05:14.842Z",
+ "updatedAt": "2026-11-25T02:05:29.273Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  120,
-  240
+  150,
+  300
  ],
- "level": 8,
- "handsPlayed": 159,
+ "level": 9,
+ "handsPlayed": 160,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17532,
+     "stack": 17612,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20377,
+     "stack": 20297,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 53
+   "handsPlayed": 54
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17532,
+   "stack": 17612,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20377,
+   "stack": 20297,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 54,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Freezer",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 50,
-   "text": "Table 3 · Hand 50 · blinds 40/80 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 40, Fossil checks, [flop: 9♣ 10♦ 4♠], Velcro checks, Fossil checks, [turn: 9♣ 10♦ 4♠ 4♣], Velcro checks, Fossil checks, [river: 9♣ 10♦ 4♠ 4♣ J♥], Velcro checks, Fossil checks → Fossil wins 160 with Pair of 4s (6♦ Q♥)",
-   "pot": 160
-  },
   {
    "table": 1,
    "handNo": 51,
@@ -552,6 +546,12 @@
    "handNo": 53,
    "text": "Table 3 · Hand 53 · blinds 40/80 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 40, Mirage checks, [flop: K♣ 4♥ J♥], Brass raises to 104, Mirage folds → Brass takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 54,
+   "text": "Table 1 · Hand 54 · blinds 40/80 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 40, Magnet checks, [flop: A♥ 4♣ J♠], Midas checks, Magnet checks, [turn: A♥ 4♣ J♠ J♣], Midas checks, Magnet checks, [river: A♥ 4♣ J♠ J♣ 2♦], Midas checks, Magnet checks → Midas wins 160 with Pair of Js (9♠ K♠)",
+   "pot": 160
   }
  ],
  "finishes": [],
