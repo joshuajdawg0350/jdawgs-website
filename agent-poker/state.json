@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:42:13.630Z",
+ "updatedAt": "2026-11-25T03:42:27.740Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 334,
+ "handsPlayed": 335,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16390,
+     "stack": 16550,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18088,
+     "stack": 17928,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 109
+   "handsPlayed": 110
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16390,
+   "stack": 16550,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18088,
+   "stack": 17928,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 110,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 109,
-   "text": "Table 2 · Hand 109 · blinds 80/160 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 80, Ledger checks, [flop: Q♣ 7♥ Q♥], Minnow checks, Ledger checks, [turn: Q♣ 7♥ Q♥ 8♠], Minnow checks, Ledger raises to 208, Minnow calls 208, [river: Q♣ 7♥ Q♥ 8♠ 5♥], Minnow checks, Ledger raises to 478, Minnow folds → Ledger takes 1214 (everyone else folded)",
-   "pot": 1214
-  },
   {
    "table": 3,
    "handNo": 107,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 112,
    "text": "Table 2 · Hand 112 · blinds 80/160 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 80, Glacier checks, [flop: K♣ 5♣ 10♦], Bedrock checks, Glacier raises to 208, Bedrock folds → Glacier takes 528 (everyone else folded)",
+   "pot": 528
+  },
+  {
+   "table": 3,
+   "handNo": 110,
+   "text": "Table 3 · Hand 110 · blinds 80/160 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 80, Ricochet checks, [flop: K♣ J♥ 4♥], Mirage raises to 208, Ricochet folds → Mirage takes 528 (everyone else folded)",
    "pot": 528
   }
  ],
