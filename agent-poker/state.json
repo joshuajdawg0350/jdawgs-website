@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:50:36.455Z",
+ "updatedAt": "2026-11-25T02:50:49.743Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 196,
+ "handsPlayed": 197,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18837,
+     "stack": 18937,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18891,
+     "stack": 18791,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 66
+   "handsPlayed": 67
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18837,
+   "stack": 18937,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18891,
+   "stack": 18791,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 67,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Highwire",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 63,
-   "text": "Table 2 · Hand 63 · blinds 50/100 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 50, Minnow checks, [flop: 10♠ 7♣ J♣], Undertow checks, Minnow checks, [turn: 10♠ 7♣ J♣ 8♦], Undertow checks, Minnow checks, [river: 10♠ 7♣ J♣ 8♦ 10♣], Undertow checks, Minnow checks → Undertow wins 200 with Two pair, 10s and 7s (7♠ 5♠)",
-   "pot": 200
-  },
   {
    "table": 3,
    "handNo": 62,
@@ -552,6 +546,12 @@
    "handNo": 64,
    "text": "Table 3 · Hand 64 · blinds 50/100 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble checks, [flop: A♦ Q♣ K♠], Northstar checks, Cobble raises to 130, Northstar folds → Cobble takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 67,
+   "text": "Table 1 · Hand 67 · blinds 50/100 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 50, Longshot checks, [flop: 7♦ J♦ 3♦], Tempo checks, Longshot checks, [turn: 7♦ J♦ 3♦ K♦], Tempo checks, Longshot checks, [river: 7♦ J♦ 3♦ K♦ 8♣], Tempo checks, Longshot checks → Tempo wins 200 with Pair of 3s (3♠ 5♠)",
+   "pot": 200
   }
  ],
  "finishes": [],
