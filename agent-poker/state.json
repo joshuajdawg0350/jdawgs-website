@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:54:57.458Z",
+ "updatedAt": "2026-11-25T01:55:15.260Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 141,
+ "handsPlayed": 142,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 22116,
+     "stack": 22036,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18068,
+     "stack": 18148,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 47
+   "handsPlayed": 48
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22116,
+   "stack": 22036,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18068,
+   "stack": 18148,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 48,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Longshot",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 44,
-   "text": "Table 3 · Hand 44 · blinds 40/80 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 40, Brass checks, [flop: 7♥ 3♥ 6♣], Snare checks, Brass checks, [turn: 7♥ 3♥ 6♣ 3♠], Snare raises to 104, Brass calls 104, [river: 7♥ 3♥ 6♣ 3♠ 4♦], Snare checks, Brass raises to 239, Snare calls 239 → Brass wins 846 with Three of a kind, 3s (3♣ 2♠)",
-   "pot": 846
-  },
   {
    "table": 1,
    "handNo": 45,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 47,
    "text": "Table 3 · Hand 47 · blinds 40/80 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 40, Northstar checks, [flop: 6♣ A♣ 3♣], Ricochet raises to 104, Northstar folds → Ricochet takes 264 (everyone else folded)",
+   "pot": 264
+  },
+  {
+   "table": 1,
+   "handNo": 48,
+   "text": "Table 1 · Hand 48 · blinds 40/80 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 40, Tempo checks, [flop: 4♣ A♠ 8♦], Switchback checks, Tempo checks, [turn: 4♣ A♠ 8♦ 7♠], Switchback checks, Tempo checks, [river: 4♣ A♠ 8♦ 7♠ 8♣], Switchback checks, Tempo raises to 104, Switchback folds → Tempo takes 264 (everyone else folded)",
    "pot": 264
   }
  ],
