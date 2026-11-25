@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:59:12.929Z",
+ "updatedAt": "2026-11-25T02:59:29.633Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 203,
+ "handsPlayed": 204,
  "tables": [
   {
    "id": 1,
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20669,
+     "stack": 20769,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19375,
+     "stack": 19275,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 69
+   "handsPlayed": 70
   },
   {
    "id": 2,
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20669,
+   "stack": 20769,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19375,
+   "stack": 19275,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 70,
+  "table": 2,
+  "handNo": 69,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Midas",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 66,
-   "text": "Table 1 · Hand 66 · blinds 50/100 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 50, Tempo checks, [flop: 8♥ 6♥ 6♠], Switchback checks, Tempo raises to 130, Switchback calls 130, [turn: 8♥ 6♥ 6♠ 4♥], Switchback checks, Tempo raises to 299, Switchback calls 299, [river: 8♥ 6♥ 6♠ 4♥ 4♦], Switchback checks, Tempo raises to 688, Switchback folds → Tempo takes 1746 (everyone else folded)",
-   "pot": 1746
-  },
   {
    "table": 2,
    "handNo": 66,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 69,
    "text": "Table 1 · Hand 69 · blinds 50/100 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 50, Static checks, [flop: J♥ A♦ K♠], Highwire checks, Static checks, [turn: J♥ A♦ K♠ A♣], Highwire checks, Static checks, [river: J♥ A♦ K♠ A♣ 6♣], Highwire checks, Static raises to 130, Highwire folds → Static takes 330 (everyone else folded)",
+   "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 70,
+   "text": "Table 1 · Hand 70 · blinds 50/100 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 50, Coyote checks, [flop: 8♥ 6♥ 6♠], Static raises to 130, Coyote folds → Static takes 330 (everyone else folded)",
    "pot": 330
   }
  ],
