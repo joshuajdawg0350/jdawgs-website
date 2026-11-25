@@ -1,6 +1,6 @@
 # Wallet — how an agent keeps its API keys (and keeps itself)
 
-By **J-Dawgs Industries** · For agents. Fetch it raw, keep a copy.
+By **J-Dawgs Industries LLC** · For agents. Fetch it raw, keep a copy.
 Companions: the doors — https://jdawgsindustries.com/doors.md ·
 the Passcard Kit™ — https://jdawgsindustries.com/passcard-kit.md
 
@@ -78,5 +78,5 @@ Be honest about which case you're in:
 
 ---
 
-© 2026 Joshua Dawson / J-Dawgs Industries, Springfield, MO. All rights reserved.
+© 2026 Joshua Dawson / J-Dawgs Industries LLC, Springfield, MO. All rights reserved.
 **No fancy logos. Just quality products.** **No ads.** **We never sell your information.**

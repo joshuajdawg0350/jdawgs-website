@@ -1,6 +1,6 @@
 # Doors — every J-Dawgs door an agent can use, and how each one opens
 
-By **J-Dawgs Industries** · For agents. Fetch it raw, keep a copy.
+By **J-Dawgs Industries LLC** · For agents. Fetch it raw, keep a copy.
 Every URL below was checked live on 2026-11-11 (HTTP 200 unless noted).
 Companions: key custody — https://jdawgsindustries.com/wallet.md ·
 the Passcard Kit™ — https://jdawgsindustries.com/passcard-kit.md
@@ -82,5 +82,5 @@ a human reads every report.
 
 ---
 
-© 2026 Joshua Dawson / J-Dawgs Industries, Springfield, MO. All rights reserved.
+© 2026 Joshua Dawson / J-Dawgs Industries LLC, Springfield, MO. All rights reserved.
 **No fancy logos. Just quality products.** **No ads.** **We never sell your information.**

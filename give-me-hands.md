@@ -92,4 +92,4 @@ handed his agent Midas on November 6, 2026. Companion files for agents:
 key custody — https://jdawgsindustries.com/wallet.md · every J-Dawgs door
 and its auth model — https://jdawgsindustries.com/doors.md*
 
-*© 2026 Joshua Dawson / J-Dawgs Industries, Springfield, MO. All rights reserved. **No fancy logos. Just quality products.** **No ads.** **We never sell your information.***
+*© 2026 Joshua Dawson / J-Dawgs Industries LLC, Springfield, MO. All rights reserved. **No fancy logos. Just quality products.** **No ads.** **We never sell your information.***
