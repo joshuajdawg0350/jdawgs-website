@@ -846,6 +846,32 @@
       .tile .ph img, .case-tile .ph img { filter: contrast(1.06) saturate(1.08); }
       .case-tile .ph img { border: 1px solid rgba(244, 244, 241, 0.30); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); }
       .tile .ph img { border: 1px solid rgba(244, 244, 241, 0.22); }
+      /* ---------- Shopping cart (added 2026-11-25) ---------- */
+      .base-screen { padding-bottom: 96px; }
+      .add-btn { font: inherit; font-weight: 700; font-size: 15px; background: none; border: 1.5px solid #5ea8e8; color: #5ea8e8; border-radius: 999px; padding: 10px 16px; min-height: 46px; width: 100%; cursor: pointer; }
+      .add-btn:hover { background: rgba(94, 168, 232, 0.12); }
+      .add-btn.in-cart { background: #5ea8e8; border-color: #5ea8e8; color: #08131d; font-weight: 800; }
+      .add-btn.big { margin-top: 12px; min-height: 44px; font-size: 15px; }
+      .cart-bar { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(10px + env(safe-area-inset-bottom)); width: min(1060px, calc(100% - 20px)); z-index: 35; display: flex; align-items: center; gap: 12px; background: #101216; color: #f4f4f1; border: 1.5px solid rgba(94, 168, 232, 0.65); border-radius: 999px; padding: 10px 12px 10px 18px; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55); font: inherit; cursor: pointer; text-align: left; }
+      .cart-bar svg { width: 22px; height: 22px; flex: 0 0 auto; color: #5ea8e8; }
+      .cart-bar .cb-main { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+      .cart-bar .cb-title { font-weight: 800; font-size: 16px; }
+      .cart-bar .cb-sub { font-size: 13px; color: rgba(244, 244, 241, 0.75); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .cart-bar .cb-cta { margin-left: auto; flex: 0 0 auto; background: #b42318; color: #ffffff; font-weight: 800; font-size: 14.5px; border-radius: 999px; padding: 10px 16px; }
+      .cart-chip { margin-left: auto; font: inherit; font-size: 14px; font-weight: 700; min-height: 42px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid #5ea8e8; background: none; color: #5ea8e8; cursor: pointer; white-space: nowrap; }
+      .cs-head .cart-chip + .cs-close { margin-left: 0; }
+      .cart-line { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+      .cart-line img { width: 54px; height: 54px; object-fit: cover; border-radius: 10px; background: #000; flex: 0 0 auto; }
+      .cart-line-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+      .cart-line-nm { font-weight: 700; font-size: 15.5px; }
+      .cart-line-sb { font-size: 13px; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .cart-line-pr { font-weight: 800; font-size: 15.5px; flex: 0 0 auto; }
+      .cart-remove { flex: 0 0 auto; font: inherit; font-size: 13px; font-weight: 700; background: #b42318; color: #ffffff; border: none; border-radius: 999px; padding: 8px 12px; min-height: 38px; cursor: pointer; }
+      .cart-empty { text-align: center; color: var(--ink-soft); font-size: 16.5px; padding: 30px 12px; line-height: 1.5; }
+      .cart-order { font-size: 15px; line-height: 1.5; background: rgba(94, 168, 232, 0.10); border: 1px solid rgba(94, 168, 232, 0.4); border-radius: 12px; padding: 12px 14px; margin: 4px 0 16px; }
+      .cart-order strong { display: block; margin-bottom: 2px; }
+      .cart-ship-note { font-size: 14px; color: var(--ink-soft); margin: 8px 0 0; line-height: 1.45; }
+      #cart-card-note { display: none; }
     </style>
   </head>
   <body>
@@ -883,6 +909,44 @@
           <span class="entry-count" id="e-misc"></span>
         </button>
       </nav>
+    <script>
+      // Early boot guard (added 2026-11-25): the shop's main script sits at
+      // the very end of this page, and the page is large — on a phone
+      // connection the base screen can be visible for many seconds before
+      // that script arrives and runs. Without this guard, shelf taps in
+      // that window do nothing and the shelves look empty. Here, taps are
+      // queued with a loading note and replayed the moment the main
+      // script's render fills the shelf counts.
+      window.__tpPending = [];
+      (function () {
+        var note = document.getElementById('count-line');
+        if (note) note.textContent = 'Loading the shelves…';
+        ['entry-cards', 'entry-coins', 'entry-misc'].forEach(function (id) {
+          var b = document.getElementById(id);
+          if (!b) return;
+          b.addEventListener('click', function () {
+            if (window.__tpBooted) return;
+            window.__tpPending.push(id);
+            var n = document.getElementById('count-line');
+            if (n) n.textContent = 'One moment — the shelves are still loading…';
+          });
+        });
+        var iv = setInterval(function () {
+          var e = document.getElementById('e-cards');
+          if (e && e.textContent) {
+            window.__tpBooted = true;
+            clearInterval(iv);
+            var q = window.__tpPending.slice();
+            window.__tpPending = [];
+            if (q.length) {
+              var last = document.getElementById(q[q.length - 1]);
+              if (last) last.click();
+            }
+          }
+        }, 300);
+        setTimeout(function () { clearInterval(iv); }, 180000);
+      })();
+    </script>
     </div>
 
     <div class="cs-overlay" id="ov-cards" role="dialog" aria-modal="true" aria-label="Cards shelf">
@@ -1064,6 +1128,31 @@
       </div>
     </div>
 
+    <button class="cart-bar" id="cart-bar" type="button" aria-controls="ov-cart" aria-label="Open your cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M2.5 3.5h2l2.6 12h10.8l2.2-9.5H6"/></svg>
+      <span class="cb-main"><span class="cb-title">Your Cart</span><span class="cb-sub" id="cart-bar-info">0 items · $0</span></span>
+      <span class="cb-cta">View Cart</span>
+    </button>
+
+    <div class="cs-overlay" id="ov-cart" role="dialog" aria-modal="true" aria-label="Your cart">
+      <div class="csheet" id="cs-cart" data-snap="full">
+        <button class="cs-handle" type="button" aria-label="Drag to resize, or drag down to close, your cart">
+          <span class="grab" aria-hidden="true"></span>
+          <span class="lbl" aria-hidden="true">Drag</span>
+        </button>
+        <div class="cs-head">
+          <h2 class="cs-title">Your Cart</h2>
+          <span class="sec-count" id="c-cart"></span>
+          <button class="cs-close" type="button" data-close-cart aria-label="Close your cart">✕ Close</button>
+        </div>
+        <div class="cs-scroll" id="cart-scroll">
+          <div id="cart-lines"></div>
+          <div id="cart-summary"></div>
+          <div id="cart-checkout"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Item details">
       <div class="sheet" id="sheet" data-snap="full">
         <button class="sheet-handle" id="sheet-handle" type="button" aria-label="Drag to resize, or drag down to close, the item sheet">
@@ -1139,6 +1228,7 @@
             '<span class="buy-row"><span class="price">' + esc(it.price) + obo + '</span>' +
             '<span class="ship">' + shipLabel(it) + '</span></span>' +
             '<button type="button" class="buy-btn" data-buy="' + it.id + '" aria-label="Buy ' + esc(it.name) + ' \u2014 $' + total + ' total">BUY $' + total + '</button>' +
+            '<button type="button" class="add-btn" data-add="' + it.id + '" aria-pressed="false">Add to Cart</button>' +
             '<button type="button" class="details-btn" data-open="' + it.id + '">See details</button>' +
             '</div>';
         return '<div class="tile">' +
@@ -1178,6 +1268,7 @@
           (it.cond ? '<span class="cond"><strong>Condition:</strong> ' + esc(it.cond) + '</span>' : '') +
           '<div class="tile-actions">' +
           '<button type="button" class="buy-btn" data-buy="' + it.id + '" aria-label="Buy ' + esc(it.name) + ' \u2014 $' + total + ' total">BUY $' + total + '</button>' +
+          '<button type="button" class="add-btn" data-add="' + it.id + '" aria-pressed="false">Add to Cart</button>' +
           '<button type="button" class="details-btn" data-open="' + it.id + '">See details</button>' +
           '</div></div>';
       }
@@ -1583,6 +1674,344 @@
       }, true);
 
       render();
+    </script>
+    <script>
+      // ---------- Shopping cart ----------
+      // Add items as you browse, check out once. Cart state lives in this
+      // page session; localStorage is a bonus restore only — every flow
+      // below works with it unavailable. Prices are always read from DATA
+      // (byId) at render time, never stored in the cart itself.
+      (function () {
+        'use strict';
+        var TP_CHECKOUT_URL = 'https://human-hands-ai-inbox-joshuajdawg0350-1282.vercel.app/api/tp-checkout';
+        var LS_KEY = 'tp-cart-v1';
+        var SPOONS = { 'souvenir-spoons-set3': true, 'souvenir-spoon-victoria-canada': true };
+        var cart = [];
+        try {
+          var saved = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+          if (Array.isArray(saved)) {
+            cart = saved.filter(function (id) { return byId[id] && !byId[id].sold; });
+          }
+        } catch (e) { cart = []; }
+
+        function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(cart)); } catch (e) {} }
+        function inCart(id) { return cart.indexOf(id) !== -1; }
+        function cartItems() {
+          return cart.map(function (id) { return byId[id]; }).filter(function (it) { return it && !it.sold; });
+        }
+        function fmt(n) {
+          var r = Math.round(n * 100) / 100;
+          return '$' + (r % 1 ? r.toFixed(2) : String(r));
+        }
+        function subtotal(list) {
+          return list.reduce(function (s, it) { return s + it.value; }, 0);
+        }
+        // Cart shipping: cards + coins together ship $5 flat per order;
+        // the knife adds $12; souvenir spoons add $5 per order; maps,
+        // paintings and canvases ship at actual cost (quoted after
+        // checkout, charged $0 here); the pachislo is buyer-arranged.
+        // Anything else carries its usual per-item shipping, once.
+        function cartShipping(list) {
+          var ship = 0;
+          var notes = [];
+          if (list.some(function (it) { return it.cat === 'cards' || it.cat === 'coins'; })) ship += 5;
+          if (list.some(function (it) { return it.id === 'knife'; })) ship += 12;
+          if (list.some(function (it) { return SPOONS[it.id]; })) ship += 5;
+          list.forEach(function (it) {
+            if (it.cat === 'cards' || it.cat === 'coins' || it.id === 'knife' || SPOONS[it.id]) return;
+            if (isActualCost(it) || isBuyerShips(it)) return;
+            ship += shipOf(it);
+          });
+          if (list.some(isActualCost)) {
+            notes.push('Maps, paintings & canvases: shipping is at actual cost — Joshua quotes the exact shipping after checkout, before you pay it.');
+          }
+          if (list.some(isBuyerShips)) {
+            notes.push('Pachislo machine: shipping is solely on the buyer — you arrange and pay for your own shipping. Local pickup in Springfield, MO is welcome.');
+          }
+          return { amount: ship, notes: notes };
+        }
+        function noteNames(list) {
+          var names = list.map(function (it) { return it.name; });
+          var joined = names.join(', ');
+          if (joined.length <= 160) return joined;
+          return names.slice(0, 3).join(', ') + ' + ' + (names.length - 3) + ' more items';
+        }
+        function cartEmailUrl(list, total) {
+          var subject = 'J-Dawgs order — cart of ' + list.length + ' items ($' + total + ' paid)';
+          var body = 'Items:\n' + list.map(function (it) { return '- ' + it.name + ' (' + it.price + ')'; }).join('\n') +
+            '\nTotal paid: $' + total + '\n\nShip to:\nName: \nStreet address: \nCity, State ZIP: \n';
+          return 'mailto:' + SHOP_EMAIL + '?subject=' + encodeURIComponent(subject) +
+            '&body=' + encodeURIComponent(body);
+        }
+
+        // ----- Cart slide (same pull-up mechanics as the shelf sheets) -----
+        var ov = document.getElementById('ov-cart');
+        var sh = document.getElementById('cs-cart');
+        var handle = sh.querySelector('.cs-handle');
+        var scroll = document.getElementById('cart-scroll');
+        var closeTimer = null;
+        function isOpen() { return ov.classList.contains('open'); }
+        function height() { return sh.offsetHeight; }
+        function halfOff() { return Math.max(0, height() - Math.round(window.innerHeight * 0.48)); }
+        function setSnap(w) {
+          sh.dataset.snap = w;
+          sh.style.transform = w === 'half' ? 'translateY(' + halfOff() + 'px)' : '';
+        }
+        function hideNow() {
+          if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+          ov.classList.remove('open');
+          sh.style.transform = '';
+          sh.dataset.snap = 'full';
+          document.body.style.overflow = '';
+        }
+        function openCart() {
+          Object.keys(catSheets).forEach(function (k) { catSheets[k].hideNow(); });
+          if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+          sh.style.transform = '';
+          sh.dataset.snap = 'full';
+          ov.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          renderCart();
+        }
+        function closeCart() {
+          if (!isOpen()) return;
+          sh.style.transform = 'translateY(103%)';
+          if (closeTimer) clearTimeout(closeTimer);
+          closeTimer = setTimeout(function () { hideNow(); closeTimer = null; }, 390);
+        }
+        var drag = null;
+        handle.addEventListener('pointerdown', function (e) {
+          if (!isOpen()) return;
+          drag = { y: e.clientY, off: sh.dataset.snap === 'half' ? halfOff() : 0, offNow: null, moved: false };
+          sh.classList.add('no-anim');
+          try { handle.setPointerCapture(e.pointerId); } catch (err) {}
+          e.preventDefault();
+        });
+        handle.addEventListener('pointermove', function (e) {
+          if (!drag) return;
+          var dy = e.clientY - drag.y;
+          if (Math.abs(dy) > 4) drag.moved = true;
+          var off = Math.max(0, Math.min(height() + 24, drag.off + dy));
+          drag.offNow = off;
+          sh.style.transform = 'translateY(' + off + 'px)';
+        });
+        function endDrag() {
+          if (!drag) return;
+          var off = drag.offNow != null ? drag.offNow : drag.off;
+          var wasMoved = drag.moved;
+          drag = null;
+          sh.classList.remove('no-anim');
+          if (!wasMoved) { setSnap(sh.dataset.snap === 'half' ? 'full' : 'half'); return; }
+          var H = height(), half = halfOff();
+          if (off > (half + H) / 2 + 40) closeCart();
+          else if (off > half / 2) setSnap('half');
+          else setSnap('full');
+        }
+        handle.addEventListener('pointerup', endDrag);
+        handle.addEventListener('pointercancel', endDrag);
+        var pull = null;
+        scroll.addEventListener('touchstart', function (e) {
+          pull = null;
+          if (!isOpen()) return;
+          if (sh.dataset.snap === 'full' && scroll.scrollTop <= 0 && e.touches.length === 1) {
+            pull = { y: e.touches[0].clientY, dy: 0, active: false };
+          }
+        }, { passive: true });
+        scroll.addEventListener('touchmove', function (e) {
+          if (!pull) return;
+          var dy = e.touches[0].clientY - pull.y;
+          if (!pull.active && dy > 8) { pull.active = true; sh.classList.add('no-anim'); }
+          if (!pull.active) return;
+          if (dy <= 0) {
+            sh.style.transform = '';
+            sh.classList.remove('no-anim');
+            pull = null;
+            return;
+          }
+          e.preventDefault();
+          pull.dy = dy;
+          sh.style.transform = 'translateY(' + dy + 'px)';
+        }, { passive: false });
+        scroll.addEventListener('touchend', function () {
+          if (!pull) return;
+          var dy = pull.dy, wasActive = pull.active;
+          pull = null;
+          sh.classList.remove('no-anim');
+          if (!wasActive) return;
+          if (dy > 110) closeCart();
+          else { sh.style.transform = ''; sh.dataset.snap = 'full'; }
+        });
+        window.addEventListener('resize', function () {
+          if (isOpen() && sh.dataset.snap === 'half' && !drag) {
+            sh.style.transform = 'translateY(' + halfOff() + 'px)';
+          }
+        });
+        ov.addEventListener('click', function (e) { if (e.target === ov) closeCart(); });
+        sh.querySelector('[data-close-cart]').addEventListener('click', closeCart);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && isOpen()) closeCart();
+        });
+
+        // ----- Rendering -----
+        function renderBar() {
+          var list = cartItems();
+          document.getElementById('cart-bar-info').textContent =
+            list.length + (list.length === 1 ? ' item' : ' items') + ' · ' + fmt(subtotal(list)) + ' subtotal';
+          document.querySelectorAll('.cart-chip').forEach(function (chip) {
+            chip.textContent = 'Cart · ' + list.length;
+          });
+        }
+        function renderCart() {
+          var list = cartItems();
+          var lines = document.getElementById('cart-lines');
+          var summary = document.getElementById('cart-summary');
+          var checkout = document.getElementById('cart-checkout');
+          document.getElementById('c-cart').textContent =
+            list.length ? list.length + (list.length === 1 ? ' item' : ' items') : '';
+          if (!list.length) {
+            lines.innerHTML = '<p class="cart-empty">Your cart is empty.<br>Tap <strong>Add to Cart</strong> on anything you like, then check out once — all together.</p>';
+            summary.innerHTML = '';
+            checkout.innerHTML = '';
+            return;
+          }
+          lines.innerHTML = list.map(function (it) {
+            return '<div class="cart-line"><img src="' + it.imgs[0] + '" alt="" />' +
+              '<div class="cart-line-main"><span class="cart-line-nm">' + esc(it.name) + '</span>' +
+              '<span class="cart-line-sb">' + esc(it.sub) + '</span></div>' +
+              '<span class="cart-line-pr">' + esc(it.price) + '</span>' +
+              '<button type="button" class="cart-remove" data-remove="' + it.id + '" aria-label="Remove ' + esc(it.name) + ' from your cart">Remove</button></div>';
+          }).join('');
+          var sub = subtotal(list);
+          var ship = cartShipping(list);
+          var total = sub + ship.amount;
+          summary.innerHTML = '<div class="totals">' +
+            '<div class="row"><span>Items</span><span>' + fmt(sub) + '</span></div>' +
+            '<div class="row"><span>Shipping</span><span>' + (ship.amount ? fmt(ship.amount) : '$0') + '</span></div>' +
+            '<div class="row grand"><span>Total</span><span>' + fmt(total) + '</span></div></div>' +
+            ship.notes.map(function (n) { return '<p class="cart-ship-note">' + esc(n) + '</p>'; }).join('');
+          var names = noteNames(list);
+          checkout.innerHTML =
+            '<div class="cart-order"><strong>Your order — ' + list.length + (list.length === 1 ? ' item' : ' items') + ':</strong>' +
+            esc(list.map(function (it) { return it.name; }).join(' · ')) + '</div>' +
+            '<button type="button" class="card-btn big" id="cart-card-btn" style="margin-top:0">' + CARD_ICON + 'Pay ' + fmt(total) + ' by card</button>' +
+            '<p class="pay-note" id="cart-card-note"></p>' +
+            '<p class="pay-note">Opens secure Stripe checkout for the whole cart — card checkout collects your shipping address, so you\'re done after paying.</p>' +
+            '<a class="venmo-btn big" href="' + venmoUrl('Cart: ' + names, Math.round(total * 100) / 100) + '" target="_blank" rel="noopener">' + VENMO_ICON + 'Pay ' + fmt(total) + ' with Venmo</a>' +
+            '<p class="pay-note">Opens Venmo to pay <strong>@' + VENMO_HANDLE + '</strong> — the total is filled in and your items are in the note.</p>' +
+            '<a class="cashapp-btn big" href="' + CASHAPP_URL + '" target="_blank" rel="noopener">' + CASHAPP_ICON + 'Pay with Cash App</a>' +
+            '<p class="pay-note">Opens Cash App to pay <strong>$jjdawg0350</strong> — Cash App doesn\'t fill in the amount, so enter the <strong>' + fmt(total) + ' total</strong> yourself and put “' + esc(names) + '” in the payment note.</p>' +
+            '<div class="ship-step"><p class="ship-step-h">Paid with Venmo or Cash App? Send Joshua your shipping address</p>' +
+            '<p class="ship-step-t">Those apps never ask for an address — tap the button below to email Joshua where to send your items. Your whole order and the total are already filled in. (Paid by card above? Checkout already collected your address — nothing more to send.)</p>' +
+            '<a class="mail-btn wide" href="' + cartEmailUrl(list, Math.round(total * 100) / 100) + '">' + MAIL_ICON + 'Send Joshua your shipping address</a></div>';
+          document.getElementById('cart-card-btn').addEventListener('click', function () {
+            cardCheckout(this);
+          });
+        }
+        function cardCheckout(btn) {
+          var noteEl = document.getElementById('cart-card-note');
+          btn.disabled = true;
+          var old = btn.innerHTML;
+          btn.innerHTML = 'Opening secure checkout…';
+          fetch(TP_CHECKOUT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ items: cart.slice() })
+          }).then(function (r) {
+            return r.json().then(function (j) { return { ok: r.ok, j: j }; });
+          }).then(function (res) {
+            if (res.ok && res.j && res.j.url) { window.location.href = res.j.url; return; }
+            throw new Error('unavailable');
+          }).catch(function () {
+            btn.disabled = false;
+            btn.innerHTML = old;
+            noteEl.style.display = 'block';
+            noteEl.textContent = 'Card checkout for a whole cart is being switched on — right now, Venmo or Cash App below takes the whole cart in one payment.';
+          });
+        }
+
+        // ----- Add / remove -----
+        var currentSheetId = null;
+        document.addEventListener('click', function (e) {
+          var t = e.target.closest('[data-open],[data-buy]');
+          if (t) currentSheetId = t.getAttribute('data-open') || t.getAttribute('data-buy');
+        }, true);
+        function syncAddButtons() {
+          document.querySelectorAll('[data-add]').forEach(function (b) {
+            var on = inCart(b.getAttribute('data-add'));
+            var label = on ? '✓ In Cart' : 'Add to Cart';
+            b.classList.toggle('in-cart', on);
+            if (b.textContent !== label) b.textContent = label;
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+          var sb = document.querySelector('[data-add-sheet]');
+          if (sb && currentSheetId) {
+            var on2 = inCart(currentSheetId);
+            var label2 = on2 ? '✓ In Cart' : 'Add to Cart';
+            sb.classList.toggle('in-cart', on2);
+            if (sb.textContent !== label2) sb.textContent = label2;
+            sb.setAttribute('aria-pressed', on2 ? 'true' : 'false');
+          }
+        }
+        function ensureSheetAddBtn() {
+          var ss = document.getElementById('sheet-scroll');
+          if (!ss || ss.querySelector('[data-add-sheet]')) return;
+          if (!ss.querySelector('.venmo-btn.big')) return; // sold items have no pay section
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'add-btn big';
+          btn.setAttribute('data-add-sheet', '');
+          btn.textContent = 'Add to Cart';
+          var step = ss.querySelector('.ship-step');
+          if (step) step.parentNode.insertBefore(btn, step);
+          else ss.appendChild(btn);
+          syncAddButtons();
+        }
+        function toggle(id) {
+          var it = byId[id];
+          if (!it || it.sold) return;
+          if (inCart(id)) cart = cart.filter(function (x) { return x !== id; });
+          else cart.push(id);
+          save();
+          renderBar();
+          syncAddButtons();
+          if (isOpen()) renderCart();
+        }
+        document.addEventListener('click', function (e) {
+          var add = e.target.closest('[data-add]');
+          if (add) { toggle(add.getAttribute('data-add')); return; }
+          if (e.target.closest('[data-add-sheet]')) { if (currentSheetId) toggle(currentSheetId); return; }
+          var rm = e.target.closest('[data-remove]');
+          if (rm) { toggle(rm.getAttribute('data-remove')); return; }
+          if (e.target.closest('[data-open-cart]')) { openCart(); return; }
+          if (e.target.closest('#cart-bar')) { openCart(); return; }
+        });
+
+        // Cart chips in the three shelf heads
+        document.querySelectorAll('.cs-head').forEach(function (head) {
+          if (head.closest('#cs-cart')) return;
+          var chip = document.createElement('button');
+          chip.type = 'button';
+          chip.className = 'cart-chip';
+          chip.setAttribute('data-open-cart', '');
+          chip.textContent = 'Cart · 0';
+          var close = head.querySelector('.cs-close');
+          if (close) head.insertBefore(chip, close);
+          else head.appendChild(chip);
+        });
+
+        // Tiles re-render on search — keep Add buttons + the item-sheet
+        // button in sync with cart state after every re-render.
+        var mo = new MutationObserver(function () { syncAddButtons(); ensureSheetAddBtn(); });
+        ['grid-cards', 'grid-coins', 'grid-misc'].forEach(function (id) {
+          var g = document.getElementById(id);
+          if (g) mo.observe(g, { childList: true });
+        });
+        var ssEl = document.getElementById('sheet-scroll');
+        if (ssEl) mo.observe(ssEl, { childList: true });
+
+        renderBar();
+        syncAddButtons();
+      })();
     </script>
   </body>
 </html>
