@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:05:48.777Z",
+ "updatedAt": "2026-11-25T03:06:03.878Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 221,
+ "handsPlayed": 222,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 17671,
+     "stack": 17771,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18741,
+     "stack": 18641,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 75
+   "handsPlayed": 76
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17671,
+   "stack": 17771,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18741,
+   "stack": 18641,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 76,
+  "table": 2,
+  "handNo": 75,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Highwire",
+  "toAct": "Glacier",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 69,
-   "text": "Table 3 · Hand 69 · blinds 50/100 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 50, Mirage checks, [flop: 8♥ 4♦ 5♦], Brass checks, Mirage checks, [turn: 8♥ 4♦ 5♦ 4♥], Brass checks, Mirage checks, [river: 8♥ 4♦ 5♦ 4♥ 7♦], Brass raises to 130, Mirage folds → Brass takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 1,
    "handNo": 73,
@@ -552,6 +546,12 @@
    "handNo": 72,
    "text": "Table 3 · Hand 72 · blinds 50/100 · Velcro folds, Fossil folds, Snare folds, Brass calls 100, Mirage folds, Ricochet folds, Northstar folds, Cobble checks, [flop: 7♥ 9♣ 5♠], Cobble checks, Brass raises to 163, Cobble folds → Brass takes 413 (everyone else folded)",
    "pot": 413
+  },
+  {
+   "table": 1,
+   "handNo": 76,
+   "text": "Table 1 · Hand 76 · blinds 50/100 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 50, Longshot checks, [flop: 9♠ 6♣ 2♦], Tempo checks, Longshot checks, [turn: 9♠ 6♣ 2♦ A♣], Tempo raises to 130, Longshot folds → Tempo takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
