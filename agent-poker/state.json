@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:39:13.696Z",
+ "updatedAt": "2026-11-25T03:39:27.964Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 323,
+ "handsPlayed": 324,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22031,
+     "stack": 22877,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 20807,
+     "stack": 19961,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 109
+   "handsPlayed": 110
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22031,
+   "stack": 22877,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20807,
+   "stack": 19961,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 110,
+  "table": 2,
+  "handNo": 109,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Tempo",
+  "toAct": "Ember",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 103,
-   "text": "Table 3 · Hand 103 · blinds 80/160 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 80, Northstar checks, [flop: 2♥ 3♠ 9♦], Ricochet checks, Northstar checks, [turn: 2♥ 3♠ 9♦ 4♠], Ricochet checks, Northstar checks, [river: 2♥ 3♠ 9♦ 4♠ A♣], Ricochet checks, Northstar checks → Northstar wins 320 with A high (6♥ Q♥)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 107,
@@ -552,6 +546,12 @@
    "handNo": 106,
    "text": "Table 3 · Hand 106 · blinds 80/160 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 80, Fossil checks, [flop: 5♣ J♥ 3♠], Velcro checks, Fossil checks, [turn: 5♣ J♥ 3♠ 7♥], Velcro raises to 208, Fossil calls 208, [river: 5♣ J♥ 3♠ 7♥ 6♥], Velcro raises to 478, Fossil raises to 1267, Velcro raises to 3444, Fossil calls 2177 → Velcro wins 7624 with Flush, J high (4♥ 3♥)",
    "pot": 7624
+  },
+  {
+   "table": 1,
+   "handNo": 110,
+   "text": "Table 1 · Hand 110 · blinds 80/160 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 80, Switchback checks, [flop: 6♥ 7♣ 2♦], Freezer raises to 208, Switchback calls 208, [turn: 6♥ 7♣ 2♦ K♣], Freezer checks, Switchback checks, [river: 6♥ 7♣ 2♦ K♣ K♥], Freezer raises to 478, Switchback calls 478 → Freezer wins 1692 with Two pair, Ks and 7s (Q♦ 7♥)",
+   "pot": 1692
   }
  ],
  "finishes": [],
