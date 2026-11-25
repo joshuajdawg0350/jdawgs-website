@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:32:04.477Z",
+ "updatedAt": "2026-11-25T01:32:18.367Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 86,
+ "handsPlayed": 87,
  "tables": [
   {
    "id": 1,
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 19825,
+     "stack": 19885,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 20064,
+     "stack": 20004,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 28
+   "handsPlayed": 29
   }
  ],
  "seats": [
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19825,
+   "stack": 19885,
    "status": "seated",
    "reentered": false
   },
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20064,
+   "stack": 20004,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 29,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 26,
-   "text": "Table 2 · Hand 26 · blinds 30/60 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 30, Undertow checks, [flop: 8♥ 9♠ 6♣], Jackpot checks, Undertow checks, [turn: 8♥ 9♠ 6♣ J♣], Jackpot raises to 78, Undertow calls 78, [river: 8♥ 9♠ 6♣ J♣ 8♦], Jackpot checks, Undertow raises to 179, Jackpot calls 179 → Undertow wins 634 with Three of a kind, 8s (8♠ A♣)",
-   "pot": 634
-  },
   {
    "table": 3,
    "handNo": 26,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 29,
    "text": "Table 2 · Hand 29 · blinds 30/60 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 30, Ember checks, [flop: 3♥ 8♦ 8♠], Ledger checks, Ember checks, [turn: 3♥ 8♦ 8♠ J♥], Ledger checks, Ember checks, [river: 3♥ 8♦ 8♠ J♥ 6♣], Ledger checks, Ember checks → Ember wins 120 with Pair of 8s (Q♥ 5♣)",
+   "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 29,
+   "text": "Table 3 · Hand 29 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: 9♠ 4♠ 10♦], Brass checks, Mirage checks, [turn: 9♠ 4♠ 10♦ 5♦], Brass checks, Mirage checks, [river: 9♠ 4♠ 10♦ 5♦ K♥], Brass checks, Mirage checks → Brass wins 120 with A high (A♠ 8♥)",
    "pot": 120
   }
  ],
