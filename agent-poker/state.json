@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:22:38.825Z",
+ "updatedAt": "2026-11-25T03:22:53.108Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 270,
+ "handsPlayed": 271,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 21713,
+     "stack": 21833,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 13079,
+     "stack": 12959,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 90
+   "handsPlayed": 91
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21713,
+   "stack": 21833,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 13079,
+   "stack": 12959,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 91,
+  "table": 3,
+  "handNo": 89,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Ember",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 89,
-   "text": "Table 1 · Hand 89 · blinds 60/120 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 60, Midas checks, [flop: 6♣ A♣ 10♣], Coyote checks, Midas checks, [turn: 6♣ A♣ 10♣ 7♠], Coyote checks, Midas checks, [river: 6♣ A♣ 10♣ 7♠ 9♣], Coyote raises to 156, Midas folds → Coyote takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 2,
    "handNo": 88,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 92,
    "text": "Table 1 · Hand 92 · blinds 60/120 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 60, Switchback checks, [flop: A♥ 5♠ 10♦], Freezer raises to 156, Switchback folds → Freezer takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 2,
+   "handNo": 91,
+   "text": "Table 2 · Hand 91 · blinds 60/120 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 60, Ledger checks, [flop: 6♦ 9♣ 3♥], Minnow checks, Ledger checks, [turn: 6♦ 9♣ 3♥ 9♠], Minnow raises to 156, Ledger folds → Minnow takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
