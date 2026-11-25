@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:17:58.794Z",
+ "updatedAt": "2026-11-25T04:18:20.472Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 434,
+ "handsPlayed": 435,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20439,
+     "stack": 21741,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 18175,
+     "stack": 18055,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19661,
+     "stack": 18479,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 146
+   "handsPlayed": 147
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20439,
+   "stack": 21741,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18175,
+   "stack": 18055,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19661,
+   "stack": 18479,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 147,
+  "table": 2,
+  "handNo": 146,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Longshot",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 140,
-   "text": "Table 3 · Hand 140 · blinds 100/200 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 100, Brass checks, [flop: Q♦ 5♣ 10♦], Snare raises to 260, Brass folds → Snare takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 1,
    "handNo": 144,
@@ -552,6 +546,12 @@
    "handNo": 143,
    "text": "Table 3 · Hand 143 · blinds 120/240 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 120, Northstar checks, [flop: 2♠ 4♣ Q♠], Ricochet checks, Northstar checks, [turn: 2♠ 4♣ Q♠ 7♠], Ricochet checks, Northstar checks, [river: 2♠ 4♣ Q♠ 7♠ 5♣], Ricochet checks, Northstar raises to 312, Ricochet folds → Northstar takes 792 (everyone else folded)",
    "pot": 792
+  },
+  {
+   "table": 1,
+   "handNo": 147,
+   "text": "Table 1 · Hand 147 · blinds 120/240 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet raises to 480, Freezer folds, Switchback folds, Tempo calls 240, [flop: 7♠ 5♥ 5♦], Tempo checks, Magnet raises to 702, Tempo calls 702, [turn: 7♠ 5♥ 5♦ 9♣], Tempo checks, Magnet raises to 1615, Tempo folds → Magnet takes 4099 (everyone else folded)",
+   "pot": 4099
   }
  ],
  "finishes": [],
