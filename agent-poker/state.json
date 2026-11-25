@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:34:23.206Z",
+ "updatedAt": "2026-11-25T03:34:38.185Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1600
  ],
  "level": 16,
- "handsPlayed": 307,
+ "handsPlayed": 308,
  "tables": [
   {
    "id": 1,
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 100
+   "handsPlayed": 101
   }
  ],
  "seats": [
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 101,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 100,
-   "text": "Table 2 · Hand 100 · blinds 60/120 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 60, Ledger checks, [flop: 6♦ 8♥ 3♣], Minnow checks, Ledger checks, [turn: 6♦ 8♥ 3♣ 6♣], Minnow checks, Ledger raises to 156, Minnow folds → Ledger takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 98,
@@ -552,6 +538,12 @@
    "handNo": 103,
    "text": "Table 2 · Hand 103 · blinds 80/160 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 80, Glacier checks, [flop: 9♣ 5♣ J♣], Bedrock checks, Glacier checks, [turn: 9♣ 5♣ J♣ K♣], Bedrock raises to 208, Glacier folds → Bedrock takes 528 (everyone else folded)",
    "pot": 528
+  },
+  {
+   "table": 3,
+   "handNo": 101,
+   "text": "Table 3 · Hand 101 · blinds 80/160 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass raises to 320, Mirage calls 160, [flop: K♥ 2♣ 3♣], Brass raises to 416, Mirage calls 416, [turn: K♥ 2♣ 3♣ 3♦], Brass checks, Mirage checks, [river: K♥ 2♣ 3♣ 3♦ 8♥], Brass checks, Mirage checks → Brass wins 736 with Two pair, 10s and 3s (10♠ 10♣); Mirage wins 736 with Two pair, 10s and 3s (10♦ 10♥)",
+   "pot": 1472
   }
  ],
  "finishes": [],
