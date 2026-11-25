@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:04:51.246Z",
+ "updatedAt": "2026-11-25T04:05:04.514Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   5000
  ],
  "level": 21,
- "handsPlayed": 401,
+ "handsPlayed": 402,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20239,
+     "stack": 20439,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22405,
+     "stack": 22205,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 135
+   "handsPlayed": 136
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20239,
+   "stack": 20439,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22405,
+   "stack": 22205,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 136,
+  "table": 2,
+  "handNo": 135,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Switchback",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 129,
-   "text": "Table 3 · Hand 129 · blinds 100/200 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 100, Velcro checks, [flop: 6♠ J♠ K♥], Cobble checks, Velcro checks, [turn: 6♠ J♠ K♥ 7♣], Cobble checks, Velcro checks, [river: 6♠ J♠ K♥ 7♣ 7♦], Cobble checks, Velcro checks → Cobble wins 400 with Pair of 7s (A♦ 10♣)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 133,
@@ -552,6 +546,12 @@
    "handNo": 132,
    "text": "Table 3 · Hand 132 · blinds 100/200 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 100, Brass checks, [flop: 8♣ 3♥ 6♣], Snare checks, Brass checks, [turn: 8♣ 3♥ 6♣ 4♣], Snare checks, Brass checks, [river: 8♣ 3♥ 6♣ 4♣ 7♦], Snare checks, Brass checks → Brass wins 400 with A high (A♠ 10♣)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 136,
+   "text": "Table 1 · Hand 136 · blinds 100/200 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 100, Freezer checks, [flop: 7♠ 8♣ 2♥], Magnet checks, Freezer checks, [turn: 7♠ 8♣ 2♥ 6♠], Magnet raises to 260, Freezer folds → Magnet takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [],
