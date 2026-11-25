@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:51:57.339Z",
+ "updatedAt": "2026-11-25T02:52:20.057Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 200,
+ "handsPlayed": 201,
  "tables": [
   {
    "id": 1,
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 25673,
+     "stack": 25573,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 19690,
+     "stack": 17120,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 20400,
+     "stack": 23070,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 67
+   "handsPlayed": 68
   },
   {
    "id": 3,
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 25673,
+   "stack": 25573,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19690,
+   "stack": 17120,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20400,
+   "stack": 23070,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 68,
+  "table": 3,
+  "handNo": 66,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Tidepool",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 63,
-   "text": "Table 3 · Hand 63 · blinds 50/100 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 50, Northstar raises to 230, Ricochet folds → Northstar takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 1,
    "handNo": 65,
@@ -552,6 +546,12 @@
    "handNo": 68,
    "text": "Table 1 · Hand 68 · blinds 50/100 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo raises to 200, Longshot folds, Highwire calls 100, [flop: K♣ 5♠ 4♣], Highwire raises to 293, Tempo calls 293, [turn: K♣ 5♠ 4♣ 4♦], Highwire raises to 673, Tempo calls 673, [river: K♣ 5♠ 4♣ 4♦ 10♥], Highwire checks, Tempo checks → Highwire wins 2382 with Two pair, Ks and 4s (8♣ K♦)",
    "pot": 2382
+  },
+  {
+   "table": 2,
+   "handNo": 68,
+   "text": "Table 2 · Hand 68 · blinds 50/100 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier calls 50, Deadpan checks, [flop: 6♠ 3♣ K♦], Glacier checks, Deadpan checks, Bedrock checks, [turn: 6♠ 3♣ K♦ 2♠], Glacier checks, Deadpan checks, Bedrock checks, [river: 6♠ 3♣ K♦ 2♠ 5♠], Glacier raises to 195, Deadpan raises to 517, Bedrock folds, Glacier raises to 1175, Deadpan raises to 2470, Glacier calls 1295 → Deadpan wins 5240 with Flush, 7 high (3♠ 7♠)",
+   "pot": 5240
   }
  ],
  "finishes": [],
