@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:03:24.186Z",
+ "updatedAt": "2026-11-25T04:03:39.174Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 397,
+ "handsPlayed": 398,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 17309,
+     "stack": 17109,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 17510,
+     "stack": 17710,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 130
+   "handsPlayed": 131
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17309,
+   "stack": 17109,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17510,
+   "stack": 17710,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 131,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 130,
-   "text": "Table 2 · Hand 130 · blinds 100/200 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier checks, [flop: 4♣ 6♥ 8♦], Bedrock checks, Glacier checks, [turn: 4♣ 6♥ 8♦ 4♠], Bedrock raises to 260, Glacier calls 260, [river: 4♣ 6♥ 8♦ 4♠ 3♠], Bedrock raises to 598, Glacier folds → Bedrock takes 1518 (everyone else folded)",
-   "pot": 1518
-  },
   {
    "table": 3,
    "handNo": 128,
@@ -552,6 +538,12 @@
    "handNo": 133,
    "text": "Table 2 · Hand 133 · blinds 100/200 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool calls 100, Jackpot checks, [flop: Q♦ 10♠ 3♣], Tidepool checks, Jackpot checks, [turn: Q♦ 10♠ 3♣ 4♦], Tidepool checks, Jackpot checks, [river: Q♦ 10♠ 3♣ 4♦ 5♦], Tidepool checks, Jackpot checks → Jackpot wins 400 with Pair of 4s (K♥ 4♥)",
    "pot": 400
+  },
+  {
+   "table": 3,
+   "handNo": 131,
+   "text": "Table 3 · Hand 131 · blinds 100/200 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 100, Snare checks, [flop: Q♦ 5♥ A♥], Fossil checks, Snare raises to 260, Fossil folds → Snare takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [],
