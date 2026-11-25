@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:38:39.245Z",
+ "updatedAt": "2026-11-25T01:39:19.127Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 102,
+ "handsPlayed": 103,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17989,
+     "stack": 17929,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20513,
+     "stack": 20603,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19845,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 34
+   "handsPlayed": 35
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17989,
+   "stack": 17929,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20513,
+   "stack": 20603,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19875,
+   "stack": 19845,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 35,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Magnet",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 31,
-   "text": "Table 3 · Hand 31 · blinds 30/60 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 30, Northstar checks, [flop: Q♠ 7♣ 9♠], Ricochet checks, Northstar checks, [turn: Q♠ 7♣ 9♠ A♣], Ricochet checks, Northstar checks, [river: Q♠ 7♣ 9♠ A♣ 4♥], Ricochet checks, Northstar checks → Northstar wins 120 with Pair of 7s (7♥ 3♠)",
-   "pot": 120
-  },
   {
    "table": 1,
    "handNo": 32,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 34,
    "text": "Table 3 · Hand 34 · blinds 30/60 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 60, Velcro folds, Fossil checks, [flop: 5♥ Q♣ 10♠], Fossil checks, Cobble checks, [turn: 5♥ Q♣ 10♠ K♥], Fossil checks, Cobble checks, [river: 5♥ Q♣ 10♠ K♥ 3♣], Fossil checks, Cobble checks → Cobble wins 150 with Pair of 8s (8♠ 8♣)",
+   "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 35,
+   "text": "Table 1 · Hand 35 · blinds 30/60 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 60, Coyote folds, Midas checks, [flop: Q♦ J♥ Q♥], Midas checks, Static checks, [turn: Q♦ J♥ Q♥ A♠], Midas checks, Static checks, [river: Q♦ J♥ Q♥ A♠ 5♠], Midas checks, Static checks → Static wins 150 with Two pair, Qs and 8s (8♦ 8♣)",
    "pot": 150
   }
  ],
