@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:02:04.713Z",
+ "updatedAt": "2026-11-25T04:02:22.102Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 393,
+ "handsPlayed": 394,
  "tables": [
   {
    "id": 1,
@@ -147,7 +147,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 21237,
+     "stack": 21437,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 19978,
+     "stack": 19778,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 131
+   "handsPlayed": 132
   },
   {
    "id": 3,
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21237,
+   "stack": 21437,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19978,
+   "stack": 19778,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 132,
+  "table": 3,
+  "handNo": 130,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Jackpot",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 130,
-   "text": "Table 1 · Hand 130 · blinds 100/200 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 100, Longshot checks, [flop: 3♠ A♣ 7♠], Tempo checks, Longshot raises to 260, Tempo calls 260, [turn: 3♠ A♣ 7♠ 2♦], Tempo checks, Longshot raises to 598, Tempo folds → Longshot takes 1518 (everyone else folded)",
-   "pot": 1518
-  },
   {
    "table": 2,
    "handNo": 129,
@@ -552,6 +546,12 @@
    "handNo": 133,
    "text": "Table 1 · Hand 133 · blinds 100/200 · Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static calls 100, Coyote checks, [flop: 2♦ 10♠ A♦], Static checks, Coyote checks, [turn: 2♦ 10♠ A♦ 5♥], Static checks, Coyote checks, [river: 2♦ 10♠ A♦ 5♥ 10♣], Static checks, Coyote checks → Static wins 400 with Pair of 10s (Q♣ 4♠)",
    "pot": 400
+  },
+  {
+   "table": 2,
+   "handNo": 132,
+   "text": "Table 2 · Hand 132 · blinds 100/200 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 100, Tidepool checks, [flop: A♦ 10♦ 3♠], Deadpan checks, Tidepool checks, [turn: A♦ 10♦ 3♠ 7♣], Deadpan raises to 260, Tidepool folds → Deadpan takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [],
