@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:29:16.367Z",
+ "updatedAt": "2026-11-25T02:29:32.556Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 185,
+ "handsPlayed": 186,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17842,
+     "stack": 17612,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20377,
+     "stack": 20607,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 62
+   "handsPlayed": 63
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17842,
+   "stack": 17612,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20377,
+   "stack": 20607,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 63,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Freezer",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 59,
-   "text": "Table 2 · Hand 59 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: Q♥ 10♠ 4♥], Glacier checks, Deadpan checks, [turn: Q♥ 10♠ 4♥ 4♠], Glacier checks, Deadpan checks, [river: Q♥ 10♠ 4♥ 4♠ Q♠], Glacier checks, Deadpan checks → Deadpan wins 160 with Two pair, Qs and 4s (9♥ A♣)",
-   "pot": 160
-  },
   {
    "table": 1,
    "handNo": 60,
@@ -552,6 +546,12 @@
    "handNo": 61,
    "text": "Table 3 · Hand 61 · blinds 50/100 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 50, Mirage checks, [flop: A♣ 2♦ 5♣], Brass checks, Mirage checks, [turn: A♣ 2♦ 5♣ 2♠], Brass raises to 130, Mirage calls 130, [river: A♣ 2♦ 5♣ 2♠ A♦], Brass raises to 299, Mirage calls 299 → Brass wins 1058 with Full house, 2s full of As (7♥ 2♣)",
    "pot": 1058
+  },
+  {
+   "table": 1,
+   "handNo": 63,
+   "text": "Table 1 · Hand 63 · blinds 50/100 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 50, Magnet checks, [flop: J♣ 10♣ 8♣], Midas checks, Magnet raises to 130, Midas calls 130, [turn: J♣ 10♣ 8♣ 7♣], Midas checks, Magnet raises to 299, Midas folds → Magnet takes 759 (everyone else folded)",
+   "pot": 759
   }
  ],
  "finishes": [],
