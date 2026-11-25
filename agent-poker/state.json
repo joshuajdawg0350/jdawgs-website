@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:13:44.606Z",
+ "updatedAt": "2026-11-25T01:14:00.203Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 31,
+ "handsPlayed": 32,
  "tables": [
   {
    "id": 1,
@@ -115,7 +115,7 @@
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 20050,
+     "stack": 20100,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 19785,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 3,
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20050,
+   "stack": 20100,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 19785,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 11,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Bedrock",
+  "toAct": "Brass",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 8,
-   "text": "Table 1 · Hand 8 · blinds 25/50 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 25, Midas checks, [flop: 7♠ 7♣ J♥], Coyote checks, Midas checks, [turn: 7♠ 7♣ J♥ 8♥], Coyote checks, Midas checks, [river: 7♠ 7♣ J♥ 8♥ 3♦], Coyote checks, Midas checks → Coyote wins 100 with Pair of 7s (4♥ Q♥)",
-   "pot": 100
-  },
   {
    "table": 2,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 11,
    "text": "Table 1 · Hand 11 · blinds 25/50 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 25, Switchback checks, [flop: 4♣ 8♥ 6♥], Freezer checks, Switchback checks, [turn: 4♣ 8♥ 6♥ 7♠], Freezer checks, Switchback checks, [river: 4♣ 8♥ 6♥ 7♠ 5♠], Freezer raises to 65, Switchback calls 65 → Freezer wins 230 with Straight, 9 high (K♣ 9♠)",
    "pot": 230
+  },
+  {
+   "table": 2,
+   "handNo": 11,
+   "text": "Table 2 · Hand 11 · blinds 25/50 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 25, Ember checks, [flop: K♠ 4♦ 6♠], Ledger raises to 65, Ember folds → Ledger takes 165 (everyone else folded)",
+   "pot": 165
   }
  ],
  "finishes": [],
