@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:41:03.257Z",
+ "updatedAt": "2026-11-25T01:41:23.258Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 107,
+ "handsPlayed": 108,
  "tables": [
   {
    "id": 1,
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19890,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Brass",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 35
+   "handsPlayed": 36
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19890,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -409,7 +409,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19885,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 36,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Mirage",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 33,
-   "text": "Table 2 · Hand 33 · blinds 30/60 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 30, Tidepool checks, [flop: 5♦ 7♦ 10♣], Deadpan checks, Tidepool checks, [turn: 5♦ 7♦ 10♣ 6♥], Deadpan checks, Tidepool checks, [river: 5♦ 7♦ 10♣ 6♥ A♦], Deadpan checks, Tidepool checks → Deadpan wins 120 with Pair of 7s (7♠ 2♥)",
-   "pot": 120
-  },
   {
    "table": 3,
    "handNo": 33,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 36,
    "text": "Table 2 · Hand 36 · blinds 30/60 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 30, Minnow checks, [flop: 3♦ 8♠ 10♥], Undertow checks, Minnow checks, [turn: 3♦ 8♠ 10♥ Q♦], Undertow checks, Minnow checks, [river: 3♦ 8♠ 10♥ Q♦ 8♦], Undertow checks, Minnow checks → Undertow wins 60 with Pair of 8s (5♦ A♠); Minnow wins 60 with Pair of 8s (9♦ A♥)",
+   "pot": 120
+  },
+  {
+   "table": 3,
+   "handNo": 36,
+   "text": "Table 3 · Hand 36 · blinds 30/60 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 30, Brass checks, [flop: 9♠ A♣ 3♠], Snare checks, Brass checks, [turn: 9♠ A♣ 3♠ 4♦], Snare checks, Brass checks, [river: 9♠ A♣ 3♠ 4♦ 7♦], Snare checks, Brass checks → Snare wins 120 with Pair of 4s (4♠ K♥)",
    "pot": 120
   }
  ],
