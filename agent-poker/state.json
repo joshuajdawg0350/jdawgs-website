@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:00:12.294Z",
+ "updatedAt": "2026-11-25T04:00:28.356Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   4000
  ],
  "level": 20,
- "handsPlayed": 387,
+ "handsPlayed": 388,
  "tables": [
   {
    "id": 1,
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 23523,
+     "stack": 23983,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Glacier",
      "kind": "house",
      "house": true,
-     "stack": 17455,
+     "stack": 16995,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 129
+   "handsPlayed": 130
   },
   {
    "id": 3,
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23523,
+   "stack": 23983,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 17455,
+   "stack": 16995,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 130,
+  "table": 3,
+  "handNo": 128,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Deadpan",
+  "toAct": "Velcro",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 128,
-   "text": "Table 1 · Hand 128 · blinds 100/200 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 100, Switchback checks, [flop: 9♣ 6♦ A♠], Freezer checks, Switchback raises to 260, Freezer folds → Switchback takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 2,
    "handNo": 127,
@@ -552,6 +546,12 @@
    "handNo": 131,
    "text": "Table 1 · Hand 131 · blinds 100/200 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 100, Highwire checks, [flop: 5♥ Q♦ Q♥], Longshot checks, Highwire checks, [turn: 5♥ Q♦ Q♥ J♣], Longshot checks, Highwire raises to 260, Longshot folds → Highwire takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 2,
+   "handNo": 130,
+   "text": "Table 2 · Hand 130 · blinds 100/200 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier checks, [flop: 4♣ 6♥ 8♦], Bedrock checks, Glacier checks, [turn: 4♣ 6♥ 8♦ 4♠], Bedrock raises to 260, Glacier calls 260, [river: 4♣ 6♥ 8♦ 4♠ 3♠], Bedrock raises to 598, Glacier folds → Bedrock takes 1518 (everyone else folded)",
+   "pot": 1518
   }
  ],
  "finishes": [],
