@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:46:22.569Z",
+ "updatedAt": "2026-11-25T01:46:44.469Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  80,
-  160
+  100,
+  200
  ],
- "level": 6,
- "handsPlayed": 119,
+ "level": 7,
+ "handsPlayed": 120,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19625,
+     "stack": 19745,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21125,
+     "stack": 21065,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 23779,
+     "stack": 23719,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 39
+   "handsPlayed": 40
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19625,
+   "stack": 19745,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21125,
+   "stack": 21065,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23779,
+   "stack": 23719,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 40,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 37,
-   "text": "Table 2 · Hand 37 · blinds 30/60 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow raises to 120, Ledger calls 60, [flop: 2♥ 2♣ 6♣], Minnow raises to 156, Ledger calls 156, [turn: 2♥ 2♣ 6♣ 3♥], Minnow raises to 359, Ledger calls 359, [river: 2♥ 2♣ 6♣ 3♥ A♣], Minnow raises to 826, Ledger folds → Minnow takes 2096 (everyone else folded)",
-   "pot": 2096
-  },
   {
    "table": 3,
    "handNo": 37,
@@ -552,6 +538,12 @@
    "handNo": 40,
    "text": "Table 2 · Hand 40 · blinds 30/60 · Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock calls 30, Glacier checks, [flop: 2♥ 3♠ 6♠], Bedrock checks, Glacier checks, [turn: 2♥ 3♠ 6♠ 7♥], Bedrock checks, Glacier checks, [river: 2♥ 3♠ 6♠ 7♥ 8♥], Bedrock raises to 78, Glacier raises to 207, Bedrock raises to 470, Glacier calls 263 → Bedrock wins 1060 with Flush, 9 high (4♥ 9♥)",
    "pot": 1060
+  },
+  {
+   "table": 3,
+   "handNo": 40,
+   "text": "Table 3 · Hand 40 · blinds 30/60 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 60, Northstar calls 30, Cobble checks, [flop: K♣ J♦ 7♥], Northstar checks, Cobble checks, Ricochet checks, [turn: K♣ J♦ 7♥ 7♦], Northstar checks, Cobble checks, Ricochet checks, [river: K♣ J♦ 7♥ 7♦ 7♣], Northstar checks, Cobble checks, Ricochet checks → Northstar wins 180 with Full house, 7s full of Js (A♠ J♣)",
+   "pot": 180
   }
  ],
  "finishes": [],
