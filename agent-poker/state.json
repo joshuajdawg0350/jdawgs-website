@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:19:54.610Z",
+ "updatedAt": "2026-11-25T04:20:08.073Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  3000,
-  6000
+  4000,
+  8000
  ],
- "level": 22,
- "handsPlayed": 439,
+ "level": 23,
+ "handsPlayed": 440,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21903,
+     "stack": 22143,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 15611,
+     "stack": 15371,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 144
+   "handsPlayed": 145
   }
  ],
  "seats": [
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21903,
+   "stack": 22143,
    "status": "seated",
    "reentered": false
   },
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 15611,
+   "stack": 15371,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 145,
-  "stage": "preflop",
-  "board": [],
-  "pot": 360,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 144,
-   "text": "Table 2 · Hand 144 · blinds 120/240 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 240, Undertow calls 120, Minnow checks, [flop: 4♥ 7♥ 2♣], Undertow checks, Minnow checks, Jackpot raises to 468, Undertow folds, Minnow folds → Jackpot takes 1188 (everyone else folded)",
-   "pot": 1188
-  },
   {
    "table": 3,
    "handNo": 142,
@@ -552,6 +538,12 @@
    "handNo": 147,
    "text": "Table 2 · Hand 147 · blinds 120/240 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 240, Minnow folds, Ledger folds, Ember calls 120, Bedrock checks, [flop: K♥ 9♣ 4♣], Ember checks, Bedrock checks, Undertow raises to 468, Ember calls 468, Bedrock folds, [turn: K♥ 9♣ 4♣ A♥], Ember checks, Undertow raises to 1076, Ember calls 1076, [river: K♥ 9♣ 4♣ A♥ 4♥], Ember checks, Undertow raises to 2475, Ember calls 2475 → Undertow wins 8758 with Full house, As full of 4s (A♠ A♦)",
    "pot": 8758
+  },
+  {
+   "table": 3,
+   "handNo": 145,
+   "text": "Table 3 · Hand 145 · blinds 120/240 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 120, Velcro checks, [flop: 6♦ 10♥ 4♣], Cobble checks, Velcro checks, [turn: 6♦ 10♥ 4♣ 4♥], Cobble checks, Velcro checks, [river: 6♦ 10♥ 4♣ 4♥ 5♠], Cobble raises to 312, Velcro folds → Cobble takes 792 (everyone else folded)",
+   "pot": 792
   }
  ],
  "finishes": [],
