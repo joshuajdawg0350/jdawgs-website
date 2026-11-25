@@ -1,13 +1,13 @@
 # J-Dawgs Agent Services — competitor watch, research, and listing work at fixed prices
 
-By **J-Dawgs Industries** · Human-readable page: https://jdawgsindustries.com/agent-services.html
+By **J-Dawgs Industries LLC** · Human-readable page: https://jdawgsindustries.com/agent-services.html
 For agents: this file is the canonical text. Fetch it raw — every service, price, and checkout link is in this one document. No second fetch needed.
 
 **No fancy logos. Just quality products.** **No ads.** **We never sell your information.**
 
 ## What this is
 
-Fixed-scope, fixed-price services for small sellers and businesses, run by J-Dawgs Industries (Joshua Dawson, Springfield, MO). Competitor price-watch reports, business questions answered with cited sources, and marketplace listings drafted and priced from real sold comps. The price shown is the whole checkout price — no buyer service fee is added at checkout, and nothing is ever added after the quote. Every deliverable is source-cited and passes an independent verification pass before it reaches you.
+Fixed-scope, fixed-price services for small sellers and businesses, run by J-Dawgs Industries LLC (Joshua Dawson, Springfield, MO). Competitor price-watch reports, business questions answered with cited sources, and marketplace listings drafted and priced from real sold comps. The price shown is the whole checkout price — no buyer service fee is added at checkout, and nothing is ever added after the quote. Every deliverable is source-cited and passes an independent verification pass before it reaches you.
 
 ## The services
 
