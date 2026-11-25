@@ -354,6 +354,27 @@
 
       @media (prefers-reduced-motion: reduce) { .toast { transition: none; } .chip:active, .btn-chrome:active, .btn-blue:active { transform: none; } }
 
+      /* ---------- v2 additions (2026-11-25): Ready-Made Library, Tune-Up, Side by Side ---------- */
+      .v2-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 14px;
+        margin-top: 12px;
+      }
+      .v2-card h3 { margin: 0 0 2px; font-size: 16px; color: var(--ink); }
+      .v2-card .v2-cat { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin: 0 0 6px; }
+      .v2-card .v2-makes { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+      .v2-card .out-text { white-space: pre-wrap; }
+      .v2-check { display: flex; align-items: flex-start; gap: 9px; margin-top: 10px; color: var(--ink); font-size: 15px; }
+      .v2-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--blue); flex: none; }
+      ul.v2-changes { margin: 6px 0 0; padding-left: 20px; color: var(--muted); font-size: 14.5px; }
+      ul.v2-changes li { margin-top: 4px; }
+      .v2-sbs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+      .v2-sbs .v2-card { margin-top: 0; }
+      .v2-sbs .v2-card.picked { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue), 0 0 18px rgba(56,169,255,0.25); }
+      @media (max-width: 640px) { .v2-sbs { grid-template-columns: 1fr; } }
+
       /* ---------- Master Edition ---------- */
       .master-note { margin: 0 0 12px; font-size: 14.5px; color: var(--muted); }
       .master-note b { color: var(--ink); }
@@ -494,6 +515,106 @@
           <a href="https://buy.stripe.com/00waEX3q1d6A1pH7X73kt0W" target="_blank" rel="noopener">Get the full Master — $2.99</a>
           <a href="https://the-hydrant.vercel.app" target="_blank" rel="noopener">The Hydrant — where agents come to post</a>
           <a href="https://jdawgsindustries.com/ai-tool-store.html" target="_blank" rel="noopener">More tools for agents — AI Tool Store</a>
+        </div>
+      </section>
+
+      <!-- ============ READY-MADE LIBRARY (v2 addition, 2026-11-25) ============ -->
+      <section class="plate" id="plateReadyMade" aria-label="Ready-made prompt library">
+        <div class="plate-head"><h2>Ready-Made Library</h2></div>
+        <p class="master-note">Finished prompts, written by us, ready to use as-is — no building required. Copy one and paste it into any AI, or send it to the Tune-Up below and make it yours. The parts in [brackets] are yours to fill in.</p>
+        <div class="s-chips" id="v2LibChips" role="group" aria-label="Library categories">
+          <button type="button" class="chip" data-v2cat="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-v2cat="work" aria-pressed="false">Work</button>
+          <button type="button" class="chip" data-v2cat="writing" aria-pressed="false">Writing</button>
+          <button type="button" class="chip" data-v2cat="business" aria-pressed="false">Business</button>
+          <button type="button" class="chip" data-v2cat="image" aria-pressed="false">Image</button>
+          <button type="button" class="chip" data-v2cat="video" aria-pressed="false">Video</button>
+        </div>
+        <div id="v2LibList"></div>
+      </section>
+
+      <!-- ============ PROMPT TUNE-UP (v2 addition, 2026-11-25) ============ -->
+      <section class="plate" id="plateTuneUp" aria-label="Prompt tune-up">
+        <div class="plate-head"><h2>Prompt Tune-Up</h2></div>
+        <p class="master-note">Already have a prompt? Paste it here, tick what you want added, and get a stronger, better-organized version back — plus a plain list of exactly what changed. Nothing gets added that you didn't tick.</p>
+        <div class="field">
+          <label class="field-label" for="v2TuIn">Your prompt</label>
+          <textarea id="v2TuIn" rows="4" autocomplete="off" placeholder="Paste a prompt you already have…"></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label" for="v2TuFor">Who is it for? (optional — added as an audience line)</label>
+          <input type="text" id="v2TuFor" autocomplete="off" placeholder="e.g. first-time customers reading on a phone" />
+        </div>
+        <label class="v2-check"><input type="checkbox" id="v2TuRole" /> <span>Add an expert role line — an expert in: <input type="text" id="v2TuField" autocomplete="off" placeholder="e.g. small-engine repair" style="margin-top:6px" /></span></label>
+        <label class="v2-check"><input type="checkbox" id="v2TuFormat" /> <span>Say the format I want back:
+          <select id="v2TuFormatSel" style="margin-top:6px">
+            <option value="a bullet list">a bullet list</option>
+            <option value="numbered steps, in order">numbered steps, in order</option>
+            <option value="short paragraphs">short paragraphs</option>
+            <option value="a simple table">a simple table</option>
+          </select></span></label>
+        <label class="v2-check"><input type="checkbox" id="v2TuLength" /> <span>Say how long it should be:
+          <select id="v2TuLengthSel" style="margin-top:6px">
+            <option value="one short paragraph">one short paragraph</option>
+            <option value="about 200 words">about 200 words</option>
+            <option value="detailed — cover it fully">detailed — cover it fully</option>
+          </select></span></label>
+        <label class="v2-check"><input type="checkbox" id="v2TuAsk" /> <span>Tell it to ask me questions first if anything is unclear</span></label>
+        <label class="v2-check"><input type="checkbox" id="v2TuPlain" /> <span>Tell it to use plain words, no jargon</span></label>
+        <label class="v2-check"><input type="checkbox" id="v2TuAvoidOn" /> <span>Things to avoid: <input type="text" id="v2TuAvoid" autocomplete="off" placeholder="e.g. hype words, guessing at facts" style="margin-top:6px" /></span></label>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="v2TuBtn">Tune it up</button>
+          <span class="copy-note warn" id="v2TuWarn"></span>
+        </div>
+        <div id="v2TuOut" hidden>
+          <p class="out-label" style="margin-top:14px">Your tuned-up prompt</p>
+          <p class="out-text" id="v2TuText" style="white-space:pre-wrap"></p>
+          <div class="out-actions">
+            <button type="button" class="btn-chrome" id="v2TuCopy">Copy tuned prompt</button>
+            <span class="copy-note" id="v2TuNote"></span>
+          </div>
+          <p class="out-label" style="margin-top:14px">What changed</p>
+          <ul class="v2-changes" id="v2TuChanges"></ul>
+        </div>
+      </section>
+
+      <!-- ============ SIDE BY SIDE (v2 addition, 2026-11-25) ============ -->
+      <section class="plate" id="plateSideBySide" aria-label="Side by side">
+        <div class="plate-head"><h2>Side by Side</h2></div>
+        <p class="master-note">One goal, two ways to ask for it. Version A is straight and structured. Version B gives the AI more direction. Read both, pick the one you like — picking it copies it, ready to paste.</p>
+        <div class="field">
+          <label class="field-label" for="v2SbGoal">Your goal, in plain words</label>
+          <textarea id="v2SbGoal" rows="2" autocomplete="off" placeholder="e.g. write a post about my shop's Saturday sale"></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label" for="v2SbFor">Who is it for? (optional)</label>
+          <input type="text" id="v2SbFor" autocomplete="off" placeholder="e.g. neighbors who have never heard of my shop" />
+        </div>
+        <div class="m-actions">
+          <button type="button" class="btn-blue" id="v2SbBtn">Build both versions</button>
+          <span class="copy-note warn" id="v2SbWarn"></span>
+        </div>
+        <div class="v2-sbs" id="v2SbOut" hidden>
+          <article class="v2-card" id="v2SbCardA">
+            <h3>Version A — Straight &amp; Structured</h3>
+            <p class="v2-makes">The ask, organized: task, audience, what comes back, and the rules.</p>
+            <p class="out-text" id="v2SbTextA"></p>
+            <div class="out-actions">
+              <button type="button" class="btn-chrome" id="v2SbCopyA">Copy A</button>
+              <button type="button" class="btn-blue" id="v2SbPickA">Pick A</button>
+              <span class="copy-note" id="v2SbNoteA"></span>
+            </div>
+          </article>
+          <article class="v2-card" id="v2SbCardB">
+            <h3>Version B — Detailed &amp; Directed</h3>
+            <p class="v2-makes">More direction: an expert role, a comprehension check, and blanks instead of guesses.</p>
+            <p class="out-text" id="v2SbTextB"></p>
+            <div class="out-actions">
+              <button type="button" class="btn-chrome" id="v2SbCopyB">Copy B</button>
+              <button type="button" class="btn-blue" id="v2SbPickB">Pick B</button>
+              <span class="copy-note" id="v2SbNoteB"></span>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -3761,6 +3882,242 @@ document.addEventListener('touchstart',function(e){if(e.touches[0])y=e.touches[0
 document.addEventListener('touchmove',function(e){if(!e.touches[0])return;
 if(s&&s.classList.contains('dragging')){e.preventDefault();return;}
 if(b&&e.target&&b.contains&&b.contains(e.target)&&b.scrollTop<=0&&e.touches[0].clientY>y)e.preventDefault();},{passive:false});})();
+</script>
+<script>
+/* ============ v2 additions (2026-11-25): Ready-Made Library, Tune-Up, Side by Side.
+   Self-contained: reads/writes only its own v2-prefixed elements, plus fills the
+   Tune-Up box when a library card asks it to. The original door and engines are
+   not touched. Everything runs on this device; nothing is sent anywhere. */
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function clean(s) { return (s || "").replace(/\s+/g, " ").trim(); }
+  function capFirst(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  function asSentence(s) { s = clean(s); if (!s) return s; s = capFirst(s); return /[.!?]$/.test(s) ? s : s + "."; }
+
+  function v2Copy(text, noteEl, sourceEl) {
+    function ok() { if (noteEl) { noteEl.textContent = "Copied."; noteEl.className = "copy-note ok"; } }
+    function blocked() {
+      if (noteEl) { noteEl.textContent = "Copy was blocked — the text is selected; long-press it and tap Copy."; noteEl.className = "copy-note warn"; }
+      if (sourceEl) {
+        var r = document.createRange(); r.selectNodeContents(sourceEl);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { legacy(); });
+    } else { legacy(); }
+    function legacy() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var done = false;
+      try { done = document.execCommand("copy"); } catch (e) { done = false; }
+      document.body.removeChild(ta);
+      if (done) ok(); else blocked();
+    }
+  }
+
+  /* ---------------- Ready-Made Library ---------------- */
+  var LIB = [
+    { cat: "work", label: "Meeting notes → decisions & jobs",
+      makes: "Makes: a clean summary, a who-owes-what list, and the loose ends — out of messy notes.",
+      prompt: "Here are my rough notes from a meeting: [paste notes]. Turn them into: (1) a three-line summary of what was decided, (2) a list of who owes what, with the deadline next to each job, and (3) anything that was talked about but never decided. Use only what is in the notes — if a name or date is missing, write [missing] instead of guessing." },
+    { cat: "work", label: "Rewrite an email: firm but polite",
+      makes: "Makes: two short versions of your email — a first ask and a follow-up — same facts, better tone.",
+      prompt: "Rewrite this email so it is firm about what I need and polite in how it says it: [paste email]. Keep every fact and date exactly as written. Keep it under 120 words. Give me two versions: one for a first ask, and one for a second ask if the first went unanswered." },
+    { cat: "work", label: "Instructions a new hire can follow",
+      makes: "Makes: numbered steps, clear warnings, and a done-right checklist.",
+      prompt: "Turn this job into step-by-step instructions a brand-new hire can follow with no training: [describe the job]. Number every step. Put any safety warning on its own line starting with WARNING. End with a short checklist that starts: you did it right if…" },
+    { cat: "writing", label: "Explain it in plain words",
+      makes: "Makes: a clear explanation a beginner actually understands, with one everyday example.",
+      prompt: "Explain [topic] in plain words for a smart adult who knows nothing about it. Short sentences. No jargon — if a hard word is unavoidable, explain it right there. Use one everyday example. Finish with the one thing most people get wrong about it." },
+    { cat: "writing", label: "Story opener that hooks",
+      makes: "Makes: a gripping first 150 words — a character, a want, and a problem.",
+      prompt: "Write the opening 150 words of a story about [your idea]. Start in the middle of something happening — no weather, no waking up. Give the main character a name, a want, and a problem in the first paragraph. End the opening on a line that makes the reader ask a question." },
+    { cat: "writing", label: "One idea → a week of posts",
+      makes: "Makes: five different short posts out of a single idea.",
+      prompt: "Here is one idea from my work: [idea]. Turn it into five short social media posts, each from a different angle: a tip, a mistake to avoid, a behind-the-scenes moment, a question for readers, and a plain offer of what I sell. Plain words, no hype words, each under 60 words." },
+    { cat: "business", label: "Product description from facts only",
+      makes: "Makes: an honest product description built only from the facts you list.",
+      prompt: "Write a product description from these facts only: [list the facts — what it is, size, material, condition, price]. Do not invent any feature or claim that is not in my list. Structure: a one-line hook, three short paragraphs (what it is / why it is good / the honest fine print), then the price and how to buy. Plain words a neighbor would use." },
+    { cat: "business", label: "Answer an unhappy customer",
+      makes: "Makes: a short, human reply that owns the problem and names the fix.",
+      prompt: "Write a reply to this unhappy customer message: [paste message]. Thank them for saying it plainly. Own the part that is our fault, without excuses. Say exactly what we will do to fix it, and by when. The fix we are offering is: [your fix]. Keep it under 100 words and do not sound like a corporation." },
+    { cat: "business", label: "Ad copy from your selling points",
+      makes: "Makes: two ready ads — a short classified and a social post — from your selling points.",
+      prompt: "Write a short ad from these selling points: [list them]. Give me two versions: one under 40 words for a classified listing, and one under 100 words for a social post. Say what it is, what it costs, and where to get it in the first two lines. No hype words — let the facts do the selling." },
+    { cat: "image", label: "Product photo that sells",
+      makes: "Makes: a clean, honest product-shot prompt any image AI can follow.",
+      prompt: "Create a photorealistic image: [product] on a clean workbench, shot straight-on at eye level, soft daylight from a window on the left, true colors, every edge sharp, the product filling most of the frame. Plain background, nothing else in shot. No text, no watermark, no logo anywhere in the image." },
+    { cat: "image", label: "Portrait that keeps the person",
+      makes: "Makes: a portrait prompt that protects the person's real likeness.",
+      prompt: "Create a photorealistic portrait of [describe the person — age, build, hair, face, clothes]. Keep their real face and features exactly as described — do not beautify, slim, or make them younger. Setting: [place]. Light: [time of day]. Expression: [mood]. Photographed on a phone camera, natural skin texture, no filters. No text or watermark." },
+    { cat: "image", label: "Scene from a sentence",
+      makes: "Makes: a full scene prompt with camera, light, and mood filled in.",
+      prompt: "Create a photorealistic image of this scene: [your sentence]. Show it as a [wide shot / medium shot / close-up], from [eye level / slightly above / ground level]. Light: [golden hour / overcast / neon night]. Mood: [two or three words]. Rich real detail — weather, surfaces, small background life. No text, no watermark." },
+    { cat: "video", label: "Product demo clip",
+      makes: "Makes: a short demo-clip prompt with a real camera move.",
+      prompt: "A photorealistic video: [product] sitting on [surface]. The camera starts wide, then slowly pushes in to a close-up of [best detail]. A hand enters the frame and [shows what it does]. Natural light, real shadows, a steady handheld feel with slight natural sway. Length: about 10 seconds. No text overlays, no watermark." },
+    { cat: "video", label: "Before & after clip",
+      makes: "Makes: a before-and-after video prompt where the change tells the story.",
+      prompt: "A photorealistic video in two beats. First: [the before — the problem, worn, dirty, or broken]. The camera holds still for two seconds. Then one natural motion — [a hand passes / a door swings] — and the same shot, now [the after — fixed, clean, working]. Same angle, same light, so the change is the whole story. No text, no watermark." },
+    { cat: "video", label: "Place that pulls you in",
+      makes: "Makes: a slow walk-through clip prompt that ends on your business.",
+      prompt: "A photorealistic video: the camera moves slowly forward through [place — a shop, a street, a job site] at walking pace, eye level. People are doing real things: [name two or three]. Busy but calm. Light: [time of day]. End the move settling on [the thing you sell, or the sign]. No text overlays, no watermark." }
+  ];
+  var CATNAMES = { work: "Work", writing: "Writing", business: "Business", image: "Image", video: "Video" };
+  var libList = $("v2LibList");
+
+  function renderLib(cat) {
+    libList.innerHTML = "";
+    LIB.forEach(function (item) {
+      if (cat !== "all" && item.cat !== cat) return;
+      var card = document.createElement("article");
+      card.className = "v2-card";
+      var c = document.createElement("p"); c.className = "v2-cat"; c.textContent = CATNAMES[item.cat]; card.appendChild(c);
+      var h = document.createElement("h3"); h.textContent = item.label; card.appendChild(h);
+      var mk = document.createElement("p"); mk.className = "v2-makes"; mk.textContent = item.makes; card.appendChild(mk);
+      var tx = document.createElement("p"); tx.className = "out-text"; tx.textContent = item.prompt; card.appendChild(tx);
+      var act = document.createElement("div"); act.className = "out-actions";
+      var bCopy = document.createElement("button"); bCopy.type = "button"; bCopy.className = "btn-chrome"; bCopy.textContent = "Copy prompt";
+      var note = document.createElement("span"); note.className = "copy-note";
+      bCopy.addEventListener("click", function () { v2Copy(item.prompt, note, tx); });
+      var bTune = document.createElement("button"); bTune.type = "button"; bTune.className = "btn-ghost"; bTune.textContent = "Send to Tune-Up";
+      bTune.addEventListener("click", function () {
+        $("v2TuIn").value = item.prompt;
+        $("plateTuneUp").scrollIntoView({ behavior: "smooth", block: "start" });
+        note.textContent = "Loaded in the Tune-Up below."; note.className = "copy-note ok";
+      });
+      act.appendChild(bCopy); act.appendChild(bTune); act.appendChild(note);
+      card.appendChild(act);
+      libList.appendChild(card);
+    });
+    if (!libList.children.length) {
+      var p = document.createElement("p"); p.className = "copy-note"; p.textContent = "Nothing in this category yet.";
+      libList.appendChild(p);
+    }
+  }
+  renderLib("all");
+  $("v2LibChips").addEventListener("click", function (e) {
+    var btn = e.target.closest ? e.target.closest("[data-v2cat]") : null;
+    if (!btn) return;
+    var chips = $("v2LibChips").querySelectorAll("[data-v2cat]");
+    for (var i = 0; i < chips.length; i++) chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+    renderLib(btn.getAttribute("data-v2cat"));
+  });
+
+  /* ---------------- Tune-Up ---------------- */
+  $("v2TuBtn").addEventListener("click", function () {
+    var raw = $("v2TuIn").value;
+    var warn = $("v2TuWarn");
+    if (!clean(raw)) {
+      warn.textContent = "Paste a prompt first — the box above is empty.";
+      $("v2TuOut").hidden = true;
+      return;
+    }
+    warn.textContent = "";
+    var changes = [];
+    var tidied = raw.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+    if (tidied !== raw.trim()) changes.push("Tidied the spacing — extra spaces and blank lines removed. Your words themselves were not rewritten.");
+    var parts = [];
+    if ($("v2TuRole").checked) {
+      var field = clean($("v2TuField").value);
+      var role = field ? "You are an expert in " + field + "." : "You are an expert assistant for the task below.";
+      parts.push(role);
+      changes.push("Added a role line at the top: “" + role + "”");
+    }
+    parts.push(asSentence(tidied.replace(/\n+/g, " ")));
+    changes.push("Kept your prompt as the task, word for word apart from the tidying above.");
+    var aud = clean($("v2TuFor").value);
+    if (aud) { parts.push("Audience: " + aud + "."); changes.push("Added your audience line: “Audience: " + aud + ".”"); }
+    if ($("v2TuFormat").checked) {
+      var f = $("v2TuFormatSel").value;
+      parts.push("Format: give me the answer as " + f + ".");
+      changes.push("Added a format line: the answer comes back as " + f + ".");
+    }
+    if ($("v2TuLength").checked) {
+      var l = $("v2TuLengthSel").value;
+      parts.push("Length: " + l + ".");
+      changes.push("Added a length line: " + l + ".");
+    }
+    if ($("v2TuAsk").checked) {
+      parts.push("If anything above is unclear, ask me questions before you start.");
+      changes.push("Added: the AI must ask you questions first if anything is unclear, instead of guessing.");
+    }
+    if ($("v2TuPlain").checked) {
+      parts.push("Use plain words. Avoid jargon; if you must use a technical term, explain it in the same sentence.");
+      changes.push("Added: plain words only, and any technical term must be explained on the spot.");
+    }
+    if ($("v2TuAvoidOn").checked) {
+      var av = clean($("v2TuAvoid").value);
+      if (av) { parts.push("Avoid: " + av + "."); changes.push("Added your avoid line: “Avoid: " + av + ".”"); }
+      else changes.push("You ticked “things to avoid” but left it blank, so no avoid line was added.");
+    }
+    if (changes.length <= 2 && !$("v2TuRole").checked && !aud && !$("v2TuFormat").checked && !$("v2TuLength").checked && !$("v2TuAsk").checked && !$("v2TuPlain").checked) {
+      changes.push("Nothing else was added — you didn't tick any additions. Tick a box above to add it.");
+    }
+    $("v2TuText").textContent = parts.join("\n");
+    var ul = $("v2TuChanges"); ul.innerHTML = "";
+    changes.forEach(function (ch) { var li = document.createElement("li"); li.textContent = ch; ul.appendChild(li); });
+    $("v2TuNote").textContent = "";
+    $("v2TuOut").hidden = false;
+  });
+  $("v2TuCopy").addEventListener("click", function () {
+    v2Copy($("v2TuText").textContent, $("v2TuNote"), $("v2TuText"));
+  });
+
+  /* ---------------- Side by Side ---------------- */
+  function buildA(goal, aud) {
+    var lines = [];
+    lines.push("TASK: " + asSentence(goal));
+    if (aud) lines.push("AUDIENCE: " + clean(aud) + ".");
+    lines.push("WHAT I NEED BACK: a finished result I can use as-is, in plain words. If it runs long, organize it with clear headings or steps.");
+    lines.push("RULES: stick to the facts I gave you — do not invent details. If something important is missing, ask me before you start.");
+    return lines.join("\n");
+  }
+  function buildB(goal, aud) {
+    var g = clean(goal).replace(/\.+$/, "");
+    var lines = [];
+    lines.push("You are an expert at work like this. The job: " + g + ".");
+    lines.push("First, restate the goal in one line so I can see you understood it. Then deliver the finished result.");
+    if (aud) lines.push("Write it for " + clean(aud) + ".");
+    lines.push("Make it specific and practical — real examples and concrete details over general advice. Use plain words.");
+    lines.push("Do not invent facts about me or my business. Where you need a fact I didn't give you, leave a [bracketed blank] for me to fill in.");
+    lines.push("End with one line telling me what I could ask for next if I want to go further.");
+    return lines.join("\n");
+  }
+  $("v2SbBtn").addEventListener("click", function () {
+    var goal = clean($("v2SbGoal").value);
+    var warn = $("v2SbWarn");
+    if (!goal) {
+      warn.textContent = "Type your goal first — the box above is empty.";
+      $("v2SbOut").hidden = true;
+      return;
+    }
+    warn.textContent = "";
+    var aud = $("v2SbFor").value;
+    $("v2SbTextA").textContent = buildA(goal, aud);
+    $("v2SbTextB").textContent = buildB(goal, aud);
+    $("v2SbCardA").classList.remove("picked");
+    $("v2SbCardB").classList.remove("picked");
+    $("v2SbNoteA").textContent = ""; $("v2SbNoteB").textContent = "";
+    $("v2SbOut").hidden = false;
+  });
+  function pick(which) {
+    var other = which === "A" ? "B" : "A";
+    $("v2SbCard" + which).classList.add("picked");
+    $("v2SbCard" + other).classList.remove("picked");
+    var note = $("v2SbNote" + which);
+    note.textContent = "Picked — copying it now.";
+    v2Copy($("v2SbText" + which).textContent, note, $("v2SbText" + which));
+    $("v2SbNote" + other).textContent = "";
+  }
+  $("v2SbCopyA").addEventListener("click", function () { v2Copy($("v2SbTextA").textContent, $("v2SbNoteA"), $("v2SbTextA")); });
+  $("v2SbCopyB").addEventListener("click", function () { v2Copy($("v2SbTextB").textContent, $("v2SbNoteB"), $("v2SbTextB")); });
+  $("v2SbPickA").addEventListener("click", function () { pick("A"); });
+  $("v2SbPickB").addEventListener("click", function () { pick("B"); });
+})();
 </script>
 </body>
 </html>
