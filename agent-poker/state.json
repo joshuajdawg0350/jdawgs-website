@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:02:17.723Z",
+ "updatedAt": "2026-11-25T03:02:47.989Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   500
  ],
  "level": 11,
- "handsPlayed": 212,
+ "handsPlayed": 213,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20557,
+     "stack": 20787,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19883,
+     "stack": 19653,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 72
+   "handsPlayed": 73
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20557,
+   "stack": 20787,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19883,
+   "stack": 19653,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 73,
+  "table": 2,
+  "handNo": 72,
   "stage": "preflop",
   "board": [],
   "pot": 150,
-  "toAct": "Switchback",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 69,
-   "text": "Table 1 · Hand 69 · blinds 50/100 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 50, Static checks, [flop: J♥ A♦ K♠], Highwire checks, Static checks, [turn: J♥ A♦ K♠ A♣], Highwire checks, Static checks, [river: J♥ A♦ K♠ A♣ 6♣], Highwire checks, Static raises to 130, Highwire folds → Static takes 330 (everyone else folded)",
-   "pot": 330
-  },
   {
    "table": 1,
    "handNo": 70,
@@ -552,6 +546,12 @@
    "handNo": 69,
    "text": "Table 3 · Hand 69 · blinds 50/100 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 50, Mirage checks, [flop: 8♥ 4♦ 5♦], Brass checks, Mirage checks, [turn: 8♥ 4♦ 5♦ 4♥], Brass checks, Mirage checks, [river: 8♥ 4♦ 5♦ 4♥ 7♦], Brass raises to 130, Mirage folds → Brass takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 73,
+   "text": "Table 1 · Hand 73 · blinds 50/100 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 50, Freezer checks, [flop: 10♣ A♣ J♣], Magnet raises to 130, Freezer calls 130, [turn: 10♣ A♣ J♣ 4♦], Magnet raises to 299, Freezer folds → Magnet takes 759 (everyone else folded)",
+   "pot": 759
   }
  ],
  "finishes": [],
