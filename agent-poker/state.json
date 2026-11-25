@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:55:44.285Z",
+ "updatedAt": "2026-11-25T03:55:59.799Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   3000
  ],
  "level": 19,
- "handsPlayed": 373,
+ "handsPlayed": 374,
  "tables": [
   {
    "id": 1,
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 16051,
+     "stack": 17109,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 18368,
+     "stack": 17310,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 122
+   "handsPlayed": 123
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16051,
+   "stack": 17109,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18368,
+   "stack": 17310,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 123,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 122,
-   "text": "Table 2 · Hand 122 · blinds 100/200 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 100, Deadpan checks, [flop: 9♥ J♣ 4♦], Glacier checks, Deadpan checks, [turn: 9♥ J♣ 4♦ 10♣], Glacier checks, Deadpan raises to 260, Glacier folds → Deadpan takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 3,
    "handNo": 120,
@@ -552,6 +538,12 @@
    "handNo": 125,
    "text": "Table 2 · Hand 125 · blinds 100/200 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 100, Undertow checks, [flop: J♠ 2♣ K♦], Jackpot checks, Undertow checks, [turn: J♠ 2♣ K♦ Q♠], Jackpot checks, Undertow checks, [river: J♠ 2♣ K♦ Q♠ Q♥], Jackpot checks, Undertow raises to 260, Jackpot folds → Undertow takes 660 (everyone else folded)",
    "pot": 660
+  },
+  {
+   "table": 3,
+   "handNo": 123,
+   "text": "Table 3 · Hand 123 · blinds 100/200 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 100, Snare raises to 460, Fossil calls 260, [flop: Q♥ 4♣ 4♠], Fossil checks, Snare checks, [turn: Q♥ 4♣ 4♠ 8♥], Fossil raises to 598, Snare calls 598, [river: Q♥ 4♣ 4♠ 8♥ J♣], Fossil checks, Snare checks → Fossil wins 2116 with Two pair, 8s and 4s (10♦ 8♠)",
+   "pot": 2116
   }
  ],
  "finishes": [],
