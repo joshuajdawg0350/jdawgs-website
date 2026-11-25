@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:20:01.683Z",
+ "updatedAt": "2026-11-25T01:20:15.930Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 49,
+ "handsPlayed": 50,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20198,
+     "stack": 20313,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 20025,
+     "stack": 19910,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 16
+   "handsPlayed": 17
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20198,
+   "stack": 20313,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20025,
+   "stack": 19910,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 17,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Minnow",
+  "toAct": "Fossil",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 14,
-   "text": "Table 1 · Hand 14 · blinds 25/50 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 25, Highwire checks, [flop: 10♥ 3♣ J♥], Longshot raises to 65, Highwire folds → Longshot takes 165 (everyone else folded)",
-   "pot": 165
-  },
   {
    "table": 2,
    "handNo": 14,
@@ -552,6 +546,12 @@
    "handNo": 17,
    "text": "Table 1 · Hand 17 · blinds 25/50 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 25, Midas checks, [flop: A♥ 3♥ 10♥], Coyote checks, Midas checks, [turn: A♥ 3♥ 10♥ 4♣], Coyote checks, Midas checks, [river: A♥ 3♥ 10♥ 4♣ 2♥], Coyote checks, Midas raises to 65, Coyote folds → Midas takes 165 (everyone else folded)",
    "pot": 165
+  },
+  {
+   "table": 2,
+   "handNo": 17,
+   "text": "Table 2 · Hand 17 · blinds 25/50 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 25, Undertow checks, [flop: 8♠ 10♥ 4♠], Jackpot checks, Undertow raises to 65, Jackpot calls 65, [turn: 8♠ 10♥ 4♠ Q♣], Jackpot checks, Undertow checks, [river: 8♠ 10♥ 4♠ Q♣ Q♥], Jackpot checks, Undertow raises to 150, Jackpot folds → Undertow takes 380 (everyone else folded)",
+   "pot": 380
   }
  ],
  "finishes": [],
