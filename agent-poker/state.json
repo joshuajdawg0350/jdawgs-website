@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:02:17.132Z",
+ "updatedAt": "2026-11-25T01:02:41.728Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   }
  ],
  "seats": [
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Fossil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -504,6 +496,12 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 25, Ledger raises to 115, Minnow calls 65, [flop: 9♦ J♥ 4♦], Minnow raises to 150, Ledger folds → Minnow takes 380 (everyone else folded)",
    "pot": 380
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble calls 25, Velcro checks, [flop: 8♦ 9♥ 7♥], Cobble checks, Velcro checks, Northstar checks, [turn: 8♦ 9♥ 7♥ 5♦], Cobble checks, Velcro checks, Northstar checks, [river: 8♦ 9♥ 7♥ 5♦ 6♣], Cobble checks, Velcro checks, Northstar checks → Northstar wins 50 with Straight, 9 high (Q♦ Q♥); Cobble wins 50 with Straight, 9 high (K♦ 2♥); Velcro wins 50 with Straight, 9 high (2♦ 9♠)",
+   "pot": 150
   }
  ],
  "finishes": [],
