@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:12:06.524Z",
+ "updatedAt": "2026-11-25T03:12:25.008Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -8,11 +8,11 @@
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
  "blinds": [
-  300,
-  600
+  400,
+  800
  ],
- "level": 12,
- "handsPlayed": 239,
+ "level": 13,
+ "handsPlayed": 240,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20907,
+     "stack": 20787,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19753,
+     "stack": 19873,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 81
+   "handsPlayed": 82
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20907,
+   "stack": 20787,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19753,
+   "stack": 19873,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 82,
+  "table": 2,
+  "handNo": 81,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Switchback",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 75,
-   "text": "Table 3 · Hand 75 · blinds 50/100 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 100, Velcro folds, Fossil calls 50, Snare checks, [flop: 7♠ A♣ 7♦], Fossil checks, Snare checks, Cobble checks, [turn: 7♠ A♣ 7♦ 2♣], Fossil checks, Snare checks, Cobble checks, [river: 7♠ A♣ 7♦ 2♣ 9♣], Fossil checks, Snare checks, Cobble raises to 195, Fossil folds, Snare folds → Cobble takes 495 (everyone else folded)",
-   "pot": 495
-  },
   {
    "table": 1,
    "handNo": 79,
@@ -552,6 +546,12 @@
    "handNo": 78,
    "text": "Table 3 · Hand 78 · blinds 50/100 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 50, Ricochet checks, [flop: Q♦ J♠ J♣], Mirage raises to 130, Ricochet folds → Mirage takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 82,
+   "text": "Table 1 · Hand 82 · blinds 60/120 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 60, Freezer checks, [flop: 10♦ 9♣ 4♦], Magnet checks, Freezer checks, [turn: 10♦ 9♣ 4♦ 10♥], Magnet checks, Freezer checks, [river: 10♦ 9♣ 4♦ 10♥ 6♣], Magnet checks, Freezer raises to 156, Magnet folds → Freezer takes 396 (everyone else folded)",
+   "pot": 396
   }
  ],
  "finishes": [],
