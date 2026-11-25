@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:08:11.217Z",
+ "updatedAt": "2026-11-25T04:08:27.324Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   5000
  ],
  "level": 21,
- "handsPlayed": 411,
+ "handsPlayed": 412,
  "tables": [
   {
    "id": 1,
@@ -123,7 +123,7 @@
      "name": "Ember",
      "kind": "house",
      "house": true,
-     "stack": 21071,
+     "stack": 20871,
      "status": "seated",
      "reentered": false
     },
@@ -131,7 +131,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 23983,
+     "stack": 24183,
      "status": "seated",
      "reentered": false
     },
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 137
+   "handsPlayed": 138
   },
   {
    "id": 3,
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21071,
+   "stack": 20871,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 23983,
+   "stack": 24183,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
-  "handNo": 138,
+  "table": 3,
+  "handNo": 136,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Glacier",
+  "toAct": "Velcro",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 136,
-   "text": "Table 1 · Hand 136 · blinds 100/200 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 100, Freezer checks, [flop: 7♠ 8♣ 2♥], Magnet checks, Freezer checks, [turn: 7♠ 8♣ 2♥ 6♠], Magnet raises to 260, Freezer folds → Magnet takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 2,
    "handNo": 135,
@@ -552,6 +546,12 @@
    "handNo": 139,
    "text": "Table 1 · Hand 139 · blinds 100/200 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds → Longshot takes 300 (everyone else folded)",
    "pot": 300
+  },
+  {
+   "table": 2,
+   "handNo": 138,
+   "text": "Table 2 · Hand 138 · blinds 100/200 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 100, Bedrock raises to 460, Ember folds → Bedrock takes 660 (everyone else folded)",
+   "pot": 660
   }
  ],
  "finishes": [],
