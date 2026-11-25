@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:11:36.461Z",
+ "updatedAt": "2026-11-25T03:11:50.726Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   600
  ],
  "level": 12,
- "handsPlayed": 238,
+ "handsPlayed": 239,
  "tables": [
   {
    "id": 1,
@@ -225,7 +225,7 @@
      "name": "Mirage",
      "kind": "house",
      "house": true,
-     "stack": 16290,
+     "stack": 16390,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 18038,
+     "stack": 17938,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 77
+   "handsPlayed": 78
   }
  ],
  "seats": [
@@ -436,7 +436,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 16290,
+   "stack": 16390,
    "status": "seated",
    "reentered": false
   },
@@ -463,7 +463,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18038,
+   "stack": 17938,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 78,
-  "stage": "preflop",
-  "board": [],
-  "pot": 150,
-  "toAct": "Northstar",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 77,
-   "text": "Table 2 · Hand 77 · blinds 50/100 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 50, Deadpan checks, [flop: 4♠ 6♦ K♥], Glacier raises to 130, Deadpan raises to 420, Glacier calls 290, [turn: 4♠ 6♦ K♥ 10♣], Glacier checks, Deadpan raises to 676, Glacier folds → Deadpan takes 1716 (everyone else folded)",
-   "pot": 1716
-  },
   {
    "table": 3,
    "handNo": 75,
@@ -552,6 +538,12 @@
    "handNo": 80,
    "text": "Table 2 · Hand 80 · blinds 50/100 · Minnow folds, Ledger folds, Ember folds, Bedrock calls 100, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 50, Undertow checks, [flop: 7♣ 9♦ J♠], Jackpot raises to 195, Undertow calls 195, Bedrock calls 195, [turn: 7♣ 9♦ J♠ 8♣], Jackpot checks, Undertow checks, Bedrock checks, [river: 7♣ 9♦ J♠ 8♣ 3♠], Jackpot checks, Undertow checks, Bedrock checks → Jackpot wins 885 with Two pair, 9s and 7s (9♠ 7♥)",
    "pot": 885
+  },
+  {
+   "table": 3,
+   "handNo": 78,
+   "text": "Table 3 · Hand 78 · blinds 50/100 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 50, Ricochet checks, [flop: Q♦ J♠ J♣], Mirage raises to 130, Ricochet folds → Mirage takes 330 (everyone else folded)",
+   "pot": 330
   }
  ],
  "finishes": [],
