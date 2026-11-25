@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:55:09.374Z",
+ "updatedAt": "2026-11-25T03:55:27.916Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   3000
  ],
  "level": 19,
- "handsPlayed": 371,
+ "handsPlayed": 372,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17112,
+     "stack": 17312,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20839,
+     "stack": 20639,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 125
+   "handsPlayed": 126
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17112,
+   "stack": 17312,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20839,
+   "stack": 20639,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 126,
+  "table": 2,
+  "handNo": 125,
   "stage": "preflop",
   "board": [],
   "pot": 300,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 119,
-   "text": "Table 3 · Hand 119 · blinds 80/160 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 80, Northstar checks, [flop: 8♠ 3♦ 4♠], Ricochet checks, Northstar checks, [turn: 8♠ 3♦ 4♠ 3♠], Ricochet checks, Northstar checks, [river: 8♠ 3♦ 4♠ 3♠ 10♥], Ricochet checks, Northstar checks → Ricochet wins 320 with Pair of 3s (7♣ Q♠)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 123,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 122,
    "text": "Table 3 · Hand 122 · blinds 100/200 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 100, Fossil checks, [flop: 6♦ 6♣ 4♣], Velcro checks, Fossil checks, [turn: 6♦ 6♣ 4♣ 5♥], Velcro checks, Fossil raises to 260, Velcro folds → Fossil takes 660 (everyone else folded)",
+   "pot": 660
+  },
+  {
+   "table": 1,
+   "handNo": 126,
+   "text": "Table 1 · Hand 126 · blinds 100/200 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 100, Magnet checks, [flop: 2♥ 10♠ 6♣], Midas checks, Magnet checks, [turn: 2♥ 10♠ 6♣ Q♥], Midas checks, Magnet checks, [river: 2♥ 10♠ 6♣ Q♥ A♦], Midas raises to 260, Magnet folds → Midas takes 660 (everyone else folded)",
    "pot": 660
   }
  ],
