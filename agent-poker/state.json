@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:42:40.587Z",
+ "updatedAt": "2026-11-25T03:42:52.374Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2000
  ],
  "level": 17,
- "handsPlayed": 335,
+ "handsPlayed": 336,
  "tables": [
   {
    "id": 1,
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 29676,
+     "stack": 29516,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20144,
+     "stack": 20304,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 113
+   "handsPlayed": 114
   },
   {
    "id": 2,
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 29676,
+   "stack": 29516,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20144,
+   "stack": 20304,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 114,
+  "table": 2,
+  "handNo": 113,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Coyote",
+  "toAct": "Tidepool",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 107,
-   "text": "Table 3 · Hand 107 · blinds 80/160 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 80, Snare checks, [flop: 9♥ 4♥ 2♣], Fossil raises to 208, Snare folds → Fossil takes 528 (everyone else folded)",
-   "pot": 528
-  },
   {
    "table": 1,
    "handNo": 111,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 110,
    "text": "Table 3 · Hand 110 · blinds 80/160 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 80, Ricochet checks, [flop: K♣ J♥ 4♥], Mirage raises to 208, Ricochet folds → Mirage takes 528 (everyone else folded)",
+   "pot": 528
+  },
+  {
+   "table": 1,
+   "handNo": 114,
+   "text": "Table 1 · Hand 114 · blinds 80/160 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 80, Static checks, [flop: K♥ 10♦ 3♠], Highwire checks, Static raises to 208, Highwire folds → Static takes 528 (everyone else folded)",
    "pot": 528
   }
  ],
