@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:29:44.226Z",
+ "updatedAt": "2026-11-25T03:30:18.273Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 291,
+ "handsPlayed": 293,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20082,
+     "stack": 20358,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19883,
+     "stack": 19607,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 97
+   "handsPlayed": 98
   },
   {
    "id": 3,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23637,
+     "stack": 23913,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 21165,
+     "stack": 20889,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 95
+   "handsPlayed": 96
   }
  ],
  "seats": [
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20082,
+   "stack": 20358,
    "status": "seated",
    "reentered": false
   },
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23637,
+   "stack": 23913,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21165,
+   "stack": 20889,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19883,
+   "stack": 19607,
    "status": "seated",
    "reentered": false
   }
@@ -483,28 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 2,
-  "handNo": 98,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Minnow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 96,
-   "text": "Table 1 · Hand 96 · blinds 60/120 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 60, Static checks, [flop: K♠ 8♥ 6♥], Highwire checks, Static checks, [turn: K♠ 8♥ 6♥ J♣], Highwire checks, Static checks, [river: K♠ 8♥ 6♥ J♣ 4♦], Highwire checks, Static checks → Highwire wins 120 with A high (A♦ 5♣); Static wins 120 with A high (A♣ 2♣)",
-   "pot": 240
-  },
-  {
-   "table": 2,
-   "handNo": 95,
-   "text": "Table 2 · Hand 95 · blinds 60/120 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 60, Deadpan checks, [flop: 3♣ Q♠ 4♣], Glacier checks, Deadpan raises to 156, Glacier folds → Deadpan takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 3,
    "handNo": 93,
@@ -552,6 +532,18 @@
    "handNo": 99,
    "text": "Table 1 · Hand 99 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: 10♦ 6♠ 6♦], Midas checks, Magnet raises to 156, Midas folds → Magnet takes 396 (everyone else folded)",
    "pot": 396
+  },
+  {
+   "table": 2,
+   "handNo": 98,
+   "text": "Table 2 · Hand 98 · blinds 60/120 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 60, Undertow checks, [flop: 5♠ 10♦ J♥], Jackpot checks, Undertow raises to 156, Jackpot calls 156, [turn: 5♠ 10♦ J♥ 3♠], Jackpot checks, Undertow checks, [river: 5♠ 10♦ J♥ 3♠ 8♣], Jackpot checks, Undertow raises to 359, Jackpot folds → Undertow takes 911 (everyone else folded)",
+   "pot": 911
+  },
+  {
+   "table": 3,
+   "handNo": 96,
+   "text": "Table 3 · Hand 96 · blinds 60/120 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 60, Cobble checks, [flop: 6♦ 8♣ 7♥], Northstar raises to 156, Cobble calls 156, [turn: 6♦ 8♣ 7♥ A♦], Northstar checks, Cobble checks, [river: 6♦ 8♣ 7♥ A♦ K♠], Northstar raises to 359, Cobble folds → Northstar takes 911 (everyone else folded)",
+   "pot": 911
   }
  ],
  "finishes": [],
