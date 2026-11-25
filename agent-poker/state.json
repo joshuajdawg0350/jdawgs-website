@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:15:03.685Z",
+ "updatedAt": "2026-11-25T04:15:27.182Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   6000
  ],
  "level": 22,
- "handsPlayed": 428,
+ "handsPlayed": 429,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20199,
+     "stack": 20439,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 22005,
+     "stack": 21765,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 144
+   "handsPlayed": 145
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20199,
+   "stack": 20439,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22005,
+   "stack": 21765,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 145,
+  "table": 2,
+  "handNo": 144,
   "stage": "preflop",
   "board": [],
   "pot": 360,
-  "toAct": "Switchback",
+  "toAct": "Ledger",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 138,
-   "text": "Table 3 · Hand 138 · blinds 100/200 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 200, Cobble folds, Velcro calls 100, Fossil checks, [flop: 7♥ A♣ K♦], Velcro checks, Fossil checks, Northstar raises to 390, Velcro calls 390, Fossil folds, [turn: 7♥ A♣ K♦ J♦], Velcro checks, Northstar raises to 897, Velcro calls 897, [river: 7♥ A♣ K♦ J♦ J♠], Velcro raises to 2063, Northstar raises to 6658, Velcro calls 4595 → Northstar wins 16490 with Full house, Ks full of Js (K♠ K♥)",
-   "pot": 16490
-  },
   {
    "table": 1,
    "handNo": 142,
@@ -552,6 +546,12 @@
    "handNo": 141,
    "text": "Table 3 · Hand 141 · blinds 120/240 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 120, Mirage checks, [flop: A♦ 10♠ 2♣], Brass checks, Mirage checks, [turn: A♦ 10♠ 2♣ 5♦], Brass checks, Mirage checks, [river: A♦ 10♠ 2♣ 5♦ 9♠], Brass checks, Mirage checks → Mirage wins 480 with A high (K♦ Q♦)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 145,
+   "text": "Table 1 · Hand 145 · blinds 120/240 · Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet calls 120, Freezer checks, [flop: Q♣ 7♥ 8♣], Magnet checks, Freezer checks, [turn: Q♣ 7♥ 8♣ 4♠], Magnet checks, Freezer checks, [river: Q♣ 7♥ 8♣ 4♠ 5♠], Magnet raises to 312, Freezer folds → Magnet takes 792 (everyone else folded)",
+   "pot": 792
   }
  ],
  "finishes": [],
