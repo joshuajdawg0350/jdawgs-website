@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:16:18.881Z",
+ "updatedAt": "2026-11-25T03:16:36.923Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 251,
+ "handsPlayed": 252,
  "tables": [
   {
    "id": 1,
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 17651,
+     "stack": 17891,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 18661,
+     "stack": 18541,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 23705,
+     "stack": 23585,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 85
+   "handsPlayed": 86
   },
   {
    "id": 2,
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17651,
+   "stack": 17891,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18661,
+   "stack": 18541,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23705,
+   "stack": 23585,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 86,
+  "table": 2,
+  "handNo": 85,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Static",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 79,
-   "text": "Table 3 · Hand 79 · blinds 50/100 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 50, Northstar checks, [flop: 7♠ 5♠ 3♦], Ricochet raises to 130, Northstar calls 130, [turn: 7♠ 5♠ 3♦ 3♣], Ricochet raises to 299, Northstar folds → Ricochet takes 759 (everyone else folded)",
-   "pot": 759
-  },
   {
    "table": 1,
    "handNo": 83,
@@ -552,6 +546,12 @@
    "handNo": 82,
    "text": "Table 3 · Hand 82 · blinds 60/120 · Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 60, Fossil checks, [flop: K♣ 7♥ A♣], Velcro checks, Fossil raises to 156, Velcro folds → Fossil takes 396 (everyone else folded)",
    "pot": 396
+  },
+  {
+   "table": 1,
+   "handNo": 86,
+   "text": "Table 1 · Hand 86 · blinds 60/120 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo calls 120, Longshot calls 60, Highwire checks, [flop: 6♥ 6♣ 8♥], Longshot checks, Highwire checks, Tempo checks, [turn: 6♥ 6♣ 8♥ K♠], Longshot checks, Highwire checks, Tempo checks, [river: 6♥ 6♣ 8♥ K♠ 3♣], Longshot checks, Highwire checks, Tempo checks → Tempo wins 360 with Two pair, 9s and 6s (9♣ 9♠)",
+   "pot": 360
   }
  ],
  "finishes": [],
