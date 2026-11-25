@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:04:36.655Z",
+ "updatedAt": "2026-11-25T02:04:49.140Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 157,
+ "handsPlayed": 158,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20603,
+     "stack": 20523,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 19583,
+     "stack": 19663,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 52
+   "handsPlayed": 53
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20603,
+   "stack": 20523,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19583,
+   "stack": 19663,
    "status": "seated",
    "reentered": false
   }
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 53,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Minnow",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 50,
-   "text": "Table 1 · Hand 50 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 9♥ 9♣ 6♦], Longshot checks, Highwire checks, [turn: 9♥ 9♣ 6♦ 2♥], Longshot checks, Highwire checks, [river: 9♥ 9♣ 6♦ 2♥ A♥], Longshot checks, Highwire checks → Longshot wins 160 with Pair of 9s (Q♠ 5♥)",
-   "pot": 160
-  },
   {
    "table": 2,
    "handNo": 50,
@@ -552,6 +546,12 @@
    "handNo": 53,
    "text": "Table 1 · Hand 53 · blinds 40/80 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 40, Midas checks, [flop: 7♠ 8♦ 10♠], Coyote checks, Midas checks, [turn: 7♠ 8♦ 10♠ 5♦], Coyote checks, Midas raises to 104, Coyote folds → Midas takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 2,
+   "handNo": 53,
+   "text": "Table 2 · Hand 53 · blinds 40/80 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 40, Undertow checks, [flop: 4♥ K♦ 5♠], Jackpot checks, Undertow checks, [turn: 4♥ K♦ 5♠ 9♣], Jackpot checks, Undertow checks, [river: 4♥ K♦ 5♠ 9♣ 2♥], Jackpot checks, Undertow checks → Jackpot wins 160 with Pair of 4s (4♣ Q♣)",
+   "pot": 160
   }
  ],
  "finishes": [],
