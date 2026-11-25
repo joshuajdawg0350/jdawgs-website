@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:29:31.879Z",
+ "updatedAt": "2026-11-25T03:29:44.226Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1200
  ],
  "level": 15,
- "handsPlayed": 290,
+ "handsPlayed": 291,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 17432,
+     "stack": 17312,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20391,
+     "stack": 20511,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 98
+   "handsPlayed": 99
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17432,
+   "stack": 17312,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20391,
+   "stack": 20511,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 99,
+  "table": 2,
+  "handNo": 98,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Freezer",
+  "toAct": "Minnow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 92,
-   "text": "Table 3 · Hand 92 · blinds 60/120 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 60, Brass checks, [flop: J♥ 4♣ K♣], Snare checks, Brass checks, [turn: J♥ 4♣ K♣ J♦], Snare checks, Brass checks, [river: J♥ 4♣ K♣ J♦ K♥], Snare checks, Brass raises to 156, Snare folds → Brass takes 396 (everyone else folded)",
-   "pot": 396
-  },
   {
    "table": 1,
    "handNo": 96,
@@ -552,6 +546,12 @@
    "handNo": 95,
    "text": "Table 3 · Hand 95 · blinds 60/120 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 60, Northstar checks, [flop: Q♣ 2♦ Q♠], Ricochet checks, Northstar checks, [turn: Q♣ 2♦ Q♠ 5♣], Ricochet checks, Northstar checks, [river: Q♣ 2♦ Q♠ 5♣ Q♥], Ricochet checks, Northstar checks → Ricochet wins 240 with Three of a kind, Qs (9♠ A♦)",
    "pot": 240
+  },
+  {
+   "table": 1,
+   "handNo": 99,
+   "text": "Table 1 · Hand 99 · blinds 60/120 · Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas calls 60, Magnet checks, [flop: 10♦ 6♠ 6♦], Midas checks, Magnet raises to 156, Midas folds → Magnet takes 396 (everyone else folded)",
+   "pot": 396
   }
  ],
  "finishes": [],
