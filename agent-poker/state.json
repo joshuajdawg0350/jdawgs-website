@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:09:19.434Z",
+ "updatedAt": "2026-11-25T02:09:35.473Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 171,
+ "handsPlayed": 172,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21876,
+     "stack": 22036,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18388,
+     "stack": 18308,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Longshot",
      "kind": "house",
      "house": true,
-     "stack": 19051,
+     "stack": 18971,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 57
+   "handsPlayed": 58
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21876,
+   "stack": 22036,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18388,
+   "stack": 18308,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19051,
+   "stack": 18971,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 58,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Highwire",
+  "toAct": "Deadpan",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 54,
-   "text": "Table 3 · Hand 54 · blinds 40/80 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 40, Ricochet checks, [flop: 8♣ 9♠ J♦], Mirage checks, Ricochet checks, [turn: 8♣ 9♠ J♦ 3♥], Mirage checks, Ricochet checks, [river: 8♣ 9♠ J♦ 3♥ 7♠], Mirage raises to 104, Ricochet folds → Mirage takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 55,
@@ -552,6 +546,12 @@
    "handNo": 57,
    "text": "Table 3 · Hand 57 · blinds 40/80 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 40, Velcro checks, [flop: 10♥ K♦ 10♣], Cobble checks, Velcro checks, [turn: 10♥ K♦ 10♣ 7♠], Cobble checks, Velcro checks, [river: 10♥ K♦ 10♣ 7♠ 2♥], Cobble checks, Velcro checks → Cobble wins 160 with Pair of 10s (J♣ 8♠)",
    "pot": 160
+  },
+  {
+   "table": 1,
+   "handNo": 58,
+   "text": "Table 1 · Hand 58 · blinds 40/80 · Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 80, Tempo calls 40, Longshot checks, [flop: A♦ K♥ 5♦], Tempo checks, Longshot checks, Switchback checks, [turn: A♦ K♥ 5♦ 10♣], Tempo checks, Longshot checks, Switchback checks, [river: A♦ K♥ 5♦ 10♣ 3♥], Tempo checks, Longshot checks, Switchback checks → Switchback wins 240 with Pair of 8s (8♥ 8♦)",
+   "pot": 240
   }
  ],
  "finishes": [],
