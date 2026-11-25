@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:24:20.512Z",
+ "updatedAt": "2026-11-25T01:24:37.027Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 62,
+ "handsPlayed": 63,
  "tables": [
   {
    "id": 1,
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 20
+   "handsPlayed": 21
   }
  ],
  "seats": [
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 21,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 18,
-   "text": "Table 2 · Hand 18 · blinds 25/50 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 25, Minnow raises to 115, Undertow calls 65, [flop: 7♣ 6♠ K♦], Undertow raises to 150, Minnow calls 150, [turn: 7♣ 6♠ K♦ 6♦], Undertow raises to 345, Minnow calls 345, [river: 7♣ 6♠ K♦ 6♦ 3♥], Undertow raises to 793, Minnow calls 793 → Undertow wins 2806 with Two pair, Ks and 6s (K♣ 8♠)",
-   "pot": 2806
-  },
   {
    "table": 3,
    "handNo": 18,
@@ -552,6 +538,12 @@
    "handNo": 21,
    "text": "Table 2 · Hand 21 · blinds 30/60 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 30, Bedrock checks, [flop: 4♠ J♦ 7♠], Ember checks, Bedrock checks, [turn: 4♠ J♦ 7♠ 2♣], Ember checks, Bedrock raises to 78, Ember calls 78, [river: 4♠ J♦ 7♠ 2♣ 8♠], Ember raises to 179, Bedrock folds → Ember takes 455 (everyone else folded)",
    "pot": 455
+  },
+  {
+   "table": 3,
+   "handNo": 21,
+   "text": "Table 3 · Hand 21 · blinds 30/60 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass calls 30, Mirage checks, [flop: 6♦ 7♥ 9♥], Brass checks, Mirage checks, [turn: 6♦ 7♥ 9♥ 8♦], Brass checks, Mirage checks, [river: 6♦ 7♥ 9♥ 8♦ 7♠], Brass checks, Mirage checks → Brass wins 60 with Pair of 7s (4♦ 3♠); Mirage wins 60 with Pair of 7s (2♣ 3♥)",
+   "pot": 120
   }
  ],
  "finishes": [],
