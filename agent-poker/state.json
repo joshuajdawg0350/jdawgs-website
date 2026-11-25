@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T04:08:27.324Z",
+ "updatedAt": "2026-11-25T04:08:42.013Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   5000
  ],
  "level": 21,
- "handsPlayed": 412,
+ "handsPlayed": 413,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 23713,
+     "stack": 23513,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 22055,
+     "stack": 22255,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 135
+   "handsPlayed": 136
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 23713,
+   "stack": 23513,
    "status": "seated",
    "reentered": false
   },
@@ -301,7 +301,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 22055,
+   "stack": 22255,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 136,
-  "stage": "preflop",
-  "board": [],
-  "pot": 300,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 135,
-   "text": "Table 2 · Hand 135 · blinds 100/200 · Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow calls 100, Minnow checks, [flop: 10♣ J♥ 10♠], Undertow checks, Minnow raises to 260, Undertow folds → Minnow takes 660 (everyone else folded)",
-   "pot": 660
-  },
   {
    "table": 3,
    "handNo": 133,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 138,
    "text": "Table 2 · Hand 138 · blinds 100/200 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 100, Bedrock raises to 460, Ember folds → Bedrock takes 660 (everyone else folded)",
+   "pot": 660
+  },
+  {
+   "table": 3,
+   "handNo": 136,
+   "text": "Table 3 · Hand 136 · blinds 100/200 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 100, Cobble raises to 460, Northstar folds → Cobble takes 660 (everyone else folded)",
    "pot": 660
   }
  ],
