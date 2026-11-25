@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:07:18.875Z",
+ "updatedAt": "2026-11-25T02:07:32.270Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 165,
+ "handsPlayed": 166,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19883,
+     "stack": 19963,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 22036,
+     "stack": 21956,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 55
+   "handsPlayed": 56
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19883,
+   "stack": 19963,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22036,
+   "stack": 21956,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 56,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Tempo",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 52,
-   "text": "Table 3 · Hand 52 · blinds 40/80 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 40, Brass checks, [flop: Q♠ 7♦ 2♥], Snare checks, Brass checks, [turn: Q♠ 7♦ 2♥ 7♥], Snare checks, Brass checks, [river: Q♠ 7♦ 2♥ 7♥ K♦], Snare raises to 104, Brass folds → Snare takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 1,
    "handNo": 53,
@@ -552,6 +546,12 @@
    "handNo": 55,
    "text": "Table 3 · Hand 55 · blinds 40/80 · Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet calls 40, Northstar checks, [flop: 7♥ 5♦ 2♠], Ricochet raises to 104, Northstar raises to 336, Ricochet calls 232, [turn: 7♥ 5♦ 2♠ 6♥], Ricochet checks, Northstar raises to 541, Ricochet calls 541, [river: 7♥ 5♦ 2♠ 6♥ 5♠], Ricochet raises to 1244, Northstar raises to 4015, Ricochet calls 2771 → Northstar wins 9944 with Full house, 7s full of 5s (7♠ 7♦)",
    "pot": 9944
+  },
+  {
+   "table": 1,
+   "handNo": 56,
+   "text": "Table 1 · Hand 56 · blinds 40/80 · Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer calls 40, Switchback checks, [flop: 2♠ 6♠ 3♠], Freezer raises to 104, Switchback folds → Freezer takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
