@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:14:15.023Z",
+ "updatedAt": "2026-11-25T03:14:32.160Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   800
  ],
  "level": 13,
- "handsPlayed": 245,
+ "handsPlayed": 246,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 83
+   "handsPlayed": 84
   },
   {
    "id": 2,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 84,
+  "table": 2,
+  "handNo": 83,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Longshot",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 77,
-   "text": "Table 3 · Hand 77 · blinds 50/100 · Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 100, Brass calls 50, Mirage checks, [flop: 6♥ 10♥ A♣], Brass checks, Mirage checks, Snare raises to 195, Brass folds, Mirage folds → Snare takes 495 (everyone else folded)",
-   "pot": 495
-  },
   {
    "table": 1,
    "handNo": 81,
@@ -552,6 +546,12 @@
    "handNo": 80,
    "text": "Table 3 · Hand 80 · blinds 50/100 · Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar calls 50, Cobble checks, [flop: 9♠ 6♠ 10♠], Northstar checks, Cobble raises to 130, Northstar folds → Cobble takes 330 (everyone else folded)",
    "pot": 330
+  },
+  {
+   "table": 1,
+   "handNo": 84,
+   "text": "Table 1 · Hand 84 · blinds 60/120 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 60, Tempo checks, [flop: 7♦ A♠ 10♣], Switchback checks, Tempo checks, [turn: 7♦ A♠ 10♣ 10♥], Switchback checks, Tempo checks, [river: 7♦ A♠ 10♣ 10♥ 7♥], Switchback checks, Tempo checks → Switchback wins 120 with Two pair, 10s and 7s (Q♠ 8♥); Tempo wins 120 with Two pair, 10s and 7s (4♦ 3♥)",
+   "pot": 240
   }
  ],
  "finishes": [],
