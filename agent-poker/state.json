@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:50:46.172Z",
+ "updatedAt": "2026-11-25T01:51:02.749Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 130,
+ "handsPlayed": 131,
  "tables": [
   {
    "id": 1,
@@ -168,7 +168,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 43
+   "handsPlayed": 44
   },
   {
    "id": 3,
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 44,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Minnow",
+  "toAct": "Mirage",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 41,
-   "text": "Table 1 · Hand 41 · blinds 40/80 · Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot calls 40, Highwire checks, [flop: 6♣ K♣ 3♥], Longshot checks, Highwire checks, [turn: 6♣ K♣ 3♥ K♠], Longshot checks, Highwire checks, [river: 6♣ K♣ 3♥ K♠ 5♦], Longshot raises to 104, Highwire folds → Longshot takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 2,
    "handNo": 41,
@@ -552,6 +546,12 @@
    "handNo": 44,
    "text": "Table 1 · Hand 44 · blinds 40/80 · Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire folds, Static folds, Coyote calls 40, Midas checks, [flop: A♥ 2♦ K♥], Coyote raises to 104, Midas folds → Coyote takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 2,
+   "handNo": 44,
+   "text": "Table 2 · Hand 44 · blinds 40/80 · Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot calls 40, Undertow checks, [flop: Q♦ 4♠ 7♥], Jackpot checks, Undertow checks, [turn: Q♦ 4♠ 7♥ 10♣], Jackpot checks, Undertow checks, [river: Q♦ 4♠ 7♥ 10♣ 10♠], Jackpot checks, Undertow checks → Undertow wins 80 with Pair of 10s (8♠ 3♥); Jackpot wins 80 with Pair of 10s (5♥ 8♥)",
+   "pot": 160
   }
  ],
  "finishes": [],
