@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:18:13.240Z",
+ "updatedAt": "2026-11-25T02:18:29.015Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 176,
+ "handsPlayed": 177,
  "tables": [
   {
    "id": 1,
@@ -69,7 +69,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 22549,
+     "stack": 22469,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20539,
+     "stack": 20619,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 59
+   "handsPlayed": 60
   },
   {
    "id": 2,
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22549,
+   "stack": 22469,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20539,
+   "stack": 20619,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 60,
   "stage": "preflop",
   "board": [],
   "pot": 120,
-  "toAct": "Coyote",
+  "toAct": "Jackpot",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 56,
-   "text": "Table 2 · Hand 56 · blinds 40/80 · Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger calls 40, Ember checks, [flop: 4♠ 3♣ 7♥], Ledger raises to 104, Ember folds → Ledger takes 264 (everyone else folded)",
-   "pot": 264
-  },
   {
    "table": 3,
    "handNo": 56,
@@ -552,6 +546,12 @@
    "handNo": 59,
    "text": "Table 2 · Hand 59 · blinds 40/80 · Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier calls 40, Deadpan checks, [flop: Q♥ 10♠ 4♥], Glacier checks, Deadpan checks, [turn: Q♥ 10♠ 4♥ 4♠], Glacier checks, Deadpan checks, [river: Q♥ 10♠ 4♥ 4♠ Q♠], Glacier checks, Deadpan checks → Deadpan wins 160 with Two pair, Qs and 4s (9♥ A♣)",
    "pot": 160
+  },
+  {
+   "table": 1,
+   "handNo": 60,
+   "text": "Table 1 · Hand 60 · blinds 40/80 · Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback folds, Tempo folds, Longshot folds, Highwire calls 40, Static checks, [flop: 8♥ 6♥ 6♠], Highwire checks, Static checks, [turn: 8♥ 6♥ 6♠ 4♥], Highwire checks, Static raises to 104, Highwire folds → Static takes 264 (everyone else folded)",
+   "pot": 264
   }
  ],
  "finishes": [],
