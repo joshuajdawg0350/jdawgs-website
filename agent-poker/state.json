@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T02:03:01.241Z",
+ "updatedAt": "2026-11-25T02:03:15.866Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 152,
+ "handsPlayed": 153,
  "tables": [
   {
    "id": 1,
@@ -193,7 +193,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 19503,
+     "stack": 20740,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +201,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19727,
+     "stack": 19687,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19923,
+     "stack": 18726,
      "status": "seated",
      "reentered": false
     },
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 50
+   "handsPlayed": 51
   }
  ],
  "seats": [
@@ -328,7 +328,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19503,
+   "stack": 20740,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19727,
+   "stack": 19687,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19923,
+   "stack": 18726,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 51,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 48,
-   "text": "Table 2 · Hand 48 · blinds 40/80 · Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember calls 40, Bedrock checks, [flop: 5♦ 2♠ 5♠], Ember checks, Bedrock raises to 104, Ember calls 104, [turn: 5♦ 2♠ 5♠ 8♥], Ember checks, Bedrock raises to 239, Ember calls 239, [river: 5♦ 2♠ 5♠ 8♥ 2♣], Ember checks, Bedrock raises to 550, Ember folds → Bedrock takes 1396 (everyone else folded)",
-   "pot": 1396
-  },
   {
    "table": 3,
    "handNo": 48,
@@ -552,6 +538,12 @@
    "handNo": 51,
    "text": "Table 2 · Hand 51 · blinds 40/80 · Jackpot folds, Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan calls 40, Tidepool checks, [flop: J♣ 7♠ 8♣], Deadpan checks, Tidepool checks, [turn: J♣ 7♠ 8♣ A♥], Deadpan checks, Tidepool checks, [river: J♣ 7♠ 8♣ A♥ 2♥], Deadpan checks, Tidepool raises to 104, Deadpan folds → Tidepool takes 264 (everyone else folded)",
    "pot": 264
+  },
+  {
+   "table": 3,
+   "handNo": 51,
+   "text": "Table 3 · Hand 51 · blinds 40/80 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro calls 80, Fossil folds, Snare checks, [flop: 9♦ 6♦ 5♦], Snare raises to 130, Velcro calls 130, [turn: 9♦ 6♦ 5♦ 9♣], Snare raises to 299, Velcro calls 299, [river: 9♦ 6♦ 5♦ 9♣ 9♠], Snare checks, Velcro raises to 688, Snare calls 688 → Velcro wins 2434 with Full house, 9s full of Qs (Q♥ Q♠)",
+   "pot": 2434
   }
  ],
  "finishes": [],
