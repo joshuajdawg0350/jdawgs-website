@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T01:22:07.819Z",
+ "updatedAt": "2026-11-25T01:22:21.040Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 56,
+ "handsPlayed": 57,
  "tables": [
   {
    "id": 1,
@@ -238,7 +238,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 18
+   "handsPlayed": 19
   }
  ],
  "seats": [
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 19,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Brass",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 16,
-   "text": "Table 2 · Hand 16 · blinds 25/50 · Undertow folds, Minnow folds, Ledger folds, Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds → Jackpot takes 75 (everyone else folded)",
-   "pot": 75
-  },
   {
    "table": 3,
    "handNo": 16,
@@ -552,6 +538,12 @@
    "handNo": 19,
    "text": "Table 2 · Hand 19 · blinds 25/50 · Ember folds, Bedrock folds, Glacier folds, Deadpan folds, Tidepool folds, Jackpot folds, Undertow folds, Minnow calls 25, Ledger checks, [flop: 9♠ 9♦ 10♦], Minnow raises to 65, Ledger calls 65, [turn: 9♠ 9♦ 10♦ 2♠], Minnow raises to 150, Ledger calls 150, [river: 9♠ 9♦ 10♦ 2♠ 2♣], Minnow raises to 345, Ledger calls 345 → Minnow wins 1220 with Full house, 9s full of 2s (9♥ 6♣)",
    "pot": 1220
+  },
+  {
+   "table": 3,
+   "handNo": 19,
+   "text": "Table 3 · Hand 19 · blinds 25/50 · Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil calls 25, Snare checks, [flop: 3♥ 4♥ 7♠], Fossil checks, Snare checks, [turn: 3♥ 4♥ 7♠ 5♣], Fossil checks, Snare checks, [river: 3♥ 4♥ 7♠ 5♣ 6♠], Fossil checks, Snare checks → Fossil wins 50 with Straight, 7 high (10♠ 3♣); Snare wins 50 with Straight, 7 high (J♦ 2♠)",
+   "pot": 100
   }
  ],
  "finishes": [],
