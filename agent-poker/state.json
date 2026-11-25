@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:23:29.078Z",
+ "updatedAt": "2026-11-25T03:23:42.966Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   1000
  ],
  "level": 14,
- "handsPlayed": 272,
+ "handsPlayed": 273,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 21167,
+     "stack": 21047,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 17891,
+     "stack": 18011,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 92
+   "handsPlayed": 93
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21167,
+   "stack": 21047,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17891,
+   "stack": 18011,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 93,
+  "table": 2,
+  "handNo": 92,
   "stage": "preflop",
   "board": [],
   "pot": 180,
-  "toAct": "Longshot",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 86,
-   "text": "Table 3 · Hand 86 · blinds 60/120 · Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare folds, Brass folds, Mirage calls 60, Ricochet checks, [flop: Q♠ 8♦ 7♦], Mirage checks, Ricochet checks, [turn: Q♠ 8♦ 7♦ A♣], Mirage checks, Ricochet checks, [river: Q♠ 8♦ 7♦ A♣ 8♣], Mirage checks, Ricochet checks → Ricochet wins 240 with Pair of 8s (K♦ 10♣)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 90,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 89,
    "text": "Table 3 · Hand 89 · blinds 60/120 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 60, Velcro checks, [flop: 5♦ 8♦ 2♠], Cobble checks, Velcro checks, [turn: 5♦ 8♦ 2♠ 4♠], Cobble checks, Velcro raises to 156, Cobble folds → Velcro takes 396 (everyone else folded)",
+   "pot": 396
+  },
+  {
+   "table": 1,
+   "handNo": 93,
+   "text": "Table 1 · Hand 93 · blinds 60/120 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 60, Tempo checks, [flop: 2♣ A♠ Q♣], Switchback checks, Tempo raises to 156, Switchback folds → Tempo takes 396 (everyone else folded)",
    "pot": 396
   }
  ],
