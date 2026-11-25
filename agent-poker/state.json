@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25T03:48:25.579Z",
+ "updatedAt": "2026-11-25T03:48:39.189Z",
  "mode": "real",
  "date": "2026-11-24",
  "status": "running",
@@ -12,7 +12,7 @@
   2400
  ],
  "level": 18,
- "handsPlayed": 353,
+ "handsPlayed": 354,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 19961,
+     "stack": 18015,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 18475,
+     "stack": 20421,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 119
+   "handsPlayed": 120
   },
   {
    "id": 2,
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19961,
+   "stack": 18015,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 18475,
+   "stack": 20421,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 120,
+  "table": 2,
+  "handNo": 119,
   "stage": "preflop",
   "board": [],
   "pot": 240,
-  "toAct": "Longshot",
+  "toAct": "Bedrock",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 113,
-   "text": "Table 3 · Hand 113 · blinds 80/160 · Fossil folds, Snare folds, Brass folds, Mirage folds, Ricochet folds, Northstar folds, Cobble calls 80, Velcro checks, [flop: K♦ 8♣ 5♣], Cobble raises to 208, Velcro calls 208, [turn: K♦ 8♣ 5♣ 5♦], Cobble raises to 478, Velcro calls 478, [river: K♦ 8♣ 5♣ 5♦ K♣], Cobble raises to 1100, Velcro folds → Cobble takes 2792 (everyone else folded)",
-   "pot": 2792
-  },
   {
    "table": 1,
    "handNo": 117,
@@ -552,6 +546,12 @@
    "handNo": 116,
    "text": "Table 3 · Hand 116 · blinds 80/160 · Mirage folds, Ricochet folds, Northstar folds, Cobble folds, Velcro folds, Fossil folds, Snare calls 80, Brass checks, [flop: 9♠ Q♦ 8♥], Snare checks, Brass checks, [turn: 9♠ Q♦ 8♥ Q♠], Snare checks, Brass checks, [river: 9♠ Q♦ 8♥ Q♠ 2♣], Snare checks, Brass checks → Snare wins 320 with Pair of Qs (4♥ J♠)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 120,
+   "text": "Table 1 · Hand 120 · blinds 80/160 · Longshot folds, Highwire folds, Static folds, Coyote folds, Midas folds, Magnet folds, Freezer folds, Switchback calls 80, Tempo checks, [flop: 7♦ 7♥ 6♥], Switchback checks, Tempo raises to 208, Switchback calls 208, [turn: 7♦ 7♥ 6♥ 7♠], Switchback checks, Tempo raises to 478, Switchback calls 478, [river: 7♦ 7♥ 6♥ 7♠ 5♥], Switchback checks, Tempo raises to 1100, Switchback calls 1100 → Tempo wins 3892 with Full house, 7s full of 6s (10♣ 6♦)",
+   "pot": 3892
   }
  ],
  "finishes": [],
