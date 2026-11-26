@@ -872,6 +872,14 @@
       .cart-order strong { display: block; margin-bottom: 2px; }
       .cart-ship-note { font-size: 14px; color: var(--ink-soft); margin: 8px 0 0; line-height: 1.45; }
       #cart-card-note { display: none; }
+      /* ---------- Storefront thumbnails on the shelf entries (added 2026-11-25) ---------- */
+      .entry { flex-direction: column; align-items: stretch; justify-content: center; gap: 10px; }
+      .entry-top { display: flex; align-items: center; gap: 14px; width: 100%; flex: none; }
+      .entry-thumbs { display: flex; gap: 6px; width: 100%; flex: 1 1 auto; min-height: 56px; max-height: 118px; }
+      .entry-thumbs img { flex: 1 1 0; min-width: 0; height: 100%; object-fit: cover; display: block; background: #000; border: 1px solid rgba(244, 244, 241, 0.20); border-radius: 10px; filter: contrast(1.06) saturate(1.08); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+      @media (max-height: 700px) {
+        .entry-thumbs { min-height: 42px; max-height: 62px; }
+      }
     </style>
   </head>
   <body>
@@ -895,18 +903,21 @@
       <nav class="entries" aria-label="Shop shelves">
         <button class="entry" id="entry-cards" type="button" aria-expanded="false" aria-controls="ov-cards">
           <span class="entry-grab" aria-hidden="true"></span>
-          <span class="entry-main"><span class="entry-name">Cards</span><span class="entry-sub">All the trading cards, one shelf</span></span>
-          <span class="entry-count" id="e-cards"></span>
+          <span class="entry-top"><span class="entry-main"><span class="entry-name">Cards</span><span class="entry-sub">All the trading cards, one shelf</span></span>
+          <span class="entry-count" id="e-cards"></span></span>
+          <span class="entry-thumbs" id="thumbs-cards" aria-hidden="true"></span>
         </button>
         <button class="entry" id="entry-coins" type="button" aria-expanded="false" aria-controls="ov-coins">
           <span class="entry-grab" aria-hidden="true"></span>
-          <span class="entry-main"><span class="entry-name">Coins</span><span class="entry-sub">The coin tray</span></span>
-          <span class="entry-count" id="e-coins"></span>
+          <span class="entry-top"><span class="entry-main"><span class="entry-name">Coins</span><span class="entry-sub">The coin tray</span></span>
+          <span class="entry-count" id="e-coins"></span></span>
+          <span class="entry-thumbs" id="thumbs-coins" aria-hidden="true"></span>
         </button>
         <button class="entry" id="entry-misc" type="button" aria-expanded="false" aria-controls="ov-misc">
           <span class="entry-grab" aria-hidden="true"></span>
-          <span class="entry-main"><span class="entry-name">Miscellaneous</span><span class="entry-sub">Big items &amp; more good stuff</span></span>
-          <span class="entry-count" id="e-misc"></span>
+          <span class="entry-top"><span class="entry-main"><span class="entry-name">Miscellaneous</span><span class="entry-sub">Big items &amp; more good stuff</span></span>
+          <span class="entry-count" id="e-misc"></span></span>
+          <span class="entry-thumbs" id="thumbs-misc" aria-hidden="true"></span>
         </button>
       </nav>
     <script>
@@ -1325,6 +1336,26 @@
 
       // Counts
       document.getElementById('hero-count').textContent = ALL.length;
+
+      // Storefront thumbnails on the three shelf entries (added 2026-11-25):
+      // a band of the shelf's own item photos across each base-screen entry,
+      // reusing the items' existing img sources from DATA — no new images.
+      (function () {
+        const shelves = [
+          { key: 'cards', items: ALL.filter(function (it) { return it.cat === 'cards'; }) },
+          { key: 'coins', items: ALL.filter(function (it) { return it.cat === 'coins'; }) },
+          { key: 'misc', items: ALL.filter(function (it) { return it.cat === 'big'; })
+              .concat(ALL.filter(function (it) { return it.cat === 'other'; })) }
+        ];
+        shelves.forEach(function (s) {
+          const box = document.getElementById('thumbs-' + s.key);
+          if (!box) return;
+          const picks = s.items.filter(function (it) { return it.imgs && it.imgs.length; }).slice(0, 6);
+          box.innerHTML = picks.map(function (it) {
+            return '<img src="' + it.imgs[0] + '" alt="" loading="lazy" />';
+          }).join('');
+        });
+      })();
 
       // Whole-stack Venmo button
       const lotBtn = document.getElementById('lot-venmo');
