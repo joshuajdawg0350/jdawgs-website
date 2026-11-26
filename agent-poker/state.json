@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:06:36.370Z",
+ "updatedAt": "2026-11-26T02:06:49.678Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 152,
+ "handsPlayed": 153,
  "tables": [
   {
    "id": 1,
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 82
+   "handsPlayed": 83
   }
  ],
  "seats": [
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 83,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 73,
-   "text": "Table 1 · Hand 73 · blinds 50/100 · Venus folds, Midas folds, Moth calls 100, Ozone calls 50, Baseline checks, [flop: 7♣ 3♣ 5♠], Ozone checks, Baseline checks, Moth checks, [turn: 7♣ 3♣ 5♠ 2♣], Ozone checks, Baseline raises to 110, Moth calls 110, Ozone calls 110, [river: 7♣ 3♣ 5♠ 2♣ 10♣], Ozone checks, Baseline raises to 110, Moth raises to 235, Ozone calls 235, Baseline raises to 375, Moth raises to 530, Ozone calls 295, Baseline raises to 1770, Moth raises to 3160, Ozone calls 2630, Baseline raises to 4690, Moth raises to 6405, Ozone calls 3245, Baseline raises to 8290, Moth raises to 10400, Ozone calls 3995, Baseline raises to 12720, Moth raises to 15320, Ozone calls 4920, Baseline raises to 41715, Moth calls 11342, Ozone calls 26395 → Baseline wins 110722 with Flush, K high (K♣ 9♣)",
-   "pot": 110722
-  },
   {
    "table": 1,
    "handNo": 74,
@@ -404,6 +390,12 @@
    "handNo": 82,
    "text": "Table 1 · Hand 82 · blinds 60/120 · Venus calls 60, Midas checks, [flop: 7♥ 2♣ 3♣], Midas raises to 132, Venus calls 132, [turn: 7♥ 2♣ 3♣ 7♣], Midas raises to 277, Venus calls 277, [river: 7♥ 2♣ 3♣ 7♣ 8♣], Midas checks, Venus checks → Midas wins 1058 with Three of a kind, 7s (7♠ 9♦)",
    "pot": 1058
+  },
+  {
+   "table": 1,
+   "handNo": 83,
+   "text": "Table 1 · Hand 83 · blinds 60/120 · Midas calls 60, Venus checks, [flop: 8♠ 9♣ 5♣], Venus checks, Midas checks, [turn: 8♠ 9♣ 5♣ 6♣], Venus checks, Midas checks, [river: 8♠ 9♣ 5♣ 6♣ 7♦], Venus raises to 120, Midas calls 120 → Venus wins 240 with Straight, 9 high (6♥ A♥); Midas wins 240 with Straight, 9 high (A♠ 5♠)",
+   "pot": 480
   }
  ],
  "finishes": [
