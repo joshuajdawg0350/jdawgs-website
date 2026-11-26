@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:41:03.558Z",
+ "updatedAt": "2026-11-26T01:41:17.727Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 97,
+ "handsPlayed": 98,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20682,
+     "stack": 20652,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 2678,
+     "stack": 2708,
      "status": "seated",
      "reentered": false
     },
@@ -74,7 +74,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 33
+   "handsPlayed": 34
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20682,
+   "stack": 20652,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2678,
+   "stack": 2708,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 34,
+  "table": 2,
+  "handNo": 33,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Baseline",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 29,
-   "text": "Table 3 · Hand 29 · blinds 30/60 · Ozone calls 60, Moth calls 30, Shadow checks, [flop: 10♥ 8♣ 6♥], Moth checks, Shadow checks, Ozone checks, [turn: 10♥ 8♣ 6♥ 7♣], Moth raises to 60, Shadow folds, Ozone calls 60, [river: 10♥ 8♣ 6♥ 7♣ 8♠], Moth checks, Ozone checks → Moth wins 300 with Straight, 10 high (9♠ Q♠)",
-   "pot": 300
-  },
   {
    "table": 1,
    "handNo": 31,
@@ -552,6 +546,12 @@
    "handNo": 32,
    "text": "Table 3 · Hand 32 · blinds 30/60 · Ozone calls 60, Moth calls 30, Shadow checks, [flop: 9♥ K♦ 6♠], Moth checks, Shadow raises to 70, Ozone folds, Moth calls 70, [turn: 9♥ K♦ 6♠ J♠], Moth checks, Shadow checks, [river: 9♥ K♦ 6♠ J♠ 6♦], Moth checks, Shadow checks → Moth wins 320 with Two pair, 9s and 6s (9♠ 10♦)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 34,
+   "text": "Table 1 · Hand 34 · blinds 30/60 · Baseline folds, Midas folds → Hammer takes 90 (everyone else folded)",
+   "pot": 90
   }
  ],
  "finishes": [
