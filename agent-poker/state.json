@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:13:03.754Z",
+ "updatedAt": "2026-11-26T02:13:22.510Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 165,
+ "handsPlayed": 166,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496914,
+     "stack": 496854,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23086,
+     "stack": 23146,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 95
+   "handsPlayed": 96
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23086,
+   "stack": 23146,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496914,
+   "stack": 496854,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 96,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 86,
-   "text": "Table 1 · Hand 86 · blinds 60/120 · Venus calls 60, Midas checks, [flop: A♥ 5♦ 3♠], Midas checks, Venus checks, [turn: A♥ 5♦ 3♠ 4♣], Midas checks, Venus checks, [river: A♥ 5♦ 3♠ 4♣ 9♠], Midas checks, Venus checks → Midas wins 240 with Pair of 4s (10♥ 4♠)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 87,
@@ -403,6 +389,12 @@
    "table": 1,
    "handNo": 95,
    "text": "Table 1 · Hand 95 · blinds 60/120 · Midas folds → Venus takes 180 (everyone else folded)",
+   "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 96,
+   "text": "Table 1 · Hand 96 · blinds 60/120 · Venus folds → Midas takes 180 (everyone else folded)",
    "pot": 180
   }
  ],
