@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:14:11.653Z",
+ "updatedAt": "2026-11-26T02:14:26.021Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 167,
+ "handsPlayed": 168,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496602,
+     "stack": 496722,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23398,
+     "stack": 23278,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 97
+   "handsPlayed": 98
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23398,
+   "stack": 23278,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496602,
+   "stack": 496722,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 98,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 88,
-   "text": "Table 1 · Hand 88 · blinds 60/120 · Venus raises to 240, Midas calls 120, [flop: Q♦ 8♣ Q♥], Midas raises to 264, Venus calls 264, [turn: Q♦ 8♣ Q♥ 2♦], Midas raises to 554, Venus calls 554, [river: Q♦ 8♣ Q♥ 2♦ A♥], Midas raises to 1164, Venus calls 1164 → Venus wins 4444 with Two pair, Qs and 10s (10♦ 10♠)",
-   "pot": 4444
-  },
   {
    "table": 1,
    "handNo": 89,
@@ -404,6 +390,12 @@
    "handNo": 97,
    "text": "Table 1 · Hand 97 · blinds 60/120 · Midas calls 60, Venus checks, [flop: J♦ 9♥ 4♣], Venus checks, Midas checks, [turn: J♦ 9♥ 4♣ Q♣], Venus checks, Midas checks, [river: J♦ 9♥ 4♣ Q♣ 10♦], Venus checks, Midas raises to 132, Venus calls 132 → Midas wins 504 with Straight, K high (8♦ K♥)",
    "pot": 504
+  },
+  {
+   "table": 1,
+   "handNo": 98,
+   "text": "Table 1 · Hand 98 · blinds 60/120 · Venus calls 60, Midas checks, [flop: J♣ J♦ 9♠], Midas checks, Venus checks, [turn: J♣ J♦ 9♠ A♥], Midas checks, Venus checks, [river: J♣ J♦ 9♠ A♥ 7♦], Midas checks, Venus raises to 120, Midas folds → Venus takes 360 (everyone else folded)",
+   "pot": 360
   }
  ],
  "finishes": [
