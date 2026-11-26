@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:08:55.012Z",
+ "updatedAt": "2026-11-26T02:09:08.329Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 157,
+ "handsPlayed": 158,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496487,
+     "stack": 498709,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23513,
+     "stack": 21291,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 87
+   "handsPlayed": 88
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23513,
+   "stack": 21291,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496487,
+   "stack": 498709,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 88,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 78,
-   "text": "Table 1 · Hand 78 · blinds 50/100 · Venus folds → Midas takes 150 (everyone else folded)",
-   "pot": 150
-  },
   {
    "table": 1,
    "handNo": 79,
@@ -404,6 +390,12 @@
    "handNo": 87,
    "text": "Table 1 · Hand 87 · blinds 60/120 · Midas folds → Venus takes 180 (everyone else folded)",
    "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 88,
+   "text": "Table 1 · Hand 88 · blinds 60/120 · Venus raises to 240, Midas calls 120, [flop: Q♦ 8♣ Q♥], Midas raises to 264, Venus calls 264, [turn: Q♦ 8♣ Q♥ 2♦], Midas raises to 554, Venus calls 554, [river: Q♦ 8♣ Q♥ 2♦ A♥], Midas raises to 1164, Venus calls 1164 → Venus wins 4444 with Two pair, Qs and 10s (10♦ 10♠)",
+   "pot": 4444
   }
  ],
  "finishes": [
