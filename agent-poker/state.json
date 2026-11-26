@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:39:08.954Z",
+ "updatedAt": "2026-11-26T01:39:23.465Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 91,
+ "handsPlayed": 92,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 2678,
+     "stack": 2738,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 117465,
+     "stack": 117405,
      "status": "seated",
      "reentered": false
     },
@@ -74,7 +74,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 31
+   "handsPlayed": 32
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2678,
+   "stack": 2738,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 117465,
+   "stack": 117405,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 32,
+  "table": 2,
+  "handNo": 31,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Midas",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 27,
-   "text": "Table 3 · Hand 27 · blinds 30/60 · Anvil calls 60, Bulldog calls 60, Moth calls 60, Ozone calls 30, Razor checks, [flop: K♠ Q♠ A♦], Ozone checks, Razor checks, Anvil checks, Bulldog checks, Moth checks, [turn: K♠ Q♠ A♦ K♦], Ozone checks, Razor checks, Anvil raises to 60, Bulldog raises to 275, Moth calls 275, Ozone calls 275, Razor calls 275, Anvil raises to 490, Bulldog calls 215, Moth calls 215, Ozone calls 215, Razor calls 215, [river: K♠ Q♠ A♦ K♦ J♠], Ozone raises to 80, Razor raises to 160, Anvil raises to 240, Bulldog raises to 2180, Moth calls 2180, Ozone raises to 6735, Razor calls 6575, Anvil raises to 11290, Bulldog raises to 30410, Moth folds, Ozone raises to 70180, Razor calls 8315, Anvil calls 10797, Bulldog calls 11695 → Ozone wins 154352 with Straight, A high (6♣ 10♠)",
-   "pot": 154352
-  },
   {
    "table": 1,
    "handNo": 29,
@@ -552,6 +546,12 @@
    "handNo": 30,
    "text": "Table 3 · Hand 30 · blinds 30/60 · Moth calls 60, Shadow folds, Ozone checks, [flop: 3♦ K♥ 3♣], Ozone checks, Moth checks, [turn: 3♦ K♥ 3♣ Q♠], Ozone checks, Moth checks, [river: 3♦ K♥ 3♣ Q♠ Q♣], Ozone raises to 80, Moth calls 80 → Ozone wins 155 with Two pair, Qs and 3s (10♦ J♣); Moth wins 155 with Two pair, Qs and 3s (6♣ J♠)",
    "pot": 310
+  },
+  {
+   "table": 1,
+   "handNo": 32,
+   "text": "Table 1 · Hand 32 · blinds 30/60 · Midas folds, Hammer calls 30, Baseline checks, [flop: J♦ 4♥ 9♦], Hammer raises to 70, Baseline folds → Hammer takes 190 (everyone else folded)",
+   "pot": 190
   }
  ],
  "finishes": [
