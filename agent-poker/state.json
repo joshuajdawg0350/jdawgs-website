@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:05:41.119Z",
+ "updatedAt": "2026-11-26T02:05:53.665Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 150,
+ "handsPlayed": 151,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496956,
+     "stack": 496836,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23044,
+     "stack": 23164,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 80
+   "handsPlayed": 81
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23044,
+   "stack": 23164,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496956,
+   "stack": 496836,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 81,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 71,
-   "text": "Table 1 · Hand 71 · blinds 50/100 · Ozone calls 100, Baseline calls 100, Venus folds, Midas calls 50, Moth checks, [flop: A♠ 5♥ 8♦], Midas checks, Moth checks, Ozone checks, Baseline checks, [turn: A♠ 5♥ 8♦ 7♥], Midas checks, Moth checks, Ozone checks, Baseline checks, [river: A♠ 5♥ 8♦ 7♥ 9♥], Midas checks, Moth checks, Ozone checks, Baseline checks → Ozone wins 200 with Pair of 9s (9♣ 2♥); Baseline wins 200 with Pair of 9s (3♦ 9♦)",
-   "pot": 400
-  },
   {
    "table": 1,
    "handNo": 72,
@@ -404,6 +390,12 @@
    "handNo": 80,
    "text": "Table 1 · Hand 80 · blinds 50/100 · Venus calls 50, Midas checks, [flop: 3♦ J♥ 10♠], Midas checks, Venus checks, [turn: 3♦ J♥ 10♠ 10♣], Midas checks, Venus checks, [river: 3♦ J♥ 10♠ 10♣ 8♥], Midas checks, Venus checks → Venus wins 200 with Pair of 10s (Q♠ 5♣)",
    "pot": 200
+  },
+  {
+   "table": 1,
+   "handNo": 81,
+   "text": "Table 1 · Hand 81 · blinds 60/120 · Midas calls 60, Venus checks, [flop: 5♥ 9♥ 3♣], Venus checks, Midas raises to 132, Venus folds → Midas takes 372 (everyone else folded)",
+   "pot": 372
   }
  ],
  "finishes": [
