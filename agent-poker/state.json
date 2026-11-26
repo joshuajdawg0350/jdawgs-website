@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:16:39.195Z",
+ "updatedAt": "2026-11-26T01:16:54.787Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 30,
+ "handsPlayed": 31,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Razor",
      "kind": "house",
      "house": true,
-     "stack": 19530,
+     "stack": 19680,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 26302,
+     "stack": 26252,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 25785,
+     "stack": 25735,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19505,
+     "stack": 19455,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 9
+   "handsPlayed": 10
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19530,
+   "stack": 19680,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 26302,
+   "stack": 26252,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19505,
+   "stack": 19455,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 25785,
+   "stack": 25735,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 10,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Ozone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 7,
-   "text": "Table 2 · Hand 7 · blinds 25/50 · Velvet calls 50, Copper calls 50, Compass calls 50, Granite calls 50, Millstone folds, Venus checks, [flop: 7♣ Q♣ K♣], Venus checks, Velvet checks, Copper checks, Compass checks, Granite checks, [turn: 7♣ Q♣ K♣ 3♣], Venus checks, Velvet checks, Copper checks, Compass checks, Granite checks, [river: 7♣ Q♣ K♣ 3♣ 2♥], Venus checks, Velvet checks, Copper checks, Compass checks, Granite checks → Compass wins 275 with Pair of Ks (6♦ K♥)",
-   "pot": 275
-  },
   {
    "table": 3,
    "handNo": 7,
@@ -551,6 +537,12 @@
    "table": 2,
    "handNo": 10,
    "text": "Table 2 · Hand 10 · blinds 25/50 · Venus calls 50, Copper calls 50, Anchor calls 25, Granite checks, [flop: A♠ 6♦ 4♥], Anchor checks, Granite checks, Venus checks, Copper checks, [turn: A♠ 6♦ 4♥ 10♦], Anchor checks, Granite checks, Venus checks, Copper checks, [river: A♠ 6♦ 4♥ 10♦ 7♠], Anchor checks, Granite checks, Venus checks, Copper checks → Anchor wins 200 with Pair of 7s (9♦ 7♥)",
+   "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 10,
+   "text": "Table 3 · Hand 10 · blinds 25/50 · Ozone folds, Razor calls 50, Anvil calls 50, Bulldog calls 25, Moth checks, [flop: 3♦ J♦ 2♥], Bulldog checks, Moth checks, Razor checks, Anvil checks, [turn: 3♦ J♦ 2♥ 5♥], Bulldog checks, Moth checks, Razor checks, Anvil checks, [river: 3♦ J♦ 2♥ 5♥ A♠], Bulldog checks, Moth checks, Razor checks, Anvil checks → Razor wins 200 with Pair of Js (7♦ J♣)",
    "pot": 200
   }
  ],
