@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:06:36.715Z",
+ "updatedAt": "2026-11-26T01:06:51.100Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 20010,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 19785,
      "status": "seated",
      "reentered": false
     },
@@ -136,7 +136,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 20010,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 19785,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Bulldog",
   "lastActions": []
  },
  "recentHands": [
@@ -516,6 +516,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Quarry calls 50, Shadow folds, Pearl calls 50, Midas folds, Hammer folds, Dice calls 25, Baseline checks, [flop: 2♣ 8♥ A♠], Dice checks, Baseline checks, Quarry checks, Pearl checks, [turn: 2♣ 8♥ A♠ 6♥], Dice checks, Baseline checks, Quarry checks, Pearl checks, [river: 2♣ 8♥ A♠ 6♥ Q♥], Dice checks, Baseline checks, Quarry checks, Pearl checks → Quarry wins 200 with Pair of As (7♥ A♦)",
    "pot": 200
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Copper calls 50, Compass calls 50, Deuce folds, Granite folds, Millstone calls 50, Venus folds, Velvet checks, [flop: 10♥ A♦ A♥], Velvet checks, Copper checks, Compass checks, Millstone checks, [turn: 10♥ A♦ A♥ 8♦], Velvet checks, Copper checks, Compass checks, Millstone checks, [river: 10♥ A♦ A♥ 8♦ K♦], Velvet checks, Copper checks, Compass checks, Millstone checks → Velvet wins 225 with Two pair, As and 8s (8♥ 2♣)",
+   "pot": 225
   }
  ],
  "finishes": [
