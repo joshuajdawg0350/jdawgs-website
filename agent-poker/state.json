@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:07:36.131Z",
+ "updatedAt": "2026-11-26T01:07:50.543Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 7,
+ "handsPlayed": 8,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20010,
+     "stack": 19960,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 19785,
+     "stack": 20035,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19895,
+     "stack": 19845,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19925,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19925,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20010,
+   "stack": 19960,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19785,
+   "stack": 20035,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19895,
+   "stack": 19845,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Compass",
+  "toAct": "Moth",
   "lastActions": []
  },
  "recentHands": [
@@ -533,6 +533,12 @@
    "table": 1,
    "handNo": 3,
    "text": "Table 1 · Hand 3 · blinds 25/50 · Shadow calls 50, Pearl calls 50, Midas folds, Hammer calls 50, Dice calls 50, Baseline calls 25, Quarry checks, [flop: 5♦ 9♣ 8♥], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks, [turn: 5♦ 9♣ 8♥ 10♦], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks, [river: 5♦ 9♣ 8♥ 10♦ 9♠], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks → Dice wins 300 with Two pair, 10s and 9s (10♣ K♥)",
+   "pot": 300
+  },
+  {
+   "table": 2,
+   "handNo": 3,
+   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Deuce calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 25, Copper checks, [flop: 3♥ 9♠ 7♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [turn: 3♥ 9♠ 7♣ J♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [river: 3♥ 9♠ 7♣ J♣ 6♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks → Compass wins 300 with Pair of 7s (7♦ K♦)",
    "pot": 300
   }
  ],
