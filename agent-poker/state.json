@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:43:10.647Z",
+ "updatedAt": "2026-11-26T01:43:25.337Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 103,
+ "handsPlayed": 104,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20652,
+     "stack": 20932,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 2768,
+     "stack": 2628,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 118209,
+     "stack": 118069,
      "status": "seated",
      "reentered": false
     },
@@ -74,7 +74,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 35
+   "handsPlayed": 36
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20652,
+   "stack": 20932,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2768,
+   "stack": 2628,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 118209,
+   "stack": 118069,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 36,
+  "table": 2,
+  "handNo": 35,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Hammer",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 31,
-   "text": "Table 3 · Hand 31 · blinds 30/60 · Shadow calls 60, Ozone calls 30, Moth checks, [flop: J♠ 2♦ 8♥], Ozone checks, Moth checks, Shadow checks, [turn: J♠ 2♦ 8♥ 9♠], Ozone checks, Moth raises to 60, Shadow folds, Ozone calls 60, [river: J♠ 2♦ 8♥ 9♠ A♦], Ozone checks, Moth raises to 60, Ozone calls 60 → Moth wins 420 with Straight, J high (7♣ 10♣)",
-   "pot": 420
-  },
   {
    "table": 1,
    "handNo": 33,
@@ -552,6 +546,12 @@
    "handNo": 34,
    "text": "Table 3 · Hand 34 · blinds 30/60 · Shadow calls 60, Ozone folds, Moth checks, [flop: K♠ 4♠ 6♦], Moth checks, Shadow checks, [turn: K♠ 4♠ 6♦ 7♦], Moth checks, Shadow checks, [river: K♠ 4♠ 6♦ 7♦ 4♥], Moth checks, Shadow checks → Shadow wins 150 with Pair of 4s (10♣ A♥)",
    "pot": 150
+  },
+  {
+   "table": 1,
+   "handNo": 36,
+   "text": "Table 1 · Hand 36 · blinds 30/60 · Hammer calls 60, Baseline raises to 140, Midas calls 80, Hammer calls 80, [flop: 9♠ Q♦ J♠], Baseline checks, Midas checks, Hammer checks, [turn: 9♠ Q♦ J♠ Q♥], Baseline checks, Midas checks, Hammer checks, [river: 9♠ Q♦ J♠ Q♥ 2♥], Baseline checks, Midas checks, Hammer checks → Midas wins 420 with Two pair, Qs and 9s (9♥ K♥)",
+   "pot": 420
   }
  ],
  "finishes": [
