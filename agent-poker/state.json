@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:42:18.795Z",
+ "updatedAt": "2026-11-26T01:42:43.725Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 101,
+ "handsPlayed": 102,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19675,
+     "stack": 19615,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 96692,
+     "stack": 96632,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29106,
+     "stack": 29226,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 33
+   "handsPlayed": 34
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19675,
+   "stack": 19615,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 96692,
+   "stack": 96632,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29106,
+   "stack": 29226,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 34,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Venus",
+  "toAct": "Shadow",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 32,
-   "text": "Table 1 · Hand 32 · blinds 30/60 · Midas folds, Hammer calls 30, Baseline checks, [flop: J♦ 4♥ 9♦], Hammer raises to 70, Baseline folds → Hammer takes 190 (everyone else folded)",
-   "pot": 190
-  },
   {
    "table": 2,
    "handNo": 31,
@@ -552,6 +546,12 @@
    "handNo": 35,
    "text": "Table 1 · Hand 35 · blinds 30/60 · Midas folds, Hammer calls 30, Baseline checks, [flop: 6♥ 5♦ Q♥], Hammer checks, Baseline checks, [turn: 6♥ 5♦ Q♥ 3♠], Hammer checks, Baseline checks, [river: 6♥ 5♦ Q♥ 3♠ 6♣], Hammer checks, Baseline checks → Hammer wins 120 with Two pair, Qs and 6s (2♦ Q♦)",
    "pot": 120
+  },
+  {
+   "table": 2,
+   "handNo": 34,
+   "text": "Table 2 · Hand 34 · blinds 30/60 · Venus calls 60, Copper folds, Anchor calls 30, Granite checks, [flop: Q♦ 6♦ 8♠], Anchor checks, Granite checks, Venus checks, [turn: Q♦ 6♦ 8♠ 6♠], Anchor checks, Granite checks, Venus checks, [river: Q♦ 6♦ 8♠ 6♠ 2♣], Anchor checks, Granite checks, Venus checks → Anchor wins 180 with Two pair, 8s and 6s (8♥ 10♣)",
+   "pot": 180
   }
  ],
  "finishes": [
