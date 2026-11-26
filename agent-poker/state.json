@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:25:50.208Z",
+ "updatedAt": "2026-11-26T01:26:04.571Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 54,
+ "handsPlayed": 55,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 120725,
+     "stack": 120610,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Razor",
      "kind": "house",
      "house": true,
-     "stack": 19380,
+     "stack": 19265,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 25942,
+     "stack": 26402,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 25600,
+     "stack": 25485,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19695,
+     "stack": 19580,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 17
+   "handsPlayed": 18
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 120725,
+   "stack": 120610,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19380,
+   "stack": 19265,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 25942,
+   "stack": 26402,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19695,
+   "stack": 19580,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 25600,
+   "stack": 25485,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 18,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Bulldog",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 15,
-   "text": "Table 2 · Hand 15 · blinds 25/50 · Copper calls 50, Anchor calls 50, Granite folds, Venus checks, [flop: 8♥ 3♣ 9♥], Venus checks, Copper checks, Anchor checks, [turn: 8♥ 3♣ 9♥ 9♣], Venus checks, Copper checks, Anchor checks, [river: 8♥ 3♣ 9♥ 9♣ 4♠], Venus checks, Copper checks, Anchor checks → Anchor wins 175 with Two pair, 9s and 3s (5♦ 3♥)",
-   "pot": 175
-  },
   {
    "table": 3,
    "handNo": 15,
@@ -552,6 +538,12 @@
    "handNo": 18,
    "text": "Table 2 · Hand 18 · blinds 25/50 · Venus folds, Copper calls 50, Anchor calls 25, Granite checks, [flop: K♦ 8♣ 2♠], Anchor checks, Granite checks, Copper checks, [turn: K♦ 8♣ 2♠ 3♦], Anchor checks, Granite checks, Copper checks, [river: K♦ 8♣ 2♠ 3♦ 6♠], Anchor checks, Granite checks, Copper checks → Granite wins 150 with Pair of Ks (10♠ K♣)",
    "pot": 150
+  },
+  {
+   "table": 3,
+   "handNo": 18,
+   "text": "Table 3 · Hand 18 · blinds 25/50 · Bulldog calls 50, Moth calls 50, Ozone raises to 115, Razor calls 90, Anvil calls 65, Bulldog calls 65, Moth calls 65, [flop: 10♦ 8♠ A♣], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [turn: 10♦ 8♠ A♣ 2♠], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [river: 10♦ 8♠ A♣ 2♠ J♣], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks → Anvil wins 575 with Pair of As (K♥ A♠)",
+   "pot": 575
   }
  ],
  "finishes": [
