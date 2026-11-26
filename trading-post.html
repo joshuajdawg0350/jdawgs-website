@@ -1345,23 +1345,19 @@
       // Counts
       document.getElementById('hero-count').textContent = ALL.length;
 
-      // Storefront thumbnails on the three shelf entries (added 2026-11-25):
-      // a band of the shelf's own item photos across each base-screen entry,
-      // reusing the items' existing img sources from DATA — no new images.
+      // Picked storefronts on the three shelf entries (Joshua's picks, 2026-11-25):
+      // Cards #3, Coins #2, Miscellaneous #5 — one wide storefront band per entry,
+      // hosted as separate files in tp-img/ so this page stays light.
       (function () {
-        const shelves = [
-          { key: 'cards', items: ALL.filter(function (it) { return it.cat === 'cards'; }) },
-          { key: 'coins', items: ALL.filter(function (it) { return it.cat === 'coins'; }) },
-          { key: 'misc', items: ALL.filter(function (it) { return it.cat === 'big'; })
-              .concat(ALL.filter(function (it) { return it.cat === 'other'; })) }
-        ];
-        shelves.forEach(function (s) {
-          const box = document.getElementById('thumbs-' + s.key);
+        const fronts = {
+          cards: 'tp-img/storefront-cards.jpg',
+          coins: 'tp-img/storefront-coins.jpg',
+          misc: 'tp-img/storefront-misc.jpg'
+        };
+        Object.keys(fronts).forEach(function (key) {
+          const box = document.getElementById('thumbs-' + key);
           if (!box) return;
-          const picks = s.items.filter(function (it) { return it.imgs && it.imgs.length; }).slice(0, 6);
-          box.innerHTML = picks.map(function (it) {
-            return '<img src="' + it.imgs[0] + '" alt="" loading="lazy" />';
-          }).join('');
+          box.innerHTML = '<img src="' + fronts[key] + '" alt="" />';
         });
       })();
 
