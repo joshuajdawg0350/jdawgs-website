@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:55:37.281Z",
+ "updatedAt": "2026-11-26T01:55:50.736Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 129,
+ "handsPlayed": 130,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 124780,
+     "stack": 125060,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 61705,
+     "stack": 61625,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 272886,
+     "stack": 272806,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23734,
+     "stack": 23694,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 31107,
+     "stack": 31027,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 59
+   "handsPlayed": 60
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23734,
+   "stack": 23694,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 124780,
+   "stack": 125060,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 61705,
+   "stack": 61625,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 272886,
+   "stack": 272806,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 31107,
+   "stack": 31027,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 60,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Hammer",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 50,
-   "text": "Table 1 · Hand 50 · blinds 40/80 · Baseline calls 80, Venus folds, Midas folds, Moth calls 80, Hammer calls 40, Ozone checks, [flop: 5♥ 3♣ A♠], Hammer checks, Ozone checks, Baseline checks, Moth checks, [turn: 5♥ 3♣ A♠ 10♦], Hammer checks, Ozone checks, Baseline checks, Moth checks, [river: 5♥ 3♣ A♠ 10♦ 2♠], Hammer checks, Ozone checks, Baseline checks, Moth checks → Baseline wins 320 with Two pair, As and 5s (A♦ 5♦)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 51,
@@ -404,6 +390,12 @@
    "handNo": 59,
    "text": "Table 1 · Hand 59 · blinds 40/80 · Moth calls 80, Hammer raises to 245, Ozone calls 245, Baseline calls 245, Venus folds, Midas folds, Moth calls 165, [flop: 8♣ K♣ 5♣], Moth checks, Hammer checks, Ozone checks, Baseline checks, [turn: 8♣ K♣ 5♣ 10♦], Moth checks, Hammer checks, Ozone checks, Baseline checks, [river: 8♣ K♣ 5♣ 10♦ 4♠], Moth checks, Hammer checks, Ozone checks, Baseline checks → Hammer wins 1100 with Pair of As (A♦ A♥)",
    "pot": 1100
+  },
+  {
+   "table": 1,
+   "handNo": 60,
+   "text": "Table 1 · Hand 60 · blinds 40/80 · Hammer folds, Ozone calls 80, Baseline calls 80, Venus calls 80, Midas folds, Moth checks, [flop: 6♣ Q♣ 7♣], Moth checks, Ozone checks, Baseline checks, Venus checks, [turn: 6♣ Q♣ 7♣ J♥], Moth checks, Ozone checks, Baseline checks, Venus checks, [river: 6♣ Q♣ 7♣ J♥ 3♥], Moth checks, Ozone checks, Baseline checks, Venus checks → Ozone wins 360 with Pair of Qs (Q♦ 4♠)",
+   "pot": 360
   }
  ],
  "finishes": [
