@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:28:45.133Z",
+ "updatedAt": "2026-11-26T01:28:58.919Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   100
  ],
  "level": 4,
- "handsPlayed": 62,
+ "handsPlayed": 63,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19885,
+     "stack": 20005,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 2385,
+     "stack": 2325,
      "status": "seated",
      "reentered": false
     },
@@ -139,12 +139,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29191,
+     "stack": 29131,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 20
+   "handsPlayed": 21
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19885,
+   "stack": 20005,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 2385,
+   "stack": 2325,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29191,
+   "stack": 29131,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 21,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Granite",
+  "toAct": "Razor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 19,
-   "text": "Table 1 · Hand 19 · blinds 25/50 · Midas folds, Hammer calls 50, Baseline raises to 140, Shadow calls 90, Hammer calls 90, [flop: A♠ J♦ 5♦], Baseline checks, Shadow checks, Hammer checks, [turn: A♠ J♦ 5♦ K♥], Baseline raises to 55, Shadow calls 55, Hammer calls 55, [river: A♠ J♦ 5♦ K♥ 6♠], Baseline raises to 55, Shadow calls 55, Hammer calls 55 → Baseline wins 750 with Three of a kind, Ks (K♣ K♠)",
-   "pot": 750
-  },
   {
    "table": 2,
    "handNo": 18,
@@ -551,6 +545,12 @@
    "table": 1,
    "handNo": 22,
    "text": "Table 1 · Hand 22 · blinds 30/60 · Shadow calls 60, Midas folds, Hammer calls 30, Baseline checks, [flop: K♠ A♠ K♥], Hammer checks, Baseline checks, Shadow checks, [turn: K♠ A♠ K♥ 8♦], Hammer checks, Baseline checks, Shadow checks, [river: K♠ A♠ K♥ 8♦ 10♠], Hammer checks, Baseline checks, Shadow checks → Baseline wins 180 with Two pair, As and Ks (10♦ A♥)",
+   "pot": 180
+  },
+  {
+   "table": 2,
+   "handNo": 21,
+   "text": "Table 2 · Hand 21 · blinds 30/60 · Granite calls 60, Venus folds, Copper calls 30, Anchor checks, [flop: 4♠ 7♦ J♠], Copper checks, Anchor checks, Granite checks, [turn: 4♠ 7♦ J♠ 2♦], Copper checks, Anchor checks, Granite checks, [river: 4♠ 7♦ J♠ 2♦ 6♦], Copper checks, Anchor checks, Granite checks → Granite wins 180 with Pair of Js (J♣ Q♠)",
    "pot": 180
   }
  ],
