@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:50:07.729Z",
+ "updatedAt": "2026-11-26T01:50:22.309Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 118,
+ "handsPlayed": 119,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 124119,
+     "stack": 124674,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 58379,
+     "stack": 58194,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 11317,
+     "stack": 11132,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 6163,
+     "stack": 5978,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 48
+   "handsPlayed": 49
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 6163,
+   "stack": 5978,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 124119,
+   "stack": 124674,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 58379,
+   "stack": 58194,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 11317,
+   "stack": 11132,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 49,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Ozone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 39,
-   "text": "Table 1 · Hand 39 · blinds 30/60 · Granite folds, Shadow calls 60, Moth calls 60, Hammer calls 60, Ozone calls 60, Baseline calls 60, Venus raises to 135, Anchor calls 105, Midas folds, Shadow calls 75, Moth calls 75, Hammer calls 75, Ozone calls 75, Baseline calls 75, [flop: 5♦ 9♥ 7♥], Anchor checks, Shadow checks, Moth checks, Hammer raises to 80, Ozone folds, Baseline folds, Venus calls 80, Anchor folds, Shadow raises to 185, Moth folds, Hammer raises to 995, Venus calls 915, Shadow calls 810, [turn: 5♦ 9♥ 7♥ 2♣], Shadow checks, Hammer raises to 80, Venus calls 80, Shadow folds, [river: 5♦ 9♥ 7♥ 2♣ 7♠], Hammer raises to 80, Venus calls 80 → Hammer wins 4310 with Straight, 9 high (6♦ 8♠)",
-   "pot": 4310
-  },
   {
    "table": 1,
    "handNo": 40,
@@ -404,6 +390,12 @@
    "handNo": 48,
    "text": "Table 1 · Hand 48 · blinds 40/80 · Hammer calls 80, Ozone calls 80, Baseline folds, Venus calls 80, Midas calls 40, Moth checks, [flop: 4♣ 6♠ A♠], Midas checks, Moth checks, Hammer checks, Ozone checks, Venus checks, [turn: 4♣ 6♠ A♠ 2♥], Midas checks, Moth checks, Hammer checks, Ozone checks, Venus checks, [river: 4♣ 6♠ A♠ 2♥ 8♦], Midas checks, Moth checks, Hammer checks, Ozone checks, Venus checks → Venus wins 400 with Two pair, 8s and 6s (6♥ 8♣)",
    "pot": 400
+  },
+  {
+   "table": 1,
+   "handNo": 49,
+   "text": "Table 1 · Hand 49 · blinds 40/80 · Ozone calls 80, Baseline calls 80, Venus folds, Midas folds, Moth calls 40, Hammer checks, [flop: 5♦ 5♥ 6♥], Moth checks, Hammer checks, Ozone checks, Baseline checks, [turn: 5♦ 5♥ 6♥ K♦], Moth checks, Hammer checks, Ozone checks, Baseline checks, [river: 5♦ 5♥ 6♥ K♦ 9♥], Moth checks, Hammer checks, Ozone raises to 105, Baseline calls 105, Moth calls 105, Hammer calls 105 → Ozone wins 740 with Flush, A high (7♥ A♥)",
+   "pot": 740
   }
  ],
  "finishes": [
