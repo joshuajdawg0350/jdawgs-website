@@ -870,6 +870,8 @@
       .cart-order { font-size: 15px; line-height: 1.5; background: rgba(94, 168, 232, 0.10); border: 1px solid rgba(94, 168, 232, 0.4); border-radius: 12px; padding: 12px 14px; margin: 4px 0 16px; }
       .cart-order strong { display: block; margin-bottom: 2px; }
       .cart-ship-note { font-size: 14px; color: var(--ink-soft); margin: 8px 0 0; line-height: 1.45; }
+      .free-ship-line { margin: 0 0 18px; padding: 11px 14px; border: 1.5px solid rgba(94, 168, 232, 0.55); border-radius: 12px; background: rgba(94, 168, 232, 0.08); font-size: 15.5px; font-weight: 700; line-height: 1.4; }
+      .free-ship-line strong { color: #5ea8e8; }
       #cart-card-note { display: none; }
       /* ---------- Storefront thumbnails on the shelf entries (added 2026-11-25) ---------- */
       .entry { flex-direction: column; align-items: stretch; justify-content: center; gap: 8px; padding: 18px 16px 10px; }
@@ -1012,6 +1014,7 @@
         </div>
         <div class="cs-scroll" id="cs-scroll-cards">
           <p class="sec-sub">Mostly 1960s baseball, plus 1977 football stars — 112 cards in all, one already sold and marked SOLD on its shelf. Prices are what similar cards have actually sold for lately. Every card is ungraded, sold as shown in its photo, and ships for $5 flat — ships same day as ordered.</p>
+          <p class="free-ship-line"><strong>Free shipping</strong> on orders of 30 or more cards.</p>
 <div class="lot" id="lot-banner">
             <div class="lot-txt">
               <h3>Want the whole stack?</h3>
@@ -1757,12 +1760,16 @@
         function subtotal(list) {
           return list.reduce(function (s, it) { return s + it.value; }, 0);
         }
-        // Cart shipping: cards + coins together ship $5 flat per order;
+        // Cart shipping: 30 or more cards in the cart and the whole
+        // order ships FREE — on us (Joshua's ruling, 2026-11-25).
+        // Under that: cards + coins together ship $5 flat per order;
         // the knife adds $12; souvenir spoons add $5 per order; maps,
         // paintings and canvases ship at actual cost (quoted after
         // checkout, charged $0 here); the pachislo is buyer-arranged.
         // Anything else carries its usual per-item shipping, once.
         function cartShipping(list) {
+          var cardCount = list.filter(function (it) { return it.cat === 'cards'; }).length;
+          if (cardCount >= 30) return { amount: 0, notes: [], free: true };
           var ship = 0;
           var notes = [];
           if (list.some(function (it) { return it.cat === 'cards' || it.cat === 'coins'; })) ship += 5;
@@ -1779,7 +1786,7 @@
           if (list.some(isBuyerShips)) {
             notes.push('Pachislo machine: shipping is solely on the buyer — you arrange and pay for your own shipping. Local pickup in Springfield, MO is welcome.');
           }
-          return { amount: ship, notes: notes };
+          return { amount: ship, notes: notes, free: false };
         }
         function noteNames(list) {
           var names = list.map(function (it) { return it.name; });
@@ -1937,7 +1944,7 @@
           var total = sub + ship.amount;
           summary.innerHTML = '<div class="totals">' +
             '<div class="row"><span>Items</span><span>' + fmt(sub) + '</span></div>' +
-            '<div class="row"><span>Shipping</span><span>' + (ship.amount ? fmt(ship.amount) : '$0') + '</span></div>' +
+            '<div class="row"><span>Shipping</span><span>' + (ship.free ? 'FREE — 30+ cards' : (ship.amount ? fmt(ship.amount) : '$0')) + '</span></div>' +
             '<div class="row grand"><span>Total</span><span>' + fmt(total) + '</span></div></div>' +
             ship.notes.map(function (n) { return '<p class="cart-ship-note">' + esc(n) + '</p>'; }).join('');
           var names = noteNames(list);
