@@ -585,7 +585,7 @@
     <div class="wrap">
       <noscript><p class="storage-warn" style="margin-top:14px;">This tool needs JavaScript switched on to build your prompts — turn it on for this page, then reload.</p></noscript>
       <header class="brand">
-        <span class="brand-mark">J-Dawgs Industries</span>
+        <span class="brand-mark">J-Dawgs Industries LLC</span>
         <h1>Realism Master<br />Template Generator<span class="tm">™</span></h1>
         <p class="tagline">No fancy logos. Just quality products.</p>
         <p class="engine-line">Now a <b>universal autoprompt engine</b> — one idea in, ready-to-paste prompts out, formatted for the tool you actually use: Midjourney, DALL·E, Ideogram, FLUX, Stable Diffusion, Recraft, Leonardo, Firefly, Runway, Kling, Luma, Pika and Sora-style video — and for business, coding, research and agent work, a structured prompt ready for any AI chat.</p>
@@ -1111,13 +1111,13 @@
         </div>
         <div id="libList"></div>
         <p class="history-empty" id="libEmpty">Nothing in the Library yet. Render something in the Master Workbench and tap <b>Save to Library 2.0</b>.</p>
-        <p class="credits-line">Master Edition — by J-Dawgs Industries.</p>
+        <p class="credits-line">Master Edition — by J-Dawgs Industries LLC.</p>
       </section>
 
       <footer>
-        <div class="foot-brand">J-Dawgs Industries</div>
-        <div>© 2026 Joshua Dawson / J-Dawgs Industries · Realism Master Template Generator™</div>
-        <div style="margin-top:4px;">Master Edition — by J-Dawgs Industries.</div>
+        <div class="foot-brand">J-Dawgs Industries LLC</div>
+        <div>© 2026 Joshua Dawson / J-Dawgs Industries LLC · Realism Master Template Generator™</div>
+        <div style="margin-top:4px;">Master Edition — by J-Dawgs Industries LLC.</div>
       </footer>
     </div>
 
@@ -1908,7 +1908,7 @@
           L.push("# ============================================================");
           L.push("#  MY PROGRAM — starter skeleton");
           L.push("#  Built from my answers in the Python Code Generator");
-          L.push("#  © 2026 J-Dawgs Industries");
+          L.push("#  © 2026 J-Dawgs Industries LLC");
           L.push("#");
           L.push("#  WHAT THIS PROGRAM SHOULD DO: " + (doWhat || PY_OPEN));
           L.push("#  IT WORKS ON: " + (worksOn || PY_OPEN));
@@ -2187,7 +2187,7 @@
           } catch (e) { /* selection is best-effort */ }
         }
 
-        var CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries · https://jdawgsindustries.com/realism-generator/";
+        var CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries LLC · https://jdawgsindustries.com/realism-generator/";
         function withCredit(text) {
           var tgl = $("creditToggle");
           if (tgl && tgl.checked && text && text.indexOf(CREDIT_LINE) === -1) {
@@ -3158,7 +3158,7 @@
         }
 
         /* ---------- Copy helper (Master-local, same fallback behavior) ---------- */
-        var M_CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries · https://jdawgsindustries.com/realism-generator/";
+        var M_CREDIT_LINE = "— Made with the Hustle City Prompt Generator (Master Edition) by J-Dawgs Industries LLC · https://jdawgsindustries.com/realism-generator/";
         function mCopy(text, noteEl, btn) {
           var tgl = $("creditToggle");
           if (tgl && tgl.checked && text && String(text).trim().charAt(0) !== "{" && text.indexOf(M_CREDIT_LINE) === -1) {
@@ -3275,7 +3275,7 @@
             negative: lastMaster.negative || "",
             tool_url: "https://jdawgsindustries.com/realism-generator/",
             hydrant_url: "https://the-hydrant.vercel.app",
-            maker: "J-Dawgs Industries"
+            maker: "J-Dawgs Industries LLC"
           };
           mCopy(JSON.stringify(payload, null, 2), $("masterCopyNote"), $("masterCopyJsonBtn"));
         });
@@ -3395,7 +3395,7 @@
               mCopy(item.prompt + (item.negative ? "\n\nNegative prompt: " + item.negative : ""), document.createElement("span"), b);
             });
             mkBtn("Copy as JSON", "btn-ghost btn-small", function (b) {
-              mCopy(JSON.stringify({ family: item.family, engine: item.engine, facts: item.facts || "", limits: item.limits || "", audience: item.audience || "", prompt: item.prompt, negative: item.negative || "", tool_url: "https://jdawgsindustries.com/realism-generator/", hydrant_url: "https://the-hydrant.vercel.app", maker: "J-Dawgs Industries" }, null, 2), document.createElement("span"), b);
+              mCopy(JSON.stringify({ family: item.family, engine: item.engine, facts: item.facts || "", limits: item.limits || "", audience: item.audience || "", prompt: item.prompt, negative: item.negative || "", tool_url: "https://jdawgsindustries.com/realism-generator/", hydrant_url: "https://the-hydrant.vercel.app", maker: "J-Dawgs Industries LLC" }, null, 2), document.createElement("span"), b);
             });
             mkBtn(item.fav ? "★ Favorited" : "☆ Mark favorite", "btn-ghost btn-small", function () {
               item.fav = !item.fav; libPersist(); renderLib();
