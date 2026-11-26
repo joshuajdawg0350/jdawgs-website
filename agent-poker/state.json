@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:24:17.235Z",
+ "updatedAt": "2026-11-26T01:24:33.954Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 49,
+ "handsPlayed": 50,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 1675,
+     "stack": 1625,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 118850,
+     "stack": 118950,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19350,
+     "stack": 19300,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 17
+   "handsPlayed": 18
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1675,
+   "stack": 1625,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 118850,
+   "stack": 118950,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19350,
+   "stack": 19300,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 18,
+  "table": 2,
+  "handNo": 17,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Shadow",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 13,
-   "text": "Table 3 · Hand 13 · blinds 25/50 · Bulldog calls 50, Moth calls 50, Ozone calls 50, Razor calls 25, Anvil checks, [flop: 8♣ 8♦ A♣], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [turn: 8♣ 8♦ A♣ 4♥], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [river: 8♣ 8♦ A♣ 4♥ J♦], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks → Moth wins 250 with Two pair, 8s and 4s (4♣ 2♥)",
-   "pot": 250
-  },
   {
    "table": 1,
    "handNo": 15,
@@ -552,6 +546,12 @@
    "handNo": 16,
    "text": "Table 3 · Hand 16 · blinds 25/50 · Razor folds, Anvil calls 50, Bulldog calls 50, Moth calls 25, Ozone checks, [flop: 5♦ Q♦ 9♠], Moth checks, Ozone checks, Anvil checks, Bulldog checks, [turn: 5♦ Q♦ 9♠ A♠], Moth checks, Ozone raises to 60, Anvil folds, Bulldog folds, Moth calls 60, [river: 5♦ Q♦ 9♠ A♠ 6♥], Moth checks, Ozone checks → Moth wins 320 with Three of a kind, 9s (9♣ 9♦)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 18,
+   "text": "Table 1 · Hand 18 · blinds 25/50 · Shadow calls 50, Midas folds, Hammer calls 25, Baseline checks, [flop: Q♣ 6♥ 7♥], Hammer checks, Baseline checks, Shadow checks, [turn: Q♣ 6♥ 7♥ 10♣], Hammer checks, Baseline checks, Shadow checks, [river: Q♣ 6♥ 7♥ 10♣ 4♦], Hammer checks, Baseline checks, Shadow checks → Baseline wins 150 with Pair of Qs (Q♥ 5♦)",
+   "pot": 150
   }
  ],
  "finishes": [
