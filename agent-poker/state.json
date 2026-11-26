@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:39:37.690Z",
+ "updatedAt": "2026-11-26T01:39:51.740Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 93,
+ "handsPlayed": 94,
  "tables": [
   {
    "id": 1,
@@ -145,7 +145,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 199192,
+     "stack": 199012,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 12240,
+     "stack": 12480,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 18116,
+     "stack": 18056,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 30
+   "handsPlayed": 31
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 199192,
+   "stack": 199012,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 18116,
+   "stack": 18056,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 12240,
+   "stack": 12480,
    "status": "seated",
    "reentered": false
   },
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 31,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Shadow",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 28,
-   "text": "Table 2 · Hand 28 · blinds 30/60 · Anchor calls 60, Granite calls 60, Venus calls 30, Copper checks, [flop: K♣ 10♥ A♣], Venus checks, Copper checks, Anchor checks, Granite checks, [turn: K♣ 10♥ A♣ A♠], Venus checks, Copper raises to 60, Anchor calls 60, Granite calls 60, Venus calls 60, [river: K♣ 10♥ A♣ A♠ 5♣], Venus checks, Copper raises to 60, Anchor calls 60, Granite calls 60, Venus calls 60 → Copper wins 720 with Three of a kind, As (Q♣ A♦)",
-   "pot": 720
-  },
   {
    "table": 3,
    "handNo": 28,
@@ -552,6 +538,12 @@
    "handNo": 31,
    "text": "Table 2 · Hand 31 · blinds 30/60 · Copper calls 60, Anchor calls 60, Granite folds, Venus checks, [flop: Q♥ 9♣ 9♥], Venus checks, Copper checks, Anchor checks, [turn: Q♥ 9♣ 9♥ 8♥], Venus checks, Copper checks, Anchor checks, [river: Q♥ 9♣ 9♥ 8♥ K♣], Venus checks, Copper checks, Anchor checks → Copper wins 105 with Two pair, Ks and 9s (K♥ 4♣); Anchor wins 105 with Two pair, Ks and 9s (5♥ K♦)",
    "pot": 210
+  },
+  {
+   "table": 3,
+   "handNo": 31,
+   "text": "Table 3 · Hand 31 · blinds 30/60 · Shadow calls 60, Ozone calls 30, Moth checks, [flop: J♠ 2♦ 8♥], Ozone checks, Moth checks, Shadow checks, [turn: J♠ 2♦ 8♥ 9♠], Ozone checks, Moth raises to 60, Shadow folds, Ozone calls 60, [river: J♠ 2♦ 8♥ 9♠ A♦], Ozone checks, Moth raises to 60, Ozone calls 60 → Moth wins 420 with Straight, J high (7♣ 10♣)",
+   "pot": 420
   }
  ],
  "finishes": [
