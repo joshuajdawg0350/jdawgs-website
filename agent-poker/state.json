@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:05:30.846Z",
+ "updatedAt": "2026-11-26T01:05:45.939Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -107,7 +107,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     },
@@ -147,7 +147,7 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19895,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20675,
      "status": "seated",
      "reentered": false
     },
@@ -163,12 +163,12 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19835,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19895,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 20675,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19835,
    "status": "seated",
    "reentered": false
   }
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Velvet",
+  "toAct": "Razor",
   "lastActions": []
  },
  "recentHands": [
@@ -498,6 +498,12 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Baseline calls 50, Quarry folds, Shadow folds, Pearl calls 50, Moth calls 50, River Rat calls 50, Midas folds, Hammer calls 25, Dice checks, [flop: J♥ A♥ 7♣], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [turn: J♥ A♥ 7♣ 2♦], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [river: J♥ A♥ 7♣ 2♦ 5♥], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks → Hammer wins 300 with Two pair, Js and 5s (J♦ 5♦)",
    "pot": 300
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Velvet calls 50, Copper folds, Compass calls 50, Deuce calls 50, Anchor raises to 105, Bulldog calls 105, Granite folds, Millstone folds, Venus folds, Velvet calls 55, Compass calls 55, Deuce calls 55, [flop: Q♥ 2♠ 4♦], Velvet checks, Compass checks, Deuce checks, Anchor checks, Bulldog raises to 60, Velvet calls 60, Compass calls 60, Deuce folds, Anchor calls 60, [turn: Q♥ 2♠ 4♦ 7♠], Velvet checks, Compass checks, Anchor checks, Bulldog checks, [river: Q♥ 2♠ 4♦ 7♠ 7♥], Velvet checks, Compass checks, Anchor checks, Bulldog checks → Anchor wins 840 with Two pair, As and 7s (A♠ A♥)",
+   "pot": 840
   }
  ],
  "finishes": [],
