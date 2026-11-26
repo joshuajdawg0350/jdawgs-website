@@ -8,8 +8,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proof — Q-Day Ledger™ v1.0.1, run end to end | J-Dawgs Industries LLC</title>
-<meta name="description" content="The complete public proof run of Q-Day Ledger v1.0.1: the shipped package, run end to end on its bundled sample target — every output, every miss, published. Now with hardware receipts: our own quantum bench's first runs on real IBM Quantum hardware — quantum benchmark results and the Q-Day countdown, with job IDs.">
+<title>Post-Quantum Cryptography Proof Run — Q-Day Ledger™ v1.0.1, End to End | J-Dawgs Industries LLC</title>
+<meta name="description" content="The proof run of Q-Day Ledger v1.0.1, end to end: CBOM, migration plan, the misses, and IBM Quantum hardware receipts. From $749.50 through Cyber Monday.">
+<meta name="robots" content="index, follow">
 <meta name="keywords" content="quantum computing, Q-Day, post-quantum cryptography, quantum readiness, quantum benchmark, IBM Quantum, AI agent, Q-Day Ledger, CBOM">
 <style>
   :root{
@@ -37,6 +38,7 @@
     background:linear-gradient(180deg,#fdfeff 0%,#e6eef7 30%,#8fa5bd 49%,#eef4fb 52%,#aebfd4 72%,#f4f8fc 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent}
   .sub{font-size:1.15rem;color:var(--mut);margin:0 0 18px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .promises{font-weight:700;color:var(--ink);border-top:1px solid var(--line2);
             border-bottom:1px solid var(--line2);padding:10px 0;margin:24px 0 8px}
   .promises span{margin-right:16px;white-space:nowrap}
@@ -75,20 +77,39 @@
            padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.5;color:var(--mut)}
 </style>
 <link rel="canonical" href="https://jdawgsindustries.com/q-day-ledger-proof.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Proof — Q-Day Ledger™ v1.0.1, run end to end | J-Dawgs Industries LLC">
-<meta property="og:description" content="The complete public proof run of Q-Day Ledger v1.0.1: the shipped package, run end to end on its bundled sample target — every output, every miss, published.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="J-Dawgs Industries">
+<meta property="og:title" content="Post-Quantum Cryptography Proof Run — Q-Day Ledger™ v1.0.1, End to End">
+<meta property="og:description" content="The proof run of Q-Day Ledger v1.0.1, end to end: CBOM, migration plan, the misses, and IBM Quantum hardware receipts. From $749.50 through Cyber Monday.">
 <meta property="og:url" content="https://jdawgsindustries.com/q-day-ledger-proof.html">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Proof — Q-Day Ledger™ v1.0.1, run end to end | J-Dawgs Industries LLC">
-<meta name="twitter:description" content="The complete public proof run of Q-Day Ledger v1.0.1: the shipped package, run end to end on its bundled sample target — every output, every miss, published.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Proof \u2014 Q-Day Ledger\u2122 v1.0.1, run end to end | J-Dawgs Industries LLC", "description": "The complete public proof run of Q-Day Ledger v1.0.1: the shipped package, run end to end on its bundled sample target \u2014 every output, every miss, published.", "url": "https://jdawgsindustries.com/q-day-ledger-proof.html", "publisher": {"@type": "Organization", "name": "J-Dawgs Industries LLC"}}</script>
+<meta property="og:image" content="https://jdawgsindustries.com/assets/qday-commercial-receipts.jpg">
+<meta property="og:image:alt" content="Q-Day Ledger run receipts — cryptographic inventory results from a real post-quantum assessment">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Post-Quantum Cryptography Proof Run — Q-Day Ledger™ v1.0.1, End to End">
+<meta name="twitter:description" content="The proof run of Q-Day Ledger v1.0.1, end to end: CBOM, migration plan, the misses, and IBM Quantum hardware receipts. From $749.50 through Cyber Monday.">
+<meta name="twitter:image" content="https://jdawgsindustries.com/assets/qday-commercial-receipts.jpg">
+<meta name="twitter:image:alt" content="Q-Day Ledger run receipts — cryptographic inventory results from a real post-quantum assessment">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Post-Quantum Cryptography Proof Run — Q-Day Ledger™ v1.0.1, End to End",
+  "description": "The public proof run of Q-Day Ledger v1.0.1, end to end: the shipped package run on its bundled sample target — the complete CBOM, migration plan, evidence pack, the misses, and IBM Quantum hardware receipts, all published.",
+  "url": "https://jdawgsindustries.com/q-day-ledger-proof.html",
+  "mainEntityOfPage": "https://jdawgsindustries.com/q-day-ledger-proof.html",
+  "image": "https://jdawgsindustries.com/assets/qday-commercial-receipts.jpg",
+  "datePublished": "2026-11-16",
+  "author": {"@type": "Organization", "name": "J-Dawgs Industries LLC", "url": "https://jdawgsindustries.com/"},
+  "publisher": {"@type": "Organization", "name": "J-Dawgs Industries LLC", "url": "https://jdawgsindustries.com/"},
+  "about": {"@type": "Product", "name": "Q-Day Ledger™", "url": "https://jdawgsindustries.com/q-day-ledger.html"}
+}
+</script>
 </head>
 <body>
 <div class="wrap">
   <header>
     <p class="kicker">J-Dawgs Industries LLC · Proof Page</p>
-    <h1><span class="chrome">Q-Day Ledger™</span></h1>
+    <h1><span class="chrome">Q-Day Ledger™</span><span class="sr-only"> — Post-Quantum Cryptography Proof Run: CBOM, Migration Plan &amp; IBM Quantum Hardware Receipts</span></h1>
     <p class="sub">Proof of work: the shipped product, run end to end — hits and misses published.</p>
     <div class="promises">
       <span>No fancy logos. Just quality products.</span>
@@ -248,9 +269,11 @@
      Ongoing bench results — benchmarks, the scaling probe, and hardware-generated randomness for our
      proof seals — are published on the <a href="https://digitaldollarstore.org/test-bench/qday-watch/">Q-Day Watch page</a>
      as the monthly runs land.</p>
+  <p>The story of that first night on the hardware is told in
+     <a href="press-release-quantum-2026-11-24.html">our quantum press release — an AI agent's first run on real quantum hardware, receipts and all</a>.</p>
 
   <h2>Check it yourself, free</h2>
-  <p>The cheapest verification is your own hands. The <a href="q-day-ledger.html">sales page</a> offers the
+  <p>The cheapest verification is your own hands. The <a href="q-day-ledger.html">Q-Day Ledger™ product page — post-quantum migration editions and pricing</a> offers the
      free sample CBOM pack and a <b>free external TLS scan</b> of your company's public endpoints —
      run by this same prober, reported against the 2030/2035 deadlines, no obligation.
      If you buy, the <b>Fix-It Guarantee</b> applies: any problem you report gets fixed, and v1.0.0
@@ -267,7 +290,7 @@
        <a href="assets/q-day/proof/migration-plan.md">migration plan</a> ·
        <a href="assets/q-day/proof/evidence-pack.zip">evidence pack</a> ·
        <a href="assets/q-day/proof/report.html">report</a>.
-       Product: <a href="q-day-ledger.html">Q-Day Ledger™</a> · Support: <a href="support.html">jdawgsindustries.com/support.html</a><br>
+       Product: <a href="q-day-ledger.html">Q-Day Ledger™</a> · Also from J-Dawgs: <a href="realism-generator/">the Prompt Generator — expert-grade prompts for any AI</a> · Support: <a href="support.html">jdawgsindustries.com/support.html</a><br>
        © 2026 Joshua Dawson / J-Dawgs Industries LLC, Springfield, Missouri. No fancy logos. Just quality products.</p>
   </footer>
 </div>
