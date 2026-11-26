@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:16:07.442Z",
+ "updatedAt": "2026-11-26T01:16:23.893Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 28,
+ "handsPlayed": 29,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 1255,
+     "stack": 1420,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 1265,
+     "stack": 1215,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19615,
+     "stack": 19500,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 10
+   "handsPlayed": 11
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1255,
+   "stack": 1420,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1265,
+   "stack": 1215,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19615,
+   "stack": 19500,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 11,
+  "table": 2,
+  "handNo": 10,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Venus",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 6,
-   "text": "Table 3 · Hand 6 · blinds 25/50 · Razor calls 50, Anvil folds, Bulldog calls 50, Moth calls 50, Anchor calls 25, Ozone checks, [flop: 10♥ A♥ 5♥], Anchor checks, Ozone checks, Razor checks, Bulldog checks, Moth checks, [turn: 10♥ A♥ 5♥ 4♠], Anchor checks, Ozone checks, Razor checks, Bulldog checks, Moth checks, [river: 10♥ A♥ 5♥ 4♠ Q♣], Anchor checks, Ozone checks, Razor checks, Bulldog checks, Moth checks → Moth wins 250 with Pair of Js (J♦ J♥)",
-   "pot": 250
-  },
   {
    "table": 1,
    "handNo": 8,
@@ -552,6 +546,12 @@
    "handNo": 9,
    "text": "Table 3 · Hand 9 · blinds 25/50 · Moth calls 50, Anchor calls 50, Ozone calls 50, Razor calls 50, Anvil calls 25, Bulldog raises to 230, Moth calls 180, Anchor calls 180, Ozone calls 180, Razor calls 180, Anvil calls 180, [flop: A♣ 2♦ 9♥], Anvil checks, Bulldog checks, Moth checks, Anchor checks, Ozone checks, Razor checks, [turn: A♣ 2♦ 9♥ 8♣], Anvil checks, Bulldog checks, Moth checks, Anchor checks, Ozone checks, Razor checks, [river: A♣ 2♦ 9♥ 8♣ 10♥], Anvil checks, Bulldog checks, Moth checks, Anchor raises to 50, Ozone calls 50, Razor folds, Anvil calls 50, Bulldog calls 50, Moth calls 50 → Anchor wins 1630 with Straight, 10 high (7♥ 6♥)",
    "pot": 1630
+  },
+  {
+   "table": 1,
+   "handNo": 11,
+   "text": "Table 1 · Hand 11 · blinds 25/50 · Midas folds, Hammer calls 50, Baseline folds, Quarry calls 25, Shadow checks, [flop: 8♥ 9♥ A♥], Quarry checks, Shadow checks, Hammer checks, [turn: 8♥ 9♥ A♥ 4♦], Quarry checks, Shadow checks, Hammer checks, [river: 8♥ 9♥ A♥ 4♦ 10♦], Quarry checks, Shadow checks, Hammer raises to 65, Quarry folds, Shadow calls 65 → Hammer wins 280 with Straight, J high (J♦ 7♥)",
+   "pot": 280
   }
  ],
  "finishes": [
