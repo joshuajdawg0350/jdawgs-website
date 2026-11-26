@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:12:00.677Z",
+ "updatedAt": "2026-11-26T01:12:17.479Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 17,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -91,7 +91,7 @@
      "name": "Millstone",
      "kind": "house",
      "house": true,
-     "stack": 19825,
+     "stack": 19725,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 19715,
+     "stack": 20315,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Velvet",
      "kind": "house",
      "house": true,
-     "stack": 19750,
+     "stack": 19650,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 19875,
+     "stack": 19775,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Compass",
      "kind": "house",
      "house": true,
-     "stack": 20540,
+     "stack": 20440,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Deuce",
      "kind": "house",
      "house": true,
-     "stack": 19835,
+     "stack": 19735,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -292,7 +292,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19825,
+   "stack": 19725,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19715,
+   "stack": 20315,
    "status": "seated",
    "reentered": false
   },
@@ -346,7 +346,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19750,
+   "stack": 19650,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19875,
+   "stack": 19775,
    "status": "seated",
    "reentered": false
   },
@@ -400,7 +400,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20540,
+   "stack": 20440,
    "status": "seated",
    "reentered": false
   },
@@ -427,7 +427,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19835,
+   "stack": 19735,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Millstone",
+  "toAct": "Razor",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Deuce calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 25, Copper checks, [flop: 3♥ 9♠ 7♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [turn: 3♥ 9♠ 7♣ J♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [river: 3♥ 9♠ 7♣ J♣ 6♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks → Compass wins 300 with Pair of 7s (7♦ K♦)",
-   "pot": 300
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 7,
    "text": "Table 1 · Hand 7 · blinds 25/50 · Dice calls 50, Baseline calls 50, Quarry calls 50, Shadow folds, Pearl calls 50, Midas folds, Hammer raises to 115, Dice calls 65, Baseline calls 65, Quarry calls 65, Pearl calls 65, [flop: 4♥ 4♠ 8♦], Hammer checks, Dice checks, Baseline checks, Quarry checks, Pearl checks, [turn: 4♥ 4♠ 8♦ 10♠], Hammer checks, Dice checks, Baseline checks, Quarry checks, Pearl checks, [river: 4♥ 4♠ 8♦ 10♠ 5♠], Hammer raises to 65, Dice calls 65, Baseline raises to 135, Quarry calls 135, Pearl calls 135, Hammer raises to 225, Dice calls 160, Baseline raises to 325, Quarry calls 190, Pearl calls 190, Hammer raises to 455, Dice calls 230, Baseline raises to 600, Quarry calls 275, Pearl calls 275, Hammer raises to 790, Dice calls 335, Baseline raises to 1000, Quarry calls 400, Pearl calls 400, Hammer raises to 1275, Dice calls 485, Baseline raises to 1580, Quarry calls 580, Pearl calls 580, Hammer raises to 1975, Dice raises to 7130, Baseline raises to 12800, Quarry calls 11220, Pearl calls 11220, Hammer raises to 20170, Dice calls 12820, Baseline calls 6715, Quarry calls 7160, Pearl calls 7250 → Hammer wins 1185 with Two pair, 7s and 4s (7♠ 7♣); Baseline wins 98175 with Two pair, 10s and 8s (10♦ 8♠); Quarry wins 885 with Two pair, 7s and 4s (7♥ 7♦)",
    "pot": 100245
+  },
+  {
+   "table": 2,
+   "handNo": 6,
+   "text": "Table 2 · Hand 6 · blinds 25/50 · Millstone calls 50, Venus calls 50, Velvet calls 50, Copper calls 50, Compass calls 50, Deuce calls 25, Granite checks, [flop: 8♥ 2♦ 7♣], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper checks, Compass checks, [turn: 8♥ 2♦ 7♣ K♣], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper checks, Compass checks, [river: 8♥ 2♦ 7♣ K♣ 2♥], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper raises to 50, Compass calls 50, Deuce calls 50, Granite calls 50, Millstone calls 50, Venus calls 50, Velvet calls 50 → Venus wins 700 with Two pair, Ks and 8s (K♦ 8♣)",
+   "pot": 700
   }
  ],
  "finishes": [
