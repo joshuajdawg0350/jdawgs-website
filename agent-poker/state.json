@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:06:22.457Z",
+ "updatedAt": "2026-11-26T01:06:36.715Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20150,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19900,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20150,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19900,
    "status": "seated",
    "reentered": false
   },
@@ -484,12 +484,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Quarry",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
@@ -510,6 +510,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Razor folds, Anvil folds, Icebox calls 50, Sixgun calls 50, Bonfire calls 50, Ozone calls 50, Slick calls 25, Piston checks, [flop: 9♣ Q♣ 9♦], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [turn: 9♣ Q♣ 9♦ 7♣], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [river: 9♣ Q♣ 9♦ 7♣ 8♦], Slick checks, Piston checks, Icebox checks, Sixgun raises to 180, Bonfire raises to 470, Ozone raises to 1075, Slick calls 1075, Piston calls 1075, Icebox calls 1075, Sixgun raises to 4225, Bonfire raises to 9800, Ozone goes ALL-IN to 19950, Slick calls 18875, Piston calls 18875, Icebox calls 18875, Sixgun calls 15725, Bonfire calls 10150 → Ozone wins 120000 with Straight, 10 high (10♠ 6♦)",
    "pot": 120000
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Quarry calls 50, Shadow folds, Pearl calls 50, Midas folds, Hammer folds, Dice calls 25, Baseline checks, [flop: 2♣ 8♥ A♠], Dice checks, Baseline checks, Quarry checks, Pearl checks, [turn: 2♣ 8♥ A♠ 6♥], Dice checks, Baseline checks, Quarry checks, Pearl checks, [river: 2♣ 8♥ A♠ 6♥ Q♥], Dice checks, Baseline checks, Quarry checks, Pearl checks → Quarry wins 200 with Pair of As (7♥ A♦)",
+   "pot": 200
   }
  ],
  "finishes": [
