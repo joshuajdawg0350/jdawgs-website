@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:07:50.543Z",
+ "updatedAt": "2026-11-26T01:08:05.357Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 8,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -177,7 +177,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20150,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19790,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19785,
+     "stack": 19735,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19850,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 21095,
+     "stack": 21045,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 20150,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19900,
+   "stack": 19850,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19790,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21095,
+   "stack": 21045,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19785,
+   "stack": 19735,
    "status": "seated",
    "reentered": false
   }
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Moth",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -540,6 +532,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Compass calls 50, Deuce calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 25, Copper checks, [flop: 3♥ 9♠ 7♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [turn: 3♥ 9♠ 7♣ J♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks, [river: 3♥ 9♠ 7♣ J♣ 6♣], Velvet checks, Copper checks, Compass checks, Deuce checks, Millstone checks, Venus checks → Compass wins 300 with Pair of 7s (7♦ K♦)",
    "pot": 300
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Moth calls 50, Anchor calls 50, Ozone folds, Razor folds, Anvil calls 50, River Rat calls 25, Bulldog checks, [flop: K♠ 10♣ 5♦], River Rat checks, Bulldog checks, Moth checks, Anchor checks, Anvil checks, [turn: K♠ 10♣ 5♦ 8♠], River Rat checks, Bulldog checks, Moth checks, Anchor checks, Anvil checks, [river: K♠ 10♣ 5♦ 8♠ J♥], River Rat checks, Bulldog checks, Moth checks, Anchor checks, Anvil checks → Anvil wins 250 with Pair of Js (J♦ 4♣)",
+   "pot": 250
   }
  ],
  "finishes": [
