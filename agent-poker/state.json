@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:17:54.802Z",
+ "updatedAt": "2026-11-26T02:18:08.505Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 175,
+ "handsPlayed": 176,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 498598,
+     "stack": 498518,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 21402,
+     "stack": 21482,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 105
+   "handsPlayed": 106
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 21402,
+   "stack": 21482,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 498598,
+   "stack": 498518,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 106,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 96,
-   "text": "Table 1 · Hand 96 · blinds 60/120 · Venus folds → Midas takes 180 (everyone else folded)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 97,
@@ -404,6 +390,12 @@
    "handNo": 105,
    "text": "Table 1 · Hand 105 · blinds 80/160 · Midas calls 80, Venus checks, [flop: 5♠ 6♠ K♠], Venus checks, Midas checks, [turn: 5♠ 6♠ K♠ J♠], Venus checks, Midas checks, [river: 5♠ 6♠ K♠ J♠ 10♥], Venus checks, Midas checks → Midas wins 320 with Pair of Js (A♣ J♥)",
    "pot": 320
+  },
+  {
+   "table": 1,
+   "handNo": 106,
+   "text": "Table 1 · Hand 106 · blinds 80/160 · Venus folds → Midas takes 240 (everyone else folded)",
+   "pot": 240
   }
  ],
  "finishes": [
