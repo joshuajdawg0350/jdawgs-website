@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:10:36.339Z",
+ "updatedAt": "2026-11-26T01:10:50.785Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 13,
+ "handsPlayed": 14,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20390,
+     "stack": 20340,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 19865,
+     "stack": 20065,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19680,
+     "stack": 19630,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20215,
+     "stack": 20165,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20390,
+   "stack": 20340,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19865,
+   "stack": 20065,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19680,
+   "stack": 19630,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20215,
+   "stack": 20165,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 6,
+  "table": 2,
+  "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Granite",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 2,
-   "text": "Table 1 · Hand 2 · blinds 25/50 · Quarry calls 50, Shadow folds, Pearl calls 50, Midas folds, Hammer folds, Dice calls 25, Baseline checks, [flop: 2♣ 8♥ A♠], Dice checks, Baseline checks, Quarry checks, Pearl checks, [turn: 2♣ 8♥ A♠ 6♥], Dice checks, Baseline checks, Quarry checks, Pearl checks, [river: 2♣ 8♥ A♠ 6♥ Q♥], Dice checks, Baseline checks, Quarry checks, Pearl checks → Quarry wins 200 with Pair of As (7♥ A♦)",
-   "pot": 200
-  },
   {
    "table": 2,
    "handNo": 2,
@@ -551,6 +545,12 @@
    "table": 3,
    "handNo": 4,
    "text": "Table 3 · Hand 4 · blinds 25/50 · Anchor calls 50, Ozone calls 50, Razor folds, Anvil folds, River Rat calls 50, Bulldog calls 25, Moth checks, [flop: A♠ 9♣ 4♥], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks, [turn: A♠ 9♣ 4♥ Q♥], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks, [river: A♠ 9♣ 4♥ Q♥ A♦], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks → Ozone wins 250 with Two pair, As and Qs (Q♣ 3♥)",
+   "pot": 250
+  },
+  {
+   "table": 1,
+   "handNo": 6,
+   "text": "Table 1 · Hand 6 · blinds 25/50 · Hammer calls 50, Dice calls 50, Baseline calls 50, Quarry folds, Shadow folds, Pearl calls 25, Midas checks, [flop: 7♣ 6♦ 4♠], Pearl checks, Midas checks, Hammer checks, Dice checks, Baseline checks, [turn: 7♣ 6♦ 4♠ 9♠], Pearl checks, Midas checks, Hammer checks, Dice checks, Baseline checks, [river: 7♣ 6♦ 4♠ 9♠ K♣], Pearl checks, Midas checks, Hammer checks, Dice checks, Baseline checks → Dice wins 250 with Pair of 6s (Q♥ 6♥)",
    "pot": 250
   }
  ],
