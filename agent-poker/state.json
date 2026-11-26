@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:09:33.665Z",
+ "updatedAt": "2026-11-26T01:09:49.455Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 10,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20440,
+     "stack": 20390,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20035,
+     "stack": 19865,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 19680,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19900,
+     "stack": 19875,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 19800,
+     "stack": 20215,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20440,
+   "stack": 20390,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20035,
+   "stack": 19865,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19850,
+   "stack": 19680,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19900,
+   "stack": 19875,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19800,
+   "stack": 20215,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 5,
+  "table": 2,
+  "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Midas",
+  "toAct": "Deuce",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Baseline calls 50, Quarry folds, Shadow folds, Pearl calls 50, Moth calls 50, River Rat calls 50, Midas folds, Hammer calls 25, Dice checks, [flop: J♥ A♥ 7♣], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [turn: J♥ A♥ 7♣ 2♦], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [river: J♥ A♥ 7♣ 2♦ 5♥], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks → Hammer wins 300 with Two pair, Js and 5s (J♦ 5♦)",
-   "pot": 300
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -552,6 +546,12 @@
    "handNo": 4,
    "text": "Table 1 · Hand 4 · blinds 25/50 · Pearl calls 50, Midas folds, Hammer calls 50, Dice calls 50, Baseline folds, Quarry folds, Shadow checks, [flop: 5♠ 8♣ K♣], Shadow checks, Pearl checks, Hammer checks, Dice checks, [turn: 5♠ 8♣ K♣ 4♥], Shadow checks, Pearl checks, Hammer checks, Dice checks, [river: 5♠ 8♣ K♣ 4♥ 3♣], Shadow checks, Pearl checks, Hammer raises to 65, Dice calls 65, Shadow folds, Pearl folds → Hammer wins 355 with Two pair, 8s and 5s (5♣ 8♠)",
    "pot": 355
+  },
+  {
+   "table": 1,
+   "handNo": 5,
+   "text": "Table 1 · Hand 5 · blinds 25/50 · Midas folds, Hammer calls 50, Dice calls 50, Baseline calls 50, Quarry folds, Shadow folds, Pearl checks, [flop: 4♣ K♥ 8♥], Pearl checks, Hammer checks, Dice checks, Baseline raises to 60, Pearl calls 60, Hammer folds, Dice calls 60, [turn: 4♣ K♥ 8♥ 3♣], Pearl checks, Dice checks, Baseline raises to 60, Pearl calls 60, Dice calls 60, [river: 4♣ K♥ 8♥ 3♣ J♥], Pearl checks, Dice checks, Baseline checks → Pearl wins 585 with Pair of 8s (8♦ Q♠)",
+   "pot": 585
   }
  ],
  "finishes": [
