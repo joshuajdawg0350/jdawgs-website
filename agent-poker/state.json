@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:10:04.382Z",
+ "updatedAt": "2026-11-26T01:10:19.970Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 12,
+ "handsPlayed": 13,
  "tables": [
   {
    "id": 1,
@@ -145,7 +145,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 119890,
+     "stack": 120090,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19740,
+     "stack": 19690,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19735,
+     "stack": 19685,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19850,
+     "stack": 19800,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 21045,
+     "stack": 20995,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 119890,
+   "stack": 120090,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19850,
+   "stack": 19800,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19740,
+   "stack": 19690,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21045,
+   "stack": 20995,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19735,
+   "stack": 19685,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 4,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Anchor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 1,
-   "text": "Table 3 · Hand 1 · blinds 25/50 · Razor folds, Anvil folds, Icebox calls 50, Sixgun calls 50, Bonfire calls 50, Ozone calls 50, Slick calls 25, Piston checks, [flop: 9♣ Q♣ 9♦], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [turn: 9♣ Q♣ 9♦ 7♣], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [river: 9♣ Q♣ 9♦ 7♣ 8♦], Slick checks, Piston checks, Icebox checks, Sixgun raises to 180, Bonfire raises to 470, Ozone raises to 1075, Slick calls 1075, Piston calls 1075, Icebox calls 1075, Sixgun raises to 4225, Bonfire raises to 9800, Ozone goes ALL-IN to 19950, Slick calls 18875, Piston calls 18875, Icebox calls 18875, Sixgun calls 15725, Bonfire calls 10150 → Ozone wins 120000 with Straight, 10 high (10♠ 6♦)",
-   "pot": 120000
-  },
   {
    "table": 1,
    "handNo": 2,
@@ -552,6 +538,12 @@
    "handNo": 4,
    "text": "Table 2 · Hand 4 · blinds 25/50 · Deuce calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 50, Copper folds, Compass raises to 105, Deuce calls 55, Millstone folds, Venus calls 55, Velvet calls 55, [flop: 9♣ K♠ 5♣], Compass checks, Deuce checks, Venus checks, Velvet checks, [turn: 9♣ K♠ 5♣ 2♣], Compass checks, Deuce checks, Venus checks, Velvet checks, [river: 9♣ K♠ 5♣ 2♣ 8♣], Compass raises to 55, Deuce calls 55, Venus calls 55, Velvet calls 55 → Compass wins 715 with Flush, J high (J♥ J♣)",
    "pot": 715
+  },
+  {
+   "table": 3,
+   "handNo": 4,
+   "text": "Table 3 · Hand 4 · blinds 25/50 · Anchor calls 50, Ozone calls 50, Razor folds, Anvil folds, River Rat calls 50, Bulldog calls 25, Moth checks, [flop: A♠ 9♣ 4♥], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks, [turn: A♠ 9♣ 4♥ Q♥], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks, [river: A♠ 9♣ 4♥ Q♥ A♦], Bulldog checks, Moth checks, Anchor checks, Ozone checks, River Rat checks → Ozone wins 250 with Two pair, As and Qs (Q♣ 3♥)",
+   "pot": 250
   }
  ],
  "finishes": [
