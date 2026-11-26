@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:13:41.108Z",
+ "updatedAt": "2026-11-26T02:13:56.721Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 166,
+ "handsPlayed": 167,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496854,
+     "stack": 496602,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23146,
+     "stack": 23398,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 96
+   "handsPlayed": 97
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23146,
+   "stack": 23398,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496854,
+   "stack": 496602,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 97,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 87,
-   "text": "Table 1 · Hand 87 · blinds 60/120 · Midas folds → Venus takes 180 (everyone else folded)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 88,
@@ -404,6 +390,12 @@
    "handNo": 96,
    "text": "Table 1 · Hand 96 · blinds 60/120 · Venus folds → Midas takes 180 (everyone else folded)",
    "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 97,
+   "text": "Table 1 · Hand 97 · blinds 60/120 · Midas calls 60, Venus checks, [flop: J♦ 9♥ 4♣], Venus checks, Midas checks, [turn: J♦ 9♥ 4♣ Q♣], Venus checks, Midas checks, [river: J♦ 9♥ 4♣ Q♣ 10♦], Venus checks, Midas raises to 132, Venus calls 132 → Midas wins 504 with Straight, K high (8♦ K♥)",
+   "pot": 504
   }
  ],
  "finishes": [
