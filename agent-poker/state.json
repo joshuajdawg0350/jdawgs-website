@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:52:04.624Z",
+ "updatedAt": "2026-11-26T01:52:35.690Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   200
  ],
  "level": 7,
- "handsPlayed": 122,
+ "handsPlayed": 123,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 59084,
+     "stack": 62040,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 296845,
+     "stack": 273105,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22702,
+     "stack": 22622,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 10392,
+     "stack": 31256,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 52
+   "handsPlayed": 53
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22702,
+   "stack": 22622,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 59084,
+   "stack": 62040,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 296845,
+   "stack": 273105,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 10392,
+   "stack": 31256,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 53,
-  "stage": "preflop",
-  "board": [],
-  "pot": 120,
-  "toAct": "Moth",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 43,
-   "text": "Table 1 · Hand 43 · blinds 40/80 · Ozone calls 80, Baseline calls 80, Venus raises to 160, Anchor calls 160, Midas folds, Granite calls 160, Shadow calls 160, Moth calls 120, Hammer folds, Ozone calls 80, Baseline calls 80, [flop: 2♥ 2♠ J♦], Moth checks, Ozone checks, Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, [turn: 2♥ 2♠ J♦ Q♥], Moth checks, Ozone checks, Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, [river: 2♥ 2♠ J♦ Q♥ 10♦], Moth checks, Ozone raises to 105, Baseline calls 105, Venus raises to 240, Anchor calls 240, Granite raises to 1375, Shadow calls 1375, Moth folds, Ozone raises to 2850, Baseline calls 2745, Venus raises to 4740, Anchor calls 4500, Granite raises to 16220, Shadow calls 14845, Ozone raises to 31145, Baseline calls 28295, Venus raises to 50250, Anchor calls 45510, Granite calls 3197, Shadow calls 81, Ozone raises to 75085, Baseline calls 43940, Venus calls 16281, Anchor calls 10309 → Baseline wins 17108 with Two pair, Js and 2s (J♣ A♣); Venus wins 297070 with Full house, 10s full of 2s (10♥ 10♣)",
-   "pot": 314178
-  },
   {
    "table": 1,
    "handNo": 44,
@@ -404,6 +390,12 @@
    "handNo": 52,
    "text": "Table 1 · Hand 52 · blinds 40/80 · Midas folds, Moth calls 80, Hammer calls 80, Ozone calls 80, Baseline folds, Venus checks, [flop: 4♣ 4♦ 7♠], Venus checks, Moth checks, Hammer checks, Ozone raises to 105, Venus calls 105, Moth calls 105, Hammer calls 105, [turn: 4♣ 4♦ 7♠ 2♣], Venus checks, Moth checks, Hammer checks, Ozone raises to 105, Venus calls 105, Moth calls 105, Hammer calls 105, [river: 4♣ 4♦ 7♠ 2♣ 10♥], Venus checks, Moth checks, Hammer checks, Ozone raises to 105, Venus calls 105, Moth calls 105, Hammer calls 105 → Ozone wins 1620 with Three of a kind, 4s (4♠ 9♣)",
    "pot": 1620
+  },
+  {
+   "table": 1,
+   "handNo": 53,
+   "text": "Table 1 · Hand 53 · blinds 40/80 · Moth calls 80, Hammer folds, Ozone folds, Baseline calls 80, Venus calls 40, Midas checks, [flop: 4♥ A♦ 5♥], Venus checks, Midas checks, Moth checks, Baseline checks, [turn: 4♥ A♦ 5♥ K♦], Venus checks, Midas checks, Moth checks, Baseline checks, [river: 4♥ A♦ 5♥ K♦ 6♦], Venus checks, Midas checks, Moth raises to 80, Baseline raises to 320, Venus calls 320, Midas folds, Moth raises to 590, Baseline raises to 1520, Venus calls 1200, Moth raises to 2560, Baseline raises to 6110, Venus calls 4590, Moth raises to 10085, Baseline raises to 23660, Venus calls 17550, Moth calls 227 → Baseline wins 26696 with Flush, A high (7♦ 10♦); Moth wins 31256 with Flush, A high (Q♦ 3♦)",
+   "pot": 57952
   }
  ],
  "finishes": [
