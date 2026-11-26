@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:18:46.735Z",
+ "updatedAt": "2026-11-26T01:19:04.278Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 36,
+ "handsPlayed": 37,
  "tables": [
   {
    "id": 1,
@@ -153,7 +153,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 120170,
+     "stack": 120490,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Razor",
      "kind": "house",
      "house": true,
-     "stack": 19630,
+     "stack": 19580,
      "status": "seated",
      "reentered": false
     },
@@ -185,7 +185,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 26252,
+     "stack": 26202,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 25685,
+     "stack": 25575,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19605,
+     "stack": 19495,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 11
+   "handsPlayed": 12
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 120170,
+   "stack": 120490,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19630,
+   "stack": 19580,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 26252,
+   "stack": 26202,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19605,
+   "stack": 19495,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 25685,
+   "stack": 25575,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 12,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Anvil",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 9,
-   "text": "Table 2 · Hand 9 · blinds 25/50 · Compass calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 25, Copper checks, [flop: J♥ 8♦ 8♣], Velvet checks, Copper checks, Compass raises to 55, Millstone calls 55, Venus calls 55, Velvet calls 55, Copper calls 55, [turn: J♥ 8♦ 8♣ J♣], Velvet checks, Copper checks, Compass raises to 55, Millstone calls 55, Venus raises to 125, Velvet calls 125, Copper calls 125, Compass raises to 730, Millstone calls 675, Venus raises to 1505, Velvet calls 1380, Copper calls 1380, Compass raises to 5405, Millstone calls 4675, Venus raises to 10395, Velvet calls 8890, Copper calls 8890, Compass goes ALL-IN to 19630, Millstone calls 13310, Venus goes ALL-IN to 20135, Velvet calls 8170, Copper calls 9740, [river: J♥ 8♦ 8♣ J♣ Q♥], Copper raises to 50 → Venus wins 97705 with Full house, Js full of Qs (Q♣ J♦); Copper wins 50 with Two pair, Js and 8s (10♥ 6♥)",
-   "pot": 97755
-  },
   {
    "table": 3,
    "handNo": 9,
@@ -552,6 +538,12 @@
    "handNo": 12,
    "text": "Table 2 · Hand 12 · blinds 25/50 · Anchor calls 50, Granite calls 50, Venus folds, Copper checks, [flop: A♦ K♣ 8♠], Copper checks, Anchor checks, Granite checks, [turn: A♦ K♣ 8♠ K♦], Copper checks, Anchor checks, Granite checks, [river: A♦ K♣ 8♠ K♦ 10♠], Copper checks, Anchor raises to 50, Granite calls 50, Copper calls 50 → Anchor wins 325 with Full house, Ks full of 10s (10♦ K♠)",
    "pot": 325
+  },
+  {
+   "table": 3,
+   "handNo": 12,
+   "text": "Table 3 · Hand 12 · blinds 25/50 · Anvil calls 50, Bulldog calls 50, Moth calls 50, Ozone calls 25, Razor checks, [flop: 9♠ 10♦ 2♥], Ozone checks, Razor checks, Anvil checks, Bulldog checks, Moth checks, [turn: 9♠ 10♦ 2♥ 5♠], Ozone checks, Razor checks, Anvil checks, Bulldog checks, Moth checks, [river: 9♠ 10♦ 2♥ 5♠ 3♣], Ozone checks, Razor checks, Anvil checks, Bulldog raises to 60, Moth calls 60, Ozone calls 60, Razor folds, Anvil folds → Ozone wins 430 with Pair of 9s (K♣ 9♥)",
+   "pot": 430
   }
  ],
  "finishes": [
