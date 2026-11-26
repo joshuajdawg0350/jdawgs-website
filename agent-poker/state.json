@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:07:03.873Z",
+ "updatedAt": "2026-11-26T02:07:17.133Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   240
  ],
  "level": 8,
- "handsPlayed": 153,
+ "handsPlayed": 154,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496307,
+     "stack": 496427,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23693,
+     "stack": 23573,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 83
+   "handsPlayed": 84
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23693,
+   "stack": 23573,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496307,
+   "stack": 496427,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 84,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 74,
-   "text": "Table 1 · Hand 74 · blinds 50/100 · Midas folds, Ozone calls 100, Baseline calls 50, Venus raises to 200, Ozone raises to 330, Baseline calls 230, Venus raises to 495, Ozone calls 165, Baseline calls 165, [flop: A♣ K♦ 10♠], Baseline checks, Venus checks, Ozone checks, [turn: A♣ K♦ 10♠ 6♦], Baseline checks, Venus raises to 100, Ozone calls 100, Baseline folds, [river: A♣ K♦ 10♠ 6♦ 8♥], Venus raises to 100, Ozone calls 100 → Venus wins 1885 with Three of a kind, Ks (K♥ K♣)",
-   "pot": 1885
-  },
   {
    "table": 1,
    "handNo": 75,
@@ -404,6 +390,12 @@
    "handNo": 83,
    "text": "Table 1 · Hand 83 · blinds 60/120 · Midas calls 60, Venus checks, [flop: 8♠ 9♣ 5♣], Venus checks, Midas checks, [turn: 8♠ 9♣ 5♣ 6♣], Venus checks, Midas checks, [river: 8♠ 9♣ 5♣ 6♣ 7♦], Venus raises to 120, Midas calls 120 → Venus wins 240 with Straight, 9 high (6♥ A♥); Midas wins 240 with Straight, 9 high (A♠ 5♠)",
    "pot": 480
+  },
+  {
+   "table": 1,
+   "handNo": 84,
+   "text": "Table 1 · Hand 84 · blinds 60/120 · Venus calls 60, Midas checks, [flop: 6♣ 3♣ 7♠], Midas checks, Venus checks, [turn: 6♣ 3♣ 7♠ 3♠], Midas checks, Venus checks, [river: 6♣ 3♣ 7♠ 3♠ 7♥], Midas checks, Venus checks → Venus wins 240 with Two pair, 7s and 6s (Q♥ 6♠)",
+   "pot": 240
   }
  ],
  "finishes": [
