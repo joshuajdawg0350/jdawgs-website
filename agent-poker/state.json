@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:43:25.337Z",
+ "updatedAt": "2026-11-26T01:43:42.010Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 104,
+ "handsPlayed": 105,
  "tables": [
   {
    "id": 1,
@@ -83,7 +83,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19615,
+     "stack": 19585,
      "status": "seated",
      "reentered": false
     },
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 96632,
+     "stack": 67406,
      "status": "seated",
      "reentered": false
     },
@@ -115,8 +115,8 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 3350,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -131,12 +131,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29226,
+     "stack": 61832,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 34
+   "handsPlayed": 35
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19615,
+   "stack": 19585,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 96632,
+   "stack": 67406,
    "status": "seated",
    "reentered": false
   },
@@ -373,8 +373,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3350,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29226,
+   "stack": 61832,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 35,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Copper",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 33,
-   "text": "Table 1 · Hand 33 · blinds 30/60 · Hammer calls 60, Baseline calls 30, Midas checks, [flop: 5♣ K♥ 3♠], Baseline checks, Midas raises to 99, Hammer folds, Baseline calls 99, [turn: 5♣ K♥ 3♠ 8♥], Baseline checks, Midas raises to 208, Baseline calls 208, [river: 5♣ K♥ 3♠ 8♥ A♣], Baseline checks, Midas raises to 437, Baseline calls 437 → Baseline wins 1668 with Pair of Ks (Q♥ K♦)",
-   "pot": 1668
-  },
   {
    "table": 2,
    "handNo": 32,
@@ -552,6 +546,12 @@
    "handNo": 36,
    "text": "Table 1 · Hand 36 · blinds 30/60 · Hammer calls 60, Baseline raises to 140, Midas calls 80, Hammer calls 80, [flop: 9♠ Q♦ J♠], Baseline checks, Midas checks, Hammer checks, [turn: 9♠ Q♦ J♠ Q♥], Baseline checks, Midas checks, Hammer checks, [river: 9♠ Q♦ J♠ Q♥ 2♥], Baseline checks, Midas checks, Hammer checks → Midas wins 420 with Two pair, Qs and 9s (9♥ K♥)",
    "pot": 420
+  },
+  {
+   "table": 2,
+   "handNo": 35,
+   "text": "Table 2 · Hand 35 · blinds 30/60 · Copper calls 60, Anchor calls 60, Granite folds, Venus checks, [flop: 7♠ 2♦ 8♦], Venus checks, Copper checks, Anchor checks, [turn: 7♠ 2♦ 8♦ 7♣], Venus raises to 60, Copper calls 60, Anchor calls 60, [river: 7♠ 2♦ 8♦ 7♣ 8♥], Venus raises to 60, Copper calls 60, Anchor raises to 125, Venus raises to 210, Copper calls 150, Anchor raises to 305, Venus raises to 425, Copper calls 215, Anchor raises to 560, Venus raises to 735, Copper calls 310, Anchor raises to 930, Venus raises to 1180, Copper calls 445, Anchor raises to 1460, Venus raises to 1820, Copper calls 640, Anchor raises to 2225, Venus raises to 2745, Copper calls 925, Anchor raises to 3325, Venus raises to 4065, Copper calls 485, Anchor raises to 4895, Venus raises to 5955, Anchor raises to 7140, Venus raises to 8655, Anchor raises to 10350, Venus raises to 12520, Anchor raises to 14950, Venus raises to 18060, Anchor raises to 21545, Venus raises to 26005, Anchor goes ALL-IN to 29106, Venus raises to 34816 → Venus wins 5710 with Full house, 7s full of 8s (7♦ 5♣); Anchor wins 61832 with Full house, 8s full of 7s (J♥ 8♠)",
+   "pot": 67542
   }
  ],
  "finishes": [
@@ -681,6 +681,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 27,
+   "provisional": true
+  },
+  {
+   "name": "Copper",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 35,
    "provisional": true
   }
  ],
