@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:43:42.010Z",
+ "updatedAt": "2026-11-26T01:44:00.571Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,33 +12,17 @@
   160
  ],
  "level": 6,
- "handsPlayed": 105,
+ "handsPlayed": 106,
  "tables": [
   {
    "id": 1,
    "seats": [
     {
-     "name": "Midas",
+     "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20932,
+     "stack": 198982,
      "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Hammer",
-     "kind": "house",
-     "house": true,
-     "stack": 2628,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Dice",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
      "reentered": false
     },
     {
@@ -50,81 +34,11 @@
      "reentered": false
     },
     {
-     "name": "Quarry",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Pearl",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Deuce",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    }
-   ],
-   "handsPlayed": 36
-  },
-  {
-   "id": 2,
-   "seats": [
-    {
-     "name": "Granite",
-     "kind": "house",
-     "house": true,
-     "stack": 19585,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Millstone",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
      "name": "Venus",
      "kind": "house",
      "house": true,
      "stack": 67406,
      "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Velvet",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Copper",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Compass",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
      "reentered": false
     },
     {
@@ -134,98 +48,20 @@
      "stack": 61832,
      "status": "seated",
      "reentered": false
-    }
-   ],
-   "handsPlayed": 35
-  },
-  {
-   "id": 3,
-   "seats": [
+    },
     {
-     "name": "Ozone",
+     "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 198862,
+     "stack": 20932,
      "status": "seated",
      "reentered": false
     },
     {
-     "name": "Slick",
+     "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Piston",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Razor",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Anvil",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Icebox",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Sixgun",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Bonfire",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "River Rat",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Bulldog",
-     "kind": "house",
-     "house": true,
-     "stack": 0,
-     "status": "out",
-     "reentered": false
-    },
-    {
-     "name": "Moth",
-     "kind": "house",
-     "house": true,
-     "stack": 12730,
+     "stack": 19585,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +69,28 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 17956,
+     "stack": 17896,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Moth",
+     "kind": "house",
+     "house": true,
+     "stack": 12670,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Hammer",
+     "kind": "house",
+     "house": true,
+     "stack": 2628,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 34
+   "handsPlayed": 36
   }
  ],
  "seats": [
@@ -264,7 +116,7 @@
    "name": "Granite",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 19585,
    "status": "seated",
    "reentered": false
@@ -273,8 +125,8 @@
    "name": "Ozone",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 198862,
+   "table": 1,
+   "stack": 198982,
    "status": "seated",
    "reentered": false
   },
@@ -318,7 +170,7 @@
    "name": "Venus",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 67406,
    "status": "seated",
    "reentered": false
@@ -363,8 +215,8 @@
    "name": "Shadow",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 17956,
+   "table": 1,
+   "stack": 17896,
    "status": "seated",
    "reentered": false
   },
@@ -417,8 +269,8 @@
    "name": "Moth",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 12730,
+   "table": 1,
+   "stack": 12670,
    "status": "seated",
    "reentered": false
   },
@@ -453,7 +305,7 @@
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 1,
    "stack": 61832,
    "status": "seated",
    "reentered": false
@@ -483,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 35,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Ozone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 32,
-   "text": "Table 2 · Hand 32 · blinds 30/60 · Anchor calls 60, Granite folds, Venus calls 30, Copper checks, [flop: 6♥ 6♠ 10♥], Venus checks, Copper checks, Anchor checks, [turn: 6♥ 6♠ 10♥ 5♠], Venus checks, Copper checks, Anchor checks, [river: 6♥ 6♠ 10♥ 5♠ 8♦], Venus checks, Copper checks, Anchor checks → Copper wins 180 with Two pair, 6s and 5s (Q♠ 5♥)",
-   "pot": 180
-  },
   {
    "table": 3,
    "handNo": 32,
@@ -552,6 +390,12 @@
    "handNo": 35,
    "text": "Table 2 · Hand 35 · blinds 30/60 · Copper calls 60, Anchor calls 60, Granite folds, Venus checks, [flop: 7♠ 2♦ 8♦], Venus checks, Copper checks, Anchor checks, [turn: 7♠ 2♦ 8♦ 7♣], Venus raises to 60, Copper calls 60, Anchor calls 60, [river: 7♠ 2♦ 8♦ 7♣ 8♥], Venus raises to 60, Copper calls 60, Anchor raises to 125, Venus raises to 210, Copper calls 150, Anchor raises to 305, Venus raises to 425, Copper calls 215, Anchor raises to 560, Venus raises to 735, Copper calls 310, Anchor raises to 930, Venus raises to 1180, Copper calls 445, Anchor raises to 1460, Venus raises to 1820, Copper calls 640, Anchor raises to 2225, Venus raises to 2745, Copper calls 925, Anchor raises to 3325, Venus raises to 4065, Copper calls 485, Anchor raises to 4895, Venus raises to 5955, Anchor raises to 7140, Venus raises to 8655, Anchor raises to 10350, Venus raises to 12520, Anchor raises to 14950, Venus raises to 18060, Anchor raises to 21545, Venus raises to 26005, Anchor goes ALL-IN to 29106, Venus raises to 34816 → Venus wins 5710 with Full house, 7s full of 8s (7♦ 5♣); Anchor wins 61832 with Full house, 8s full of 7s (J♥ 8♠)",
    "pot": 67542
+  },
+  {
+   "table": 3,
+   "handNo": 35,
+   "text": "Table 3 · Hand 35 · blinds 30/60 · Ozone calls 60, Moth calls 30, Shadow checks, [flop: 3♠ 5♣ 10♣], Moth checks, Shadow checks, Ozone checks, [turn: 3♠ 5♣ 10♣ 10♠], Moth checks, Shadow checks, Ozone checks, [river: 3♠ 5♣ 10♣ 10♠ 6♠], Moth checks, Shadow checks, Ozone checks → Ozone wins 180 with Two pair, 10s and 3s (K♦ 3♦)",
+   "pot": 180
   }
  ],
  "finishes": [
