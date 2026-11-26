@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:26:22.179Z",
+ "updatedAt": "2026-11-26T01:26:37.552Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 55,
+ "handsPlayed": 56,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19960,
+     "stack": 20277,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 1375,
+     "stack": 1229,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 119450,
+     "stack": 119304,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 19050,
+     "stack": 19025,
      "status": "seated",
      "reentered": false
     },
@@ -82,7 +82,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 19
+   "handsPlayed": 20
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19960,
+   "stack": 20277,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 1375,
+   "stack": 1229,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 119450,
+   "stack": 119304,
    "status": "seated",
    "reentered": false
   },
@@ -364,7 +364,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19050,
+   "stack": 19025,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 20,
+  "table": 2,
+  "handNo": 19,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Hammer",
+  "toAct": "Copper",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 15,
-   "text": "Table 3 · Hand 15 · blinds 25/50 · Ozone calls 50, Razor calls 50, Anvil calls 50, Bulldog folds, Moth checks, [flop: 6♥ 2♥ 3♥], Moth checks, Ozone checks, Razor checks, Anvil raises to 60, Moth calls 60, Ozone calls 60, Razor folds, [turn: 6♥ 2♥ 3♥ 3♦], Moth checks, Ozone checks, Anvil checks, [river: 6♥ 2♥ 3♥ 3♦ 8♣], Moth checks, Ozone checks, Anvil checks → Ozone wins 405 with Two pair, 6s and 3s (6♠ Q♦)",
-   "pot": 405
-  },
   {
    "table": 1,
    "handNo": 17,
@@ -552,6 +546,12 @@
    "handNo": 18,
    "text": "Table 3 · Hand 18 · blinds 25/50 · Bulldog calls 50, Moth calls 50, Ozone raises to 115, Razor calls 90, Anvil calls 65, Bulldog calls 65, Moth calls 65, [flop: 10♦ 8♠ A♣], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [turn: 10♦ 8♠ A♣ 2♠], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks, [river: 10♦ 8♠ A♣ 2♠ J♣], Razor checks, Anvil checks, Bulldog checks, Moth checks, Ozone checks → Anvil wins 575 with Pair of As (K♥ A♠)",
    "pot": 575
+  },
+  {
+   "table": 1,
+   "handNo": 20,
+   "text": "Table 1 · Hand 20 · blinds 25/50 · Hammer calls 50, Baseline calls 50, Shadow folds, Midas checks, [flop: 9♦ K♥ 7♦], Midas checks, Hammer checks, Baseline checks, [turn: 9♦ K♥ 7♦ Q♠], Midas checks, Hammer checks, Baseline checks, [river: 9♦ K♥ 7♦ Q♠ 9♠], Midas raises to 96, Hammer calls 96, Baseline calls 96 → Midas wins 463 with Three of a kind, 9s (9♣ J♠)",
+   "pot": 463
   }
  ],
  "finishes": [
