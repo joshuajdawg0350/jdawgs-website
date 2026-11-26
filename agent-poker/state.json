@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:11:06.842Z",
+ "updatedAt": "2026-11-26T01:11:28.613Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 15,
+ "handsPlayed": 16,
  "tables": [
   {
    "id": 1,
@@ -169,7 +169,7 @@
      "name": "Razor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +177,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 20150,
+     "stack": 26747,
      "status": "seated",
      "reentered": false
     },
@@ -209,15 +209,15 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 19690,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 19685,
+     "stack": 26280,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19800,
+     "stack": 19750,
      "status": "seated",
      "reentered": false
     },
@@ -233,12 +233,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 20995,
+     "stack": 27593,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20150,
+   "stack": 26747,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19800,
+   "stack": 19750,
    "status": "seated",
    "reentered": false
   },
@@ -445,8 +445,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19690,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20995,
+   "stack": 27593,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19685,
+   "stack": 26280,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Ozone",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 2,
-   "text": "Table 3 · Hand 2 · blinds 25/50 · Bulldog calls 50, Moth calls 50, Anchor calls 50, Ozone calls 50, Razor folds, Anvil calls 25, River Rat checks, [flop: 2♣ 8♠ 6♣], Anvil checks, River Rat checks, Bulldog checks, Moth checks, Anchor checks, Ozone checks, [turn: 2♣ 8♠ 6♣ 4♣], Anvil checks, River Rat checks, Bulldog checks, Moth checks, Anchor checks, Ozone raises to 60, Anvil folds, River Rat calls 60, Bulldog folds, Moth folds, Anchor calls 60, [river: 2♣ 8♠ 6♣ 4♣ 5♦], River Rat checks, Anchor raises to 50, Ozone folds, River Rat calls 50 → Anchor wins 580 with Straight, 8 high (7♠ 4♥)",
-   "pot": 580
-  },
   {
    "table": 1,
    "handNo": 3,
@@ -552,6 +538,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Granite calls 50, Millstone folds, Venus folds, Velvet calls 50, Copper folds, Compass calls 25, Deuce checks, [flop: 9♠ 10♥ 2♥], Compass checks, Deuce checks, Granite checks, Velvet checks, [turn: 9♠ 10♥ 2♥ 9♣], Compass checks, Deuce checks, Granite checks, Velvet checks, [river: 9♠ 10♥ 2♥ 9♣ A♦], Compass checks, Deuce checks, Granite checks, Velvet checks → Deuce wins 200 with Two pair, As and 9s (A♠ J♥)",
    "pot": 200
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Ozone folds, Razor calls 50, Anvil calls 50, River Rat calls 50, Bulldog calls 50, Moth calls 25, Anchor checks, [flop: 9♣ Q♠ 4♥], Moth checks, Anchor checks, Razor checks, Anvil checks, River Rat checks, Bulldog checks, [turn: 9♣ Q♠ 4♥ J♦], Moth checks, Anchor checks, Razor checks, Anvil checks, River Rat checks, Bulldog checks, [river: 9♣ Q♠ 4♥ J♦ 8♦], Moth checks, Anchor raises to 50, Razor folds, Anvil raises to 260, River Rat calls 260, Bulldog raises to 780, Moth folds, Anchor raises to 1360, Anvil raises to 3135, River Rat calls 2875, Bulldog raises to 8360, Anchor raises to 14210, Anvil goes ALL-IN to 20100, River Rat calls 16505, Bulldog calls 11275, Anchor goes ALL-IN to 20945 → Anvil wins 26747 with Straight, Q high (2♦ 10♦); Bulldog wins 26280 with Straight, Q high (10♠ 7♣); Anchor wins 27593 with Straight, Q high (J♥ 10♣)",
+   "pot": 80620
   }
  ],
  "finishes": [
@@ -593,6 +585,14 @@
    "kind": "house",
    "table": 3,
    "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "River Rat",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 5,
    "provisional": true
   }
  ],
