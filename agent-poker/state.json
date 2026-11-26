@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:44:45.777Z",
+ "updatedAt": "2026-11-26T01:45:00.506Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 107,
+ "handsPlayed": 108,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 198982,
+     "stack": 198727,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 117944,
+     "stack": 117759,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 67281,
+     "stack": 67251,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 61707,
+     "stack": 61452,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 20210,
+     "stack": 20025,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 12545,
+     "stack": 12290,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 2628,
+     "stack": 3793,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 37
+   "handsPlayed": 38
   }
  ],
  "seats": [
@@ -108,7 +108,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 2628,
+   "stack": 3793,
    "status": "seated",
    "reentered": false
   },
@@ -117,7 +117,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20210,
+   "stack": 20025,
    "status": "seated",
    "reentered": false
   },
@@ -126,7 +126,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 198982,
+   "stack": 198727,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 117944,
+   "stack": 117759,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 67281,
+   "stack": 67251,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12545,
+   "stack": 12290,
    "status": "seated",
    "reentered": false
   },
@@ -306,7 +306,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 61707,
+   "stack": 61452,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 38,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 34,
-   "text": "Table 1 · Hand 34 · blinds 30/60 · Baseline folds, Midas folds → Hammer takes 90 (everyone else folded)",
-   "pot": 90
-  },
   {
    "table": 2,
    "handNo": 33,
@@ -404,6 +390,12 @@
    "handNo": 37,
    "text": "Table 1 · Hand 37 · blinds 30/60 · Anchor calls 60, Midas folds, Granite calls 60, Shadow calls 60, Moth calls 60, Hammer folds, Ozone folds, Baseline calls 30, Venus checks, [flop: Q♦ 7♦ Q♥], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, Moth checks, [turn: Q♦ 7♦ Q♥ 7♠], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow raises to 65, Moth calls 65, Baseline calls 65, Venus calls 65, Anchor calls 65, Granite calls 65, [river: Q♦ 7♦ Q♥ 7♠ 6♣], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, Moth checks → Granite wins 750 with Two pair, Qs and 7s (2♥ A♦)",
    "pot": 750
+  },
+  {
+   "table": 1,
+   "handNo": 38,
+   "text": "Table 1 · Hand 38 · blinds 30/60 · Midas folds, Granite calls 60, Shadow folds, Moth calls 60, Hammer raises to 185, Ozone calls 185, Baseline calls 185, Venus folds, Anchor calls 125, Granite calls 125, Moth calls 125, [flop: A♦ 4♦ 8♣], Anchor checks, Granite checks, Moth checks, Hammer checks, Ozone raises to 70, Baseline folds, Anchor calls 70, Granite folds, Moth calls 70, Hammer calls 70, [turn: A♦ 4♦ 8♣ 6♣], Anchor checks, Moth checks, Hammer checks, Ozone checks, [river: A♦ 4♦ 8♣ 6♣ 3♣], Anchor checks, Moth checks, Hammer checks, Ozone checks → Hammer wins 1420 with Pair of Ks (K♠ K♣)",
+   "pot": 1420
   }
  ],
  "finishes": [
