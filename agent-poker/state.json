@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:15:06.054Z",
+ "updatedAt": "2026-11-26T02:15:22.933Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 169,
+ "handsPlayed": 170,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496602,
+     "stack": 499880,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23398,
+     "stack": 20120,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 99
+   "handsPlayed": 100
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23398,
+   "stack": 20120,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496602,
+   "stack": 499880,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 100,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 90,
-   "text": "Table 1 · Hand 90 · blinds 60/120 · Venus folds → Midas takes 180 (everyone else folded)",
-   "pot": 180
-  },
   {
    "table": 1,
    "handNo": 91,
@@ -404,6 +390,12 @@
    "handNo": 99,
    "text": "Table 1 · Hand 99 · blinds 60/120 · Midas calls 60, Venus checks, [flop: K♥ 7♣ 10♥], Venus checks, Midas raises to 132, Venus folds → Midas takes 372 (everyone else folded)",
    "pot": 372
+  },
+  {
+   "table": 1,
+   "handNo": 100,
+   "text": "Table 1 · Hand 100 · blinds 60/120 · Venus calls 60, Midas checks, [flop: 10♣ Q♠ K♠], Midas checks, Venus checks, [turn: 10♣ Q♠ K♠ 10♥], Midas raises to 132, Venus calls 132, [river: 10♣ Q♠ K♠ 10♥ K♦], Midas raises to 277, Venus raises to 632, Midas raises to 1681, Venus raises to 3026, Midas calls 1345 → Venus wins 6556 with Full house, Ks full of 10s (7♠ K♥)",
+   "pot": 6556
   }
  ],
  "finishes": [
