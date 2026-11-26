@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:11:44.598Z",
+ "updatedAt": "2026-11-26T01:12:00.677Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 16,
+ "handsPlayed": 17,
  "tables": [
   {
    "id": 1,
@@ -21,7 +21,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20340,
+     "stack": 1240,
      "status": "seated",
      "reentered": false
     },
@@ -37,15 +37,15 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20065,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 19630,
+     "stack": 98175,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Quarry",
      "kind": "house",
      "house": true,
-     "stack": 20075,
+     "stack": 885,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20165,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 6
+   "handsPlayed": 7
   },
   {
    "id": 2,
@@ -247,7 +247,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20340,
+   "stack": 1240,
    "status": "seated",
    "reentered": false
   },
@@ -283,8 +283,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20065,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19630,
+   "stack": 98175,
    "status": "seated",
    "reentered": false
   },
@@ -337,7 +337,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20075,
+   "stack": 885,
    "status": "seated",
    "reentered": false
   },
@@ -391,8 +391,8 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20165,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
-  "handNo": 7,
+  "table": 2,
+  "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Dice",
+  "toAct": "Millstone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 3,
-   "text": "Table 1 · Hand 3 · blinds 25/50 · Shadow calls 50, Pearl calls 50, Midas folds, Hammer calls 50, Dice calls 50, Baseline calls 25, Quarry checks, [flop: 5♦ 9♣ 8♥], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks, [turn: 5♦ 9♣ 8♥ 10♦], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks, [river: 5♦ 9♣ 8♥ 10♦ 9♠], Baseline checks, Quarry checks, Shadow checks, Pearl checks, Hammer checks, Dice checks → Dice wins 300 with Two pair, 10s and 9s (10♣ K♥)",
-   "pot": 300
-  },
   {
    "table": 2,
    "handNo": 3,
@@ -552,6 +546,12 @@
    "handNo": 5,
    "text": "Table 3 · Hand 5 · blinds 25/50 · Ozone folds, Razor calls 50, Anvil calls 50, River Rat calls 50, Bulldog calls 50, Moth calls 25, Anchor checks, [flop: 9♣ Q♠ 4♥], Moth checks, Anchor checks, Razor checks, Anvil checks, River Rat checks, Bulldog checks, [turn: 9♣ Q♠ 4♥ J♦], Moth checks, Anchor checks, Razor checks, Anvil checks, River Rat checks, Bulldog checks, [river: 9♣ Q♠ 4♥ J♦ 8♦], Moth checks, Anchor raises to 50, Razor folds, Anvil raises to 260, River Rat calls 260, Bulldog raises to 780, Moth folds, Anchor raises to 1360, Anvil raises to 3135, River Rat calls 2875, Bulldog raises to 8360, Anchor raises to 14210, Anvil goes ALL-IN to 20100, River Rat calls 16505, Bulldog calls 11275, Anchor goes ALL-IN to 20945 → Anvil wins 26747 with Straight, Q high (2♦ 10♦); Bulldog wins 26280 with Straight, Q high (10♠ 7♣); Anchor wins 27593 with Straight, Q high (J♥ 10♣)",
    "pot": 80620
+  },
+  {
+   "table": 1,
+   "handNo": 7,
+   "text": "Table 1 · Hand 7 · blinds 25/50 · Dice calls 50, Baseline calls 50, Quarry calls 50, Shadow folds, Pearl calls 50, Midas folds, Hammer raises to 115, Dice calls 65, Baseline calls 65, Quarry calls 65, Pearl calls 65, [flop: 4♥ 4♠ 8♦], Hammer checks, Dice checks, Baseline checks, Quarry checks, Pearl checks, [turn: 4♥ 4♠ 8♦ 10♠], Hammer checks, Dice checks, Baseline checks, Quarry checks, Pearl checks, [river: 4♥ 4♠ 8♦ 10♠ 5♠], Hammer raises to 65, Dice calls 65, Baseline raises to 135, Quarry calls 135, Pearl calls 135, Hammer raises to 225, Dice calls 160, Baseline raises to 325, Quarry calls 190, Pearl calls 190, Hammer raises to 455, Dice calls 230, Baseline raises to 600, Quarry calls 275, Pearl calls 275, Hammer raises to 790, Dice calls 335, Baseline raises to 1000, Quarry calls 400, Pearl calls 400, Hammer raises to 1275, Dice calls 485, Baseline raises to 1580, Quarry calls 580, Pearl calls 580, Hammer raises to 1975, Dice raises to 7130, Baseline raises to 12800, Quarry calls 11220, Pearl calls 11220, Hammer raises to 20170, Dice calls 12820, Baseline calls 6715, Quarry calls 7160, Pearl calls 7250 → Hammer wins 1185 with Two pair, 7s and 4s (7♠ 7♣); Baseline wins 98175 with Two pair, 10s and 8s (10♦ 8♠); Quarry wins 885 with Two pair, 7s and 4s (7♥ 7♦)",
+   "pot": 100245
   }
  ],
  "finishes": [
@@ -601,6 +601,22 @@
    "kind": "house",
    "table": 3,
    "handNo": 5,
+   "provisional": true
+  },
+  {
+   "name": "Pearl",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 7,
+   "provisional": true
+  },
+  {
+   "name": "Dice",
+   "place": null,
+   "kind": "house",
+   "table": 1,
+   "handNo": 7,
    "provisional": true
   }
  ],
