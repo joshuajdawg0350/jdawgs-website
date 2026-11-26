@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:21:53.681Z",
+ "updatedAt": "2026-11-26T01:22:29.242Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 44,
+ "handsPlayed": 45,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19825,
+     "stack": 19800,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 97392,
+     "stack": 97342,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 2400,
+     "stack": 2350,
      "status": "seated",
      "reentered": false
     },
@@ -139,12 +139,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29206,
+     "stack": 29331,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 14
+   "handsPlayed": 15
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19825,
+   "stack": 19800,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 97392,
+   "stack": 97342,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 2400,
+   "stack": 2350,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29206,
+   "stack": 29331,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 15,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Copper",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 13,
-   "text": "Table 1 · Hand 13 · blinds 25/50 · Baseline calls 50, Quarry calls 50, Shadow calls 50, Midas folds, Hammer checks, [flop: J♥ A♣ K♣], Hammer checks, Baseline checks, Quarry checks, Shadow checks, [turn: J♥ A♣ K♣ Q♦], Hammer checks, Baseline checks, Quarry checks, Shadow checks, [river: J♥ A♣ K♣ Q♦ 4♣], Hammer checks, Baseline checks, Quarry checks, Shadow checks → Quarry wins 225 with Pair of Ks (K♦ 5♥)",
-   "pot": 225
-  },
   {
    "table": 2,
    "handNo": 12,
@@ -552,6 +546,12 @@
    "handNo": 16,
    "text": "Table 1 · Hand 16 · blinds 25/50 · Hammer calls 50, Baseline calls 50, Shadow folds, Midas checks, [flop: 4♣ 8♠ 5♣], Midas checks, Hammer raises to 60, Baseline folds, Midas calls 60, [turn: 4♣ 8♠ 5♣ 9♠], Midas raises to 162, Hammer folds → Midas takes 457 (everyone else folded)",
    "pot": 457
+  },
+  {
+   "table": 2,
+   "handNo": 15,
+   "text": "Table 2 · Hand 15 · blinds 25/50 · Copper calls 50, Anchor calls 50, Granite folds, Venus checks, [flop: 8♥ 3♣ 9♥], Venus checks, Copper checks, Anchor checks, [turn: 8♥ 3♣ 9♥ 9♣], Venus checks, Copper checks, Anchor checks, [river: 8♥ 3♣ 9♥ 9♣ 4♠], Venus checks, Copper checks, Anchor checks → Anchor wins 175 with Two pair, 9s and 3s (5♦ 3♥)",
+   "pot": 175
   }
  ],
  "finishes": [
