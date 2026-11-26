@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:15:33.635Z",
+ "updatedAt": "2026-11-26T01:15:50.332Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   60
  ],
  "level": 2,
- "handsPlayed": 27,
+ "handsPlayed": 28,
  "tables": [
   {
    "id": 1,
@@ -134,6 +134,14 @@
      "stack": 0,
      "status": "out",
      "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 29068,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 9
@@ -145,7 +153,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 120500,
+     "stack": 120220,
      "status": "seated",
      "reentered": false
     },
@@ -169,7 +177,7 @@
      "name": "Razor",
      "kind": "house",
      "house": true,
-     "stack": 19760,
+     "stack": 19530,
      "status": "seated",
      "reentered": false
     },
@@ -177,7 +185,7 @@
      "name": "Anvil",
      "kind": "house",
      "house": true,
-     "stack": 26582,
+     "stack": 26302,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +225,7 @@
      "name": "Bulldog",
      "kind": "house",
      "house": true,
-     "stack": 26065,
+     "stack": 25785,
      "status": "seated",
      "reentered": false
     },
@@ -225,20 +233,12 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 19785,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 27718,
+     "stack": 19505,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 8
+   "handsPlayed": 9
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 120500,
+   "stack": 120220,
    "status": "seated",
    "reentered": false
   },
@@ -355,7 +355,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19760,
+   "stack": 19530,
    "status": "seated",
    "reentered": false
   },
@@ -382,7 +382,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 26582,
+   "stack": 26302,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19785,
+   "stack": 19505,
    "status": "seated",
    "reentered": false
   },
@@ -453,8 +453,8 @@
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 27718,
+   "table": 2,
+   "stack": 29068,
    "status": "seated",
    "reentered": false
   },
@@ -472,7 +472,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 26065,
+   "stack": 25785,
    "status": "seated",
    "reentered": false
   }
@@ -483,22 +483,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 9,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Moth",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 6,
-   "text": "Table 2 · Hand 6 · blinds 25/50 · Millstone calls 50, Venus calls 50, Velvet calls 50, Copper calls 50, Compass calls 50, Deuce calls 25, Granite checks, [flop: 8♥ 2♦ 7♣], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper checks, Compass checks, [turn: 8♥ 2♦ 7♣ K♣], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper checks, Compass checks, [river: 8♥ 2♦ 7♣ K♣ 2♥], Deuce checks, Granite checks, Millstone checks, Venus checks, Velvet checks, Copper raises to 50, Compass calls 50, Deuce calls 50, Granite calls 50, Millstone calls 50, Venus calls 50, Velvet calls 50 → Venus wins 700 with Two pair, Ks and 8s (K♦ 8♣)",
-   "pot": 700
-  },
   {
    "table": 3,
    "handNo": 6,
@@ -552,6 +538,12 @@
    "handNo": 9,
    "text": "Table 2 · Hand 9 · blinds 25/50 · Compass calls 50, Granite folds, Millstone calls 50, Venus calls 50, Velvet calls 25, Copper checks, [flop: J♥ 8♦ 8♣], Velvet checks, Copper checks, Compass raises to 55, Millstone calls 55, Venus calls 55, Velvet calls 55, Copper calls 55, [turn: J♥ 8♦ 8♣ J♣], Velvet checks, Copper checks, Compass raises to 55, Millstone calls 55, Venus raises to 125, Velvet calls 125, Copper calls 125, Compass raises to 730, Millstone calls 675, Venus raises to 1505, Velvet calls 1380, Copper calls 1380, Compass raises to 5405, Millstone calls 4675, Venus raises to 10395, Velvet calls 8890, Copper calls 8890, Compass goes ALL-IN to 19630, Millstone calls 13310, Venus goes ALL-IN to 20135, Velvet calls 8170, Copper calls 9740, [river: J♥ 8♦ 8♣ J♣ Q♥], Copper raises to 50 → Venus wins 97705 with Full house, Js full of Qs (Q♣ J♦); Copper wins 50 with Two pair, Js and 8s (10♥ 6♥)",
    "pot": 97755
+  },
+  {
+   "table": 3,
+   "handNo": 9,
+   "text": "Table 3 · Hand 9 · blinds 25/50 · Moth calls 50, Anchor calls 50, Ozone calls 50, Razor calls 50, Anvil calls 25, Bulldog raises to 230, Moth calls 180, Anchor calls 180, Ozone calls 180, Razor calls 180, Anvil calls 180, [flop: A♣ 2♦ 9♥], Anvil checks, Bulldog checks, Moth checks, Anchor checks, Ozone checks, Razor checks, [turn: A♣ 2♦ 9♥ 8♣], Anvil checks, Bulldog checks, Moth checks, Anchor checks, Ozone checks, Razor checks, [river: A♣ 2♦ 9♥ 8♣ 10♥], Anvil checks, Bulldog checks, Moth checks, Anchor raises to 50, Ozone calls 50, Razor folds, Anvil calls 50, Bulldog calls 50, Moth calls 50 → Anchor wins 1630 with Straight, 10 high (7♥ 6♥)",
+   "pot": 1630
   }
  ],
  "finishes": [
