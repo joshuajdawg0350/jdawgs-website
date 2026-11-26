@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:20:39.212Z",
+ "updatedAt": "2026-11-26T01:21:01.542Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   80
  ],
  "level": 3,
- "handsPlayed": 41,
+ "handsPlayed": 42,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19625,
+     "stack": 19825,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 97492,
+     "stack": 97392,
      "status": "seated",
      "reentered": false
     },
@@ -139,12 +139,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29306,
+     "stack": 29206,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 13
+   "handsPlayed": 14
   },
   {
    "id": 3,
@@ -265,7 +265,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19625,
+   "stack": 19825,
    "status": "seated",
    "reentered": false
   },
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 97492,
+   "stack": 97392,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29306,
+   "stack": 29206,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 14,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Venus",
+  "toAct": "Moth",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 12,
-   "text": "Table 1 · Hand 12 · blinds 25/50 · Hammer raises to 155, Baseline calls 155, Quarry calls 155, Shadow folds, Midas folds, [flop: K♦ 6♥ 10♥], Hammer checks, Baseline checks, Quarry checks, [turn: K♦ 6♥ 10♥ 5♣], Hammer checks, Baseline checks, Quarry checks, [river: K♦ 6♥ 10♥ 5♣ 6♦], Hammer raises to 65, Baseline calls 65, Quarry calls 65 → Hammer wins 735 with Two pair, As and 6s (A♥ A♠)",
-   "pot": 735
-  },
   {
    "table": 2,
    "handNo": 11,
@@ -552,6 +546,12 @@
    "handNo": 15,
    "text": "Table 1 · Hand 15 · blinds 25/50 · Shadow folds, Midas folds, Hammer folds, Baseline calls 25, Quarry checks, [flop: 2♦ 10♦ 2♣], Baseline checks, Quarry checks, [turn: 2♦ 10♦ 2♣ 9♦], Baseline raises to 55, Quarry calls 55, [river: 2♦ 10♦ 2♣ 9♦ 7♦], Baseline raises to 55, Quarry raises to 125, Baseline raises to 360, Quarry raises to 660, Baseline raises to 1400, Quarry calls 505 → Baseline wins 2775 with Flush, K high (K♦ Q♦)",
    "pot": 2775
+  },
+  {
+   "table": 2,
+   "handNo": 14,
+   "text": "Table 2 · Hand 14 · blinds 25/50 · Venus calls 50, Copper folds, Anchor calls 25, Granite checks, [flop: 7♦ 5♦ 10♥], Anchor checks, Granite checks, Venus checks, [turn: 7♦ 5♦ 10♥ K♣], Anchor checks, Granite checks, Venus checks, [river: 7♦ 5♦ 10♥ K♣ A♦], Anchor checks, Granite raises to 50, Venus calls 50, Anchor calls 50 → Granite wins 300 with Flush, A high (K♦ 10♦)",
+   "pot": 300
   }
  ],
  "finishes": [
