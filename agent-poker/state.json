@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:22:12.767Z",
+ "updatedAt": "2026-11-26T02:22:28.699Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   400
  ],
  "level": 10,
- "handsPlayed": 182,
+ "handsPlayed": 183,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 504722,
+     "stack": 504802,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 15278,
+     "stack": 15198,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 112
+   "handsPlayed": 113
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 15278,
+   "stack": 15198,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 504722,
+   "stack": 504802,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 113,
-  "stage": "preflop",
-  "board": [],
-  "pot": 240,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 103,
-   "text": "Table 1 · Hand 103 · blinds 80/160 · Midas calls 80, Venus checks, [flop: 4♠ 2♥ 6♦], Venus checks, Midas checks, [turn: 4♠ 2♥ 6♦ 5♥], Venus checks, Midas raises to 176, Venus folds → Midas takes 496 (everyone else folded)",
-   "pot": 496
-  },
   {
    "table": 1,
    "handNo": 104,
@@ -404,6 +390,12 @@
    "handNo": 112,
    "text": "Table 1 · Hand 112 · blinds 80/160 · Venus calls 80, Midas checks, [flop: 6♦ 6♠ Q♣], Midas raises to 176, Venus calls 176, [turn: 6♦ 6♠ Q♣ 4♦], Midas raises to 370, Venus calls 370, [river: 6♦ 6♠ Q♣ 4♦ 4♠], Midas raises to 777, Venus calls 777 → Midas wins 2966 with Full house, 4s full of Qs (4♣ Q♠)",
    "pot": 2966
+  },
+  {
+   "table": 1,
+   "handNo": 113,
+   "text": "Table 1 · Hand 113 · blinds 80/160 · Midas folds → Venus takes 240 (everyone else folded)",
+   "pot": 240
   }
  ],
  "finishes": [
