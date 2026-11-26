@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:12:29.297Z",
+ "updatedAt": "2026-11-26T02:12:47.280Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 164,
+ "handsPlayed": 165,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 496854,
+     "stack": 496914,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 23146,
+     "stack": 23086,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 94
+   "handsPlayed": 95
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 23146,
+   "stack": 23086,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 496854,
+   "stack": 496914,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 95,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Midas",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 85,
-   "text": "Table 1 · Hand 85 · blinds 60/120 · Midas calls 60, Venus checks, [flop: 2♣ 2♠ 10♠], Venus checks, Midas checks, [turn: 2♣ 2♠ 10♠ Q♥], Venus checks, Midas checks, [river: 2♣ 2♠ 10♠ Q♥ K♥], Venus checks, Midas checks → Venus wins 240 with Two pair, Qs and 2s (Q♣ 8♠)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 86,
@@ -404,6 +390,12 @@
    "handNo": 94,
    "text": "Table 1 · Hand 94 · blinds 60/120 · Venus calls 60, Midas raises to 252, Venus calls 132, [flop: Q♠ 4♥ 9♣], Midas raises to 277, Venus folds → Midas takes 781 (everyone else folded)",
    "pot": 781
+  },
+  {
+   "table": 1,
+   "handNo": 95,
+   "text": "Table 1 · Hand 95 · blinds 60/120 · Midas folds → Venus takes 180 (everyone else folded)",
+   "pot": 180
   }
  ],
  "finishes": [
