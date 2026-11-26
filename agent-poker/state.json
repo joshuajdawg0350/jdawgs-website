@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:05:45.939Z",
+ "updatedAt": "2026-11-26T01:06:05.779Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -67,22 +67,6 @@
     },
     {
      "name": "Pearl",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Moth",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "River Rat",
      "kind": "house",
      "house": true,
      "stack": 19950,
@@ -150,22 +134,6 @@
      "stack": 19895,
      "status": "seated",
      "reentered": false
-    },
-    {
-     "name": "Anchor",
-     "kind": "house",
-     "house": true,
-     "stack": 20675,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Bulldog",
-     "kind": "house",
-     "house": true,
-     "stack": 19835,
-     "status": "seated",
-     "reentered": false
     }
    ],
    "handsPlayed": 1
@@ -177,7 +145,7 @@
      "name": "Ozone",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 120000,
      "status": "seated",
      "reentered": false
     },
@@ -185,16 +153,16 @@
      "name": "Slick",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Piston",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -217,28 +185,60 @@
      "name": "Icebox",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Sixgun",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Bonfire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 0,
+     "status": "out",
+     "reentered": false
+    },
+    {
+     "name": "River Rat",
+     "kind": "house",
+     "house": true,
+     "stack": 19950,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Bulldog",
+     "kind": "house",
+     "house": true,
+     "stack": 19835,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Moth",
+     "kind": "house",
+     "house": true,
+     "stack": 19950,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Anchor",
+     "kind": "house",
+     "house": true,
+     "stack": 20675,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   }
  ],
  "seats": [
@@ -274,7 +274,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 120000,
    "status": "seated",
    "reentered": false
   },
@@ -301,8 +301,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -328,8 +328,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -409,15 +409,15 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
    "name": "Moth",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19950,
    "status": "seated",
    "reentered": false
@@ -436,15 +436,15 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
    "name": "River Rat",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19950,
    "status": "seated",
    "reentered": false
@@ -453,7 +453,7 @@
    "name": "Anchor",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 20675,
    "status": "seated",
    "reentered": false
@@ -463,15 +463,15 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
    "name": "Bulldog",
    "kind": "house",
    "house": true,
-   "table": 2,
+   "table": 3,
    "stack": 19835,
    "status": "seated",
    "reentered": false
@@ -483,15 +483,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Razor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -504,9 +496,56 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Velvet calls 50, Copper folds, Compass calls 50, Deuce calls 50, Anchor raises to 105, Bulldog calls 105, Granite folds, Millstone folds, Venus folds, Velvet calls 55, Compass calls 55, Deuce calls 55, [flop: Q♥ 2♠ 4♦], Velvet checks, Compass checks, Deuce checks, Anchor checks, Bulldog raises to 60, Velvet calls 60, Compass calls 60, Deuce folds, Anchor calls 60, [turn: Q♥ 2♠ 4♦ 7♠], Velvet checks, Compass checks, Anchor checks, Bulldog checks, [river: Q♥ 2♠ 4♦ 7♠ 7♥], Velvet checks, Compass checks, Anchor checks, Bulldog checks → Anchor wins 840 with Two pair, As and 7s (A♠ A♥)",
    "pot": 840
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Razor folds, Anvil folds, Icebox calls 50, Sixgun calls 50, Bonfire calls 50, Ozone calls 50, Slick calls 25, Piston checks, [flop: 9♣ Q♣ 9♦], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [turn: 9♣ Q♣ 9♦ 7♣], Slick checks, Piston checks, Icebox checks, Sixgun checks, Bonfire checks, Ozone checks, [river: 9♣ Q♣ 9♦ 7♣ 8♦], Slick checks, Piston checks, Icebox checks, Sixgun raises to 180, Bonfire raises to 470, Ozone raises to 1075, Slick calls 1075, Piston calls 1075, Icebox calls 1075, Sixgun raises to 4225, Bonfire raises to 9800, Ozone goes ALL-IN to 19950, Slick calls 18875, Piston calls 18875, Icebox calls 18875, Sixgun calls 15725, Bonfire calls 10150 → Ozone wins 120000 with Straight, 10 high (10♠ 6♦)",
+   "pot": 120000
   }
  ],
- "finishes": [],
+ "finishes": [
+  {
+   "name": "Slick",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Piston",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Icebox",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Sixgun",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Bonfire",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 1,
+   "provisional": true
+  }
+ ],
  "champion": null,
  "tableWinner": null,
  "defended": false,
