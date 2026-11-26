@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:44:14.053Z",
+ "updatedAt": "2026-11-26T01:44:32.227Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   160
  ],
  "level": 6,
- "handsPlayed": 106,
+ "handsPlayed": 107,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 118069,
+     "stack": 117944,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 67406,
+     "stack": 67281,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 61832,
+     "stack": 61707,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Granite",
      "kind": "house",
      "house": true,
-     "stack": 19585,
+     "stack": 20210,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Shadow",
      "kind": "house",
      "house": true,
-     "stack": 17896,
+     "stack": 17771,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 12670,
+     "stack": 12545,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 36
+   "handsPlayed": 37
   }
  ],
  "seats": [
@@ -117,7 +117,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19585,
+   "stack": 20210,
    "status": "seated",
    "reentered": false
   },
@@ -162,7 +162,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 118069,
+   "stack": 117944,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 67406,
+   "stack": 67281,
    "status": "seated",
    "reentered": false
   },
@@ -216,7 +216,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 17896,
+   "stack": 17771,
    "status": "seated",
    "reentered": false
   },
@@ -270,7 +270,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 12670,
+   "stack": 12545,
    "status": "seated",
    "reentered": false
   },
@@ -306,7 +306,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 61832,
+   "stack": 61707,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 37,
-  "stage": "preflop",
-  "board": [],
-  "pot": 90,
-  "toAct": "Anchor",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 3,
-   "handNo": 32,
-   "text": "Table 3 · Hand 32 · blinds 30/60 · Ozone calls 60, Moth calls 30, Shadow checks, [flop: 9♥ K♦ 6♠], Moth checks, Shadow raises to 70, Ozone folds, Moth calls 70, [turn: 9♥ K♦ 6♠ J♠], Moth checks, Shadow checks, [river: 9♥ K♦ 6♠ J♠ 6♦], Moth checks, Shadow checks → Moth wins 320 with Two pair, 9s and 6s (9♠ 10♦)",
-   "pot": 320
-  },
   {
    "table": 1,
    "handNo": 34,
@@ -404,6 +390,12 @@
    "handNo": 35,
    "text": "Table 3 · Hand 35 · blinds 30/60 · Ozone calls 60, Moth calls 30, Shadow checks, [flop: 3♠ 5♣ 10♣], Moth checks, Shadow checks, Ozone checks, [turn: 3♠ 5♣ 10♣ 10♠], Moth checks, Shadow checks, Ozone checks, [river: 3♠ 5♣ 10♣ 10♠ 6♠], Moth checks, Shadow checks, Ozone checks → Ozone wins 180 with Two pair, 10s and 3s (K♦ 3♦)",
    "pot": 180
+  },
+  {
+   "table": 1,
+   "handNo": 37,
+   "text": "Table 1 · Hand 37 · blinds 30/60 · Anchor calls 60, Midas folds, Granite calls 60, Shadow calls 60, Moth calls 60, Hammer folds, Ozone folds, Baseline calls 30, Venus checks, [flop: Q♦ 7♦ Q♥], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, Moth checks, [turn: Q♦ 7♦ Q♥ 7♠], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow raises to 65, Moth calls 65, Baseline calls 65, Venus calls 65, Anchor calls 65, Granite calls 65, [river: Q♦ 7♦ Q♥ 7♠ 6♣], Baseline checks, Venus checks, Anchor checks, Granite checks, Shadow checks, Moth checks → Granite wins 750 with Two pair, Qs and 7s (2♥ A♦)",
+   "pot": 750
   }
  ],
  "finishes": [
