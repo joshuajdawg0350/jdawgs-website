@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:40:20.757Z",
+ "updatedAt": "2026-11-26T01:40:34.373Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   120
  ],
  "level": 5,
- "handsPlayed": 95,
+ "handsPlayed": 96,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 96812,
+     "stack": 96752,
      "status": "seated",
      "reentered": false
     },
@@ -115,7 +115,7 @@
      "name": "Copper",
      "kind": "house",
      "house": true,
-     "stack": 3260,
+     "stack": 3380,
      "status": "seated",
      "reentered": false
     },
@@ -131,12 +131,12 @@
      "name": "Anchor",
      "kind": "house",
      "house": true,
-     "stack": 29076,
+     "stack": 29016,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 31
+   "handsPlayed": 32
   },
   {
    "id": 3,
@@ -319,7 +319,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 96812,
+   "stack": 96752,
    "status": "seated",
    "reentered": false
   },
@@ -373,7 +373,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 3260,
+   "stack": 3380,
    "status": "seated",
    "reentered": false
   },
@@ -454,7 +454,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29076,
+   "stack": 29016,
    "status": "seated",
    "reentered": false
   },
@@ -484,21 +484,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 32,
   "stage": "preflop",
   "board": [],
   "pot": 90,
-  "toAct": "Anchor",
+  "toAct": "Ozone",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 30,
-   "text": "Table 1 · Hand 30 · blinds 30/60 · Hammer folds, Baseline raises to 140, Midas calls 80, [flop: 2♣ 4♣ Q♦], Baseline checks, Midas checks, [turn: 2♣ 4♣ Q♦ J♥], Baseline checks, Midas checks, [river: 2♣ 4♣ Q♦ J♥ 8♠], Baseline checks, Midas checks → Midas wins 280 with A high (A♥ 5♥)",
-   "pot": 280
-  },
   {
    "table": 2,
    "handNo": 29,
@@ -552,6 +546,12 @@
    "handNo": 33,
    "text": "Table 1 · Hand 33 · blinds 30/60 · Hammer calls 60, Baseline calls 30, Midas checks, [flop: 5♣ K♥ 3♠], Baseline checks, Midas raises to 99, Hammer folds, Baseline calls 99, [turn: 5♣ K♥ 3♠ 8♥], Baseline checks, Midas raises to 208, Baseline calls 208, [river: 5♣ K♥ 3♠ 8♥ A♣], Baseline checks, Midas raises to 437, Baseline calls 437 → Baseline wins 1668 with Pair of Ks (Q♥ K♦)",
    "pot": 1668
+  },
+  {
+   "table": 2,
+   "handNo": 32,
+   "text": "Table 2 · Hand 32 · blinds 30/60 · Anchor calls 60, Granite folds, Venus calls 30, Copper checks, [flop: 6♥ 6♠ 10♥], Venus checks, Copper checks, Anchor checks, [turn: 6♥ 6♠ 10♥ 5♠], Venus checks, Copper checks, Anchor checks, [river: 6♥ 6♠ 10♥ 5♠ 8♦], Venus checks, Copper checks, Anchor checks → Copper wins 180 with Two pair, 6s and 5s (Q♠ 5♥)",
+   "pot": 180
   }
  ],
  "finishes": [
