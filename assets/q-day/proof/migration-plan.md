@@ -1,6 +1,6 @@
 # Q-Day Ledger™ — Post-Quantum Migration Plan
 
-© 2026 Joshua Dawson / J-Dawgs Industries
+© 2026 Joshua Dawson / J-Dawgs Industries LLC
 
 Assets: 37 · Planning-estimate effort: 231 engineer-days · Nearest governing deadline: 2030-12-31
 
