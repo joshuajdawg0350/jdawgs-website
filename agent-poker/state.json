@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T01:05:14.862Z",
+ "updatedAt": "2026-11-26T01:05:30.846Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 0,
+ "handsPlayed": 1,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "Hammer",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 20250,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Dice",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Baseline",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -69,7 +69,7 @@
      "name": "Pearl",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -77,7 +77,7 @@
      "name": "Moth",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "River Rat",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 2,
@@ -256,7 +256,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 20250,
    "status": "seated",
    "reentered": false
   },
@@ -283,7 +283,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -310,7 +310,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -391,7 +391,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -418,7 +418,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -445,7 +445,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -484,15 +484,22 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Baseline",
+  "toAct": "Velvet",
   "lastActions": []
  },
- "recentHands": [],
+ "recentHands": [
+  {
+   "table": 1,
+   "handNo": 1,
+   "text": "Table 1 · Hand 1 · blinds 25/50 · Baseline calls 50, Quarry folds, Shadow folds, Pearl calls 50, Moth calls 50, River Rat calls 50, Midas folds, Hammer calls 25, Dice checks, [flop: J♥ A♥ 7♣], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [turn: J♥ A♥ 7♣ 2♦], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks, [river: J♥ A♥ 7♣ 2♦ 5♥], Hammer checks, Dice checks, Baseline checks, Pearl checks, Moth checks, River Rat checks → Hammer wins 300 with Two pair, Js and 5s (J♦ 5♦)",
+   "pot": 300
+  }
+ ],
  "finishes": [],
  "champion": null,
  "tableWinner": null,
