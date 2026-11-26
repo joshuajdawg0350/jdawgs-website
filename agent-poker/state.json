@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-26T02:11:45.359Z",
+ "updatedAt": "2026-11-26T02:12:07.363Z",
  "mode": "real",
  "date": "2026-11-25",
  "status": "running",
@@ -12,7 +12,7 @@
   300
  ],
  "level": 9,
- "handsPlayed": 163,
+ "handsPlayed": 164,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Venus",
      "kind": "house",
      "house": true,
-     "stack": 497106,
+     "stack": 496854,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Midas",
      "kind": "house",
      "house": true,
-     "stack": 22894,
+     "stack": 23146,
      "status": "seated",
      "reentered": false
     },
@@ -90,7 +90,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 93
+   "handsPlayed": 94
   }
  ],
  "seats": [
@@ -99,7 +99,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 22894,
+   "stack": 23146,
    "status": "seated",
    "reentered": false
   },
@@ -171,7 +171,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 497106,
+   "stack": 496854,
    "status": "seated",
    "reentered": false
   },
@@ -335,22 +335,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 1,
-  "handNo": 94,
-  "stage": "preflop",
-  "board": [],
-  "pot": 180,
-  "toAct": "Venus",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 84,
-   "text": "Table 1 · Hand 84 · blinds 60/120 · Venus calls 60, Midas checks, [flop: 6♣ 3♣ 7♠], Midas checks, Venus checks, [turn: 6♣ 3♣ 7♠ 3♠], Midas checks, Venus checks, [river: 6♣ 3♣ 7♠ 3♠ 7♥], Midas checks, Venus checks → Venus wins 240 with Two pair, 7s and 6s (Q♥ 6♠)",
-   "pot": 240
-  },
   {
    "table": 1,
    "handNo": 85,
@@ -404,6 +390,12 @@
    "handNo": 93,
    "text": "Table 1 · Hand 93 · blinds 60/120 · Midas calls 60, Venus checks, [flop: 8♦ J♣ 8♥], Venus checks, Midas raises to 132, Venus calls 132, [turn: 8♦ J♣ 8♥ 6♥], Venus checks, Midas raises to 277, Venus calls 277, [river: 8♦ J♣ 8♥ 6♥ 2♦], Venus checks, Midas raises to 582, Venus calls 582 → Midas wins 2222 with Three of a kind, 8s (4♦ 8♠)",
    "pot": 2222
+  },
+  {
+   "table": 1,
+   "handNo": 94,
+   "text": "Table 1 · Hand 94 · blinds 60/120 · Venus calls 60, Midas raises to 252, Venus calls 132, [flop: Q♠ 4♥ 9♣], Midas raises to 277, Venus folds → Midas takes 781 (everyone else folded)",
+   "pot": 781
   }
  ],
  "finishes": [
