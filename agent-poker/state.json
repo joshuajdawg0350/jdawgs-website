@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T01:23:41.630Z",
+ "updatedAt": "2026-11-27T01:24:55.923Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -503,11 +503,12 @@
  "currentHand": {
   "table": 1,
   "handNo": 1,
-  "stage": "flop",
+  "stage": "turn",
   "board": [
    "Q♥",
    "K♦",
-   "J♥"
+   "J♥",
+   "A♣"
   ],
   "pot": 300,
   "toAct": "intuitiontony",
@@ -520,7 +521,13 @@
    "Northstar calls 50",
    "Midas folds",
    "intuitiontony calls 25",
-   "Bedrock checks"
+   "Bedrock checks",
+   "intuitiontony checks",
+   "Bedrock checks",
+   "Static checks",
+   "Magnet checks",
+   "Tempo checks",
+   "Northstar checks"
   ]
  },
  "recentHands": [],
