@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T04:39:20.292Z",
+ "updatedAt": "2026-11-27T04:39:33.333Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 17,
+ "handsPlayed": 18,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 1135,
+     "stack": 1085,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 50423,
+     "stack": 50373,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 50492,
+     "stack": 50442,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 17630,
+     "stack": 17580,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 20175,
+     "stack": 20375,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1135,
+   "stack": 1085,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20175,
+   "stack": 20375,
    "status": "seated",
    "reentered": false
   },
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50423,
+   "stack": 50373,
    "status": "seated",
    "reentered": false
   },
@@ -426,7 +426,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50492,
+   "stack": 50442,
    "status": "seated",
    "reentered": false
   },
@@ -453,7 +453,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17630,
+   "stack": 17580,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 6,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Ricochet",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 3,
-   "text": "Table 2 · Hand 3 · blinds 25/50 · Cobble calls 50, Deadpan calls 50, Coyote calls 50, Pickpocket calls 50, Fossil folds, Northstar folds, Professor raises to 110, Cobble folds, Deadpan calls 60, Coyote calls 60, Pickpocket calls 60, [flop: 3♦ 8♥ 10♣], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks, [turn: 3♦ 8♥ 10♣ 5♠], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks, [river: 3♦ 8♥ 10♣ 5♠ Q♥], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks → Professor wins 515 with Pair of 5s (5♥ 4♦)",
-   "pot": 515
-  },
   {
    "table": 3,
    "handNo": 3,
@@ -569,6 +555,12 @@
    "handNo": 6,
    "text": "Table 2 · Hand 6 · blinds 25/50 · Northstar calls 50, Deadpan calls 50, Tempo calls 50, Coyote calls 25, Fossil checks, [flop: 3♥ K♠ A♥], Coyote checks, Fossil checks, Northstar checks, Deadpan raises to 60, Tempo folds, Coyote calls 60, Fossil calls 60, Northstar calls 60, [turn: 3♥ K♠ A♥ 5♦], Coyote checks, Fossil checks, Northstar checks, Deadpan checks, [river: 3♥ K♠ A♥ 5♦ 10♦], Coyote checks, Fossil checks, Northstar checks, Deadpan checks → Fossil wins 490 with Pair of As (A♣ 6♥)",
    "pot": 490
+  },
+  {
+   "table": 3,
+   "handNo": 6,
+   "text": "Table 3 · Hand 6 · blinds 25/50 · Ricochet calls 50, Freezer folds, Undertow calls 50, Marble calls 50, Velcro calls 25, Snare checks, [flop: 3♣ 9♠ 10♠], Velcro checks, Snare checks, Ricochet checks, Undertow checks, Marble checks, [turn: 3♣ 9♠ 10♠ 4♦], Velcro checks, Snare checks, Ricochet checks, Undertow checks, Marble checks, [river: 3♣ 9♠ 10♠ 4♦ Q♣], Velcro checks, Snare checks, Ricochet checks, Undertow checks, Marble checks → Snare wins 250 with Pair of 10s (J♠ 10♥)",
+   "pot": 250
   }
  ],
  "finishes": [
