@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:30:46.992Z",
+ "updatedAt": "2026-11-27T02:31:10.872Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 8,
+ "handsPlayed": 9,
  "tables": [
   {
    "id": 1,
@@ -62,14 +62,6 @@
      "kind": "house",
      "house": true,
      "stack": 20305,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Snare",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
@@ -193,7 +185,7 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 21110,
+     "stack": 1295,
      "status": "seated",
      "reentered": false
     },
@@ -201,23 +193,23 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 19790,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 19705,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19765,
+     "stack": 19740,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +217,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 19705,
+     "stack": 50263,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +225,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 19815,
+     "stack": 50567,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +233,20 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 19705,
+     "stack": 17730,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Snare",
+     "kind": "house",
+     "house": true,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 21110,
+   "stack": 1295,
    "status": "seated",
    "reentered": false
   },
@@ -318,8 +318,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19790,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -345,8 +345,8 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19705,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -372,7 +372,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19765,
+   "stack": 19740,
    "status": "seated",
    "reentered": false
   },
@@ -380,7 +380,7 @@
    "name": "Snare",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 3,
    "stack": 19950,
    "status": "seated",
    "reentered": false
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19705,
+   "stack": 50263,
    "status": "seated",
    "reentered": false
   },
@@ -426,7 +426,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19815,
+   "stack": 50567,
    "status": "seated",
    "reentered": false
   },
@@ -453,7 +453,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19705,
+   "stack": 17730,
    "status": "seated",
    "reentered": false
   },
@@ -500,15 +500,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 3,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Marble",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -557,6 +549,12 @@
    "handNo": 3,
    "text": "Table 2 · Hand 3 · blinds 25/50 · Cobble calls 50, Deadpan calls 50, Coyote calls 50, Pickpocket calls 50, Fossil folds, Northstar folds, Professor raises to 110, Cobble folds, Deadpan calls 60, Coyote calls 60, Pickpocket calls 60, [flop: 3♦ 8♥ 10♣], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks, [turn: 3♦ 8♥ 10♣ 5♠], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks, [river: 3♦ 8♥ 10♣ 5♠ Q♥], Professor checks, Deadpan checks, Coyote checks, Pickpocket checks → Professor wins 515 with Pair of 5s (5♥ 4♦)",
    "pot": 515
+  },
+  {
+   "table": 3,
+   "handNo": 3,
+   "text": "Table 3 · Hand 3 · blinds 25/50 · Marble calls 50, Velcro calls 50, Ricochet calls 50, Switchback calls 50, Highwire calls 50, Freezer folds, Undertow checks, [flop: 4♥ 7♣ 5♦], Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, Highwire checks, [turn: 4♥ 7♣ 5♦ 2♠], Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, Highwire checks, [river: 4♥ 7♣ 5♦ 2♠ 8♥], Undertow raises to 50, Marble raises to 275, Velcro calls 275, Ricochet calls 275, Switchback calls 275, Highwire calls 275, Undertow raises to 565, Marble raises to 1925, Velcro calls 1650, Ricochet calls 1650, Switchback calls 1650, Highwire calls 1650, Undertow raises to 3665, Marble raises to 11835, Velcro folds, Ricochet calls 9910, Switchback calls 9910, Highwire calls 9910, Undertow goes ALL-IN to 19655, Marble goes ALL-IN to 19765, Ricochet calls 7930, Switchback calls 7905, Highwire calls 7820 → Undertow wins 50263 with Straight, 8 high (J♠ 6♦); Marble wins 50567 with Straight, 8 high (A♣ 6♥)",
+   "pot": 100830
   }
  ],
  "finishes": [
@@ -606,6 +604,22 @@
    "kind": "house",
    "table": 2,
    "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Switchback",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3,
+   "provisional": true
+  },
+  {
+   "name": "Highwire",
+   "place": null,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3,
    "provisional": true
   }
  ],
