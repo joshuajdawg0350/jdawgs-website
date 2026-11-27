@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:13:00.988Z",
+ "updatedAt": "2026-11-27T02:13:28.467Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 4,
+ "handsPlayed": 5,
  "tables": [
   {
    "id": 1,
@@ -91,7 +91,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 21685,
      "status": "seated",
      "reentered": false
     },
@@ -123,7 +123,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -155,7 +155,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 18470,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -179,12 +179,12 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 20405,
+     "stack": 20250,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 3,
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 21685,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -435,7 +435,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
+   "stack": 18470,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20405,
+   "stack": 20250,
    "status": "seated",
    "reentered": false
   },
@@ -489,7 +489,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   }
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Professor",
+  "toAct": "Undertow",
   "lastActions": []
  },
  "recentHands": [
@@ -533,6 +533,12 @@
    "handNo": 2,
    "text": "Table 1 · Hand 2 · blinds 25/50 · Magnet calls 50, Tempo calls 50, Snare folds, Midas folds, intuitiontony folds, Bedrock folds, Static checks, [flop: K♣ K♦ Q♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [turn: K♣ K♦ Q♥ J♠], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [river: K♣ K♦ Q♥ J♠ 8♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55 → Tempo wins 670 with Three of a kind, Ks (K♥ 4♠)",
    "pot": 670
+  },
+  {
+   "table": 2,
+   "handNo": 2,
+   "text": "Table 2 · Hand 2 · blinds 25/50 · Professor calls 50, Cobble folds, Deadpan calls 50, Coyote folds, Pickpocket raises to 155, Fossil folds, Northstar calls 105, Professor folds, Deadpan calls 105, [flop: 5♠ J♠ 8♣], Northstar raises to 60, Deadpan folds, Pickpocket calls 60, [turn: 5♠ J♠ 8♣ 5♦], Northstar checks, Pickpocket raises to 395, Northstar calls 395, [river: 5♠ J♠ 8♣ 5♦ Q♠], Northstar checks, Pickpocket raises to 870, Northstar calls 870 → Pickpocket wins 3190 with Two pair, 5s and 4s (4♣ 4♠)",
+   "pot": 3190
   }
  ],
  "finishes": [
