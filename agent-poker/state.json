@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T01:40:19.102Z",
+ "updatedAt": "2026-11-27T01:55:45.787Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 0,
+ "handsPlayed": 1,
  "tables": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
      "name": "intuitiontony",
      "kind": "guest",
      "house": false,
-     "stack": 20000,
+     "stack": 20250,
      "status": "seated",
      "reentered": false
     },
@@ -37,7 +37,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -85,12 +85,12 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 2,
@@ -255,7 +255,7 @@
    "kind": "guest",
    "house": false,
    "table": 1,
-   "stack": 20000,
+   "stack": 20250,
    "status": "seated",
    "reentered": false
   },
@@ -273,7 +273,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -300,7 +300,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -435,7 +435,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -501,43 +501,22 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 1,
-  "stage": "river",
-  "board": [
-   "Q♥",
-   "K♦",
-   "J♥",
-   "A♣",
-   "Q♠"
-  ],
-  "pot": 300,
-  "toAct": "intuitiontony",
-  "lastActions": [
-   "Static calls 50",
-   "Magnet calls 50",
-   "Tempo calls 50",
-   "Snare folds",
-   "Cobble folds",
-   "Northstar calls 50",
-   "Midas folds",
-   "intuitiontony calls 25",
-   "Bedrock checks",
-   "intuitiontony checks",
-   "Bedrock checks",
-   "Static checks",
-   "Magnet checks",
-   "Tempo checks",
-   "Northstar checks",
-   "intuitiontony checks",
-   "Bedrock checks",
-   "Static checks",
-   "Magnet checks",
-   "Tempo checks",
-   "Northstar checks"
-  ]
+  "stage": "preflop",
+  "board": [],
+  "pot": 75,
+  "toAct": "Jackpot",
+  "lastActions": []
  },
- "recentHands": [],
+ "recentHands": [
+  {
+   "table": 1,
+   "handNo": 1,
+   "text": "Table 1 · Hand 1 · blinds 25/50 · Static calls 50, Magnet calls 50, Tempo calls 50, Snare folds, Cobble folds, Northstar calls 50, Midas folds, intuitiontony calls 25, Bedrock checks, [flop: Q♥ K♦ J♥], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [turn: Q♥ K♦ J♥ A♣], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [river: Q♥ K♦ J♥ A♣ Q♠], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks → intuitiontony wins 300 with Two pair, As and Qs (7♠ A♠)",
+   "pot": 300
+  }
+ ],
  "finishes": [],
  "champion": null,
  "tableWinner": null,
