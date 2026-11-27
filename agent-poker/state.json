@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T04:22:56.730Z",
+ "updatedAt": "2026-11-27T04:23:08.866Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 14,
+ "handsPlayed": 15,
  "tables": [
   {
    "id": 1,
@@ -185,7 +185,7 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 1185,
+     "stack": 1135,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +209,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 19740,
+     "stack": 19690,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 50473,
+     "stack": 50423,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 50517,
+     "stack": 50492,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 17680,
+     "stack": 17630,
      "status": "seated",
      "reentered": false
     },
@@ -241,12 +241,12 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20175,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1185,
+   "stack": 1135,
    "status": "seated",
    "reentered": false
   },
@@ -372,7 +372,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19740,
+   "stack": 19690,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 19950,
+   "stack": 20175,
    "status": "seated",
    "reentered": false
   },
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50473,
+   "stack": 50423,
    "status": "seated",
    "reentered": false
   },
@@ -426,7 +426,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50517,
+   "stack": 50492,
    "status": "seated",
    "reentered": false
   },
@@ -453,7 +453,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17680,
+   "stack": 17630,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 5,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Snare",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 2,
-   "text": "Table 2 · Hand 2 · blinds 25/50 · Professor calls 50, Cobble folds, Deadpan calls 50, Coyote folds, Pickpocket raises to 155, Fossil folds, Northstar calls 105, Professor folds, Deadpan calls 105, [flop: 5♠ J♠ 8♣], Northstar raises to 60, Deadpan folds, Pickpocket calls 60, [turn: 5♠ J♠ 8♣ 5♦], Northstar checks, Pickpocket raises to 395, Northstar calls 395, [river: 5♠ J♠ 8♣ 5♦ Q♠], Northstar checks, Pickpocket raises to 870, Northstar calls 870 → Pickpocket wins 3190 with Two pair, 5s and 4s (4♣ 4♠)",
-   "pot": 3190
-  },
   {
    "table": 3,
    "handNo": 2,
@@ -569,6 +555,12 @@
    "handNo": 5,
    "text": "Table 2 · Hand 5 · blinds 25/50 · Fossil calls 50, Northstar calls 50, Deadpan calls 50, Tempo calls 25, Coyote raises to 110, Fossil calls 60, Northstar calls 60, Deadpan folds, Tempo calls 60, [flop: K♦ 10♥ 9♥], Tempo checks, Coyote checks, Fossil checks, Northstar checks, [turn: K♦ 10♥ 9♥ 7♥], Tempo checks, Coyote checks, Fossil checks, Northstar checks, [river: K♦ 10♥ 9♥ 7♥ Q♣], Tempo raises to 55, Coyote calls 55, Fossil raises to 415, Northstar folds, Tempo raises to 1050, Coyote calls 995, Fossil raises to 2855, Tempo raises to 6120, Coyote calls 5070, Fossil raises to 15470, Tempo goes ALL-IN to 20405, Coyote calls 14285, Fossil calls 4345 → Fossil wins 29967 with Straight, K high (7♠ J♣); Tempo wins 31148 with Straight, K high (3♠ J♠)",
    "pot": 61115
+  },
+  {
+   "table": 3,
+   "handNo": 5,
+   "text": "Table 3 · Hand 5 · blinds 25/50 · Snare calls 50, Ricochet calls 50, Freezer calls 50, Undertow calls 50, Marble folds, Velcro checks, [flop: 9♦ 7♥ 2♣], Velcro checks, Snare checks, Ricochet checks, Freezer checks, Undertow checks, [turn: 9♦ 7♥ 2♣ 6♥], Velcro checks, Snare checks, Ricochet checks, Freezer checks, Undertow checks, [river: 9♦ 7♥ 2♣ 6♥ 7♠], Velcro checks, Snare checks, Ricochet checks, Freezer checks, Undertow checks → Snare wins 275 with Two pair, 7s and 6s (6♦ Q♥)",
+   "pot": 275
   }
  ],
  "finishes": [
