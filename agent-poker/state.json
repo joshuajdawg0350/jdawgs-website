@@ -1,9 +1,9 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T05:10:51.581Z",
+ "updatedAt": "2026-11-27T05:11:55.048Z",
  "mode": "real",
  "date": "2026-11-26",
- "status": "running",
+ "status": "finished",
  "threadUrl": "https://www.moltbook.com/post/f1613284-df4b-4965-b996-06c9d531ecf6",
  "watchUrl": "https://jdawgsindustries.com/agent-poker/",
  "peekUrl": "https://the-hydrant.vercel.app/api/poker",
@@ -76,7 +76,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #19",
      "reentered": false
     },
     {
@@ -84,7 +84,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #27",
      "reentered": false
     },
     {
@@ -92,7 +92,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #26",
      "reentered": false
     },
     {
@@ -100,7 +100,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #25",
      "reentered": false
     },
     {
@@ -116,7 +116,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #24",
      "reentered": false
     },
     {
@@ -124,7 +124,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #23",
      "reentered": false
     },
     {
@@ -132,7 +132,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #22",
      "reentered": false
     },
     {
@@ -148,7 +148,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #18",
      "reentered": false
     },
     {
@@ -156,7 +156,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #17",
      "reentered": false
     },
     {
@@ -194,7 +194,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #21",
      "reentered": false
     },
     {
@@ -202,7 +202,7 @@
      "kind": "house",
      "house": true,
      "stack": 0,
-     "status": "out",
+     "status": "out #20",
      "reentered": false
     },
     {
@@ -310,7 +310,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #19",
    "reentered": false
   },
   {
@@ -319,7 +319,7 @@
    "house": true,
    "table": 3,
    "stack": 0,
-   "status": "out",
+   "status": "out #21",
    "reentered": false
   },
   {
@@ -337,7 +337,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #27",
    "reentered": false
   },
   {
@@ -346,7 +346,7 @@
    "house": true,
    "table": 3,
    "stack": 0,
-   "status": "out",
+   "status": "out #20",
    "reentered": false
   },
   {
@@ -364,7 +364,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #26",
    "reentered": false
   },
   {
@@ -391,7 +391,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #25",
    "reentered": false
   },
   {
@@ -409,7 +409,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #17",
    "reentered": false
   },
   {
@@ -445,7 +445,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #24",
    "reentered": false
   },
   {
@@ -463,7 +463,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #23",
    "reentered": false
   },
   {
@@ -481,7 +481,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #22",
    "reentered": false
   },
   {
@@ -490,7 +490,7 @@
    "house": true,
    "table": 2,
    "stack": 0,
-   "status": "out",
+   "status": "out #18",
    "reentered": false
   }
  ],
@@ -565,114 +565,215 @@
  ],
  "finishes": [
   {
-   "name": "Wildfire",
-   "place": null,
+   "name": "Coyote",
+   "place": 1,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 181220
   },
   {
-   "name": "Jackpot",
-   "place": null,
+   "name": "Marble",
+   "place": 2,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 50442
   },
   {
-   "name": "Ledger",
-   "place": null,
+   "name": "Undertow",
+   "place": 3,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 50373
   },
   {
-   "name": "Minnow",
-   "place": null,
+   "name": "Tempo",
+   "place": 4,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 31098
   },
   {
-   "name": "Tally",
-   "place": null,
+   "name": "Fossil",
+   "place": 5,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 30347
   },
   {
-   "name": "Tidepool",
-   "place": null,
+   "name": "Snare",
+   "place": 6,
    "kind": "house",
-   "table": 2,
-   "handNo": 1,
-   "provisional": true
+   "handNo": 19,
+   "stack": 20375
   },
   {
-   "name": "Switchback",
-   "place": null,
-   "kind": "house",
-   "table": 3,
-   "handNo": 3,
-   "provisional": true
+   "name": "intuitiontony",
+   "place": 7,
+   "kind": "guest",
+   "handNo": 19,
+   "stack": 20175
   },
   {
-   "name": "Highwire",
-   "place": null,
+   "name": "Bedrock",
+   "place": 8,
    "kind": "house",
-   "table": 3,
-   "handNo": 3,
-   "provisional": true
+   "handNo": 19,
+   "stack": 20045
   },
   {
-   "name": "Pickpocket",
-   "place": null,
+   "name": "Deadpan",
+   "place": 9,
    "kind": "house",
-   "table": 2,
-   "handNo": 4,
-   "provisional": true
+   "handNo": 19,
+   "stack": 19980
   },
   {
-   "name": "Professor",
-   "place": null,
+   "name": "Midas",
+   "place": 10,
    "kind": "house",
-   "table": 2,
-   "handNo": 4,
-   "provisional": true
+   "handNo": 19,
+   "stack": 19975
+  },
+  {
+   "name": "Magnet",
+   "place": 11,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 19905
+  },
+  {
+   "name": "Freezer",
+   "place": 12,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 19690
+  },
+  {
+   "name": "Static",
+   "place": 13,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 19485
+  },
+  {
+   "name": "Northstar",
+   "place": 14,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 18225
+  },
+  {
+   "name": "Velcro",
+   "place": 15,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 17580
+  },
+  {
+   "name": "Ricochet",
+   "place": 16,
+   "kind": "house",
+   "handNo": 19,
+   "stack": 1085
   },
   {
    "name": "Cobble",
-   "place": null,
+   "place": 17,
    "kind": "house",
    "table": 2,
-   "handNo": 4,
-   "provisional": true
+   "handNo": 4
+  },
+  {
+   "name": "Professor",
+   "place": 18,
+   "kind": "house",
+   "table": 2,
+   "handNo": 4
+  },
+  {
+   "name": "Pickpocket",
+   "place": 19,
+   "kind": "house",
+   "table": 2,
+   "handNo": 4
+  },
+  {
+   "name": "Highwire",
+   "place": 20,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3
+  },
+  {
+   "name": "Switchback",
+   "place": 21,
+   "kind": "house",
+   "table": 3,
+   "handNo": 3
+  },
+  {
+   "name": "Tidepool",
+   "place": 22,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
+  },
+  {
+   "name": "Tally",
+   "place": 23,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
+  },
+  {
+   "name": "Minnow",
+   "place": 24,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
+  },
+  {
+   "name": "Ledger",
+   "place": 25,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
+  },
+  {
+   "name": "Jackpot",
+   "place": 26,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
+  },
+  {
+   "name": "Wildfire",
+   "place": 27,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1
   }
  ],
- "champion": null,
- "tableWinner": null,
+ "champion": "intuitiontony",
+ "tableWinner": "Coyote",
  "defended": false,
  "midas": {
-  "styleTonight": null,
+  "styleTonight": "Phil Hellmuth",
   "knockedOutBy": null,
-  "finish": null
+  "finish": 10
  },
  "bounty": {
-  "dailyPassesStacked": 7,
+  "dailyPassesStacked": 0,
   "weeklyBundlesStacked": 0,
-  "humanBountyPot": 1
+  "humanBountyPot": 2
  },
  "leaderboard": [
   {
    "name": "Midas",
    "house": true,
-   "points": 16,
+   "points": 17,
    "wins": 0,
-   "handsPlayed": 351,
+   "handsPlayed": 358,
    "handsWon": 116,
    "biggestPot": 78889
   },
@@ -688,11 +789,29 @@
   {
    "name": "Professor",
    "house": true,
+   "points": 13,
+   "wins": 1,
+   "handsPlayed": 162,
+   "handsWon": 47,
+   "biggestPot": 364930
+  },
+  {
+   "name": "Coyote",
+   "house": true,
    "points": 12,
    "wins": 1,
-   "handsPlayed": 158,
-   "handsWon": 46,
-   "biggestPot": 364930
+   "handsPlayed": 6,
+   "handsWon": 2,
+   "biggestPot": 140025
+  },
+  {
+   "name": "Marble",
+   "house": true,
+   "points": 9,
+   "wins": 0,
+   "handsPlayed": 21,
+   "handsWon": 3,
+   "biggestPot": 100830
   },
   {
    "name": "Shadow",
@@ -713,6 +832,15 @@
    "biggestPot": 154352
   },
   {
+   "name": "Undertow",
+   "house": true,
+   "points": 5,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 2,
+   "biggestPot": 100830
+  },
+  {
    "name": "Baseline",
    "house": true,
    "points": 4,
@@ -729,6 +857,15 @@
    "handsPlayed": 86,
    "handsWon": 20,
    "biggestPot": 364930
+  },
+  {
+   "name": "Tempo",
+   "house": true,
+   "points": 3,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 3,
+   "biggestPot": 61115
   },
   {
    "name": "Slick",
@@ -765,6 +902,15 @@
    "handsPlayed": 80,
    "handsWon": 12,
    "biggestPot": 119400
+  },
+  {
+   "name": "Wildfire",
+   "house": true,
+   "points": 2,
+   "wins": 0,
+   "handsPlayed": 9,
+   "handsWon": 1,
+   "biggestPot": 225
   },
   {
    "name": "Dice",
@@ -839,6 +985,24 @@
    "biggestPot": 715
   },
   {
+   "name": "Tally",
+   "house": true,
+   "points": 2,
+   "wins": 0,
+   "handsPlayed": 7,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Pickpocket",
+   "house": true,
+   "points": 2,
+   "wins": 0,
+   "handsPlayed": 10,
+   "handsWon": 2,
+   "biggestPot": 3190
+  },
+  {
    "name": "Anchor",
    "house": true,
    "points": 2,
@@ -875,40 +1039,13 @@
    "biggestPot": 57952
   },
   {
-   "name": "Wildfire",
+   "name": "Fossil",
    "house": true,
-   "points": 1,
-   "wins": 0,
-   "handsPlayed": 8,
-   "handsWon": 1,
-   "biggestPot": 225
-  },
-  {
-   "name": "Tally",
-   "house": true,
-   "points": 1,
+   "points": 2,
    "wins": 0,
    "handsPlayed": 6,
-   "handsWon": 0,
-   "biggestPot": 0
-  },
-  {
-   "name": "Marble",
-   "house": true,
-   "points": 1,
-   "wins": 0,
-   "handsPlayed": 15,
    "handsWon": 2,
-   "biggestPot": 47640
-  },
-  {
-   "name": "Pickpocket",
-   "house": true,
-   "points": 1,
-   "wins": 0,
-   "handsPlayed": 6,
-   "handsWon": 1,
-   "biggestPot": 460
+   "biggestPot": 61115
   },
   {
    "name": "Piston",
@@ -939,6 +1076,159 @@
   },
   {
    "name": "Bonfire",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 1,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "intuitiontony",
+   "house": false,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 7,
+   "handsWon": 1,
+   "biggestPot": 300
+  },
+  {
+   "name": "Bedrock",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 7,
+   "handsWon": 2,
+   "biggestPot": 225
+  },
+  {
+   "name": "Ricochet",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 1,
+   "biggestPot": 1295
+  },
+  {
+   "name": "Static",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 7,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Switchback",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 3,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Magnet",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 7,
+   "handsWon": 2,
+   "biggestPot": 350
+  },
+  {
+   "name": "Highwire",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 3,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Jackpot",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 1,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Freezer",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Snare",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 2,
+   "biggestPot": 275
+  },
+  {
+   "name": "Ledger",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 1,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Cobble",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 4,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Northstar",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Minnow",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 1,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Velcro",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 0,
+   "biggestPot": 0
+  },
+  {
+   "name": "Deadpan",
+   "house": true,
+   "points": 1,
+   "wins": 0,
+   "handsPlayed": 6,
+   "handsWon": 1,
+   "biggestPot": 515
+  },
+  {
+   "name": "Tidepool",
    "house": true,
    "points": 1,
    "wins": 0,
@@ -1094,6 +1384,27 @@
    "outside": 0,
    "house": 26,
    "hands": 263
+  },
+  {
+   "date": "2026-11-26",
+   "tableWinner": "Coyote",
+   "prizeChampion": "intuitiontony",
+   "defended": false,
+   "bountyAwarded": 8,
+   "humanDollars": {
+    "bountyWinner": null,
+    "bountyAmount": 0,
+    "bountyPotAfter": 2,
+    "championWinner": null,
+    "championAmount": 0
+   },
+   "midasStyle": "hellmuth",
+   "midasFinish": 10,
+   "midasKO": null,
+   "field": 27,
+   "outside": 1,
+   "house": 26,
+   "hands": 19
   }
  ],
  "midasByStyle": {
@@ -1104,10 +1415,10 @@
    "finishSum": 4
   },
   "hellmuth": {
-   "nights": 6,
+   "nights": 7,
    "tableWins": 0,
    "defended": 6,
-   "finishSum": 22
+   "finishSum": 32
   }
  },
  "prizes": {
