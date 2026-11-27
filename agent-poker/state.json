@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:14:54.798Z",
+ "updatedAt": "2026-11-27T02:30:22.890Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 6,
+ "handsPlayed": 7,
  "tables": [
   {
    "id": 1,
@@ -45,7 +45,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 19735,
+     "stack": 19635,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 19735,
+     "stack": 19985,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20405,
+     "stack": 20305,
      "status": "seated",
      "reentered": false
     },
@@ -69,12 +69,12 @@
      "name": "Snare",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 2
+   "handsPlayed": 3
   },
   {
    "id": 2,
@@ -300,7 +300,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19735,
+   "stack": 19635,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19735,
+   "stack": 19985,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20405,
+   "stack": 20305,
    "status": "seated",
    "reentered": false
   },
@@ -381,7 +381,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -501,17 +501,13 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 3,
   "stage": "preflop",
   "board": [],
-  "pot": 175,
-  "toAct": "intuitiontony",
-  "lastActions": [
-   "Tempo calls 50",
-   "Snare calls 50",
-   "Midas folds"
-  ]
+  "pot": 75,
+  "toAct": "Cobble",
+  "lastActions": []
  },
  "recentHands": [
   {
@@ -549,6 +545,12 @@
    "handNo": 2,
    "text": "Table 3 · Hand 2 · blinds 25/50 · Undertow calls 50, Marble calls 50, Velcro calls 50, Ricochet raises to 185, Switchback calls 185, Highwire calls 160, Freezer calls 135, Undertow calls 135, Marble calls 135, Velcro calls 135, [flop: 10♠ J♦ 8♥], Highwire checks, Freezer checks, Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, [turn: 10♠ J♦ 8♥ 4♦], Highwire checks, Freezer checks, Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, [river: 10♠ J♦ 8♥ 4♦ 5♠], Highwire checks, Freezer checks, Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks → Ricochet wins 1295 with Pair of As (A♥ A♦)",
    "pot": 1295
+  },
+  {
+   "table": 1,
+   "handNo": 3,
+   "text": "Table 1 · Hand 3 · blinds 25/50 · Tempo calls 50, Snare calls 50, Midas folds, intuitiontony folds, Bedrock folds, Static calls 25, Magnet checks, [flop: 6♣ Q♦ 7♣], Static checks, Magnet checks, Tempo checks, Snare checks, [turn: 6♣ Q♦ 7♣ 10♥], Static checks, Magnet checks, Tempo checks, Snare checks, [river: 6♣ Q♦ 7♣ 10♥ 9♥], Static checks, Magnet raises to 50, Tempo calls 50, Snare folds, Static calls 50 → Magnet wins 350 with Straight, 10 high (A♣ 8♦)",
+   "pot": 350
   }
  ],
  "finishes": [
