@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:47:45.982Z",
+ "updatedAt": "2026-11-27T02:48:09.598Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 10,
+ "handsPlayed": 11,
  "tables": [
   {
    "id": 1,
@@ -75,7 +75,7 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 139915,
+     "stack": 201845,
      "status": "seated",
      "reentered": false
     },
@@ -83,8 +83,8 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 21575,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -115,7 +115,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19975,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -155,16 +155,16 @@
      "name": "Professor",
      "kind": "house",
      "house": true,
-     "stack": 20355,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Cobble",
      "kind": "house",
      "house": true,
-     "stack": 19950,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -176,7 +176,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 139915,
+   "stack": 201845,
    "status": "seated",
    "reentered": false
   },
@@ -309,8 +309,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 21575,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -408,8 +408,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19950,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19975,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -489,8 +489,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20355,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   }
  ],
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Deadpan",
+  "toAct": "Velcro",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 1,
-   "text": "Table 1 · Hand 1 · blinds 25/50 · Static calls 50, Magnet calls 50, Tempo calls 50, Snare folds, Cobble folds, Northstar calls 50, Midas folds, intuitiontony calls 25, Bedrock checks, [flop: Q♥ K♦ J♥], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [turn: Q♥ K♦ J♥ A♣], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [river: Q♥ K♦ J♥ A♣ Q♠], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks → intuitiontony wins 300 with Two pair, As and Qs (7♠ A♠)",
-   "pot": 300
-  },
   {
    "table": 2,
    "handNo": 1,
@@ -569,6 +563,12 @@
    "handNo": 4,
    "text": "Table 1 · Hand 4 · blinds 25/50 · Midas folds, intuitiontony folds, Bedrock calls 50, Static folds, Magnet calls 25, Tempo checks, [flop: 9♣ 8♠ A♠], Magnet checks, Tempo checks, Bedrock checks, [turn: 9♣ 8♠ A♠ 8♥], Magnet checks, Tempo checks, Bedrock checks, [river: 9♣ 8♠ A♠ 8♥ 7♥], Magnet checks, Tempo raises to 55, Bedrock calls 55, Magnet calls 55 → Tempo wins 315 with Two pair, 9s and 8s (9♥ 6♦)",
    "pot": 315
+  },
+  {
+   "table": 2,
+   "handNo": 4,
+   "text": "Table 2 · Hand 4 · blinds 25/50 · Deadpan folds, Coyote calls 50, Pickpocket calls 50, Fossil calls 50, Northstar folds, Professor calls 25, Cobble checks, [flop: 4♦ Q♠ Q♣], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket calls 65, Fossil folds, Professor calls 65, Cobble calls 65, [turn: 4♦ Q♠ Q♣ 5♠], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket calls 65, Professor calls 65, Cobble calls 65, [river: 4♦ Q♠ Q♣ 5♠ 5♥], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket raises to 565, Professor calls 565, Cobble calls 565, Coyote raises to 2085, Pickpocket raises to 4815, Professor calls 4250, Cobble calls 4250, Coyote raises to 15195, Pickpocket goes ALL-IN to 21395, Professor calls 15360, Cobble calls 14955, Coyote raises to 67780 → Coyote wins 129890 with Full house, Qs full of 5s (Q♦ A♦)",
+   "pot": 129890
   }
  ],
  "finishes": [
@@ -634,6 +634,30 @@
    "kind": "house",
    "table": 3,
    "handNo": 3,
+   "provisional": true
+  },
+  {
+   "name": "Pickpocket",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 4,
+   "provisional": true
+  },
+  {
+   "name": "Professor",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 4,
+   "provisional": true
+  },
+  {
+   "name": "Cobble",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 4,
    "provisional": true
   }
  ],
