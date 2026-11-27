@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T03:36:07.708Z",
+ "updatedAt": "2026-11-27T03:51:39.365Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -503,11 +503,12 @@
  "currentHand": {
   "table": 1,
   "handNo": 5,
-  "stage": "flop",
+  "stage": "turn",
   "board": [
    "K♥",
    "9♠",
-   "2♠"
+   "2♠",
+   "4♥"
   ],
   "pot": 225,
   "toAct": "intuitiontony",
@@ -516,7 +517,11 @@
    "Static calls 50",
    "Magnet calls 50",
    "Midas folds",
-   "intuitiontony checks"
+   "intuitiontony checks",
+   "intuitiontony checks",
+   "Bedrock checks",
+   "Static checks",
+   "Magnet checks"
   ]
  },
  "recentHands": [
