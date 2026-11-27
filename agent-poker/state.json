@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T01:57:10.768Z",
+ "updatedAt": "2026-11-27T02:13:00.988Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 3,
+ "handsPlayed": 4,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19925,
      "status": "seated",
      "reentered": false
     },
@@ -45,7 +45,7 @@
      "name": "Static",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19735,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 19735,
      "status": "seated",
      "reentered": false
     },
@@ -61,7 +61,7 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 19950,
+     "stack": 20405,
      "status": "seated",
      "reentered": false
     },
@@ -74,7 +74,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 1
+   "handsPlayed": 2
   },
   {
    "id": 2,
@@ -273,7 +273,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19925,
    "status": "seated",
    "reentered": false
   },
@@ -300,7 +300,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19735,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 19735,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19950,
+   "stack": 20405,
    "status": "seated",
    "reentered": false
   },
@@ -501,18 +501,13 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 2,
   "stage": "preflop",
   "board": [],
-  "pot": 175,
-  "toAct": "intuitiontony",
-  "lastActions": [
-   "Magnet calls 50",
-   "Tempo calls 50",
-   "Snare folds",
-   "Midas folds"
-  ]
+  "pot": 75,
+  "toAct": "Professor",
+  "lastActions": []
  },
  "recentHands": [
   {
@@ -532,6 +527,12 @@
    "handNo": 1,
    "text": "Table 3 · Hand 1 · blinds 25/50 · Freezer calls 50, Undertow calls 50, Marble folds, Velcro calls 50, Deadpan calls 50, Professor folds, Ricochet folds, Switchback folds, Highwire checks, [flop: 3♠ 2♠ Q♦], Highwire checks, Freezer checks, Undertow checks, Velcro checks, Deadpan checks, [turn: 3♠ 2♠ Q♦ 10♠], Highwire raises to 60, Freezer folds, Undertow calls 60, Velcro calls 60, Deadpan calls 60, [river: 3♠ 2♠ Q♦ 10♠ 5♥], Highwire checks, Undertow checks, Velcro checks, Deadpan checks → Deadpan wins 515 with Two pair, Qs and 5s (5♦ Q♣)",
    "pot": 515
+  },
+  {
+   "table": 1,
+   "handNo": 2,
+   "text": "Table 1 · Hand 2 · blinds 25/50 · Magnet calls 50, Tempo calls 50, Snare folds, Midas folds, intuitiontony folds, Bedrock folds, Static checks, [flop: K♣ K♦ Q♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [turn: K♣ K♦ Q♥ J♠], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [river: K♣ K♦ Q♥ J♠ 8♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55 → Tempo wins 670 with Three of a kind, Ks (K♥ 4♠)",
+   "pot": 670
   }
  ],
  "finishes": [
