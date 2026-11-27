@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:48:09.598Z",
+ "updatedAt": "2026-11-27T02:48:32.248Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 11,
+ "handsPlayed": 12,
  "tables": [
   {
    "id": 1,
@@ -54,14 +54,6 @@
      "kind": "house",
      "house": true,
      "stack": 19880,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Tempo",
-     "kind": "house",
-     "house": true,
-     "stack": 20515,
      "status": "seated",
      "reentered": false
     }
@@ -174,6 +166,14 @@
      "stack": 20140,
      "status": "seated",
      "reentered": false
+    },
+    {
+     "name": "Tempo",
+     "kind": "house",
+     "house": true,
+     "stack": 20515,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 4
@@ -185,7 +185,7 @@
      "name": "Ricochet",
      "kind": "house",
      "house": true,
-     "stack": 1295,
+     "stack": 1185,
      "status": "seated",
      "reentered": false
     },
@@ -217,7 +217,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 50263,
+     "stack": 50473,
      "status": "seated",
      "reentered": false
     },
@@ -225,7 +225,7 @@
      "name": "Marble",
      "kind": "house",
      "house": true,
-     "stack": 50567,
+     "stack": 50517,
      "status": "seated",
      "reentered": false
     },
@@ -233,7 +233,7 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 17730,
+     "stack": 17680,
      "status": "seated",
      "reentered": false
     },
@@ -246,7 +246,7 @@
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   }
  ],
  "seats": [
@@ -291,7 +291,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 1295,
+   "stack": 1185,
    "status": "seated",
    "reentered": false
   },
@@ -353,7 +353,7 @@
    "name": "Tempo",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 20515,
    "status": "seated",
    "reentered": false
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50263,
+   "stack": 50473,
    "status": "seated",
    "reentered": false
   },
@@ -426,7 +426,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 50567,
+   "stack": 50517,
    "status": "seated",
    "reentered": false
   },
@@ -453,7 +453,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 17730,
+   "stack": 17680,
    "status": "seated",
    "reentered": false
   },
@@ -500,22 +500,8 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 4,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Velcro",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
-  {
-   "table": 2,
-   "handNo": 1,
-   "text": "Table 2 · Hand 1 · blinds 25/50 · Jackpot calls 50, Ledger calls 50, Fossil folds, Minnow calls 50, Tally calls 50, Tidepool calls 50, Coyote calls 50, Pickpocket folds, Wildfire checks, [flop: A♣ 10♣ 2♠], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [turn: A♣ 10♣ 2♠ A♥], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [river: A♣ 10♣ 2♠ A♥ A♠], Wildfire raises to 225, Jackpot raises to 585, Ledger raises to 945, Minnow calls 945, Tally raises to 1305, Tidepool calls 1305, Coyote raises to 4715, Wildfire raises to 10955, Jackpot goes ALL-IN to 19950, Ledger calls 19005, Minnow calls 19005, Tally calls 18645, Tidepool calls 18645, Coyote calls 15235, Wildfire calls 8995 → Coyote wins 140025 with Full house, As full of 10s (J♣ 10♥)",
-   "pot": 140025
-  },
   {
    "table": 3,
    "handNo": 1,
@@ -569,6 +555,12 @@
    "handNo": 4,
    "text": "Table 2 · Hand 4 · blinds 25/50 · Deadpan folds, Coyote calls 50, Pickpocket calls 50, Fossil calls 50, Northstar folds, Professor calls 25, Cobble checks, [flop: 4♦ Q♠ Q♣], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket calls 65, Fossil folds, Professor calls 65, Cobble calls 65, [turn: 4♦ Q♠ Q♣ 5♠], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket calls 65, Professor calls 65, Cobble calls 65, [river: 4♦ Q♠ Q♣ 5♠ 5♥], Professor checks, Cobble checks, Coyote raises to 65, Pickpocket raises to 565, Professor calls 565, Cobble calls 565, Coyote raises to 2085, Pickpocket raises to 4815, Professor calls 4250, Cobble calls 4250, Coyote raises to 15195, Pickpocket goes ALL-IN to 21395, Professor calls 15360, Cobble calls 14955, Coyote raises to 67780 → Coyote wins 129890 with Full house, Qs full of 5s (Q♦ A♦)",
    "pot": 129890
+  },
+  {
+   "table": 3,
+   "handNo": 4,
+   "text": "Table 3 · Hand 4 · blinds 25/50 · Velcro calls 50, Snare folds, Ricochet calls 50, Freezer folds, Undertow calls 25, Marble checks, [flop: 6♠ 3♥ J♦], Undertow checks, Marble checks, Velcro checks, Ricochet raises to 60, Undertow calls 60, Marble folds, Velcro folds, [turn: 6♠ 3♥ J♦ 3♠], Undertow checks, Ricochet checks, [river: 6♠ 3♥ J♦ 3♠ A♥], Undertow checks, Ricochet checks → Undertow wins 320 with Two pair, 3s and 2s (2♣ 2♥)",
+   "pot": 320
   }
  ],
  "finishes": [
