@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T01:56:15.269Z",
+ "updatedAt": "2026-11-27T01:56:33.377Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 2,
+ "handsPlayed": 3,
  "tables": [
   {
    "id": 1,
@@ -70,22 +70,6 @@
      "kind": "house",
      "house": true,
      "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Cobble",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Northstar",
-     "kind": "house",
-     "house": true,
-     "stack": 19950,
      "status": "seated",
      "reentered": false
     }
@@ -166,6 +150,38 @@
      "stack": 0,
      "status": "out",
      "reentered": false
+    },
+    {
+     "name": "Northstar",
+     "kind": "house",
+     "house": true,
+     "stack": 19950,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Professor",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Cobble",
+     "kind": "house",
+     "house": true,
+     "stack": 20000,
+     "status": "seated",
+     "reentered": false
+    },
+    {
+     "name": "Deadpan",
+     "kind": "house",
+     "house": true,
+     "stack": 20405,
+     "status": "seated",
+     "reentered": false
     }
    ],
    "handsPlayed": 1
@@ -185,7 +201,7 @@
      "name": "Switchback",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -193,7 +209,7 @@
      "name": "Highwire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -201,7 +217,7 @@
      "name": "Freezer",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19950,
      "status": "seated",
      "reentered": false
     },
@@ -209,7 +225,7 @@
      "name": "Undertow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     },
@@ -225,28 +241,12 @@
      "name": "Velcro",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Deadpan",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
-     "status": "seated",
-     "reentered": false
-    },
-    {
-     "name": "Professor",
-     "kind": "house",
-     "house": true,
-     "stack": 20000,
+     "stack": 19890,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   }
  ],
  "seats": [
@@ -318,7 +318,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -345,7 +345,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -372,7 +372,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19950,
    "status": "seated",
    "reentered": false
   },
@@ -399,7 +399,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -407,7 +407,7 @@
    "name": "Cobble",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 20000,
    "status": "seated",
    "reentered": false
@@ -434,7 +434,7 @@
    "name": "Northstar",
    "kind": "house",
    "house": true,
-   "table": 1,
+   "table": 2,
    "stack": 19950,
    "status": "seated",
    "reentered": false
@@ -453,7 +453,7 @@
    "kind": "house",
    "house": true,
    "table": 3,
-   "stack": 20000,
+   "stack": 19890,
    "status": "seated",
    "reentered": false
   },
@@ -470,8 +470,8 @@
    "name": "Deadpan",
    "kind": "house",
    "house": true,
-   "table": 3,
-   "stack": 20000,
+   "table": 2,
+   "stack": 20405,
    "status": "seated",
    "reentered": false
   },
@@ -488,7 +488,7 @@
    "name": "Professor",
    "kind": "house",
    "house": true,
-   "table": 3,
+   "table": 2,
    "stack": 20000,
    "status": "seated",
    "reentered": false
@@ -500,15 +500,7 @@
   "test": 0
  },
  "waitlist": [],
- "currentHand": {
-  "table": 3,
-  "handNo": 1,
-  "stage": "preflop",
-  "board": [],
-  "pot": 75,
-  "toAct": "Freezer",
-  "lastActions": []
- },
+ "currentHand": null,
  "recentHands": [
   {
    "table": 1,
@@ -521,6 +513,12 @@
    "handNo": 1,
    "text": "Table 2 · Hand 1 · blinds 25/50 · Jackpot calls 50, Ledger calls 50, Fossil folds, Minnow calls 50, Tally calls 50, Tidepool calls 50, Coyote calls 50, Pickpocket folds, Wildfire checks, [flop: A♣ 10♣ 2♠], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [turn: A♣ 10♣ 2♠ A♥], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [river: A♣ 10♣ 2♠ A♥ A♠], Wildfire raises to 225, Jackpot raises to 585, Ledger raises to 945, Minnow calls 945, Tally raises to 1305, Tidepool calls 1305, Coyote raises to 4715, Wildfire raises to 10955, Jackpot goes ALL-IN to 19950, Ledger calls 19005, Minnow calls 19005, Tally calls 18645, Tidepool calls 18645, Coyote calls 15235, Wildfire calls 8995 → Coyote wins 140025 with Full house, As full of 10s (J♣ 10♥)",
    "pot": 140025
+  },
+  {
+   "table": 3,
+   "handNo": 1,
+   "text": "Table 3 · Hand 1 · blinds 25/50 · Freezer calls 50, Undertow calls 50, Marble folds, Velcro calls 50, Deadpan calls 50, Professor folds, Ricochet folds, Switchback folds, Highwire checks, [flop: 3♠ 2♠ Q♦], Highwire checks, Freezer checks, Undertow checks, Velcro checks, Deadpan checks, [turn: 3♠ 2♠ Q♦ 10♠], Highwire raises to 60, Freezer folds, Undertow calls 60, Velcro calls 60, Deadpan calls 60, [river: 3♠ 2♠ Q♦ 10♠ 5♥], Highwire checks, Undertow checks, Velcro checks, Deadpan checks → Deadpan wins 515 with Two pair, Qs and 5s (5♦ Q♣)",
+   "pot": 515
   }
  ],
  "finishes": [
