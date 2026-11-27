@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T04:39:07.246Z",
+ "updatedAt": "2026-11-27T04:39:20.292Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 16,
+ "handsPlayed": 17,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 181330,
+     "stack": 181220,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 29967,
+     "stack": 30347,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 18335,
+     "stack": 18225,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 20090,
+     "stack": 19980,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 31148,
+     "stack": 31098,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 5
+   "handsPlayed": 6
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 181330,
+   "stack": 181220,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 31148,
+   "stack": 31098,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 29967,
+   "stack": 30347,
    "status": "seated",
    "reentered": false
   },
@@ -435,7 +435,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18335,
+   "stack": 18225,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20090,
+   "stack": 19980,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 6,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Northstar",
+  "toAct": "Ricochet",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 3,
-   "text": "Table 1 · Hand 3 · blinds 25/50 · Tempo calls 50, Snare calls 50, Midas folds, intuitiontony folds, Bedrock folds, Static calls 25, Magnet checks, [flop: 6♣ Q♦ 7♣], Static checks, Magnet checks, Tempo checks, Snare checks, [turn: 6♣ Q♦ 7♣ 10♥], Static checks, Magnet checks, Tempo checks, Snare checks, [river: 6♣ Q♦ 7♣ 10♥ 9♥], Static checks, Magnet raises to 50, Tempo calls 50, Snare folds, Static calls 50 → Magnet wins 350 with Straight, 10 high (A♣ 8♦)",
-   "pot": 350
-  },
   {
    "table": 2,
    "handNo": 3,
@@ -569,6 +563,12 @@
    "handNo": 6,
    "text": "Table 1 · Hand 6 · blinds 25/50 · Static calls 50, Magnet calls 50, Midas folds, intuitiontony folds, Bedrock checks, [flop: 4♥ 9♦ J♦], Bedrock checks, Static checks, Magnet checks, [turn: 4♥ 9♦ J♦ J♠], Bedrock checks, Static checks, Magnet checks, [river: 4♥ 9♦ J♦ J♠ A♣], Bedrock checks, Static checks, Magnet checks → Magnet wins 175 with Two pair, Js and 9s (9♣ K♠)",
    "pot": 175
+  },
+  {
+   "table": 2,
+   "handNo": 6,
+   "text": "Table 2 · Hand 6 · blinds 25/50 · Northstar calls 50, Deadpan calls 50, Tempo calls 50, Coyote calls 25, Fossil checks, [flop: 3♥ K♠ A♥], Coyote checks, Fossil checks, Northstar checks, Deadpan raises to 60, Tempo folds, Coyote calls 60, Fossil calls 60, Northstar calls 60, [turn: 3♥ K♠ A♥ 5♦], Coyote checks, Fossil checks, Northstar checks, Deadpan checks, [river: 3♥ K♠ A♥ 5♦ 10♦], Coyote checks, Fossil checks, Northstar checks, Deadpan checks → Fossil wins 490 with Pair of As (A♣ 6♥)",
+   "pot": 490
   }
  ],
  "finishes": [
