@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T01:55:45.787Z",
+ "updatedAt": "2026-11-27T01:56:15.269Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 1,
+ "handsPlayed": 2,
  "tables": [
   {
    "id": 1,
@@ -99,7 +99,7 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 140025,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Pickpocket",
      "kind": "house",
      "house": true,
-     "stack": 20000,
+     "stack": 19975,
      "status": "seated",
      "reentered": false
     },
@@ -115,24 +115,24 @@
      "name": "Wildfire",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Jackpot",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Ledger",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
@@ -147,28 +147,28 @@
      "name": "Minnow",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Tally",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     },
     {
      "name": "Tidepool",
      "kind": "house",
      "house": true,
-     "stack": 20000,
-     "status": "seated",
+     "stack": 0,
+     "status": "out",
      "reentered": false
     }
    ],
-   "handsPlayed": 0
+   "handsPlayed": 1
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 140025,
    "status": "seated",
    "reentered": false
   },
@@ -309,7 +309,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
+   "stack": 19975,
    "status": "seated",
    "reentered": false
   },
@@ -336,8 +336,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -363,8 +363,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -390,8 +390,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -444,8 +444,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -462,8 +462,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -480,8 +480,8 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20000,
-   "status": "seated",
+   "stack": 0,
+   "status": "out",
    "reentered": false
   },
   {
@@ -501,12 +501,12 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 1,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Jackpot",
+  "toAct": "Freezer",
   "lastActions": []
  },
  "recentHands": [
@@ -515,9 +515,64 @@
    "handNo": 1,
    "text": "Table 1 · Hand 1 · blinds 25/50 · Static calls 50, Magnet calls 50, Tempo calls 50, Snare folds, Cobble folds, Northstar calls 50, Midas folds, intuitiontony calls 25, Bedrock checks, [flop: Q♥ K♦ J♥], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [turn: Q♥ K♦ J♥ A♣], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks, [river: Q♥ K♦ J♥ A♣ Q♠], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, Tempo checks, Northstar checks → intuitiontony wins 300 with Two pair, As and Qs (7♠ A♠)",
    "pot": 300
+  },
+  {
+   "table": 2,
+   "handNo": 1,
+   "text": "Table 2 · Hand 1 · blinds 25/50 · Jackpot calls 50, Ledger calls 50, Fossil folds, Minnow calls 50, Tally calls 50, Tidepool calls 50, Coyote calls 50, Pickpocket folds, Wildfire checks, [flop: A♣ 10♣ 2♠], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [turn: A♣ 10♣ 2♠ A♥], Wildfire checks, Jackpot checks, Ledger checks, Minnow checks, Tally checks, Tidepool checks, Coyote checks, [river: A♣ 10♣ 2♠ A♥ A♠], Wildfire raises to 225, Jackpot raises to 585, Ledger raises to 945, Minnow calls 945, Tally raises to 1305, Tidepool calls 1305, Coyote raises to 4715, Wildfire raises to 10955, Jackpot goes ALL-IN to 19950, Ledger calls 19005, Minnow calls 19005, Tally calls 18645, Tidepool calls 18645, Coyote calls 15235, Wildfire calls 8995 → Coyote wins 140025 with Full house, As full of 10s (J♣ 10♥)",
+   "pot": 140025
   }
  ],
- "finishes": [],
+ "finishes": [
+  {
+   "name": "Wildfire",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Jackpot",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Ledger",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Minnow",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Tally",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  },
+  {
+   "name": "Tidepool",
+   "place": null,
+   "kind": "house",
+   "table": 2,
+   "handNo": 1,
+   "provisional": true
+  }
+ ],
  "champion": null,
  "tableWinner": null,
  "defended": false,
