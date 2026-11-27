@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:49:13.076Z",
+ "updatedAt": "2026-11-27T03:04:49.196Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -503,15 +503,21 @@
  "currentHand": {
   "table": 1,
   "handNo": 5,
-  "stage": "preflop",
-  "board": [],
+  "stage": "flop",
+  "board": [
+   "K♦",
+   "9♠",
+   "Q♠"
+  ],
   "pot": 200,
   "toAct": "intuitiontony",
   "lastActions": [
    "Bedrock folds",
    "Static calls 50",
    "Magnet calls 50",
-   "Midas calls 25"
+   "Midas calls 25",
+   "intuitiontony checks",
+   "Midas checks"
   ]
  },
  "recentHands": [
