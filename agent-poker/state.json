@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T02:31:58.878Z",
+ "updatedAt": "2026-11-27T02:47:45.982Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 9,
+ "handsPlayed": 10,
  "tables": [
   {
    "id": 1,
@@ -37,7 +37,7 @@
      "name": "Bedrock",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 19820,
      "status": "seated",
      "reentered": false
     },
@@ -53,7 +53,7 @@
      "name": "Magnet",
      "kind": "house",
      "house": true,
-     "stack": 19985,
+     "stack": 19880,
      "status": "seated",
      "reentered": false
     },
@@ -61,12 +61,12 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20305,
+     "stack": 20515,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 3
+   "handsPlayed": 4
   },
   {
    "id": 2,
@@ -273,7 +273,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19925,
+   "stack": 19820,
    "status": "seated",
    "reentered": false
   },
@@ -327,7 +327,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 19985,
+   "stack": 19880,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 1,
-   "stack": 20305,
+   "stack": 20515,
    "status": "seated",
    "reentered": false
   },
@@ -501,15 +501,13 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 1,
+  "table": 2,
   "handNo": 4,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "intuitiontony",
-  "lastActions": [
-   "Midas folds"
-  ]
+  "toAct": "Deadpan",
+  "lastActions": []
  },
  "recentHands": [
   {
@@ -565,6 +563,12 @@
    "handNo": 3,
    "text": "Table 3 · Hand 3 · blinds 25/50 · Marble calls 50, Velcro calls 50, Ricochet calls 50, Switchback calls 50, Highwire calls 50, Freezer folds, Undertow checks, [flop: 4♥ 7♣ 5♦], Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, Highwire checks, [turn: 4♥ 7♣ 5♦ 2♠], Undertow checks, Marble checks, Velcro checks, Ricochet checks, Switchback checks, Highwire checks, [river: 4♥ 7♣ 5♦ 2♠ 8♥], Undertow raises to 50, Marble raises to 275, Velcro calls 275, Ricochet calls 275, Switchback calls 275, Highwire calls 275, Undertow raises to 565, Marble raises to 1925, Velcro calls 1650, Ricochet calls 1650, Switchback calls 1650, Highwire calls 1650, Undertow raises to 3665, Marble raises to 11835, Velcro folds, Ricochet calls 9910, Switchback calls 9910, Highwire calls 9910, Undertow goes ALL-IN to 19655, Marble goes ALL-IN to 19765, Ricochet calls 7930, Switchback calls 7905, Highwire calls 7820 → Undertow wins 50263 with Straight, 8 high (J♠ 6♦); Marble wins 50567 with Straight, 8 high (A♣ 6♥)",
    "pot": 100830
+  },
+  {
+   "table": 1,
+   "handNo": 4,
+   "text": "Table 1 · Hand 4 · blinds 25/50 · Midas folds, intuitiontony folds, Bedrock calls 50, Static folds, Magnet calls 25, Tempo checks, [flop: 9♣ 8♠ A♠], Magnet checks, Tempo checks, Bedrock checks, [turn: 9♣ 8♠ A♠ 8♥], Magnet checks, Tempo checks, Bedrock checks, [river: 9♣ 8♠ A♠ 8♥ 7♥], Magnet checks, Tempo raises to 55, Bedrock calls 55, Magnet calls 55 → Tempo wins 315 with Two pair, 9s and 8s (9♥ 6♦)",
+   "pot": 315
   }
  ],
  "finishes": [
