@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": "2026-11-27T04:22:42.235Z",
+ "updatedAt": "2026-11-27T04:22:56.730Z",
  "mode": "real",
  "date": "2026-11-26",
  "status": "running",
@@ -12,7 +12,7 @@
   50
  ],
  "level": 1,
- "handsPlayed": 13,
+ "handsPlayed": 14,
  "tables": [
   {
    "id": 1,
@@ -67,7 +67,7 @@
      "name": "Coyote",
      "kind": "house",
      "house": true,
-     "stack": 201845,
+     "stack": 181330,
      "status": "seated",
      "reentered": false
     },
@@ -107,7 +107,7 @@
      "name": "Fossil",
      "kind": "house",
      "house": true,
-     "stack": 19925,
+     "stack": 29967,
      "status": "seated",
      "reentered": false
     },
@@ -139,7 +139,7 @@
      "name": "Northstar",
      "kind": "house",
      "house": true,
-     "stack": 18445,
+     "stack": 18335,
      "status": "seated",
      "reentered": false
     },
@@ -163,7 +163,7 @@
      "name": "Deadpan",
      "kind": "house",
      "house": true,
-     "stack": 20140,
+     "stack": 20090,
      "status": "seated",
      "reentered": false
     },
@@ -171,12 +171,12 @@
      "name": "Tempo",
      "kind": "house",
      "house": true,
-     "stack": 20515,
+     "stack": 31148,
      "status": "seated",
      "reentered": false
     }
    ],
-   "handsPlayed": 4
+   "handsPlayed": 5
   },
   {
    "id": 3,
@@ -282,7 +282,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 201845,
+   "stack": 181330,
    "status": "seated",
    "reentered": false
   },
@@ -354,7 +354,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20515,
+   "stack": 31148,
    "status": "seated",
    "reentered": false
   },
@@ -417,7 +417,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 19925,
+   "stack": 29967,
    "status": "seated",
    "reentered": false
   },
@@ -435,7 +435,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 18445,
+   "stack": 18335,
    "status": "seated",
    "reentered": false
   },
@@ -471,7 +471,7 @@
    "kind": "house",
    "house": true,
    "table": 2,
-   "stack": 20140,
+   "stack": 20090,
    "status": "seated",
    "reentered": false
   },
@@ -501,21 +501,15 @@
  },
  "waitlist": [],
  "currentHand": {
-  "table": 2,
+  "table": 3,
   "handNo": 5,
   "stage": "preflop",
   "board": [],
   "pot": 75,
-  "toAct": "Fossil",
+  "toAct": "Snare",
   "lastActions": []
  },
  "recentHands": [
-  {
-   "table": 1,
-   "handNo": 2,
-   "text": "Table 1 · Hand 2 · blinds 25/50 · Magnet calls 50, Tempo calls 50, Snare folds, Midas folds, intuitiontony folds, Bedrock folds, Static checks, [flop: K♣ K♦ Q♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [turn: K♣ K♦ Q♥ J♠], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55, [river: K♣ K♦ Q♥ J♠ 8♥], Static checks, Magnet checks, Tempo raises to 55, Static calls 55, Magnet calls 55 → Tempo wins 670 with Three of a kind, Ks (K♥ 4♠)",
-   "pot": 670
-  },
   {
    "table": 2,
    "handNo": 2,
@@ -569,6 +563,12 @@
    "handNo": 5,
    "text": "Table 1 · Hand 5 · blinds 25/50 · Bedrock calls 50, Static calls 50, Magnet calls 50, Midas folds, intuitiontony checks, [flop: K♥ 9♠ 2♠], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, [turn: K♥ 9♠ 2♠ 4♥], intuitiontony checks, Bedrock checks, Static checks, Magnet checks, [river: K♥ 9♠ 2♠ 4♥ J♦], intuitiontony checks, Bedrock checks, Static checks, Magnet checks → Bedrock wins 225 with Two pair, Ks and 4s (4♣ K♣)",
    "pot": 225
+  },
+  {
+   "table": 2,
+   "handNo": 5,
+   "text": "Table 2 · Hand 5 · blinds 25/50 · Fossil calls 50, Northstar calls 50, Deadpan calls 50, Tempo calls 25, Coyote raises to 110, Fossil calls 60, Northstar calls 60, Deadpan folds, Tempo calls 60, [flop: K♦ 10♥ 9♥], Tempo checks, Coyote checks, Fossil checks, Northstar checks, [turn: K♦ 10♥ 9♥ 7♥], Tempo checks, Coyote checks, Fossil checks, Northstar checks, [river: K♦ 10♥ 9♥ 7♥ Q♣], Tempo raises to 55, Coyote calls 55, Fossil raises to 415, Northstar folds, Tempo raises to 1050, Coyote calls 995, Fossil raises to 2855, Tempo raises to 6120, Coyote calls 5070, Fossil raises to 15470, Tempo goes ALL-IN to 20405, Coyote calls 14285, Fossil calls 4345 → Fossil wins 29967 with Straight, K high (7♠ J♣); Tempo wins 31148 with Straight, K high (3♠ J♠)",
+   "pot": 61115
   }
  ],
  "finishes": [
