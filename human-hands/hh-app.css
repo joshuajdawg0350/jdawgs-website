@@ -5,7 +5,7 @@
 
 .hh-appnav{
   position:fixed;left:0;right:0;bottom:0;z-index:950;
-  display:flex;background:rgba(5,8,14,.97);border-top:2px solid #0096ff;
+  display:flex;background:rgba(0,0,0,.97);border-top:2px solid #0096ff;
   padding-bottom:env(safe-area-inset-bottom);
 }
 .hh-appnav a{
@@ -44,14 +44,14 @@ body.hh-has-appnav .dsheet-handle{border-radius:0}
 
 .hh-alerts-card{
   border:1px solid #39c2ff;border-radius:10px;max-width:560px;
-  background:linear-gradient(160deg,rgba(57,194,255,.10),#10151f 72%);
+  background:linear-gradient(160deg,rgba(57,194,255,.10),#000000 72%);
   padding:1.4rem 1.6rem;margin-top:1.6rem;
 }
 .hh-alerts-card h2{color:#fff;margin:0 0 .4rem}
 .hh-alerts-card .field{margin-bottom:1rem}
 .hh-alerts-card label{display:block;font-weight:600;color:#fff;margin-bottom:.4rem;font-size:.95rem}
 .hh-alerts-card input{
-  width:100%;background:#0b0f16;border:1px solid #33435e;border-radius:6px;
+  width:100%;background:#000000;border:1px solid #33435e;border-radius:6px;
   color:#fff;padding:.75rem .9rem;font:inherit;font-size:1rem;min-height:48px;
 }
 .hh-alerts-card .hh-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
