@@ -13,12 +13,12 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Play Midas — Blackjack · 10 Hands, Free">
 <meta name="twitter:description" content="Blackjack against Midas the dealer. 10 hands, free, play chips. After hand 10 he reads your game.">
-<meta name="theme-color" content="#05080E">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="../../assets/j-favicon.ico" sizes="any">
 <style>
   :root{
     --blue:#0096FF; --blue-hi:#5db9ff; --ink:#e8edf2; --muted:#aebfd1;
-    --panel:#10151c; --panel2:#0b0f14; --line:#2a3542; --bg:#05080e;
+    --panel:#10151c; --panel2:#0b0f14; --line:#2a3542; --bg:#000000;
     --gold:#ffd35e; --red:#ff6b6b; --green:#5ee07d;
   }
   *{ box-sizing:border-box; }
@@ -89,7 +89,7 @@
   .avatar.big{ width:66px; height:66px; flex:0 0 66px; }
   .cards{ display:flex; gap:6px; margin-left:auto; flex-wrap:nowrap; }
   @keyframes dealIn{ from{ opacity:0; transform:translateY(-7px) scale(.93); } to{ opacity:1; transform:translateY(0) scale(1); } }
-  .card{ width:54px; height:76px; border-radius:8px; position:relative; flex:0 0 auto; overflow:hidden; background:#0a0f16;
+  .card{ width:54px; height:76px; border-radius:8px; position:relative; flex:0 0 auto; overflow:hidden; background:#000000;
     box-shadow:inset 0 0 0 1px rgba(195,204,214,.4), 0 4px 10px rgba(0,0,0,.75); animation:dealIn .22s ease-out; }
   .card img{ width:100%; height:100%; display:block; object-fit:cover; }
   .card.empty{ background:rgba(255,255,255,.03); border:1.5px dashed #33506e; box-shadow:inset 0 0 14px rgba(0,0,0,.35); animation:none; }
@@ -149,7 +149,7 @@
   .thinking{ color:var(--muted); font-style:italic; }
 
   /* ---------- the read ---------- */
-  .read{ background:linear-gradient(180deg,#0c141f 0%,#0a0f16 100%); border:1px solid #000; border-radius:16px; padding:18px 16px; margin-top:18px;
+  .read{ background:linear-gradient(180deg,#0c141f 0%,#000000 100%); border:1px solid #000; border-radius:16px; padding:18px 16px; margin-top:18px;
     box-shadow:inset 0 0 0 2px rgba(195,204,214,.16), inset 0 0 34px rgba(0,0,0,.5),
       0 0 0 4px #11161d, 0 0 0 6px #7e8a99, 0 0 0 8px #39424e, 0 0 30px rgba(0,150,255,.16); }
   .readHead{ display:flex; gap:12px; align-items:center; margin-bottom:4px; }
