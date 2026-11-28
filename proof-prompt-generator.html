@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+:root{color-scheme:dark;--bg:#000000;--bg2:#000000;--panel:#000000;--panel2:#000000;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
 .wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
@@ -27,7 +27,7 @@ header.top{padding:1.4rem 0 .6rem}
 a{color:var(--cyan)}
 table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
 .tblwrap{overflow-x:auto}
-pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre-wrap;margin:.6rem 0}
+pre.out{background:#000000;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre-wrap;margin:.6rem 0}
 details{margin:.4rem 0}summary{cursor:pointer;font-weight:600;padding:8px 0;min-height:32px}
 .btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-weight:700;font-size:1rem;padding:12px 20px;min-height:48px;text-decoration:none}
 .miss{border-left:3px solid var(--orange);padding:2px 0 2px 12px;margin:.8rem 0}
@@ -37,7 +37,7 @@ details{margin:.4rem 0}summary{cursor:pointer;font-weight:600;padding:8px 0;min-
 footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:var(--mut)}
 .qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .qrbox img{width:132px;height:132px;background:#fff;border-radius:10px;padding:6px}
-.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
+.dsheet{--dsBar:#000000;--dsBg:#000000;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
    (Joshua's order, 2026-11-20). Mobile only (<900px): the long
@@ -54,13 +54,13 @@ footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:
 @media (max-width:899px){
   html.js .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:900;
     height:var(--dsH,38px);max-height:100dvh;display:flex;flex-direction:column;
-    background:var(--dsBg,#0a0f16);border-top:2px solid var(--dsLine,#0096ff);
+    background:var(--dsBg,#000000);border-top:2px solid var(--dsLine,#0096ff);
     border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.55);
     transition:height .3s ease;overflow:hidden}
   html.js .dsheet.dragging{transition:none}
   html.js .dsheet-handle{flex:0 0 auto;height:36px;display:flex;align-items:center;justify-content:center;
     position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
-    background:var(--dsBar,#05080e)}
+    background:var(--dsBar,#000000)}
   html.js .dsheet-handle:active{cursor:grabbing}
   html.js .dsheet-grip{width:58px;height:6px;border-radius:3px;
     background:linear-gradient(180deg,#fdfefe,#a9c4de 50%,#63798f);
