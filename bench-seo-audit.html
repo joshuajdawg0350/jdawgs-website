@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#05080e;--bg2:#0b0f16;--panel:#10151f;--panel2:#151c29;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
+:root{color-scheme:dark;--bg:#000000;--bg2:#000000;--panel:#000000;--panel2:#000000;--line:#263144;--line2:#33435e;--ink:#eef2f8;--mut:#9fb0c6;--dim:#6d7f97;--cyan:#39c2ff;--green:#3ddc84;--red:#ff5d5d;--orange:#ff7847;--gold:#ffd34d;--fd:"Archivo",system-ui,sans-serif;--fb:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fm:ui-monospace,Menlo,Consolas,monospace}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;background-image:radial-gradient(ellipse 90% 340px at 50% -80px,rgba(57,194,255,.13),transparent 70%)}
 .wrap{max-width:62rem;margin:0 auto;padding:0 14px 3rem}
@@ -24,12 +24,12 @@ header.top{padding:1.4rem 0 .6rem}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 14px}
 a{color:var(--cyan)}
 .mini a,p a,li a{display:inline-flex;align-items:center;min-height:32px;padding:3px 0}
-input[type=file]{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+input[type=file]{width:100%;background:#000000;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
 .btn{display:inline-block;border:1px solid #d7e5f2;border-radius:10px;background:linear-gradient(180deg,#e8f1fa,#9db4cc);color:#0a0f16;font-family:inherit;font-weight:700;font-size:1rem;padding:12px 20px;cursor:pointer;min-height:48px}
 .btn.ghost{background:var(--panel2);color:var(--ink);border-color:var(--line2)}
 .btn:active{transform:translateY(1px)}
 label{font-weight:600;display:block;margin:.7rem 0 .3rem}
-input[type=text],input[type=number],textarea,select{width:100%;background:#0a0f16;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
+input[type=text],input[type=number],textarea,select{width:100%;background:#000000;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-family:inherit;font-size:1rem;padding:12px;min-height:48px}
 textarea{min-height:110px}
 .mono{font-family:var(--fm);word-break:break-all}
 .verdict{border-radius:12px;padding:14px 16px;margin-top:12px;border:1.5px solid var(--line2);display:none}
@@ -44,14 +44,14 @@ footer{border-top:1px solid var(--line2);padding:14px 0 0;font-size:.9rem;color:
 footer .trio{color:var(--ink);font-size:.98rem}
 table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
 .tblwrap{overflow-x:auto}
-pre.out{background:#0a0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre-wrap;margin:.6rem 0}
+pre.out{background:#000000;border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-family:var(--fm);font-size:.85rem;line-height:1.5;white-space:pre-wrap;margin:.6rem 0}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:.7rem}
 
 /* Wallet pattern (Repertoire starter): pinned header, scrolling wrap —
    controls inside the scroller are reachable by construction. */
 body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
 .wrap{flex:1 1 auto;min-height:0;overflow-y:auto;width:100%}
-.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#000000,#000000);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff}
 .brand img{width:32px;height:32px;border-radius:8px}
 .brand .brand-name{font-family:var(--fd);font-weight:800;font-size:.98rem;letter-spacing:.05em;line-height:1.05;color:#fff;text-transform:uppercase}
