@@ -22,8 +22,8 @@
 <style>
 :root{
   color-scheme: dark;
-  --bg:#05080e;  --bg2:#0b0f16;
-  --panel:#10151f;  --panel2:#151c29;
+  --bg:#000000;  --bg2:#000000;
+  --panel:#000000;  --panel2:#000000;
   --line:#263144;  --line2:#33435e;
   --ink:#eef2f8;  --mut:#9fb0c6;  --dim:#6d7f97;
   --chrome2:#b9c7d8; --chrome4:#dfe9f4;
@@ -50,9 +50,9 @@ body{
 .brand .pawmark{width:34px;height:34px;flex:none}
 .brand .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.05em;line-height:1.05;color:#fff;white-space:nowrap;text-transform:uppercase}
 .brand .brand-sub{display:block;font-size:.6rem;font-weight:600;letter-spacing:.36em;color:var(--chrome2)}
-.hud{flex:0 0 auto;background:linear-gradient(180deg,#0d1219,#0a0e14);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
+.hud{flex:0 0 auto;background:linear-gradient(180deg,#000000,#000000);border-bottom:1px solid var(--line2);padding:8px 12px;display:flex;align-items:center;gap:12px}
 .hud .spacer{flex:1}
-.ledwell{background:#010204;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
+.ledwell{background:#000000;border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 0 18px rgba(0,0,0,.9);
   font-family:var(--font-data);color:var(--blue);
   text-shadow:0 0 8px rgba(0,150,255,.8),0 0 22px rgba(0,150,255,.35);padding:7px 11px;font-size:13px;letter-spacing:.06em;white-space:nowrap}
 main{flex:1 1 auto;width:100%;max-width:920px;margin:0 auto;padding:18px 14px 26px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-content:start}
@@ -94,7 +94,7 @@ h2.sec{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-sp
 .out .oname{font-weight:800;font-size:17px;color:#fff}
 .out .odesc{color:var(--mut);font-size:14.5px;margin:6px 0 0}
 .out textarea{
-  width:100%;margin-top:10px;background:#010204;border:1px solid var(--line);border-radius:10px;color:var(--chrome4);
+  width:100%;margin-top:10px;background:#000000;border:1px solid var(--line);border-radius:10px;color:var(--chrome4);
   font-family:var(--font-data);font-size:13.5px;line-height:1.55;padding:12px 14px;resize:vertical;
 }
 .out .copyrow{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
@@ -116,7 +116,7 @@ h2.sec{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;letter-sp
   .brand .brand-name{font-size:.9rem}
   .hud{gap:8px;padding:8px 10px}
 }
-.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
+.dsheet{--dsBar:#000000;--dsBg:#000000;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* compensation: the original single <main> is split in two at the fold (top main keeps the hero + the entire working tool, sheet main keeps only the How-this-works panel) so the split adds no spacing: the top main loses its bottom padding and the sheet main's top padding becomes the original 16px grid gap */
 body>main{padding-bottom:0}
 #dsheetBody main{padding-top:16px}
@@ -136,13 +136,13 @@ body>main{padding-bottom:0}
 @media (max-width:899px){
   html.js .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:900;
     height:var(--dsH,38px);max-height:100dvh;display:flex;flex-direction:column;
-    background:var(--dsBg,#0a0f16);border-top:2px solid var(--dsLine,#0096ff);
+    background:var(--dsBg,#000000);border-top:2px solid var(--dsLine,#0096ff);
     border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.55);
     transition:height .3s ease;overflow:hidden}
   html.js .dsheet.dragging{transition:none}
   html.js .dsheet-handle{flex:0 0 auto;height:36px;display:flex;align-items:center;justify-content:center;
     position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
-    background:var(--dsBar,#05080e)}
+    background:var(--dsBar,#000000)}
   html.js .dsheet-handle:active{cursor:grabbing}
   html.js .dsheet-grip{width:58px;height:6px;border-radius:3px;
     background:linear-gradient(180deg,#fdfefe,#a9c4de 50%,#63798f);
