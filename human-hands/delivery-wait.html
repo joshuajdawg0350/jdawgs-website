@@ -44,10 +44,10 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../assets/j-icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/j-icon-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#05080E">
+<meta name="theme-color" content="#000000">
 <style>
   :root{--eb:#39c2ff;--eb-bright:#39c2ff}
-  .hh-header{background:rgba(5,8,14,.92);border-bottom:1px solid var(--line)}
+  .hh-header{background:rgba(0,0,0,.92);border-bottom:1px solid var(--line)}
   .hh-header .wrap{display:flex;align-items:center;gap:1rem;min-height:64px;padding-top:.4rem;padding-bottom:.4rem}
   .hh-brand{display:flex;align-items:baseline;gap:.6rem;text-decoration:none;color:#fff;flex:none}
   .hh-brand b{font-family:var(--font-display);font-weight:800;font-size:1.25rem;letter-spacing:-.01em;color:#fff}
@@ -81,7 +81,7 @@
   .machine h2{font-size:1.15rem}
   .machine p,.machine li{font-size:.9rem;color:var(--muted)}
   .machine code{color:var(--jd-silver-bright);word-break:break-all}
-  .hh-foot{background:#030509;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+  .hh-foot{background:#000000;border-top:1px solid var(--line);padding:2.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
   .backlink{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
   @media (max-width:640px){
     .doors2{grid-template-columns:1fr 1fr;margin-top:1.1rem}
@@ -103,14 +103,14 @@
    buttons. Working interior layouts, forms, copy and all JS untouched.
    ============================================================ */
 body.hustle-face{
-  --bg:#05080e; --bg-2:#0b0f16;
-  --panel:#10151f; --panel-2:#151c29;
+  --bg:#000000; --bg-2:#000000;
+  --panel:#000000; --panel-2:#000000;
   --line:#263144; --line-strong:#33435e;
   --ink:#eef2f8; --body:#c9d4e4; --muted:#9fb0c6;
-  --jd-navy:#05080e; --jd-navy-2:#151c29;
+  --jd-navy:#000000; --jd-navy-2:#000000;
   --jd-silver:#9fb0c6; --jd-silver-bright:#eef2f8;
   --eb:#39c2ff; --eb-bright:#39c2ff;
-  background:#05080e; color:#c9d4e4;
+  background:#000000; color:#c9d4e4;
 }
 body.hustle-face ::selection{background:#39c2ff; color:#05080e}
 body.hustle-face a:focus-visible,
@@ -120,7 +120,7 @@ body.hustle-face .hh-hero,
 body.hustle-face .hh-top{
   background:
     radial-gradient(1100px 420px at 78% -10%, rgba(57,194,255,.16), rgba(57,194,255,0) 60%),
-    linear-gradient(180deg,#0b0f16 0%,#05080e 100%);
+    linear-gradient(180deg,#000000 0%,#000000 100%);
   border-bottom:1px solid #263144;
 }
 /* §2 chrome display type — opening headline + wordmark only */
@@ -147,14 +147,14 @@ body.hustle-face .btn-primary:hover{
   box-shadow:0 0 0 1px rgba(57,194,255,.35), 0 10px 30px rgba(57,194,255,.30);
 }
 body.hustle-face .btn-ghost{
-  background:#151c29; color:#eef2f8; border-color:#33435e; border-radius:10px;
+  background:#000000; color:#eef2f8; border-color:#33435e; border-radius:10px;
 }
-body.hustle-face .btn-ghost:hover{background:#10151f; color:#39c2ff; border-color:#39c2ff}
-body.hustle-face .hh-header{background:rgba(5,8,14,.92); border-bottom-color:#263144}
-body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
+body.hustle-face .btn-ghost:hover{background:#000000; color:#39c2ff; border-color:#39c2ff}
+body.hustle-face .hh-header{background:rgba(0,0,0,.92); border-bottom-color:#263144}
+body.hustle-face .hh-foot{background:#000000; border-top-color:#263144}
 </style>
 <style>
-.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
+.dsheet{--dsBar:#000000;--dsBg:#000000;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
    (Joshua's order, 2026-11-20). Mobile only (<900px): the long
@@ -171,13 +171,13 @@ body.hustle-face .hh-foot{background:#05080e; border-top-color:#263144}
 @media (max-width:899px){
   html.js .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:900;
     height:var(--dsH,38px);max-height:100dvh;display:flex;flex-direction:column;
-    background:var(--dsBg,#0a0f16);border-top:2px solid var(--dsLine,#0096ff);
+    background:var(--dsBg,#000000);border-top:2px solid var(--dsLine,#0096ff);
     border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.55);
     transition:height .3s ease;overflow:hidden}
   html.js .dsheet.dragging{transition:none}
   html.js .dsheet-handle{flex:0 0 auto;height:36px;display:flex;align-items:center;justify-content:center;
     position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
-    background:var(--dsBar,#05080e)}
+    background:var(--dsBar,#000000)}
   html.js .dsheet-handle:active{cursor:grabbing}
   html.js .dsheet-grip{width:58px;height:6px;border-radius:3px;
     background:linear-gradient(180deg,#fdfefe,#a9c4de 50%,#63798f);
