@@ -23,16 +23,16 @@
 
 :root{
   /* brand tokens (design system v1/v2) */
-  --jd-navy:#0B2239;
-  --jd-navy-2:#123C63;
+  --jd-navy:#000000;
+  --jd-navy-2:#000000;
   --jd-silver:#C7CEDA;
   --jd-silver-bright:#E9EDF3;
 
   /* cinematic dark ramp — charcoal-navy, in family with the apps' scheme */
-  --bg:#05080E;
-  --bg-2:#081120;
-  --panel:#0A1626;
-  --panel-2:#0E1E33;
+  --bg:#000000;
+  --bg-2:#000000;
+  --panel:#000000;
+  --panel-2:#000000;
   --ink:#E9EDF3;
   --body:#C3CEDD;
   --muted:#93A1B5;
@@ -108,10 +108,10 @@ main{display:block}
 .site-header{
   position:fixed;inset:0 0 auto 0;z-index:60;color:var(--jd-silver-bright);
   transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
-  border-bottom:1px solid var(--line);background:rgba(5,8,14,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);background:rgba(0,0,0,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
 }
 .site-header.scrolled{
-  background:rgba(5,8,14,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  background:rgba(0,0,0,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   border-bottom-color:var(--line);
 }
 .site-header .wrap{display:flex;align-items:center;gap:1rem;height:72px}
@@ -129,7 +129,7 @@ main{display:block}
 .site-nav a:hover{color:#fff}
 .site-nav a[aria-current="page"]{color:#fff;border-bottom-color:#fff}
 .nav-toggle{
-  display:none;margin-left:auto;background:rgba(5,8,14,.35);border:1px solid var(--line-strong);
+  display:none;margin-left:auto;background:rgba(0,0,0,.35);border:1px solid var(--line-strong);
   color:#fff;border-radius:6px;padding:.5rem .9rem;font:600 .82rem var(--font-body);
   letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
 }
@@ -145,7 +145,7 @@ main{display:block}
 .hero-hands{background-image:url("hero-band.jpg")}
 .hero::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(5,8,14,.58) 0%,rgba(5,8,14,.05) 34%,rgba(5,8,14,.30) 66%,rgba(5,8,14,.88) 88%,var(--bg) 100%);
+  background:linear-gradient(180deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.05) 34%,rgba(0,0,0,.30) 66%,rgba(0,0,0,.88) 88%,var(--bg) 100%);
 }
 .hero .wrap{position:relative;z-index:1;width:100%;padding-top:8.5rem;padding-bottom:3.25rem}
 .hero h1{
@@ -189,7 +189,7 @@ main{display:block}
 .btn:active{transform:scale(.97)}
 .btn-primary{background:#F2F5F9;color:#0A1522}
 .btn-primary:hover{background:#fff;color:#0A1522;transform:translateY(-1px)}
-.btn-ghost{background:rgba(8,17,32,.28);color:#fff;border-color:rgba(233,237,243,.45);
+.btn-ghost{background:rgba(0,0,0,.28);color:#fff;border-color:rgba(233,237,243,.45);
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .btn-ghost:hover{background:rgba(255,255,255,.07);color:#fff;border-color:#fff}
 .btn-sm{min-height:46px;padding:.6rem 1.25rem;font-size:.9rem}
@@ -298,7 +298,7 @@ blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600
 .services-grid a:hover b{text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- doors — every route in, one tap ---------- */
-.doors{background:#04070C}
+.doors{background:#000000}
 .doors-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
   background:var(--line);border:1px solid var(--line);margin-top:2.75rem;
@@ -313,7 +313,7 @@ blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600
 .doors-grid a::after{content:"→";display:block;margin-top:.9rem;color:var(--jd-silver);font-size:1rem}
 
 /* ---------- footer ---------- */
-.site-footer{background:#030509;border-top:1px solid var(--line);padding:5rem 0 3rem;color:var(--muted);font-size:.93rem}
+.site-footer{background:#000000;border-top:1px solid var(--line);padding:5rem 0 3rem;color:var(--muted);font-size:.93rem}
 .site-footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;margin-bottom:3.5rem}
 .site-footer h3{
   font-family:var(--font-data);font-size:.7rem;font-weight:500;letter-spacing:.17em;
@@ -348,8 +348,8 @@ blockquote.callout p:first-child{font-family:var(--font-display);font-weight:600
 @media (max-width:900px){
   .nav-toggle{display:block}
   .site-nav{display:none;position:absolute;top:72px;left:0;right:0;
-    background:#05080E;border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.1rem}
-  .site-header:has(.site-nav.open){background:rgba(5,8,14,.94);
+    background:#000000;border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.1rem}
+  .site-header:has(.site-nav.open){background:rgba(0,0,0,.94);
     -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
   .site-nav.open{display:block}
   .site-nav ul{flex-direction:column;gap:0}
