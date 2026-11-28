@@ -9,7 +9,7 @@
     <link rel="icon" href="../assets/j-favicon.ico" sizes="any" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <meta name="theme-color" content="#06080b" />
+    <meta name="theme-color" content="#000000" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Prompt Engine" />
@@ -22,10 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #06080b;
+        --bg: #000000;
         --panel: #10151d;
         --panel-2: #151c26;
-        --field: #0a0e14;
+        --field: #000000;
         --line: #2b3648;
         --line-soft: #1d2635;
         --ink: #e9eef6;
@@ -42,7 +42,7 @@
         margin: 0;
         background:
           radial-gradient(1100px 480px at 50% -160px, rgba(56, 169, 255, 0.13), transparent 65%),
-          linear-gradient(180deg, #0a0e14 0%, var(--bg) 340px);
+          linear-gradient(180deg, #000000 0%, var(--bg) 340px);
         color: var(--ink);
         font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
         font-size: 17px;
@@ -63,7 +63,7 @@
         border: 1px solid var(--line);
         border-radius: 999px;
         padding: 7px 16px 7px 19px;
-        background: linear-gradient(180deg, #1a222f, #0c1119);
+        background: linear-gradient(180deg, #1a222f, #000000);
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
       }
       h1 {
@@ -156,7 +156,7 @@
       .chip {
         min-height: 44px; padding: 8px 16px;
         border-radius: 999px; border: 1px solid var(--line);
-        background: #0c1119; color: var(--ink);
+        background: #000000; color: var(--ink);
         font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
       }
       .chip:active { transform: translateY(1px); }
@@ -191,7 +191,7 @@
       .btn-ghost {
         min-height: 50px; padding: 10px 16px;
         border: 1px solid var(--line); border-radius: 11px; cursor: pointer;
-        background: #0c1119; color: var(--ink);
+        background: #000000; color: var(--ink);
         font: inherit; font-weight: 600; font-size: 15px; white-space: nowrap;
       }
 
@@ -200,7 +200,7 @@
       .switch {
         position: relative; width: 56px; height: 36px; flex: 0 0 auto;
         border-radius: 999px; border: 1px solid var(--line);
-        background: #0c1119; cursor: pointer; padding: 0;
+        background: #000000; cursor: pointer; padding: 0;
       }
       .switch .knob {
         position: absolute; top: 3px; left: 3px; width: 28px; height: 28px; border-radius: 50%;
@@ -218,7 +218,7 @@
       /* ---------- Output cards ---------- */
       .variant {
         border: 1px solid var(--line); border-radius: var(--radius);
-        background: linear-gradient(180deg, #131a24, #0b0f16);
+        background: linear-gradient(180deg, #131a24, #000000);
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
         padding: 16px; margin-top: 14px;
       }
@@ -287,7 +287,7 @@
         min-height: 58px; padding: 8px 13px; text-align: left;
         display: flex; flex-direction: column; justify-content: center; gap: 2px;
         border-radius: 12px; border: 1px solid var(--line);
-        background: #0c1119; color: var(--ink); font: inherit; cursor: pointer;
+        background: #000000; color: var(--ink); font: inherit; cursor: pointer;
       }
       .family-btn:active { transform: translateY(1px); }
       .family-name {
@@ -398,7 +398,7 @@
       .chain-io { font-size: 13.5px; color: var(--blue); font-weight: 700; letter-spacing: 0.03em; margin: 0 0 6px; }
       .lib-item {
         border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px; margin-top: 10px;
-        background: linear-gradient(180deg, #131a24, #0b0f16);
+        background: linear-gradient(180deg, #131a24, #000000);
       }
       .lib-title { font-weight: 700; font-size: 15.5px; margin: 0; overflow-wrap: anywhere; }
       .lib-meta { font-size: 13px; color: var(--faint); margin: 3px 0 0; }
@@ -410,7 +410,7 @@
       .lib-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
       .lib-btns button {
         min-height: 44px; padding: 6px 13px; border-radius: 9px; cursor: pointer;
-        border: 1px solid var(--line); background: #0c1119; color: var(--ink);
+        border: 1px solid var(--line); background: #000000; color: var(--ink);
         font: inherit; font-size: 14px; font-weight: 600;
       }
       .lib-btns button.fav-on { border-color: var(--blue); color: #fff; background: linear-gradient(180deg, #1d6fc4, var(--blue-deep)); }
@@ -425,7 +425,7 @@
       #plateSimple .doors-row { display: none; }
       #sResult:not([hidden]) ~ .doors-row { display: flex; }
 @media (max-width:899px){html,body{overscroll-behavior:none}}
-.dsheet{--dsBar:#05080e;--dsBg:#05080e;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
+.dsheet{--dsBar:#000000;--dsBg:#000000;--dsLine:#0096ff;--dsInk:#93a1b5;--dsChev:#6fc3ff}
 /* ============================================================
    DRAG SHEET KIT — the Funny Maps pattern for document pages
    (Joshua's order, 2026-11-20). Mobile only (<900px): the long
@@ -442,13 +442,13 @@
 @media (max-width:899px){
   html.js .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:900;
     height:var(--dsH,38px);max-height:100dvh;display:flex;flex-direction:column;
-    background:var(--dsBg,#0a0f16);border-top:2px solid var(--dsLine,#0096ff);
+    background:var(--dsBg,#000000);border-top:2px solid var(--dsLine,#0096ff);
     border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.55);
     transition:height .3s ease;overflow:hidden}
   html.js .dsheet.dragging{transition:none}
   html.js .dsheet-handle{flex:0 0 auto;height:36px;display:flex;align-items:center;justify-content:center;
     position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
-    background:var(--dsBar,#05080e)}
+    background:var(--dsBar,#000000)}
   html.js .dsheet-handle:active{cursor:grabbing}
   html.js .dsheet-grip{width:58px;height:6px;border-radius:3px;
     background:linear-gradient(180deg,#fdfefe,#a9c4de 50%,#63798f);
@@ -3582,7 +3582,7 @@
       .mic-btn {
         min-height: 44px; padding: 8px 16px; margin-top: 8px;
         border-radius: 999px; border: 1px solid var(--line);
-        background: #0c1119; color: var(--ink);
+        background: #000000; color: var(--ink);
         font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
       }
       .mic-btn:active { transform: translateY(1px); }
